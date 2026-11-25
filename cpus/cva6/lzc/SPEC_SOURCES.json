@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "31f28e61b45831a508953dbec9393f62a9c26251d48520c53606db69d1d1aba3",
+  "prompt_sha256": "cf171135194124defedcfd2df3fa6eabb7f2baee723a53d350d0e57a42ecee0c",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions; Section heading; Fence",
+      "prompt_bytes": [
+        0,
+        278
+      ],
+      "sha256": "c1212bb4fabbe9b6aa44a3fab6b087b988d3b08afc931e1984c24b7a253dc1c1"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        278,
+        900
+      ],
+      "sha256": "577fc4ee2d260279f06fddb0412eb1f60a65bd82100891092f6f21f7c0bc2b3a"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fence; Port contract that no upstream text states",
+      "prompt_bytes": [
+        900,
+        982
+      ],
+      "sha256": "369cdc429dd23112ccbabc68f0f629bdb2e7bbd97cf6be232af1c5e95fd79996"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/lzc.sv",
+      "lines": [
+        25,
+        41
+      ],
+      "language": "verilog",
+      "sha256": "c47046cab67cd9e9ff46f9b2a4c055f301eabd0f135d76d96639eb41c9fa3609"
+    }
+  ]
+}

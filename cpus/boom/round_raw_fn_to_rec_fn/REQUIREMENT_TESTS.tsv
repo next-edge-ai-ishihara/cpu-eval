@@ -1,0 +1,4 @@
+requirement	tests
+Double-precision add, subtract and multiply results at the initial RNE mode, with zero/NX/NV flag checks	rv64ud-p-fadd
+Static RUP on positive halfway double addition with NX checked; FCVT.S.D in the same program exercises a separate precision-conversion path	rv64ud-p-rounding_mode_rup
+Report divide by zero when the raw operation raises infiniteExc	RoundRawDivideByZeroTest

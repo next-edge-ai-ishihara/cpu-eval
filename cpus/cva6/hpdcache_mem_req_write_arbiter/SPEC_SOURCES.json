@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/hpdcache_mem_req_write_arbiter/SPEC_RECIPE.json",
+  "recipe_sha256": "66a92ba52ff9b11d974375c8371231b963822126692268b5127017590ee6a3d7",
+  "prompt_sha256": "c0cc3509b8926cf2c1ddfcb10286484a4b8c1e98a8407f09a840b59244e0b570",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, submission instructions and headings",
+      "prompt_bytes": [
+        0,
+        359
+      ],
+      "sha256": "51dfd3e9ff1f551a15a91cc9c2b4d36924e4c1170e47ff3955fd922ac6ceba04"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        359,
+        1445
+      ],
+      "sha256": "d77c4a7732d9dfb28362d6a3e30d3336daf2be8eecb16748f3623c65c5f709ef"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1445,
+        1519
+      ],
+      "sha256": "265e77d665d93da178dbdc5a9c8cfa2aec8aa1239e5a213ff6ff7e56448381df"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1519,
+        2104
+      ],
+      "sha256": "d0f94bfcce100b36c7c2f6ee981ac29332dba26f380e3a1b443c28bd891fc214"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2104,
+        2111
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        2111,
+        4449
+      ],
+      "sha256": "836f27270ba34a6b2c5e1cae669615b573d26ddf1bcc0b04b6bb39febbde1191"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        4449,
+        4539
+      ],
+      "sha256": "a35d89af5f8cbb617fc4f1434c27b76d4c3da449680966b5e1245aec350d02e5"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        4539,
+        6117
+      ],
+      "sha256": "c711ee279c939f324987b52d174e5d5577761398516414d7d8fde018a0a39c4c"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        6117,
+        6191
+      ],
+      "sha256": "2f366f77010542f3c940f4ea0bec7341f0b8350d778d35da4a56be0d10c3dd12"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        6191,
+        6666
+      ],
+      "sha256": "b115d6b4764566c5221f868258048a29d9613be3226bee0139521271b6620820"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        6666,
+        6731
+      ],
+      "sha256": "4ae1fea3764d579387f4a4cfe876b99a8abe107362aba6fa0f6879dd5b60db93"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        6731,
+        7425
+      ],
+      "sha256": "36e53edb2413a5264f746cd4dc88f8eb7dc8047f496125cf2290a5aa8b2f6fae"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        7425,
+        7432
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        7432,
+        10534
+      ],
+      "sha256": "547f0e8f053e6ad563d373791d5657efbed9c2e7d435b18aa3be410eb88cfdbf"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        10534,
+        10602
+      ],
+      "sha256": "8d81bbd1dc62ef7287fb14be85f4e9bb7bdff14f713681ea2e3e7e09f91d7afe"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        10602,
+        12269
+      ],
+      "sha256": "6e320e96511285f872415cd53ede690cbaa32e48258c7200de147b39c9f16bb8"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        12269,
+        12329
+      ],
+      "sha256": "26bd79acc483966db0ef7a8b444190888178cc0f2456a06f2cffc280247091b4"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        12329,
+        13208
+      ],
+      "sha256": "131a316371c407e4814ac78d7fdd2bf92948a43dbe43b36d1e16ab01e2f388d0"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        13208,
+        13215
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        13215,
+        13593
+      ],
+      "sha256": "d987226346a336c8848307cbc0673695cd4468e59989e860c990d79e7ee82e10"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        13593,
+        13657
+      ],
+      "sha256": "ecb92c2f3b42fa56ad02ad1f0899282301e65bd8e6b772998b5e2d2bbf278449"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        13657,
+        15114
+      ],
+      "sha256": "3458baeacb541b30841fb480c5e43dbc31fe28a983bc1c01f8fe927a85e4b5d4"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        15114,
+        15118
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        15118,
+        15333
+      ],
+      "sha256": "986e1cdcbb560f7cc217a89ff01648712af3e0c97f4c6b0ae4ad2bc6d11cfd2b"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        15333,
+        15337
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        15337,
+        15980
+      ],
+      "sha256": "e0b0b43773348084d60746bd9fc04edec0f2ae23590b0146241da466638655c1"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        15980,
+        15984
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_req_write_arbiter.sv",
+      "lines": [
+        26,
+        56
+      ],
+      "sha256": "91763bf92a12126d953141eda1706589c83869db232c02e83f70b6acbe324bbb",
+      "language": "verilog"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache.sv",
+      "lines": [
+        1116,
+        1128
+      ],
+      "sha256": "35d9b2dca6415fca40050bc6fec3d4823701111fb2104db3cd79775268c53b47"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache.sv",
+      "lines": [
+        1194,
+        1241
+      ],
+      "sha256": "35d9b2dca6415fca40050bc6fec3d4823701111fb2104db3cd79775268c53b47"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fxarb.sv",
+      "lines": [
+        20,
+        85
+      ],
+      "sha256": "873d1c3f00b4036c4441ffa3ccd42a7995865f64ca8b0eaa2e22cab45533ac49"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+      "lines": [
+        20,
+        42
+      ],
+      "sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        20,
+        46
+      ],
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        63,
+        168
+      ],
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_sync_buffer.sv",
+      "lines": [
+        20,
+        93
+      ],
+      "sha256": "4f8e44eb05307acc9982e2797e454314e76ff4fc3cebaef372f587b07dcd1b14"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_mux.sv",
+      "lines": [
+        20,
+        54
+      ],
+      "sha256": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_mux.sv",
+      "lines": [
+        62,
+        71
+      ],
+      "sha256": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        608,
+        635
+      ],
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        490,
+        495
+      ],
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        534,
+        550
+      ],
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    }
+  ]
+}

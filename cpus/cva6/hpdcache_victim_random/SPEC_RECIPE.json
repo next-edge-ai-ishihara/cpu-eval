@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module description and declaration for hpdcache_victim_random",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_victim_random.sv",
+      "lines": [
+        27,
+        58
+      ],
+      "language": "systemverilog",
+      "sha256": "919698df94c00c07fd941bc2464516c4bc7d1fc13d64c66f00f657deadb4a8c0"
+    },
+    {
+      "label": "Directory state-bit and victim eligibility definitions",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        246,
+        286
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Pseudo-random victim selection policy",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        392,
+        404
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Decoder declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_decoder.sv",
+      "lines": [
+        26,
+        43
+      ],
+      "language": "systemverilog",
+      "sha256": "1513c572bc8b2c7ab01b737b761c640bbf04dc1fdc6c710f8e485b804763ed54"
+    },
+    {
+      "label": "HPDcache LFSR declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_lfsr.sv",
+      "lines": [
+        26,
+        43
+      ],
+      "language": "systemverilog",
+      "sha256": "487a72a672dab3fc3b16eaaf08f7f64a856a29c663c7983fa16cabe17ce8d265"
+    },
+    {
+      "label": "Priority one-hot encoder declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+      "lines": [
+        26,
+        35
+      ],
+      "language": "systemverilog",
+      "sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_victim_random`\n\nImplement the complete `hpdcache_victim_random` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_victim_random` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Dependency declarations; `rtl/src/common/hpdcache_decoder.sv`",
+      "text": "\n```\n\n## Dependency declarations\n\n### `rtl/src/common/hpdcache_decoder.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/common/hpdcache_lfsr.sv`",
+      "text": "\n```\n\n### `rtl/src/common/hpdcache_lfsr.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/common/hpdcache_prio_1hot_encoder.sv`",
+      "text": "\n```\n\n### `rtl/src/common/hpdcache_prio_1hot_encoder.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Documentation; `docs/source/architecture.rst`",
+      "text": "\n```\n\n## Documentation\n\n### `docs/source/architecture.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n```\n"
+    }
+  ]
+}

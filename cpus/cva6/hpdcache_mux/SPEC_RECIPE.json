@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_mux",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_mux.sv",
+      "lines": [
+        26,
+        54
+      ],
+      "language": "verilog",
+      "sha256": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1"
+    },
+    {
+      "label": "One-hot selector use for requester data",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_core_arbiter.sv",
+      "lines": [
+        112,
+        120
+      ],
+      "language": "verilog",
+      "sha256": "5d895629db5a75ae8ce76385641e7ead0053d6ebd031b896e378a945b8cad4ea"
+    },
+    {
+      "label": "Binary selector use for refill response data",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_miss_handler.sv",
+      "lines": [
+        598,
+        608
+      ],
+      "language": "verilog",
+      "sha256": "ac26528a861d1e237a56e9add5bf77c37c84db2f179e78118832926c8d9e54f0"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_mux`\n\nImplement the complete `hpdcache_mux` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_mux` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Parent instantiation\n\n### `rtl/src/hpdcache_core_arbiter.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n### `rtl/src/hpdcache_miss_handler.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n"
+    }
+  ]
+}

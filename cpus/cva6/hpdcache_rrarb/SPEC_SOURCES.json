@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "94a59c01c22958e1b9c1e2486321e767926529a7eaed714386dc8e41669d9be6",
+  "prompt_sha256": "5474b918b4648299d2dd7508199e39a7ba5c453be9776afd65f055a9782971d8",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    },
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        311
+      ],
+      "sha256": "b7d434b417a8dc9f5ec43713ec3cb887fae1814b8e1b4730403589eca8c1ddec"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        311,
+        683
+      ],
+      "sha256": "239c3be79f3120894f47dc0e7ded8a69543693a35640b77351bbd6d4321aadb7"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        683,
+        763
+      ],
+      "sha256": "12555c26bf5eb97aa3bdfb98029f98d3197b72c39e908305adbba53d401efb20"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        763,
+        1110
+      ],
+      "sha256": "dfbe4f703a5de4ea6c169482e639ab4c3909f08071437157b77a155528b248f1"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        1110,
+        1213
+      ],
+      "sha256": "35b300488fa0879fb3fc226e4fd025b093056a60855488d8b56c802efc25ccd0"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1213,
+        1551
+      ],
+      "sha256": "8d8dc5879f56cd04d86775c6f06847e5fd72403c986b40d730a20e7fa7d4ff91"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        1551,
+        1638
+      ],
+      "sha256": "282b1a6f4c02fa5fab6fdd1120a427dca29c0168ab1dbcdf75d871ccd77177b5"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1638,
+        2809
+      ],
+      "sha256": "00a86c2473408cc447f68a95144982b0cdc8c1d1870462c7978d70826abf0bf2"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        2809,
+        2892
+      ],
+      "sha256": "07952761ba9255a604fb22f082e599ffd8d8c5554b2329afb3a5e6e7b1980891"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2892,
+        3003
+      ],
+      "sha256": "47c6910d7668cd6bf24237a53812b353c8651a38b229ecd73be6644c8d51e7dd"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        3003,
+        3010
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        3010,
+        3577
+      ],
+      "sha256": "2c43719028aefb0ac129e03d2276605698bad40f1dff8240bcec9708e68f26c9"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        3577,
+        3584
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        3584,
+        3953
+      ],
+      "sha256": "ebbf12fbb7c1155acaeb1cbc8ac4fcee41dedd25d46600d82c6f1e9eb32888a1"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        3953,
+        3958
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_rrarb",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_rrarb.sv",
+      "lines": [
+        28,
+        44
+      ],
+      "language": "verilog",
+      "sha256": "2b3c6497fcbb636a8d0ef378609db4924574ce0cd2a3958a2709c1a7aff3cf8d"
+    },
+    {
+      "label": "Transaction-table request and ready connection",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_rtab.sv",
+      "lines": [
+        344,
+        353
+      ],
+      "language": "verilog",
+      "sha256": "5a61d9aade361532b4df8463172d536aeee887d7f0c349ed0ddafa3e25c2169c"
+    },
+    {
+      "label": "Priority one-hot encoder",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+      "lines": [
+        26,
+        42
+      ],
+      "language": "verilog",
+      "sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55"
+    },
+    {
+      "label": "Sibling arbiter ports and grant hold behavior",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fxarb.sv",
+      "lines": [
+        26,
+        75
+      ],
+      "language": "verilog",
+      "sha256": "873d1c3f00b4036c4441ffa3ccd42a7995865f64ca8b0eaa2e22cab45533ac49"
+    },
+    {
+      "label": "Independent non-starving round-robin definition",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/rr_arb_tree.sv",
+      "lines": [
+        16,
+        17
+      ],
+      "language": "verilog",
+      "sha256": "c7361280318a605131345932ab3325bc53f8fc76e67c5579b991b96a5b4ffeed"
+    },
+    {
+      "label": "Independent higher-index and wraparound rule",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/rr_arb_tree.sv",
+      "lines": [
+        30,
+        35
+      ],
+      "language": "verilog",
+      "sha256": "c7361280318a605131345932ab3325bc53f8fc76e67c5579b991b96a5b4ffeed"
+    },
+    {
+      "label": "Independent grant lock rule",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/rr_arb_tree.sv",
+      "lines": [
+        68,
+        74
+      ],
+      "language": "verilog",
+      "sha256": "c7361280318a605131345932ab3325bc53f8fc76e67c5579b991b96a5b4ffeed"
+    }
+  ]
+}

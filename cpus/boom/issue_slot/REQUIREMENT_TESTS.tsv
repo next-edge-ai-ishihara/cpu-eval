@@ -1,0 +1,7 @@
+requirement	tests	rationale
+Hold and issue a normal micro-operation only after its operands are ready	rv64ui-p-add;rv64ui-p-sub	The complete CPU executes dependent integer additions and subtractions through the integer issue queue and matches Spike.
+Wake physical-register operands and retain a waiting micro-operation until it can issue	rv64ui-p-add;rv64ui-p-sub;rv64mi-p-issue_slot_split_store	The programs create data dependencies whose consumers cannot execute before producer wake-up; retired-state and memory events are compared with Spike.
+Split a store and issue whichever of its address and data parts becomes ready first	rv64mi-p-issue_slot_split_store	One store delays data with division while its address is ready, and a second store delays its address while its data is ready; both stored words and a neighboring word are checked architecturally.
+Preserve split-store address and data operands while issuing the ready part	rv64mi-p-issue_slot_split_store	The fixed trace compares the two retired stores and their memory updates.
+Remove issued operations and recover control-dependent issue state	rv64ui-p-add;rv64ui-p-sub;rv64mi-p-issue_slot_split_store	Each complete CPU program executes branches and reaches the architectural pass or fail endpoint without using internal issue-slot signals as verdict inputs.
+Retry issue after a speculative load wakeup is disproved	issue_slot_speculative_issue_retry	A grant and a load speculation miss coincide. A single operation and a split store retain their work until a matching ordinary wakeup permits reissue.

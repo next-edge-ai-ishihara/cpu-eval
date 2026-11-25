@@ -1,0 +1,361 @@
+# Implement `Queue`
+
+Implement the complete `Queue` class. Preserve the class name and interface shown below. The companion object remains fixed.
+
+Return only the complete `class Queue` definition in a single Scala code block, with no text outside the block.
+
+## Package and imports
+
+```scala
+package chisel3.util
+
+import chisel3._
+import chisel3.experimental.{requireIsChiselType, Direction}
+import chisel3.reflect.DataMirror
+
+import scala.annotation.nowarn
+
+```
+
+## Class declaration
+
+```scala
+class Queue[T <: Data](
+  val gen:            T,
+  val entries:        Int,
+  val pipe:           Boolean = false,
+  val flow:           Boolean = false,
+  val useSyncReadMem: Boolean = false,
+  val hasFlush:       Boolean = false)
+    extends Module() {
+// ...
+  val io = IO(new QueueIO(gen, entries, hasFlush))
+
+```
+
+## Parent instantiation
+
+### src/main/scala/rift2Core/backend/Alu.scala
+
+```scala
+  val alu_exe_iwb_fifo = Module( new Queue( new WriteBack_info(dw=64), 1, true, false ) )
+  io.alu_exe_iwb <> alu_exe_iwb_fifo.io.deq
+  alu_exe_iwb_fifo.reset := reset.asBool | io.flush
+// ...
+  io.alu_iss_exe.ready := alu_exe_iwb_fifo.io.enq.fire
+
+  alu_exe_iwb_fifo.io.enq.valid := io.alu_iss_exe.valid 
+  alu_exe_iwb_fifo.io.enq.bits.res := res
+  alu_exe_iwb_fifo.io.enq.bits.rd0 := io.alu_iss_exe.bits.param.rd0
+
+```
+
+### src/main/scala/rift2Core/backend/Bru.scala
+
+```scala
+  val bru_exe_iwb_fifo = Module( new Queue( new WriteBack_info(dw=64), 1, true, false ) )
+  val bctq = Module(new Queue( new Branch_CTarget_Bundle, (if(!isMinArea) 4 else 1) ) )
+  val jctq = Module(new Queue( new Jump_CTarget_Bundle,   (if(!isMinArea) 4 else 1) ) )
+
+```
+
+### src/main/scala/rift2Core/backend/Issue.scala
+
+```scala
+  val aluIssFifo = for( _ <- 0 until aluNum ) yield {
+    Module(new Queue( new Alu_iss_info, ( if(!isMinArea) 4 else 1 ), flow = true ))
+  }
+// ...
+  for( iss <- 0 until aluNum ){
+    aluIssFifo(iss).io.enq.valid := ~aluIssMatrix(iss).forall{ (x: Vec[Bool]) => x.forall{ (y: Bool) => (y === true.B) }} //all ture
+    aluIssIdx(iss) := aluIssMatrix(iss).indexWhere( (x: Vec[Bool]) => x.forall( y => (y === false.B) ) ) //index a row which all zero
+    aluIssFifo(iss).io.enq.bits  := 
+      Mux1H( ( 0 until dptEntry ).map{ i => { (aluIssMatrix(iss)(i).forall( (y: Bool) => ( y === false.B ) )) -> aluIssInfo(i) } } )
+
+    for( i <- 0 until dptEntry ) {
+      when( aluIssFifo(iss).io.enq.fire & aluIssIdx(iss) === i.U ) {
+        bufValid(i) := false.B
+        assert( postIsOpReady(i)(1) & postIsOpReady(i)(2) )
+        assert( bufValid(i) )
+        assert( bufInfo(i).aluIsa.is_alu )
+      }
+    }
+    aluIssFifo(iss).io.deq <> io.alu_iss_exe(iss)
+    aluIssFifo(iss).reset := io.flush | reset.asBool
+  }
+
+```
+
+### src/main/scala/rift2Core/backend/LSU/Lsu.scala
+
+```scala
+  val lu_wb_fifo = Module( new Queue( new WriteBack_info(dw=64), 1, false, true ) )
+
+  val flu_wb_fifo = Module( new Queue( new WriteBack_info(dw=65), 1, false, true ) )
+
+  /** store operations will write-back dircetly from opMux, flow !!!!!
+    * @param in Lsu_iss_info
+    * @return WriteBack_info
+    */
+  val su_wb_fifo = Module( new Queue( new WriteBack_info(dw=64), 1, false, true ) )
+  val fe_wb_fifo = Module( new Queue( new WriteBack_info(dw=64), 1, false, true ) )
+
+  val vls_wb_fifo = Module( new Queue( new Vector_WriteBack_Bundle, 1, false, true ) )
+
+```
+
+### src/main/scala/rift2Core/privilege/CsrScoreBoard.scala
+
+```scala
+  /** Maximum inflight number of CSR Instruction */
+  def xpuInfly = 4
+  val xpuInflyCounter  = Module( new Queue(new Bool(),   entries = xpuInfly, pipe = false, flow = false) )
+  val xpuWriteBackFifo = Module( new Queue(new Exe_Port, entries = xpuInfly, pipe = false, flow = false) )
+  val isXpuInfly = xpuInflyCounter.io.deq.valid
+
+  /** Maximum inflight number of FALU */
+  def fpuInfly = 4
+  val fpuInflyCounter  = Module( new Queue(new Bool(),   entries = fpuInfly, pipe = false, flow = false) )
+  val fpuWriteBackFifo = Module( new Queue(new Exe_Port, entries = fpuInfly, pipe = false, flow = false) )
+  val isFpuInfly = fpuInflyCounter.io.deq.valid
+
+```
+
+## Dependency declarations
+
+### src/main/scala/chisel3/util/Decoupled.scala
+
+```scala
+/** An I/O Bundle containing 'valid' and 'ready' signals that handshake
+  * the transfer of data stored in the 'bits' subfield.
+  * The base protocol implied by the directionality is that
+  * the producer uses the interface as-is (outputs bits)
+  * while the consumer uses the flipped interface (inputs bits).
+  * The actual semantics of ready/valid are enforced via the use of concrete subclasses.
+  * @param gen the type of data to be wrapped in Ready/Valid
+  * @groupdesc Signals The actual hardware fields of the Bundle
+  */
+abstract class ReadyValidIO[+T <: Data](gen: T) extends Bundle {
+
+  /** Indicates that the consumer is ready to accept the data this cycle
+    * @group Signals
+    */
+  val ready = Input(Bool())
+
+  /** Indicates that the producer has put valid data in 'bits'
+    * @group Signals
+    */
+  val valid = Output(Bool())
+
+  /** The data to be transferred when ready and valid are asserted at the same cycle
+    * @group Signals
+    */
+  val bits = Output(gen)
+
+  /** A stable typeName for this `ReadyValidIO` and any of its implementations
+    * using the supplied `Data` generator's `typeName`
+    */
+  override def typeName = s"${this.getClass.getSimpleName}_${gen.typeName}"
+}
+
+object ReadyValidIO {
+
+  implicit class AddMethodsToReadyValid[T <: Data](target: ReadyValidIO[T]) {
+
+    /** Indicates if IO is both ready and valid
+      */
+    def fire: Bool = target.ready && target.valid
+
+    /** Push dat onto the output bits of this interface to let the consumer know it has happened.
+      * @param dat the values to assign to bits.
+      * @return    dat.
+      */
+    def enq(dat: T): T = {
+      target.valid := true.B
+      target.bits := dat
+      dat
+    }
+
+    /** Indicate no enqueue occurs. Valid is set to false, and bits are
+      * connected to an uninitialized wire.
+      */
+    def noenq(): Unit = {
+      target.valid := false.B
+      target.bits := DontCare
+    }
+
+    /** Assert ready on this port and return the associated data bits.
+      * This is typically used when valid has been asserted by the producer side.
+      * @return The data bits.
+      */
+    def deq(): T = {
+      target.ready := true.B
+      target.bits
+    }
+
+    /** Indicate no dequeue occurs. Ready is set to false.
+      */
+    def nodeq(): Unit = {
+      target.ready := false.B
+    }
+  }
+}
+
+/** A concrete subclass of ReadyValidIO signaling that the user expects a
+  * "decoupled" interface: 'valid' indicates that the producer has
+  * put valid data in 'bits', and 'ready' indicates that the consumer is ready
+  * to accept the data this cycle. No requirements are placed on the signaling
+  * of ready or valid.
+  * @param gen the type of data to be wrapped in DecoupledIO
+  */
+class DecoupledIO[+T <: Data](gen: T) extends ReadyValidIO[T](gen) {
+
+  /** Applies the supplied functor to the bits of this interface, returning a new
+    * typed DecoupledIO interface.
+    * @param f The function to apply to this DecoupledIO's 'bits' with return type B
+    * @return a new DecoupledIO of type B
+    */
+  def map[B <: Data](f: T => B): DecoupledIO[B] = {
+    val _map_bits = f(bits)
+    val _map = Wire(Decoupled(chiselTypeOf(_map_bits)))
+    _map.bits := _map_bits
+    _map.valid := valid
+    ready := _map.ready
+    _map
+  }
+}
+
+/** This factory adds a decoupled handshaking protocol to a data bundle. */
+object Decoupled {
+
+  /** Wraps some Data with a DecoupledIO interface. */
+  def apply[T <: Data](gen: T): DecoupledIO[T] = new DecoupledIO(gen)
+
+  // TODO: use a proper empty data type, this is a quick and dirty solution
+  private final class EmptyBundle extends Bundle
+
+  // Both of these methods return DecoupledIO parameterized by the most generic type: Data
+  /** Returns a [[DecoupledIO]] inteface with no payload */
+  def apply(): DecoupledIO[Data] = apply(new EmptyBundle)
+
+  /** Returns a [[DecoupledIO]] inteface with no payload */
+  def empty: DecoupledIO[Data] = Decoupled()
+
+  /** Downconverts an IrrevocableIO output to a DecoupledIO, dropping guarantees of irrevocability.
+    *
+    * @note unsafe (and will error) on the producer (input) side of an IrrevocableIO
+    */
+  def apply[T <: Data](irr: IrrevocableIO[T]): DecoupledIO[T] = {
+    require(
+      DataMirror.directionOf(irr.bits) == Direction.Output,
+      "Only safe to cast produced Irrevocable bits to Decoupled."
+    )
+    val d = Wire(new DecoupledIO(chiselTypeOf(irr.bits)))
+    d.bits := irr.bits
+    d.valid := irr.valid
+    irr.ready := d.ready
+    d
+  }
+}
+// ...
+/** Producer - drives (outputs) valid and bits, inputs ready.
+  * @param gen The type of data to enqueue
+  */
+object EnqIO {
+  def apply[T <: Data](gen: T): DecoupledIO[T] = Decoupled(gen)
+}
+
+/** Consumer - drives (outputs) ready, inputs valid and bits.
+  * @param gen The type of data to dequeue
+  */
+object DeqIO {
+  def apply[T <: Data](gen: T): DecoupledIO[T] = Flipped(Decoupled(gen))
+}
+
+/** An I/O Bundle for Queues
+  * @param gen The type of data to queue
+  * @param entries The max number of entries in the queue.
+  * @param hasFlush A boolean for whether the generated Queue is flushable
+  * @groupdesc Signals The hardware fields of the Bundle
+  */
+class QueueIO[T <: Data](
+  private val gen: T,
+  val entries:     Int,
+  val hasFlush:    Boolean = false)
+    extends Bundle { // See github.com/freechipsproject/chisel3/issues/765 for why gen is a private val and proposed replacement APIs.
+
+  /* These may look inverted, because the names (enq/deq) are from the perspective of the client,
+   *  but internally, the queue implementation itself sits on the other side
+   *  of the interface so uses the flipped instance.
+   */
+  /** I/O to enqueue data (client is producer, and Queue object is consumer), is [[chisel3.util.DecoupledIO]] flipped.
+    * @group Signals
+    */
+  val enq = Flipped(EnqIO(gen))
+
+  /** I/O to dequeue data (client is consumer and Queue object is producer), is [[chisel3.util.DecoupledIO]]
+    * @group Signals
+    */
+  val deq = Flipped(DeqIO(gen))
+
+  /** The current amount of data in the queue
+    * @group Signals
+    */
+  val count = Output(UInt(log2Ceil(entries + 1).W))
+
+  /** When asserted, reset the enqueue and dequeue pointers, effectively flushing the queue (Optional IO for a flushable Queue)
+    * @group Signals
+    */
+  val flush = if (hasFlush) Some(Input(Bool())) else None
+
+}
+// ...
+/** Factory for a generic hardware queue. */
+object Queue {
+
+  /** Create a [[Queue]] and supply a [[DecoupledIO]] containing the product.
+    *
+    * @param enq input (enqueue) interface to the queue, also determines type of queue elements.
+    * @param entries depth (number of elements) of the queue
+    * @param pipe True if a single entry queue can run at full throughput (like a pipeline). The `ready` signals are
+    *             combinationally coupled.
+    * @param flow True if the inputs can be consumed on the same cycle (the inputs "flow" through the queue immediately).
+    *             The `valid` signals are coupled.
+    * @param useSyncReadMem True uses SyncReadMem instead of Mem as an internal memory element.
+    * @param flush Optional [[Bool]] signal, if defined, the [[Queue.hasFlush]] will be true, and connect correspond
+    *              signal to [[Queue]] instance.
+    * @return output (dequeue) interface from the queue.
+    *
+    * @example {{{
+    *   consumer.io.in <> Queue(producer.io.out, 16)
+    * }}}
+    */
+  @nowarn("cat=deprecation&msg=TransitName")
+  def apply[T <: Data](
+    enq:            ReadyValidIO[T],
+    entries:        Int = 2,
+    pipe:           Boolean = false,
+    flow:           Boolean = false,
+    useSyncReadMem: Boolean = false,
+    flush:          Option[Bool] = None
+  ): DecoupledIO[T] = {
+    if (entries == 0) {
+      val deq = Wire(new DecoupledIO(chiselTypeOf(enq.bits)))
+      deq.valid := enq.valid
+      deq.bits := enq.bits
+      enq.ready := deq.ready
+      deq
+    } else {
+      val q = Module(new Queue(chiselTypeOf(enq.bits), entries, pipe, flow, useSyncReadMem, flush.isDefined))
+      q.io.flush.zip(flush).foreach(f => f._1 := f._2)
+      q.io.enq.valid := enq.valid // not using <> so that override is allowed
+      q.io.enq.bits := enq.bits
+      enq.ready := q.io.enq.ready
+      q.io.deq
+    }
+  }
+
+// ...
+}
+
+```

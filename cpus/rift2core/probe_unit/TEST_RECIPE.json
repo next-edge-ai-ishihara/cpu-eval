@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "problem": "ProbeUnit",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/backend/LSU/ProbeUnit.scala",
+    "source_unit": "ProbeUnit"
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-fence_i"
+    ],
+    "policy": "The upstream program stores new instruction bytes, executes fence.i, then fetches from the stored address. The fetch forces the I-cache to request the line from L2 while the D-cache may still hold it dirty, so L2 issues a TileLink Probe (channel B) to the D-cache that ProbeUnit must forward to the D-cache pipeline for a response. The fixed D-cache patch also sends two line probes to a separate ProbeUnit and uses a fixed WriteBackUnit to generate the ban while the older probe is acknowledged."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches. The separate observation in rv64ui-p-fence_i must complete. It checks accepted addresses and forbids forwarding during the ban."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "required_observation_markers": {
+    "rv64ui-p-fence_i": "CPU_EVAL_PROBE_COMPLETE"
+  },
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_banned_handoff.patch",
+      "sha256": "6fd04917cb28ee8f7c8d99aa982c6e8ff2679143c939e17d0306ef59a42a0c31",
+      "purpose": "Check two accepted probe addresses and rule out downstream handoff during the WriteBackUnit ban."
+    }
+  ]
+}

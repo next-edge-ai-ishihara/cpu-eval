@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Decode packet type",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        205,
+        302
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "Module declaration for el2_dec_dec_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        1509,
+        1515
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "Parent instantiation for el2_dec_dec_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        774,
+        776
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "Instruction decode table (encodings and asserted output fields)",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/decode",
+      "lines": [
+        1,
+        617
+      ],
+      "sha256": "62dc85fad17b27d041678447c401bfee9725d6889a8d4cb68b9e38c34a6b8e79"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `el2_dec_dec_ctl`\n\nImplement the complete `el2_dec_dec_ctl` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_dec_dec_ctl` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after module declaration",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for parent instantiation",
+      "text": "\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after parent instantiation",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for decode packet type",
+      "text": "\n## Dependency declarations\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after decode packet type",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for instruction decode table",
+      "text": "\n## Related source code\n\n### `design/dec/decode`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after instruction decode table",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Legal output contract",
+      "text": "\n## Additional requirement\n\n`out.legal` is 1 exactly when `inst` matches a `.definition` pattern named in an `rv32i[...]` row of the `.decode` section.\n"
+    }
+  ]
+}

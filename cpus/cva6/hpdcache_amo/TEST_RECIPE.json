@@ -1,0 +1,42 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_amo",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv64a6_imafdc_sv39_hpdcache_wb",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_amo.sv",
+  "source_sha256": "1a0bf5cb2d12f65ce79b7da1173321d8119c744ddd5df09d33dd78317a80bc2f",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "9fa0bac7118284943e0323062da087e608eba4195afbafb97fe2bb52691df758",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "rvfi_observation": {
+    "source_path": "core/cva6_rvfi.sv",
+    "pinned_source_sha256": "bf2455879fbf2f9e947fd1bbf37538c9de46592ff9c9d889e29f87803676de21",
+    "instrumented_source_sha256": "18f6034a7d82d3be20fdf9435d4436849e77208ac4c8109d2f6456b3734cb6c9",
+    "effect": "Clear the RVFI write mask for LR.W and LR.D. Compare retirements, register writes and architectural memory writes with Spike, and observe the actual cache update through the subsequent reload."
+  },
+  "test_list": "harness/testlist_amo.yaml",
+  "test_list_sha256": "490945c5d1da95716ba0a57e0d77c8b36e205b58280eb2f587810405b1246f8f",
+  "directed_test_source": "harness/hpdcache_amo_cached_reload.S",
+  "directed_test_source_sha256": "bd9246840a30eaf25b564d53929c52a7082bcb266cca22c40b78d34cf3f45756",
+  "application_order": [
+    "checkout CVA6 at cpu_revision and initialize its HPDcache submodule",
+    "verify that the reconstructed test has directed_test_source_sha256",
+    "run harness/evaluate.sh with the complete submitted hpdcache_amo module"
+  ],
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/hpdcache_amo.sv",
+    "reference_hdl_preconditions": "Run reference_hdl from the root of the CVA6 checkout at cpu_revision, with core/cache_subsystem/hpdcache initialized as the cv-hpdcache submodule containing commit f404e7ebbda8baa4af3729535f520a6b12a06d03. Verify SHA-256 1a0bf5cb2d12f65ce79b7da1173321d8119c744ddd5df09d33dd78317a80bc2f of the retrieved source before use.",
+    "test_sources": "Use the pinned architectural tests. For a directed test, the evaluator copies the distributed harness/*.S source to <CVA6>/verif/tests/cpu-eval-patches. To reconstruct that source independently, apply its new-file provenance patch in an empty scratch directory and compare the recorded SHA-256; do not apply the provenance patch to either upstream checkout."
+  },
+  "test_materialization": "../harness/evaluate_parallel.sh copies the assembly files beside the selected test list into <CVA6>/verif/tests/cpu-eval-patches. The directed test patch is a provenance reconstruction record and is not applied before evaluation."
+}

@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Multiply and divide configuration identifiers",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        47,
+        52
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Multiply and divide operation identifiers",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        202,
+        208
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_multdiv_fast.sv",
+      "lines": [
+        17,
+        46
+      ],
+      "sha256": "c86ca819b58b8ce2fc4ff5db887346bcd622b868fb7815fa07dd77119c68c04a"
+    },
+    {
+      "label": "Multiply/divide selection, intermediate value and result muxes",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_ex_block.sv",
+      "lines": [
+        76,
+        89
+      ],
+      "sha256": "6451d5cd6af214b5fbb70f7499f898de981188cd7a25bf49247c0819b907c90b"
+    },
+    {
+      "label": "ALU instantiation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_ex_block.sv",
+      "lines": [
+        116,
+        134
+      ],
+      "sha256": "6451d5cd6af214b5fbb70f7499f898de981188cd7a25bf49247c0819b907c90b"
+    },
+    {
+      "label": "Parent instantiation and EX valid",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_ex_block.sv",
+      "lines": [
+        165,
+        197
+      ],
+      "sha256": "6451d5cd6af214b5fbb70f7499f898de981188cd7a25bf49247c0819b907c90b"
+    },
+    {
+      "label": "Adder output declarations",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_alu.sv",
+      "lines": [
+        27,
+        28
+      ],
+      "sha256": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+    },
+    {
+      "label": "Adder signal declarations",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_alu.sv",
+      "lines": [
+        52,
+        53
+      ],
+      "sha256": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+    },
+    {
+      "label": "Adder operand selection and adder",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_alu.sv",
+      "lines": [
+        83,
+        109
+      ],
+      "sha256": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+    },
+    {
+      "label": "Zero-result assignments",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_alu.sv",
+      "lines": [
+        132,
+        133
+      ],
+      "sha256": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+    },
+    {
+      "label": "Intermediate value registers",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        446,
+        456
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Multiply/divide ready",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        975,
+        976
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "signed_mode_i sign convention in the sibling multiplier/divider",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_multdiv_slow.sv",
+      "lines": [
+        151,
+        153
+      ],
+      "sha256": "88b7392d3e2cd1f67f2c39b7425075030c78646cba2409356d6cfce262a46db6"
+    },
+    {
+      "label": "Multiplier/divider documentation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_decode_execute.rst",
+      "lines": [
+        110,
+        154
+      ],
+      "sha256": "ab60d2567305b1d544cdac813c37a440f89e134bc5d3d8e5551c5a7c69dc3ffb"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "# Implement `ibex_multdiv_fast`\n\nImplement the complete `ibex_multdiv_fast` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ibex_multdiv_fast` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Package and imports\n\n### rtl/ibex_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Parent instantiation\n\n### rtl/ibex_ex_block.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Related source code\n\n### rtl/ibex_alu.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### rtl/ibex_id_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### rtl/ibex_multdiv_slow.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Documentation\n\n### doc/03_reference/instruction_decode_execute.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n"
+    }
+  ]
+}

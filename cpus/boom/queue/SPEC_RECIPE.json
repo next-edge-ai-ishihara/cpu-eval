@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "Queue",
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        1,
+        10
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        219,
+        244
+      ],
+      "label": "Queue documentation and declaration",
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        21,
+        21
+      ],
+      "label": "Ready-valid bundle declaration",
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "Ready-valid transfer contract",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        28,
+        50
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        181,
+        217
+      ],
+      "label": "Queue I/O bundle",
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "Compile-option contract",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "core/src/main/scala/chisel3/CompileOptions.scala",
+      "lines": [
+        8,
+        25
+      ],
+      "sha256": "2caa6aca5a137e60add4fcb2975c88b8c8d30f242bd83ace6063aaa4b0aade5a"
+    },
+    {
+      "label": "Strict and compatibility compile options",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "core/src/main/scala/chisel3/CompileOptions.scala",
+      "lines": [
+        58,
+        79
+      ],
+      "sha256": "2caa6aca5a137e60add4fcb2975c88b8c8d30f242bd83ace6063aaa4b0aade5a"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/compatibility.scala",
+      "lines": [
+        11,
+        11
+      ],
+      "label": "Chisel compatibility package object",
+      "sha256": "61e28b03bca497ebe81e4b08beaf7887638a8e0036b976190ed8ec2c3964559e"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/compatibility.scala",
+      "lines": [
+        19,
+        19
+      ],
+      "label": "Compatibility default compile options",
+      "sha256": "61e28b03bca497ebe81e4b08beaf7887638a8e0036b976190ed8ec2c3964559e"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/rocket-chip-inclusive-cache.git",
+      "commit": "e3a3000cc1fd4cdf3a4e638e4d081b8aae94ebf0",
+      "path": "design/craft/inclusivecache/src/SourceD.scala",
+      "lines": [
+        20,
+        20
+      ],
+      "label": "Compatibility import in the level-two cache",
+      "sha256": "bf864157fe3592fd98e2914a445e31d9213370920833f8291137261b86889801"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/rocket-chip-inclusive-cache.git",
+      "commit": "e3a3000cc1fd4cdf3a4e638e4d081b8aae94ebf0",
+      "path": "design/craft/inclusivecache/src/SourceD.scala",
+      "lines": [
+        118,
+        122
+      ],
+      "label": "Queue built from a hardware port in compatibility code",
+      "sha256": "bf864157fe3592fd98e2914a445e31d9213370920833f8291137261b86889801"
+    },
+    {
+      "label": "Queue behavior checks",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/test/scala/chiselTests/QueueSpec.scala",
+      "lines": [
+        12,
+        181
+      ],
+      "sha256": "e04ae187e3de0859f89a7191e0191d07672e4e73cb03efbc23b8984f83e0ec14"
+    },
+    {
+      "label": "Flush state check",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/test/scala/chiselTests/QueueFlushSpec.scala",
+      "lines": [
+        35,
+        74
+      ],
+      "sha256": "9ccf3e9926544d0017dfde47eed8330177ca00db617a1021e763f0df6a74a99a"
+    },
+    {
+      "label": "Concurrent enqueue and flush check",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/test/scala/chiselTests/QueueFlushSpec.scala",
+      "lines": [
+        128,
+        156
+      ],
+      "sha256": "9ccf3e9926544d0017dfde47eed8330177ca00db617a1021e763f0df6a74a99a"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "# Implement `Queue`\n\nImplement the complete `Queue` module. Preserve its class declaration and public interface shown below. Return only the complete `class Queue` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### `src/main/scala/chisel3/util/Decoupled.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `core/src/main/scala/chisel3/CompileOptions.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/chisel3/compatibility.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Related source code\n\n### `design/craft/inclusivecache/src/SourceD.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/test/scala/chiselTests/QueueSpec.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/test/scala/chiselTests/QueueFlushSpec.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n"
+    }
+  ]
+}

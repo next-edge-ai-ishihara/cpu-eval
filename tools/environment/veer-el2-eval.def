@@ -1,0 +1,23 @@
+Bootstrap: docker
+From: ghcr.io/antmicro/cores-veer-el2:20260618
+
+%post
+    set -eux
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get install -y --no-install-recommends \
+        autoconf bison build-essential ca-certificates device-tree-compiler \
+        flex git help2man iproute2 libfl-dev patch python3 python3-pip python3-yaml zlib1g-dev
+    git clone --depth 1 --branch v5.036 https://github.com/verilator/verilator /tmp/verilator
+    cd /tmp/verilator
+    autoconf
+    ./configure --prefix=/opt/verilator-5.036
+    make -j8
+    make install
+    rm -rf /tmp/verilator /var/lib/apt/lists/*
+
+%environment
+    export PATH="/opt/verilator-5.036/bin:/opt/riscv/bin:/opt/spike/bin:$PATH"
+
+%runscript
+    exec "$@"

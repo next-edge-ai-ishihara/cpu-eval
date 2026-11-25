@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "cv32a60x word and load-buffer widths",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        35
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x data-cache geometry",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        106,
+        116
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "CVA6 construction of HPDcache and MSHR geometry",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+      "lines": [
+        197,
+        215
+      ],
+      "language": "verilog",
+      "sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    {
+      "label": "Derived HPDcache and MSHR widths",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        451,
+        509
+      ],
+      "language": "verilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Module declaration for hpdcache_mshr",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_mshr.sv",
+      "lines": [
+        27,
+        96
+      ],
+      "language": "verilog",
+      "sha256": "fb01c23a96bc2d913e6e12a2b662265796363d6c8bd95b3e64f7f6171f936f68"
+    },
+    {
+      "label": "Refill grant consumes MSHR cache set",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_miss_handler.sv",
+      "lines": [
+        367,
+        376
+      ],
+      "language": "verilog",
+      "sha256": "ac26528a861d1e237a56e9add5bf77c37c84db2f179e78118832926c8d9e54f0"
+    },
+    {
+      "label": "Miss-handler check set and tag decoding",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_miss_handler.sv",
+      "lines": [
+        544,
+        545
+      ],
+      "language": "verilog",
+      "sha256": "ac26528a861d1e237a56e9add5bf77c37c84db2f179e78118832926c8d9e54f0"
+    },
+    {
+      "label": "Parent connection for hpdcache_mshr",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_miss_handler.sv",
+      "lines": [
+        772,
+        847
+      ],
+      "language": "verilog",
+      "sha256": "ac26528a861d1e237a56e9add5bf77c37c84db2f179e78118832926c8d9e54f0"
+    },
+    {
+      "label": "Selected register-bank behavior",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_regbank_wbyteenable_1rw.sv",
+      "lines": [
+        26,
+        70
+      ],
+      "language": "verilog",
+      "sha256": "475ece0e8ac1a7c4dd633a67de52d0ef315ea66f2679ab08f1f9c6a844202801"
+    },
+    {
+      "label": "Controller stage-labelled MSHR ports",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        75,
+        78
+      ],
+      "language": "verilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    },
+    {
+      "label": "Controller check address producers",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        1159,
+        1160
+      ],
+      "language": "verilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    },
+    {
+      "label": "Controller check connections",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache.sv",
+      "lines": [
+        486,
+        489
+      ],
+      "language": "verilog",
+      "sha256": "35d9b2dca6415fca40050bc6fec3d4823701111fb2104db3cd79775268c53b47"
+    },
+    {
+      "label": "Miss-handler check connections",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache.sv",
+      "lines": [
+        762,
+        765
+      ],
+      "language": "verilog",
+      "sha256": "35d9b2dca6415fca40050bc6fec3d4823701111fb2104db3cd79775268c53b47"
+    },
+    {
+      "label": "Controller stage progression",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        56,
+        60
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "MSHR purpose, capacity, and organization",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        646,
+        684
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "MSHR entry fields",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        694,
+        717
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "MSHR associativity conflicts",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        757,
+        766
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_mshr`\n\nImplement the complete `hpdcache_mshr` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_mshr` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### `core/include/cv32a60x_config_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n### `core/cache_subsystem/cva6_hpdcache_subsystem.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Package and imports\n\n### `rtl/src/hpdcache_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Parent instantiation\n\n### `rtl/src/hpdcache_miss_handler.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Dependency declarations\n\n### `rtl/src/common/hpdcache_regbank_wbyteenable_1rw.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Related source code\n\n### `rtl/src/hpdcache_ctrl.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n### `rtl/src/hpdcache.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Documentation\n\n### `docs/source/architecture.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+--- a/src/main/scala/rift2Core/privilege/MMU.scala
++++ b/src/main/scala/rift2Core/privilege/MMU.scala
+@@ -131,6 +131,46 @@
+   val iptw  = Module( new PTW(edge, id = 0) )
+   val dptw  = Module( new PTW(edge, id = 1) )
+ 
++  // Observe only the TLB public request/refill/hit ports, outside candidate code.
++  def cpuEvalTLBReuseProbe(name: String, tlb: TLB): Unit = {
++    val tracked = RegInit(false.B)
++    val lastRefill = Reg(new TLB_Renew_Bundle)
++    when(tlb.io.sfence_vma) {
++      tracked := false.B
++    }.elsewhen(tlb.io.tlb_renew.valid) {
++      lastRefill := tlb.io.tlb_renew.bits
++      tracked := true.B
++    }.elsewhen(tracked && tlb.io.asid_i =/= lastRefill.asid) {
++      tracked := false.B
++    }
++    val samePage =
++      tlb.io.req.bits.vaddr(38, 30) === lastRefill.vpn(2) &&
++      (lastRefill.is_giga_page ||
++        (tlb.io.req.bits.vaddr(29, 21) === lastRefill.vpn(1) &&
++          (lastRefill.is_mega_page || tlb.io.req.bits.vaddr(20, 12) === lastRefill.vpn(0))))
++    val check = tracked && tlb.io.req.valid &&
++      !tlb.io.sfence_vma && !tlb.io.tlb_renew.valid &&
++      tlb.io.asid_i === lastRefill.asid && samePage
++    val reported = RegInit(false.B)
++    when(check && !reported) {
++      printf(s"CPU_EVAL_TLB_REUSE_CHECKED $name\n")
++      reported := true.B
++    }
++    val crossedBasePage = tlb.io.req.bits.vaddr(20, 12) =/= lastRefill.vpn(0)
++    val megapageReported = RegInit(false.B)
++    when(check && lastRefill.is_mega_page && crossedBasePage && !megapageReported) {
++      printf(s"CPU_EVAL_TLB_MEGAPAGE_REUSE_CHECKED $name\n")
++      megapageReported := true.B
++    }
++    val mismatchReported = RegInit(false.B)
++    when(check && !tlb.io.is_hit && !mismatchReported) {
++      printf(s"CPU_EVAL_OBSERVATION_MISMATCH TLB $name refill reuse missed\n")
++      mismatchReported := true.B
++    }
++  }
++  cpuEvalTLBReuseProbe("itlb", itlb)
++  cpuEvalTLBReuseProbe("dtlb", dtlb)
++
+   val is_bypass_if = io.cmm_mmu.satp(63,60) === 0.U | io.cmm_mmu.priv_lvl_if === "b11".U
+   val is_bypass_ls = io.cmm_mmu.satp(63,60) === 0.U | io.cmm_mmu.priv_lvl_ls === "b11".U
+ 

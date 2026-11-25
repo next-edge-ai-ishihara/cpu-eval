@@ -1,0 +1,471 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Selected instruction width",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected address, FPGA, and issue configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        23,
+        27
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected compressed-instruction and hypervisor configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        45,
+        49
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected trap-value configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        71,
+        71
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Derived fetch geometry",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        188,
+        191
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Frontend stream behavior",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        105,
+        113
+      ],
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    },
+    {
+      "label": "Frontend exception forwarding",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        117,
+        118
+      ],
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    },
+    {
+      "label": "Instruction-queue architecture",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        249,
+        263
+      ],
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    },
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/instr_queue.sv",
+      "lines": [
+        46,
+        89
+      ],
+      "language": "systemverilog",
+      "sha256": "f43b24576db6e6e0da59e31c6dd90e5cf54de12a4bf7a3316b7405618e1b45e5"
+    },
+    {
+      "label": "Queue depths and control-flow types",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        168,
+        178
+      ],
+      "language": "systemverilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Frontend exception type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        680,
+        685
+      ],
+      "language": "systemverilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Branch-prediction and exception layouts",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        35,
+        52
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Fetch-entry layout",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        83,
+        90
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Frontend backpressure and replay use",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/frontend.sv",
+      "lines": [
+        310,
+        321
+      ],
+      "language": "systemverilog",
+      "sha256": "10a3a3cbcb75ab9a70167f9ea1cdbfbe7c942fae2eab17663fb23396ee880515"
+    },
+    {
+      "label": "Parent instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/frontend.sv",
+      "lines": [
+        566,
+        591
+      ],
+      "language": "systemverilog",
+      "sha256": "10a3a3cbcb75ab9a70167f9ea1cdbfbe7c942fae2eab17663fb23396ee880515"
+    },
+    {
+      "label": "FIFO contract",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6_fifo_v3.sv",
+      "lines": [
+        16,
+        40
+      ],
+      "language": "systemverilog",
+      "sha256": "f61e13a52583cc8e1a5a6d46910bed6247cf0dd8b52aa39b4fd683729e3faa68"
+    },
+    {
+      "label": "Trailing-zero counter contract",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/lzc.sv",
+      "lines": [
+        25,
+        41
+      ],
+      "language": "systemverilog",
+      "sha256": "c47046cab67cd9e9ff46f9b2a4c055f301eabd0f135d76d96639eb41c9fa3609"
+    },
+    {
+      "label": "Population-count contract",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/popcount.sv",
+      "lines": [
+        19,
+        25
+      ],
+      "language": "systemverilog",
+      "sha256": "e01dc8c6b0e36bbea5229f12686fbc97ee251133cf9b7bbcf5d91c084aff6822"
+    },
+    {
+      "label": "riscv package declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        18,
+        18
+      ],
+      "language": "systemverilog",
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    },
+    {
+      "label": "Instruction access-fault cause",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        338,
+        338
+      ],
+      "language": "systemverilog",
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    },
+    {
+      "label": "Instruction page-fault cause",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        349,
+        349
+      ],
+      "language": "systemverilog",
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    },
+    {
+      "label": "Instruction guest-page-fault cause",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        353,
+        353
+      ],
+      "language": "systemverilog",
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions; Section heading; Source path heading; Fence",
+      "text": "# Implement `instr_queue`\n\nImplement the complete `instr_queue` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module instr_queue` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/include/build_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Parent instantiation\n\n### core/frontend/frontend.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Dependency declarations\n\n### core/include/ariane_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/cva6.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/cva6_fifo_v3.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### vendor/pulp-platform/common_cells/src/lzc.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### vendor/pulp-platform/common_cells/src/popcount.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/include/riscv_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Documentation\n\n### docs/design/design-manual/source/cva6_frontend.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Port contract that no upstream text states",
+      "text": "```\n\n## Additional requirement\n\n`consumed_o[i]` is 1 exactly when instruction `i` of the current `instr_i` fetch is admitted into the queue in that cycle, and when `replay_o` is 1, `replay_addr_o` is the address of the first valid instruction of the current fetch that is not admitted.\n"
+    }
+  ]
+}

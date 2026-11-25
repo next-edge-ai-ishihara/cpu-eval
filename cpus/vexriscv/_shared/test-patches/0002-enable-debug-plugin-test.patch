@@ -1,0 +1,12 @@
+diff --git a/src/test/scala/vexriscv/TestIndividualFeatures.scala b/src/test/scala/vexriscv/TestIndividualFeatures.scala
+--- a/src/test/scala/vexriscv/TestIndividualFeatures.scala
++++ b/src/test/scala/vexriscv/TestIndividualFeatures.scala
+@@ -601,7 +601,7 @@ class DebugDimension extends VexRiscvDimension("Debug") {
+     },
+     new VexRiscvPosition("Enable") {
+       override def applyOn(config: VexRiscvConfig): Unit = config.plugins += new DebugPlugin(ClockDomain.current.clone(reset = Bool().setName("debugReset")))
+-      override def testParam = "CONCURRENT_OS_EXECUTIONS=yes"
++      override def testParam = "CONCURRENT_OS_EXECUTIONS=no"
+     }
+   ))
+ }

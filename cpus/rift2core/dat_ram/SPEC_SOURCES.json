@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "f007e9c9dc9f4a281c5c5756c832a489a699129cf1298f1009897272ab836e80",
+  "prompt_sha256": "b02eb4908e818430fb6d559dbb91d4e6e3c5375d3a8b7c95fa73eac8eedd911a",
+  "repositories": {
+    "https://github.com/whutddk/Rift2Core.git": {
+      "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task boundary",
+      "prompt_bytes": [
+        0,
+        298
+      ],
+      "sha256": "ed2b8e7ea6d9f9001289beed31f9ba3ba37e1ca73f89b4db8f859b28bc9f44b3"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        298,
+        346
+      ],
+      "sha256": "fa0640e870202ea5ebe839200f18d976a3ed05c477561e2313d4074811e2ad3d"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        346,
+        353
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        353,
+        747
+      ],
+      "sha256": "9f5027e21d41c91e327e5a09f0558dcd685b4745bb261c8736f7eede1dd93d9d"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Section boundary",
+      "prompt_bytes": [
+        747,
+        846
+      ],
+      "sha256": "deb0a87bfc2ebe314ac8531f367c1bb415018197390d09a5d65a7efe35b2104f"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        846,
+        922
+      ],
+      "sha256": "65676ab966c8772febea36d9f3b4c520cd3c5b1c982512d30a3c00a7393fa8e4"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        922,
+        929
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        929,
+        1028
+      ],
+      "sha256": "79eab7d930671c5a1669972fc08482ddedc2348389230449aaeae68483a6b8f6"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        1028,
+        1035
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1035,
+        2328
+      ],
+      "sha256": "f80bd705522d4844f72a610f4b352b03ecdb526cac948a271e6ff7fe7d86c53c"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Section boundary",
+      "prompt_bytes": [
+        2328,
+        2391
+      ],
+      "sha256": "871bcab795d3a62e948aec655a8ca8e1a2f299c9bf92a36f559e5c5336437a0f"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        2391,
+        2467
+      ],
+      "sha256": "65676ab966c8772febea36d9f3b4c520cd3c5b1c982512d30a3c00a7393fa8e4"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Section boundary",
+      "prompt_bytes": [
+        2467,
+        2531
+      ],
+      "sha256": "7c07eae9057dd0cc5cb6d7f0e8547529e8386ac88c34f081b78df94f78536449"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        2531,
+        2573
+      ],
+      "sha256": "e81ef2cb5a1c88d4f47f64f7a9e06933a2c712fd8bd3f51ec3b5836afbb94f52"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Section boundary",
+      "prompt_bytes": [
+        2573,
+        2605
+      ],
+      "sha256": "ee46745d25adf9f4aaf9a2bcee7d2bf4794462ddff5c645e597aeabf60ff7791"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Additional requirement",
+      "prompt_bytes": [
+        2605,
+        2937
+      ],
+      "sha256": "4cf32ad779b1cd85a6a48c2b761d82cc11b1a1c90d6129ab1d5e16a491fd9036"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Class declaration",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/base/CacheRAM.scala",
+      "lines": [
+        26,
+        26
+      ],
+      "sha256": "e215e72c7d88ff7ec3e3543025f29b3b1a2368f7be9cb30df1fb13577b326a94"
+    },
+    {
+      "label": "Address width and interface",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/base/CacheRAM.scala",
+      "lines": [
+        29,
+        43
+      ],
+      "sha256": "e215e72c7d88ff7ec3e3543025f29b3b1a2368f7be9cb30df1fb13577b326a94"
+    },
+    {
+      "label": "DcacheStage instantiation",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/LSU/DcacheStage.scala",
+      "lines": [
+        60,
+        60
+      ],
+      "sha256": "c17694d2422010652f5c8f7c462810b9403fe86450e7557c9eb0efd6e61d9e0f"
+    },
+    {
+      "label": "DcacheStage pipeline register",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/LSU/DcacheStage.scala",
+      "lines": [
+        69,
+        70
+      ],
+      "sha256": "c17694d2422010652f5c8f7c462810b9403fe86450e7557c9eb0efd6e61d9e0f"
+    },
+    {
+      "label": "DcacheStage connections",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/LSU/DcacheStage.scala",
+      "lines": [
+        107,
+        138
+      ],
+      "sha256": "c17694d2422010652f5c8f7c462810b9403fe86450e7557c9eb0efd6e61d9e0f"
+    },
+    {
+      "label": "IF2 instantiation",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/frontend/IF2.scala",
+      "lines": [
+        167,
+        167
+      ],
+      "sha256": "4bbfb5b31e8ca0df0dc7b669438bf1f68f00f9d35a855fae108f6b5a7b52e3f1",
+      "line_endings": "lf"
+    },
+    {
+      "label": "PTW instantiation",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/privilege/PTW.scala",
+      "lines": [
+        260,
+        260
+      ],
+      "sha256": "05b3d889fc621f25e92bcf75197f0cd8d38d01aae7e7d0ecdb5eac7d82cfe253",
+      "line_endings": "lf"
+    }
+  ]
+}

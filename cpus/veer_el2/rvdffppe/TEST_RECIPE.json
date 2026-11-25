@@ -1,0 +1,29 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvdffppe",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "rvdffppe_ret_misp",
+    "path": "test/rvdffppe_ret_misp.s",
+    "sha256": "b16c3961df9c3577a88668fea015013e4864e68e07b7b3813a81ac7bd716695b"
+  },
+  "run": "bash test/evaluate_rvdffppe.sh",
+  "run_sha256": "02d9e000d225fd41dd10d54e28d04dcbc0dfdfb7a996ed50fa2612efd8ffc321",
+  "process_exit_contract": "PASS requires TEST_PASSED, a normal make exit, and no TEST_FAILED marker. TEST_FAILED without TEST_PASSED remains FAIL even when make exits nonzero. Conflicting markers, an abnormal exit after TEST_PASSED and a cycle-limit marker are FAIL. Interrupted execution and a log without the Verilator command are INVALID.",
+  "comparison": "Both the self-checking branch-misprediction counter program and the separate FPGA port checks must pass.",
+  "selected_configuration": "target=default with build_axi4 and fpga_optimize enabled; the runner regenerates the selected headers before make",
+  "port_test": {
+    "path": "test/rvdffppe_ports.sv",
+    "sha256": "fb20357d9f7fab34fb02f94c8b2c68274a048e58fd8208d9e8b4bb6bf90a2340",
+    "purpose": "Check enabled capture of the complete prediction packet, hold, and asynchronous reset at both actual EXU widths."
+  }
+}

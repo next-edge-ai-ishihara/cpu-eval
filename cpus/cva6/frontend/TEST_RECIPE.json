@@ -1,0 +1,39 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../cva6/tests/0007-add-ecall-test.patch"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "frontend",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/frontend/frontend.sv",
+  "source_sha256": "10a3a3cbcb75ab9a70167f9ea1cdbfbe7c942fae2eab17663fb23396ee880515",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "f1e8954d79b1ee76d7745a4cb7bd1e0f256dc4cce3bd3276a734eaf3df51bc07",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_frontend.yaml",
+  "test_list_sha256": "0f5c774f3b3074b03a58c880d4d56246de348dd8d83e87540dc82074f90fcdff",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/frontend/frontend.sv",
+    "test_sources": "Run unmodified sub-01.S, xor-01.S and beq-01.S from the recorded test revision. Apply the recorded ECALL test patch in a temporary directory and verify the reconstructed assembly before running it with the same evaluator.",
+    "upstream_programs": {
+      "riscv-test-suite/rv32i_m/I/src/sub-01.S": "8f5317f66303759272b07a45d3eb430bbd0e0164b9afcc07169475c19956ae10",
+      "riscv-test-suite/rv32i_m/I/src/xor-01.S": "8e22cc99190b297d64edd780aed9ca110a53aa2ae57b560b6f3d779d01d0c5e4",
+      "riscv-test-suite/rv32i_m/I/src/beq-01.S": "6f07d29073a1c213e666624a600c75c484fa455ee77b50431a5f56e14b9e0883"
+    },
+    "ecall_test": {
+      "patch": "../cva6/tests/0007-add-ecall-test.patch",
+      "patch_sha256": "ee4b0c03531653aed57231097b41ec2c98c29a79bed690f638cab628f419a422",
+      "output": "cpu-eval-patches/cva6_ecall.S",
+      "output_sha256": "068179cc3ac739d16df4461bead22d085d01a769ed93c9742734fe682dc9abae"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+requirement	tests
+Single-precision equality, less-than, less-than-or-equal, and NaN behavior	rv64uf-p-fcmp
+Double-precision equality, less-than, less-than-or-equal, and NaN behavior	rv64ud-p-fcmp
+All three comparison outputs for signed zeros, finite values, infinities, and unordered inputs	compare_rec_fn_ports
+Invalid flag and reserved flags for quiet and signaling comparisons	compare_rec_fn_ports

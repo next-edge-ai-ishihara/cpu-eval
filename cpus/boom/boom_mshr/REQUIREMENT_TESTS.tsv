@@ -1,0 +1,6 @@
+requirement	test_program	test_behavior
+Track and refill a missed load	rv64ui-p-lw	The fixed upstream load test supplies demand reads whose cold accesses require cache-line acquisition.
+Track independent missed loads and return their refill data	rv64ui-p-parallel_misses	The added program issues eight loads from distinct 64-byte cache lines. Their destination values remain visible in the retired trace without controlling the pass path, so refill or response corruption is observable after normal completion.
+Track stores that interact with a missed line	rv64ui-p-sw	The fixed upstream store test supplies writes whose cold accesses require cache-line acquisition.
+Serialize atomic operations with refill state	rv64ua-p-amoadd_w;rv64ua-p-lrsc	The fixed upstream atomic tests exercise read-modify-write and reservation traffic through the cache miss machinery.
+Preserve modified data when evicting a cache line	rv64ui-p-mshr_dirty_eviction	The program stores distinct values to sixteen lines mapping to one eight-way set and reads back every value. Its completion is independent of the reloaded values, which are checked in the retired trace.

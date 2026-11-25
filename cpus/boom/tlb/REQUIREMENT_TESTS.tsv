@@ -1,0 +1,6 @@
+requirement	test_program	test_behavior
+Translate Sv39 virtual addresses and preserve physical page-number bits	rv64si-p-icache-alias	The fixed upstream supervisor test exercises aliased instruction mappings and therefore instruction-TLB lookup, refill, and physical-address construction.
+Check data-side permissions in the CPU	rv64si-p-dirty	The fixed upstream dirty-bit test checks permission and trap handling through the data-side NBDTLB and PTW.
+Invalidate cached translations as required by SFENCE.VMA	rv64si-p-icache-alias	The alias test changes instruction mappings and uses the architectural address-translation fence before observing the replacement mapping.
+Construct 4 KiB, 2 MiB and 1 GiB instruction addresses	InstructionTLBTranslationTest	Check the physical page base and virtual offset after a successful PTW response at each Sv39 leaf level, with instruction page fault and access fault deasserted.
+Use a replacement instruction mapping after address-specific SFENCE.VMA	InstructionTLBTranslationTest	Invalidate a known 4 KiB mapping by its virtual address and observe the replacement PPN in the subsequent successful fetch.

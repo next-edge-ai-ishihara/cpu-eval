@@ -1,0 +1,36 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvsyncss_fpga",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "rvsyncss_fpga_gw_polarity",
+    "path": "test/rvsyncss_fpga_gw_polarity.s",
+    "sha256": "7d123b02d98609d4a507e8b2786b4427145b1b15426328a94660fcbb81075260"
+  },
+  "run": "bash test/evaluate_rvsyncss_fpga.sh",
+  "run_sha256": "8f330312b0f2ac6d14ba47a5675aefc567a1dca696f8378f99a53118ef80bff2",
+  "process_exit_contract": "PASS requires TEST_PASSED, a normal make exit, and no TEST_FAILED marker. TEST_FAILED without TEST_PASSED remains FAIL even when make exits nonzero. Conflicting markers, an abnormal exit after TEST_PASSED and a cycle-limit marker are FAIL. Interrupted execution and a log without the Verilator command are INVALID.",
+  "additional_tests": [
+    {
+      "name": "rvsyncss_fpga_gw_low",
+      "path": "test/rvsyncss_fpga_gw_low.s",
+      "sha256": "78001adab2fb708afd21d0c40560df0f7dcaf849b4f07b4beb2ad77c133a3742"
+    }
+  ],
+  "port_probe": {
+    "path": "test/rvsyncss_fpga_port_probe.sv",
+    "sha256": "4654a1ce698cbe3a947f1c6aab856e9efe80a694b241b684acf4e261ff48e1ef",
+    "widths": [1, 7, 251]
+  },
+  "comparison": "self-checking directed programs observing the fast-interrupt-redirect claim id through a mailbox exit code (0xff pass, 0x01 fail), followed by a standalone check of the synchronizer output on gw_clk and reset transitions",
+  "test_scope": "The runner requires both programs to pass in separate simulations: high physical requests select handler 7; low physical requests select handler 6. The low-request program checks the selected handler without executing mret. The port probe, with rawclk tied to gw_clk and clken high, requires dout to equal din from two rising edges earlier and to clear on asynchronous reset."
+}

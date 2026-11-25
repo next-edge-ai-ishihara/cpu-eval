@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_lfsr.sv",
+      "lines": [
+        26,
+        43
+      ],
+      "sha256": "487a72a672dab3fc3b16eaaf08f7f64a856a29c663c7983fa16cabe17ce8d265",
+      "language": "verilog"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_victim_random.sv",
+      "lines": [
+        66,
+        66
+      ],
+      "sha256": "919698df94c00c07fd941bc2464516c4bc7d1fc13d64c66f00f657deadb4a8c0"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_victim_random.sv",
+      "lines": [
+        76,
+        89
+      ],
+      "sha256": "919698df94c00c07fd941bc2464516c4bc7d1fc13d64c66f00f657deadb4a8c0"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, submission instructions and headings",
+      "text": "# Implement `hpdcache_lfsr`\n\nImplement the complete `hpdcache_lfsr` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_lfsr` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Parent instantiation\n\n### `rtl/src/hpdcache_victim_random.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Additional requirement\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Port contract checked by lfsr_ports_tb.sv",
+      "text": "A low `rst_ni` asynchronously sets `val_o` to all ones, and each rising edge of `clk_i` with `shift_i` set advances `val_o` by one step of a maximal-length linear feedback shift register that visits all `2**WIDTH - 1` nonzero values before it returns to all ones, while `val_o` holds its value when `shift_i` is clear.\n"
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/pmp/src/pmp_data_if.sv",
+      "lines": [
+        9,
+        41
+      ],
+      "language": "verilog",
+      "sha256": "6c61e6022c150d2446d60f0aa8936361f45543b41428ca4c149cae586deee589"
+    },
+    {
+      "label": "Parent instantiation of pmp_data_if",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/load_store_unit.sv",
+      "lines": [
+        389,
+        413
+      ],
+      "sha256": "ce091f34f60e489a79d335548355e7d69e7dcd3982f8ece835ce9df2baf72a78"
+    },
+    {
+      "label": "Instruction-cache request and exception records",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        42,
+        60
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Selected cv64a6_imafdc_sv39 XLEN",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv64a6_imafdc_sv39_config_pkg.sv",
+      "lines": [
+        13,
+        13
+      ],
+      "language": "verilog",
+      "sha256": "5d0ca10eac2368a5c1276f8b6a893d699bc37a89d3d197d9c439a0ef7a228e8f"
+    },
+    {
+      "label": "Selected cv64a6_imafdc_sv39 XLEN and VLEN",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv64a6_imafdc_sv39_config_pkg.sv",
+      "lines": [
+        79,
+        80
+      ],
+      "language": "verilog",
+      "sha256": "5d0ca10eac2368a5c1276f8b6a893d699bc37a89d3d197d9c439a0ef7a228e8f"
+    },
+    {
+      "label": "Selected cv64a6_imafdc_sv39 virtualization setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv64a6_imafdc_sv39_config_pkg.sv",
+      "lines": [
+        103,
+        103
+      ],
+      "language": "verilog",
+      "sha256": "5d0ca10eac2368a5c1276f8b6a893d699bc37a89d3d197d9c439a0ef7a228e8f"
+    },
+    {
+      "label": "Selected cv64a6_imafdc_sv39 MMU setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv64a6_imafdc_sv39_config_pkg.sv",
+      "lines": [
+        116,
+        116
+      ],
+      "language": "verilog",
+      "sha256": "5d0ca10eac2368a5c1276f8b6a893d699bc37a89d3d197d9c439a0ef7a228e8f"
+    },
+    {
+      "label": "Selected cv64a6_imafdc_sv39 trap-value and PMP settings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv64a6_imafdc_sv39_config_pkg.sv",
+      "lines": [
+        128,
+        130
+      ],
+      "language": "verilog",
+      "sha256": "5d0ca10eac2368a5c1276f8b6a893d699bc37a89d3d197d9c439a0ef7a228e8f"
+    },
+    {
+      "label": "Selected cv64a6_imafdc_sv39 execute regions",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv64a6_imafdc_sv39_config_pkg.sv",
+      "lines": [
+        139,
+        141
+      ],
+      "language": "verilog",
+      "sha256": "5d0ca10eac2368a5c1276f8b6a893d699bc37a89d3d197d9c439a0ef7a228e8f"
+    },
+    {
+      "label": "Execute-region helper for zero configured regions",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/config_pkg.sv",
+      "lines": [
+        514,
+        526
+      ],
+      "language": "verilog",
+      "sha256": "f6f193daa7dfe1161689f651d6aa6e2b1fdec6560fc83c1313385e944ce4c97c"
+    },
+    {
+      "label": "PMP dependency declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/pmp/src/pmp.sv",
+      "lines": [
+        15,
+        29
+      ],
+      "language": "verilog",
+      "sha256": "9c2dce5d4bd2390a617882c282080dbf191c54f016b36b5e719672382c15c7b6"
+    },
+    {
+      "label": "PMP checks without address translation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/mmu.adoc",
+      "lines": [
+        206,
+        209
+      ],
+      "sha256": "0b6d0f84e201206731dfedad89540eede841131ca1fdc8b827b0787a2a7238d2"
+    },
+    {
+      "label": "PMP checks without address translation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/mmu.adoc",
+      "lines": [
+        246,
+        250
+      ],
+      "sha256": "0b6d0f84e201206731dfedad89540eede841131ca1fdc8b827b0787a2a7238d2"
+    },
+    {
+      "label": "Selected cv64a6_imafdc_sv39 virtualization value",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv64a6_imafdc_sv39_config_pkg.sv",
+      "lines": [
+        27,
+        27
+      ],
+      "language": "verilog",
+      "sha256": "5d0ca10eac2368a5c1276f8b6a893d699bc37a89d3d197d9c439a0ef7a228e8f"
+    },
+    {
+      "label": "Selected cv64a6_imafdc_sv39 trap-value and PMP values",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv64a6_imafdc_sv39_config_pkg.sv",
+      "lines": [
+        66,
+        68
+      ],
+      "language": "verilog",
+      "sha256": "5d0ca10eac2368a5c1276f8b6a893d699bc37a89d3d197d9c439a0ef7a228e8f"
+    },
+    {
+      "label": "Selected cv64a6_imafdc_sv39 MMU value",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv64a6_imafdc_sv39_config_pkg.sv",
+      "lines": [
+        74,
+        74
+      ],
+      "language": "verilog",
+      "sha256": "5d0ca10eac2368a5c1276f8b6a893d699bc37a89d3d197d9c439a0ef7a228e8f"
+    },
+    {
+      "label": "config_pkg package declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/config_pkg.sv",
+      "lines": [
+        10,
+        10
+      ],
+      "language": "verilog",
+      "sha256": "f6f193daa7dfe1161689f651d6aa6e2b1fdec6560fc83c1313385e944ce4c97c"
+    },
+    {
+      "label": "riscv package declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        18,
+        18
+      ],
+      "language": "verilog",
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    },
+    {
+      "label": "RISC-V exception cause declarations",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        337,
+        355
+      ],
+      "language": "verilog",
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    },
+    {
+      "label": "PMP access type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        838,
+        844
+      ],
+      "language": "verilog",
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions; Section heading; Source path heading; Fence",
+      "text": "# Implement `pmp_data_if`\n\nImplement the complete `pmp_data_if` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module pmp_data_if` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv64a6_imafdc_sv39_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Parent instantiation\n\n### core/load_store_unit.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Dependency declarations\n\n### core/cva6.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/include/config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/include/riscv_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/pmp/src/pmp.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Documentation\n\n### docs/design/design-manual/source/mmu.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    }
+  ]
+}

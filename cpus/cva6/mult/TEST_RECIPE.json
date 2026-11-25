@@ -1,0 +1,37 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "../instr_scan/harness/evaluate_ports.py",
+    "harness/evaluate_ports.py",
+    "harness/mult_flush_tb.sv"
+  ],
+  "schema_version": 1,
+  "cpu": "cva6",
+  "module": "mult",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/mult.sv",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "7a3f5f7ee7a66311f28877643052188bbf5e119393c998500c00ecbd382e1a26",
+  "port_evaluator": "harness/evaluate_ports.py",
+  "port_evaluator_sha256": "0cc6453b20bac708dced76226fa22c6c70a1953d67c46e1636ee79c0be07748b",
+  "port_testbench": "harness/mult_flush_tb.sv",
+  "port_testbench_sha256": "4b5b126b4d21971762a44933b5e6f73acaa4818fd83fb0bade2a3f807f593e0a",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "test_list": "harness/testlist_mult.yaml",
+  "test_list_sha256": "df2c518524387129e60962c4aa11653b77fbf6d039c668ca31d2bf4859d24a66",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/mult.sv",
+    "test_sources": "Check out the recorded test revision and use the 11 unmodified RISC-V Architectural Tests named by harness/testlist_mult.yaml"
+  },
+  "execution": {
+    "cwd": "CPU-Eval repository root",
+    "command": "CVA6_REPO=/path/to/pinned-cva6-checkout CVA6_ENVFILE=/path/to/pinned-cva6-checkout/verif/sim/setup-env.sh CPU_EVAL_LOG_ROOT=/path/to/results bash cpus/cva6/mult/harness/evaluate.sh <candidate-systemverilog>",
+    "port_check": "Cancel a division before it returns a result. Check that the canceled ID does not complete and that subsequent division and multiplication return their own IDs and values."
+  }
+}

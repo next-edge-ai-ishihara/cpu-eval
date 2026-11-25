@@ -1,0 +1,415 @@
+{
+ "schema_version": 1,
+ "cpu": "BOOM",
+ "configuration": "LargeBoomConfig",
+ "source_unit": "ALU",
+ "sources": [
+  {
+   "label": "ALU package and imports",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/ALU.scala",
+   "lines": [
+    1,
+    8
+   ],
+   "sha256": "b0d4dcdbb704c9398149e793e56b18f844ed2da1683f3ff9d6b3d261b510264e"
+  },
+  {
+   "label": "ALU definition header and interface",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/ALU.scala",
+   "lines": [
+    49,
+    58
+   ],
+   "sha256": "b0d4dcdbb704c9398149e793e56b18f844ed2da1683f3ff9d6b3d261b510264e"
+  },
+  {
+   "label": "BOOM ALU inputs",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+   "lines": [
+    298,
+    325
+   ],
+   "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+  },
+  {
+   "label": "BOOM ALU result connection",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+   "lines": [
+    439,
+    446
+   ],
+   "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+  },
+  {
+   "label": "ALU companion object and import",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/ALU.scala",
+   "lines": [
+    10,
+    47
+   ],
+   "sha256": "b0d4dcdbb704c9398149e793e56b18f844ed2da1683f3ff9d6b3d261b510264e"
+  },
+  {
+   "label": "Scalar operation constants trait",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/Consts.scala",
+   "lines": [
+    8,
+    8
+   ],
+   "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+  },
+  {
+   "label": "ALU data-width constants",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/Consts.scala",
+   "lines": [
+    39,
+    48
+   ],
+   "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+  },
+  {
+   "label": "Rocket package object",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/package.scala",
+   "lines": [
+    3,
+    5
+   ],
+   "sha256": "520268bb7f4b889cc0e45cbf449ad4d9a2d390e8aab0f89da58f397e00d63475"
+  },
+  {
+   "label": "BOOM ALU-result decode controls",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/register-read/func-unit-decode.scala",
+   "lines": [
+    77,
+    107
+   ],
+   "sha256": "26040e898f0845198a845931a1223c8b7f9a55096f4dda7f0e9b6ffb2c9962ad"
+  },
+  {
+   "label": "Rocket branch-operation decode controls",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/IDecode.scala",
+   "lines": [
+    73,
+    78
+   ],
+   "sha256": "e2bab3a90eb99bb7b53ab53a59c04576bebc2fbf49694faa2189bae20a9b0aab"
+  },
+  {
+   "label": "Rocket ALU output connections",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/RocketCore.scala",
+   "lines": [
+    571,
+    572
+   ],
+   "sha256": "dfde1833a80c9970d1e4ee57b9769f4bb1ed5ac7a6fd93c34770313dad19e4aa"
+  },
+  {
+   "label": "Rocket ALU address connection",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/RocketCore.scala",
+   "lines": [
+    889,
+    889
+   ],
+   "sha256": "dfde1833a80c9970d1e4ee57b9769f4bb1ed5ac7a6fd93c34770313dad19e4aa"
+  },
+  {
+   "label": "RV32 integer immediate operations",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv32.adoc",
+   "lines": [
+    304,
+    332
+   ],
+   "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+  },
+  {
+   "label": "RV32 integer register operations",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv32.adoc",
+   "lines": [
+    367,
+    389
+   ],
+   "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+  },
+  {
+   "label": "RV32 conditional branch behavior",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv32.adoc",
+   "lines": [
+    558,
+    576
+   ],
+   "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+  },
+  {
+   "label": "RV64 word-result rule",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv64.adoc",
+   "lines": [
+    14,
+    21
+   ],
+   "sha256": "90c6fa854d8a2d90bfb912fd190d93cfef7a98d8a70f0fcd1d7a40cdfc274fe6"
+  },
+  {
+   "label": "RV64 ADDIW behavior",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv64.adoc",
+   "lines": [
+    46,
+    51
+   ],
+   "sha256": "90c6fa854d8a2d90bfb912fd190d93cfef7a98d8a70f0fcd1d7a40cdfc274fe6"
+  },
+  {
+   "label": "RV64 immediate shift behavior",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv64.adoc",
+   "lines": [
+    57,
+    76
+   ],
+   "sha256": "90c6fa854d8a2d90bfb912fd190d93cfef7a98d8a70f0fcd1d7a40cdfc274fe6"
+  },
+  {
+   "label": "RV64 register word-operation behavior",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv64.adoc",
+   "lines": [
+    115,
+    129
+   ],
+   "sha256": "90c6fa854d8a2d90bfb912fd190d93cfef7a98d8a70f0fcd1d7a40cdfc274fe6"
+  },
+  {
+   "label": "Chisel version",
+   "repo": "github.com/ucb-bar/chipyard",
+   "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+   "path": "build.sbt",
+   "lines": [
+    63,
+    67
+   ],
+   "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+  }
+ ],
+ "parts": [
+  {
+   "kind": "authored",
+   "description": "Task, submission format, and package heading",
+   "text": "# Implement `ALU`\n\nImplement one complete `ALU` source-level hardware definition for the behavior used by BOOM. Preserve the definition name, constructor parameters, inheritance, and public interface shown below, and drive every declared output to a defined value.\n\nReturn only the complete `class ALU` definition in a single Scala code block, with no text outside the block. The companion object remains fixed.\n\n## Package and imports\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 0
+  },
+  {
+   "kind": "authored",
+   "description": "Class declaration heading",
+   "text": "```\n\n## Class declaration\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 1
+  },
+  {
+   "kind": "authored",
+   "description": "Parent instantiation heading",
+   "text": "```\n\n## Parent instantiation\n\n### src/main/scala/exu/execution-units/functional-unit.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 2
+  },
+  {
+   "kind": "authored",
+   "description": "Omission",
+   "text": "  // ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 3
+  },
+  {
+   "kind": "authored",
+   "description": "Dependency declarations heading",
+   "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 19
+  },
+  {
+   "kind": "authored",
+   "description": "heading, task text, or excerpt delimiter",
+   "text": "```\n\n### src/main/scala/rocket/ALU.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 4
+  },
+  {
+   "kind": "authored",
+   "description": "Constants source heading",
+   "text": "```\n\n### src/main/scala/rocket/Consts.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 5
+  },
+  {
+   "kind": "authored",
+   "description": "Omission",
+   "text": "  // ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 6
+  },
+  {
+   "kind": "authored",
+   "description": "Package object source heading",
+   "text": "```\n\n### src/main/scala/rocket/package.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 7
+  },
+  {
+   "kind": "authored",
+   "description": "Related source heading",
+   "text": "```\n\n## Related source code\n\n### src/main/scala/exu/register-read/func-unit-decode.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 8
+  },
+  {
+   "kind": "authored",
+   "description": "Rocket decode source heading",
+   "text": "```\n\n### src/main/scala/rocket/IDecode.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 9
+  },
+  {
+   "kind": "authored",
+   "description": "Rocket core source heading",
+   "text": "```\n\n### src/main/scala/rocket/RocketCore.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 10
+  },
+  {
+   "kind": "authored",
+   "description": "Omission",
+   "text": "  // ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 11
+  },
+  {
+   "kind": "authored",
+   "description": "Documentation heading",
+   "text": "```\n\n## Documentation\n\n### src/rv32.adoc\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 12
+  },
+  {
+   "kind": "authored",
+   "description": "Omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 13
+  },
+  {
+   "kind": "authored",
+   "description": "Omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 14
+  },
+  {
+   "kind": "authored",
+   "description": "RV64 source heading",
+   "text": "```\n\n### src/rv64.adoc\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 15
+  },
+  {
+   "kind": "authored",
+   "description": "Omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 16
+  },
+  {
+   "kind": "authored",
+   "description": "Omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 17
+  },
+  {
+   "kind": "authored",
+   "description": "Omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 18
+  },
+  {
+   "kind": "authored",
+   "description": "Closing fence",
+   "text": "```\n"
+  }
+ ]
+}

@@ -1,0 +1,572 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        329,
+        332
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "perl"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        355,
+        357
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "perl"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        1635,
+        1636
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "perl"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        1659,
+        1660
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "perl"
+    },
+    {
+      "label": "Module declaration for el2_lsu_addrcheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_addrcheck.sv",
+      "lines": [
+        25,
+        60
+      ],
+      "language": "verilog",
+      "sha256": "3fe66d70ff9da1de31e7ca98b818c3c3c62516511636da114e2af79351f480f0"
+    },
+    {
+      "label": "Parent instantiation for el2_lsu_addrcheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_lsc_ctl.sv",
+      "lines": [
+        168,
+        173
+      ],
+      "sha256": "df2b2ff5c14742d40e67becc6b3f2043e2bf9b987edfac6406cfa384543e0109"
+    },
+    {
+      "label": "Dependency module declaration for el2_lsu_addrcheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        19,
+        26
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Dependency module declaration for el2_lsu_addrcheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        615,
+        620
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Load/store packet type declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        176,
+        193
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "Core-local access and address-prediction rules",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        244,
+        261
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Misaligned-access behavior",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        339,
+        355
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Misaligned-access behavior",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        368,
+        403
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Misaligned-access behavior",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        410,
+        421
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Misaligned-access behavior",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        434,
+        434
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Misaligned-access behavior",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        437,
+        437
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Secondary cause meaning excerpt",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        835,
+        839
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Secondary cause table header excerpt",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        855,
+        859
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Secondary cause table excerpt: load and store faults (other rows and table ending omitted)",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        900,
+        914
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Secondary cause table excerpt: load and store faults (other rows and table ending omitted)",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        920,
+        949
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Secondary cause table excerpt: load and store faults (other rows and table ending omitted)",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        955,
+        969
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Secondary cause table footnotes excerpt",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        1046,
+        1046
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Secondary cause table footnotes excerpt",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        1049,
+        1051
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        1200,
+        1388
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "perl"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        2695,
+        2712
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "perl"
+    },
+    {
+      "label": "Core-local access and address-prediction rules",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        232,
+        234
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Memory protection: data access windows",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        171,
+        174
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "Memory protection: data access windows",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        182,
+        192
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "# Implement `el2_lsu_addrcheck`\n\nImplement the complete `el2_lsu_addrcheck` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_lsu_addrcheck` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### configs/veer.config\n\n```perl\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Package and imports\n\n### configs/veer.config\n\n```perl\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Dependency declarations\n\n### `rvdff`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### `rvrangecheck`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### design/include/el2_def.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Documentation\n\n### docs/source/memory-map.md\n\n```markdown\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n"
+    }
+  ]
+}

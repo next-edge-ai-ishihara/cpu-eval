@@ -1,0 +1,22 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_lsu_trigger",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "lsu_trigger_addr_match",
+    "path": "test/lsu_trigger_addr_match.s",
+    "sha256": "6c1bcd8ea8366ea8de78084966010903a8a7c40f1efc1dcccf00211a9f05c2a9"
+  },
+  "run": "bash test/evaluate_lsu_trigger.sh",
+  "run_sha256": "b8a67a62c59addfeca63d7b8323cdabbab4427058f3c44f947c88e1f5f948905",
+  "comparison": "Self-checking VeeR EL2 program observing mcause, mscause and mepc for matching and nonmatching load/store addresses, zero-extended byte/halfword store data, and masked word store data through a mailbox exit code (0xff pass, 0x01 fail)."
+}

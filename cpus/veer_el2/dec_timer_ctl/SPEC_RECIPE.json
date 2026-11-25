@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_tlu_ctl.sv",
+      "lines": [
+        3047,
+        3082
+      ],
+      "sha256": "242ed4667d0e849aac636b0646bc3750aa1e9afc8a19a95a82b4e97f8e6f22fc",
+      "label": "design/dec/el2_dec_tlu_ctl.sv 3047-3082"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_tlu_ctl.sv",
+      "lines": [
+        475,
+        525
+      ],
+      "sha256": "242ed4667d0e849aac636b0646bc3750aa1e9afc8a19a95a82b4e97f8e6f22fc",
+      "label": "design/dec/el2_dec_tlu_ctl.sv 475-525"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_tlu_ctl.sv",
+      "lines": [
+        1642,
+        1650
+      ],
+      "sha256": "242ed4667d0e849aac636b0646bc3750aa1e9afc8a19a95a82b4e97f8e6f22fc",
+      "label": "design/dec/el2_dec_tlu_ctl.sv 1642-1650"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        49,
+        56
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "label": "design/lib/beh_lib.sv 49-56"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        166,
+        177
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "label": "design/lib/beh_lib.sv 166-177"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/csrdecode_m",
+      "lines": [
+        60,
+        65
+      ],
+      "sha256": "f5ba0a4da487c6f760d20467b4647018eef196b2ad7956f7ee86cea29375796d",
+      "label": "design/dec/csrdecode_m 60-65"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/csrdecode_m",
+      "lines": [
+        84,
+        99
+      ],
+      "sha256": "f5ba0a4da487c6f760d20467b4647018eef196b2ad7956f7ee86cea29375796d",
+      "label": "design/dec/csrdecode_m 84-99"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/timers.md",
+      "lines": [
+        16,
+        40
+      ],
+      "sha256": "9b70d8994962189d8e65c696b49ab1d67203ffecb01ba2fd9577fa680bf599f7",
+      "label": "docs/source/timers.md 16-40"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/timers.md",
+      "lines": [
+        59,
+        186
+      ],
+      "sha256": "9b70d8994962189d8e65c696b49ab1d67203ffecb01ba2fd9577fa680bf599f7",
+      "label": "docs/source/timers.md 59-186"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        181,
+        190
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        199,
+        204
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "# Implement `el2_dec_timer_ctl`\n\nImplement the complete `el2_dec_timer_ctl` module. Preserve the module name, parameters, and ports shown below. Return only the complete `module el2_dec_timer_ctl` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n   // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Dependency declarations\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Related source code\n\n### design/dec/csrdecode_m\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Documentation\n\n### docs/source/timers.md\n\n```markdown\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n"
+    }
+  ]
+}

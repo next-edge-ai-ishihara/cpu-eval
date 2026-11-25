@@ -1,0 +1,46 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/axi_write_ports_tb.sv",
+    "harness/evaluate_ports.sh"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_mem_to_axi_write",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv64a6_imafdc_sv39_hpdcache_wb",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_to_axi_write.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "eed309d22eaf8d8c5b40a5c8b41bda6c9a70bae34f6f23aa86942240570a92ad",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "a550ab7a0808953d6dc2af74e1d3705b9a517aab82dbcc5b463255fc1004976c",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_axi_write.yaml",
+  "test_list_sha256": "a7fb6a8a41ea85c65a5230449e85375f542e0067979ad21b7ce30a55d166bbaf",
+  "directed_test_source": "harness/hpdcache_axi_write_atomic.S",
+  "directed_test_source_sha256": "89e897669682be84389c8963819833cc4d5dc5c386144f1e244da32d475d0961",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/utils/hpdcache_mem_to_axi_write.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision and copy the recorded directed test source as performed by the shared evaluator"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.sh",
+    "evaluator_sha256": "7449b2a1ea185982979e9994a7f663f8b994d1bc9acce77654440249f0d7c035",
+    "test": "harness/axi_write_ports_tb.sv",
+    "test_sha256": "283a0151ba3ad497462e0928e205340e437df0f1a7fb60b21913bd1fc203505e",
+    "configuration": "Uses AXI and HPDcache packages and type macros from the recorded revisions, with 64-bit data, address and user signals and 4-bit transaction IDs from the selected CVA6 configuration.",
+    "comparison": "233 checks at the ports cover independent ready/valid handshakes, ordinary and atomic AW attributes, data and last markers while AW is blocked, and B response ID, error and exclusive status independently of the current AW.",
+    "environment": "Requires Verilator with --binary, --timing and --assert, a C++ compiler, make, and a CVA6 checkout with the pinned CVA6 and HPDcache objects.",
+    "result": "The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2). The architectural test runs after the port test passes.",
+    "timeouts": {
+      "build_seconds": 120,
+      "runtime_seconds": 30
+    }
+  }
+}

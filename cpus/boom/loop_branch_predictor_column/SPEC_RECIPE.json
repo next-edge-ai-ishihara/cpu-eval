@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "LoopBranchPredictorColumn",
+  "sources": [
+    {
+      "label": "Target package and imports",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/loop.scala",
+      "lines": [
+        1,
+        13
+      ],
+      "sha256": "2faa64f36ad4ce0de38fd7bf5e1dc17e7c7ceb016a623154a80d7eacc30c9f84"
+    },
+    {
+      "label": "Target declaration and complete interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/loop.scala",
+      "lines": [
+        39,
+        57
+      ],
+      "sha256": "2faa64f36ad4ce0de38fd7bf5e1dc17e7c7ceb016a623154a80d7eacc30c9f84"
+    },
+    {
+      "label": "Enclosing declaration, constants, and payloads",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/loop.scala",
+      "lines": [
+        20,
+        37
+      ],
+      "sha256": "2faa64f36ad4ce0de38fd7bf5e1dc17e7c7ceb016a623154a80d7eacc30c9f84"
+    },
+    {
+      "label": "Enclosing bank instantiation and complete column connections",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/loop.scala",
+      "lines": [
+        182,
+        210
+      ],
+      "sha256": "2faa64f36ad4ce0de38fd7bf5e1dc17e7c7ceb016a623154a80d7eacc30c9f84"
+    },
+    {
+      "label": "Selected TAGE-L composition",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        431,
+        446
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "BOOM backing-predictor update and metadata contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/branch-prediction/backing-predictor.rst",
+      "lines": [
+        77,
+        97
+      ],
+      "sha256": "a93b0f02fa7bf8472a7ff3cb0477e462677b40bf46db50549b5a3e51e2502b04"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `LoopBranchPredictorColumn`\n\nImplement one complete `LoopBranchPredictorColumn` source-level hardware definition. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class LoopBranchPredictorColumn` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Parent instantiation\n\n### `src/main/scala/ifu/bpd/loop.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n### `src/main/scala/common/config-mixins.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Documentation\n\n### `docs/sections/branch-prediction/backing-predictor.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Additional requirement\n\nWhen `update_repair` is asserted and `update_idx` equals the `f2_req_idx` of the request in f2 or in f3 in that cycle, `f3_meta.s_cnt` of that request is `update_meta.s_cnt`, and after a loop of at least 12 instructions has run 32 times with the same iteration count of at most 1000 while `f3_pred_in` was true for its closing conditional branch at every execution, `f3_pred` is false for that branch on the last iteration in at least half of the following runs.\n"
+    }
+  ],
+  "rights_notes": [],
+  "requirements_notes": [
+    {
+      "kind": "authored_functional_requirements",
+      "basis": {
+        "repo": "github.com/riscv-boom/riscv-boom",
+        "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+        "path": "src/main/scala/ifu/bpd/loop.scala",
+        "lines": [
+          59,
+          210
+        ],
+        "license": "BSD-3-Clause"
+      },
+      "notice": "CPU-Eval-authored task requirements. Existing upstream attribution and license are retained in THIRD_PARTY_NOTICES.md."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+diff --git a/generators/chipyard/src/main/scala/config/BoomConfigs.scala b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+index 87bd0a98..00000000 100644
+--- a/generators/chipyard/src/main/scala/config/BoomConfigs.scala
++++ b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+@@ -1,6 +1,8 @@
+ package chipyard
+ 
+ import freechips.rocketchip.config.{Config}
++import freechips.rocketchip.subsystem.{InSubsystem, TilesLocated}
++import boom.common.BoomTileAttachParams
+ 
+ // ---------------------
+ // BOOM Configs
+@@ -26,1 +28,17 @@
++
++class WithSFBOptimization extends Config((site, here, up) => {
++  case TilesLocated(InSubsystem) => up(TilesLocated(InSubsystem), site) map {
++    case tp: BoomTileAttachParams => tp.copy(tileParams = tp.tileParams.copy(core = tp.tileParams.core.copy(
++      enableSFBOpt = true
++    )))
++    case other => other
++  }
++})
++
++class LargeBoomSFBTestConfig extends Config(
++  new boom.common.WithBoomCommitLogPrintf ++
++  new WithSFBOptimization ++
++  new boom.common.WithNLargeBooms(1) ++
++  new chipyard.config.AbstractConfig)
++
+ class MegaBoomConfig extends Config(

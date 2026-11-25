@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Generic SRAM contract",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "lines": [
+        13,
+        54
+      ],
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    },
+    {
+      "label": "Module declaration for tc_sram",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "lines": [
+        56,
+        82
+      ],
+      "language": "verilog",
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "# Implement `tc_sram`\n\nImplement the complete `tc_sram` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module tc_sram` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Documentation\n\n### vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Additional requirement\n\nWith `SimInit` set to `\"none\"`, a reset leaves the stored words unchanged, and a read request returns the word stored before the writes that any port makes at the same clock edge.\n"
+    }
+  ]
+}

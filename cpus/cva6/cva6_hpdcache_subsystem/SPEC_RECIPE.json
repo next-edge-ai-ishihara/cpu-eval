@@ -1,0 +1,505 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for cva6_hpdcache_subsystem",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+      "lines": [
+        15,
+        137
+      ],
+      "language": "verilog",
+      "sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    {
+      "label": "cv32a60x XLEN",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x AXI widths",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        16,
+        19
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x AXI transaction and load buffer inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        30,
+        35
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x network interface selection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        78,
+        78
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x instruction and data cache inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        106,
+        121
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Cache index and offset derivation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        24,
+        26
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "XLEN and physical address derivation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        34,
+        40
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "AXI and memory transaction derivation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        58,
+        63
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Network interface derivation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        121,
+        121
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Derived instruction and data cache fields",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        153,
+        186
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "HPDcache request and response type macros",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/include/hpdcache_typedef.svh",
+      "lines": [
+        13,
+        107
+      ],
+      "language": "verilog",
+      "sha256": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126"
+    },
+    {
+      "label": "Instruction cache declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache.sv",
+      "lines": [
+        28,
+        63
+      ],
+      "language": "verilog",
+      "sha256": "272c06abf1f37a3f3a7d18d6c29a08df0a493631e330aefb4c677357a4d901c3"
+    },
+    {
+      "label": "Instruction cache read transaction identifier assignment",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache.sv",
+      "lines": [
+        175,
+        175
+      ],
+      "language": "verilog",
+      "sha256": "272c06abf1f37a3f3a7d18d6c29a08df0a493631e330aefb4c677357a4d901c3"
+    },
+    {
+      "label": "Data cache wrapper declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_wrapper.sv",
+      "lines": [
+        15,
+        130
+      ],
+      "language": "verilog",
+      "sha256": "8092ed052b8c097e2f3969ae2c43205989666f2495f7c678d2749e5db25872c0"
+    },
+    {
+      "label": "AXI arbiter declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv",
+      "lines": [
+        15,
+        89
+      ],
+      "language": "verilog",
+      "sha256": "1b6b1b7ebd594cd5e5d49405adb490f5e22178231c421f918661a980cf790b9b"
+    },
+    {
+      "label": "AXI arbiter interface constraints",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv",
+      "lines": [
+        410,
+        423
+      ],
+      "language": "verilog",
+      "sha256": "1b6b1b7ebd594cd5e5d49405adb490f5e22178231c421f918661a980cf790b9b"
+    },
+    {
+      "label": "cv32a60x data cache transaction identifier width",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        129,
+        129
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "HPDcache read transaction identifiers",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        1186,
+        1230
+      ],
+      "language": "rst",
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    },
+    {
+      "label": "HPDcache victim selection policy values",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        29,
+        32
+      ],
+      "language": "verilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "HPDcache user and derived configuration types",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        362,
+        509
+      ],
+      "language": "verilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "AXI arbiter response routing type dimensions",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv",
+      "lines": [
+        92,
+        98
+      ],
+      "language": "verilog",
+      "sha256": "1b6b1b7ebd594cd5e5d49405adb490f5e22178231c421f918661a980cf790b9b"
+    },
+    {
+      "label": "AXI arbiter read response routing by transaction identifier",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv",
+      "lines": [
+        290,
+        335
+      ],
+      "language": "verilog",
+      "sha256": "1b6b1b7ebd594cd5e5d49405adb490f5e22178231c421f918661a980cf790b9b"
+    },
+    {
+      "label": "Data cache wrapper requester count",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_wrapper.sv",
+      "lines": [
+        132,
+        132
+      ],
+      "language": "verilog",
+      "sha256": "8092ed052b8c097e2f3969ae2c43205989666f2495f7c678d2749e5db25872c0"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `cva6_hpdcache_subsystem`\n\nImplement the complete `cva6_hpdcache_subsystem` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module cva6_hpdcache_subsystem` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### core/include/build_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Dependency declarations\n\n### rtl/src/hpdcache_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### rtl/include/hpdcache_typedef.svh\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### core/cache_subsystem/cva6_icache.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### core/cache_subsystem/cva6_hpdcache_wrapper.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Related source code\n\n### core/cache_subsystem/cva6_icache.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for cva6_hpdcache_wrapper.sv",
+      "text": "```\n\n### core/cache_subsystem/cva6_hpdcache_wrapper.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Documentation\n\n### docs/source/interface.rst\n\n```rst\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    }
+  ]
+}

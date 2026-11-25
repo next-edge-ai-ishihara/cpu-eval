@@ -1,0 +1,31 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_miss_handler",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_miss_handler.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "ac26528a861d1e237a56e9add5bf77c37c84db2f179e78118832926c8d9e54f0",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "10676e76209ca1d2be8db8432482f9364c6b9bc2c305b5f24ca2afe7ea28449d",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_miss_handler.yaml",
+  "test_list_sha256": "22182900aa239239830d1bdf96e32be5a9e0de74b1f474aea9394b35004bd528",
+  "directed_test_source": "harness/hpdcache_miss_refill.S",
+  "directed_test_source_sha256": "057f400826fa4c2dbaa2e4b4a8798ae6ee6dfc5a64bdbbcf9484b927ec5c9e93",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hpdcache_miss_handler.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision and copy the recorded directed test source as performed by the shared evaluator"
+  },
+  "directed_test_scope": "The directed source loads offsets 0, 64, 128, and 0, which fall in three separate 16-byte data cache lines."
+}

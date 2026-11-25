@@ -1,0 +1,627 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "cv32a60x XLEN",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x AXI widths",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        16,
+        19
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x AXI transaction and load buffer inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        30,
+        35
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x network interface selection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        78,
+        78
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x instruction and data cache inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        106,
+        121
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Cache index and offset derivation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        24,
+        26
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "XLEN and physical address derivation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        34,
+        40
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "AXI and memory transaction derivation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        58,
+        63
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Network interface derivation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        121,
+        121
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Derived instruction and data cache fields",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        153,
+        186
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Memory command and atomic operation encodings",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        263,
+        297
+      ],
+      "language": "verilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "HPDcache user and derived configuration types",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        362,
+        509
+      ],
+      "language": "verilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "HPDcache request and response type macros",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/include/hpdcache_typedef.svh",
+      "lines": [
+        13,
+        107
+      ],
+      "language": "verilog",
+      "sha256": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126"
+    },
+    {
+      "label": "Module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache.sv",
+      "lines": [
+        15,
+        137
+      ],
+      "language": "verilog",
+      "sha256": "35d9b2dca6415fca40050bc6fec3d4823701111fb2104db3cd79775268c53b47"
+    },
+    {
+      "label": "CVA6 HPDcache configuration construction",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+      "lines": [
+        189,
+        254
+      ],
+      "language": "verilog",
+      "sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    {
+      "label": "Parent instantiation for hpdcache",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_wrapper.sv",
+      "lines": [
+        303,
+        394
+      ],
+      "sha256": "8092ed052b8c097e2f3969ae2c43205989666f2495f7c678d2749e5db25872c0"
+    },
+    {
+      "label": "Dependency module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_cmo.sv",
+      "lines": [
+        14,
+        99
+      ],
+      "language": "verilog",
+      "sha256": "65dbff93791ef9425531ad31408a5943407edf4a61020756b9c8b7784da4fd9e"
+    },
+    {
+      "label": "Dependency module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_core_arbiter.sv",
+      "lines": [
+        27,
+        69
+      ],
+      "language": "verilog",
+      "sha256": "5d895629db5a75ae8ce76385641e7ead0053d6ebd031b896e378a945b8cad4ea"
+    },
+    {
+      "label": "Dependency module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        13,
+        250
+      ],
+      "language": "verilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    },
+    {
+      "label": "Dependency module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_flush.sv",
+      "lines": [
+        27,
+        106
+      ],
+      "language": "verilog",
+      "sha256": "ff1cf8c71c820c694976205a688994f582637142ac25e846d14e39e63d3888e2"
+    },
+    {
+      "label": "Dependency module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_miss_handler.sv",
+      "lines": [
+        27,
+        145
+      ],
+      "language": "verilog",
+      "sha256": "ac26528a861d1e237a56e9add5bf77c37c84db2f179e78118832926c8d9e54f0"
+    },
+    {
+      "label": "Dependency module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_uncached.sv",
+      "lines": [
+        13,
+        126
+      ],
+      "language": "verilog",
+      "sha256": "afe48f13f234b03631702f06d21facbd908f957d94ed84672c9bfad964ae6f07"
+    },
+    {
+      "label": "Dependency module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_wbuf.sv",
+      "lines": [
+        27,
+        103
+      ],
+      "language": "verilog",
+      "sha256": "134fefdfd7f7846896ed814a4710859b0b9bc884cf498079a4a93c3ea939e21c"
+    },
+    {
+      "label": "Dependency module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_req_read_arbiter.sv",
+      "lines": [
+        26,
+        51
+      ],
+      "language": "verilog",
+      "sha256": "7f37b2fb12fa9216b36d1a959619aada6b2e09810a3c9784d55a82d0a71412fc"
+    },
+    {
+      "label": "Dependency module declaration for hpdcache",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_req_write_arbiter.sv",
+      "lines": [
+        26,
+        56
+      ],
+      "language": "verilog",
+      "sha256": "91763bf92a12126d953141eda1706589c83869db232c02e83f70b6acbe324bbb"
+    },
+    {
+      "label": "Official HPDcache overview",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/overview.rst",
+      "lines": [
+        23,
+        87
+      ],
+      "sha256": "4f9a251c7d61e8576698c7644ad59f8f771e21de4183f06f6e4af223f2ca11ac"
+    },
+    {
+      "label": "Cache directory state bits",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        246,
+        264
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Cache-memory interface channels and handshake signals",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        380,
+        625
+      ],
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    },
+    {
+      "label": "Cache-memory transaction identifier rules and HPDcache event signal definitions",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        1189,
+        1317
+      ],
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    },
+    {
+      "label": "Cache directory entry write in hpdcache_memctrl",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_memctrl.sv",
+      "lines": [
+        543,
+        549
+      ],
+      "language": "verilog",
+      "sha256": "b1edc2a9a55691ef559e0489447a9bf4f49cff91f794d5518a989d0b5c61e5ef"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, submission instructions and headings",
+      "text": "# Implement `hpdcache`\n\nImplement the complete `hpdcache` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### `core/include/cv32a60x_config_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `core/include/build_config_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Package and imports\n\n### `rtl/src/hpdcache_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `rtl/include/hpdcache_typedef.svh`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Module declaration\n\n### `rtl/src/hpdcache.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Parent instantiation\n\n### `core/cache_subsystem/cva6_hpdcache_subsystem.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `core/cache_subsystem/cva6_hpdcache_wrapper.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Dependency declarations\n\n### `rtl/src/hpdcache_cmo.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `rtl/src/hpdcache_core_arbiter.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `rtl/src/hpdcache_ctrl.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `rtl/src/hpdcache_flush.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `rtl/src/hpdcache_miss_handler.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `rtl/src/hpdcache_uncached.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `rtl/src/hpdcache_wbuf.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `rtl/src/utils/hpdcache_mem_req_read_arbiter.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `rtl/src/utils/hpdcache_mem_req_write_arbiter.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Related source code\n\n### `rtl/src/hpdcache_memctrl.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 29
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Documentation\n\n### `docs/source/overview.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `docs/source/architecture.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `docs/source/interface.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n"
+    }
+  ]
+}

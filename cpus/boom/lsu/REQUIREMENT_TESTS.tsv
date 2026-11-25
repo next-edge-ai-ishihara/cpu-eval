@@ -1,0 +1,6 @@
+requirement	test_program	test_behavior
+Execute scalar loads of the selected widths	rv64ui-p-lb;rv64ui-p-lh;rv64ui-p-lw;rv64ui-p-ld	The programs load byte, halfword, word, and doubleword values at the specified offsets and compare the destination register with the expected XLEN-wide value.
+Execute stores of supported widths after commit	rv64ui-p-sb;rv64ui-p-sh;rv64ui-p-sw;rv64ui-p-sd	After each tested store, the program reads the addressed bytes back and checks the destination register. The comparator observes the readback and program completion.
+Preserve results of dependent memory accesses	rv64ui-p-lw;rv64ui-p-sw	The programs check the results of dependent accesses and vary operand timing. Their register results do not distinguish forwarding from a stall followed by a load.
+Execute atomic memory operations	rv64ua-p-amoadd_d	AMOADD.D must return the old value in a4; a subsequent LD checks the updated sum in a5. The program repeats the addition and checks both results again.
+Observe the most recent older store when several stores remain pending	store_forwarding_pending	An older division delays retirement while three stores write distinct values to one address. The next load must place the third value in x20.

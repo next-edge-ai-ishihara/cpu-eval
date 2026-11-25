@@ -1,0 +1,66 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "harness/evaluate_ports.py",
+    "harness/axi_read_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_mem_to_axi_read",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_to_axi_read.sv",
+  "source_sha256": "b83579bbf51c1a5d9ce80b8bd7a99151a54e3076504263329b0a2d32c19f6004",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "0eef90944407b6785598e93f8f68c0833bef7af90a5e87412d6d71c91c9163a2",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_axi_read.yaml",
+  "test_list_sha256": "2abb7a9c501722a81db5b0aa1ccd677b22501eb44160362d5dac27b5fe6dbfd4",
+  "directed_test_source": "harness/hpdcache_axi_read.S",
+  "directed_test_source_sha256": "76a41700335efb8c4c44d8b5d5a2b59e2b38bdac2652229b093d860894e0fd9a",
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/utils/hpdcache_mem_to_axi_read.sv",
+    "reference_hdl_preconditions": "Run reference_hdl from the root of the CVA6 checkout at cpu_revision, with core/cache_subsystem/hpdcache initialized as the cv-hpdcache submodule containing commit f404e7ebbda8baa4af3729535f520a6b12a06d03. Verify SHA-256 b83579bbf51c1a5d9ce80b8bd7a99151a54e3076504263329b0a2d32c19f6004 of the retrieved source before use.",
+    "test_sources": "git checkout the recorded test revision and copy the recorded directed test source as performed by the shared evaluator"
+  },
+  "directed_test_scope": "The loads at offsets 0, 64 and 128 read three distinct 16-byte data-cache lines.",
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "fb0723e1f9e108d4428de73adc2690b507396bd3012d12a765514c2d09141966",
+    "test": "harness/axi_read_ports_tb.sv",
+    "test_sha256": "d662d328133577b0ef0fd923b0e9b3c1d72965fe233391d486ca5a4d753c87bc",
+    "hpdcache_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+    "sources": {
+      "axi_pkg.sv": {
+        "repository": "cva6",
+        "path": "vendor/pulp-platform/axi/src/axi_pkg.sv",
+        "sha256": "76b3797792ee5b95ab5937f3d457b48852e5c427de48298dafbdde43d0916ac2"
+      },
+      "typedef.svh": {
+        "repository": "cva6",
+        "path": "vendor/pulp-platform/axi/include/axi/typedef.svh",
+        "sha256": "3ababf23a409868e2d78ecbf78d90a82699814904e55e31a2f7990276285d415"
+      },
+      "hpdcache_pkg.sv": {
+        "repository": "hpdcache",
+        "path": "rtl/src/hpdcache_pkg.sv",
+        "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+      },
+      "hpdcache_typedef.svh": {
+        "repository": "hpdcache",
+        "path": "rtl/include/hpdcache_typedef.svh",
+        "sha256": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126"
+      }
+    },
+    "configuration": "cv32a60x public CMI and AXI channel types, with 64-bit address/data, 4-bit IDs and 32-bit AXI user fields.",
+    "comparison_scope": "Observe 9 port samples during an ordinary cacheable burst, an uncached read and an uncached load-reserved request. Check handshakes, ARLOCK, AR fields and success/error decoding for every RRESP value. The 39 CPU programs run after the port test passes.",
+    "result": "The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2)."
+  }
+}

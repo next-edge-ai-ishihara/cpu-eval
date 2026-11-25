@@ -1,0 +1,4 @@
+requirement	test	test_behavior
+double-precision division and square-root results	rv64ud-p-fdiv;DivSqrtRecF64PortsTest	Compare the CPU instruction trace against Spike. Exercise recoded results and exception flags directly, including square root with distinct a and b.
+acceptance and operation-specific completion	DivSqrtRecF64PortsTest	Issue one request at a time as in the fixed BOOM caller. Check the selected ready port, one operation-specific result-valid pulse and completion of every accepted request.
+rounding and exceptional values	DivSqrtRecF64PortsTest	Observe inexact rounding under two modes, invalid square root, signed zero, division by zero and underflow.

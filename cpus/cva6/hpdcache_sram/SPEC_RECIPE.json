@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_sram",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_sram.sv",
+      "lines": [
+        13,
+        34
+      ],
+      "language": "systemverilog",
+      "sha256": "941cdde519394aafb1d147ec3e592d18177a6eea431731ad51457f0d66c35250"
+    },
+    {
+      "label": "Selected CVA6 data-cache configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        109,
+        117
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Plain SRAM dependency declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/macros/behav/hpdcache_sram_1rw.sv",
+      "lines": [
+        13,
+        28
+      ],
+      "language": "systemverilog",
+      "sha256": "271bc9139cc9d51b6a1247cb6507a51e095e918e9c331dc7c468a563c2fd0f5e"
+    },
+    {
+      "label": "ECC SRAM dependency declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/macros/behav/hpdcache_sram_ecc_1rw.sv",
+      "lines": [
+        15,
+        35
+      ],
+      "language": "systemverilog",
+      "sha256": "9dabd7ed2448fa3555f066e2d4079e2d9e4588a5135a5d8ba8568c6a328ec2f3"
+    },
+    {
+      "label": "Parent instantiation in the cache directory",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_memctrl.sv",
+      "lines": [
+        394,
+        417
+      ],
+      "language": "systemverilog",
+      "sha256": "b1edc2a9a55691ef559e0489447a9bf4f49cff91f794d5518a989d0b5c61e5ef"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_sram`\n\nImplement one complete `hpdcache_sram` module for the selected CPU configuration shown below. Preserve the module name, parameters, and ports.\n\nReturn only the complete `module hpdcache_sram` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### `core/include/cv32a60x_config_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Module declaration",
+      "text": "\n```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Parent instantiation; `rtl/src/hpdcache_memctrl.sv`",
+      "text": "\n```\n\n## Parent instantiation\n\n### `rtl/src/hpdcache_memctrl.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Dependency declarations; `rtl/src/common/macros/behav/hpdcache_sram_1rw.sv`",
+      "text": "\n```\n\n## Dependency declarations\n\n### `rtl/src/common/macros/behav/hpdcache_sram_1rw.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/common/macros/behav/hpdcache_sram_ecc_1rw.sv`",
+      "text": "\n```\n\n### `rtl/src/common/macros/behav/hpdcache_sram_ecc_1rw.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n```\n"
+    }
+  ]
+}

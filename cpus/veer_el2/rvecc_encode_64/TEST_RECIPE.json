@@ -1,0 +1,28 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvecc_encode_64",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "kind": "directed_micect_probe",
+    "name": "icache_ecc",
+    "source": "testbench/tests/icache_ecc/icache_ecc.c",
+    "source_sha256": "f99a20ec2aa4e77c57ce3e1e1c6db8a54dd311c17ac8567075e1f183514e4bdb",
+    "build": "make -f tools/Makefile verilator TEST=icache_ecc TEST_DIR=testbench/tests/icache_ecc",
+    "reference_micect_before": 0
+  },
+  "run": "bash evaluate_micect_probe.sh",
+  "run_env": {
+    "CPU_EVAL_EXPECTED_MICECT_BEFORE": "0"
+  },
+  "comparison": "the micect (I-Cache ECC Error Counter, CSR 0x7F0) value the pinned icache_ecc.c program reads after cache warmup and before artificial fault injection, against the pinned reference value 0; the program prints this saved value together with the post-injection value afterward",
+  "run_sha256": "c504b84fc55a25fe677eaa0c58ac1614a098cda8dfe52ea7c6cebbd55c1086f8"
+}

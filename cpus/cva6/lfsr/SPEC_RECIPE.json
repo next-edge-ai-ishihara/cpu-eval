@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/pulp-platform/common_cells.git",
+      "commit": "dc555643226419b7a602f0aa39d449545ea4c1f2",
+      "path": "src/lfsr.sv",
+      "lines": [
+        22,
+        35
+      ],
+      "language": "systemverilog",
+      "sha256": "91f6c37be706ca7648cb66635e3f46a210e517f7addb8569ec28e4738599f7d7"
+    },
+    {
+      "label": "Instruction-cache instance",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache.sv",
+      "lines": [
+        408,
+        417
+      ],
+      "language": "systemverilog",
+      "sha256": "272c06abf1f37a3f3a7d18d6c29a08df0a493631e330aefb4c677357a4d901c3"
+    },
+    {
+      "label": "Write-through data-cache instance",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/wt_dcache_missunit.sv",
+      "lines": [
+        200,
+        209
+      ],
+      "language": "systemverilog",
+      "sha256": "22ce8304cb6c4987a614fdee8f192c28c18d9c50c70d217d01eb59dfe62e434e"
+    },
+    {
+      "label": "Shared-TLB instance",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6_mmu/cva6_shared_tlb.sv",
+      "lines": [
+        775,
+        783
+      ],
+      "language": "systemverilog",
+      "sha256": "3ac49fb19105e711fe25a83a730657a23df1ddde1a30b4d2e75212140adb73a4"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions; Section heading; Fence",
+      "text": "# Implement `lfsr`\n\nImplement the complete `lfsr` module for the uses shown below. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module lfsr` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Parent instantiation\n\n### core/cache_subsystem/cva6_icache.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/cache_subsystem/wt_dcache_missunit.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/cva6_mmu/cva6_shared_tlb.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Port contract that no upstream text states",
+      "text": "```\n\n## Additional requirement\n\nWith `CipherLayers` = 0, `out_o` equals the low `OutWidth` bits of an `LfsrWidth`-bit state that takes the value `RstVal` asynchronously while `rst_ni` is 0 and otherwise, at each rising edge of `clk_i` with `en_i` = 1, is replaced by `(state >> 1) ^ ({LfsrWidth{state[0]}} & mask)`, where `mask` is `8'hFA` for `LfsrWidth` = 8.\n"
+    }
+  ]
+}

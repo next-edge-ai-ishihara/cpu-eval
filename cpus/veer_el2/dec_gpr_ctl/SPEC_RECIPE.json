@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for el2_dec_gpr_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_gpr_ctl.sv",
+      "lines": [
+        15,
+        50
+      ],
+      "language": "verilog",
+      "sha256": "35d69d835e2db454cdd5f8fdda251344fa0520e1f66c4b244aaf4278c3e93aca"
+    },
+    {
+      "label": "Parent instantiation for el2_dec_gpr_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec.sv",
+      "lines": [
+        479,
+        505
+      ],
+      "sha256": "e8c378100293edfd140fb064cf6f1cb00c8886f12ffc4c7c5a4c2a527af271ba"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec_gpr_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        164,
+        177
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "RV32I general-purpose register behavior",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        39,
+        46
+      ],
+      "language": "asciidoc",
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "VeeR EL2 general-purpose register reset behavior",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        1231,
+        1237
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        181,
+        190
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        199,
+        204
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `el2_dec_gpr_ctl`\n\nImplement the complete `el2_dec_gpr_ctl` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_dec_gpr_ctl` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "text": "\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Dependency declarations",
+      "text": "\n## Dependency declarations\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Dependency declarations",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Documentation and source of the RV32I register excerpt",
+      "text": "\n## Documentation\n\n### `src/rv32.adoc`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Source of the VeeR EL2 reset excerpt",
+      "text": "```\n\n### `docs/source/memory-map.md`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Port contract checked by the GPR port probe",
+      "text": "```\n\n## Additional requirement\n\nEach read port returns the value currently stored in the addressed register and does not forward write data that has not yet been stored on a rising clock edge.\n"
+    }
+  ]
+}

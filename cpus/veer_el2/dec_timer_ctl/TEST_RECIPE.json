@@ -1,0 +1,22 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_dec_timer_ctl",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "dec_timer_ctl_selfcheck",
+    "path": "harness/dec_timer_ctl_selfcheck.s",
+    "sha256": "1a7d61f61cf09e6267926ee2c4ac3b117e479b83ecf280a4c4a9cef0b5897447"
+  },
+  "run": "bash harness/evaluate_dec_timer_ctl.sh",
+  "run_sha256": "7ddadd7eb8890f13b9d27d5410cc8b14af89c28744989af93e1c9ea89e36d995",
+  "comparison": "Self-checking program: timer-0 and timer-1 increments against mcycle, timer-0 interrupt delivery, and timer-1 snapshots before and after one timer-0 bound event in cascade mode. The testbench mailbox and simulation cycle limit provide separate verdict evidence."
+}

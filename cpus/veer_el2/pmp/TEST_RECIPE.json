@@ -1,0 +1,48 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2212
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_pmp",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    },
+    {
+      "path": "test/pmp-fault-coverage.patch",
+      "sha256": "09755e7041c64d52c74375c14554278290988f1cd74582f4228b73eb8670f64c",
+      "apply_in": "VeeR EL2 repository root after generating the fixed test",
+      "order": 3
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_before_patch_sha256": "a517527d47e564ec91a7212523785059b0d0541812fa19976983775a5d12201b",
+    "generated_source_after_patch_sha256": "dd88308519ffa65945e5242a87545ad0c03ac0b9d38a1ddb43fc9edbead60b69"
+  },
+  "run": "bash ../_shared/run_fixed_test.sh",
+  "comparison": "Ordered comparison of Spike and RTL trace entries that change general-purpose-register values. The comparator matches their register-update lists; it does not compare PCs, instruction encodings, or CSR fields. Require exactly 2212 matched entries for the fixed program, with no mismatch."
+}

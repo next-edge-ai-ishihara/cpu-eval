@@ -1,0 +1,32 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_pic_ctrl",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "pic_ctrl_gating",
+    "path": "test/pic_ctrl_gating.s",
+    "sha256": "8f34b87c6f0a36f61f012e1e11401bb133870af2a35cfd10a9aa8609b472cc89",
+    "port_probe_files": [
+      {
+        "path": "test/pic_port_probe.sv",
+        "sha256": "e461d4f2c6bb24854254fca13ee120d10e47c42c6cc09b6f5a7cc6c8a1a3d939"
+      },
+      {
+        "path": "test/run_pic_port_probe.sh",
+        "sha256": "af6545dc5d35c18d8b20030b3ba7382d9e86cabea40e22a031e25d3f2de7af09"
+      }
+    ]
+  },
+  "run": "bash test/evaluate_pic_ctrl.sh",
+  "run_sha256": "8cccb3cc71a25a26e992f6e13c61cce3140dcc21cb461b1effcbab5a4292503d",
+  "comparison": "The directed CPU program must complete normally with its mailbox pass code, and the PIC port-level masked-store, register-behavior and wakeup probe must pass."
+}

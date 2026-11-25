@@ -1,0 +1,7 @@
+requirement	test_program	test_behavior
+Hash the request PC and geometric history into a tagged-table lookup	rv64ui-p-beq;rv64ui-p-bne;rv64ui-p-jal;rv64ui-p-jalr	The fixed upstream control-flow tests repeatedly query the TAGE tables with changing PCs and global histories.
+Return a matching prediction counter and usefulness value	rv64ui-p-beq;rv64ui-p-bne	Repeated conditional branches exercise tag matches and consume the selected table response.
+Allocate and update tagged entries after prediction feedback	rv64ui-p-beq;rv64ui-p-bne	Taken and not-taken outcomes provide update direction, old counter, allocation, and usefulness information through the specified interface.
+Complete the loop program	rv64mi-p-loop_branch_cycles	Require PASSED completion and record committed x20 as a diagnostic; no exact cycle-count equality is required.
+Preserve tagged lookup, saturating counters, usefulness and independently masked training	test/TageTablePublicContractTest.scala	Finite directed public-port test through evaluate_candidate.sh; table collisions and private state are not compared.
+Return row usefulness on a miss	test/TageTablePublicContractTest.scala	After allocation, query the same row with a different tag. A usefulness-only write changes both queries' usefulness while preserving their hit or miss and the hit's counter.

@@ -1,0 +1,21 @@
+diff --git a/src/main/scala/rift2Core/rift2Core.scala b/src/main/scala/rift2Core/rift2Core.scala
+index 64999a0..7d4d450 100644
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -155,8 +155,14 @@ trait Rift2CoreImpBackend{ this: Rift2CoreImpBase =>
+   
+   preIssue_stage.io.deq <> iss_stage.io.dptReq
+ 
+-  preIssue_stage.io.molloc <> iwb_stage.io.vMolloc
+-  preIssue_stage.io.readOp <> iwb_stage.io.vReadOp
++  preIssue_stage.io.molloc <> iwb_stage.io.vMolloc
++
++  if (!hasVector) {
++    when (preIssue_stage.io.molloc.valid) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH FakeVecPreIssue molloc.valid\n")
++    }
++  }
++  preIssue_stage.io.readOp <> iwb_stage.io.vReadOp
+ 
+ 
+   iss_stage.io.alu_iss_exe <> exe_stage.io.alu_iss_exe

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "problem": "Store_queue",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/backend/LSU/Store_queue.scala",
+    "source_unit": "Store_queue",
+    "hidden_definitions": [
+      "Stq_Ptr",
+      "Stq_Overlap"
+    ],
+    "hidden_definitions_description": "Before compilation the evaluator renames these fixed definitions, which implement the target's behavior, in every source file, so a submission cannot reuse them by name."
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-add",
+      "rv64ui-p-sw"
+    ],
+    "policy": "Run pinned upstream CPU programs that exercise ordinary execution and store enqueue through the complete CPU and compare retired architectural state."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches. The fixed LSU observer must see a store queue enqueue in rv64ui-p-sw. The queue must issue no valid prefetch request during either program."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_prefetch_disabled.patch",
+      "sha256": "8cad39d7dce2c7503a19c0d4204e3bcfe86469515e08fc40ce4279b4ea953401",
+      "purpose": "Observe a store queue enqueue and invalid prefetch output on the actual CPU."
+    }
+  ],
+  "required_observation_markers": {
+    "rv64ui-p-sw": "CPU_EVAL_STORE_QUEUE_ENQUEUE"
+  }
+}

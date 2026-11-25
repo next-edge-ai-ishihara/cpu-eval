@@ -1,0 +1,18 @@
+--- a/riscv-test-suite/rv32i_m/I/src/add-01.S
++++ b/riscv-test-suite/rv32i_m/I/src/add-01.S
+@@ -24,6 +24,15 @@ rvtest_entry_point:
+ RVMODEL_BOOT
+ RVTEST_CODE_BEGIN
+ 
++// Exercise a write followed by a non-forwarded read of x31. Restore the
++// temporary registers before executing the unmodified architectural test.
++addi x31, x0, 85
++nop
++nop
++addi x30, x31, 1
++addi x31, x0, 0
++addi x30, x0, 0
++
+ #ifdef TEST_CASE_1
+ 
+ RVTEST_CASE(0,"//check ISA:=regex(.*32.*);check ISA:=regex(.*I.*);def TEST_CASE_1=True;",add)

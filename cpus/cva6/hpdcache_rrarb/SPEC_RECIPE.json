@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_rrarb",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_rrarb.sv",
+      "lines": [
+        28,
+        44
+      ],
+      "language": "verilog",
+      "sha256": "2b3c6497fcbb636a8d0ef378609db4924574ce0cd2a3958a2709c1a7aff3cf8d"
+    },
+    {
+      "label": "Transaction-table request and ready connection",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_rtab.sv",
+      "lines": [
+        344,
+        353
+      ],
+      "language": "verilog",
+      "sha256": "5a61d9aade361532b4df8463172d536aeee887d7f0c349ed0ddafa3e25c2169c"
+    },
+    {
+      "label": "Priority one-hot encoder",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+      "lines": [
+        26,
+        42
+      ],
+      "language": "verilog",
+      "sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55"
+    },
+    {
+      "label": "Sibling arbiter ports and grant hold behavior",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fxarb.sv",
+      "lines": [
+        26,
+        75
+      ],
+      "language": "verilog",
+      "sha256": "873d1c3f00b4036c4441ffa3ccd42a7995865f64ca8b0eaa2e22cab45533ac49"
+    },
+    {
+      "label": "Independent non-starving round-robin definition",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/rr_arb_tree.sv",
+      "lines": [
+        16,
+        17
+      ],
+      "language": "verilog",
+      "sha256": "c7361280318a605131345932ab3325bc53f8fc76e67c5579b991b96a5b4ffeed"
+    },
+    {
+      "label": "Independent higher-index and wraparound rule",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/rr_arb_tree.sv",
+      "lines": [
+        30,
+        35
+      ],
+      "language": "verilog",
+      "sha256": "c7361280318a605131345932ab3325bc53f8fc76e67c5579b991b96a5b4ffeed"
+    },
+    {
+      "label": "Independent grant lock rule",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/rr_arb_tree.sv",
+      "lines": [
+        68,
+        74
+      ],
+      "language": "verilog",
+      "sha256": "c7361280318a605131345932ab3325bc53f8fc76e67c5579b991b96a5b4ffeed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_rrarb`\n\nImplement the complete `hpdcache_rrarb` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_rrarb` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Parent instantiation\n\n### `rtl/src/hpdcache_rtab.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Dependency declarations\n\n### `rtl/src/common/hpdcache_prio_1hot_encoder.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Related source code\n\n### `rtl/src/common/hpdcache_fxarb.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n### `vendor/pulp-platform/common_cells/src/rr_arb_tree.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n"
+    }
+  ]
+}

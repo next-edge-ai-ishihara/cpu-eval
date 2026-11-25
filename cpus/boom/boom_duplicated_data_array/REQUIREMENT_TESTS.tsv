@@ -1,0 +1,3 @@
+requirement	test_program	test_behavior
+Serve cache-row data to load requests	rv64ui-p-lw;rv64ui-p-data_array_roundtrip	The upstream load test checks ordinary loads. The added program executes a dependent two-load sequence, then reads every eight-byte word of an aligned 32768-byte array after storing a distinct value in every word. The architectural trace comparison observes each loaded value.
+Update selected words without altering other cache data	rv64ui-p-sw;rv64ui-p-data_array_roundtrip	The upstream store test checks ordinary masked stores. The added program stores one word at a time with the values 4096 through 1, then reads back each word. Distinct values let the trace comparison detect when one row aliases another in the same cache block.

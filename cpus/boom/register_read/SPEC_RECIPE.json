@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "RegisterRead",
+  "sources": [
+    {
+      "label": "LargeBoomConfig definition",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "generators/chipyard/src/main/scala/config/BoomConfigs.scala",
+      "lines": [
+        17,
+        19
+      ],
+      "sha256": "ec301724d004d1c5918418915b243f31ce0b165bfe7e9d794165c1f30599968b"
+    },
+    {
+      "label": "Large BOOM core parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        175,
+        220
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Selected-configuration predicate default",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        25,
+        45
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Package and imports",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/register-read/register-read.scala",
+      "lines": [
+        1,
+        20
+      ],
+      "sha256": "abc2d838044497081683502773f07c8f95ae5f9485b69e0b951c614c90f03526"
+    },
+    {
+      "label": "Register-read purpose, parameters, and interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/register-read/register-read.scala",
+      "lines": [
+        22,
+        64
+      ],
+      "sha256": "abc2d838044497081683502773f07c8f95ae5f9485b69e0b951c614c90f03526"
+    },
+    {
+      "label": "Integer register-read instance",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        127,
+        139
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Integer register-read connections",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        966,
+        985
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Integer execution-pipeline connection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        1074,
+        1080
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Floating-point register-read instance",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/fp-pipeline.scala",
+      "lines": [
+        61,
+        80
+      ],
+      "sha256": "6bae9f003237d28d8566aef368a000fdda1dd8376040b80811db88f720ffbebe"
+    },
+    {
+      "label": "Floating-point register-read connections",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/fp-pipeline.scala",
+      "lines": [
+        144,
+        161
+      ],
+      "sha256": "6bae9f003237d28d8566aef368a000fdda1dd8376040b80811db88f720ffbebe"
+    },
+    {
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/register-read/func-unit-decode.scala",
+      "lines": [
+        302,
+        320
+      ],
+      "label": "Register-read decoder declaration and pass-through",
+      "sha256": "26040e898f0845198a845931a1223c8b7f9a55096f4dda7f0e9b6ffb2c9962ad"
+    },
+    {
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/register-read/func-unit-decode.scala",
+      "lines": [
+        356,
+        357
+      ],
+      "label": "Register-read decoder valid output",
+      "sha256": "26040e898f0845198a845931a1223c8b7f9a55096f4dda7f0e9b6ffb2c9962ad"
+    },
+    {
+      "label": "Register-file read-port interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/register-read/regfile.scala",
+      "lines": [
+        24,
+        34
+      ],
+      "sha256": "047d1af3f53cb107f52108f72f94bd03b87c2fbf73e1b3386d34d81f7853e83f"
+    },
+    {
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/register-read/regfile.scala",
+      "lines": [
+        124,
+        125
+      ],
+      "label": "Register-file registered read address",
+      "sha256": "047d1af3f53cb107f52108f72f94bd03b87c2fbf73e1b3386d34d81f7853e83f"
+    },
+    {
+      "label": "Execution request interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        82,
+        98
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "Bypass response interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/execution-unit.scala",
+      "lines": [
+        33,
+        44
+      ],
+      "sha256": "851331e61affdfc8f849bac6b3fd5c673c1f115cbf99d103ea9d6d23d99bd624"
+    },
+    {
+      "label": "Branch-kill and branch-mask helpers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/util/util.scala",
+      "lines": [
+        50,
+        91
+      ],
+      "sha256": "f701ed3dee77ee4621f9c207d50176469aa3265af1983f3d81897b5585159f18"
+    },
+    {
+      "label": "Micro-operation branch fields",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        54,
+        60
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation physical operand fields",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        81,
+        95
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation predicate and register-type fields",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        108,
+        124
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation write-enable definition",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        148,
+        150
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Register-type constants",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        118,
+        123
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Null micro-operation definition",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        268,
+        289
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Ready-valid bundle declaration",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "29df513e348cc809876893f650af8180f0190496",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        12,
+        42
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "Register-file organization and static read-port assignment",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/reg-file-bypass-network.rst",
+      "lines": [
+        15,
+        34
+      ],
+      "sha256": "7659edb824a096c2bfda732ddfa27d3a89e99091984fd62ab6647254c43b8024"
+    },
+    {
+      "label": "Bypass-network behavior",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/reg-file-bypass-network.rst",
+      "lines": [
+        47,
+        52
+      ],
+      "sha256": "7659edb824a096c2bfda732ddfa27d3a89e99091984fd62ab6647254c43b8024"
+    },
+    {
+      "label": "Physical-register zero rule",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/rename-stage.rst",
+      "lines": [
+        51,
+        54
+      ],
+      "sha256": "c0afb735d36b57cc875205c9fff0e1ef100da5e779907512ae8bc67a93b685ed"
+    },
+    {
+      "label": "Branch-mask resolution and misprediction behavior",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/execution-stages.rst",
+      "lines": [
+        134,
+        153
+      ],
+      "sha256": "42ed0e7cd6d727facdc485b6edb9376abd25cfe5210c396f076916ea18da5f37"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "# Implement `RegisterRead`\n\nImplement the complete `RegisterRead` module. Preserve its class declaration and public interface shown below. Return only the complete `class RegisterRead` definition in a single Scala code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### `generators/chipyard/src/main/scala/config/BoomConfigs.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/common/config-mixins.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/common/parameters.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Parent instantiation\n\n### `src/main/scala/exu/core.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/exu/fp-pipeline.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### `src/main/scala/exu/register-read/func-unit-decode.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/exu/register-read/regfile.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/exu/execution-units/functional-unit.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/exu/execution-units/execution-unit.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/util/util.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/common/micro-op.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/common/consts.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/chisel3/util/Decoupled.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Documentation\n\n### `docs/sections/reg-file-bypass-network.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `docs/sections/rename-stage.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `docs/sections/execution-stages.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n"
+    }
+  ]
+}

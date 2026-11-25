@@ -1,0 +1,4 @@
+requirement	tests
+Exact -1.5 precision-conversion round trips with zero flags; quiet-NaN round trip checks canonical result but not signaling-NaN invalid flag	rv64ud-p-fcvt
+Static RUP on positive halfway double-to-single conversion with NX checked; FADD.D in the same program exercises a separate rounding path	rv64ud-p-rounding_mode_rup
+Canonical single-precision NaN and NV only for signaling double-precision inputs, for both signs	RecFNToRecFNNaNTest

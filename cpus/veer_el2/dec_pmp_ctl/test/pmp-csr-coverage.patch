@@ -1,0 +1,22 @@
+--- a/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
++++ b/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
+@@ -65,1 +65,18 @@
+-main:             li         t0, 0x52d893a0 #start riscv_int_numeric_corner_stream_5
++main:             li         t0, 0x7f
++                  csrw       0x3a0, t0
++                  csrr       s4, 0x3a0
++                  li         t0, 0
++                  csrw       0x3a0, t0
++                  li         t0, 0x00123456
++                  csrw       0x3b0, t0
++                  csrr       s5, 0x3b0
++                  li         t0, 0x80
++                  csrw       0x3a0, t0
++                  li         t0, 0x00654321
++                  csrw       0x3b0, t0
++                  csrr       s6, 0x3b0
++                  li         t0, 0
++                  csrw       0x3a0, t0
++                  csrr       s7, 0x3a0
++                  csrr       s8, 0x3b0
++                  li         t0, 0x52d893a0 #start riscv_int_numeric_corner_stream_5

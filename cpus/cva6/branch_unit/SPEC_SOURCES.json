@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/branch_unit/SPEC_RECIPE.json",
+  "recipe_sha256": "b93075464c15fc2a14ece1df782c09f6fe2e3522e10aab2682681c684ca36593",
+  "prompt_sha256": "dd693c6a62e63b2a5ad86fcec9e6e6be480def118769ffe025b5cf8195d3fc57",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        362
+      ],
+      "sha256": "39d4624ed3ca5607ef8815ed460010d48fc106e93ae879d7b331605cbc4640e7"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        362,
+        396
+      ],
+      "sha256": "393e1e2b6e472b8cf3db0198f2ab6fffefe807014d0a9d089fc18035511687b9"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        396,
+        405
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        405,
+        432
+      ],
+      "sha256": "afc9ba7a976a278dde028ff6d24b6c18f3369ddd683f66a3381234a4e0926563"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        432,
+        441
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        441,
+        504
+      ],
+      "sha256": "6e72b529163c4e38ea14142498a456608aa9a06a94a80452c717efe875975b79"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        504,
+        513
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        513,
+        536
+      ],
+      "sha256": "6f182fa23e38de1d95f548bc737a9dca1a20d8f2767d798d61b05c20f07a043e"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Fence and heading",
+      "prompt_bytes": [
+        536,
+        581
+      ],
+      "sha256": "16ab8841be19b6437f519e370a014818c34cc127977ddf6ac45cfb13290c150f"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        581,
+        2098
+      ],
+      "sha256": "3406a2ecb28ac5f8ed4feee8336af3df2a876e77499e66cafc461b5ae5ed1364"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Fence and heading",
+      "prompt_bytes": [
+        2098,
+        2145
+      ],
+      "sha256": "e2268288abe30a91b3982ee76de3437d2598cf6681ec2fdd47686716bd440c90"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        2145,
+        2945
+      ],
+      "sha256": "8b3a28947d64927971a6413fb32ef1550bf6d72efa2f45d8d2ef1e404074728e"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fence and heading",
+      "prompt_bytes": [
+        2945,
+        3027
+      ],
+      "sha256": "95468dcbed93c1988156b94922316b21923868df769584de47bb4e073cde6c27"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        3027,
+        3268
+      ],
+      "sha256": "fc54ff700e29d123b3bdbccf7244018e9553465167d7504e9576557e3351ac58"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        3268,
+        3277
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        3277,
+        3383
+      ],
+      "sha256": "4ad46f653403f78aba4869e1124bc667d28d5eded6383912ed5115bb3ca74b97"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        3383,
+        3392
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        3392,
+        3615
+      ],
+      "sha256": "2c3b7550f3891f4d3f488984eb43995146de2c628ed75605ac514d8c4e939bb2"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Fence and heading",
+      "prompt_bytes": [
+        3615,
+        3655
+      ],
+      "sha256": "7bdfb570b23999981f5742a39f12a65b54b8e11df6c71c8105d239b73ea2f00d"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        3655,
+        4793
+      ],
+      "sha256": "b5e02cd9aa954852ae6c24104177ffae7be1db646fd3aab0d832d7dbd95760ca"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        4793,
+        4802
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        4802,
+        5513
+      ],
+      "sha256": "0ed06b6a809be5da375bea813926ec66bbeeaa711d5d6edd0fc67e99dd466907"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        5513,
+        5522
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        5522,
+        5869
+      ],
+      "sha256": "2eb355716bd35a9891a0ae385e55d430c2302e85c0a9bd68ca2d8a72c8fff8bc"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Heading for Related source code",
+      "prompt_bytes": [
+        5869,
+        5936
+      ],
+      "sha256": "c0f4c790b8a0020d5d2685a8148ab0ae36cf166910b1db00e7b37109d3e2dde5"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        5936,
+        5998
+      ],
+      "sha256": "eed39540f8a0978ea19b063993837324cd5b96198da02526fdb74314e0362868"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Omission within decoder.sv",
+      "prompt_bytes": [
+        5998,
+        6007
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        6007,
+        6734
+      ],
+      "sha256": "afb80d36d44f48f371d8b34dcc89b47c3b4ccca6ac5f03ea247755c3cdc924b9"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Heading for alu.sv",
+      "prompt_bytes": [
+        6734,
+        6773
+      ],
+      "sha256": "0c920caf47e7cf348c378b3049ddfc242998e1a522e9d76cb4eac7c210a5efac"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        6773,
+        7135
+      ],
+      "sha256": "ef0810d95ad63ac074c1ce9912492d70ba8254c7d149bc19bc96098531c1fa12"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Fence and heading",
+      "prompt_bytes": [
+        7135,
+        7203
+      ],
+      "sha256": "843b3c1f0d88837e5ad064fab63ce5da0115d69557c14d3f7ca5f6b106996da8"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        7203,
+        8170
+      ],
+      "sha256": "b932ad41162356b84043db4c9098c7c309ceb966d2cb2f82c5e3d74ba2becc60"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Fence and heading",
+      "prompt_bytes": [
+        8170,
+        8202
+      ],
+      "sha256": "92d87202f7706d2c63014fd6a92f58102d98f2ce1edf430190376d895d5ef7b3"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        8202,
+        8728
+      ],
+      "sha256": "9aaef1aaa49fd93510baf0d4a8f106294f24905ba3ea7fc3735d7408c2d582fc"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        8728,
+        8734
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        8734,
+        9147
+      ],
+      "sha256": "bafc9ca7683865e00ba52d1375d9564c07ae0720fcacae956f062b0be6444808"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        9147,
+        9153
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 37,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        9153,
+        9462
+      ],
+      "sha256": "32c4bfb6b869f12cf6f3148ea20a37783d2101e48c41d76dbcdd9fcc16dcf737"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Fence and heading",
+      "prompt_bytes": [
+        9462,
+        9498
+      ],
+      "sha256": "d0baedef1f3d5367fd5626808b676665f0e13ce09d8507b6b6ea6d8bab2af5c6"
+    },
+    {
+      "index": 39,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        9498,
+        9728
+      ],
+      "sha256": "95ab103bc860ded31600c4264ff518508dd73ad72540bee106ff7a74e3f3e136"
+    },
+    {
+      "index": 40,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        9728,
+        9734
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 41,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        9734,
+        10167
+      ],
+      "sha256": "375cedab066827e7a380886efb79949d5e1647d520399f222ffd2645e697b821"
+    },
+    {
+      "index": 42,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        10167,
+        10173
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 43,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        10173,
+        10718
+      ],
+      "sha256": "5421191da3bd9be4427f5b32f216b796937d16deffb7f63c412a5946357b28c5"
+    },
+    {
+      "index": 44,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        10718,
+        10722
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Selected XLEN",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected VLEN",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        23,
+        23
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected compressed, virtualization, and Zcmt configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        45,
+        47
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected trap-value configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        71,
+        71
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "JAL target and link result",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        431,
+        439
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "JALR target and link result",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        458,
+        464
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "Conditional branch target",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        558,
+        564
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "Compressed control-transfer alignment",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        486,
+        490
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "Compressed jump target and link result",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        499,
+        507
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "Compressed register jump target and link result",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        516,
+        527
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "Control-flow type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        172,
+        178
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Branch and jump operation identifiers",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        291,
+        300
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Branch-operation classification",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        548,
+        553
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Prediction and exception input types",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        34,
+        52
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Resolved-branch type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        132,
+        143
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Functional-unit data type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        176,
+        183
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Parent instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        353,
+        378
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/branch_unit.sv",
+      "lines": [
+        15,
+        52
+      ],
+      "language": "verilog",
+      "sha256": "39c5c4fad84091c91da5f391e8b6354244823b9ccd4aeec0371415c8d4862bea"
+    },
+    {
+      "label": "Decoder default operation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        187,
+        187
+      ],
+      "language": "verilog",
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "Branch-unit documentation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/03_cva6_design/ex_stage.md",
+      "lines": [
+        26,
+        41
+      ],
+      "sha256": "a4dc78c0d45142a49574c8b9fd346044dd0f8bdb370bec4b203c5d4c99be22ee"
+    },
+    {
+      "label": "Decoder JALR and JAL operations",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        1693,
+        1709
+      ],
+      "language": "verilog",
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "ALU branch comparison result",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu.sv",
+      "lines": [
+        127,
+        136
+      ],
+      "language": "verilog",
+      "sha256": "49ba35e04bf1e8cecf8fdf6378a585bad4c0f914291dc4941e0d58dfda834f6a"
+    }
+  ]
+}

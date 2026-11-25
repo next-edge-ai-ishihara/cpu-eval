@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "b7addf8e5c82d6ce615d581edd0897cb9bf9aafe9f2f4f0783238d19f9170634",
+  "prompt_sha256": "5737766bd5b867f1a9c28e92d5020311ffe506d54159c2fbb1263ad63ede9359",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        273
+      ],
+      "sha256": "c9ebee41f21a421d8fb1d3c9b3390578d7b5fba2e4207b0e38fba1010ec419a3"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "prompt_bytes": [
+        273,
+        308
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        308,
+        863
+      ],
+      "sha256": "b87383c3e02cc10ccd240682dd77f8bbb93cb9db8c0ae391946d63ef52bd72ec"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        863,
+        867
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "prompt_bytes": [
+        867,
+        904
+      ],
+      "sha256": "9df07e47dc82ebd7a335e21c2e3d132e7a2a177372efc33c0e12ffbabf06935c"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        904,
+        1399
+      ],
+      "sha256": "381c883618daa47a85acdf170896b92d2fbe5274835fa48bad57b9ea0b195456"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        1399,
+        1403
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "prompt_bytes": [
+        1403,
+        1430
+      ],
+      "sha256": "8889a6ef21228668b5477f0d988c6255888133dc15453bbdb8c1374542046d26"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1430,
+        2383
+      ],
+      "sha256": "5ec6c60916d1cf20068e09e12acce5f8dcbdf8ac17e4c3152b1e38979606274e"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Fence after Documentation",
+      "prompt_bytes": [
+        2383,
+        2387
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for el2_cmp_and_mux",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_pic_ctrl.sv",
+      "lines": [
+        541,
+        553
+      ],
+      "language": "verilog",
+      "sha256": "1dd6b90a3c50a5e0c9f6dc7b8f10f9dc0283e573c27421a526bd8e0f91a6d3cc"
+    },
+    {
+      "label": "Parent instantiation for el2_cmp_and_mux",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_pic_ctrl.sv",
+      "lines": [
+        421,
+        428
+      ],
+      "sha256": "1dd6b90a3c50a5e0c9f6dc7b8f10f9dc0283e573c27421a526bd8e0f91a6d3cc"
+    },
+    {
+      "label": "Documentation for el2_cmp_and_mux",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/interrupts.md",
+      "lines": [
+        162,
+        168
+      ],
+      "language": "text",
+      "sha256": "d72b363c8265a734809880ed3a946dc7a292eba4f8863f2a2c08a622946a4ae6"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/hpdcache_victim_random/SPEC_RECIPE.json",
+  "recipe_sha256": "63f4f151f48bbe59dfebdf16e8df7795f6f3aebe077d6a023c01e4c75a378b43",
+  "prompt_sha256": "b399ba0701915a7aa54b48b9a88acd5c1dd7237e9ba35298fa7a58f40f57791b",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        335
+      ],
+      "sha256": "7d3a7be416efd8ed4ed03696c44e3ab79360aae7b53ec200a952bd710c942956"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        335,
+        1365
+      ],
+      "sha256": "4f82b3f57556db6cac732cfc0079be6bde383ac81b648dcca6030a9e04e858ba"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences: Dependency declarations; `rtl/src/common/hpdcache_decoder.sv`",
+      "prompt_bytes": [
+        1365,
+        1458
+      ],
+      "sha256": "d15e3cd9f1997dd0cb8bb2432ca1c0932009db944465241d40d6e982c07654bc"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1458,
+        1826
+      ],
+      "sha256": "df73adeb8f0e449feea9fffa64b7d9a5a78470648bdaa2a610bfefdddcdecdfa"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/common/hpdcache_lfsr.sv`",
+      "prompt_bytes": [
+        1826,
+        1888
+      ],
+      "sha256": "df6e7e38955663f2df38c377e8ff7c2311787552a2d49e88d26c717e5a4b5207"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1888,
+        2172
+      ],
+      "sha256": "2bcbdc0b00ca2918114976367d231b03bedc68e6fa6484dbcf7ce815722a1832"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/common/hpdcache_prio_1hot_encoder.sv`",
+      "prompt_bytes": [
+        2172,
+        2247
+      ],
+      "sha256": "23e252e06d96e5fb94c16ef135438dba0b75bd9e7a69caee920453b545c71ea0"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        2247,
+        2420
+      ],
+      "sha256": "1150d3a662ed1314c7a1dfb13f910535177bb64739c2bacc3911aa8602ba6303"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and fences: Documentation; `docs/source/architecture.rst`",
+      "prompt_bytes": [
+        2420,
+        2488
+      ],
+      "sha256": "37ffb6fe932fb954a38a912381a576d6148467f2668993c01b6a7ce24adbf7a3"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        2488,
+        4484
+      ],
+      "sha256": "de7a85dcc4273bfa77448f1bfbad3f15ed177b9ba02882136d48ed191ff5623e"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        4484,
+        4490
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        4490,
+        5144
+      ],
+      "sha256": "b6e524ed8101638b12774d012102471fb38ff0dd37bbdc70cdbd8a4faf0e7db7"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        5144,
+        5149
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module description and declaration for hpdcache_victim_random",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_victim_random.sv",
+      "lines": [
+        27,
+        58
+      ],
+      "language": "systemverilog",
+      "sha256": "919698df94c00c07fd941bc2464516c4bc7d1fc13d64c66f00f657deadb4a8c0"
+    },
+    {
+      "label": "Directory state-bit and victim eligibility definitions",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        246,
+        286
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Pseudo-random victim selection policy",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        392,
+        404
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Decoder declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_decoder.sv",
+      "lines": [
+        26,
+        43
+      ],
+      "language": "systemverilog",
+      "sha256": "1513c572bc8b2c7ab01b737b761c640bbf04dc1fdc6c710f8e485b804763ed54"
+    },
+    {
+      "label": "HPDcache LFSR declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_lfsr.sv",
+      "lines": [
+        26,
+        43
+      ],
+      "language": "systemverilog",
+      "sha256": "487a72a672dab3fc3b16eaaf08f7f64a856a29c663c7983fa16cabe17ce8d265"
+    },
+    {
+      "label": "Priority one-hot encoder declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+      "lines": [
+        26,
+        35
+      ],
+      "language": "systemverilog",
+      "sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55"
+    }
+  ]
+}

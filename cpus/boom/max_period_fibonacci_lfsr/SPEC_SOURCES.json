@@ -1,0 +1,667 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "b66c1f5d5982e0d5c269704b343679214ba8d92fe7e6aaddfbb592e85d486678",
+  "prompt_sha256": "364b8abe918dd41f7b4965f2042196debe586dee1cf448d50048ac79e633e9ac",
+  "repositories": {
+    "github.com/chipsalliance/chisel3": {
+      "revision": "4da4f252c3d7c834e13bb8e91a69cfe772996452"
+    },
+    "github.com/riscv-boom/riscv-boom": {
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        261
+      ],
+      "sha256": "a781f121a84fadc960ff44dd0d94c735a84e3f31ee790eaf0f1f15c124ae4e77"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading",
+      "prompt_bytes": [
+        261,
+        285
+      ],
+      "sha256": "63946157d2ab0456d68bcc1a1b1b192f32c0cc1b0214cafb4699d7b33ba3b694"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "prompt_bytes": [
+        285,
+        356
+      ],
+      "sha256": "d08afb7251562c302ba3404e9b2b8e986238cb2985562729ef60edef3942937b"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        356,
+        442
+      ],
+      "sha256": "fc2906b6418f9ac26f8b9b6a666d923eb23fff3046626021f4fc73fcbbdde613"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        442,
+        447
+      ],
+      "sha256": "3b5cd21038973cc1a32a3d49edd4f32edaa7e6830f8a71b0b95575153db87be6"
+    },
+    {
+      "index": 5,
+      "kind": "authored",
+      "description": "Heading",
+      "prompt_bytes": [
+        447,
+        469
+      ],
+      "sha256": "6120ce7f6f9b54e2fb727c9c3e7565b156878b99686ab5a01073da00d374c650"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        469,
+        478
+      ],
+      "sha256": "3415e5d4cef8f9099a367bddd974e69011e7a59a373069c92916b90e9af563a2"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        478,
+        580
+      ],
+      "sha256": "401671f94011088f85b92629119e8bd4086c2c63a8dc8cd72f028e6c6606779c"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        580,
+        585
+      ],
+      "sha256": "3b5cd21038973cc1a32a3d49edd4f32edaa7e6830f8a71b0b95575153db87be6"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Heading",
+      "prompt_bytes": [
+        585,
+        610
+      ],
+      "sha256": "db1dfc8f553fc7fef69ff5aafcb6a5c3c1911e131350c303c608353e0a1c8d8c"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "prompt_bytes": [
+        610,
+        681
+      ],
+      "sha256": "d08afb7251562c302ba3404e9b2b8e986238cb2985562729ef60edef3942937b"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        681,
+        704
+      ],
+      "sha256": "ba6b639a7a9cc0b18bf052f1e85c5603ba6826a7542e98c97504afd4ea9099d6"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        704,
+        711
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        711,
+        1108
+      ],
+      "sha256": "c2760be0a32fa5ff4c6ae3057b4c4a646a860af4497fd846ecb740eabe7fb3c0"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        1108,
+        1113
+      ],
+      "sha256": "3b5cd21038973cc1a32a3d49edd4f32edaa7e6830f8a71b0b95575153db87be6"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "prompt_bytes": [
+        1113,
+        1175
+      ],
+      "sha256": "e8ce3d1af1ef45e121e2d527fba6eeb2a621bd9f814d62401b942b4416fb71c2"
+    },
+    {
+      "index": 16,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        1175,
+        1749
+      ],
+      "sha256": "94b1e01627931467807fad9d6b19d43709a4af5f1e52df4881cca581870f6626"
+    },
+    {
+      "index": 17,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        1749,
+        1754
+      ],
+      "sha256": "3b5cd21038973cc1a32a3d49edd4f32edaa7e6830f8a71b0b95575153db87be6"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "prompt_bytes": [
+        1754,
+        1802
+      ],
+      "sha256": "44ec6b8f7408a217873519188da56186a8865a0f4b220c02e3797c0e341a4af1"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1802,
+        1881
+      ],
+      "sha256": "92e888a8e9e9369959168fb7e192edc3e115705acc25aed54bc52ee6d2465466"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        1881,
+        1886
+      ],
+      "sha256": "3b5cd21038973cc1a32a3d49edd4f32edaa7e6830f8a71b0b95575153db87be6"
+    },
+    {
+      "index": 21,
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "prompt_bytes": [
+        1886,
+        1936
+      ],
+      "sha256": "0942353061224f0b11873187be360f1ac519c99c795b8e09b1288fa4239c1bae"
+    },
+    {
+      "index": 22,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1936,
+        2706
+      ],
+      "sha256": "948834bbe7fef3705e02c33b2048ab86d806489a4db02415ed660369c0451b30"
+    },
+    {
+      "index": 23,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        2706,
+        2713
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 24,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        2713,
+        2765
+      ],
+      "sha256": "ac95a9e12c3f911ae9b3f75cec2437e0ba075613ee0480014f46dd44bff55c14"
+    },
+    {
+      "index": 25,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        2765,
+        2770
+      ],
+      "sha256": "3b5cd21038973cc1a32a3d49edd4f32edaa7e6830f8a71b0b95575153db87be6"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Heading",
+      "prompt_bytes": [
+        2770,
+        2822
+      ],
+      "sha256": "4d83388b72f82004a39b90ac7cbb7e7b4c3fc76b0bf674d565cea83d405eff80"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        2822,
+        3067
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        3067,
+        3072
+      ],
+      "sha256": "3b5cd21038973cc1a32a3d49edd4f32edaa7e6830f8a71b0b95575153db87be6"
+    },
+    {
+      "index": 29,
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "prompt_bytes": [
+        3072,
+        3134
+      ],
+      "sha256": "e8ce3d1af1ef45e121e2d527fba6eeb2a621bd9f814d62401b942b4416fb71c2"
+    },
+    {
+      "index": 30,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        3134,
+        5850
+      ],
+      "sha256": "390fc30957e1f088c35a70a5e008ac2c3ca9aeec542344e1d1d8da2a87ce3e11"
+    },
+    {
+      "index": 31,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        5850,
+        5855
+      ],
+      "sha256": "3b5cd21038973cc1a32a3d49edd4f32edaa7e6830f8a71b0b95575153db87be6"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "prompt_bytes": [
+        5855,
+        5926
+      ],
+      "sha256": "d08afb7251562c302ba3404e9b2b8e986238cb2985562729ef60edef3942937b"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        5926,
+        6398
+      ],
+      "sha256": "db56cb3821f52dd3d46cb7745c937fa00db15a1e97cb2a96fd96aff2882f857b"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        6398,
+        6406
+      ],
+      "sha256": "7aab3ffa5d171b31d12db2a607b772cc0c9cbfa3e7f1c0bb60378ea5d4ac8756"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        6406,
+        6794
+      ],
+      "sha256": "30f2e20e80eda23b38ad35af631663425a16ca70edf6e6ccf3d86af462ceba70"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        6794,
+        6799
+      ],
+      "sha256": "3b5cd21038973cc1a32a3d49edd4f32edaa7e6830f8a71b0b95575153db87be6"
+    },
+    {
+      "index": 37,
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "prompt_bytes": [
+        6799,
+        6861
+      ],
+      "sha256": "b2a775122632e222300ec9a48152ebd4d8d0d001197edb881a5116d50666b7ab"
+    },
+    {
+      "index": 38,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        6861,
+        9317
+      ],
+      "sha256": "fb823d78cede79501f0f6a61d34ae319b23da52fed54f56e37ee968c0809945a"
+    },
+    {
+      "index": 39,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9317,
+        9324
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 40,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        9324,
+        11080
+      ],
+      "sha256": "4fe44dd460c626b15600304590760a1323c0b783cc1ce973db1fcf2f5bb2d489"
+    },
+    {
+      "index": 41,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11080,
+        11087
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 42,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        11087,
+        11129
+      ],
+      "sha256": "2bfe176b11172ca063256dbd8e193d66741a5ed49443ab872290ce00f2573ebc"
+    },
+    {
+      "index": 43,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11129,
+        11136
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 44,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        11136,
+        11172
+      ],
+      "sha256": "6f999c49209f8591b54cd85e80251e544b8edcd1310af83ebdbb798bd8ae270f"
+    },
+    {
+      "index": 45,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11172,
+        11179
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 46,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        11179,
+        11183
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Target package and import",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        1,
+        5
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "Target name and constructor parameters",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        65,
+        65
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "Six-bit maximal-period tap used by BOOM TAGE",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/LFSR.scala",
+      "lines": [
+        113,
+        113
+      ],
+      "sha256": "27656516e63183e0655957b681987a0fb79b2e81746b33159e47dbfd09b442a2"
+    },
+    {
+      "label": "Sixteen-bit maximal-period tap used by BOOM I-cache",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/LFSR.scala",
+      "lines": [
+        123,
+        123
+      ],
+      "sha256": "27656516e63183e0655957b681987a0fb79b2e81746b33159e47dbfd09b442a2"
+    },
+    {
+      "label": "BOOM instruction-cache replacement use",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/icache.scala",
+      "lines": [
+        178,
+        178
+      ],
+      "sha256": "c4cb2508c1fd7fc66a7f0fc4a826b9f5c15a79d4c13e22ad90b0b7a610bbcbb1"
+    },
+    {
+      "label": "BOOM TAGE table count",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/tage.scala",
+      "lines": [
+        186,
+        201
+      ],
+      "sha256": "7db9109f35d89b3faa9438a8936dcd68bcb84be751fb2258ca2603a35f0ae085"
+    },
+    {
+      "label": "BOOM TAGE allocation use",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/tage.scala",
+      "lines": [
+        285,
+        285
+      ],
+      "sha256": "7db9109f35d89b3faa9438a8936dcd68bcb84be751fb2258ca2603a35f0ae085"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        82,
+        82
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        99,
+        112
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/PRNG.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/PRNG.scala",
+      "lines": [
+        82,
+        98
+      ],
+      "sha256": "8c5e6d094f3f398cdbfe8e023592efdc04bad629d8c45f5f1cc69d9414fd93d7"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        7,
+        12
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        41,
+        54
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/LFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/LFSR.scala",
+      "lines": [
+        7,
+        69
+      ],
+      "sha256": "27656516e63183e0655957b681987a0fb79b2e81746b33159e47dbfd09b442a2"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/LFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/LFSR.scala",
+      "lines": [
+        78,
+        108
+      ],
+      "sha256": "27656516e63183e0655957b681987a0fb79b2e81746b33159e47dbfd09b442a2"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/PRNG.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/PRNG.scala",
+      "lines": [
+        8,
+        80
+      ],
+      "sha256": "8c5e6d094f3f398cdbfe8e023592efdc04bad629d8c45f5f1cc69d9414fd93d7"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

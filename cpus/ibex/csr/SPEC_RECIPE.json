@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for ibex_csr",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_csr.sv",
+      "lines": [
+        11,
+        24
+      ],
+      "language": "verilog",
+      "sha256": "6533fffc57e233b3961ebd94722a14a1a4320771ce4a76e69481bf2deb1d8514"
+    },
+    {
+      "label": "Fixed ShadowCSR value in ibex_core",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        197,
+        197
+      ],
+      "language": "verilog",
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Zero-reset parent instantiation for ibex_csr",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_cs_registers.sv",
+      "lines": [
+        1120,
+        1132
+      ],
+      "language": "verilog",
+      "sha256": "898d036f141bdf742c0c772a5493b4bccc9636ffd7c57d3cc37011d233954548"
+    },
+    {
+      "label": "Nonzero-reset parent instantiation for ibex_csr",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_cs_registers.sv",
+      "lines": [
+        1169,
+        1181
+      ],
+      "language": "verilog",
+      "sha256": "898d036f141bdf742c0c772a5493b4bccc9636ffd7c57d3cc37011d233954548"
+    },
+    {
+      "label": "Ibex clock and reset interface",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/02_user/integration.rst",
+      "lines": [
+        367,
+        376
+      ],
+      "sha256": "409c745d57cb20923a39295102716793e10771d4e64d04be9b4bafdaa2f6410d"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_core.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1431,
+        1431
+      ],
+      "language": "verilog",
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_core.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1436,
+        1436
+      ],
+      "language": "verilog",
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `ibex_csr`\n\nImplement the complete `ibex_csr` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ibex_csr` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "\n## Parent instantiation\n\n### rtl/ibex_cs_registers.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark between parent instantiations",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Related source code\n\n### rtl/ibex_core.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "    // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "text": "\n## Documentation\n\n### doc/02_user/integration.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Documentation",
+      "text": "```\n"
+    }
+  ]
+}

@@ -1,0 +1,1259 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomCommitTraceConfig",
+  "source_unit": "PTW",
+  "sources": [
+    {
+      "label": "Fixed PTE and L2 TLB configuration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        82,
+        84
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Fixed VM and hypervisor configuration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        91,
+        92
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Fixed PMP count",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        56,
+        56
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Fixed PMP granularity",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        109,
+        109
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Selected Large BOOM DCache construction",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        205,
+        207
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Fixed RV64 configuration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        218,
+        218
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "DCache separate uncached response default",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        35,
+        35
+      ],
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "label": "DCache clock-gating default",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        38,
+        38
+      ],
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "label": "Fixed Sv39 page-level configuration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/subsystem/Configs.scala",
+      "lines": [
+        17,
+        17
+      ],
+      "sha256": "21928f23777264f8106f8ebd0c96697d29bb90963d6766fe58fbff88592002d2"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PTW.scala",
+      "lines": [
+        4,
+        18
+      ],
+      "label": "Package and imports",
+      "sha256": "1a0ee9b797d36ffa0420311571de5f18d40289ad265a99814926c4075a77d93c"
+    },
+    {
+      "label": "Target header and public interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PTW.scala",
+      "lines": [
+        115,
+        123
+      ],
+      "sha256": "1a0ee9b797d36ffa0420311571de5f18d40289ad265a99814926c4075a77d93c"
+    },
+    {
+      "label": "Fixed three PTW requestors",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        159,
+        162
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "BOOM PTW instantiation and connections",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        229,
+        233
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "PTW request response PTE and datapath contracts",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PTW.scala",
+      "lines": [
+        20,
+        114
+      ],
+      "sha256": "1a0ee9b797d36ffa0420311571de5f18d40289ad265a99814926c4075a77d93c"
+    },
+    {
+      "label": "Inherited virtual-memory enable",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        47,
+        47
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Inherited hypervisor enable",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        50,
+        50
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Inherited XLEN accessor",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        57,
+        57
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Inherited virtual-memory geometry",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        60,
+        75
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Inherited maximum physical-address width",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        77,
+        80
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Physical address width contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        157,
+        182
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "SFENCE request interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        24,
+        31
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "Page-table root and privilege encodings",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/CSR.scala",
+      "lines": [
+        126,
+        150
+      ],
+      "sha256": "f71e99f82864ba22edc6bdf09f5b44725c3821c758a19c2e64288c11063b2b2a"
+    },
+    {
+      "label": "HellaCache request response and handshake interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        104,
+        187
+      ],
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "label": "Page-table memory read command",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Consts.scala",
+      "lines": [
+        54,
+        54
+      ],
+      "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PMP.scala",
+      "lines": [
+        117,
+        119
+      ],
+      "label": "PMP page homogeneity",
+      "sha256": "de76f13fc5bbd0c10609e616e3d1bd2631cc78cd6ec5ed355736cf40d3c105ce"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PMP.scala",
+      "lines": [
+        136,
+        142
+      ],
+      "label": "PMP page-homogeneity checker",
+      "sha256": "de76f13fc5bbd0c10609e616e3d1bd2631cc78cd6ec5ed355736cf40d3c105ce"
+    },
+    {
+      "label": "PMA page-homogeneity result contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLBPermissions.scala",
+      "lines": [
+        10,
+        17
+      ],
+      "sha256": "ad8726dbac10d4c94ce595fe84103f4997b267fdff7247189fb0d6e8ea5ffb0a"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLBPermissions.scala",
+      "lines": [
+        19,
+        20
+      ],
+      "label": "TLBPageLookup object",
+      "sha256": "ad8726dbac10d4c94ce595fe84103f4997b267fdff7247189fb0d6e8ea5ffb0a"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLBPermissions.scala",
+      "lines": [
+        51,
+        52
+      ],
+      "label": "PMA page lookup and unmapped-memory rule",
+      "sha256": "ad8726dbac10d4c94ce595fe84103f4997b267fdff7247189fb0d6e8ea5ffb0a"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLBPermissions.scala",
+      "lines": [
+        108,
+        109
+      ],
+      "label": "PMA page-size homogeneity",
+      "sha256": "ad8726dbac10d4c94ce595fe84103f4997b267fdff7247189fb0d6e8ea5ffb0a"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLBPermissions.scala",
+      "lines": [
+        112,
+        112
+      ],
+      "label": "TLBPageLookup object end",
+      "sha256": "ad8726dbac10d4c94ce595fe84103f4997b267fdff7247189fb0d6e8ea5ffb0a"
+    },
+    {
+      "label": "DescribedSRAM return type",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/util/DescribedSRAM.scala",
+      "lines": [
+        11,
+        17
+      ],
+      "sha256": "bab9cb7d7b9ed464e199cccbd8a9a981ca4a1af79b10c74258f714d73f6674eb"
+    },
+    {
+      "label": "Ready-valid transfer event",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        48,
+        50
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "Decoupled interface contract",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        93,
+        100
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "Valid interface contract",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Valid.scala",
+      "lines": [
+        10,
+        44
+      ],
+      "sha256": "f8c988c17362b59c2c027cf5ec311b57fc52412b813abbe2c739506f66f95f49"
+    },
+    {
+      "label": "TLB PTW request fields",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        444,
+        448
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "Hypervisor translation enable conditions",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        217,
+        219
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "TLB use of PTW response fields",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        258,
+        283
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "TLB use of PTW level and homogeneity",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        285,
+        290
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "BOOM LSU TLB PTW request fields",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/tlb.scala",
+      "lines": [
+        307,
+        310
+      ],
+      "sha256": "ca63599e53a2539d769a84249de0ecdd4fd2a877ac7fce83161cab601f539f55"
+    },
+    {
+      "label": "BOOM LSU TLB use of PTW response fields",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/tlb.scala",
+      "lines": [
+        176,
+        194
+      ],
+      "sha256": "ca63599e53a2539d769a84249de0ecdd4fd2a877ac7fce83161cab601f539f55"
+    },
+    {
+      "label": "BOOM LSU TLB use of PTW level and homogeneity",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/tlb.scala",
+      "lines": [
+        196,
+        200
+      ],
+      "sha256": "ca63599e53a2539d769a84249de0ecdd4fd2a877ac7fce83161cab601f539f55"
+    },
+    {
+      "label": "BOOM L2 TLB miss event",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        261,
+        268
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "External PTW object-model consumer",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PTW.scala",
+      "lines": [
+        593,
+        609
+      ],
+      "sha256": "1a0ee9b797d36ffa0420311571de5f18d40289ad265a99814926c4075a77d93c"
+    },
+    {
+      "label": "Sv39 virtual-address partition and page walk depth",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1684,
+        1690
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Sv39 PTE size and root alignment",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1715,
+        1718
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Sv39 page sizes levels and PTE width",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1744,
+        1748
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "PTE validity pointer leaf and writable encoding",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1312,
+        1320
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Non-leaf PTE reserved-bit rule",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1510,
+        1512
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Contemporaneous accessed and dirty bit definition",
+      "repo": "github.com/riscv/riscv-isa-manual",
+      "commit": "f8614dc09c6ce1667cc70be7bdeda6cd7382e5f1",
+      "path": "src/supervisor.tex",
+      "lines": [
+        1590,
+        1593
+      ],
+      "sha256": "41813c523417dbfdd1bcd93bd0acb08d94eab0057f18b0f79d4864e1d53e31b3"
+    },
+    {
+      "label": "Virtual-address translation root and PTE-read steps",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1529,
+        1537
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Virtual-address translation traversal and superpage-alignment steps",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1540,
+        1543
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Translated physical address construction",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1563,
+        1570
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Physical memory access exception distinction",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "069858a20ce101310c49900af0da211838931e92",
+      "path": "COMMIT_MESSAGE",
+      "lines": [
+        1,
+        1
+      ],
+      "source_type": "git_commit_message",
+      "sha256": "448bf4947ad39f96528ecf94266f11b7594e19e4889294afdaf79a1fbab399f2"
+    },
+    {
+      "label": "PMP access rule for page-table reads",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        3018,
+        3028
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Address-translation cache contract",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1581,
+        1590
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "SFENCE purpose",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1035,
+        1046
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "SFENCE invalidation scopes",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1073,
+        1105
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "PTW cache performance events",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "d056461b387f410d0a785f66373153de47d642b2",
+      "path": "COMMIT_MESSAGE",
+      "lines": [
+        1,
+        1
+      ],
+      "source_type": "git_commit_message",
+      "sha256": "51195f06c26fdc0955795eb72b8ea7af2aa40c99a18b5a55e0851c197fd45f7a"
+    },
+    {
+      "label": "L2 TLB event priority over PTE cache events",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "1db05c5c0bd145584d601f49ec4c70a382fcb931",
+      "path": "COMMIT_MESSAGE",
+      "lines": [
+        1,
+        1
+      ],
+      "source_type": "git_commit_message",
+      "sha256": "ed2cdda02c336e3d1b17e855ea4e0052d92e0c8494e347ff56c68af2a6f60da2"
+    },
+    {
+      "label": "Non-leaf-only PTE cache miss event",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "630600d860a0ff0ec1e290931d301cc6f2b96fe0",
+      "path": "COMMIT_MESSAGE",
+      "lines": [
+        1,
+        1
+      ],
+      "source_type": "git_commit_message",
+      "sha256": "14914bc664985c65830234da72d613b143b17cf7f68a0a93ebbfb22b9069935c"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "# Implement `PTW`\n\nImplement the complete `PTW` module. Preserve the annotated class declaration and public interface shown below. Return only the complete `class PTW` definition in a single Scala code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### `src/main/scala/common/parameters.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/common/config-mixins.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/rocket/HellaCache.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/subsystem/Configs.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Parent instantiation\n\n### `src/main/scala/common/tile.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 61
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### `src/main/scala/rocket/PTW.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/tile/BaseTile.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/rocket/TLB.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/rocket/CSR.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/rocket/HellaCache.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/rocket/Consts.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/rocket/PMP.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/rocket/TLBPermissions.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 29
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 30
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/util/DescribedSRAM.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 31
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/chisel3/util/Decoupled.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 32
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 33
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/chisel3/util/Valid.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 34
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Related source code\n\n### `src/main/scala/rocket/TLB.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 35
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 36
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 37
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 38
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/lsu/tlb.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 39
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 40
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 41
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/exu/core.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 42
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/rocket/PTW.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 43
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Documentation\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 53
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 58
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 59
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 60
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/supervisor.adoc`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 56
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 57
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 47
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 48
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 50
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 51
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 52
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 55
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 44
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 45
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 46
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/supervisor.tex`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 49
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/machine.adoc`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 54
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n"
+    }
+  ]
+}

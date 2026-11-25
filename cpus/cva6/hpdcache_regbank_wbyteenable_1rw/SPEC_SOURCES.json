@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/hpdcache_regbank_wbyteenable_1rw/SPEC_RECIPE.json",
+  "recipe_sha256": "edee526d5e2f09e379e4f568ba96f59146c965081805bbebe6e8be4dd5f3034d",
+  "prompt_sha256": "5285b49618c340c2f8ff7e6dda13cc92b00a4a9bd090ccaebec9484f0c668641",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        397
+      ],
+      "sha256": "7d0cfe9e054dd4564c80ad355c61ffa6d0af114d152596a27603f60784843e6d"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        397,
+        627
+      ],
+      "sha256": "8155dea79415c4ede65e3f0361ddbca612f3c667c0fa0b8152bde6380bc82d46"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        627,
+        673
+      ],
+      "sha256": "4ab99e40d4b7d80010b4a0c624af22bb0b3417c6086257be00e771774d4e247a"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        673,
+        1187
+      ],
+      "sha256": "8b62f6ecd118e3f101f5851b7d175b95bcd053e1f64c523de5b3cc1068f3ea04"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        1187,
+        1267
+      ],
+      "sha256": "6f9f50ff82f0430021f1a6f650afe15572ab609ab3e42dc654b97c38510ed19f"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1267,
+        3399
+      ],
+      "sha256": "dc6c281a1753771c813f641c9d315debaf7cf42a849f6bf6ae90e9171a81ddde"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        3399,
+        3467
+      ],
+      "sha256": "37ffb6fe932fb954a38a912381a576d6148467f2668993c01b6a7ce24adbf7a3"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        3467,
+        3945
+      ],
+      "sha256": "f90016d0f2f8085875e09617508075568e8642b3d1d748eb42aa71dbd51001ae"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        3945,
+        3950
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "MSHR byte-enable and register-bank configuration fields",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        406,
+        411
+      ],
+      "language": "verilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Module declaration for hpdcache_regbank_wbyteenable_1rw",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_regbank_wbyteenable_1rw.sv",
+      "lines": [
+        26,
+        41
+      ],
+      "language": "verilog",
+      "sha256": "475ece0e8ac1a7c4dd633a67de52d0ef315ea66f2679ab08f1f9c6a844202801"
+    },
+    {
+      "label": "MSHR byte-enable construction and register-bank or SRAM connection",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_mshr.sv",
+      "lines": [
+        309,
+        356
+      ],
+      "language": "verilog",
+      "sha256": "fb01c23a96bc2d913e6e12a2b662265796363d6c8bd95b3e64f7f6171f936f68"
+    },
+    {
+      "label": "Synchronous single-port RAM and read-latency contract",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        416,
+        426
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    }
+  ]
+}

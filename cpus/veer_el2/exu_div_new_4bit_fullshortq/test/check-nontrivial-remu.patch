@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: Apache-2.0
+--- a/riscv_arithmetic_basic_test_0.S
++++ b/riscv_arithmetic_basic_test_0.S
+@@ -3423,0 +3424,4 @@
++                  li          t0, 0x80000000
++                  li          t1, 3
++                  remu        t2, t0, t1
++                  add         zero, t2, zero

@@ -1,0 +1,6 @@
+requirement	tests	basis
+Enqueue PCs and return them at the consuming stage	FTQPublicContractTest;rv64ui-p-jal;rv64ui-p-jalr	The port test checks the synchronous current PC of an accepted entry and its successor PC when next_val is set.
+Restore CFI identity and return-address history after redirect	FTQPublicContractTest;rv64ui-p-beq;rv64ui-p-bne	A predicted later call redirected to an earlier conditional branch must not retain call identity or advance the successor RAS index.
+Restore the saved return-address stack entry on redirect	FTQPublicContractTest	The redirected packet has a nonzero saved return address. The port test observes the repair write enable, index and address before the resumed request can read the RAS.
+Emit retired packet predictor updates	FTQPublicContractTest	The initialized retired packet must produce one meaningful update preserving CFI, target and history.
+Preserve architectural control flow	rv64ui-p-jal;rv64ui-p-jalr;rv64ui-p-beq;rv64ui-p-bne	The architectural trace comparison and the finite public-port test check different outputs.

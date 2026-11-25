@@ -1,0 +1,6 @@
+requirement	tests	rationale
+Reset the readiness bitmap and track independent register updates	RenameBusyTableStateTest.scala	Check both fixed instances at their public ports using valid allocations and wakeups for distinct registers, followed by a reset with an outstanding register.
+Mark newly allocated physical registers busy	rv64ui-p-add,rv64ui-p-sub,rv64ui-p-xor	Exercise dependent integer instructions after destination allocation.
+Clear physical registers on producer wakeup notifications	rv64um-p-mul,rv64um-p-div,rv64uf-p-fadd,rv64uf-p-fmadd	Exercise producers with different execution latencies and their consumers.
+Report integer source readiness	rv64ui-p-lw,rv64ui-p-sw,rv64ui-p-ld,rv64ui-p-sd	Exercise address and store-data dependencies.
+Report readiness across control flow	rv64ui-p-beq,rv64ui-p-jalr	Exercise source dependencies used by conditional and indirect control flow.

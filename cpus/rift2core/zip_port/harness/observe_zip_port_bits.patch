@@ -1,0 +1,24 @@
+diff --git a/src/main/scala/base/MultiPortFifo.scala b/src/main/scala/base/MultiPortFifo.scala
+--- a/src/main/scala/base/MultiPortFifo.scala
++++ b/src/main/scala/base/MultiPortFifo.scala
+@@ -149,1 +149,20 @@
++      val cpuEvalZipCount = PopCount(zipPort.io.enq.map(_.valid))
++      for ( i <- 0 until in+out ) {
++        when ( zipPort.io.deq(i).valid =/= (i.U < cpuEvalZipCount) ) {
++          printf("CPU_EVAL_OBSERVATION_MISMATCH ZipPort ordered valid count\n")
++        }
++      }
++      for ( j <- 0 until in+out ) {
++        val cpuEvalZipRank = if (j == 0) 0.U else PopCount(zipPort.io.enq.take(j).map(_.valid))
++        when ( zipPort.io.enq(j).valid ) {
++          when ( !zipPort.io.deq(cpuEvalZipRank).valid ||
++            zipPort.io.deq(cpuEvalZipRank).bits.asUInt =/= zipPort.io.enq(j).bits.asUInt ) {
++            printf("CPU_EVAL_OBSERVATION_MISMATCH ZipPort ordered valid data\n")
++          }
++          when ( zipPort.io.enq(j).ready =/= zipPort.io.deq(cpuEvalZipRank).ready ) {
++            printf("CPU_EVAL_OBSERVATION_MISMATCH ZipPort valid input ready\n")
++          }
++        }
++      }
++
+       fifo.io.flush := io.flush

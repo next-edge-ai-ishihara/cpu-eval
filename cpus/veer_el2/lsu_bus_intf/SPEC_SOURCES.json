@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "78907002182f0b6298c66ee017e8a25b191b0cd827725aa7940357c557a56c6c",
+  "prompt_sha256": "45f72b372d2cc74e4eac9054256531afc2e28f94405722ee08e16569039a6e7b",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        311
+      ],
+      "sha256": "64222a868718ee8af004bd47cf4e8faf020fa41de0551c3f5e3ecf5abcce0d3d"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        311,
+        9458
+      ],
+      "sha256": "441dbd4ba48d263c9262c48da7b0d207694ec2ccf803b32eec69688d891bc028"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        9458,
+        9499
+      ],
+      "sha256": "2634324360114f430bc87e7e1610214b93f9ad44b83b2c265a7e6918d5653b80"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        9499,
+        9894
+      ],
+      "sha256": "e0d057d5059dfd0cdaca6652e7db093a4749ae83c8b1e9919b91775c2549923b"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        9894,
+        9969
+      ],
+      "sha256": "eb76575b23fe2618c9530e5f983a63182195bbaf3deaec95ac7c49ff1ced08ba"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        9969,
+        10673
+      ],
+      "sha256": "113687f2450ef895de73bd44b2309d4f5c018bc33cad3b9822a8496bdfe2b297"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        10673,
+        10716
+      ],
+      "sha256": "8c25b27beee4b6f94d508d0da7426a4dad671f05c6a7541f83a2f0fb9c235927"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        10716,
+        10918
+      ],
+      "sha256": "cd0262956b9a2488ae14713c0e71c8e6f58d70a595a225db9436e9af12817ad3"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        10918,
+        10972
+      ],
+      "sha256": "077c52267db3dbc2646934c209950ccbd08e43a8fddb9a06b327c38841839567"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        10972,
+        20473
+      ],
+      "sha256": "f8dcfb8df1cb6448d0af1a4c138d9833d88dd5b65732df3863e8ba94028a83c4"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        20473,
+        20477
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for el2_lsu_bus_intf",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_intf.sv",
+      "lines": [
+        25,
+        173
+      ],
+      "language": "verilog",
+      "sha256": "767aeb9febe8ce529c9aa3cf71750cb52fe0b540ff08fd2d0cd8d36d3f48ec24"
+    },
+    {
+      "label": "Parent instantiation for el2_lsu_bus_intf",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu.sv",
+      "lines": [
+        425,
+        434
+      ],
+      "sha256": "58690ecff8b23840f372b8b2594fa7e2c9a64b8ad1c51f379c36d618d60a343f"
+    },
+    {
+      "label": "Load/store packet type declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        176,
+        193
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "Dependency module declaration for el2_lsu_bus_intf",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        19,
+        26
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Dependency module declaration for el2_lsu_bus_intf",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_buffer.sv",
+      "lines": [
+        26,
+        178
+      ],
+      "language": "verilog",
+      "sha256": "fc1a654fa9fb37543586db710a54f2e3027b9abf35f58d0c1f23c5fdb33526b0"
+    }
+  ]
+}

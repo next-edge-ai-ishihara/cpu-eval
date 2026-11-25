@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "a567fe4feacde37ffc3ef2967f17510baedc1d9f49949b445a9ac908dd1d5fcb",
+  "prompt_sha256": "deed617b02eaccb738fcdd35ae1e8bb948c32962af45e71024a03cda12d2cfc1",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        290
+      ],
+      "sha256": "c424ae946fc1ff1e5126d5b193654fdf40e95002d55ca16f0053bc0e6b39b856"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        290,
+        388
+      ],
+      "sha256": "82f1bdddc73e72ae1f3ecdf537c1dffb9b3ae411952a1259ad8443f0b2de317b"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        388,
+        467
+      ],
+      "sha256": "3febb4bfe9ee60d7ffeb9c42326bd80ce7e1b4073be8f0ec4c796ed38255505e"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        467,
+        652
+      ],
+      "sha256": "23022f015c75be61e54fc973563a0f0e87102676ead1e3e24b28895ef070edff"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        652,
+        703
+      ],
+      "sha256": "df97e2a4221a8143e317a84337d07f19018e13c3f03e63b9874f164f7048b18e"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        703,
+        875
+      ],
+      "sha256": "0de6d4c2abca0578f58b0d994f254b6684d2557b71aa486e05d58d1c33672935"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        875,
+        925
+      ],
+      "sha256": "137f093e4a3ecf7a165ce15d1893179bb39d56213240e86ed1c6dddb30707d3a"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        925,
+        1148
+      ],
+      "sha256": "36265372d177a103f58dbd5dd0b473baa1fdecd82ee4aa03807271b104dd1cc6"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1148,
+        1155
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1155,
+        1366
+      ],
+      "sha256": "a78c84978c275861158e25899f707f61905a66c895357f6c1d82714d77e9095b"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        1366,
+        1416
+      ],
+      "sha256": "0e291ac7438bcadfd295a72a89997082df22f353d2ab50e976fe738f200999ed"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1416,
+        1725
+      ],
+      "sha256": "32c4bfb6b869f12cf6f3148ea20a37783d2101e48c41d76dbcdd9fcc16dcf737"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        1725,
+        1729
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvbradder",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        496,
+        502
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "rvbradder instantiation in el2_dec_decode_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        1450,
+        1453
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "rvbradder instantiation in el2_exu_alu_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu_alu_ctl.sv",
+      "lines": [
+        518,
+        521
+      ],
+      "language": "verilog",
+      "sha256": "0f8e5cbbeb9c04757362ce655ec021db2a029d8b6e8550941893594383c5059d"
+    },
+    {
+      "label": "rvbradder predtgt_addr instantiation in el2_ifu_bp_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_bp_ctl.sv",
+      "lines": [
+        528,
+        531
+      ],
+      "language": "verilog",
+      "sha256": "9b7065201916511b3e1fb6d0b8415ce74b4caf3afbd913b39d005c4db0bdf611"
+    },
+    {
+      "label": "rvbradder rs_addr instantiation in el2_ifu_bp_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_bp_ctl.sv",
+      "lines": [
+        541,
+        544
+      ],
+      "language": "verilog",
+      "sha256": "9b7065201916511b3e1fb6d0b8415ce74b4caf3afbd913b39d005c4db0bdf611"
+    },
+    {
+      "label": "RV32I conditional branch target",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        558,
+        564
+      ],
+      "language": "asciidoc",
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    }
+  ]
+}

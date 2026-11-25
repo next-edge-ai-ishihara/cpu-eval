@@ -1,0 +1,42 @@
+diff --git a/testbench/tb_top.sv b/testbench/tb_top.sv
+index 629bc32..9af0c7f 100644
+--- a/testbench/tb_top.sv
++++ b/testbench/tb_top.sv
+@@ -1068,6 +1068,9 @@ module tb_top
+     `endif
+ 
+     logic ic_perr_r_d1;
++    // Fail if an injected ICache error is not detected within the window.
++    integer ic_error_window_cycles;
++    localparam integer IC_ERROR_WINDOW_MAX = 200;
+ 
+ `ifdef RV_LOCKSTEP_ENABLE
+ `define VEER rvtop_wrapper.rvtop.veer
+@@ -1085,6 +1088,7 @@ module tb_top
+         if (~rst_l_combined) begin
+             next_ic_error <= 0;
+             ic_perr_r_d1  <= 0;
++            ic_error_window_cycles <= 0;
+             `ifdef RV_ASSERT_OR_VERILATOR
+                 release `LOCKSTEP_CONST_DELAY_ASSERT_DISABLE;
+             `endif
+@@ -1095,6 +1099,7 @@ module tb_top
+                     force `LOCKSTEP_CONST_DELAY_ASSERT_DISABLE = '1;
+                 `endif
+                 next_ic_error <= 1;
++                ic_error_window_cycles <= 0;
+                 force rvtop_wrapper.rvtop.ic_rd_data = 142'h1;
+             end else if (next_ic_error && ic_perr_r_d1) begin
+                 next_ic_error <= 0;
+@@ -1102,6 +1107,11 @@ module tb_top
+                 `ifdef RV_ASSERT_OR_VERILATOR
+                     release `LOCKSTEP_CONST_DELAY_ASSERT_DISABLE;
+                 `endif
++            end else if (next_ic_error && ic_error_window_cycles == IC_ERROR_WINDOW_MAX) begin
++                $display("TEST_FAILED: injected ICache error was not detected within %0d cycles", IC_ERROR_WINDOW_MAX);
++                $finish;
++            end else if (next_ic_error) begin
++                ic_error_window_cycles <= ic_error_window_cycles + 1;
+             end
+         end
+     end

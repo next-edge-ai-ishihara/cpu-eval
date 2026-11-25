@@ -1,0 +1,4 @@
+requirement	tests	test_behavior
+Decode request addresses and route requests and responses between clients and managers	rv64mi-p-data_prefetch_cycles	The complete BOOM CPU loads, fetches and runs the program through the TLXbar-based tile and subsystem buses, and the program must report PASSED.
+Arbitrate multiple clients and route each response to its source	rv64mi-p-data_prefetch_cycles	The tile TLXbar merges concurrent instruction-cache and data-cache traffic while the program traverses cache lines.
+Use the constructor-supplied arbitration policy when clients request a shared output	rv64mi-p-data_prefetch_cycles	The complete CPU traverses cache lines while fetching instructions and records the committed x20 cycle count.

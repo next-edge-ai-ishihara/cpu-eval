@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "RV32I immediate arithmetic and logic",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "fa794b679cb50da3b68c49ffd5ae7559f4fa1422",
+      "path": "src/unpriv/rv32.adoc",
+      "lines": [
+        271,
+        286
+      ],
+      "sha256": "51f3f2ac48b8dd84f2ecc786c7a6daa6cc5d7678050a49d48f9247601766b333"
+    },
+    {
+      "label": "RV32I register arithmetic and logic",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "fa794b679cb50da3b68c49ffd5ae7559f4fa1422",
+      "path": "src/unpriv/rv32.adoc",
+      "lines": [
+        336,
+        351
+      ],
+      "sha256": "51f3f2ac48b8dd84f2ecc786c7a6daa6cc5d7678050a49d48f9247601766b333"
+    },
+    {
+      "label": "RV64I word-result convention",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "fa794b679cb50da3b68c49ffd5ae7559f4fa1422",
+      "path": "src/unpriv/rv64.adoc",
+      "lines": [
+        16,
+        21
+      ],
+      "sha256": "adbd1a414e0a9ed8e6140f5ec4866d44f6d959e8be032166c30d225af224ec17"
+    },
+    {
+      "label": "RV64I ADDIW",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "fa794b679cb50da3b68c49ffd5ae7559f4fa1422",
+      "path": "src/unpriv/rv64.adoc",
+      "lines": [
+        45,
+        50
+      ],
+      "sha256": "adbd1a414e0a9ed8e6140f5ec4866d44f6d959e8be032166c30d225af224ec17"
+    },
+    {
+      "label": "RV64I immediate shifts",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "fa794b679cb50da3b68c49ffd5ae7559f4fa1422",
+      "path": "src/unpriv/rv64.adoc",
+      "lines": [
+        56,
+        64
+      ],
+      "sha256": "adbd1a414e0a9ed8e6140f5ec4866d44f6d959e8be032166c30d225af224ec17"
+    },
+    {
+      "label": "RV64I word immediate shifts",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "fa794b679cb50da3b68c49ffd5ae7559f4fa1422",
+      "path": "src/unpriv/rv64.adoc",
+      "lines": [
+        69,
+        73
+      ],
+      "sha256": "adbd1a414e0a9ed8e6140f5ec4866d44f6d959e8be032166c30d225af224ec17"
+    },
+    {
+      "label": "RV64I ADDW, SUBW, and shifts",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "fa794b679cb50da3b68c49ffd5ae7559f4fa1422",
+      "path": "src/unpriv/rv64.adoc",
+      "lines": [
+        112,
+        127
+      ],
+      "sha256": "adbd1a414e0a9ed8e6140f5ec4866d44f6d959e8be032166c30d225af224ec17"
+    },
+    {
+      "label": "Alu class and ports",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/Alu.scala",
+      "lines": [
+        30,
+        39
+      ],
+      "sha256": "f387138ba6af75a3f7b7e4cbc2d29a4f2cb26e8f9fcb57de66420c25ee4f2dbf",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Alu request bundle",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "lines": [
+        1173,
+        1195
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Operand and destination bundles",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "lines": [
+        1049,
+        1058
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Write-back bundle",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "lines": [
+        1370,
+        1372
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Execute ports",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/Execute.scala",
+      "lines": [
+        38,
+        39
+      ],
+      "sha256": "4bb7e5635d6983792d9c171561f8bb178194f05e5295ced9ba6cb44506c37c3e",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Alu instantiation",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/Execute.scala",
+      "lines": [
+        100,
+        100
+      ],
+      "sha256": "4bb7e5635d6983792d9c171561f8bb178194f05e5295ced9ba6cb44506c37c3e",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Alu connections",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/Execute.scala",
+      "lines": [
+        190,
+        194
+      ],
+      "sha256": "4bb7e5635d6983792d9c171561f8bb178194f05e5295ced9ba6cb44506c37c3e",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Instruction-to-operation mapping",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "lines": [
+        65,
+        78
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Alu request construction",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/Issue.scala",
+      "lines": [
+        624,
+        689
+      ],
+      "sha256": "1524204765bc98dc4c7f089fa2f939a0983ebd92276e9417a91c337aeef02ede"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task boundary",
+      "text": "# Implement `Alu`\n\nImplement the complete `Alu` class. Preserve the class name and interface shown below.\n\nReturn only the complete `class Alu` definition in a single Scala code block, with no text outside the block.\n\n## Class declaration\n\n### src/main/scala/rift2Core/backend/Alu.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n## Parent instantiation\n\n### src/main/scala/rift2Core/backend/Execute.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n## Dependency declarations\n\n### src/main/scala/rift2Core/define/riscv_isa.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n## Related source code\n\n### src/main/scala/rift2Core/define/riscv_isa.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n### src/main/scala/rift2Core/backend/Issue.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n## Documentation\n\n### src/unpriv/rv32.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n### src/unpriv/rv64.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n"
+    }
+  ]
+}

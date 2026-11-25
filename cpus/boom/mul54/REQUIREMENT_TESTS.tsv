@@ -1,0 +1,4 @@
+requirement	test	test_behavior
+double-precision significand multiply-add datapath used by division and square root	rv64ud-p-fdiv	Three double-precision division cases and five square-root cases check results and exception flags through the CPU; operand-latch combinations and every pipeline schedule are not directly enumerated.
+three-cycle multiply-add and independent factor retention	Mul54TimingTest	After idle, supply both factors. In consecutive requests update both factors, A alone, B alone or neither and compare the 105-bit result three cycles later using the addend from the second subsequent cycle.
+zero product still includes the stage-aligned addend	Mul54TimingTest	Set a single factor to zero in each of two consecutive requests and compare both results against their own later nonzero addends.

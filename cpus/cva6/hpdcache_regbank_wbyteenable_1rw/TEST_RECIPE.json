@@ -1,0 +1,53 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "harness/evaluate_ports.py",
+    "harness/regbank_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_regbank_wbyteenable_1rw",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_regbank_wbyteenable_1rw.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "475ece0e8ac1a7c4dd633a67de52d0ef315ea66f2679ab08f1f9c6a844202801",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "a2475034ed9b81fb369d0288315d68b9b79d36771bb84a29e21045277a6243e0",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_regbank.yaml",
+  "test_list_sha256": "9bd5aa0892ddc94cf0b42615ef89a2613217bbc6800b4269d9f262ba5d46cf7d",
+  "directed_test_source": "harness/hpdcache_regbank_mshr_word.S",
+  "directed_test_source_sha256": "6063e8d2865f48aacbdaa78c4760f94fa1337e031267cb75aa3ec7034ade0160",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_regbank_wbyteenable_1rw.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision and copy the recorded directed test source as performed by the shared evaluator"
+  },
+  "directed_test_scope": "The directed source accesses offsets 0, 64, 128, and 0, all word zero in separate 16-byte cache lines; nonzero word selection is left to the standard suite.",
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "6a7a082e07b67899988eebfecc057abe5a11507376e90359984a937c3beea660",
+    "test": "harness/regbank_ports_tb.sv",
+    "test_sha256": "f0cc501bda2a0319a1b4a8de0e5e8c56fce67c59907c46b9deba57942b4f8400",
+    "geometry": {
+      "ADDR_SIZE": 1,
+      "DATA_SIZE": 80,
+      "DEPTH": 1
+    },
+    "checks": [
+      "full mask",
+      "first way",
+      "second way",
+      "nonadjacent bytes",
+      "empty mask"
+    ],
+    "observed_phase": "a selected read after each write"
+  }
+}

@@ -1,0 +1,14 @@
+diff --git a/build.sbt b/build.sbt
+index 9ce086a..ca556d7 100644
+--- a/build.sbt
++++ b/build.sbt
+@@ -13,7 +13,7 @@ resolvers ++= Seq(
+   Resolver.sonatypeRepo("releases")
+ )
+ 
+-addCompilerPlugin("edu.berkeley.cs" % "chisel3-plugin" % "3.5.0-RC2" cross CrossVersion.full)
+-libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.5.0-RC2"
++addCompilerPlugin("edu.berkeley.cs" % "chisel3-plugin" % "3.5-SNAPSHOT" cross CrossVersion.full)
++libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.5-SNAPSHOT"
+ libraryDependencies ++= Seq("org.scalatest" %% "scalatest" % "3.2.0" % "test")
+ Test / testForkedParallel := true

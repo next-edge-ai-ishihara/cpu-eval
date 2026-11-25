@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "environments": [
+    {
+      "id": "rift2core",
+      "definition": "tools/environment/rift2core-eval.def",
+      "image": "rift2core-eval.sif",
+      "context": [
+        {"name": "golden-catalog"},
+        {"name": "shim-template"}
+      ],
+      "smoke_command": "verilator --version && firtool --version && java -version && test -r /opt/golden-catalog/passing-images/rv64uc-p-rvc && test -r /opt/golden-catalog/passing-images/rv64uc-p-rvc.verilog && test -r /opt/arbiter-shim-template/shim/src/Arbiter.scala.pristine && test -x /opt/arbiter-shim-template/mill"
+    },
+    {
+      "id": "cva6",
+      "definition": "tools/environment/cva6-eval.def",
+      "image": "cva6-eval.sif",
+      "context": [
+        {
+          "name": "cvxif-spike-patches",
+          "repository_files": [
+            "cpus/cva6/copro_alu/environment/build_spike.sh",
+            "cpus/cva6/copro_alu/environment/0001-model-example-compressed-cvxif.patch",
+            "cpus/cva6/copro_alu/environment/0002-model-example-r4-cvxif.patch"
+          ]
+        }
+      ],
+      "smoke_command": "verilator --version && spike --help 2>&1 | grep -q 'spike' && test -f /opt/toolchain/spike-cvxif-all-operations/lib/libcustomext.so && riscv64-unknown-elf-gcc --version"
+    },
+    {
+      "id": "vexriscv",
+      "definition": "tools/environment/vexriscv-eval.def",
+      "image": "vexriscv-eval.sif",
+      "context": [],
+      "smoke_command": "version=$(sbt --sbt-create --script-version) && test \"$(printf '%s\\n' \"$version\" | tail -n 1)\" = 1.9.9 && verilator --version && java -version"
+    },
+    {
+      "id": "veer_el2",
+      "definition": "tools/environment/veer-el2-eval.def",
+      "image": "veer-el2-eval.sif",
+      "context": [],
+      "smoke_command": "test \"$(verilator --version | awk '{print $2}')\" = 5.036 && spike --help 2>&1 | grep -q 'spike' && dtc --version"
+    },
+    {
+      "id": "boom",
+      "definition": "tools/environment/boom-eval.def",
+      "image": "boom-eval.sif",
+      "parent": "rift2core",
+      "context": [
+        {
+          "name": "boom-chipyard",
+          "exclude_names": [".git"],
+          "exclude_dangling_symlinks": true
+        },
+        {"name": "boom-chisel", "exclude_names": [".git"]},
+        {
+          "name": "boom-directed-tests",
+          "repository_files": [
+            "tools/environment/build_boom_test_assets.py",
+            "tools/environment/boom-directed-test-assets.json",
+            "cpus/boom/_shared/patches/0007-use-local-chisel-snapshot.patch",
+            "cpus/boom/_shared/patches/0008-use-local-chisel-in-hardfloat.patch",
+            "cpus/boom/_shared/patches/0009-use-local-chisel-in-rocket-chip.patch",
+            "cpus/boom/_shared/patches/0010-use-local-chisel-in-gemmini.patch",
+            "cpus/boom/fp_to_fp/patches/0001-exercise-floating-point-sign-injection.patch",
+            "cpus/boom/*/TESTS.txt",
+            "cpus/boom/_shared/tests/data_prefetch_cycles.S",
+            "cpus/boom/_shared/tests/loop_branch_cycles.S",
+            "cpus/boom/_shared/tests/pmp_access_faults.S",
+            "cpus/boom/_shared/tests/pmp_modes_priority.S",
+            "cpus/boom/_shared/tests/sfb_predicate_dependency.S",
+            "cpus/boom/basic_dispatcher/tests/dispatcher_routing.S",
+            "cpus/boom/bim_branch_predictor_bank/tests/bim_cycle_probe.S",
+            "cpus/boom/arbiter/tests/arbiter_collision.S",
+            "cpus/boom/alu/tests/sra_64bit_shift_amount.S",
+            "cpus/boom/alu/tests/srl_and_64bit_boundary.S",
+            "cpus/boom/amoalu/tests/amoadd_w_upper.S",
+            "cpus/boom/pipelined_multiplier/tests/mulw_negative_results.S",
+            "cpus/boom/boom_core/tests/core_writeback.S",
+            "cpus/boom/boom_duplicated_data_array/tests/data_array_roundtrip.S",
+            "cpus/boom/boom_frontend_module/tests/frontend_instruction_delivery.S",
+            "cpus/boom/boom_tile_module_imp/tests/hartid_observe.S",
+            "cpus/boom/boom_iomshr/test/link.ld",
+            "cpus/boom/boom_iomshr/test/uncached_msip.S",
+            "cpus/boom/boom_mshr/tests/parallel_misses.S",
+            "cpus/boom/boom_mshr/tests/dirty_eviction.S",
+            "cpus/boom/boom_non_blocking_d_cache_module/tests/cache_store_observe.S",
+            "cpus/boom/branch_decode/tests/branch_decode_calls.S",
+            "cpus/boom/branch_decode/tests/branch_decode_cycles.S",
+            "cpus/boom/branch_decode/tests/branch_decode_jalr_calls.S",
+            "cpus/boom/branch_decode/tests/branch_decode_x5_returns.S",
+            "cpus/boom/branch_killable_queue/tests/branch_killable_parallel_misses.S",
+            "cpus/boom/csr_file/tests/csr_file_breakpoint.S",
+            "cpus/boom/csr_file/tests/csr_file_fflags.S",
+            "cpus/boom/csr_file/tests/csr_file_state.S",
+            "cpus/boom/fp_to_int/tests/fp_to_int_rounding.S",
+            "cpus/boom/fetch_target_queue/tests/fetch_target_queue_cycles.S",
+            "cpus/boom/forwarding_age_logic/tests/youngest_store_forwarding.S",
+            "cpus/boom/lsu/tests/store_forwarding_pending.S",
+            "cpus/boom/mul_add_rec_fn_to_raw_pre_mul/tests/fmadd_signaling_addend.S",
+            "cpus/boom/int_xbar/tests/timer_pending.S",
+            "cpus/boom/issue_slot/tests/issue_slot_split_store.S",
+            "cpus/boom/max_period_fibonacci_lfsr/tests/cache_replacement_cycles.S",
+            "cpus/boom/null_local_branch_predictor_bank/tests/null_local_history_cycles.S",
+            "cpus/boom/rename_map_table/tests/map_prs1_x24.S",
+            "cpus/boom/rename_map_table/tests/map_prs2_x26.S",
+            "cpus/boom/fma_decoder/tests/fmul_negative_zero.S",
+            "cpus/boom/fp_to_fp/tests/fp_to_fp_rounding_and_nan.S",
+            "cpus/boom/int_to_fp/tests/int_to_fp_direct_rounding.S",
+            "cpus/boom/round_raw_fn_to_rec_fn/tests/rounding_mode_rup.S",
+            "cpus/boom/mul_add_rec_fn_pipe/tests/fmadd_single_rounding.S",
+            "cpus/boom/int_to_fp_unit/tests/integer_conversion_flags.S",
+            "cpus/boom/f_div_sqrt_unit/tests/f_div_sqrt_static_rounding.S"
+          ]
+        },
+        {"name": "boom-spike-source"}
+      ],
+      "smoke_command": "verilator --version && java -version && dtc --version && test -f /opt/boom-pristine/build.sbt && test -f /opt/boom-chisel-pristine/build.sbt && test -x /opt/boom-riscv-tools/bin/spike && (cd /opt/boom-tests && sha256sum -c SHA256SUMS.tests) && test -x /opt/boom-tests/rv64ui-p-add"
+    },
+    {
+      "id": "ibex",
+      "definition": "tools/environment/ibex-eval.def",
+      "image": "ibex-eval.sif",
+      "parent": "rift2core",
+      "context": [],
+      "smoke_command": "test \"$(fusesoc --version)\" = 2.4.7 && test \"$(verilator --version | awk '{print $2}')\" = 5.052 && python3 -c 'import packaging' && test -f /usr/include/libelf.h && test -f /usr/include/lz4.h"
+    }
+  ]
+}

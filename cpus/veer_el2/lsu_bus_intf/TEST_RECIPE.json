@@ -1,0 +1,48 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2195
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_lsu_bus_intf",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    },
+    {
+      "path": "test/read-data-coverage.patch",
+      "sha256": "537a6bb848b02fd3dad5235db71b8ff7b2eb98a03b74cc623a4b0264117e79c4",
+      "apply_in": "VeeR EL2 repository root after generating the fixed test",
+      "order": 3
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_before_patch_sha256": "a517527d47e564ec91a7212523785059b0d0541812fa19976983775a5d12201b",
+    "generated_source_after_patch_sha256": "b563dc4ba01e2e7ab8eda43cd9a80ed99a85ae9cfe90b6780755cabebce2d46a"
+  },
+  "run": "bash ../_shared/run_fixed_test.sh",
+  "comparison": "Spike and RTL GPR state updates compared in order, with exactly 2195 matched updates"
+}

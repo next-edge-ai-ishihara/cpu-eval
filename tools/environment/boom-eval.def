@@ -1,0 +1,112 @@
+Bootstrap: localimage
+From: rift2core-eval.sif
+
+%files
+    boom-chipyard /opt/boom-pristine
+    boom-chisel /opt/boom-chisel-pristine
+    boom-directed-tests /opt/boom-directed-tests
+    boom-spike-source /opt/boom-spike-source
+
+%post
+    set -eux
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get install -y --no-install-recommends device-tree-compiler
+    printf '%s\n' \
+        '[repositories]' \
+        'local' \
+        'maven-central-mirror: https://maven-central.storage-download.googleapis.com/maven2/' \
+        'maven-central: https://repo.maven.apache.org/maven2/' \
+        'sbt-plugin-releases: https://scala.jfrog.io/artifactory/sbt-plugin-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]' \
+        'sonatype-public: https://oss.sonatype.org/content/repositories/public/' \
+        > /opt/boom-sbt-repositories
+    mkdir -p /opt/boom-ivy-pristine
+    sbt_jar=/opt/boom-pristine/generators/rocket-chip/sbt-launch.jar
+    sbt_options="-Dsbt.coursier=false -Dsbt.ivy.home=/opt/boom-ivy-pristine -Dsbt.boot.directory=/opt/boom-ivy-pristine/sbt-boot -Dsbt.version=1.5.7 -Dsbt.override.build.repos=true -Dsbt.repository.config=/opt/boom-sbt-repositories"
+    cd /opt/boom-chisel-pristine
+    /usr/lib/jvm/java-17-openjdk-amd64/bin/java $sbt_options -jar "$sbt_jar" \
+        ';clean;set every version := "3.5-SNAPSHOT";publishLocal;++2.12.10;set plugin / version := "3.5-SNAPSHOT";plugin/publishLocal'
+    cd /opt/boom-pristine
+    sha256sum build.sbt generators/rocket-chip/build.sbt \
+        generators/rocket-chip/hardfloat/build.sbt generators/gemmini/build.sbt \
+        > /tmp/boom-dependency-inputs.sha256
+    /usr/lib/jvm/java-17-openjdk-amd64/bin/java $sbt_options -jar "$sbt_jar" \
+        'boom/compile'
+    dependency_patches=/opt/boom-directed-tests/cpus/boom/_shared/patches
+    git apply "$dependency_patches/0007-use-local-chisel-snapshot.patch"
+    git -C generators/rocket-chip/hardfloat apply "$dependency_patches/0008-use-local-chisel-in-hardfloat.patch"
+    git -C generators/rocket-chip apply "$dependency_patches/0009-use-local-chisel-in-rocket-chip.patch"
+    git -C generators/gemmini apply "$dependency_patches/0010-use-local-chisel-in-gemmini.patch"
+    /usr/lib/jvm/java-17-openjdk-amd64/bin/java $sbt_options -jar "$sbt_jar" \
+        'chipyard/update' \
+        'tapeout/update' \
+        'set boom / libraryDependencies += "edu.berkeley.cs" %% "chisel-iotesters" % "2.5.0"' \
+        'boom / Test / update'
+    discard_resolution_metadata() {
+        find /opt/boom-ivy-pristine/cache/edu.berkeley.cs -mindepth 1 -maxdepth 1 \
+            -type d -name 'chisel3*' -exec rm -rf '{}' +
+        find /opt/boom-pristine /opt/boom-chisel-pristine -type d \
+            \( -name update -o -name resolution-cache \) -path '*/target/*' \
+            -prune -exec rm -rf '{}' +
+    }
+    discard_resolution_metadata
+    cp -a /opt/boom-ivy-pristine /tmp/boom-ivy-validation
+    find /opt/boom-ivy-pristine/cache -type f -exec sha256sum '{}' + | LC_ALL=C sort > /tmp/boom-cache-before.sha256
+    printf '%s\n' \
+        '[repositories]' \
+        'local' \
+        'fixed-image-cache: file:///opt/boom-ivy-pristine/cache/, [organisation]/[module]/ivy-[revision].xml, [organisation]/[module]/[type]s/[artifact]-[revision](-[classifier]).[ext]' \
+        > /opt/boom-sbt-repositories
+    /usr/lib/jvm/java-17-openjdk-amd64/bin/java $sbt_options \
+        -Dsbt.ivy.home=/tmp/boom-ivy-validation \
+        -Dsbt.boot.directory=/tmp/boom-ivy-validation/sbt-boot -jar "$sbt_jar" \
+        'set every offline := false' \
+        'set boom / libraryDependencies += "edu.berkeley.cs" %% "chisel-iotesters" % "2.5.0"' \
+        'chipyard/update' \
+        'tapeout/update' \
+        'boom / Test / update'
+    find /opt/boom-ivy-pristine/cache -type f -exec sha256sum '{}' + | LC_ALL=C sort > /tmp/boom-cache-after.sha256
+    cmp /tmp/boom-cache-before.sha256 /tmp/boom-cache-after.sha256
+    rm -rf /tmp/boom-ivy-validation
+    rm /tmp/boom-cache-before.sha256 /tmp/boom-cache-after.sha256
+    git -C generators/gemmini apply -R "$dependency_patches/0010-use-local-chisel-in-gemmini.patch"
+    git -C generators/rocket-chip apply -R "$dependency_patches/0009-use-local-chisel-in-rocket-chip.patch"
+    git -C generators/rocket-chip/hardfloat apply -R "$dependency_patches/0008-use-local-chisel-in-hardfloat.patch"
+    git apply -R "$dependency_patches/0007-use-local-chisel-snapshot.patch"
+    sha256sum -c /tmp/boom-dependency-inputs.sha256
+    rm /tmp/boom-dependency-inputs.sha256
+    discard_resolution_metadata
+    rm -rf /opt/boom-chisel-pristine/target /opt/boom-chisel-pristine/project/target \
+        /opt/boom-pristine/target /opt/boom-pristine/project/target
+    mkdir -p /opt/boom-spike-source/build
+    cd /opt/boom-spike-source/build
+    ../configure --prefix=/opt/boom-riscv-tools --enable-commitlog
+    make -j4 CXXFLAGS='-O2 -include cstdint'
+    make install CXXFLAGS='-O2 -include cstdint'
+    cd /
+    rm -rf /opt/boom-spike-source
+    riscv_tests=/opt/boom-pristine/toolchains/riscv-tools/riscv-tests
+    git -C "$riscv_tests" apply \
+        /opt/boom-directed-tests/cpus/boom/fp_to_fp/patches/0001-exercise-floating-point-sign-injection.patch
+    mkdir -p /opt/boom-tests
+    python3 /opt/boom-directed-tests/tools/environment/build_boom_test_assets.py \
+        --manifest /opt/boom-directed-tests/tools/environment/boom-directed-test-assets.json \
+        --source-root /opt/boom-directed-tests \
+        --riscv-tests "$riscv_tests" \
+        --output /opt/boom-tests \
+        > /opt/boom-tests/SHA256SUMS.tests
+    chmod -R a+rX /opt/boom-pristine /opt/boom-chisel-pristine \
+        /opt/boom-ivy-pristine /opt/boom-riscv-tools /opt/boom-tests
+    rm -rf /opt/boom-directed-tests
+    rm -rf /var/lib/apt/lists/*
+
+%environment
+    export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    export PATH="$JAVA_HOME/bin:/opt/toolchain/verilator-install/bin:$PATH"
+    export JAVA_TOOL_OPTIONS="-Dsbt.boot.directory=/mnt/eval-root/ivy/sbt-boot -Dsbt.override.build.repos=true -Dsbt.repository.config=/opt/boom-sbt-repositories"
+
+%help
+    BOOM CPU-Eval build and simulation environment.
+    The image contains the fixed Chipyard and Chisel sources, Ivy artifacts,
+    RISC-V tools, and test programs. Copy the source and Ivy trees to writable
+    storage before evaluating generated HDL.

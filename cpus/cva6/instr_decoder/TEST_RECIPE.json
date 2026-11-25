@@ -1,0 +1,41 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../copro_alu/harness/evaluate.sh",
+    "../copro_alu/harness/compare_retired_instructions.py",
+    "../copro_alu/tests/0000-adapt-cvxif-add-nop-to-arch-test.patch",
+    "../copro_alu/tests/0001-expand-custom3-operations.patch",
+    "../copro_alu/tests/0002-add-r4-operations.patch",
+    "../harness/candidate_error.py",
+    "harness/evaluate_ports.sh",
+    "harness/instr_decoder_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "instr_decoder",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cvxif_example/instr_decoder.sv",
+  "source_sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "3100424f86bc6c27e3076d795de7546bbd3f1c684609f5845b0fbe8a1ad39600",
+  "test_list": "../copro_alu/harness/testlist_copro_alu.yaml",
+  "test_list_sha256": "5202801d822c3b9f2c2e810cfca52e407ec3f3cf0ad367b62e9aea6321bfc912",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/cvxif_example/instr_decoder.sv",
+    "test_sources": "reconstruct copro_alu_all_ops.S from the pinned developer cvxif_add_nop.S by applying the three ordered patches recorded by ../copro_alu/TEST_RECIPE.json"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.sh",
+    "evaluator_sha256": "4e8bf3943bd127b128091ca32613a9b5644d894bab0c31885fde5fb4029ba392",
+    "test": "harness/instr_decoder_ports_tb.sv",
+    "test_sha256": "5ba525b98f21ae4af95be8680975570e70305387916b12cfc52120f0d8d6ca48",
+    "configuration": "Fixed cv32a60x CV-X-IF packages and ten instruction table entries. Issue and register transactions are paired.",
+    "comparison": "For each instruction and each two-bit operand availability pattern, check that a required operand blocks acceptance, then supply it and check decode response, opcode, consumed operands, transaction metadata and the destination of writeback instructions. An unmatched valid instruction must complete with accept cleared. Outputs of idle or blocked transactions are not compared other than ready.",
+    "bounds": "At most 16 clocks to complete a request after all required operands become available. The test accepts any earlier completion.",
+    "environment": "Verilator --binary --timing --assert, C++ compiler and the pinned CVA6 Git objects.",
+    "result": "The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2). The existing all-operations CPU test runs after port-test PASS."
+  }
+}

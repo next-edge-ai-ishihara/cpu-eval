@@ -1,0 +1,39 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/mux_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_mux",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_mux.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "51434eb4ec5b01d176ddcad1eda3b50087b920b03c7438a7299ef9d2b965d2cc",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_mux.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Use the pinned CPU and architectural-test revisions. Run the port comparison and then replace the target module in the unmodified CVA6 checkout."
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "cf58077ca6dfa91e17ccf99e51b0c3a236c3b9a069b4762cd4725ea0c2bb4c2e",
+    "test": "harness/mux_ports_tb.sv",
+    "test_sha256": "f7b33f92b7182f658bdfbf44de00d51a7a861643b721c17b977decf5f5b6d313",
+    "configuration": "1,224 comparisons in the 20 (NINPUT, DATA_WIDTH, ONE_HOT_SEL) instances of cv32a60x: binary (2,1), (2,32), (2,64) and one-hot (1,128), (2,24), (2,32), (2,64), (2,86), (3,73), (3,86), (4,1), (4,34), (4,89), (4,93), (5,1), (5,5), (5,24), (5,89), (8,3), (8,36). One-bit cases exhaust all input words and selections; wider cases use 16 words per selection that set bits across the full width.",
+    "environment": "Linux with a readable /proc table for its own processes, Python 3, Verilator with --binary --timing --assert, C++ and make. VERILATOR may name its executable.",
+    "result": "PASS requires 1,224 observations, zero mismatches and normal completion before the stock 38-program CPU regression. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2)."
+  }
+}

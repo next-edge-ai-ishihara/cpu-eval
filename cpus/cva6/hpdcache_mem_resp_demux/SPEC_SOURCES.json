@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "8885d16f0df293957b96d98b7e5e04276d807a981f18f03f0a390c125533b405",
+  "prompt_sha256": "1bc7e1a1045bac9eb9908d18e3033fd09b650864082eb213ec2def09ba8a48c9",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    },
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        338
+      ],
+      "sha256": "e0143c01b17037cf7c20a0ee2c3f16627683ff3525f9e58dd0ac31e5805938d0"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        338,
+        1213
+      ],
+      "sha256": "5bdb4db09194fb6d55104aabf93ce7bcdcc27cb72fe1989a0c50487b22011460"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        1213,
+        1328
+      ],
+      "sha256": "2bcb10e2986786ff2f84144bd80527e849f1e5dc6ae5d9c1c1638b9cb93e28da"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1328,
+        2781
+      ],
+      "sha256": "0591f1bc7d470285e27ba3d2c27cd8084c1254c5bbbbcc3190f8915e83bcbcf0"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        2781,
+        2872
+      ],
+      "sha256": "9bacca3609c34f35a227d2adfb3069e846999c3a56d83b8d35118bcb61fd1f66"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        2872,
+        3750
+      ],
+      "sha256": "004d1826e0aa56b7b2f7f0193ebeb478c0c353b227f57d2e15a857f04883e9da"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        3750,
+        3759
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        3759,
+        4000
+      ],
+      "sha256": "1c42a525a6d10169eb21007dc28cd1a7715f7aabdc9827f2b747636ec8584ea3"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        4000,
+        4061
+      ],
+      "sha256": "7df3a1afb3d9d807dd107e7e77ae6205787960f1cd12a410cae7ce1c846d673d"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        4061,
+        4986
+      ],
+      "sha256": "76bb1be0ca3afe59f7dcf7c5789d9ce44828aa1b2cdfd6545822859ec677e99c"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        4986,
+        4995
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        4995,
+        5365
+      ],
+      "sha256": "001370c401a89da1e72f3091a6e0594012dee6e84a9b98db853e12c54fe75614"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        5365,
+        5430
+      ],
+      "sha256": "dca9bb1cc5851dacc6fefcc9342bb8e9542813e3998808db371032f3261ebeb7"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        5430,
+        6887
+      ],
+      "sha256": "3458baeacb541b30841fb480c5e43dbc31fe28a983bc1c01f8fe927a85e4b5d4"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        6887,
+        6892
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_mem_resp_demux",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_resp_demux.sv",
+      "lines": [
+        20,
+        55
+      ],
+      "language": "verilog",
+      "sha256": "df921af34241cea3884ec81f05e1bc2db470c98f5a72b686eba312e883d0b4ee"
+    },
+    {
+      "label": "Response routing table, demultiplexer connection, and consumers",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv",
+      "lines": [
+        290,
+        334
+      ],
+      "language": "verilog",
+      "sha256": "1b6b1b7ebd594cd5e5d49405adb490f5e22178231c421f918661a980cf790b9b"
+    },
+    {
+      "label": "Binary response demultiplexer declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_demux.sv",
+      "lines": [
+        20,
+        55
+      ],
+      "language": "verilog",
+      "sha256": "c0faf549360c31318832fc98abb41c3654d8aba2360aa7e98b60b61a24d1eb6d"
+    },
+    {
+      "label": "Binary response demultiplexer behavior",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_demux.sv",
+      "lines": [
+        64,
+        71
+      ],
+      "language": "verilog",
+      "sha256": "c0faf549360c31318832fc98abb41c3654d8aba2360aa7e98b60b61a24d1eb6d"
+    },
+    {
+      "label": "Binary ready multiplexer declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_mux.sv",
+      "lines": [
+        20,
+        57
+      ],
+      "language": "verilog",
+      "sha256": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1"
+    },
+    {
+      "label": "Binary ready multiplexer behavior",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_mux.sv",
+      "lines": [
+        73,
+        84
+      ],
+      "language": "verilog",
+      "sha256": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1"
+    },
+    {
+      "label": "CMI ready-valid transfer and retention rules",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        608,
+        635
+      ],
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    }
+  ]
+}

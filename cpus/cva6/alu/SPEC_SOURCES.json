@@ -1,0 +1,2933 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "1fb71a8090d3b6a82bc6011852bce12cf0332c1f9f0205dc20497131597c8f72",
+  "prompt_sha256": "7b6ed837f6cd17345461a009d8e07ab99709dcfed739c84fb46d294c1aee1d7b",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        338
+      ],
+      "sha256": "d06f4d916f89bf80390ef5585137fe08533e12c2d4914348d9ef2b5ccc01f195"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        338,
+        372
+      ],
+      "sha256": "393e1e2b6e472b8cf3db0198f2ab6fffefe807014d0a9d089fc18035511687b9"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        372,
+        379
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        379,
+        419
+      ],
+      "sha256": "d89d92305e9f2de0bb106742fa4cafc36c2d3bf4d2341fd0af8976e395e63d6c"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        419,
+        426
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        426,
+        451
+      ],
+      "sha256": "8259209d4607e231573ce8dbef5ada7ca840333cfa02e4c8f2e9ca4e9063513f"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        451,
+        529
+      ],
+      "sha256": "7c0ccfc2bf886a46b69fea82922638b46b498d0585f53bca17fbdd86335cb6bb"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        529,
+        593
+      ],
+      "sha256": "ffc9c90a388bbbf21304d59eed1f53e9ec0492a849074c09e13d0dae85f45224"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        593,
+        600
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        600,
+        694
+      ],
+      "sha256": "b0484e0559c0adb72e53ee29202af60b632fc755396a2940ab2f0137c05b54bd"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        694,
+        701
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        701,
+        795
+      ],
+      "sha256": "828ad19bfb35e4b3a89143c7e61270d8f8b80407898e82d00c6bed4f093f172a"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        795,
+        802
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        802,
+        855
+      ],
+      "sha256": "7c6aeb59cf9690a390e11dec64499df80d23d8311d13845dcadcf44cb5abb8e3"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        855,
+        862
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        862,
+        909
+      ],
+      "sha256": "191cec6f0a478c2559889a03246050a491816d5ea0ef226fdde18ae3c71a24ac"
+    },
+    {
+      "index": 16,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        909,
+        942
+      ],
+      "sha256": "11b187f6da88873799e6574d40d623c235a729aeb7203994584efdbaf0e33c93"
+    },
+    {
+      "index": 17,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        942,
+        949
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 18,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        949,
+        968
+      ],
+      "sha256": "a99840470e120ff0e8760782483df4d1339b849c1b7661ac2f031c551893aa3b"
+    },
+    {
+      "index": 19,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        968,
+        975
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 20,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        975,
+        1036
+      ],
+      "sha256": "9ae999a7fc78a850196668471b99b37a5e15d47a444ca79e1c4d85f7d7a36ae3"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        1036,
+        1070
+      ],
+      "sha256": "b4a7b758436a1c04e50654f9cd574cb5c88d12457ccbad95180f8dd1ac704898"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1070,
+        1077
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        1077,
+        1122
+      ],
+      "sha256": "48055a81b9fe788b85034edd96ea033f489940f8b84845b1ee4606d88ef02e2a"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1122,
+        1129
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        1129,
+        1138
+      ],
+      "sha256": "a72ed9b4ac001dea2248a04f18c195b009e55ebc823dcfc2c683ae0afed49cee"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1138,
+        1145
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        1145,
+        1265
+      ],
+      "sha256": "c402e17df8bc7d3346881aa4c4742d8b67f4c671682ff9f26964593ad809be3a"
+    },
+    {
+      "index": 28,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        1265,
+        1334
+      ],
+      "sha256": "ac4cf52dc000f5f1ed0c2c445c6306108413fa3458cc4502f2cd246aeda4429e"
+    },
+    {
+      "index": 29,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1334,
+        1341
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 30,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        1341,
+        1410
+      ],
+      "sha256": "c811f7fc7a5507d8c3d3c587ea4ce12c8fe1ab11a4977a8fbe63c18ccb2727d6"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        1410,
+        1489
+      ],
+      "sha256": "a5d60437795b27019975e0045b98ede89b892a2677efe99dce3918f20976013b"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1489,
+        1496
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        1496,
+        1507
+      ],
+      "sha256": "7fe49acb08132e15bb9b1dfe39fc4fa4552040851d6581fb8e425b9720f5e890"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        1507,
+        1552
+      ],
+      "sha256": "16ab8841be19b6437f519e370a014818c34cc127977ddf6ac45cfb13290c150f"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1552,
+        2219
+      ],
+      "sha256": "28f0eb36a1449e8ebe10ba2590f3ea56851448d415cb7900ad545b5d46d2e9ba"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        2219,
+        2291
+      ],
+      "sha256": "5a067be9be4e1f3e74633f983958b3eabf40d7f7cef0c03a35f5a7acd3c1f7a6"
+    },
+    {
+      "index": 37,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2291,
+        2619
+      ],
+      "sha256": "53ef329be5518e4a15fa01d1a1f08060fe9b77084ed3865439f1c120149ac0d1"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        2619,
+        2687
+      ],
+      "sha256": "4cf1ee41480726ba36d82e86626af90ce5794f5b2d07bf4507a7584ea283f51d"
+    },
+    {
+      "index": 39,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        2687,
+        3034
+      ],
+      "sha256": "2eb355716bd35a9891a0ae385e55d430c2302e85c0a9bd68ca2d8a72c8fff8bc"
+    },
+    {
+      "index": 40,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        3034,
+        3101
+      ],
+      "sha256": "c0f4c790b8a0020d5d2685a8148ab0ae36cf166910b1db00e7b37109d3e2dde5"
+    },
+    {
+      "index": 41,
+      "kind": "verbatim_source",
+      "source": 22,
+      "prompt_bytes": [
+        3101,
+        3610
+      ],
+      "sha256": "381b2f8d8f45eaba85789a3ae3766e8b2d3419af40bcfa38b58c99cc88778ae6"
+    },
+    {
+      "index": 42,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        3610,
+        3665
+      ],
+      "sha256": "67b42b8960f53e7c51f1239773f04c67b2c6946f6e7dce58bef82f70971ba918"
+    },
+    {
+      "index": 43,
+      "kind": "verbatim_source",
+      "source": 23,
+      "prompt_bytes": [
+        3665,
+        3700
+      ],
+      "sha256": "b97a727d9288db47eb9774cff4e5f85aa3fe7dac6a8da2f0771f32ebcb944420"
+    },
+    {
+      "index": 44,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        3700,
+        3707
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 45,
+      "kind": "verbatim_source",
+      "source": 24,
+      "prompt_bytes": [
+        3707,
+        3786
+      ],
+      "sha256": "f9994e07718a50523e48edd0373cde0f6dd803a6d6c077f11c962eb978cfdc9a"
+    },
+    {
+      "index": 46,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        3786,
+        3837
+      ],
+      "sha256": "169537df37c212f50708b70ce41e26b164ee11c7245b47dc01a966385b167185"
+    },
+    {
+      "index": 47,
+      "kind": "verbatim_source",
+      "source": 25,
+      "prompt_bytes": [
+        3837,
+        4049
+      ],
+      "sha256": "3b77f65dedf488dd185f45ec0f57f2b71dfb5c7d7ca8610bc3a14397ca6e2682"
+    },
+    {
+      "index": 48,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        4049,
+        4056
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 49,
+      "kind": "verbatim_source",
+      "source": 26,
+      "prompt_bytes": [
+        4056,
+        4168
+      ],
+      "sha256": "8bdacbd6ddf0f9b0ba383188b907bb5067bdc468a085b09f2e56df3eba1c1417"
+    },
+    {
+      "index": 50,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        4168,
+        4175
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 51,
+      "kind": "verbatim_source",
+      "source": 27,
+      "prompt_bytes": [
+        4175,
+        4252
+      ],
+      "sha256": "0788fd3472842c9923aa1fdc0c5bbf98de4d31bafe7570031efdc840900f4c5a"
+    },
+    {
+      "index": 52,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        4252,
+        4259
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 53,
+      "kind": "verbatim_source",
+      "source": 28,
+      "prompt_bytes": [
+        4259,
+        4536
+      ],
+      "sha256": "fb33c8518865717a6324ba022ff1f1a6263feb69512953249f420327e2dbc5b9"
+    },
+    {
+      "index": 54,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        4536,
+        4543
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 55,
+      "kind": "verbatim_source",
+      "source": 29,
+      "prompt_bytes": [
+        4543,
+        5003
+      ],
+      "sha256": "4925947dccb1f69beb1b774f4a1ed2ffcc521920a4af1a12ffcfe6f082a57488"
+    },
+    {
+      "index": 56,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        5003,
+        5057
+      ],
+      "sha256": "3f4e470a4db30acf40639b7aad69934385578ac8fdd20dc0fe1eecb5583bdf15"
+    },
+    {
+      "index": 57,
+      "kind": "verbatim_source",
+      "source": 30,
+      "prompt_bytes": [
+        5057,
+        5451
+      ],
+      "sha256": "4d9ee7cf9d2230276665ab7eafc3abf80e78ca373914befbdb0bb2114206d783"
+    },
+    {
+      "index": 58,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        5451,
+        5545
+      ],
+      "sha256": "2391aecb5affa26e012c28f8003a97fcd179db7081e7c2876613abbde689eaf9"
+    },
+    {
+      "index": 59,
+      "kind": "verbatim_source",
+      "source": 31,
+      "prompt_bytes": [
+        5545,
+        5778
+      ],
+      "sha256": "8f3567acf1120df41f80387c2f06b136b8e9cc3372920e4075bef885293ba0cc"
+    },
+    {
+      "index": 60,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        5778,
+        5810
+      ],
+      "sha256": "92d87202f7706d2c63014fd6a92f58102d98f2ce1edf430190376d895d5ef7b3"
+    },
+    {
+      "index": 61,
+      "kind": "verbatim_source",
+      "source": 32,
+      "prompt_bytes": [
+        5810,
+        6819
+      ],
+      "sha256": "0760cb2a3b3e4f932998a12bb7114a0b9e67a08c47075c7035c920198831e8a3"
+    },
+    {
+      "index": 62,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        6819,
+        6832
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 63,
+      "kind": "verbatim_source",
+      "source": 33,
+      "prompt_bytes": [
+        6832,
+        7309
+      ],
+      "sha256": "4c28513816f02d8f17a4364f957f6e6c381ccd93858e87bbc2730d0541c5b98b"
+    },
+    {
+      "index": 64,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        7309,
+        7322
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 65,
+      "kind": "verbatim_source",
+      "source": 34,
+      "prompt_bytes": [
+        7322,
+        8003
+      ],
+      "sha256": "ef1ccc6829fe4f8b455a3dfa928449a8a2c7211c08a0dccb6f1a801221be5233"
+    },
+    {
+      "index": 66,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        8003,
+        8016
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 67,
+      "kind": "verbatim_source",
+      "source": 35,
+      "prompt_bytes": [
+        8016,
+        8503
+      ],
+      "sha256": "8e0cdf12a16ed562c16479470ac4618cd0defa24d140c8b2101400acb14ea5bb"
+    },
+    {
+      "index": 68,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        8503,
+        8539
+      ],
+      "sha256": "9f20816b3e5228e45a043249b81a887cb03109ce0b1b83dfd55f140063444e49"
+    },
+    {
+      "index": 69,
+      "kind": "verbatim_source",
+      "source": 36,
+      "prompt_bytes": [
+        8539,
+        8549
+      ],
+      "sha256": "a1c35cdd1d991d07f66566624cdb892d29f01d33edc79490737600e5f26b84cc"
+    },
+    {
+      "index": 70,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        8549,
+        8553
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 71,
+      "kind": "verbatim_source",
+      "source": 37,
+      "prompt_bytes": [
+        8553,
+        8611
+      ],
+      "sha256": "1db39db80d0457b4ebf5878fb5387e5f65cecf978488be4e985ba0b2d97357b0"
+    },
+    {
+      "index": 72,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        8611,
+        8624
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 73,
+      "kind": "verbatim_source",
+      "source": 38,
+      "prompt_bytes": [
+        8624,
+        8634
+      ],
+      "sha256": "56b4859e8967a14d8dc6c172d97a016279bf115f1bf378a9b86d50d94974dfa6"
+    },
+    {
+      "index": 74,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        8634,
+        8638
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 75,
+      "kind": "verbatim_source",
+      "source": 39,
+      "prompt_bytes": [
+        8638,
+        8734
+      ],
+      "sha256": "3b0fc2e635ebd6837e437263135e538efeaf87b4d22f8b92e4ad1d18ab218e30"
+    },
+    {
+      "index": 76,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        8734,
+        8747
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 77,
+      "kind": "verbatim_source",
+      "source": 40,
+      "prompt_bytes": [
+        8747,
+        8758
+      ],
+      "sha256": "629d7287a93c801390d1c023c1d463b9eef62dcef493c6c67ab7dcfbf2604525"
+    },
+    {
+      "index": 78,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        8758,
+        8762
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 79,
+      "kind": "verbatim_source",
+      "source": 41,
+      "prompt_bytes": [
+        8762,
+        8857
+      ],
+      "sha256": "e12d41ab8a2266b40df1442d73e28f0d2bc6a72e9238911f4bcdcdbec9389bb4"
+    },
+    {
+      "index": 80,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        8857,
+        8870
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 81,
+      "kind": "verbatim_source",
+      "source": 42,
+      "prompt_bytes": [
+        8870,
+        8880
+      ],
+      "sha256": "d772f84c4f545e9bc96333f75499107abdaa26ba08db00c3e6283aab581dfebb"
+    },
+    {
+      "index": 82,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        8880,
+        8884
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 83,
+      "kind": "verbatim_source",
+      "source": 43,
+      "prompt_bytes": [
+        8884,
+        8980
+      ],
+      "sha256": "c03968996d0ce3ad19372ff25bf1b2bc90d27c03fc329dda808b19e0d6e57fdd"
+    },
+    {
+      "index": 84,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        8980,
+        8993
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 85,
+      "kind": "verbatim_source",
+      "source": 44,
+      "prompt_bytes": [
+        8993,
+        9004
+      ],
+      "sha256": "a04ded065a564526570e1d0f2ed8d2f80bfe7ee5efe090a525cfdd435d8a8c34"
+    },
+    {
+      "index": 86,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9004,
+        9008
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 87,
+      "kind": "verbatim_source",
+      "source": 45,
+      "prompt_bytes": [
+        9008,
+        9103
+      ],
+      "sha256": "bbc2caf438fc960fa3603e4e4180a3f609671968c558e3d0a82bf2da008b0d46"
+    },
+    {
+      "index": 88,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        9103,
+        9116
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 89,
+      "kind": "verbatim_source",
+      "source": 46,
+      "prompt_bytes": [
+        9116,
+        9126
+      ],
+      "sha256": "33c2a65f171196fe87f56e2cb432c4969077755e4e8b821ab17b7035c1754f91"
+    },
+    {
+      "index": 90,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9126,
+        9130
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 91,
+      "kind": "verbatim_source",
+      "source": 47,
+      "prompt_bytes": [
+        9130,
+        9225
+      ],
+      "sha256": "6ae2b1894d001945bec1fc5ec1a97a0569fbaa5f4ba390c3551b66c2fb35c3e6"
+    },
+    {
+      "index": 92,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        9225,
+        9238
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 93,
+      "kind": "verbatim_source",
+      "source": 48,
+      "prompt_bytes": [
+        9238,
+        9249
+      ],
+      "sha256": "2033fdea2de767882ca2cdcdfc4ff73b58646f0c19aee1eededfb29bd69f938c"
+    },
+    {
+      "index": 94,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9249,
+        9253
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 95,
+      "kind": "verbatim_source",
+      "source": 49,
+      "prompt_bytes": [
+        9253,
+        9347
+      ],
+      "sha256": "eaf3e081b62b0d6bbd0a192b0e30d1aa2db68f54ecca4f9a726067c47f002869"
+    },
+    {
+      "index": 96,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        9347,
+        9360
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 97,
+      "kind": "verbatim_source",
+      "source": 50,
+      "prompt_bytes": [
+        9360,
+        9370
+      ],
+      "sha256": "2db4eeb8a620895abe37c1136bb0721bb84962e94655f3cd1ecd68449a14a5de"
+    },
+    {
+      "index": 98,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9370,
+        9374
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 99,
+      "kind": "verbatim_source",
+      "source": 51,
+      "prompt_bytes": [
+        9374,
+        9469
+      ],
+      "sha256": "c575bb14e60aa545a12ec5f795dc67a8631cd44d10a027450f03a77ceeb768d9"
+    },
+    {
+      "index": 100,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        9469,
+        9482
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 101,
+      "kind": "verbatim_source",
+      "source": 52,
+      "prompt_bytes": [
+        9482,
+        9493
+      ],
+      "sha256": "deefa025ce100bfdb0ec613b42bd7cfea8566c46eaf14fd8e801133c47f1fbae"
+    },
+    {
+      "index": 102,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9493,
+        9497
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 103,
+      "kind": "verbatim_source",
+      "source": 53,
+      "prompt_bytes": [
+        9497,
+        9591
+      ],
+      "sha256": "3b785d13263318296fbddeb43f859675c5d99ae0ec956791631d21a5d61833a4"
+    },
+    {
+      "index": 104,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        9591,
+        9604
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 105,
+      "kind": "verbatim_source",
+      "source": 54,
+      "prompt_bytes": [
+        9604,
+        9613
+      ],
+      "sha256": "06a54c5668240232d6a1170d3e3f7ecf45fa525aba09bdfb930733fe7d2d5a96"
+    },
+    {
+      "index": 106,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9613,
+        9617
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 107,
+      "kind": "verbatim_source",
+      "source": 55,
+      "prompt_bytes": [
+        9617,
+        9907
+      ],
+      "sha256": "1e9742831da46f67524b5eea5c952a3d405f546b65ddfb3e87b7513f3b138518"
+    },
+    {
+      "index": 108,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        9907,
+        9920
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 109,
+      "kind": "verbatim_source",
+      "source": 56,
+      "prompt_bytes": [
+        9920,
+        9930
+      ],
+      "sha256": "d91dcc7ef1e89883e2968096f545c52d09926d9897548a5e1e1460f78ae745fe"
+    },
+    {
+      "index": 110,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9930,
+        9934
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 111,
+      "kind": "verbatim_source",
+      "source": 57,
+      "prompt_bytes": [
+        9934,
+        10117
+      ],
+      "sha256": "aa821007ac8be6761a937fd5d2ce6a4deb11a8a68c6f9b21e84a1cc03d52eb6c"
+    },
+    {
+      "index": 112,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        10117,
+        10130
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 113,
+      "kind": "verbatim_source",
+      "source": 58,
+      "prompt_bytes": [
+        10130,
+        10139
+      ],
+      "sha256": "915df0596767232bc78b0fc8429d393c2b4c04bf4a3342b44dfc672baf6792c2"
+    },
+    {
+      "index": 114,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        10139,
+        10143
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 115,
+      "kind": "verbatim_source",
+      "source": 59,
+      "prompt_bytes": [
+        10143,
+        10419
+      ],
+      "sha256": "9456236ab6227ce9f22450781273ed74930d34b4477b18546f34812678f7da0b"
+    },
+    {
+      "index": 116,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        10419,
+        10432
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 117,
+      "kind": "verbatim_source",
+      "source": 60,
+      "prompt_bytes": [
+        10432,
+        10441
+      ],
+      "sha256": "e8f3eb6e32b0bae77f59c92ef3e9f12c8027fedd62bbd3c46c5580787c7d81c7"
+    },
+    {
+      "index": 118,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        10441,
+        10445
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 119,
+      "kind": "verbatim_source",
+      "source": 61,
+      "prompt_bytes": [
+        10445,
+        10630
+      ],
+      "sha256": "e5cdc111adb32bb479799d8309b1b812dc63f7c276d55f36ce038e4281d97886"
+    },
+    {
+      "index": 120,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        10630,
+        10643
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 121,
+      "kind": "verbatim_source",
+      "source": 62,
+      "prompt_bytes": [
+        10643,
+        10653
+      ],
+      "sha256": "b71924d2253256c797a0a3a9922cbee50f3cb77bb369117a0a6964f33fc474d6"
+    },
+    {
+      "index": 122,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        10653,
+        10657
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 123,
+      "kind": "verbatim_source",
+      "source": 63,
+      "prompt_bytes": [
+        10657,
+        10842
+      ],
+      "sha256": "05cebdc544d977044053d2cad8965e377a5db819a413f4a6929637675ad7c22d"
+    },
+    {
+      "index": 124,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        10842,
+        10855
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 125,
+      "kind": "verbatim_source",
+      "source": 64,
+      "prompt_bytes": [
+        10855,
+        10864
+      ],
+      "sha256": "2696fc0f6b80545c8dd2f32a81d438ac4a22d95556505430f802376e81a29642"
+    },
+    {
+      "index": 126,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        10864,
+        10868
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 127,
+      "kind": "verbatim_source",
+      "source": 65,
+      "prompt_bytes": [
+        10868,
+        11053
+      ],
+      "sha256": "cc34d7e7a78fa8f7e3dfce6bc1a37907daeef03591650fdd311dffdb29485419"
+    },
+    {
+      "index": 128,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        11053,
+        11066
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 129,
+      "kind": "verbatim_source",
+      "source": 66,
+      "prompt_bytes": [
+        11066,
+        11076
+      ],
+      "sha256": "b0b74ec1c2c2f8617a2ba30b2844e11803d5f3b6a07490cc2d6465ae2b4737f7"
+    },
+    {
+      "index": 130,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11076,
+        11080
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 131,
+      "kind": "verbatim_source",
+      "source": 67,
+      "prompt_bytes": [
+        11080,
+        11265
+      ],
+      "sha256": "c5d187dc76ebc0a0ba17e1e4c66cf9fdcfa540583001bdefbd14b72bbd8f1488"
+    },
+    {
+      "index": 132,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        11265,
+        11278
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 133,
+      "kind": "verbatim_source",
+      "source": 68,
+      "prompt_bytes": [
+        11278,
+        11289
+      ],
+      "sha256": "81c1a1456218ef476c33659a10d0b97b99172cc60d46d2f52a9d411d9eb27eec"
+    },
+    {
+      "index": 134,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11289,
+        11293
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 135,
+      "kind": "verbatim_source",
+      "source": 69,
+      "prompt_bytes": [
+        11293,
+        11564
+      ],
+      "sha256": "feb6daa2c02eb1e9b130d1241f74fcdb8bb2dc46ce80ce225119fd0942ccef35"
+    },
+    {
+      "index": 136,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        11564,
+        11577
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 137,
+      "kind": "verbatim_source",
+      "source": 70,
+      "prompt_bytes": [
+        11577,
+        11586
+      ],
+      "sha256": "5116e6420b45ca944518ee5cba6d3f539d2ce4123fdbb165e9d30d56f21c13b0"
+    },
+    {
+      "index": 138,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11586,
+        11590
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 139,
+      "kind": "verbatim_source",
+      "source": 71,
+      "prompt_bytes": [
+        11590,
+        11648
+      ],
+      "sha256": "b49b998d100d0e3d2c5d9e91ccb1778f802bbb6bf24b7106c962b94c85ba042c"
+    },
+    {
+      "index": 140,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        11648,
+        11661
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 141,
+      "kind": "verbatim_source",
+      "source": 72,
+      "prompt_bytes": [
+        11661,
+        11671
+      ],
+      "sha256": "7f66ca4d453b391e72462076e5d17b100f5d9850e25ee74cf2d2083fbc7a0f85"
+    },
+    {
+      "index": 142,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11671,
+        11675
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 143,
+      "kind": "verbatim_source",
+      "source": 73,
+      "prompt_bytes": [
+        11675,
+        11887
+      ],
+      "sha256": "280c426cd780bb16473634372e553190f233a3e8eff762d5d343a3b14d437829"
+    },
+    {
+      "index": 144,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        11887,
+        11900
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 145,
+      "kind": "verbatim_source",
+      "source": 74,
+      "prompt_bytes": [
+        11900,
+        11909
+      ],
+      "sha256": "279baffa188697472ff67ddbb8717e8d8d30692454827ecb4ec9dc4395db4ed5"
+    },
+    {
+      "index": 146,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11909,
+        11913
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 147,
+      "kind": "verbatim_source",
+      "source": 75,
+      "prompt_bytes": [
+        11913,
+        12112
+      ],
+      "sha256": "fd7422c403d4fb483e0612330033df367dda50b4c76a4494329d0c4b23765805"
+    },
+    {
+      "index": 148,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        12112,
+        12125
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 149,
+      "kind": "verbatim_source",
+      "source": 76,
+      "prompt_bytes": [
+        12125,
+        12134
+      ],
+      "sha256": "51be5f0e55bbaa66305fa60163f9614bceb23296d84da480606728375eaa6bae"
+    },
+    {
+      "index": 150,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        12134,
+        12138
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 151,
+      "kind": "verbatim_source",
+      "source": 77,
+      "prompt_bytes": [
+        12138,
+        12337
+      ],
+      "sha256": "146a50e8f68ce3876a0a43a0c66e935c61d9a1d012838e482dc178cba718f56e"
+    },
+    {
+      "index": 152,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        12337,
+        12350
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 153,
+      "kind": "verbatim_source",
+      "source": 78,
+      "prompt_bytes": [
+        12350,
+        12360
+      ],
+      "sha256": "314133ece2b7d00bbb24e9daaf475854399d275748630d64792e5c8fad7af27d"
+    },
+    {
+      "index": 154,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        12360,
+        12364
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 155,
+      "kind": "verbatim_source",
+      "source": 79,
+      "prompt_bytes": [
+        12364,
+        12561
+      ],
+      "sha256": "fa1d84754526edff52a251f807bdc8ec550b889049cb235cad32b86674b1a0ef"
+    },
+    {
+      "index": 156,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        12561,
+        12574
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 157,
+      "kind": "verbatim_source",
+      "source": 80,
+      "prompt_bytes": [
+        12574,
+        12586
+      ],
+      "sha256": "e6f6cbcf36ad145d2830c0c9659d2be2228a0a3308891a21cbfdc8a80114cf44"
+    },
+    {
+      "index": 158,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        12586,
+        12590
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 159,
+      "kind": "verbatim_source",
+      "source": 81,
+      "prompt_bytes": [
+        12590,
+        12649
+      ],
+      "sha256": "a3e2e5da51943bd018e29c46930f81c7beb8ccb34dc201b9ffa1db42b478a6f7"
+    },
+    {
+      "index": 160,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        12649,
+        12662
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 161,
+      "kind": "verbatim_source",
+      "source": 82,
+      "prompt_bytes": [
+        12662,
+        12674
+      ],
+      "sha256": "f984f2ba7e8668efbe2aa887e3e91415a71f8f60064b95f9bc1ee67fc7615c10"
+    },
+    {
+      "index": 162,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        12674,
+        12678
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 163,
+      "kind": "verbatim_source",
+      "source": 83,
+      "prompt_bytes": [
+        12678,
+        12738
+      ],
+      "sha256": "944b5e81104c50ed1b1928d9b7e5033402c7dd9527dc10b2a6bcf6ba07fb3bea"
+    },
+    {
+      "index": 164,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        12738,
+        12751
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 165,
+      "kind": "verbatim_source",
+      "source": 84,
+      "prompt_bytes": [
+        12751,
+        12763
+      ],
+      "sha256": "d53b29ca96d33366054a612996e170fda6295b16216976c0d068ce85fca87942"
+    },
+    {
+      "index": 166,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        12763,
+        12767
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 167,
+      "kind": "verbatim_source",
+      "source": 85,
+      "prompt_bytes": [
+        12767,
+        12831
+      ],
+      "sha256": "e40876bdb59487f007c651c60fe4c27c9927ced66d2a7aeaa1073d560aad28fb"
+    },
+    {
+      "index": 168,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        12831,
+        12844
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 169,
+      "kind": "verbatim_source",
+      "source": 86,
+      "prompt_bytes": [
+        12844,
+        12856
+      ],
+      "sha256": "4427858d51543549830e30ad35e36f6862e12e3441e5ace6d6907140d6687328"
+    },
+    {
+      "index": 170,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        12856,
+        12860
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 171,
+      "kind": "verbatim_source",
+      "source": 87,
+      "prompt_bytes": [
+        12860,
+        12924
+      ],
+      "sha256": "963c2f279191ae53ebf78988afcf22cb00e21b617cb800d61264fa7995e80721"
+    },
+    {
+      "index": 172,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        12924,
+        12937
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 173,
+      "kind": "verbatim_source",
+      "source": 88,
+      "prompt_bytes": [
+        12937,
+        12949
+      ],
+      "sha256": "f0bbc31ff2147e58bbbbff380a4a03b67a57735f6303df520034465055d66a09"
+    },
+    {
+      "index": 174,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        12949,
+        12953
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 175,
+      "kind": "verbatim_source",
+      "source": 89,
+      "prompt_bytes": [
+        12953,
+        13017
+      ],
+      "sha256": "f65a5a88fd47d95d68fa8a300f66a62db362ba419fdc98516ea245939ef9dfc6"
+    },
+    {
+      "index": 176,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        13017,
+        13030
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 177,
+      "kind": "verbatim_source",
+      "source": 90,
+      "prompt_bytes": [
+        13030,
+        13040
+      ],
+      "sha256": "17d5423c2858b5100ecf2c7efb5c6dd4826201eb5377fb2ed0abbce3042dcd8f"
+    },
+    {
+      "index": 178,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        13040,
+        13044
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 179,
+      "kind": "verbatim_source",
+      "source": 91,
+      "prompt_bytes": [
+        13044,
+        13104
+      ],
+      "sha256": "5dc4f21d323dacf734eaef4671a15e384203ba54df2e2759a282a3135bf68f7b"
+    },
+    {
+      "index": 180,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        13104,
+        13117
+      ],
+      "sha256": "107f2722ef8c83d8b904b0e48aabf42664eff2096cfe6d57c9a48eab2325b080"
+    },
+    {
+      "index": 181,
+      "kind": "verbatim_source",
+      "source": 92,
+      "prompt_bytes": [
+        13117,
+        13129
+      ],
+      "sha256": "52dcaa6350d26cffdae07f7a1e27ca82dc70e433c29d5211c80b6aaa2295fa0d"
+    },
+    {
+      "index": 182,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        13129,
+        13133
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 183,
+      "kind": "verbatim_source",
+      "source": 93,
+      "prompt_bytes": [
+        13133,
+        13193
+      ],
+      "sha256": "e564cfe99f248c37380e4c11f225a796aaa977df0361f5109881e6d3471bb899"
+    },
+    {
+      "index": 184,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        13193,
+        13197
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Selected cv32a60x XLEN for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected cv32a60x RVB and ZKN values for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        42,
+        43
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected cv32a60x RVZiCond value for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        53,
+        53
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Module declaration for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu.sv",
+      "lines": [
+        21,
+        40
+      ],
+      "language": "verilog",
+      "sha256": "49ba35e04bf1e8cecf8fdf6378a585bad4c0f914291dc4941e0d58dfda834f6a"
+    },
+    {
+      "label": "Active cv32a60x parent instantiation for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu_wrapper.sv",
+      "lines": [
+        29,
+        40
+      ],
+      "language": "verilog",
+      "sha256": "b2de99f62b1d6bda465c4354ba9f88be9c6e0908d524fffb45ab5d8ccdc7a22c"
+    },
+    {
+      "label": "Functional-unit input type for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        176,
+        183
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Base arithmetic operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        275,
+        277
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Logical and shift operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        280,
+        287
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Branch comparison and JALR operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        291,
+        299
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Set-less-than operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        301,
+        303
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "OR-combine and byte-reverse operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        437,
+        439
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Rotate-left operation identifier used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        440,
+        441
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Rotate-right operation identifiers used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        443,
+        444
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Sign-extension and zero-extension operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        447,
+        450
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Population-count operation identifier used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        451,
+        452
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Leading-zero operation identifier used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        454,
+        455
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Trailing-zero operation identifier used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        457,
+        457
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Single-bit operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        463,
+        471
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Minimum and maximum operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        472,
+        476
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Shift-and-add operation identifiers used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        483,
+        486
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Negated logical operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        487,
+        490
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Closing line of the functional-unit operation enumeration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        541,
+        541
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "JALR item of the decoder opcode case",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        1692,
+        1702
+      ],
+      "language": "verilog",
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "Functional-unit case of the issue valid dispatch",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        750,
+        750
+      ],
+      "language": "verilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "CTRL_FLOW item of the issue valid dispatch",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        758,
+        760
+      ],
+      "language": "verilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Execution-stage ALU input selection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        305,
+        310
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Execution-stage one_cycle_data selection for issue port 0",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        313,
+        315
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Execution-stage always_comb end and alu_data[0] assignment",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        326,
+        329
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Execution-stage alu_wrapper_i instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        341,
+        351
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Execution-stage branch_unit_i instantiation up to branch_comp_res_i",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        356,
+        372
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Branch-unit resolution of a valid control-flow instruction",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/branch_unit.sv",
+      "lines": [
+        79,
+        86
+      ],
+      "language": "verilog",
+      "sha256": "39c5c4fad84091c91da5f391e8b6354244823b9ccd4aeec0371415c8d4862bea"
+    },
+    {
+      "label": "CVA6 design documentation for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_execute.adoc",
+      "lines": [
+        31,
+        35
+      ],
+      "sha256": "d92282f130119ed75b98f53a6d41124ad0fbaf0ed5e6458492696198ade34217"
+    },
+    {
+      "label": "RV32I immediate arithmetic and logical operations",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        304,
+        320
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RV32I immediate shift operations",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        326,
+        332
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RV32I register-register operations",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        378,
+        389
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RV32I conditional branch comparisons",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        570,
+        576
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for andn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1049,
+        1049
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for andn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1073,
+        1077
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bclr",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1097,
+        1097
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bclr",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1122,
+        1127
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bclri",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1143,
+        1143
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bclri",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1182,
+        1187
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bext",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1203,
+        1203
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bext",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1229,
+        1234
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bexti",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1250,
+        1250
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bexti",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1289,
+        1294
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for binv",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1310,
+        1310
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for binv",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1335,
+        1340
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for binvi",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1356,
+        1356
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for binvi",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1395,
+        1400
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bset",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1416,
+        1416
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bset",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1441,
+        1446
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bseti",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1462,
+        1462
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bseti",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1501,
+        1506
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for clz",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1703,
+        1703
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for clz",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1727,
+        1740
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for cpop",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1810,
+        1810
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for cpop",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1833,
+        1843
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for ctz",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1917,
+        1917
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for ctz",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1942,
+        1955
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for max",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2024,
+        2024
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for max",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2048,
+        2059
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for maxu",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2085,
+        2085
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for maxu",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2109,
+        2120
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for min",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2136,
+        2136
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for min",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2160,
+        2171
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for minu",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2187,
+        2187
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for minu",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2211,
+        2222
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for orc.b",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2238,
+        2238
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for orc.b",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2262,
+        2275
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for orn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2291,
+        2291
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for orn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2315,
+        2319
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for rev8",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2498,
+        2498
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for rev8",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2533,
+        2546
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for rol",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2628,
+        2628
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for rol",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2652,
+        2661
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for ror",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2733,
+        2733
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for ror",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2757,
+        2766
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for rori",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2786,
+        2786
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for rori",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2824,
+        2833
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sext.b",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2960,
+        2960
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sext.b",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2984,
+        2988
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sext.h",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3004,
+        3004
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sext.h",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3028,
+        3032
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sh1add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3049,
+        3049
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sh1add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3073,
+        3077
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sh2add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3143,
+        3143
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sh2add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3167,
+        3171
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sh3add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3236,
+        3236
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sh3add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3260,
+        3264
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for xnor",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3437,
+        3437
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for xnor",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3461,
+        3465
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for zext.h",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3607,
+        3607
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for zext.h",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3644,
+        3648
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    }
+  ]
+}

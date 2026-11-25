@@ -1,0 +1,22 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+%post
+    set -eux
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get install -y --no-install-recommends \
+        ca-certificates coreutils curl g++ git make openjdk-17-jdk-headless perl python3 verilator zlib1g-dev
+    rm -rf /var/lib/apt/lists/*
+    curl -fL -o /tmp/sbt.tgz \
+        https://github.com/sbt/sbt/releases/download/v1.9.9/sbt-1.9.9.tgz
+    tar --no-same-owner -xzf /tmp/sbt.tgz -C /opt
+    rm /tmp/sbt.tgz
+    chmod +x /opt/sbt/bin/sbt
+
+%environment
+    export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    export PATH=/opt/sbt/bin:$PATH
+
+%runscript
+    exec "$@"

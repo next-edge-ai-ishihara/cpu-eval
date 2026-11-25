@@ -1,0 +1,5 @@
+
+  - test: cva6-icache-fence-i
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/icache_fence_i.S

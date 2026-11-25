@@ -1,0 +1,21 @@
+diff --git a/src/main/scala/rift2Core/rift2Core.scala b/src/main/scala/rift2Core/rift2Core.scala
+index 64999a0..5c36102 100644
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -149,7 +149,15 @@ trait Rift2CoreImpBackend{ this: Rift2CoreImpBase =>
+   if4.io.if4_resp <> preRename_stage.io.enq
+   preRename_stage.io.deq <> rnm_stage.io.rnReq
+ 
+-  preRename_stage.io.vpuCsrMolloc <> iwb_stage.io.vpuCsrMolloc
++  preRename_stage.io.vpuCsrMolloc <> iwb_stage.io.vpuCsrMolloc
++
++  if (!hasVector) {
++    for (i <- 0 until rnChn) {
++      when (preRename_stage.io.vpuCsrMolloc(i).valid) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH FakeVecPreRename vpuCsrMolloc.valid\n")
++      }
++    }
++  }
+ 
+   rnm_stage.io.rnRsp <> preIssue_stage.io.enq
+   

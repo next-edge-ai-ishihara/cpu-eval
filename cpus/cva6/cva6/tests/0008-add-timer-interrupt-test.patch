@@ -1,0 +1,69 @@
+--- /dev/null
++++ b/cpu-eval-patches/cva6_wfi.S
+@@ -0,0 +1,66 @@
++#include "model_test.h"
++#include "arch_test.h"
++RVTEST_ISA("RV32I_Zicsr")
++
++.section .text.init
++.globl rvtest_entry_point
++rvtest_entry_point:
++RVMODEL_BOOT
++RVTEST_CODE_BEGIN
++    la t0, timer_handler
++    csrw mtvec, t0
++    li t0, 0x02004000
++    li t1, -1
++    sw t1, 4(t0)
++    li t2, 0x2000
++    sw t2, 0(t0)
++    sw zero, 4(t0)
++    li t1, 128
++    csrs mie, t1
++    csrsi mstatus, 8
++    wfi
++after_wfi:
++    csrci mstatus, 8
++    csrc mie, t1
++    addi a0, zero, 1
++    j test_done
++
++.align 2
++timer_handler:
++    csrci mstatus, 8
++    csrc mie, t1
++    li t0, 0x02004000
++    li t2, -1
++    sw t2, 0(t0)
++    sw t2, 4(t0)
++    la t0, after_wfi
++    csrw mepc, t0
++    mret
++
++test_done:
++RVTEST_CODE_END
++RVMODEL_HALT
++
++RVTEST_DATA_BEGIN
++RVTEST_DATA_END
++
++RVMODEL_DATA_BEGIN
++rvtest_sig_begin:
++sig_begin_canary:
++CANARY;
++#ifdef rvtest_mtrap_routine
++tsig_begin_canary:
++CANARY;
++mtrap_sigptr:
++    .fill 64*(XLEN/32),4,0xdeadbeef
++tsig_end_canary:
++CANARY;
++#endif
++#ifdef rvtest_gpr_save
++gpr_save:
++    .fill 32*(XLEN/32),4,0xdeadbeef
++#endif
++sig_end_canary:
++CANARY;
++rvtest_sig_end:
++RVMODEL_DATA_END

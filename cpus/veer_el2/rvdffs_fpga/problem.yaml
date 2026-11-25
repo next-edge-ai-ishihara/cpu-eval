@@ -1,0 +1,14 @@
+id: rvdffs_fpga
+cpu: veer_el2
+target:
+  repository: https://github.com/chipsalliance/cores-veer-el2.git
+  revision: aefefae20b77fa61ba306bff36a72f42ae4cc028
+  file: design/lib/beh_lib.sv
+  module: rvdffs_fpga
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: test/evaluate_rvdffs_fpga_rich_probe.sh

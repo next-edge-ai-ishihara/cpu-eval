@@ -1,0 +1,87 @@
+--- a/src/main/scala/rift2Core/frontend/IF3.scala
++++ b/src/main/scala/rift2Core/frontend/IF3.scala
+@@ -77,7 +77,83 @@
+   val tageFifo = Module(new MultiPortFifo( Vec(6, new TageTableResp_Bundle ), aw = (if(!isMinArea) 4 else 1), in = 1, out = rnChn, flow = true ) )
+ 
+ 
+-  val predictor_ready = btb.io.isReady & bim.io.isReady & (if (!isMinArea) { tage.io.isReady } else {true.B})
++  val cpuEvalBimUpdateDone = if (bim_cl > 0) {
++    val probe = Module(new BIM)
++    val state = RegInit(0.U(4.W))
++    val active = ~reset.asBool
++    val updating = (state === 3.U) & probe.io.isReady & active
++    val requesting = (state === 1.U | state === 4.U | state === 6.U) & active
++    val stalled = state === 8.U | state === 9.U
++    val accepted = RegInit(0.U(8.W))
++    val burstRequesting = (stalled | (state === 10.U & accepted === 0.U)) & active
++    val returned = RegInit(0.U(8.W))
++    val holdCycles = RegInit(0.U(4.W))
++    val quietCycles = RegInit(0.U(2.W))
++    val receiving = (state === 2.U | state === 5.U | state === 7.U) & active
++    val otherAddress = state === 6.U | state === 7.U
++    val expectedP = state < 3.U | otherAddress
++    val expectedH = !expectedP
++    probe.io.flush := false.B
++    probe.io.update.valid := updating
++    probe.io.update.bits.pc := 0.U
++    probe.io.update.bits.bim_p := true.B
++    probe.io.update.bits.bim_h := false.B
++    probe.io.update.bits.isFinalTaken := false.B
++    probe.io.req.valid := requesting | burstRequesting
++    probe.io.req.bits.pc := Mux(otherAddress, 8.U, 0.U)
++    probe.io.resp.ready := active & ~stalled
++    when(state === 0.U & probe.io.isReady & active) { state := 1.U }
++    when(updating) {
++      state := state + 1.U
++    }.elsewhen(requesting & probe.io.req.fire) {
++      state := Mux(probe.io.resp.fire, state + 2.U, state + 1.U)
++    }.elsewhen(receiving & probe.io.resp.fire) {
++      state := state + 1.U
++    }
++    when((requesting | receiving) & probe.io.resp.fire) {
++      when(otherAddress) {
++        printf("CPU_EVAL_BIM_ADDRESS_OBSERVED pc=8 expectedP=%d expectedH=%d p=%d h=%d\n", expectedP, expectedH, probe.io.resp.bits.bim_p, probe.io.resp.bits.bim_h)
++      }.otherwise {
++        printf("CPU_EVAL_BIM_UPDATE_OBSERVED expectedP=%d expectedH=%d p=%d h=%d\n", expectedP, expectedH, probe.io.resp.bits.bim_p, probe.io.resp.bits.bim_h)
++      }
++      when(probe.io.resp.bits.bim_p =/= expectedP | probe.io.resp.bits.bim_h =/= expectedH) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH BIM prediction differs\n")
++      }
++    }
++    when(burstRequesting & probe.io.req.fire) { accepted := accepted + 1.U }
++    when(state >= 8.U & probe.io.resp.fire) {
++      returned := returned + 1.U
++      printf("CPU_EVAL_BIM_STALL_RETURN accepted=%d returned=%d p=%d h=%d\n", accepted, returned, probe.io.resp.bits.bim_p, probe.io.resp.bits.bim_h)
++      when(returned >= accepted + probe.io.req.fire.asUInt | probe.io.resp.bits.bim_p | !probe.io.resp.bits.bim_h) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH BIM stalled response duplicate or wrong prediction\n")
++      }
++    }
++    when(state === 8.U) {
++      state := 9.U
++      holdCycles := 1.U
++    }
++    when(state === 9.U) {
++      holdCycles := holdCycles + 1.U
++      when(holdCycles === 7.U) {
++        printf("CPU_EVAL_BIM_STALL_DRAIN accepted=%d returned=%d\n", accepted + probe.io.req.fire.asUInt, returned)
++        state := 10.U
++      }
++    }
++    when(state === 10.U & (accepted =/= 0.U | probe.io.req.fire) & returned + probe.io.resp.fire.asUInt === accepted + probe.io.req.fire.asUInt) {
++      state := 11.U
++      quietCycles := 0.U
++    }
++    when(state === 11.U) {
++      quietCycles := quietCycles + 1.U
++      when(quietCycles === 2.U) {
++        printf("CPU_EVAL_BIM_STALL_DONE accepted=%d returned=%d\n", accepted, returned)
++        state := 12.U
++      }
++    }
++    state === 12.U
++  } else { true.B }
++
++  val predictor_ready = btb.io.isReady & bim.io.isReady & (if (!isMinArea) { tage.io.isReady } else {true.B}) & cpuEvalBimUpdateDone
+ 
+   val if3_resp_fifo = Module(new MultiPortFifo( new IF3_Bundle, (if(!isMinArea) 4 else 2), 4, rnChn ))
+ 

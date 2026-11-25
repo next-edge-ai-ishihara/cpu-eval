@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Official design documentation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/02_user/integration.rst",
+      "lines": [
+        35,
+        41
+      ],
+      "sha256": "409c745d57cb20923a39295102716793e10771d4e64d04be9b4bafdaa2f6410d"
+    },
+    {
+      "label": "Module declaration for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "vendor/lowrisc_ip/ip/prim_generic/rtl/prim_buf.sv",
+      "lines": [
+        7,
+        12
+      ],
+      "language": "verilog",
+      "sha256": "9b00bd8ac203169268262ac9337076781fa962b19beed36f28dde54e360aaaf5"
+    },
+    {
+      "label": "Parent instantiation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        504,
+        509
+      ],
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Parent instantiation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_if_stage.sv",
+      "lines": [
+        263,
+        266
+      ],
+      "sha256": "8b99f212f06aa942e53e8a768863587ffdc29176f5a486c6e273262311c9f6ae"
+    },
+    {
+      "label": "Parent instantiation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_if_stage.sv",
+      "lines": [
+        682,
+        685
+      ],
+      "sha256": "8b99f212f06aa942e53e8a768863587ffdc29176f5a486c6e273262311c9f6ae"
+    },
+    {
+      "label": "Parent instantiation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_load_store_unit.sv",
+      "lines": [
+        380,
+        383
+      ],
+      "sha256": "86e156efaf7ac46a351a405d9d2046b7d2e6a60bd206411ef9ae474666338b35"
+    },
+    {
+      "label": "Parent instantiation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_top.sv",
+      "lines": [
+        345,
+        353
+      ],
+      "sha256": "0db761a029b18d17271200a7ffe438c856db53423efa25912ba7ce60948cdfc5"
+    },
+    {
+      "label": "Parent instantiation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_top.sv",
+      "lines": [
+        864,
+        867
+      ],
+      "sha256": "0db761a029b18d17271200a7ffe438c856db53423efa25912ba7ce60948cdfc5"
+    },
+    {
+      "label": "Parent instantiation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_top.sv",
+      "lines": [
+        1094,
+        1097
+      ],
+      "sha256": "0db761a029b18d17271200a7ffe438c856db53423efa25912ba7ce60948cdfc5"
+    },
+    {
+      "label": "Parent instantiation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_top.sv",
+      "lines": [
+        1102,
+        1109
+      ],
+      "sha256": "0db761a029b18d17271200a7ffe438c856db53423efa25912ba7ce60948cdfc5"
+    },
+    {
+      "label": "Parent instantiation for prim_buf",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_top.sv",
+      "lines": [
+        1236,
+        1249
+      ],
+      "sha256": "0db761a029b18d17271200a7ffe438c856db53423efa25912ba7ce60948cdfc5"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `prim_buf`\n\nImplement the complete `prim_buf` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module prim_buf` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "text": "\n## Parent instantiation\n\n### rtl/ibex_core.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between parent instantiation excerpts",
+      "text": "```\n\n### rtl/ibex_if_stage.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between parent instantiation excerpts",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between parent instantiation excerpts",
+      "text": "```\n\n### rtl/ibex_load_store_unit.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between parent instantiation excerpts",
+      "text": "```\n\n### rtl/ibex_top.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between parent instantiation excerpts",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between parent instantiation excerpts",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between parent instantiation excerpts",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between parent instantiation excerpts",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "text": "\n## Documentation\n\n### doc/02_user/integration.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Documentation",
+      "text": "```\n"
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "IntXbar",
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/interrupts/Xbar.scala",
+      "lines": [
+        1,
+        7
+      ],
+      "sha256": "ce53319ac1ff31e826aef4a65c1e807b3c10976b858b58a3514e924649cc3582"
+    },
+    {
+      "label": "Definition header",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/interrupts/Xbar.scala",
+      "lines": [
+        9,
+        10
+      ],
+      "sha256": "ce53319ac1ff31e826aef4a65c1e807b3c10976b858b58a3514e924649cc3582"
+    },
+    {
+      "label": "Companion construction interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/interrupts/Xbar.scala",
+      "lines": [
+        28,
+        33
+      ],
+      "sha256": "ce53319ac1ff31e826aef4a65c1e807b3c10976b858b58a3514e924649cc3582"
+    },
+    {
+      "label": "Interrupt range and source parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/interrupts/Parameters.scala",
+      "lines": [
+        9,
+        45
+      ],
+      "sha256": "967330ca991f8cf1f187f564bac5a085d2ee351555cefe753d5d223e26de1a5f"
+    },
+    {
+      "label": "Interrupt sink and edge parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/interrupts/Parameters.scala",
+      "lines": [
+        54,
+        61
+      ],
+      "sha256": "967330ca991f8cf1f187f564bac5a085d2ee351555cefe753d5d223e26de1a5f"
+    },
+    {
+      "label": "Interrupt node implementation",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/interrupts/Nodes.scala",
+      "lines": [
+        10,
+        20
+      ],
+      "sha256": "6161385dd73aee5791ed607875bcd058c5cf6bb6c176c3bb82461c517e649d97"
+    },
+    {
+      "label": "Interrupt nexus interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/interrupts/Nodes.scala",
+      "lines": [
+        47,
+        53
+      ],
+      "sha256": "6161385dd73aee5791ed607875bcd058c5cf6bb6c176c3bb82461c517e649d97"
+    },
+    {
+      "label": "Interrupt node handle types",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/interrupts/package.scala",
+      "lines": [
+        9,
+        14
+      ],
+      "sha256": "4f3acbbf072900bfc9d756aac9330b0e5858e8810ad1af4e16b4eb36503ebaff"
+    },
+    {
+      "label": "Lazy hardware implementation contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/LazyModule.scala",
+      "lines": [
+        91,
+        96
+      ],
+      "sha256": "de43907486dcbc37a9e0c95e9b35cc9a817ab4d06e6ac9b71a55a708a4e8703d"
+    },
+    {
+      "label": "Negotiated input and output accessors",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/Nodes.scala",
+      "lines": [
+        1240,
+        1254
+      ],
+      "sha256": "502fcff0044d7a7492513c31fbb9907ab2dd3ec1e0ade3c126c665f44b8b4071"
+    },
+    {
+      "label": "Tile interrupt crossbar connections",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Interrupts.scala",
+      "lines": [
+        28,
+        33
+      ],
+      "sha256": "eb7c76bc553047391f92944a0b2430bdf6753953d42c4fae5102af3eaccfe7d8"
+    },
+    {
+      "label": "Tile interrupt crossbar construction",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        212,
+        212
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "src/main/scala/subsystem/InterruptBus.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/subsystem/InterruptBus.scala",
+      "lines": [
+        12,
+        23
+      ],
+      "sha256": "87e08f505c03e09c96bea0d74c52693dd1d8c4b1a4ef16628a27b7dbdd61a52a"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `IntXbar`\n\nImplement the complete `IntXbar` module. Keep its constructor, inheritance and public node `intnode`. Return only the complete `class IntXbar` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/interrupts/Xbar.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Class declaration\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Parent instantiation\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/interrupts/Xbar.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/subsystem/InterruptBus.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/tile/Interrupts.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/tile/BaseTile.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/interrupts/Parameters.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/interrupts/Nodes.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/interrupts/package.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/diplomacy/LazyModule.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/diplomacy/Nodes.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Port contract checked by int_xbar_ports",
+      "text": "## Additional requirement\n\nEach connected output must carry the interrupt bits of all inputs concatenated in input-port order, and each source in the output's `IntSourcePortParameters` must keep its `resources` and `nodePath` and have its `range` offset by the sum of `num` over the preceding inputs.\n"
+    }
+  ]
+}

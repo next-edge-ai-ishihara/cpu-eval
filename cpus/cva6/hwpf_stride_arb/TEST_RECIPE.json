@@ -1,0 +1,102 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/compare_directed_traces.py",
+    "harness/evaluate.sh",
+    "harness/evaluate_ports.py",
+    "harness/stride_arb_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hwpf_stride_arb",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_arb.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "ff5e13b0f5df4e94075ddfe34b8c47b747e91c18ea647db1448d9a2a4003d046",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "3326c8faa3bd6a70b5fb587f00a7403820c5a6e474242a9949f3abca79b77dcc",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "directed_test_source": "../hwpf_stride/harness/hwpf_stride_store_effect.S",
+  "directed_test_source_sha256": "c24c831f2c1a92efd9a40565904bb650b177dca2a50fdbf0965ba27e9c13df1b",
+  "directed_test_patch": "../hwpf_stride/test-patches/add_hwpf_stride_store_effect.patch",
+  "directed_test_patch_sha256": "23b8c41b96b8ff34e8af46cbf5b0daf393281711adcd96fea75da6f139403664",
+  "integration_patch": "../hwpf_stride/test-patches/enable_hwpf_stride.patch",
+  "integration_patch_sha256": "fdf7b42156099a242ee8f757498867170d2208939aa63290952c550cf061eb21",
+  "submodule_integration_patch": "../hwpf_stride/test-patches/fix_stride_snoop_line.patch",
+  "submodule_integration_patch_sha256": "46eafab2ab003c0136b249a338c67f5644ed8359986177af7ad8b4d716a00300",
+  "request_tag_patch": "../hwpf_stride/test-patches/forward_stride_request_tag.patch",
+  "request_tag_patch_sha256": "d5a0f0f1494b5536ce6568e763841bac55a38183db5a8bfa181cce04c850e04b",
+  "arb_activation_patch": "test-patches/activate_two_stride_engines.patch",
+  "arb_activation_patch_sha256": "a00ced735b1f51d6661cbc50a3cca7256e5c5238e3b298125abf57ee923212d7",
+  "application_order": [
+    "Start with the recorded revisions unpatched, then invoke harness/evaluate.sh with the candidate.",
+    "The evaluator applies integration_patch at the CVA6 repository root to pulse configuration for prefetcher zero at 0x80010000",
+    "The evaluator applies submodule_integration_patch inside the pinned HPDcache submodule to compare tag and set-index cache-line numbers",
+    "The evaluator applies request_tag_patch inside the pinned HPDcache submodule to preserve each engine's generated physical tag",
+    "The evaluator applies arb_activation_patch at the CVA6 repository root to activate engines zero and one at the same base with a one-request inflight limit. The fixed cv32a60x configuration carries a one-bit transaction ID.",
+    "The shared evaluator integrates the submitted module into its recorded source path.",
+    "The evaluator copies the recorded directed_test_source into verif/tests/cpu-eval-patches before regression; directed_test_patch records the provenance of that assembly source and is not applied during invocation.",
+    "The evaluator runs the directed test and then the standard suite, restores the pinned reference source and reverses the integration patches on exit. Do not apply these patches before invocation."
+  ],
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hwpf_stride/hwpf_stride_arb.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "The ordered patch records describe test provenance. Start with the pinned test sources and leave these patches unapplied before invoking harness/evaluate.sh, which reconstructs the tests.",
+    "evaluation": "Start from an unpatched checkout and invoke harness/evaluate.sh with the candidate; the evaluator applies its own patches and restores its inputs."
+  },
+  "cycle_result_diagnostic": {
+    "role": "diagnostic",
+    "acceptance": "The exact cycle delta is not required. Only values written by the two identified mcycle reads into x18 and x19 and their following sub x20,x19,x18 may differ. Each trace must retain a consistent subtraction. Every aligned retirement retains PC, instruction, hart and memory comparison; ordinary register effects are compared using actual register state."
+  },
+  "directed_semantic_comparator": "harness/compare_directed_traces.py",
+  "directed_semantic_comparator_sha256": "a6af2c5e8813b0988ddc292f984eaac9fca7cfe9570536b847a361d82eca8fed",
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "242ba9be25459c0764a2a38c2c78e78f289e56279c8df0255169cf09b5ef38ae",
+    "test": "harness/stride_arb_ports_tb.sv",
+    "test_sha256": "7638ef90b25b2af773926cfc1bd8af7528c3f4467f01be3a66b647dc1d49f4b2",
+    "fixed_dependencies": {
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/hpdcache_pkg.sv": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf",
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/include/hpdcache_typedef.svh": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126",
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_mux.sv": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1",
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_rrarb.sv": "2b3c6497fcbb636a8d0ef378609db4924574ce0cd2a3958a2709c1a7aff3cf8d",
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_prio_1hot_encoder.sv": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55"
+    },
+    "configuration": "Four requesters with the cv32a60x request and response types: 10-bit offset, one 32-bit data word, 4-bit byte enable, 3-bit source ID, 1-bit transaction ID and 24-bit tag. The tag marks the source; each source sets the transaction ID to its index truncated to one bit, as the wrapper does. Three request phases with 512, 128 and 32 transfers; all contenders, sources zero and two, and intermittent requests. Independent output backpressure; 16 response-owner notifications with transaction IDs 0 and 1. Each phase has a finite observation budget of 4000 cycles.",
+    "comparison_scope": "Ready-valid transfer, preserved request fields and order within each source, stable stalled output, round-robin selection, and response-valid routing by transaction ID. Rotation observation begins after each participating source has emitted a request and compares transfers while all participating external request-valid inputs remain asserted. The first owner and rotation direction are learned from the implementation. Response payload is not compared. No internal state or instance names are required. The observation budget does not specify a maximum implementation latency.",
+    "environment": "Linux, Python 3, Git, Verilator --binary --timing, C++ and make. CVA6_REPO must contain the recorded HPDcache submodule Git objects. Build timeout 120 seconds and runtime timeout 10 seconds by default.",
+    "result": "PASS (0) requires normal exit, all three completed phases, 672 transfers, 16 responses, positive input and output hold coverage, at least 64 rotation comparisons in phase zero and 32 in phase one, and STRIDE_ARB_PORT_TEST_COMPLETE. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2). CPU evaluation follows only after port-test PASS.",
+    "outputs": [
+      "tool.log",
+      "tool.json",
+      "inputs.json",
+      "build.log",
+      "build.json",
+      "runtime.log",
+      "runtime.json"
+    ],
+    "compile_evidence": "Port-test logs are kept beside the dispatcher run directory. A source-attributed port compile failure preserves build.log, candidate-compile-error.txt and exit-code.txt in a single candidate compile receipt."
+  },
+  "directed_comparison_outputs": {
+    "invocation": "CPU_EVAL_LOG_ROOT/hwpf_stride_arb-invocation-*/directed-runner.log",
+    "run": "The single SHA-bound directed run retains raw-architectural-traces/rtl and spike, iss_regr.log, run.exit-code.txt, exit-code.txt, and directed-semantic-comparison.json. The existing shared runner retains its complete output records.",
+    "completion": "The shared regression process must complete exactly one test and one trace. Shared FAIL may be tolerated only when recorded mismatches are fully identified as the three permitted cycle results and agree with actual raw values. Cycle-limit, unrelated regression failure and an RTL trace that cannot be compared are FAIL; an unusable Spike trace or inconsistent evaluator records are INVALID. The 38-test standard suite must pass.",
+    "compile_evidence": "For a source-attributed CPU build error, retain the directed evidence beside the dispatcher run directory and expose only the three-file candidate compile receipt inside it."
+  },
+  "test_lists": [
+    {
+      "path": "../hwpf_stride/harness/testlist_hwpf_stride.yaml",
+      "sha256": "2581bee92b5910d037f90c0360e88111c02ae3253a7a9d1243f5a47d2e743242"
+    },
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049"
+    }
+  ]
+}

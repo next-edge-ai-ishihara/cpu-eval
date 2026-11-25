@@ -1,0 +1,3 @@
+requirement	test_program	test_behavior
+Concatenate interrupt sources without changing the machine-timer interrupt bit	rv64mi-p-timer_pending	The complete CPU reads mip.MTIP into committed register x20 after the platform timer has become pending.
+Preserve interrupt bit indices and source identity at each connected output	int_xbar_ports	Two source ports and two sinks check the numbers and source resources after negotiation and all eight combinations of the three input levels.

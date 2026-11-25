@@ -1,0 +1,9 @@
+requirement	test_program	test_behavior
+Enforce a locked PMP entry for machine-mode accesses	rv64mi-p-pmp_access_faults	The directed test locks an NA4 entry and requires a machine-mode store without write permission to raise a store access fault.
+Apply the configured read and write permissions	rv64mi-p-pmp_access_faults	The first protected word is readable but not writable; the test checks both operations and the precise trap cause.
+Reject an access that crosses a matched PMP boundary	rv64mi-p-pmp_access_faults	An eight-byte store starts in a four-byte read-write NA4 region and must fault instead of modifying either protected or adjacent data.
+Apply M-mode unlocked bypass and S/U read permissions	rv64mi-p-pmp_modes_priority	Cases 1-4 check M bypass, MPRV S/U denial, and S unmatched denial.
+Apply TOR and NAPOT read/write permissions and bounds	rv64mi-p-pmp_modes_priority	Cases 5-9 check TOR read, write denial, and upper bound, plus NAPOT read and upper bound.
+Select the lowest-numbered matching entry	rv64mi-p-pmp_modes_priority	Cases 10-11 check overlapping deny/allow entries in both permission orders.
+Enforce locked execute permission	rv64mi-p-pmp_modes_priority	Case 12 requires an instruction access fault for a locked NAPOT region without X.
+Apply all legal permission settings to a fully contained machine-mode access	PMPCheckerPermissionsTest	Observe the three public outputs for all six legal R/W/X settings when an access is wholly inside a matching locked NA4 region.

@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "HPDcache memory error and command values",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        268,
+        278
+      ],
+      "language": "verilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Load-exclusive and store-exclusive operation values",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        293,
+        294
+      ],
+      "language": "verilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "HPDcache request and read-response fields",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/include/hpdcache_typedef.svh",
+      "lines": [
+        16,
+        33
+      ],
+      "language": "verilog",
+      "sha256": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126"
+    },
+    {
+      "label": "AXI read-address and read-data fields",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/axi/include/axi/typedef.svh",
+      "lines": [
+        61,
+        82
+      ],
+      "language": "verilog",
+      "sha256": "3ababf23a409868e2d78ecbf78d90a82699814904e55e31a2f7990276285d415"
+    },
+    {
+      "label": "AXI response and cache attribute definitions",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/axi/src/axi_pkg.sv",
+      "lines": [
+        64,
+        88
+      ],
+      "language": "verilog",
+      "sha256": "76b3797792ee5b95ab5937f3d457b48852e5c427de48298dafbdde43d0916ac2"
+    },
+    {
+      "label": "Module declaration for hpdcache_mem_to_axi_read",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_to_axi_read.sv",
+      "lines": [
+        20,
+        50
+      ],
+      "language": "verilog",
+      "sha256": "b83579bbf51c1a5d9ce80b8bd7a99151a54e3076504263329b0a2d32c19f6004"
+    },
+    {
+      "label": "Read adapter connection to CMI and AXI channels",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv",
+      "lines": [
+        385,
+        406
+      ],
+      "language": "verilog",
+      "sha256": "1b6b1b7ebd594cd5e5d49405adb490f5e22178231c421f918661a980cf790b9b"
+    },
+    {
+      "label": "Producer mapping for load-exclusive reads",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_uncached.sv",
+      "lines": [
+        647,
+        650
+      ],
+      "language": "verilog",
+      "sha256": "afe48f13f234b03631702f06d21facbd908f957d94ed84672c9bfad964ae6f07"
+    },
+    {
+      "label": "Sibling exclusive-write lock mapping",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_to_axi_write.sv",
+      "lines": [
+        67,
+        74
+      ],
+      "language": "verilog",
+      "sha256": "eed309d22eaf8d8c5b40a5c8b41bda6c9a70bae34f6f23aa86942240570a92ad"
+    },
+    {
+      "label": "Sibling AXI cache attributes, response error mapping, and address request fields",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_to_axi_write.sv",
+      "lines": [
+        105,
+        131
+      ],
+      "language": "verilog",
+      "sha256": "eed309d22eaf8d8c5b40a5c8b41bda6c9a70bae34f6f23aa86942240570a92ad"
+    },
+    {
+      "label": "Sibling AXI address user-field default",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_to_axi_write.sv",
+      "lines": [
+        133,
+        133
+      ],
+      "language": "verilog",
+      "sha256": "eed309d22eaf8d8c5b40a5c8b41bda6c9a70bae34f6f23aa86942240570a92ad"
+    },
+    {
+      "label": "Sibling AXI response handshake, error, and identifier mapping",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_to_axi_write.sv",
+      "lines": [
+        142,
+        145
+      ],
+      "language": "verilog",
+      "sha256": "eed309d22eaf8d8c5b40a5c8b41bda6c9a70bae34f6f23aa86942240570a92ad"
+    },
+    {
+      "label": "CMI read-response signal meanings",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        457,
+        476
+      ],
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_mem_to_axi_read`\n\nImplement the complete `hpdcache_mem_to_axi_read` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_mem_to_axi_read` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Package and imports\n\n### `rtl/src/hpdcache_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n### `rtl/include/hpdcache_typedef.svh`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n### `vendor/pulp-platform/axi/include/axi/typedef.svh`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n### `vendor/pulp-platform/axi/src/axi_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Parent instantiation\n\n### `core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Related source code\n\n### `rtl/src/hpdcache_uncached.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n### `rtl/src/utils/hpdcache_mem_to_axi_write.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Documentation\n\n### `docs/source/interface.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+diff --git a/verif/tests/custom/common/crt.S b/verif/tests/custom/common/crt.S
+--- a/verif/tests/custom/common/crt.S
++++ b/verif/tests/custom/common/crt.S
+@@ -15,7 +15,9 @@
+ #endif
+ 
+   .section ".text.init"
++  .globl rvtest_entry_point
+   .globl _start
++rvtest_entry_point:
+ _start:
+   li  x1, 0
+   li  x2, 0
+@@ -117,6 +119,7 @@ _start:
+ .option push
+ .option norelax
+   la gp, __global_pointer$
++  .set __global_pointer$, _end
+ .option pop
+ 
+   la  tp, _end + 63

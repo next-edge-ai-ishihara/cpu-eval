@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for ibex_prefetch_buffer",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_prefetch_buffer.sv",
+      "lines": [
+        12,
+        42
+      ],
+      "language": "verilog",
+      "sha256": "988ca05039f033c0eef9feffba996771c3449f255c64d7d78de04e1984249ccc"
+    },
+    {
+      "label": "Parent instantiation for ibex_prefetch_buffer",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_if_stage.sv",
+      "lines": [
+        350,
+        378
+      ],
+      "sha256": "8b99f212f06aa942e53e8a768863587ffdc29176f5a486c6e273262311c9f6ae"
+    },
+    {
+      "label": "Dependency module declaration for ibex_prefetch_buffer",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_fetch_fifo.sv",
+      "lines": [
+        15,
+        42
+      ],
+      "language": "verilog",
+      "sha256": "3e0b48b771055ea50356cdff418decae16e7d9586a7f953e6799112b238bb63c"
+    },
+    {
+      "label": "Fetch FIFO depth and entry declarations",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_fetch_fifo.sv",
+      "lines": [
+        44,
+        49
+      ],
+      "sha256": "3e0b48b771055ea50356cdff418decae16e7d9586a7f953e6799112b238bb63c"
+    },
+    {
+      "label": "Fetch FIFO instruction address update",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_fetch_fifo.sv",
+      "lines": [
+        169,
+        181
+      ],
+      "sha256": "3e0b48b771055ea50356cdff418decae16e7d9586a7f953e6799112b238bb63c"
+    },
+    {
+      "label": "Fetch FIFO output address",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_fetch_fifo.sv",
+      "lines": [
+        199,
+        200
+      ],
+      "sha256": "3e0b48b771055ea50356cdff418decae16e7d9586a7f953e6799112b238bb63c"
+    },
+    {
+      "label": "Fetch FIFO status",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_fetch_fifo.sv",
+      "lines": [
+        209,
+        212
+      ],
+      "sha256": "3e0b48b771055ea50356cdff418decae16e7d9586a7f953e6799112b238bb63c"
+    },
+    {
+      "label": "Official design documentation for ibex_prefetch_buffer",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_fetch.rst",
+      "lines": [
+        3,
+        27
+      ],
+      "sha256": "859000b59274378622ed19178e53b117491110915274a95784683c497d209631"
+    },
+    {
+      "label": "Instruction-side memory interface",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_fetch.rst",
+      "lines": [
+        41,
+        71
+      ],
+      "sha256": "859000b59274378622ed19178e53b117491110915274a95784683c497d209631"
+    },
+    {
+      "label": "Instruction-side protocol reference",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_fetch.rst",
+      "lines": [
+        83,
+        87
+      ],
+      "sha256": "859000b59274378622ed19178e53b117491110915274a95784683c497d209631"
+    },
+    {
+      "label": "Referenced LSU protocol",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/load_store_unit.rst",
+      "lines": [
+        84,
+        95
+      ],
+      "sha256": "4b19162cc982921c387a8da488a864c7991fe847ce62993226c4cb41dbe58a16"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `ibex_prefetch_buffer`\n\nImplement the complete `ibex_prefetch_buffer` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ibex_prefetch_buffer` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "text": "\n## Parent instantiation\n\n### rtl/ibex_if_stage.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Dependency declarations",
+      "text": "\n## Dependency declarations\n\n### rtl/ibex_fetch_fifo.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Related source code",
+      "text": "\n## Related source code\n\n### rtl/ibex_fetch_fifo.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "text": "\n## Documentation\n\n### doc/03_reference/instruction_fetch.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for LSU documentation",
+      "text": "\n### doc/03_reference/load_store_unit.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    }
+  ]
+}

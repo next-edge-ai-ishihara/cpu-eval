@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "527183bb31a163d44b0fa33f62e970bbb11d9b88479b6c9925d3fcd134858d45",
+  "prompt_sha256": "90e7037b7655ab069a52d5f13a4ef937107e93c085987da94dd969476863a8ad",
+  "repositories": {
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "github.com/riscv-boom/riscv-boom": {
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        298
+      ],
+      "sha256": "5f9d5cf170eb9f0e4c4780c57cc2d5bd9a2b14a8eba393f970633860d34fac1b"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        298,
+        533
+      ],
+      "sha256": "43849363ae1e04f154aa027f8d044cb066b7bd034507b23ffbce19a8ae320e10"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        533,
+        569
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        569,
+        1387
+      ],
+      "sha256": "d1a61ed8db01cf5df312eb71f9c3c1bc7c87a6a1065093e32788f0afa94ccd63"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1387,
+        1394
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1394,
+        1447
+      ],
+      "sha256": "bbf7c945a4e4cfeef1985acc674bdba65cd4cb06b80f935f4ba5275593466478"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1447,
+        1486
+      ],
+      "sha256": "ada51fbbc45cb1c158fe0379dd9f01b0f8f50f6be1a92859e857c76fb196a0d2"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1486,
+        3564
+      ],
+      "sha256": "703b1300e684c3f7dafb3ac1d622326d4cbc6476e9f6d84b0dfac7d96c794f55"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        3564,
+        3621
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        3621,
+        3866
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        3866,
+        3943
+      ],
+      "sha256": "41e160d1819d951daeb323e14f8685b5201a1069e8c9fcec39c42ef6f113b526"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        3943,
+        4441
+      ],
+      "sha256": "9f105795c465fa9bc93035f75a7b23da2a759982c2766838af2de405ac4b8125"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        4441,
+        4497
+      ],
+      "sha256": "9277b84fb74959cfc440392d4b40a724502a04d6d5e8a029b1acbc00ed4458d4"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        4497,
+        4671
+      ],
+      "sha256": "036d215ce148f858a37dd5f09a8e4dc2192d05e7fd3f1a5c536a60602a045171"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        4671,
+        4748
+      ],
+      "sha256": "719ed12eec5edaff3f4eac0d062c6cd960f184257b5cf5180c5dbf1e4ef87f60"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        4748,
+        5612
+      ],
+      "sha256": "8bd6317d6d102a2d5aba7428f514b3554e6ff973fc8375de1538324a832e56c7"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        5612,
+        5668
+      ],
+      "sha256": "0ba393f3f20a6347d411f48dc93fc51a96ee9f024ad554a27bfe1689277848eb"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        5668,
+        5941
+      ],
+      "sha256": "d571e7bb42101b32d38c1c5cae5b244d3366b12816d9a6f08a96fe26ce2682c9"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        5941,
+        5945
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        5945,
+        6128
+      ],
+      "sha256": "d5e00e5a47d68a1ef680a5050e0e4fe60081fb4487d1c1bb758ac2e295e65411"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        6128,
+        6132
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        6132,
+        6585
+      ],
+      "sha256": "55bd6615154a146f82670c2495173d979464d2b05ec4eae9f99adb85e7115c7c"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        6585,
+        6589
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        6589,
+        7541
+      ],
+      "sha256": "273cdf657c333b8509459b0aee1552064c03e97d6036e18d5dc2130678eb6984"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        7541,
+        7545
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Multiplier.scala",
+      "lines": [
+        4,
+        10
+      ],
+      "sha256": "cb4bb2b6345ac53a24d35fb5101d435acee378c3ada6f16ed3d048e88ebfd64c"
+    },
+    {
+      "label": "Existing types and target class declaration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Multiplier.scala",
+      "lines": [
+        12,
+        39
+      ],
+      "sha256": "cb4bb2b6345ac53a24d35fb5101d435acee378c3ada6f16ed3d048e88ebfd64c"
+    },
+    {
+      "label": "Module interface declaration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Multiplier.scala",
+      "lines": [
+        44,
+        44
+      ],
+      "sha256": "cb4bb2b6345ac53a24d35fb5101d435acee378c3ada6f16ed3d048e88ebfd64c"
+    },
+    {
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        630,
+        693
+      ],
+      "label": "Parent instantiation and connections",
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "Division function codes",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/ALU.scala",
+      "lines": [
+        10,
+        32
+      ],
+      "sha256": "b0d4dcdbb704c9398149e793e56b18f844ed2da1683f3ff9d6b3d261b510264e"
+    },
+    {
+      "label": "Data-width codes",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Consts.scala",
+      "lines": [
+        39,
+        47
+      ],
+      "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+    },
+    {
+      "label": "Reachable division operations",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/register-read/func-unit-decode.scala",
+      "lines": [
+        151,
+        158
+      ],
+      "sha256": "26040e898f0845198a845931a1223c8b7f9a55096f4dda7f0e9b6ffb2c9962ad"
+    },
+    {
+      "label": "Division and remainder semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        61,
+        64
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36"
+    },
+    {
+      "label": "Quotient and remainder relation",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        68,
+        70
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36"
+    },
+    {
+      "label": "RV64 word-operation semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        79,
+        85
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36"
+    },
+    {
+      "label": "Division exceptional-result semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        88,
+        111
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2203
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_exu_div_new_4bit_fullshortq",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca",
+    "post_generation_patch": {
+      "path": "test/add-remu-coverage.patch",
+      "sha256": "1e271c94cfce2d662e719fdd3a340d4967841a1d1418ca8729545c27c530e79e",
+      "apply_in": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test",
+      "order": 1
+    },
+    "patched_source_sha256": "87c261a482d84a3ff607b7680cac1d83795b11307e53520d567e46c48617655f",
+    "post_generation_patches": [
+      {
+        "path": "test/observe-division-results.patch",
+        "sha256": "5773cede71b37156f1839cfccf6ce7226c777501d78ac4f241cb0c1888b88bf4",
+        "apply_in": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test",
+        "order": 2
+      },
+      {
+        "path": "test/check-nontrivial-remu.patch",
+        "sha256": "af6d902bd91e197a9a6ab44fbd9821ac27a506207c313e2f7035c51981e9f270",
+        "apply_in": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test",
+        "order": 3
+      }
+    ],
+    "division_result_observation": "Each division writing a nonzero destination is followed by add zero, destination, zero. This consumes the result without changing a GPR and lets the selected CPU wait for valid_out before a younger write can cancel the observed result. Internal division radix and completion latency are not compared.",
+    "post_generation_artifacts": [
+      {
+        "path": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S",
+        "sha256": "87c261a482d84a3ff607b7680cac1d83795b11307e53520d567e46c48617655f"
+      }
+    ],
+    "remu_check": "The fixed program computes unsigned 0x80000000 modulo 3 and consumes the remainder."
+  },
+  "run": "bash ../_shared/run_fixed_test.sh",
+  "comparison": "Ordered Spike and RTL GPR state-change updates; the comparator skips updates that do not change its tracked register state and does not compare every retired instruction, PC, opcode, or memory update."
+}

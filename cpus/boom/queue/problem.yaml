@@ -1,0 +1,14 @@
+id: queue
+cpu: boom
+target:
+  repository: https://github.com/chipsalliance/chisel.git
+  revision: 4da4f252c3d7c834e13bb8e91a69cfe772996452
+  file: src/main/scala/chisel3/util/Decoupled.scala
+  class: Queue
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: ../_shared/evaluate_source_candidate.sh

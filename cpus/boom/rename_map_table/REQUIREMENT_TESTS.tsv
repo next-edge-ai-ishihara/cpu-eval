@@ -1,0 +1,6 @@
+requirement	tests	rationale
+Map logical integer sources and destinations to physical registers	rv64ui-p-add,rv64ui-p-sub,rv64ui-p-xor	Exercise repeated integer destination remapping and dependent source reads.
+Detect incorrect first- and second-source mapping selections	rv64ui-p-map_prs1_x24,rv64ui-p-map_prs2_x26	Use x24 as the first source and x26 as the second source after eight intervening NOP instructions.
+Map address and store-data operands	rv64ui-p-lw,rv64ui-p-sw,rv64ui-p-ld,rv64ui-p-sd	Exercise mappings consumed by memory operations.
+Preserve mappings across different producer latencies	rv64um-p-mul,rv64um-p-div,rv64uf-p-fadd,rv64uf-p-fmadd	Exercise integer and floating-point physical-register mappings.
+Snapshot and restore mappings around control flow	rv64ui-p-beq,rv64ui-p-jalr	Exercise mappings across branches and indirect jumps.

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "problem": "ReDirect",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/base/RePort.scala",
+    "source_unit": "ReDirect"
+  },
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_redirect_bits.patch",
+      "sha256": "77837a4b3f2dabab59ed627c2254d4259e27874fd5b22b268f288564442cb8c5",
+      "applies_to": "Rift2Core revision 64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "purpose": "For the selected Rift2330 two-lane response stream, compare each requested output with the compacted input indexed by the preceding true mapper count, only when that expected input is valid. The comparison includes valid stalled data and does not constrain invalid response bits or the internal routing implementation."
+    }
+  ],
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-*",
+      "rv64um-p-*",
+      "rv64ua-p-*",
+      "rv64uc-p-*",
+      "rv64mi-p-*",
+      "rv64si-p-*"
+    ],
+    "policy": "Run every program in the fixed required-test catalog that matches the selection patterns."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches and no CPU_EVAL_OBSERVATION_MISMATCH marker from harness/observe_redirect_bits.patch."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "version": "5.1.0",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438",
+    "basis": "The fixed rift2core-chisel5-compatibility.patch selects org.chipsalliance::chisel:5.1.0."
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch"
+}

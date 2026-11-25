@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: Apache-2.0
+--- a/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
++++ b/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
+@@ -3258,0 +3259,6 @@
++                  li          t0, 0xf0040000
++                  li          t1, 0x345
++                  sw          t1, 0(t0)
++                  li          t2, 0x678
++                  sw          t2, 4(t0)
++                  lw          t3, 2(t0)
+--- a/third_party/riscv-dv/yaml/iss.yaml
++++ b/third_party/riscv-dv/yaml/iss.yaml
+@@ -18 +18 @@
+-    <path_var>/spike --log-commits --isa=<variant> --priv=<priv> --misaligned -l <elf>
++    <path_var>/spike --log-commits --isa=<variant> --priv=<priv> --misaligned -m0x80000000:0x10000000,0xf0040000:0x10000 -l <elf>

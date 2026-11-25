@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "small configuration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "ibex_configs.yaml",
+      "lines": [
+        19,
+        38
+      ],
+      "sha256": "75b4e848face7fa31e1bc227aaa7a83cb2a8f45aa1fc0bd4fe2e2800f6caac28"
+    },
+    {
+      "label": "Base ISA and configuration types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        36,
+        66
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "PC, expansion, exception, interrupt and debug types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        308,
+        393
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "LFSR and multi-bit types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        732,
+        760
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "CHERIoT capability types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_cheriot_pkg.sv",
+      "lines": [
+        20,
+        139
+      ],
+      "sha256": "d8b5b51ce99129ebd0c6436689cd85883760ca98f15f45c8a18b977549d007c4"
+    },
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_if_stage.sv",
+      "lines": [
+        17,
+        134
+      ],
+      "sha256": "8b99f212f06aa942e53e8a768863587ffdc29176f5a486c6e273262311c9f6ae"
+    },
+    {
+      "label": "Parent instantiation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        528,
+        631
+      ],
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Compressed decoder declaration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_compressed_decoder.sv",
+      "lines": [
+        17,
+        33
+      ],
+      "sha256": "bea22598e9e5f734ace93826eafd01914d2b63565ee0b7e8c8deff25369fbfbd"
+    },
+    {
+      "label": "Prefetch buffer declaration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_prefetch_buffer.sv",
+      "lines": [
+        12,
+        42
+      ],
+      "sha256": "988ca05039f033c0eef9feffba996771c3449f255c64d7d78de04e1984249ccc"
+    },
+    {
+      "label": "prim_buf declaration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "vendor/lowrisc_ip/ip/prim_generic/rtl/prim_buf.sv",
+      "lines": [
+        7,
+        12
+      ],
+      "sha256": "9b00bd8ac203169268262ac9337076781fa962b19beed36f28dde54e360aaaf5"
+    },
+    {
+      "label": "Instruction cache declaration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_icache.sv",
+      "lines": [
+        13,
+        69
+      ],
+      "sha256": "7b250650b7cdc056976f13bfa070b6d05eb5febe2e311a7cfa684de1711b91f9"
+    },
+    {
+      "label": "Dummy instruction declaration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_dummy_instr.sv",
+      "lines": [
+        12,
+        31
+      ],
+      "sha256": "8899ec7fcd6df73d7ea96ad25e73f664ee2ae2a95b2186a36a7ab885e16e292e"
+    },
+    {
+      "label": "Branch predictor declaration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_branch_predict.sv",
+      "lines": [
+        20,
+        32
+      ],
+      "sha256": "78d4120eac2606e34b9338581eac55e3ba3b48c718799a46a887ac9efab2240e"
+    },
+    {
+      "label": "SECDED decoder declaration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_39_32_dec.sv",
+      "lines": [
+        7,
+        12
+      ],
+      "sha256": "f07f26fd2375952e4ec7cfc1641cebcea373a8030d82dd5977a76f81c430cb12"
+    },
+    {
+      "label": "Instruction-valid capture reference",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1960,
+        1975
+      ],
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Instruction-entry tracking reference",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1979,
+        2004
+      ],
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Instruction fetch documentation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_fetch.rst",
+      "lines": [
+        3,
+        27
+      ],
+      "sha256": "859000b59274378622ed19178e53b117491110915274a95784683c497d209631"
+    },
+    {
+      "label": "Trap vector and boot fetch address",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/exception_interrupts.rst",
+      "lines": [
+        9,
+        18
+      ],
+      "sha256": "3fec7f792d48e9cbdfc25fd61c7e92308a81dd4fbe835c6ffb0b6b35debd2f62"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "# Implement `ibex_if_stage`\n\nImplement the complete `ibex_if_stage` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ibex_if_stage` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### ibex_configs.yaml\n\n```yaml\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Package and imports\n\n### rtl/ibex_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### rtl/ibex_cheriot_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Parent instantiation\n\n### rtl/ibex_core.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Dependency declarations\n\n### rtl/ibex_compressed_decoder.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### rtl/ibex_prefetch_buffer.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### vendor/lowrisc_ip/ip/prim_generic/rtl/prim_buf.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### rtl/ibex_icache.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### rtl/ibex_dummy_instr.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### rtl/ibex_branch_predict.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_39_32_dec.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Related source code\n\n### rtl/ibex_core.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Documentation\n\n### doc/03_reference/instruction_fetch.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n### doc/03_reference/exception_interrupts.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task text",
+      "text": "```\n\n## Additional requirement\n\nThe fixed `ibex_core` reads `if_stage_i.instr_valid_id_d` and `if_stage_i.instr_new_id_d`, so the module must declare these signals with the values that `instr_valid_id_o` and `instr_new_id_o` take in the next cycle.\n"
+    }
+  ]
+}

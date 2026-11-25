@@ -1,0 +1,2 @@
+requirement	test_program	test_behavior
+Predict the exit of a loop that runs the same number of iterations each time	rv64mi-p-loop_exit_cycles	The program runs a 100-iteration loop of 12 instructions 32 times, then measures 64 more runs in committed x20. The value must be below 26128 cycles, halfway between forwarding the incoming prediction (26464) and predicting every loop exit (25793).

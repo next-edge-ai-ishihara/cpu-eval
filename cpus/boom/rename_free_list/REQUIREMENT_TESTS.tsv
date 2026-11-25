@@ -1,0 +1,6 @@
+requirement	test_program	test_behavior
+Allocate distinct free physical registers for requested integer and floating-point destinations	rv64ui-p-add;rv64uf-p-fadd	The fixed upstream tests repeatedly allocate destinations and compare retired register values with Spike.
+Return committed physical registers to the free list	rv64ui-p-add;rv64uf-p-fadd	Long dependency sequences require committed old mappings to become available again while preserving architectural results.
+Recover registers allocated after a mispredicted control-flow instruction	rv64ui-p-beq;rv64ui-p-jalr	The fixed control-flow tests exercise branch allocation lists and verify post-redirection results.
+Complete the loop and record elapsed cycles	rv64mi-p-loop_branch_cycles	Program completion and an observed x20 are required; x20 is diagnostic and is not compared.
+Allocate distinct unused registers and recover observed younger allocations	FreeListPublicContractTest	Finite 100/31 integer and 96/32 floating-point instances sample the register numbers after assertion of the requests and check distinct allocations, return and branch recovery, including a register freed and reallocated after the branch.

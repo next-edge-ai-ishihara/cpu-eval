@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "problem": "RAS",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/frontend/RAS.scala",
+    "source_unit": "RAS"
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-jalr"
+    ],
+    "policy": "Run the upstream JALR test and two directed call/return programs built from harness/ras-cycle.S. Dromajo compares retired instructions. The fixed IF4 observation separately checks the stack availability and predicted return address when the parent accepts a return."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every program completes with zero RTL-versus-ISA trace mismatches and no CPU_EVAL_OBSERVATION_MISMATCH report from the fixed IF4 return-stack observation. The reference prints each required observation marker, so a directed program that does not print it is a functional failure."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "version": "5.1.0",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438",
+    "basis": "The fixed rift2core-chisel5-compatibility.patch selects org.chipsalliance::chisel:5.1.0."
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "directed_test_construction": {
+    "base_repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "base_revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "source": "harness/ras-cycle.S",
+    "environment_header": {
+      "repository": "https://github.com/whutddk/Rift2Core.git",
+      "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "tb/compile/riscv-tests/env/p/riscv_test.h"
+    },
+    "build_commands": [
+      "riscv64-unknown-elf-gcc -march=rv64g -mabi=lp64 -fvisibility=hidden -nostdlib -nostartfiles -fcommon -Ienv/p -Iisa/macros/scalar -c ras-cycle.S -o out/ras-cycle.o",
+      "riscv64-unknown-elf-gcc -march=rv64g -mabi=lp64 -static -mcmodel=medany -nostdlib -nostartfiles -Wl,--build-id=none -Tenv/p/link.ld out/ras-cycle.o -o out/ras-cycle",
+      "riscv64-unknown-elf-objcopy -O verilog out/ras-cycle out/ras-cycle.verilog",
+      "sed -i s/@800/@000/g out/ras-cycle.verilog",
+      "riscv64-unknown-elf-gcc -march=rv64g -mabi=lp64 -fvisibility=hidden -nostdlib -nostartfiles -fcommon -DDEPTH_ONLY -Ienv/p -Iisa/macros/scalar -c ras-cycle.S -o out/ras-depth-cycle.o",
+      "riscv64-unknown-elf-gcc -march=rv64g -mabi=lp64 -static -mcmodel=medany -nostdlib -nostartfiles -Wl,--build-id=none -Tenv/p/link.ld out/ras-depth-cycle.o -o out/ras-depth-cycle",
+      "riscv64-unknown-elf-objcopy -O verilog out/ras-depth-cycle out/ras-depth-cycle.verilog",
+      "sed -i s/@800/@000/g out/ras-depth-cycle.verilog"
+    ]
+  },
+  "directed_functional_tests": [
+    {
+      "name": "ras-cycle",
+      "source": "harness/ras-cycle.S",
+      "source_sha256": "63e5f11c881481e8b04030f72aacadba1d7cd3bead48c11701af29dbe96b9f01",
+      "elf": "harness/ras-cycle",
+      "elf_sha256": "dbe285a8fdfcffc6447e23fd34fc61602efb18fd849ce2a37cee87c4b31dc169",
+      "verilog_image": "harness/ras-cycle.verilog",
+      "verilog_image_sha256": "83aab310c507b9a5df5d6a60ff2d97fba5b7eb7ca662f695f646236a574082cf"
+    },
+    {
+      "name": "ras-depth-cycle",
+      "source": "harness/ras-cycle.S",
+      "source_sha256": "63e5f11c881481e8b04030f72aacadba1d7cd3bead48c11701af29dbe96b9f01",
+      "elf": "harness/ras-depth-cycle",
+      "elf_sha256": "188602b73d676132337fd11d6ca098588543c972b791eaec0cde96e4418b4552",
+      "verilog_image": "harness/ras-depth-cycle.verilog",
+      "verilog_image_sha256": "ff119b35a3bc0fbbb0e25fa159ebc06643597304bd5d7813abe150f07f746ac9"
+    }
+  ],
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_return_stack.patch",
+      "sha256": "641fb11f629764dc9dfc888d25a699fd1d45314631a2a713a822ed7b896f0414",
+      "purpose": "Model the return stack in IF4, outside the RAS class, and report CPU_EVAL_OBSERVATION_MISMATCH when the RAS return availability or predicted return address differs from the model when IF4 accepts a return."
+    }
+  ],
+  "required_observation_markers": {
+    "ras-cycle": "CPU_EVAL_RAS_FLUSH_AND_COROUTINE_REACHED",
+    "ras-depth-cycle": "CPU_EVAL_RAS_DEPTH_REACHED"
+  }
+}

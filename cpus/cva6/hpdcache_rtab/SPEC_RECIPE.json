@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "CVA6 replay-table entry count",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+      "lines": [
+        233,
+        233
+      ],
+      "language": "systemverilog",
+      "sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    {
+      "label": "CVA6 replay-table single-entry setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_wrapper.sv",
+      "lines": [
+        389,
+        389
+      ],
+      "language": "systemverilog",
+      "sha256": "8092ed052b8c097e2f3969ae2c43205989666f2495f7c678d2749e5db25872c0"
+    },
+    {
+      "label": "Module declaration for hpdcache_rtab",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_rtab.sv",
+      "lines": [
+        13,
+        101
+      ],
+      "language": "systemverilog",
+      "sha256": "5a61d9aade361532b4df8463172d536aeee887d7f0c349ed0ddafa3e25c2169c"
+    },
+    {
+      "label": "Replay-table dependency fields",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        345,
+        359
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Replay-table pointer and request types",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        253,
+        280
+      ],
+      "language": "systemverilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    },
+    {
+      "label": "Load operation predicate",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        100,
+        105
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Prefetch operation predicate",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        225,
+        227
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Replay-table architecture",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        812,
+        830
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table operation set",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        885,
+        930
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table allocation and linked allocation algorithms",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        932,
+        980
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table pop algorithm",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        982,
+        1052
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table commit, rollback, and ready-selection algorithms",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        1054,
+        1099
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table dependency and lookup algorithms",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        1102,
+        1171
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Parent instantiation in hpdcache_ctrl",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        793,
+        871
+      ],
+      "language": "systemverilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    },
+    {
+      "label": "Pending-transaction completion conditions",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        768,
+        777
+      ],
+      "language": "systemverilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    },
+    {
+      "label": "Write-buffer replay-check interface",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_wbuf.sv",
+      "lines": [
+        83,
+        89
+      ],
+      "language": "systemverilog",
+      "sha256": "134fefdfd7f7846896ed814a4710859b0b9bc884cf498079a4a93c3ea939e21c"
+    },
+    {
+      "label": "Write-buffer replay address matching and status rules",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_wbuf.sv",
+      "lines": [
+        391,
+        425
+      ],
+      "language": "systemverilog",
+      "sha256": "134fefdfd7f7846896ed814a4710859b0b9bc884cf498079a4a93c3ea939e21c"
+    },
+    {
+      "label": "Request field declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/include/hpdcache_typedef.svh",
+      "lines": [
+        67,
+        80
+      ],
+      "language": "systemverilog",
+      "sha256": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126"
+    },
+    {
+      "label": "Fence detection and RTAB pending-transaction dependency",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl_pe.sv",
+      "lines": [
+        251,
+        264
+      ],
+      "language": "systemverilog",
+      "sha256": "a2dc2bc28900d9f9285286fbd1a8ee8d716853d975c7131121e4de8fcbd877f8"
+    },
+    {
+      "label": "Parent connection of the RTAB fence dependency",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        721,
+        721
+      ],
+      "language": "systemverilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_rtab`\n\nImplement the complete `hpdcache_rtab` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_rtab` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### `core/cache_subsystem/cva6_hpdcache_subsystem.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: `core/cache_subsystem/cva6_hpdcache_wrapper.sv`",
+      "text": "\n```\n\n### `core/cache_subsystem/cva6_hpdcache_wrapper.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Package and imports; `rtl/src/hpdcache_pkg.sv`",
+      "text": "\n```\n\n## Package and imports\n\n### `rtl/src/hpdcache_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Module declaration",
+      "text": "\n```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Parent instantiation; `rtl/src/hpdcache_ctrl.sv`",
+      "text": "\n```\n\n## Parent instantiation\n\n### `rtl/src/hpdcache_ctrl.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Dependency declarations; `rtl/include/hpdcache_typedef.svh`",
+      "text": "\n```\n\n## Dependency declarations\n\n### `rtl/include/hpdcache_typedef.svh`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/hpdcache_wbuf.sv`",
+      "text": "\n```\n\n### `rtl/src/hpdcache_wbuf.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Related source code; `rtl/src/hpdcache_wbuf.sv`",
+      "text": "\n```\n\n## Related source code\n\n### `rtl/src/hpdcache_wbuf.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/hpdcache_ctrl_pe.sv`",
+      "text": "\n```\n\n### `rtl/src/hpdcache_ctrl_pe.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Documentation; `docs/source/architecture.rst`",
+      "text": "\n```\n\n## Documentation\n\n### `docs/source/architecture.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Additional requirement",
+      "text": "\n```\n\n## Additional requirement\n\nAfter a rollback through `pop_rback_i`, a later `pop_try_req_o` for that entry returns the `alloc_req_i` value presented with the rollback, including its `way_fetch` field.\n"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        12,
+        152
+      ],
+      "language": "verilog",
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3"
+    },
+    {
+      "label": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "lines": [
+        10,
+        35
+      ],
+      "language": "verilog",
+      "sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7"
+    },
+    {
+      "label": "corev_apu/src/ariane.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "corev_apu/src/ariane.sv",
+      "lines": [
+        115,
+        136
+      ],
+      "language": "verilog",
+      "sha256": "3eeb35b07985c416de33cc81628bfb64802b673d73d33ad6863776f546c6be10"
+    },
+    {
+      "label": "core/include/cvxif_types.svh",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cvxif_types.svh",
+      "lines": [
+        5,
+        71
+      ],
+      "language": "verilog",
+      "sha256": "1bd2114654627c9df62bdc74165f14b6392e4b17eae591e86e767917c2cadfd0"
+    },
+    {
+      "label": "core/cvxif_example/compressed_instr_decoder.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/compressed_instr_decoder.sv",
+      "lines": [
+        10,
+        44
+      ],
+      "language": "verilog",
+      "sha256": "b7a5bfdc09a732770691e350c4efc154a402b3823578134b23c1cd3ad5e14375"
+    },
+    {
+      "label": "core/cvxif_example/instr_decoder.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/instr_decoder.sv",
+      "lines": [
+        10,
+        84
+      ],
+      "language": "verilog",
+      "sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca"
+    },
+    {
+      "label": "core/cvxif_example/copro_alu.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/copro_alu.sv",
+      "lines": [
+        10,
+        158
+      ],
+      "language": "verilog",
+      "sha256": "a6ffa7e2e0778bf1bc1b0609a1880ae9afcf8976d101c03ddb62a97ec00c1768"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `cvxif_example_coprocessor`\n\nImplement the complete `cvxif_example_coprocessor` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module cvxif_example_coprocessor` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Package and imports\n\n### `core/cvxif_example/include/cvxif_instr_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or fence",
+      "text": "\n```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or fence",
+      "text": "\n```\n\n## Parent instantiation\n\n### `corev_apu/src/ariane.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or fence",
+      "text": "\n```\n\n## Dependency declarations\n\n### `core/include/cvxif_types.svh`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or fence",
+      "text": "\n```\n\n### `core/cvxif_example/compressed_instr_decoder.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or fence",
+      "text": "\n```\n\n### `core/cvxif_example/instr_decoder.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or fence",
+      "text": "\n```\n\n### `core/cvxif_example/copro_alu.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or fence",
+      "text": "\n```\n"
+    }
+  ]
+}

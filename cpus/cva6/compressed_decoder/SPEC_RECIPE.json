@@ -1,0 +1,1523 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "CV32A60X XLEN",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "CV32A60X width and FPGA selection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        21,
+        24
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "CV32A60X compressed, floating-point, and bit-manipulation extension selection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        36,
+        49
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "CVA6 RISC-V package declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        18,
+        18
+      ],
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    },
+    {
+      "label": "CVA6 base instruction opcode constants",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        232,
+        267
+      ],
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    },
+    {
+      "label": "CVA6 compressed instruction opcode constants",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/riscv_pkg.sv",
+      "lines": [
+        269,
+        300
+      ],
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    },
+    {
+      "label": "Module declaration for compressed_decoder",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/compressed_decoder.sv",
+      "lines": [
+        22,
+        37
+      ],
+      "sha256": "8fcbc36f099de87018068fc788fc488712ba3db2fb7b7f6a9715bd46919c0c62"
+    },
+    {
+      "label": "Parent instantiation for compressed_decoder",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/id_stage.sv",
+      "lines": [
+        168,
+        183
+      ],
+      "sha256": "2c6bdf3d746093c95d719d4ccb79cc2a966e8c05724d25853bdabca933740863"
+    },
+    {
+      "label": "CVA6 decoder register-register opcode case item",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        545,
+        545
+      ],
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "CVA6 decoder acceptance of the RV32 ZEXT.H encoding",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        882,
+        887
+      ],
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "CVA6 decoder register-immediate opcode case item",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        1122,
+        1122
+      ],
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "CVA6 decoder acceptance of the SEXT.B and SEXT.H encodings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        1151,
+        1156
+      ],
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "CVA6 Zcb compressed register and immediate constraints",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/corev-dv/custom/riscv_zcb_instr.sv",
+      "lines": [
+        30,
+        53
+      ],
+      "sha256": "c1609440f5b146718f2a9f88d49d3632048605080a03ddbd6f260001d08c22b2"
+    },
+    {
+      "label": "CVA6 Zcb compressed load, store, and extension encodings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/corev-dv/custom/riscv_zcb_instr.sv",
+      "lines": [
+        78,
+        99
+      ],
+      "sha256": "c1609440f5b146718f2a9f88d49d3632048605080a03ddbd6f260001d08c22b2"
+    },
+    {
+      "label": "CVA6 Zcb compressed NOT and multiply encodings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/corev-dv/custom/riscv_zcb_instr.sv",
+      "lines": [
+        102,
+        105
+      ],
+      "sha256": "c1609440f5b146718f2a9f88d49d3632048605080a03ddbd6f260001d08c22b2"
+    },
+    {
+      "label": "CVA6 Zcb compressed quadrant encodings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/corev-dv/custom/riscv_zcb_instr.sv",
+      "lines": [
+        111,
+        115
+      ],
+      "sha256": "c1609440f5b146718f2a9f88d49d3632048605080a03ddbd6f260001d08c22b2"
+    },
+    {
+      "label": "CVA6 Zcb compressed function encodings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/corev-dv/custom/riscv_zcb_instr.sv",
+      "lines": [
+        119,
+        130
+      ],
+      "sha256": "c1609440f5b146718f2a9f88d49d3632048605080a03ddbd6f260001d08c22b2"
+    },
+    {
+      "label": "CVA6 Zcb compressed NOT function encoding",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/corev-dv/custom/riscv_zcb_instr.sv",
+      "lines": [
+        132,
+        134
+      ],
+      "sha256": "c1609440f5b146718f2a9f88d49d3632048605080a03ddbd6f260001d08c22b2"
+    },
+    {
+      "label": "Generated base encodings for branches, jumps, LUI, and ADDI",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "corev_apu/bootrom/encoding.h",
+      "lines": [
+        224,
+        250
+      ],
+      "sha256": "9e9c83310be1a56abc2f3b4cf2d354d137359e9fa6122ea7dd510cd8ec816e6b"
+    },
+    {
+      "label": "Generated base encodings for shifts and integer ALU operations",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "corev_apu/bootrom/encoding.h",
+      "lines": [
+        255,
+        283
+      ],
+      "sha256": "9e9c83310be1a56abc2f3b4cf2d354d137359e9fa6122ea7dd510cd8ec816e6b"
+    },
+    {
+      "label": "Generated base encodings for loads, stores, and multiply",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "corev_apu/bootrom/encoding.h",
+      "lines": [
+        303,
+        330
+      ],
+      "sha256": "9e9c83310be1a56abc2f3b4cf2d354d137359e9fa6122ea7dd510cd8ec816e6b"
+    },
+    {
+      "label": "Generated base encodings for EBREAK",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "corev_apu/bootrom/encoding.h",
+      "lines": [
+        401,
+        402
+      ],
+      "sha256": "9e9c83310be1a56abc2f3b4cf2d354d137359e9fa6122ea7dd510cd8ec816e6b"
+    },
+    {
+      "label": "CVA6 design documentation for compressed_decoder",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_id_stage.adoc",
+      "lines": [
+        55,
+        64
+      ],
+      "sha256": "98e301e1b0640c93f4a88287408b0410f1216555d6de8e4297109647eafdf360"
+    },
+    {
+      "label": "RISC-V ISA specification: C.LWSP",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        304,
+        309
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.SWSP",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        341,
+        345
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.LW",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        415,
+        420
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.SW",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        453,
+        458
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.J and C.JAL",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        488,
+        507
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.JR and C.JALR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        514,
+        527
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.BEQZ and C.BNEZ",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        542,
+        552
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.LI and C.LUI",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        561,
+        582
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.ADDI",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        586,
+        599
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.ADDI16SP",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        608,
+        615
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.ADDI4SPN",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        627,
+        634
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.SLLI",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        641,
+        652
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.SRLI and C.SRAI",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        659,
+        675
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.ANDI",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        695,
+        698
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.MV",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        706,
+        710
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.ADD",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        721,
+        724
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.AND, C.OR, C.XOR, and C.SUB",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        731,
+        751
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: Defined illegal instruction",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        773,
+        780
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.NOP",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        793,
+        802
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: C.EBREAK",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        804,
+        813
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V ISA specification: Stack-pointer load format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-sp-load-store.edn",
+      "lines": [
+        1,
+        13
+      ],
+      "sha256": "e2ea30c9fe74a5d4020c460919e6187a95cd1360358f17e67a7cd0b28cb9a449"
+    },
+    {
+      "label": "RISC-V ISA specification: Stack-pointer store format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-sp-load-store-css.edn",
+      "lines": [
+        1,
+        11
+      ],
+      "sha256": "16a012bd109489df887b72e3d0f09ab60379e08f54a0ac8a03d0963f8e381a66"
+    },
+    {
+      "label": "RISC-V ISA specification: Register-based load format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/reg-based-ldnstr.edn",
+      "lines": [
+        1,
+        14
+      ],
+      "sha256": "39953459b5401a8765eedec95e40b2b6bd697dea9b780b3358de5835ae152f9a"
+    },
+    {
+      "label": "RISC-V ISA specification: Register-based store format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-cs-format-ls.edn",
+      "lines": [
+        1,
+        14
+      ],
+      "sha256": "78706b87b10345b04d2e3786d215e03202e9c1a4546cd0c2e8dec275c8a1855b"
+    },
+    {
+      "label": "RISC-V ISA specification: CJ format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-cj-format-ls.edn",
+      "lines": [
+        1,
+        20
+      ],
+      "sha256": "8176c1435ab9263e95410bb676b6f78c4b5922758f420c726b25c40f55eb25e3"
+    },
+    {
+      "label": "RISC-V ISA specification: JR and JALR CR format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-cr-format-ls.edn",
+      "lines": [
+        1,
+        11
+      ],
+      "sha256": "45e1b41bcb91528000b2efcc50c092a6392d1e280d4dcdd87ed1776c9c859849"
+    },
+    {
+      "label": "RISC-V ISA specification: CB branch format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-cb-format-ls.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "729db27ef38381a6ba3a61adf06afc2631407f28f7613d2dfd446bafbf334605"
+    },
+    {
+      "label": "RISC-V ISA specification: Integer constant format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-integer-const-gen.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "29cf61e6610a9ec4e476980d6e104260225cc1023d37ac61481769318cb08f88"
+    },
+    {
+      "label": "RISC-V ISA specification: Integer register-immediate format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-int-reg-immed.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "e97ac51a351f3009fcffb00e06d30016c7a8bb40bed735eb78b989770aed8daa"
+    },
+    {
+      "label": "RISC-V ISA specification: CIW format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-ciw.edn",
+      "lines": [
+        1,
+        11
+      ],
+      "sha256": "b2e977e4c5d135b7cdb14a64e8b1c3ca76621cf0565ebb7e9906294b552fb494"
+    },
+    {
+      "label": "RISC-V ISA specification: SLLI CI format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-ci.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "af0dd90aec9bb1be0dcce4ac4910f31ddb119c5dc52ba693351505bd007872d5"
+    },
+    {
+      "label": "RISC-V ISA specification: SRLI and SRAI format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-srli-srai.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "f710fdeac3e9fc5f985079d596a270f6f414ffeab9b95d513c269852192b936e"
+    },
+    {
+      "label": "RISC-V ISA specification: ANDI format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-andi.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "38cff394f956c9bb8726e2b09d867be552aa4282aa0aa104f1faa4f229a2bd23"
+    },
+    {
+      "label": "RISC-V ISA specification: MV and ADD CR format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-int-reg-to-reg-cr-format.edn",
+      "lines": [
+        1,
+        11
+      ],
+      "sha256": "c0694fea5e465aa800a053e264465013b3f95e1982820f0446b9b788c681e928"
+    },
+    {
+      "label": "RISC-V ISA specification: Register-register CA format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-int-reg-to-reg-ca-format.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "09bc5cd2aa4ada0a2ac0477af7ecef49e56ed3dd07d9a03f1476c5437db4244f"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.ZEXT.B",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        41,
+        47
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.SEXT.B",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        53,
+        59
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.ZEXT.H",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        65,
+        71
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.SEXT.H",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        77,
+        83
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.NOT",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        89,
+        95
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.MUL",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        101,
+        107
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.LHU",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        113,
+        119
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.LH",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        125,
+        131
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.LBU",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        137,
+        143
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.SH",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        149,
+        155
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "CVA6 RV32Zcb description: C.SB",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst",
+      "lines": [
+        161,
+        167
+      ],
+      "line_endings": "lf",
+      "sha256": "97a102131fa0c5a2593af2d474fdb989a07938343ee60b9e9e3a91d3635ec1be"
+    },
+    {
+      "label": "Zc instruction formats",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        305,
+        325
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    },
+    {
+      "label": "c.zext.b heading",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        636,
+        636
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    },
+    {
+      "label": "c.zext.b 32-bit equivalent",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        675,
+        680
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    },
+    {
+      "label": "c.zext.w RV64-only encoding",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        866,
+        888
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    },
+    {
+      "label": "c.not heading",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        926,
+        926
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    },
+    {
+      "label": "c.not 32-bit equivalent",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        963,
+        968
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `compressed_decoder`\n\nImplement the complete `compressed_decoder` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module compressed_decoder` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and package heading",
+      "text": "```\n\n## Package and imports\n\n### core/include/riscv_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Module declaration heading",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Parent heading",
+      "text": "```\n\n## Parent instantiation\n\n### core/id_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Related source heading",
+      "text": "  // ...\n```\n\n## Related source code\n\n### core/decoder.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Path heading",
+      "text": "// ...\n```\n\n### verif/env/corev-dv/custom/riscv_zcb_instr.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Path heading",
+      "text": "```\n\n### corev_apu/bootrom/encoding.h\n\n```c\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Documentation heading",
+      "text": "```\n\n## Documentation\n\n### docs/design/design-manual/source/cva6_id_stage.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Path heading",
+      "text": "```\n\n### src/c-st-ext.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 29
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 30
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 31
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 32
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 33
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 34
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 35
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 36
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 37
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 38
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 39
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 40
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 41
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 42
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-sp-load-store.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 43
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-sp-load-store-css.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 44
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/reg-based-ldnstr.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 45
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-cs-format-ls.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 46
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-cj-format-ls.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 47
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-cr-format-ls.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 48
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-cb-format-ls.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 49
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-integer-const-gen.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 50
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-int-reg-immed.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 51
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-ciw.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 52
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-ci.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 53
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-srli-srai.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 54
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-andi.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 55
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-int-reg-to-reg-cr-format.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 56
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### src/images/wavedrom/c-int-reg-to-reg-ca-format.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 57
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### docs/01_cva6_user/RISCV_Instructions_RV32ZCb.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 58
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 59
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 60
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 61
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 62
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 63
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 64
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 65
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 66
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 67
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 68
+    },
+    {
+      "kind": "authored",
+      "description": "Path heading",
+      "text": "```\n\n### src/zc.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 69
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 70
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 71
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 72
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 73
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 74
+    },
+    {
+      "kind": "authored",
+      "description": "Port contract checked by the Zcb port testbench",
+      "text": "```\n\n## Additional requirement\n\nWhen `illegal_instr_o` is 1, `instr_o` equals `instr_i`.\n"
+    }
+  ]
+}

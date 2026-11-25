@@ -1,0 +1,990 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "MemAddrCalcUnit",
+  "sources": [
+    {
+      "label": "Target declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        475,
+        484
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "Micro-operation bundle extension",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        21,
+        27
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Pipelined functional-unit declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        205,
+        225
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "Micro-operation code field",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        32,
+        36
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Packed immediate",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        74,
+        75
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Memory fields",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        95,
+        96
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation code width",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        127,
+        127
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Load and store-address constants",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        130,
+        131
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Atomic-address constant",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        203,
+        203
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Memory-size and SFENCE decode",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/decode.scala",
+      "lines": [
+        560,
+        561
+      ],
+      "sha256": "df4c81ba804bdc694af1e9cb2caa19ce6ec8565f7d7d1a3b1c29f58d3929ca7c"
+    },
+    {
+      "label": "Immediate packing",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/decode.scala",
+      "lines": [
+        577,
+        579
+      ],
+      "sha256": "df4c81ba804bdc694af1e9cb2caa19ce6ec8565f7d7d1a3b1c29f58d3929ca7c"
+    },
+    {
+      "label": "Memory command width",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Consts.scala",
+      "lines": [
+        52,
+        52
+      ],
+      "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+    },
+    {
+      "label": "SFENCE command",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Consts.scala",
+      "lines": [
+        74,
+        74
+      ],
+      "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+    },
+    {
+      "label": "Exception cause namespace",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        879,
+        879
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Misaligned-load cause",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        884,
+        884
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Misaligned-store cause",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        886,
+        886
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "SFENCE interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        24,
+        31
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "Effective-address and store-data behavior",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        706,
+        710
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "Alignment requirement",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        719,
+        723
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "Sv39 validity",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1684,
+        1690
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "BOOM virtual-address compression documentation",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        1036,
+        1037
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Breakpoint count",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        81,
+        81
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Virtual-memory enable",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        92,
+        92
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Large BOOM mixin",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        179,
+        179
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Large BOOM XLEN",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        218,
+        218
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Logical source-register fields",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        116,
+        117
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Packed immediate width",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        313,
+        313
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Flush-all memory command",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Consts.scala",
+      "lines": [
+        59,
+        59
+      ],
+      "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+    },
+    {
+      "label": "Selected Chipyard configuration",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "generators/chipyard/src/main/scala/config/BoomConfigs.scala",
+      "lines": [
+        17,
+        19
+      ],
+      "sha256": "ec301724d004d1c5918418915b243f31ce0b165bfe7e9d794165c1f30599968b"
+    },
+    {
+      "label": "src/main/scala/common/parameters.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        25,
+        25
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "src/main/scala/exu/execution-units/functional-unit.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        17,
+        31
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "src/main/scala/exu/execution-units/execution-unit.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/execution-unit.scala",
+      "lines": [
+        376,
+        390
+      ],
+      "sha256": "851331e61affdfc8f849bac6b3fd5c673c1f115cbf99d103ea9d6d23d99bd624"
+    },
+    {
+      "label": "src/main/scala/lsu/lsu.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        606,
+        614
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "src/main/scala/lsu/lsu.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        661,
+        662
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "src/main/scala/lsu/lsu.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        870,
+        881
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "src/main/scala/exu/execution-units/functional-unit.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        158,
+        191
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "src/main/scala/exu/execution-units/functional-unit.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        262,
+        273
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "src/main/scala/rocket/Instructions.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        48,
+        58
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "src/a-st-ext.adoc excerpt",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/a-st-ext.adoc",
+      "lines": [
+        360,
+        377
+      ],
+      "sha256": "9fa56f9bc7edc8802fea7f32b10270f8c1e2449c7dc7b985b56e695a10b7f65e"
+    },
+    {
+      "label": "src/supervisor.adoc excerpt",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1073,
+        1105
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "src/main/scala/exu/execution-units/functional-unit.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        82,
+        114
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `MemAddrCalcUnit`\n\nImplement the complete `MemAddrCalcUnit` module. Preserve its declaration and I/O interface. Return only the complete `class MemAddrCalcUnit` definition in a single Scala code block, with no text outside the block.\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## CPU configuration used for evaluation\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/common/parameters.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 29
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/common/config-mixins.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `generators/chipyard/src/main/scala/config/BoomConfigs.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Package and imports\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/exu/execution-units/functional-unit.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 30
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Class declaration\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Parent instantiation\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/exu/execution-units/execution-unit.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 31
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 41
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/exu/execution-units/functional-unit.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 40
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 35
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 36
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/common/micro-op.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/common/consts.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/exu/decode.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/rocket/Consts.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/rocket/Instructions.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 37
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/rocket/TLB.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Related source code\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/exu/core.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/lsu/lsu.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 32
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 33
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 34
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Documentation\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/rv32.adoc`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/a-st-ext.adoc`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 38
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/supervisor.adoc`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 39
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n"
+    }
+  ]
+}

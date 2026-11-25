@@ -1,0 +1,8 @@
+requirement	tests	rationale
+Fetch, decode, rename, dispatch, issue, execute, write back, and commit integer operations	rv64ui-p-add;rv64ui-p-core_writeback	The upstream integer program traverses the documented complete BOOM pipeline. The added program writes a fixed value through an integer execution response and consumes it in two dependent instructions, exposing an incorrect physical-register writeback in the retired register trace while keeping the pass path independent.
+Predict and recover from conditional and indirect control flow	rv64ui-p-beq;rv64ui-p-jalr	The fixed branch and indirect-jump programs exercise speculative state, redirects, and in-order commit.
+Execute loads and commit stores through the load-store unit	rv64ui-p-lw;rv64ui-p-sw	The fixed memory programs exercise address calculation, memory queues, cache requests, load writeback, and store commit.
+Execute multiplication and atomic memory operations	rv64um-p-mul;rv64ua-p-amoadd_w	The fixed M and A extension programs exercise the corresponding LargeBoomConfig execution paths.
+Execute single-precision and double-precision floating-point operations	rv64uf-p-fadd;rv64ud-p-fadd	The fixed floating-point programs exercise the configured floating-point pipeline and register state.
+Fetch and execute compressed instructions	rv64uc-p-rvc	The fixed compressed-instruction program exercises the configured C extension through frontend and backend stages.
+Handle privileged traps and control and status register operations	rv64mi-p-scall	The fixed machine-mode environment-call program exercises trap entry, privileged state, and the control and status registers used by its trap handler.

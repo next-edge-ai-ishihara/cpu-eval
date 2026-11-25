@@ -1,0 +1,3 @@
+requirement	test_program	test_behavior
+Retain CPU behavior when prefetching is disabled	rv64mi-p-data_prefetch_cycles	The directed test traverses one cache line per load and commits the elapsed cycle count to x20; an asserted request enters the parent data-cache prefetch path.
+Never assert a prefetch request	null_prefetcher_ports	Vary commit request, cacheable address, coherence state, MSHR availability, and receiver ready. Compare only prefetch.valid before and after each clock edge.

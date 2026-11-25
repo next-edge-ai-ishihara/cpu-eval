@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/ariane_regfile/SPEC_RECIPE.json",
+  "recipe_sha256": "11dd5db5edfd3793d717fa63591fa597681c64d70461ec67360a2a44fafa58f8",
+  "prompt_sha256": "f8a4d34985ea638f13c9b27b2dfb3f3165f8f263273d2a270a38d6484f251c5b",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        311
+      ],
+      "sha256": "576c99ccab021594336744a1d56905cc6b0cd8dbdb1e1cfae6774066c592715d"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        311,
+        1244
+      ],
+      "sha256": "0dbe0a93410f623b1e8956606aed288266f96a0b1bf2bb1a047147d8a94b9c68"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        1244,
+        1291
+      ],
+      "sha256": "e2268288abe30a91b3982ee76de3437d2598cf6681ec2fdd47686716bd440c90"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1291,
+        1697
+      ],
+      "sha256": "df47b1d83913760648feb6456d05efb564980f84f6978999a868e55fd2ce82b3"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        1697,
+        1776
+      ],
+      "sha256": "21e5cad5fb50955349b3e70858ec2cebf4f8bd1ce6258ea46f9b1e046ed6e7d6"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1776,
+        2033
+      ],
+      "sha256": "72aea974e68f2d85704e5d7f0a329eafb79fa46698b2623b77aeb5ba05b51391"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence after FPGA register-file access timing",
+      "prompt_bytes": [
+        2033,
+        2124
+      ],
+      "sha256": "f725c7d1f423e2f87ababc4b5f6aa9998a6a6021b9ba89e53d33d2c5252fea18"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2124,
+        2525
+      ],
+      "sha256": "06a4aba18dca2f0a2b871e8fde700ce4c897322c288a1a20bf0c5d751157bd4b"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Fence after Register-file operands and zero register",
+      "prompt_bytes": [
+        2525,
+        2557
+      ],
+      "sha256": "92d87202f7706d2c63014fd6a92f58102d98f2ce1edf430190376d895d5ef7b3"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2557,
+        2984
+      ],
+      "sha256": "81858937877c5616f863aebad3045d49abe589af2deed4601fc754cf6587beb5"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Fence after Integer register architectural behavior",
+      "prompt_bytes": [
+        2984,
+        2988
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ariane_regfile_ff.sv",
+      "lines": [
+        25,
+        43
+      ],
+      "language": "verilog",
+      "sha256": "e8b86693adf85bcdbfb40b650698fc38f675d840213be55eff1468bff273e95f"
+    },
+    {
+      "label": "Parent instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        932,
+        946
+      ],
+      "language": "verilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "FPGA register-file access timing",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ariane_regfile_fpga.sv",
+      "lines": [
+        21,
+        23
+      ],
+      "language": "verilog",
+      "sha256": "8032c173aeceb7e62675db1132baede2f7b8f0696137f38da3739eb122901557"
+    },
+    {
+      "label": "Register-file operands and zero register",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        237,
+        239
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "Integer register architectural behavior",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        39,
+        46
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+
+  - test: rv32im-axi-uncached-read-id
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/uncached_read_id.S

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "cpu": "Ibex",
+  "cpu_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+  "configuration": "small",
+  "source": {
+    "repository": "https://github.com/lowRISC/ibex.git",
+    "paths": [
+      "examples/sw/simple_system/pmp_smoke_test",
+      "examples/sw/simple_system/dummy_instr_test",
+      "examples/sw/simple_system/dit_test",
+      "examples/sw/simple_system/common"
+    ]
+  },
+  "build": {
+    "command_template": "make -B -C examples/sw/simple_system/<program> ARCH=rv32imc_zicsr CC=riscv64-unknown-elf-gcc OBJCOPY=riscv64-unknown-elf-objcopy <program>.elf",
+    "source_patch": null,
+    "toolchain": {
+      "gcc": "riscv64-unknown-elf-gcc 13.2.0-11ubuntu1+12"
+    },
+    "checker_source": "dv/cosim/spike_cosim.cc",
+    "checker_source_sha256": "700f6044ed0e5d6b25a70f780ad901e1138a690a76313ab65e5c35531b22fcef"
+  },
+  "programs": [
+    {
+      "name": "pmp_smoke_test",
+      "elf_sha256": "13e4a4cf338e6e597b9a84c195cc9a1ab2ace9da2300a63c799326612c6e4618"
+    },
+    {
+      "name": "dummy_instr_test",
+      "elf_sha256": "012a8777f033edf5e093491bd4a5425761e323529d07320a15eb276aeb2f67f9"
+    },
+    {
+      "name": "dit_test",
+      "elf_sha256": "8ca5b6a7aa0fb737ab481d2dea38bf2bd76af61fa444414ed79369d5fe181146"
+    }
+  ],
+  "simulation_limit": {
+    "option": "--term-after-cycles=2000000",
+    "rule": "A candidate receives PASS or functional FAIL only when the RTL and ISA executions contain compared architectural values. A program that does not finish within the 2,000,000-cycle limit is FAIL. A host timeout is also an infrastructure failure."
+  },
+  "directed_test_build": {
+    "command_template": "cpus/ibex/harness/build_directed_test.sh <ibex> <test>.S <test>.elf",
+    "script": "cpus/ibex/harness/build_directed_test.sh",
+    "script_sha256": "0a27098fd181c038cb1428b81ff5f955d3c4bc968062558d541a859d24da32b3",
+    "reproducibility_note": "Invoke build_directed_test.sh from the repository root with a repository-relative test source path to reproduce the recorded ELF hashes. Invoking from an ancestor of the source directory other than the repository root can select a different source-directory prefix mapping.",
+    "upstream_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+    "upstream_crt0_sha256": "b0117f2e94ab0f65eb54806c67c727cd54142713a15422d5bc81e8431d853b9f",
+    "upstream_linker_script_sha256": "318b9ed40edb2cd0e329e5617f58cacad59d8137f12e550260be29c33f824068"
+  },
+  "problem_specific_additions": [
+    {
+      "module": "ibex_counter",
+      "source": "cpus/ibex/counter/harness/counter_test.S",
+      "source_sha256": "ec34f5788eb342681494b508e51e30a1b713727439e33922b030b4c6d06e5b21",
+      "elf_sha256": "5778b41d6c37ee200c06295ebca1c8abcbfb112600c53b7c8597f37d4cbb247a",
+      "reason": "The numerical counter reset value is unspecified. Initialize both halves of mcycle and minstret through CSR writes before the increment-read sequence."
+    },
+    {
+      "module": "ibex_counter",
+      "source": "cpus/ibex/counter/harness/counter_write_test.S",
+      "source_sha256": "eadd8f04d005de0ffbe640d8ee0ca48fdd35c6da66ea6ff2c0c6c8e082f1ff79",
+      "elf_sha256": "14a201d4ac118158d835381e3464d668a4db6756e7e7d30a3065d73c364fc79a",
+      "reason": "Write and read the low and high halves of minstret."
+    },
+    {
+      "name": "counter_external_ports",
+      "command_template": "bash cpus/ibex/counter/evaluate_ports.sh <Ibex checkout> <candidate> <results>",
+      "script": "evaluate_ports.sh",
+      "script_sha256": "66db848159201099ce9fd312aa2dc17af7469009db1862bdd4c12f441f326a65",
+      "harness": "harness/counter_tb.cpp",
+      "harness_sha256": "22233be706491024e26bc9e422b24abbecd746b7e7ec24664c5f2343857e1949",
+      "parameters": [
+        {
+          "CounterWidth": 64,
+          "ProvideValUpd": 0
+        },
+        {
+          "CounterWidth": 64,
+          "ProvideValUpd": 1
+        }
+      ],
+      "requirements": "Observe only counter_val_o and counter_val_upd_o after establishing both halves with individual writes. Check legal individual low/high writes, write priority over increment, increment, hold, carry and modulo-2^64 wrap. With ProvideValUpd=1 the output is the current value plus one even during hold or writes; with ProvideValUpd=0 it is zero.",
+      "scope": "Only selected 64-bit instances with ProvideValUpd=0/1. No narrow counter, FPGA DSP, X/Z, simultaneous half writes, or numerical reset-value obligation is added.",
+      "parameter_evidence": "SPEC.md presents CounterWidth=64 parent instances with ProvideValUpd=0/1 and the module declaration explicitly describes the incremented output and disabled zero.",
+      "integration": "Run after the five CPU programs. An output mismatch, a build failure and a run that does not complete are FAIL; a wall-clock interruption is INVALID."
+    }
+  ],
+  "problem": "ibex_counter",
+  "assigned_programs": [
+    "pmp_smoke_test",
+    "dummy_instr_test",
+    "dit_test",
+    "counter_test",
+    "counter_write_test"
+  ]
+}

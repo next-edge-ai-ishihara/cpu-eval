@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "20b7779630bc409e3528639079bf7d1f34a0ef1bed12dd51c391cb046dd3197d",
+  "prompt_sha256": "f720ceb43b486173124fcc1c7a384e7d239768af94860dc7c2f5328875b568f6",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "prompt_bytes": [
+        0,
+        323
+      ],
+      "sha256": "5b849617ab5e4bfde86ab5b186ce68210bb027eaf5768ddb882d6009e3a0c337"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        323,
+        551
+      ],
+      "sha256": "cdbb56837034ddc1fe578348067840820cf69832aedbd92dd061d431fca671b3"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "prompt_bytes": [
+        551,
+        593
+      ],
+      "sha256": "86a78ac4cc20bc7a27f46858b3f03571d648288040162b8967a223715500b2f6"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        593,
+        695
+      ],
+      "sha256": "3161271dc33b17cf247127add527e7bbad1144399fa156400aece6f54d6fbb33"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "prompt_bytes": [
+        695,
+        760
+      ],
+      "sha256": "999ae7b94bf8a6ea78c1596937328faaab338856cf8fd52edaa8b95972c255a6"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        760,
+        1306
+      ],
+      "sha256": "84840e09dc1a9bbfd0cba6ec2abdc22a5fe30f47e997a368e743b774f5595add"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "prompt_bytes": [
+        1306,
+        1347
+      ],
+      "sha256": "e43b64637f575a5b9551fb903cc21a0b4b31b383e94e1cce485219d151244f25"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1347,
+        32321
+      ],
+      "sha256": "0ba504ccc52ec5c79dddac9e446c863e7dc3ecc9a43071021ca136bf30305d0a"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "prompt_bytes": [
+        32321,
+        32381
+      ],
+      "sha256": "976202ceb87db2ee2431a2722d2701dda571e6650b7a9df47cde237ddffcc84d"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        32381,
+        36282
+      ],
+      "sha256": "094656a71d5e285bf51a47423d26504d9675976e238ead61dda57af9de797acb"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "prompt_bytes": [
+        36282,
+        36342
+      ],
+      "sha256": "e1fadb8d01ad9c35a1bf7f4d90e0e2dffd6537af95d236aae0d09645d07e9179"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        36342,
+        42616
+      ],
+      "sha256": "7f7d70c905945615e689cd16b66babcb2b0695bf127224afa38b29fdbcb4ca5d"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "prompt_bytes": [
+        42616,
+        42676
+      ],
+      "sha256": "c89dc95f26aee6bb75f5cf529b793294a665c25dc79e726661ba989d49f6edc8"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        42676,
+        47066
+      ],
+      "sha256": "514cd9bc7e84b3af76c1e0c3d55a8ed8a63925097d79a27ccf30a6e625318d8f"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "prompt_bytes": [
+        47066,
+        47071
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for el2_ifu_compress_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_compress_ctl.sv",
+      "lines": [
+        19,
+        28
+      ],
+      "language": "verilog",
+      "sha256": "be4cfb11f0a8958db436e607025a7e96736ee1112615bbe5fbfcf1333f00c99f"
+    },
+    {
+      "label": "Parent instantiation for el2_ifu_compress_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_aln_ctl.sv",
+      "lines": [
+        673,
+        673
+      ],
+      "sha256": "7930b686dcd61a3076e22e03dfa96173ab642d3e0ec08daa0db2384996326218"
+    },
+    {
+      "label": "RISC-V compressed-instruction specification",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        169,
+        972
+      ],
+      "language": "asciidoc",
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V compressed-instruction encodings in quadrant 0",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/bytefield/rvc-instr-quad0.edn",
+      "lines": [
+        1,
+        106
+      ],
+      "language": "edn",
+      "sha256": "094656a71d5e285bf51a47423d26504d9675976e238ead61dda57af9de797acb"
+    },
+    {
+      "label": "RISC-V compressed-instruction encodings in quadrant 1",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/bytefield/rvc-instr-quad1.edn",
+      "lines": [
+        1,
+        189
+      ],
+      "language": "edn",
+      "sha256": "7f7d70c905945615e689cd16b66babcb2b0695bf127224afa38b29fdbcb4ca5d"
+    },
+    {
+      "label": "RISC-V compressed-instruction encodings in quadrant 2",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/bytefield/rvc-instr-quad2.edn",
+      "lines": [
+        1,
+        125
+      ],
+      "language": "edn",
+      "sha256": "514cd9bc7e84b3af76c1e0c3d55a8ed8a63925097d79a27ccf30a6e625318d8f"
+    },
+    {
+      "label": "Selected core ISA",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/overview.md",
+      "lines": [
+        1,
+        8
+      ],
+      "language": "markdown",
+      "sha256": "b3a3d7617ca14fd86a935e88d180dbb7cec0ad0390c0781ea6c7f9aae50c724e"
+    }
+  ]
+}

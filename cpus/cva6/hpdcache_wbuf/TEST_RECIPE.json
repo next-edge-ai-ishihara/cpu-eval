@@ -1,0 +1,78 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "harness/evaluate_ports.py",
+    "harness/wbuf_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_wbuf",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_wbuf.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "134fefdfd7f7846896ed814a4710859b0b9bc884cf498079a4a93c3ea939e21c",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "b7f2e2d12194ed44847c9248b13f60eb9bb311b9be2b583974b94005b4a93f9c",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hpdcache_wbuf.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision; no generated test source is stored"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "a60781c5ea68013eb1f6323ab282542a6c129a10ad95ecb09fa91ee25f9e9d2b",
+    "test": "harness/wbuf_ports_tb.sv",
+    "test_sha256": "71700e7f51b79813d9fec1c0d8ba4ad84852e7078c0d94a78dee03f8e4841793",
+    "observations": 27,
+    "compile_timeout_seconds": 120,
+    "simulation_timeout_seconds": 10,
+    "dependencies": [
+      {
+        "path": "rtl/src/hpdcache_pkg.sv",
+        "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+      },
+      {
+        "path": "rtl/include/hpdcache_typedef.svh",
+        "sha256": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126"
+      },
+      {
+        "path": "rtl/src/common/hpdcache_1hot_to_binary.sv",
+        "sha256": "614752a4144b15b38fe08f79f6a30fb4a77e67db15daeed0c439af4025de6c8f"
+      },
+      {
+        "path": "rtl/src/common/hpdcache_demux.sv",
+        "sha256": "c0faf549360c31318832fc98abb41c3654d8aba2360aa7e98b60b61a24d1eb6d"
+      },
+      {
+        "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+        "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+      },
+      {
+        "path": "rtl/src/common/hpdcache_fxarb.sv",
+        "sha256": "873d1c3f00b4036c4441ffa3ccd42a7995865f64ca8b0eaa2e22cab45533ac49"
+      },
+      {
+        "path": "rtl/src/common/hpdcache_mux.sv",
+        "sha256": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1"
+      },
+      {
+        "path": "rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+        "sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55"
+      },
+      {
+        "path": "rtl/src/common/hpdcache_rrarb.sv",
+        "sha256": "2b3c6497fcbb636a8d0ef378609db4924574ce0cd2a3958a2709c1a7aff3cf8d"
+      }
+    ]
+  }
+}

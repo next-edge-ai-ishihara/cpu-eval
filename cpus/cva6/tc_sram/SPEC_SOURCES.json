@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "d6a2b35385c297250d1ca79128402eb506fc13abf56d174382db2bda0a6cd212",
+  "prompt_sha256": "6dea8125c8eefcf0770cd2530aaa1d7591a472ab007f9d9db035f8ba820b6143",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        0,
+        290
+      ],
+      "sha256": "47c3c1e83a3f5f7ace5b2b4b6e0d34cd99afcfd123440e8384082c821573f197"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        290,
+        1877
+      ],
+      "sha256": "3fdcf600edba7593400d9458c24cf6cfbc837876ce3ae745c5098ec232e9d74d"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        1877,
+        1981
+      ],
+      "sha256": "5c362e47864963cbf7daf0805fe18660bf63f0570f0d0c9d4261d5c225333ee8"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        1981,
+        4577
+      ],
+      "sha256": "e935a7144652861dd4245be733a7bb1a2292f05fcef5d211d67f05e5333da8bd"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        4577,
+        4789
+      ],
+      "sha256": "9f9c531c979da3b484ed7953f420c0cdd31adced061962fae78b1a0e9c06cbbe"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Generic SRAM contract",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "lines": [
+        13,
+        54
+      ],
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    },
+    {
+      "label": "Module declaration for tc_sram",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "lines": [
+        56,
+        82
+      ],
+      "language": "verilog",
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    }
+  ]
+}

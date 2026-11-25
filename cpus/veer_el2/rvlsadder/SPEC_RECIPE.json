@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for rvlsadder",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        466,
+        472
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Parent instantiation for rvlsadder",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_lsc_ctl.sv",
+      "lines": [
+        162,
+        165
+      ],
+      "language": "verilog",
+      "sha256": "df2b2ff5c14742d40e67becc6b3f2043e2bf9b987edfac6406cfa384543e0109"
+    },
+    {
+      "label": "RV32I effective address",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        706,
+        710
+      ],
+      "language": "asciidoc",
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `rvlsadder`\n\nImplement the complete `rvlsadder` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module rvlsadder` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Documentation\n\n### src/rv32.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n"
+    }
+  ]
+}

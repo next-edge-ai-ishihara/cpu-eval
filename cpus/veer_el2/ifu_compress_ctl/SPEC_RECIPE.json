@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for el2_ifu_compress_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_compress_ctl.sv",
+      "lines": [
+        19,
+        28
+      ],
+      "language": "verilog",
+      "sha256": "be4cfb11f0a8958db436e607025a7e96736ee1112615bbe5fbfcf1333f00c99f"
+    },
+    {
+      "label": "Parent instantiation for el2_ifu_compress_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_aln_ctl.sv",
+      "lines": [
+        673,
+        673
+      ],
+      "sha256": "7930b686dcd61a3076e22e03dfa96173ab642d3e0ec08daa0db2384996326218"
+    },
+    {
+      "label": "RISC-V compressed-instruction specification",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        169,
+        972
+      ],
+      "language": "asciidoc",
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V compressed-instruction encodings in quadrant 0",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/bytefield/rvc-instr-quad0.edn",
+      "lines": [
+        1,
+        106
+      ],
+      "language": "edn",
+      "sha256": "094656a71d5e285bf51a47423d26504d9675976e238ead61dda57af9de797acb"
+    },
+    {
+      "label": "RISC-V compressed-instruction encodings in quadrant 1",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/bytefield/rvc-instr-quad1.edn",
+      "lines": [
+        1,
+        189
+      ],
+      "language": "edn",
+      "sha256": "7f7d70c905945615e689cd16b66babcb2b0695bf127224afa38b29fdbcb4ca5d"
+    },
+    {
+      "label": "RISC-V compressed-instruction encodings in quadrant 2",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/bytefield/rvc-instr-quad2.edn",
+      "lines": [
+        1,
+        125
+      ],
+      "language": "edn",
+      "sha256": "514cd9bc7e84b3af76c1e0c3d55a8ed8a63925097d79a27ccf30a6e625318d8f"
+    },
+    {
+      "label": "Selected core ISA",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/overview.md",
+      "lines": [
+        1,
+        8
+      ],
+      "language": "markdown",
+      "sha256": "b3a3d7617ca14fd86a935e88d180dbb7cec0ad0390c0781ea6c7f9aae50c724e"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "# Implement `el2_ifu_compress_ctl`\n\nImplement the complete `el2_ifu_compress_ctl` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_ifu_compress_ctl` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Documentation\n\n### docs/source/overview.md\n\n```markdown\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### src/c-st-ext.adoc\n\n```asciidoc\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### src/images/bytefield/rvc-instr-quad0.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### src/images/bytefield/rvc-instr-quad1.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### src/images/bytefield/rvc-instr-quad2.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n"
+    }
+  ]
+}

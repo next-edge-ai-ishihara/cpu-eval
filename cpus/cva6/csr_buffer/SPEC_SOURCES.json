@@ -1,0 +1,592 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "7479f10124163d26adf460b24e0e69026319e977e4491819c58bf771dbeca0d7",
+  "prompt_sha256": "b62e76915778a0a9f6c6222eb9505e51caba69a3d18aeb4a08fda663b963d476",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        258
+      ],
+      "sha256": "8120e953ee3792408c1e5f0189d9c9bc9090e7a5b52c4470e3ddc5fb6f72c647"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "prompt_bytes": [
+        258,
+        299
+      ],
+      "sha256": "5691ec79a6e8946e264fe09fd5cea07ac968084b78cd9ae1756e1fb3b294d6ed"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        299,
+        1129
+      ],
+      "sha256": "0185f975dd95446800e87610e6a1e9eadde36475aee7015c3fe7eb84d3b8a85e"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        1129,
+        1133
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "prompt_bytes": [
+        1133,
+        1198
+      ],
+      "sha256": "2102f2ea3b32b2eb2f39b7ae733a8e4009cfd12fb5044eb8be1c6b43220c20f1"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1198,
+        1514
+      ],
+      "sha256": "aefe883c7928fd95c4e284d0221ca9553f5918cd140e3066c51d63b1e9370976"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        1514,
+        1518
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Heading for Dependency declarations",
+      "prompt_bytes": [
+        1518,
+        1582
+      ],
+      "sha256": "1753c45056d1c8c14148d53d5b6ee32b21d6e4ef7f5761221a577db4aecbd293"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1582,
+        1929
+      ],
+      "sha256": "2eb355716bd35a9891a0ae385e55d430c2302e85c0a9bd68ca2d8a72c8fff8bc"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Fence after Dependency declarations",
+      "prompt_bytes": [
+        1929,
+        1933
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Heading for Related source code",
+      "prompt_bytes": [
+        1933,
+        1997
+      ],
+      "sha256": "e0cb3dc354424c18eb1df338561f982da3e0f3e82db550c218a2e733f7e2851f"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1997,
+        2706
+      ],
+      "sha256": "b08546cee715a21078e0b289d249c010bff81b2cef6b038cb12862ca5ba224e5"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fence after ex_stage.sv",
+      "prompt_bytes": [
+        2706,
+        2710
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Heading for commit_stage.sv",
+      "prompt_bytes": [
+        2710,
+        2754
+      ],
+      "sha256": "7fe9303e52e7efe080e838182164a515cfbb4241d0ac50131c06a592697fae9e"
+    },
+    {
+      "index": 14,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2754,
+        3350
+      ],
+      "sha256": "c5a0d6a1a20bbb8138238bf019935f9aea19c10d2858ad7889ea439557ab1bc9"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Fence after commit_stage.sv",
+      "prompt_bytes": [
+        3350,
+        3354
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Heading for decoder.sv",
+      "prompt_bytes": [
+        3354,
+        3393
+      ],
+      "sha256": "4d57ecb417d22f2f65306aebbcce723f6f91eab0175ee7ac3a497b8c3d4c3cfe"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        3393,
+        5252
+      ],
+      "sha256": "eab7ca86a8291308221e5faa1c088d7a275a9e97e235eea447b4b44590389827"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Omission within decoder.sv",
+      "prompt_bytes": [
+        5252,
+        5261
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        5261,
+        5466
+      ],
+      "sha256": "4d6769f9abb0b4daf243523dc810e644e0d20f3b5f58cb8120adc184229e4506"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Fence after decoder.sv",
+      "prompt_bytes": [
+        5466,
+        5470
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 21,
+      "kind": "authored",
+      "description": "Heading for issue_read_operands.sv",
+      "prompt_bytes": [
+        5470,
+        5521
+      ],
+      "sha256": "514240f16d3cd0179ef6072780891c3d3dc991597053a57098d20cf48b2e94a0"
+    },
+    {
+      "index": 22,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        5521,
+        5557
+      ],
+      "sha256": "9d58b8912825211355af3445e2fd2bcfcc410c4da82e0be233f343ca68750b15"
+    },
+    {
+      "index": 23,
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "prompt_bytes": [
+        5557,
+        5566
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 24,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        5566,
+        6180
+      ],
+      "sha256": "8be5a60943cba66ea2efc5d76d49e3149fa656679f573cebae480ed2bd12fa59"
+    },
+    {
+      "index": 25,
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "prompt_bytes": [
+        6180,
+        6189
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 26,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        6189,
+        6472
+      ],
+      "sha256": "6373a0e7f32c975a8c221ddefba6c5da5789eae41ad4cb6b44d790e284cd3e7d"
+    },
+    {
+      "index": 27,
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "prompt_bytes": [
+        6472,
+        6481
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 28,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        6481,
+        7186
+      ],
+      "sha256": "d0d58dcbba02a1abb5835fff1918199f3b592352f8a7111f5ff9c00bea3edeac"
+    },
+    {
+      "index": 29,
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "prompt_bytes": [
+        7186,
+        7195
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 30,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        7195,
+        7946
+      ],
+      "sha256": "f487428f3faf8c172686bc8fbf0e55ca8e0ef42990f7de157cf9037f3d50d31b"
+    },
+    {
+      "index": 31,
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "prompt_bytes": [
+        7946,
+        7955
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 32,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        7955,
+        8861
+      ],
+      "sha256": "d2101b073c8013c75b4505067f4d90c10293fa396b33aadbd7d55838cdd4ee07"
+    },
+    {
+      "index": 33,
+      "kind": "authored",
+      "description": "Fence after issue_read_operands.sv",
+      "prompt_bytes": [
+        8861,
+        8865
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "prompt_bytes": [
+        8865,
+        8929
+      ],
+      "sha256": "82a18c3808fe64d6863c63c384bd1551e1a695e2d02a0b8a79ba91c58a481347"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        8929,
+        10069
+      ],
+      "sha256": "b9cac3dcbd19a86fedddda0d33264c76fa6ebd35da2258cffe4706ec43e52381"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Fence after ex_stage.md",
+      "prompt_bytes": [
+        10069,
+        10073
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 37,
+      "kind": "authored",
+      "description": "Heading for commit_stage.rst",
+      "prompt_bytes": [
+        10073,
+        10124
+      ],
+      "sha256": "4118b3026c47c79808984421742e01eb3e51c1f435614d56e09a31e8d84170af"
+    },
+    {
+      "index": 38,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        10124,
+        10623
+      ],
+      "sha256": "3ac37307d7183d66586fc7b9e04cdaf7a8d637313c8dcad4d31d6eaefdb3eda0"
+    },
+    {
+      "index": 39,
+      "kind": "authored",
+      "description": "Fence after commit_stage.rst",
+      "prompt_bytes": [
+        10623,
+        10627
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for csr_buffer",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/csr_buffer.sv",
+      "lines": [
+        17,
+        41
+      ],
+      "language": "verilog",
+      "sha256": "abc337764a461e1772f72290a80bdc9fcdeab8676145e458faad80944a29f6f1"
+    },
+    {
+      "label": "Parent instantiation for csr_buffer",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        382,
+        395
+      ],
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Functional-unit data type supplied to the CSR buffer",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        176,
+        183
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Execution-stage selection and consumption of CSR-buffer outputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        397,
+        421
+      ],
+      "language": "systemverilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Commit-stage production of the CSR-buffer commit input",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/commit_stage.sv",
+      "lines": [
+        217,
+        231
+      ],
+      "language": "systemverilog",
+      "sha256": "7bb90c8f04dd669a2df888ad8dfabcf924815c88ed7a67a18eda3fb2a2361f7a"
+    },
+    {
+      "label": "Decoder production of CSR immediate operands",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        415,
+        455
+      ],
+      "language": "systemverilog",
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "Decoder placement of the CSR immediate",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        1789,
+        1795
+      ],
+      "language": "systemverilog",
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "Issue-stage CSR valid output",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        294,
+        294
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage backpressure from functional-unit readiness",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        326,
+        341
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage construction of functional-unit operands",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        680,
+        685
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage selection of immediate operands",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        722,
+        733
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage CSR valid on issue acknowledge",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        746,
+        769
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage registered functional-unit valid signals",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        800,
+        826
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "CSR-buffer design documentation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/03_cva6_design/ex_stage.md",
+      "lines": [
+        318,
+        338
+      ],
+      "sha256": "a4dc78c0d45142a49574c8b9fd346044dd0f8bdb370bec4b203c5d4c99be22ee"
+    },
+    {
+      "label": "Commit-stage documentation for freeing the CSR buffer",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/03_cva6_design/commit_stage.rst",
+      "lines": [
+        12,
+        19
+      ],
+      "sha256": "13b8ce66aa324f708e9f0aebaed9a2cd4599bedb63ceb2b87630fca7012a139c"
+    }
+  ]
+}

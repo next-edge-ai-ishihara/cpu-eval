@@ -1,0 +1,29 @@
+Bootstrap: localimage
+From: rift2core-eval.sif
+
+%post
+    set -eux
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get install -y --no-install-recommends libelf-dev liblz4-dev python3-pip python3-venv
+    git clone --depth 1 --branch v5.052 https://github.com/verilator/verilator.git /tmp/ibex-verilator-src
+    cd /tmp/ibex-verilator-src
+    autoconf
+    ./configure --prefix=/opt/ibex-verilator-5.052
+    make -j"$(nproc)"
+    make install
+    cd /
+    rm -rf /tmp/ibex-verilator-src
+    python3 -m venv /opt/fusesoc-venv
+    /opt/fusesoc-venv/bin/pip install --no-cache-dir fusesoc==2.4.7 packaging
+    rm -rf /var/lib/apt/lists/*
+
+%environment
+    unset VERILATOR_ROOT
+    export VERILATOR=/opt/ibex-verilator-5.052/bin/verilator
+    export PATH="/opt/fusesoc-venv/bin:/opt/ibex-verilator-5.052/bin:$PATH"
+
+%help
+    Ibex CPU-Eval build and RTL-to-Spike cosimulation environment.
+    Bind an isolated Ibex checkout, the prepared Spike prefix, CPU-Eval
+    evaluator files and test ELFs, and a writable evaluation output directory.

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_btb_tag_hash",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "kind": "directed_mcycle_probe",
+    "name": "btb_tag_hash_cycle_probe",
+    "path": "harness/btb_tag_hash_cycle_probe.s",
+    "sha256": "9d54080612d964a85255b39b470255267ce45fdd3771746db7b3da02af0c3534",
+    "build": "cd tools && make TEST=btb_tag_hash_cycle_probe CONF_PARAMS='-set build_axi4' TB_MAX_CYCLES=5000000 verilator",
+    "reference_mcycle_delta": "00011427",
+    "warmup_iterations": 20,
+    "measurement_iterations": 100
+  },
+  "run": "bash ../_shared/evaluate_btb_hash_probe.sh",
+  "run_env": {
+    "CPU_EVAL_MCYCLE_PROBE_TEST": "btb_tag_hash_cycle_probe"
+  },
+  "comparison": "exact match against the reference mcycle delta (bit-exact deterministic simulation, no tolerance band)"
+}

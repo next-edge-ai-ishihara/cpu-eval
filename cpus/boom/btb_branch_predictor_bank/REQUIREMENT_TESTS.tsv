@@ -1,0 +1,5 @@
+requirement	tests	rationale
+Predict conditional branch and jump targets	rv64ui-p-beq;rv64ui-p-bne;rv64ui-p-blt;rv64ui-p-bge;rv64ui-p-jal;rv64ui-p-jalr;BTBPublicContractTest	Compare retired instructions and architectural updates with Spike; public ports check learned near and far targets.
+Preserve each stage's response timing, conditional direction and miss data	BTBPublicContractTest	Consecutive requests distinguish F2 and F3. F1 pass-through, conditional direction, and distinct incoming F2/F3 targets on a miss are observed.
+Keep a taken target when the same branch is not taken	BTBPublicContractTest	The FTQ successor PC of a not-taken update is not a replacement taken target.
+Clear the indicated erroneous JAL targets	BTBPublicContractTest	A frontend correction uses the supplied slot mask and preserves other learned targets in the packet.

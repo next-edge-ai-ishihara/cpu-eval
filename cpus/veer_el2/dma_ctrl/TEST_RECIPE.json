@@ -1,0 +1,37 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_dma_ctrl",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "dma_ctrl_dbg_mem_probe",
+    "path": "test/evaluate_dma_ctrl.sh",
+    "sha256": "2ea63c9fc69e1563ceaff0a57577500def8b78caaa685ec8fd8adf1c4abbae8d",
+    "config_path": "test/dma_probe.cfg",
+    "config_sha256": "6952b99c8b707c83e4d5bbf6e869be5222fd1372ca26e9324789ad6a237ab81a",
+    "axi_probe_files": [
+      {
+        "path": "test/dma_axi_probe.sv",
+        "sha256": "a1132fc7c2a41be704089e4367d6beee1dd28b5ab862211ffe1c768fec829ab8"
+      },
+      {
+        "path": "test/run_dma_axi_probe.sh",
+        "sha256": "1323606eecec16b15a218102d43459b429f565e1207b9b20c85f66bc9c20f5d5"
+      }
+    ]
+  },
+  "run": "bash test/evaluate_dma_ctrl.sh",
+  "exclusive_resources": [
+    "tcp-port-5000"
+  ],
+  "run_sha256": "2ea63c9fc69e1563ceaff0a57577500def8b78caaa685ec8fd8adf1c4abbae8d",
+  "comparison": "A port-level DMA AXI probe and an OpenOCD debug-module word-memory probe; both must pass."
+}

@@ -1,0 +1,55 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/rtab_ports_tb.sv",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "../../../tools/cva6/replace_module.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_rtab",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_rtab.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "5a61d9aade361532b4df8463172d536aeee887d7f0c349ed0ddafa3e25c2169c",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "fa332ca3fc8add4f7ca74a4477beb6bfcd9c345c30ec8b8539e8b002d8887771",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_rtab.yaml",
+  "test_list_sha256": "4349aa9eec4c506197b98cb727381c0587ab339c88eac0b3c148afea4017d6e5",
+  "directed_test_source": "harness/hpdcache_rtab_conflict.S",
+  "directed_test_source_sha256": "10ba7b9bf7e7be7d6286482c21e5ada8b44dd05f4de375554f9e466ff00d01de",
+  "test_patches": [
+    {
+      "apply_at": "an empty scratch directory for provenance reconstruction only; the evaluator copies harness/hpdcache_rtab_conflict.S"
+    }
+  ],
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hpdcache_rtab.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Use the pinned architectural tests. For a directed test, the evaluator copies the distributed harness/*.S source to <CVA6>/verif/tests/cpu-eval-patches. To reconstruct that source independently, apply its new-file provenance patch in an empty scratch directory and compare the recorded SHA-256; do not apply the provenance patch to either upstream checkout."
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "4629d3f7eaf947396be04bcd8e8ccd3d8afa7bb82662f18bb6e564716ef0dbbd",
+    "test": "harness/rtab_ports_tb.sv",
+    "test_sha256": "a43279b4fc878b0f989147a00b0f9887003134fc0a12d05265c0ef5469dbd940",
+    "observations": [
+      "linked same-line FIFO and commit, preserving both word and halfword sizes",
+      "earlier retained requests complete before a fence",
+      "rollback updates request payload and dependencies",
+      "independent resource waiters retire once each in either order"
+    ],
+    "comparison": "External requests and completion; no internal arrays, fixed arbitration count, or reference cycle matching.",
+    "configuration": "The cv32a60x HPDcache configuration and RTAB types: 34-bit physical address, four entries, single-entry mode disabled.",
+    "limits": "64 MiB temporary storage, build timeout 120 seconds, run timeout 10 seconds, process-group cleanup and no core dump"
+  },
+  "test_materialization": "harness/evaluate_parallel.sh copies the assembly files beside the selected test list into <CVA6>/verif/tests/cpu-eval-patches. The directed test patch is a provenance reconstruction record and is not applied before evaluation."
+}

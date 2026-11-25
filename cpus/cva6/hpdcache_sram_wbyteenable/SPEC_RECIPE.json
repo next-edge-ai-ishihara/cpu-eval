@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_sram_wbyteenable",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_sram_wbyteenable.sv",
+      "lines": [
+        13,
+        35
+      ],
+      "language": "systemverilog",
+      "sha256": "f99bafaae1d8bd9410998bb39ee389d33fbdc78fdaa32e1b5ac75e2ba317d9f3"
+    },
+    {
+      "label": "Byte-enabled SRAM dependency declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_1rw.sv",
+      "lines": [
+        13,
+        29
+      ],
+      "language": "systemverilog",
+      "sha256": "1a955e41c2476e1c105b467a96e69ddc378df0b65f432c3c717741a7650bdc01"
+    },
+    {
+      "label": "ECC byte-enabled SRAM dependency declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_ecc_1rw.sv",
+      "lines": [
+        15,
+        36
+      ],
+      "language": "systemverilog",
+      "sha256": "d7e728c8f8345f7546043d1f88bc7a4ce4260390be927c85edecf67e3c3ce186"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_sram_wbyteenable`\n\nImplement the complete `hpdcache_sram_wbyteenable` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_sram_wbyteenable` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Dependency declarations; `rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_1rw.sv`",
+      "text": "\n```\n\n## Dependency declarations\n\n### `rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_1rw.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_ecc_1rw.sv`",
+      "text": "\n```\n\n### `rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_ecc_1rw.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n```\n"
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "RenameMapTable",
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rename/rename-maptable.scala",
+      "lines": [
+        1,
+        18
+      ],
+      "sha256": "641a0091a08683b78849e6d2b0cf5b8861f5f4c5feb9963ff0c1cf86058c32fb"
+    },
+    {
+      "label": "Target declaration and interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rename/rename-maptable.scala",
+      "lines": [
+        43,
+        67
+      ],
+      "sha256": "641a0091a08683b78849e6d2b0cf5b8861f5f4c5feb9963ff0c1cf86058c32fb"
+    },
+    {
+      "label": "Selected-configuration instance",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rename/rename-stage.scala",
+      "lines": [
+        211,
+        216
+      ],
+      "sha256": "796ad0a777ced671ad7ce91ff5e4b35b36a4877095f65f9bfff1120379118a40"
+    },
+    {
+      "label": "Allocation and branch-tag requests",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rename/rename-stage.scala",
+      "lines": [
+        230,
+        243
+      ],
+      "sha256": "796ad0a777ced671ad7ce91ff5e4b35b36a4877095f65f9bfff1120379118a40"
+    },
+    {
+      "label": "Mapping requests and responses",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rename/rename-stage.scala",
+      "lines": [
+        245,
+        280
+      ],
+      "sha256": "796ad0a777ced671ad7ce91ff5e4b35b36a4877095f65f9bfff1120379118a40"
+    },
+    {
+      "label": "Request and response interfaces",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rename/rename-maptable.scala",
+      "lines": [
+        20,
+        41
+      ],
+      "sha256": "641a0091a08683b78849e6d2b0cf5b8861f5f4c5feb9963ff0c1cf86058c32fb"
+    },
+    {
+      "label": "Branch-resolution interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        116,
+        146
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "Micro-operation branch fields",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        59,
+        60
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Selected configuration disables committed map tables",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        246,
+        247
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Logical-register width",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        258,
+        259
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Branch-tag width",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        266,
+        266
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Integer and floating-point rename-stage instances",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        100,
+        101
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Free-list reset state",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rename/rename-freelist.scala",
+      "lines": [
+        49,
+        50
+      ],
+      "sha256": "511bb7b5becceafd41a62060acb844d3031392901377e17b8d4b15338a79298e"
+    },
+    {
+      "label": "Rename-map-table design contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/rename-stage.rst",
+      "lines": [
+        51,
+        61
+      ],
+      "sha256": "c0afb735d36b57cc875205c9fff0e1ef100da5e779907512ae8bc67a93b685ed"
+    },
+    {
+      "label": "Rollback behavior",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/reorder-buffer.rst",
+      "lines": [
+        150,
+        155
+      ],
+      "sha256": "ff9bfa26f95ae83ff339b2ee1d4523ebf8d70ce8e78b7a643fab3ee31f37a7ec"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission format",
+      "text": "# Implement `RenameMapTable`\n\nImplement the complete `RenameMapTable` module. Preserve the definition name, constructor parameters, inheritance, and public interface shown below. Keep the declarations under Dependency declarations in the fixed source and do not resubmit them.\n\nReturn only the complete `class RenameMapTable` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Parent instantiation\n\n### `src/main/scala/exu/rename/rename-stage.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### `src/main/scala/exu/rename/rename-maptable.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/main/scala/exu/execution-units/functional-unit.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/main/scala/common/micro-op.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/main/scala/common/parameters.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Related source code\n\n### `src/main/scala/exu/core.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/main/scala/exu/rename/rename-freelist.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Documentation\n\n### `docs/sections/rename-stage.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `docs/sections/reorder-buffer.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n"
+    }
+  ]
+}

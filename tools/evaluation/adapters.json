@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "adapters": {
+    "boom": {
+      "driver": "tools/evaluation/evaluate_boom_submissions.py",
+      "invocation_timeout_sec": 14400,
+      "support_files": [
+        "tools/evaluation/scala_compile_diagnostics.py",
+        "tools/submission/__init__.py",
+        "tools/submission/scala_definition.py"
+      ],
+      "test_parallelism": 8,
+      "build_jobs": 32
+    },
+    "cva6": {
+      "driver": "tools/evaluation/evaluate_cva6_submissions.py",
+      "invocation_timeout_sec": 14400,
+      "support_files": [
+        "tools/cva6/check_regression_set.py",
+        "tools/cva6/cpu_cycle_limit.sh",
+        "tools/cva6/replace_module.py",
+        "tools/cva6/run_prebuilt_testharness.sh",
+        "tools/cva6/run_failure.py",
+        "tools/cva6/split_testlist.py"
+      ],
+      "build_jobs": 32
+    },
+    "ibex": {
+      "driver": "tools/evaluation/evaluate_ibex_submissions.py",
+      "support_files": [],
+      "sources": {
+        "ibex": {
+          "revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+          "url": "https://github.com/lowRISC/ibex.git"
+        },
+        "spike": {
+          "archive_sha256": "439fe242443b594f6b47b3917bc82683127d6ef33726bce4def3c723f53ef384",
+          "url": "https://storage.googleapis.com/ibex-cosim-builds/ibex-cosim-aadf648.tar.gz",
+          "version": "aadf648"
+        }
+      }
+    },
+    "rift2core": {
+      "driver": "tools/evaluation/evaluate_rift2core_submissions.py",
+      "invocation_timeout_sec": 14400,
+      "support_files": [
+        "cpus/rift2core/_shared/required-test-catalog.json",
+        "cpus/rift2core/_shared/replace_class.py",
+        "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+        "tools/evaluation/scala_compile_diagnostics.py",
+        "tools/submission/__init__.py",
+        "tools/submission/scala_definition.py"
+      ],
+      "test_parallelism": 1,
+      "test_timeout_sec": 600,
+      "build_jobs": 32
+    },
+    "veer_el2": {
+      "driver": "tools/evaluation/evaluate_veer_el2_submissions.py",
+      "checkout_preparer": "tools/preparation/prepare_veer_evaluation_checkout.py",
+      "support_files": [],
+      "sources": {
+        "veer_el2": {
+          "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+          "url": "https://github.com/chipsalliance/cores-veer-el2.git"
+        }
+      }
+    },
+    "vexriscv": {
+      "driver": "tools/evaluation/evaluate_vexriscv_submissions.py",
+      "support_files": [
+        "tools/evaluation/scala_compile_diagnostics.py",
+        "tools/submission/__init__.py",
+        "tools/submission/scala_definition.py"
+      ],
+      "sources": {
+        "spinalhdl": {
+          "revision": "95a5e6c65c54acfc4707c8fe6ef8b5d297cfcbde",
+          "url": "https://github.com/SpinalHDL/SpinalHDL.git"
+        },
+        "vexriscv": {
+          "revision": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+          "url": "https://github.com/SpinalHDL/VexRiscv.git"
+        }
+      }
+    }
+  }
+}

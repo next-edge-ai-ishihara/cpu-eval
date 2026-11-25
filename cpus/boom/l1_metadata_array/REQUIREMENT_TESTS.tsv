@@ -1,0 +1,6 @@
+requirement	tests	test_behavior
+Initialize every set and way to the reset value	MetadataPublicContractTest	Compare tags and coherence in all 64 sets and eight ways after the initial reset and a reset after writes.
+Apply masked writes to the accepted set	MetadataPublicContractTest	Compare selected-way updates, zero mask, all-way updates and unchanged neighboring sets through public ports.
+Return all ways from the set accepted at the preceding edge	MetadataPublicContractTest	Compare distinct adjacent-set responses while changing the read index before the next edge and driving two non-full masks and unrelated tags.
+Preserve CPU arithmetic and memory effects	rv64ui-p-add;rv64ui-p-sub;rv64ui-p-lw;rv64ui-p-sw	Compare retired instruction effects with Spike and require normal program success.
+Record cache workload completion	rv64mi-p-cache_replacement_cycles	Require normal completion and record x20 without exact cycle equality.

@@ -1,0 +1,100 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+
+%files
+    golden-catalog /opt/golden-catalog
+    shim-template /opt/arbiter-shim-template
+
+%post
+    set -eux
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get install -y --no-install-recommends \
+        git build-essential ccache python3 python3-yaml curl ca-certificates \
+        autoconf bison flex perl help2man make g++ pkg-config cmake rsync \
+        libfl2 libfl-dev zlib1g-dev openjdk-17-jdk-headless \
+        gcc-riscv64-unknown-elf binutils-riscv64-unknown-elf
+
+    mkdir -p /opt/toolchain
+
+    # Ubuntu 24.04 provides the RISC-V GCC 13.2.0 needed by the io_lsu tests.
+
+    git clone --depth 1 --branch v4.224 https://github.com/verilator/verilator.git /opt/verilator-src
+    cd /opt/verilator-src
+    autoconf
+    ./configure --prefix=/opt/toolchain/verilator-install
+    make -j"$(nproc)"
+    make install
+    cd /
+    rm -rf /opt/verilator-src
+
+    curl -fL -o /tmp/circt.tar.gz \
+        https://github.com/llvm/circt/releases/download/firtool-1.59.0/circt-full-shared-linux-x64.tar.gz
+    tar --no-same-owner -xzf /tmp/circt.tar.gz -C /opt/toolchain
+    rm /tmp/circt.tar.gz
+
+    curl -fL -o /opt/toolchain/millw https://raw.githubusercontent.com/lefou/millw/8d89314ef7c770a8dbd83ec2b83da7ac178e3eec/millw
+    chmod +x /opt/toolchain/millw
+
+    mkdir -p /opt/rift2core-arbiter-coursier-cache
+    cd /opt/arbiter-shim-template
+    JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 \
+        PATH="/usr/lib/jvm/java-17-openjdk-amd64/bin:$PATH" \
+        COURSIER_CACHE=/opt/rift2core-arbiter-coursier-cache \
+        ./mill -i shim.compile
+    rm -rf out
+
+    git clone https://github.com/whutddk/Rift2Core.git /opt/rift2core-pristine
+    cd /opt/rift2core-pristine
+    git checkout 64b660fb70e0cab491049bdeea87c27936dcbf1e
+    git submodule update --init --recursive
+    # Prime mill's dependency cache so container runs do not need network access.
+    echo 0.11.6 > .mill-version
+    JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 \
+        PATH="/usr/lib/jvm/java-17-openjdk-amd64/bin:$PATH" \
+        COURSIER_CACHE=/opt/rift2core-arbiter-coursier-cache \
+        /opt/toolchain/millw -i rift2Core[chisel].test.runMain test.testMain || true
+    printf '%s  %s\n' \
+        b83c466d73cf38ec85f7bc2358ccf2fc4f3aac27e78ec4fbd848b7827a59dd57 \
+        /opt/rift2core-arbiter-coursier-cache/https/repo1.maven.org/maven2/org/chipsalliance/chisel_2.13/5.1.0/chisel_2.13-5.1.0.jar \
+        | sha256sum -c -
+    chmod -R a+rX /opt/rift2core-arbiter-coursier-cache
+    rm -rf generated out
+    cd /
+
+    git clone https://github.com/chipsalliance/dromajo.git /opt/dromajo
+    cd /opt/dromajo
+    git checkout 7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f
+    git submodule update --init --recursive
+    mkdir -p build
+    cd build
+    cmake .. -DCMAKE_BUILD_TYPE=Release
+    make -j"$(nproc)"
+    cd /
+
+%environment
+    export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    export REPO=/opt/rift2core-pristine
+    export DROMAJO_DIR=/opt/dromajo
+    export VERILATOR=/opt/toolchain/verilator-install/bin/verilator
+    export MILLW=/opt/toolchain/millw
+    export FIRTOOL_DIR=/opt/toolchain/firtool-1.59.0/bin
+    export TEST_IMAGE_DIR=/opt/golden-catalog/passing-images
+    export ARBITER_PRISTINE=/opt/arbiter-shim-template/shim/src/Arbiter.scala.pristine
+    export ARBITER_SHIM_TEMPLATE=/opt/arbiter-shim-template
+    export ARBITER_CACHE_TEMPLATE=/opt/rift2core-arbiter-coursier-cache
+    export PRISTINE_COURSIER_CACHE=/opt/rift2core-arbiter-coursier-cache
+    export PATH="$JAVA_HOME/bin:$FIRTOOL_DIR:/opt/toolchain/verilator-install/bin:$PATH"
+
+%help
+    Rift2Core grading environment for submitted HDL files.
+    From the CPU-Eval repository root, evaluate one answer:
+
+        python3 tools/evaluate_submission.py run \
+            --problem rift2core/alu \
+            --candidate /path/to/alu.scala \
+            --image /path/to/rift2core-eval.sif \
+            --output /path/to/alu-result
+
+    See the repository README for evaluation commands and verdicts.

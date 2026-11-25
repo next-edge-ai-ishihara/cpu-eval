@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for csr_buffer",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/csr_buffer.sv",
+      "lines": [
+        17,
+        41
+      ],
+      "language": "verilog",
+      "sha256": "abc337764a461e1772f72290a80bdc9fcdeab8676145e458faad80944a29f6f1"
+    },
+    {
+      "label": "Parent instantiation for csr_buffer",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        382,
+        395
+      ],
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Functional-unit data type supplied to the CSR buffer",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        176,
+        183
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Execution-stage selection and consumption of CSR-buffer outputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        397,
+        421
+      ],
+      "language": "systemverilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Commit-stage production of the CSR-buffer commit input",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/commit_stage.sv",
+      "lines": [
+        217,
+        231
+      ],
+      "language": "systemverilog",
+      "sha256": "7bb90c8f04dd669a2df888ad8dfabcf924815c88ed7a67a18eda3fb2a2361f7a"
+    },
+    {
+      "label": "Decoder production of CSR immediate operands",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        415,
+        455
+      ],
+      "language": "systemverilog",
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "Decoder placement of the CSR immediate",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        1789,
+        1795
+      ],
+      "language": "systemverilog",
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "Issue-stage CSR valid output",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        294,
+        294
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage backpressure from functional-unit readiness",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        326,
+        341
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage construction of functional-unit operands",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        680,
+        685
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage selection of immediate operands",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        722,
+        733
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage CSR valid on issue acknowledge",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        746,
+        769
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Issue-stage registered functional-unit valid signals",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        800,
+        826
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "CSR-buffer design documentation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/03_cva6_design/ex_stage.md",
+      "lines": [
+        318,
+        338
+      ],
+      "sha256": "a4dc78c0d45142a49574c8b9fd346044dd0f8bdb370bec4b203c5d4c99be22ee"
+    },
+    {
+      "label": "Commit-stage documentation for freeing the CSR buffer",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/03_cva6_design/commit_stage.rst",
+      "lines": [
+        12,
+        19
+      ],
+      "sha256": "13b8ce66aa324f708e9f0aebaed9a2cd4599bedb63ceb2b87630fca7012a139c"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `csr_buffer`\n\nImplement the complete `csr_buffer` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module csr_buffer` definition in a single SystemVerilog code\nblock, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "text": "\n## Parent instantiation\n\n### core/ex_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Dependency declarations",
+      "text": "\n## Dependency declarations\n\n### core/cva6.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Dependency declarations",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Related source code",
+      "text": "\n## Related source code\n\n### core/ex_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after ex_stage.sv",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for commit_stage.sv",
+      "text": "\n### core/commit_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after commit_stage.sv",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for decoder.sv",
+      "text": "\n### core/decoder.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within decoder.sv",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after decoder.sv",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for issue_read_operands.sv",
+      "text": "\n### core/issue_read_operands.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within issue_read_operands.sv",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after issue_read_operands.sv",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "text": "\n## Documentation\n\n### docs/03_cva6_design/ex_stage.md\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after ex_stage.md",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for commit_stage.rst",
+      "text": "\n### docs/03_cva6_design/commit_stage.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after commit_stage.rst",
+      "text": "```\n"
+    }
+  ]
+}

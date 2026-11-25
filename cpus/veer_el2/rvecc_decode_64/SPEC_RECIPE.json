@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for rvecc_decode_64",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        741,
+        746
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "Instruction-cache use of rvecc_decode_64",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        804,
+        823
+      ],
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835",
+      "language": "verilog"
+    },
+    {
+      "label": "ECC encoder",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        720,
+        738
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "Upstream instruction-cache ECC test",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "testbench/tests/icache_ecc/icache_ecc.c",
+      "lines": [
+        4,
+        19
+      ],
+      "sha256": "f99a20ec2aa4e77c57ce3e1e1c6db8a54dd311c17ac8567075e1f183514e4bdb",
+      "language": "text"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `rvecc_decode_64`\n\nImplement the complete `rvecc_decode_64` module. Preserve the module name and ports shown below. Return only the complete `module rvecc_decode_64` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Heading ## Parent instantiation",
+      "text": "\n```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Heading ## Related source code with path design/lib/beh_lib.sv",
+      "text": "\n```\n\n## Related source code\n\n### design/lib/beh_lib.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Source path testbench/tests/icache_ecc/icache_ecc.c",
+      "text": "\n```\n\n### testbench/tests/icache_ecc/icache_ecc.c\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Close excerpt",
+      "text": "\n```\n"
+    }
+  ]
+}

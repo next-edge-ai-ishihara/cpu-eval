@@ -1,0 +1,35 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvdffs_fpga",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "rvdffs_fpga_rich_probe",
+    "path": "test/rvdffs_fpga_rich_probe.s",
+    "sha256": "99829f6c34f20a00d48af5d65b2ca8e7368b992d0506804b8279813b359337df",
+    "config_path": "test/dccm_probe.cfg",
+    "config_sha256": "0db15ff75d21253dfbdf8b14111c98157858a2ad78fb6ae0557b447cc60a2136"
+  },
+  "run": "bash test/evaluate_rvdffs_fpga_rich_probe.sh",
+  "exclusive_resources": [
+    "tcp-port-5000"
+  ],
+  "run_sha256": "e0699b1a2f96a19dc2c3f76f595ec6f32f47a0a786b2d203ef8910fdf64f8abf",
+  "comparison": "Check public output values for the FPGA clock, independent enables, bypass and reset. Then read three DCCM words from the bare-metal CPU test through the RISC-V Access Memory abstract command (riscv set_mem_access abstract). The program leaves the testbench mailbox untouched and does not reload its stored results.",
+  "port_test": {
+    "path": "test/rvdffs_fpga_ports.sv",
+    "sha256": "dbff75e950c542b5b177df5bd6d1f142d37aaeeeb36cff938331159c0ab81f25",
+    "defines": [
+      "RV_FPGA_OPTIMIZE",
+      "TEC_RV_ICG=clockhdr"
+    ]
+  }
+}

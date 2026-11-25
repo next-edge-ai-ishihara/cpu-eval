@@ -1,0 +1,4 @@
+  - test: cvxif-compressed-rejection
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/rejected_compressed.S

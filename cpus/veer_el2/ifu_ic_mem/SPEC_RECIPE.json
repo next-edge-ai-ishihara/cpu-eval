@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for el2_ifu_ic_mem",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ic_mem.sv",
+      "lines": [
+        20,
+        59
+      ],
+      "language": "verilog",
+      "sha256": "d40029dd544aad109a6572ddeb8e7bfd0bb877f94ac94f9292c34275b1b87289"
+    },
+    {
+      "label": "Parent instantiation for el2_ifu_ic_mem",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_mem.sv",
+      "lines": [
+        148,
+        152
+      ],
+      "sha256": "407e49ac960503befbc02fd5eb7aad283e938ae27f546f2089a44246bea46016"
+    },
+    {
+      "label": "Dependency module declaration for el2_ifu_ic_mem",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ic_mem.sv",
+      "lines": [
+        111,
+        145
+      ],
+      "language": "verilog",
+      "sha256": "d40029dd544aad109a6572ddeb8e7bfd0bb877f94ac94f9292c34275b1b87289"
+    },
+    {
+      "label": "Dependency module declaration for el2_ifu_ic_mem",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ic_mem.sv",
+      "lines": [
+        682,
+        717
+      ],
+      "language": "verilog",
+      "sha256": "d40029dd544aad109a6572ddeb8e7bfd0bb877f94ac94f9292c34275b1b87289"
+    },
+    {
+      "label": "Interface type and parameter declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_mem_if.sv",
+      "lines": [
+        21,
+        25
+      ],
+      "language": "verilog",
+      "sha256": "7badcf1dedd812a056d87160727350bd4fafc6e03952db84ee7e65fb4d3867c9"
+    },
+    {
+      "label": "Instruction-cache data and tag fields",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_mem_if.sv",
+      "lines": [
+        53,
+        73
+      ],
+      "language": "verilog",
+      "sha256": "7badcf1dedd812a056d87160727350bd4fafc6e03952db84ee7e65fb4d3867c9"
+    },
+    {
+      "label": "Instruction-cache modports and interface ending",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_mem_if.sv",
+      "lines": [
+        127,
+        150
+      ],
+      "language": "verilog",
+      "sha256": "7badcf1dedd812a056d87160727350bd4fafc6e03952db84ee7e65fb4d3867c9"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "# Implement `el2_ifu_ic_mem`\n\nImplement the complete `el2_ifu_ic_mem` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_ifu_ic_mem` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Dependency declarations\n\n### `EL2_IC_DATA`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### `EL2_IC_TAG`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### design/lib/el2_mem_if.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n"
+    }
+  ]
+}

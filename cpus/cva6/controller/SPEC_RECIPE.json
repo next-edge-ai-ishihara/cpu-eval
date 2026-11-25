@@ -1,0 +1,572 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Selected configuration declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        21,
+        21
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration atomic-extension setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        41,
+        41
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration hypervisor-extension setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        46,
+        46
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration supervisor-extension setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        60,
+        60
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration user-extension setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        61,
+        61
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration debug setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        89,
+        89
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration fence cache-flush settings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        113,
+        114
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Module declaration for controller",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/controller.sv",
+      "lines": [
+        16,
+        84
+      ],
+      "language": "systemverilog",
+      "sha256": "ab22c8b7dae0c31e9c55cd524b5a804929d63a2c3b496b14d38aef4fa51373e3"
+    },
+    {
+      "label": "Resolved-branch record used by controller",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        132,
+        143
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Frontend connection of branch-predictor and pipeline flushes",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        711,
+        720
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Execution-stage connection of pipeline flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        1003,
+        1008
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Parent instantiation for controller",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        1385,
+        1423
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Branch-unit production of controller input",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/branch_unit.sv",
+      "lines": [
+        63,
+        110
+      ],
+      "language": "systemverilog",
+      "sha256": "39c5c4fad84091c91da5f391e8b6354244823b9ccd4aeec0371415c8d4862bea"
+    },
+    {
+      "label": "Commit-stage production of fence inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/commit_stage.sv",
+      "lines": [
+        278,
+        301
+      ],
+      "language": "systemverilog",
+      "sha256": "7bb90c8f04dd669a2df888ad8dfabcf924815c88ed7a67a18eda3fb2a2361f7a"
+    },
+    {
+      "label": "Frontend consumption of misprediction and flush inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/frontend.sv",
+      "lines": [
+        308,
+        321
+      ],
+      "language": "systemverilog",
+      "sha256": "10a3a3cbcb75ab9a70167f9ea1cdbfbe7c942fae2eab17663fb23396ee880515"
+    },
+    {
+      "label": "Frontend consumption of commit-PC control",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/frontend.sv",
+      "lines": [
+        395,
+        409
+      ],
+      "language": "systemverilog",
+      "sha256": "10a3a3cbcb75ab9a70167f9ea1cdbfbe7c942fae2eab17663fb23396ee880515"
+    },
+    {
+      "label": "Issue-stage meanings of controller flush inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_stage.sv",
+      "lines": [
+        36,
+        43
+      ],
+      "language": "systemverilog",
+      "sha256": "5d5fd9c1c3e0b7fbc43c907b716de7091a74197110de935b3f0fdc1b07e36618"
+    },
+    {
+      "label": "Scoreboard consumption of unissued-instruction flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/scoreboard.sv",
+      "lines": [
+        162,
+        180
+      ],
+      "language": "systemverilog",
+      "sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022"
+    },
+    {
+      "label": "Scoreboard consumption of full flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/scoreboard.sv",
+      "lines": [
+        251,
+        260
+      ],
+      "language": "systemverilog",
+      "sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022"
+    },
+    {
+      "label": "ID-stage consumption of flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/id_stage.sv",
+      "lines": [
+        436,
+        439
+      ],
+      "language": "systemverilog",
+      "sha256": "2c6bdf3d746093c95d719d4ccb79cc2a966e8c05724d25853bdabca933740863"
+    },
+    {
+      "label": "Accelerator production of halt request",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/acc_dispatcher.sv",
+      "lines": [
+        340,
+        348
+      ],
+      "language": "systemverilog",
+      "sha256": "3bb09e7dc4be73e397eeb59a90be25e2354576787b56d19f74b9a9c89dedcbc8"
+    },
+    {
+      "label": "Accelerator production of pipeline-flush input",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/acc_dispatcher.sv",
+      "lines": [
+        444,
+        450
+      ],
+      "language": "systemverilog",
+      "sha256": "3bb09e7dc4be73e397eeb59a90be25e2354576787b56d19f74b9a9c89dedcbc8"
+    },
+    {
+      "label": "CSR production of wait-for-interrupt halt request",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/csr_regfile.sv",
+      "lines": [
+        2659,
+        2674
+      ],
+      "language": "systemverilog",
+      "sha256": "86732e6d98215b984b9ba8eb08c5bd6496a9c918c40c7f91059c572316ee1f8e"
+    },
+    {
+      "label": "Execution-stage CSR-buffer consumption of pipeline flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        381,
+        395
+      ],
+      "language": "systemverilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Instruction-cache consumption of cache flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache.sv",
+      "lines": [
+        192,
+        201
+      ],
+      "language": "systemverilog",
+      "sha256": "272c06abf1f37a3f3a7d18d6c29a08df0a493631e330aefb4c677357a4d901c3"
+    },
+    {
+      "label": "Control-flow precedence and pipeline-flush documentation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/03_cva6_design/pcgen_stage.md",
+      "lines": [
+        18,
+        69
+      ],
+      "sha256": "922be4608563d561591d365b5d79220e2f3a5bd60042c05e11de73c4ee925b34"
+    },
+    {
+      "label": "Commit-stage halt and fence documentation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/03_cva6_design/commit_stage.rst",
+      "lines": [
+        35,
+        39
+      ],
+      "sha256": "13b8ce66aa324f708e9f0aebaed9a2cd4599bedb63ceb2b87630fca7012a139c"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `controller`\n\nImplement the complete `controller` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module controller` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n## Parent instantiation\n\n### core/cva6.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n## Related source code\n\n### core/branch_unit.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/commit_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/frontend/frontend.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/issue_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/scoreboard.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/id_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/acc_dispatcher.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/csr_regfile.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/ex_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/cache_subsystem/cva6_icache.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n## Documentation\n\n### docs/03_cva6_design/pcgen_stage.md\n\n```markdown\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Documentation file heading",
+      "text": "```\n\n### docs/03_cva6_design/commit_stage.rst\n\n```rst\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n"
+    }
+  ]
+}

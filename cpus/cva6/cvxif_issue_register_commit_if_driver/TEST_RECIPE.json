@@ -1,0 +1,62 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/prepare_cpu_observer.py",
+    "harness/observe_cpu_notifications.py",
+    "harness/testlist_commit_notifications.yaml",
+    "tests/commit_notifications.S",
+    "tests/0001-add-commit-notifications.patch",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "cvxif_issue_register_commit_if_driver",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cvxif_issue_register_commit_if_driver.sv",
+  "source_sha256": "79577da9e81421b986255b84f5249979c5b1f3218d83ed761b564dd5821ad553",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "ca24bc0fba464f5005cd5e0f25401b08fc8aef32fbed89456c2dffd4a6f235fe",
+  "reused_test": {
+    "problem": "../copro_alu",
+    "evaluator": "../copro_alu/harness/evaluate.sh",
+    "evaluator_sha256": "e17bd8f8d37ac08ca3c353aa7bbdd94788f7b225d4ac974845bddc2c9473c5b2",
+    "trace_comparator": "../copro_alu/harness/compare_retired_instructions.py",
+    "trace_comparator_sha256": "80126e0c1f27a5f6d513ed45611666e4769133206beb663da93d4b47c0f698f2",
+    "test_source_reconstruction": "Use the pinned CVA6 cvxif_add_nop.S and apply the three ordered patches recorded by ../copro_alu/TEST_RECIPE.json; verify final SHA-256 8480494585b19d414b50589bd3fbd9f9c5140731e4f0ac53f82b8d1b5b40bd99.",
+    "test_list": "../copro_alu/harness/testlist_copro_alu.yaml",
+    "test_list_sha256": "5202801d822c3b9f2c2e810cfca52e407ec3f3cf0ad367b62e9aea6321bfc912",
+    "reference_model_build_script": "../copro_alu/environment/build_spike.sh",
+    "reference_model_build_script_sha256": "0c58bbeb40d966fea5d06ac1837ed78e313549b65a6f3d3e85737ff790d97a7a"
+  },
+  "commit_notification_observer": {
+    "method": "fixed_cpu_interface_with_parent_issue_order",
+    "preparation": "harness/prepare_cpu_observer.py",
+    "preparation_sha256": "3f740bd8efb9c098aece06e192b34b05bdb8419707da1330f7bdbdb4f9d099ce",
+    "observer": "harness/observe_cpu_notifications.py",
+    "observer_sha256": "2a3a0abf29510cd8cbe9f3c3da45ed9c49fedfcaa9e70f94eb6af9fbbe7a2c95",
+    "testlist": "harness/testlist_commit_notifications.yaml",
+    "testlist_sha256": "dd50a8559e480597e5f090f0227ec82c22a6ade18c0d35bd6416fa2803e7e309",
+    "test_source": "tests/commit_notifications.S",
+    "test_source_sha256": "3774f8fe04598eededbed32582240c2f937c70c4d53069141f8ebc1b927cf0f1",
+    "test_source_provenance": "Reconstruct copro_alu_all_ops.S with the three pinned patches in ../copro_alu/TEST_RECIPE.json, copy it to commit_notifications.S, apply tests/0001-add-commit-notifications.patch, and compare every byte with tests/commit_notifications.S. The same pinned arch_test.h and model_test.h environment is used.",
+    "observation_boundary": "Issue and commit interface events at the fixed CPU boundary, with passive observation of the fixed parent scoreboard presentation ports to order instruction IDs. The architectural traces compare the effects of register operand transfers.",
+    "instrumentation_target": "corev_apu/tb/ariane_testharness.sv",
+    "instrumentation_restore": "The pinned simulation test harness is restored after evaluation and checked by the dedicated entry. Hardware sources other than the submitted module are unchanged.",
+    "notification_timing": "A notification may occur at request initiation, at completion, or later. Cancellation discards that request. Non-kill batch notifications cover requests no younger than the actually presented CPU instruction named by the notification; numeric ID order is not used. Notifications do not carry credit to future requests or reused IDs. Killing is unsupported in this selected CVA6 configuration.",
+    "programs": [
+      "copro-alu-all-operations",
+      "cvxif-commit-notifications"
+    ],
+    "classification": "PASS (0): observed issues have their required notifications and no errors; FAIL (1): no issue is observed, an issue begins without a matching CPU instruction presentation, an observed issue remains pending, a required accepted/rejected path is missing, the recorded event sequence is inconsistent, or notifications violate the contract; INVALID (2): the fixed observer header is missing or duplicated, or an observation line is split in the output stream.",
+    "test_patch": "tests/0001-add-commit-notifications.patch",
+    "test_patch_sha256": "af9678e3fd516957e3ea4b6dfe3e69c928dccd6bc98882b8cdc4d6303807b9b5"
+  },
+  "environment_setup": {
+    "path_in_cpu_checkout": "verif/sim/setup-env.sh",
+    "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+    "toolchain": "The saved CVA6 grading image provides Verilator 5.008 and riscv64-unknown-elf tools."
+  }
+}

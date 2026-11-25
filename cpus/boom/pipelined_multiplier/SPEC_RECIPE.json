@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "PipelinedMultiplier",
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Multiplier.scala",
+      "lines": [
+        1,
+        10
+      ],
+      "sha256": "cb4bb2b6345ac53a24d35fb5101d435acee378c3ada6f16ed3d048e88ebfd64c"
+    },
+    {
+      "label": "Multiplier function codes",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/ALU.scala",
+      "lines": [
+        34,
+        39
+      ],
+      "sha256": "b0d4dcdbb704c9398149e793e56b18f844ed2da1683f3ff9d6b3d261b510264e"
+    },
+    {
+      "label": "Multiplication instruction semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        25,
+        30
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36"
+    },
+    {
+      "label": "RV64 word multiplication",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        40,
+        42
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36"
+    },
+    {
+      "label": "src/main/scala/rocket/Multiplier.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Multiplier.scala",
+      "lines": [
+        184,
+        188
+      ],
+      "sha256": "cb4bb2b6345ac53a24d35fb5101d435acee378c3ada6f16ed3d048e88ebfd64c"
+    },
+    {
+      "label": "src/main/scala/exu/execution-units/functional-unit.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        701,
+        718
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "src/main/scala/rocket/Multiplier.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Multiplier.scala",
+      "lines": [
+        12,
+        23
+      ],
+      "sha256": "cb4bb2b6345ac53a24d35fb5101d435acee378c3ada6f16ed3d048e88ebfd64c"
+    },
+    {
+      "label": "src/main/scala/rocket/ALU.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/ALU.scala",
+      "lines": [
+        10,
+        12
+      ],
+      "sha256": "b0d4dcdbb704c9398149e793e56b18f844ed2da1683f3ff9d6b3d261b510264e"
+    },
+    {
+      "label": "src/main/scala/rocket/package.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/package.scala",
+      "lines": [
+        5,
+        5
+      ],
+      "sha256": "520268bb7f4b889cc0e45cbf449ad4d9a2d390e8aab0f89da58f397e00d63475"
+    },
+    {
+      "label": "src/main/scala/rocket/Consts.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Consts.scala",
+      "lines": [
+        8,
+        8
+      ],
+      "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+    },
+    {
+      "label": "src/main/scala/rocket/Consts.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Consts.scala",
+      "lines": [
+        43,
+        47
+      ],
+      "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `PipelinedMultiplier`\n\nImplement the complete `PipelinedMultiplier` module. Preserve its declaration and I/O interface. Return only the complete `class PipelinedMultiplier` definition in a single Scala code block, with no text outside the block.\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Package and imports\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/rocket/Multiplier.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Class declaration\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Parent instantiation\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/exu/execution-units/functional-unit.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/rocket/Multiplier.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/rocket/ALU.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/rocket/package.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/rocket/Consts.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Documentation\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/m-st-ext.adoc`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Port timing contract checked by PipelinedMultiplierTimingTest",
+      "text": "## Additional requirement\n\nEach cycle's `req.valid` must appear on `resp.valid` exactly `latency` cycles later, together with the product of that request when it was valid.\n"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+requirement	tests	rationale
+Integer ALU and immediate decode	rv64ui-p-add;rv64ui-p-sub;rv64ui-p-xor	Exercise arithmetic and logical instruction decoding and register selection.
+Branch and jump decode	rv64ui-p-beq;rv64ui-p-jal;rv64ui-p-jalr	Exercise conditional branches, direct jumps, and indirect jumps.
+Load, store, and atomic-memory decode	rv64ui-p-lw;rv64ui-p-lb;rv64ui-p-lbu;rv64ui-p-sw;rv64ua-p-amoadd_w	Exercise memory queue selection, memory size and signedness, and atomic-operation legality.
+Integer multiply and divide decode	rv64um-p-mul;rv64um-p-div	Exercise multiply and divide issue and functional-unit controls.
+Single-precision floating-point decode	rv64uf-p-fadd;rv64uf-p-fdiv;rv64uf-p-move	Exercise floating-point arithmetic, division, and register-class controls.
+Double-precision floating-point decode	rv64ud-p-fadd;rv64ud-p-fdiv;rv64ud-p-move	Exercise double-precision legality and floating-point controls.
+CSR decode	rv64si-p-csr;decode_unit_ports	The CPU program exercises CSR accesses. The port test checks instruction forwarding, read legality, and zero versus nonzero register and immediate source fields on a read-only CSR.
+SFENCE.VMA legality and operand selection	decode_unit_ports	Check the response to allowed and denied fences, and look at the address and ASID operand-presence flags for allowed fences.

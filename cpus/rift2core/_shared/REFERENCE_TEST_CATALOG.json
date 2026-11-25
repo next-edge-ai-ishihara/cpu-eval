@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "configuration": "Rift2330",
+  "rift2core_revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+  "riscv_tests_revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+  "dromajo_revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+  "construction_script": "tools/environment/build_environment_images.py",
+  "construction_command": "python3 tools/environment/build_environment_images.py --bundle . --output <external-output> --work-root <external-work> --context-sources tools/environment/context-sources.json --environment rift2core --stage-only --context-name golden-catalog",
+  "evaluation_set": {
+    "directory": "passing-images",
+    "program_count": 103,
+    "rule": "The common set contains the 103 programs fixed in required-test-catalog.json. Problem-specific tests and patches are selected by TEST_RECIPE.json."
+  }
+}

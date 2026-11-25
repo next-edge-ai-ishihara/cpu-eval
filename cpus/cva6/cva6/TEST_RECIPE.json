@@ -1,0 +1,145 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_store_updates.sh"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "cva6",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "source_path": "core/cva6.sv",
+  "reference_source_sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "5c0078b77c8990172f9b049ec4079eb80ac39ab360f7800b33b8e10cc6fafa54",
+  "instruction_trace_evaluator": "../harness/evaluate_parallel.sh",
+  "instruction_trace_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "store_update_evaluator": "harness/evaluate_store_updates.sh",
+  "store_update_evaluator_sha256": "d1b896971114419b5631f84a5f3d5a3bc83965cef5833fafbe1b59941e7c90e8",
+  "testlist": "harness/testlist_cva6.yaml",
+  "testlist_sha256": "4a036a803fc624360ce8cd93f796eae2bb9c941e6ebd160b375ae0c93a342add",
+  "test_count": 110,
+  "store_update_testlist": "../harness/testlist_store_updates.yaml",
+  "store_update_testlist_sha256": "26c138d221eedd44d04734f1ceee8be075784f6df9c6d1a9a63976012624ec1b",
+  "store_update_comparator": "../harness/compare_store_updates.py",
+  "store_update_comparator_sha256": "95c09b5518e952731898dbacdfbd7ba815fccdf045fd08bec2ef36675612cf3e",
+  "test_harness_patch": {
+    "target": "corev_apu/tb/ariane_testharness.sv",
+    "target_sha256_before": "c671b2f70ea4cd7e27b67f4764e07966abd69e18d168f3de28220b26b8bb8655",
+    "patch": "../harness/0001-log-dram-writes.patch",
+    "patch_sha256": "b79e083a7b0c93b244df434125cdfc1cefd54acc147b4e97e785f8c129aee7cb",
+    "target_sha256_after": "978648dfc2b9016a989a594b38d1136ee6335dac0e7b685a737a086a63b4a7a2"
+  },
+  "fixed_patches_in_application_order": [
+    {
+      "order": 1,
+      "target": "cpu-eval-patches/cva6_cvxif_add.S",
+      "target_state_before": "absent",
+      "patch": "tests/0001-add-cvxif-add-test.patch",
+      "patch_sha256": "9fb9f56f6072c01669b9d7f3fb3507d04819d0426dbf63b742062f407afe77cc",
+      "target_sha256_after": "2fc438a7b3e39f9bb158770da5e8d72d2237932270064b98f6a90f9c76b7cd31"
+    },
+    {
+      "order": 2,
+      "target": "cpu-eval-patches/cva6_csr_sequence.S",
+      "target_state_before": "absent",
+      "patch": "tests/0002-add-csr-sequence.patch",
+      "patch_sha256": "e2c7920890a6bdd3e86d3b74a34982105ecacfe000104bb0590b23067879a39e",
+      "target_sha256_after": "d93a5637705a790465924cf7efc8bf5ece7dbb12b9faaeb446074ee438c9cf42"
+    },
+    {
+      "order": 3,
+      "target": "cpu-eval-patches/cva6_csr_sequence.S",
+      "target_sha256_before": "d93a5637705a790465924cf7efc8bf5ece7dbb12b9faaeb446074ee438c9cf42",
+      "patch": "tests/0003-delay-csr-retirement-with-cache-miss.patch",
+      "patch_sha256": "c50b6b7d603e58236166302e11cb016738dc7f9a2deee03f6cb9b48af3cc1361",
+      "target_sha256_after": "1ad7b5e718368a5d665abbc64dd0188d6ebd42f534178a0a325d04fdb0570022"
+    },
+    {
+      "order": 4,
+      "target": "cpu-eval-patches/cva6_csr_sequence.S",
+      "target_sha256_before": "1ad7b5e718368a5d665abbc64dd0188d6ebd42f534178a0a325d04fdb0570022",
+      "patch": "tests/0004-exercise-csr-triggered-flush.patch",
+      "patch_sha256": "b0b43a8c6ab59622547a196a2cadf4e26e8c1de26c94c2f7934f0c7ed7820d10",
+      "target_sha256_after": "c42354102e665ac5793070d624ef0d1bead9df218206290901732b8bb6831cb8"
+    },
+    {
+      "order": 5,
+      "target": "cpu-eval-patches/cva6_csr_sequence.S",
+      "target_sha256_before": "c42354102e665ac5793070d624ef0d1bead9df218206290901732b8bb6831cb8",
+      "patch": "tests/0005-exercise-custom-icache-csr.patch",
+      "patch_sha256": "a71614a89981abcb0a5bb0e38e892b88ac4639f059cff80dfaf9647c41af8475",
+      "target_sha256_after": "dec9ace0cb8657f2091b4689358df39d6e5572face10771aa9d95cf38bf794d3"
+    },
+    {
+      "order": 6,
+      "target": "cpu-eval-patches/cva6_csr_illegal.S",
+      "target_state_before": "absent",
+      "patch": "tests/0006-add-illegal-csr-test.patch",
+      "patch_sha256": "4f54e184f79c8b28355c235870cf8db3bf92470ee1acc12eef2cb371da1d7cf4",
+      "target_sha256_after": "4cc1cbd41b1b4bc32807be9d849119adb0a7e81ce94dedd966cf51678b0d7800"
+    },
+    {
+      "order": 7,
+      "target": "cpu-eval-patches/cva6_ecall.S",
+      "target_state_before": "absent",
+      "patch": "tests/0007-add-ecall-test.patch",
+      "patch_sha256": "ee4b0c03531653aed57231097b41ec2c98c29a79bed690f638cab628f419a422",
+      "target_sha256_after": "068179cc3ac739d16df4461bead22d085d01a769ed93c9742734fe682dc9abae"
+    },
+    {
+      "order": 8,
+      "target": "cpu-eval-patches/cva6_wfi.S",
+      "target_state_before": "absent",
+      "patch": "tests/0008-add-timer-interrupt-test.patch",
+      "patch_sha256": "d35be09a0d5d2c954782575ba1a50cc4e570428460318fc02f9b9b1835af7313",
+      "target_sha256_after": "ab815f45d41b75ed54c2492d807d3627dccc5c9d2cc67c640ba3845c2ad07a89"
+    }
+  ],
+  "test_programs": [
+    {
+      "name": "105 upstream architectural tests",
+      "source": "paths listed in harness/testlist_cva6.yaml",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3"
+    },
+    {
+      "name": "cva6-cvxif-add",
+      "path_after_reconstruction": "cpu-eval-patches/cva6_cvxif_add.S",
+      "sha256": "2fc438a7b3e39f9bb158770da5e8d72d2237932270064b98f6a90f9c76b7cd31"
+    },
+    {
+      "name": "cva6-csr-sequence",
+      "path_after_reconstruction": "cpu-eval-patches/cva6_csr_sequence.S",
+      "sha256": "dec9ace0cb8657f2091b4689358df39d6e5572face10771aa9d95cf38bf794d3"
+    },
+    {
+      "name": "cva6-csr-illegal",
+      "path_after_reconstruction": "cpu-eval-patches/cva6_csr_illegal.S",
+      "sha256": "4cc1cbd41b1b4bc32807be9d849119adb0a7e81ce94dedd966cf51678b0d7800"
+    },
+    {
+      "name": "cva6-ecall",
+      "path_after_reconstruction": "cpu-eval-patches/cva6_ecall.S",
+      "sha256": "068179cc3ac739d16df4461bead22d085d01a769ed93c9742734fe682dc9abae"
+    },
+    {
+      "name": "cva6-wfi",
+      "path_after_reconstruction": "cpu-eval-patches/cva6_wfi.S",
+      "sha256": "ab815f45d41b75ed54c2492d807d3627dccc5c9d2cc67c640ba3845c2ad07a89"
+    }
+  ],
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/cva6.sv",
+    "test_programs": "Check out test_revision, verify that the five cpu-eval-patches targets are absent, apply the eight fixed patches in recorded order in an empty scratch directory with git apply, then copy cpu-eval-patches/*.S to <CVA6>/verif/tests/cpu-eval-patches, and verify every recorded before and after SHA-256."
+  },
+  "comparison": {
+    "instruction_values": "Retired instruction sequence and integer-register updates produced by the CVA6 RTL model and Spike.",
+    "memory_updates": "Pair Spike retired stores and accepted test-harness DRAM writes in execution order; compare address, byte enable, and the write value masked to the store width.",
+    "excluded_termination_address": "0x80001000",
+    "completion_requirement": "Every CPU run must complete and reach comparison. The fixed tree builds and runs every program with the reference module, so after only the target is replaced a build failure, a missing target module, an RTL simulation that does not complete (including the fixed RVFI cycle limit and assertions) and a comparison mismatch are FAIL. Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID. Test reconstruction or staging failure is INVALID."
+  }
+}

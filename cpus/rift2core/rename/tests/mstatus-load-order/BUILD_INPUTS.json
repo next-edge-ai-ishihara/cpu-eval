@@ -1,0 +1,32 @@
+{
+  "program": "CPU-Eval-authored native mstatus update immediately followed by a load.",
+  "macro_revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+  "environment_revision": "6de71edb142be36319e380ce782c3d1830c65d68",
+  "rift_revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+  "gcc_version": "riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0",
+  "objcopy_version": "GNU objcopy (2.42-1ubuntu1+6) 2.42",
+  "header_sha256": {
+    "env/encoding.h": "8a8480aaf6cce6df02b483e0cbdf8e375866c5ed86986075e9111fe9149a38c2",
+    "env/p/riscv_test.h": "50300743b9b4c5540838b287b1b5655f67474a2ff98b0eb194f7466cc59489be",
+    "env/p/link.ld": "2bd8d690e54985856599af6e3355ed2969dee43ca8c38bff6a481270c047d606",
+    "isa/macros/scalar/test_macros.h": "b09abb7eec47539dde829096ca973a33b2d293d38f0902133ad2aaa6fab892dc"
+  },
+  "build_script": {
+    "path": "build.sh",
+    "sha256": "15d6d273107232287a06bd527c952a81178648ea7393d9066af79a36ed669771"
+  },
+  "files": [
+    {
+      "path": "source/rename_mstatus_load_order.S",
+      "sha256": "637a36ed9094628265fa2252d0c00b728149de2967ee50a9d1024f426dee7dbd"
+    },
+    {
+      "path": "images/rename_mstatus_load_order",
+      "sha256": "198828dca40eecb1b6f3e97e386974ae497f59d28d21c093521779f9756c4c81"
+    },
+    {
+      "path": "images/rename_mstatus_load_order.verilog",
+      "sha256": "62e25e0471841aa26722b224424b190bc13f9c17f9468b088d03158f1141fc5a"
+    }
+  ]
+}

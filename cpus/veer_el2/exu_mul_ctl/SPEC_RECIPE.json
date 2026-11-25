@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        368,
+        376
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "label": "configs/veer.config 368-376"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        305,
+        329
+      ],
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6",
+      "label": "design/include/el2_def.sv 305-329"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu_mul_ctl.sv",
+      "lines": [
+        17,
+        37
+      ],
+      "sha256": "04a8b491350e27d19b0140e3a303f1d5038cf115cd4067dafedebd7e75ff538d",
+      "label": "design/exu/el2_exu_mul_ctl.sv 17-37"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu.sv",
+      "lines": [
+        178,
+        179
+      ],
+      "sha256": "84d25ee8c0550ef38a6a15d6ae5788d0c0bb13785bb19c5e9e1911ce05fd07af",
+      "label": "design/exu/el2_exu.sv 178-179"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu.sv",
+      "lines": [
+        259,
+        263
+      ],
+      "sha256": "84d25ee8c0550ef38a6a15d6ae5788d0c0bb13785bb19c5e9e1911ce05fd07af",
+      "label": "design/exu/el2_exu.sv 259-263"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu.sv",
+      "lines": [
+        277,
+        277
+      ],
+      "sha256": "84d25ee8c0550ef38a6a15d6ae5788d0c0bb13785bb19c5e9e1911ce05fd07af",
+      "label": "design/exu/el2_exu.sv 277-277"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        166,
+        177
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "label": "design/lib/beh_lib.sv 166-177"
+    },
+    {
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        16,
+        42
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36",
+      "label": "src/m-st-ext.adoc 16-42"
+    },
+    {
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        746,
+        777
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e",
+      "label": "src/b-st-ext.adoc 746-777"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        181,
+        190
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        199,
+        204
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "# Implement `el2_exu_mul_ctl`\n\nImplement the complete `el2_exu_mul_ctl` module. Preserve the module name, parameters, and ports shown below. Return only the complete `module el2_exu_mul_ctl` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Package and imports\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Dependency declarations\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Documentation\n\n### src/m-st-ext.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n### src/b-st-ext.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "problem": "Lsu",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/backend/LSU/Lsu.scala",
+    "source_unit": "Lsu",
+    "hidden_definitions": [
+      "LSU_AddrTrans",
+      "LSU_OpMux",
+      "LSU_StQueue",
+      "LSU_LsArb",
+      "LSU_RegionMux",
+      "LSU_CacheMux",
+      "LSU_Mem",
+      "LSU_WriteBack",
+      "LSU_Fault"
+    ],
+    "hidden_definitions_description": "Before compilation the evaluator renames these fixed definitions, which implement the target's behavior, in every source file, so a submission cannot reuse them by name."
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-*",
+      "rv64um-p-*",
+      "rv64ua-p-*",
+      "rv64uc-p-*",
+      "rv64mi-p-*",
+      "rv64si-p-*"
+    ],
+    "policy": "Run every program in the fixed required-test catalog that matches the selection patterns."
+  },
+  "fixed_test_patches": [],
+  "directed_public_output_test": {
+    "source": "harness/lsu_public_ready_test.cpp",
+    "source_sha256": "e1666f3dbe37d74afa6333684977f5f450d191a578e2639d5f75b26bb951a063",
+    "top_module": "Lsu",
+    "output": "Lsu.io.lsu_iss_exe.ready",
+    "behavior": "For a non-fence request with no inherited fault, issue ready follows MMU-request ready, which the fixed MMU raises only with an MMU response accepted in the same cycle. A fence requires space in the fence completion queue. A previously accepted misaligned load blocks issue while its exception is pending.",
+    "method": "Elaborate the fixed Rift2330 design with the submitted Lsu and use the generated Lsu RTL as the directed-test top. Drive legal byte-load, byte-store and fence requests and a misaligned doubleword load, raising MMU-request ready only with an accepted MMU response. Observe issue ready, the pending integer completion, and the latched exception at public ports."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "The directed test observes the specified issue-ready behavior under MMU backpressure, fence completion backpressure and a pending misalignment. Every selected program completes with zero RTL-versus-ISA trace mismatches."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "environment_patch_sha256": "6adfa0aaf917402aef35b29d4749ba14860b7936c4926bc1e579cf595495adbe",
+  "evaluator": {
+    "script": "cpus/rift2core/_shared/evaluate.sh",
+    "script_sha256": "27899e3b105136e4d107e512db9f5e231964f7b7533754caf4301d6a9ad418e0",
+    "replacement_script": "cpus/rift2core/_shared/replace_class.py",
+    "replacement_script_sha256": "6a66e9a53704dfaa69484bc204991727d9b7f9fb66de7350ffc36f440f4136b2"
+  }
+}

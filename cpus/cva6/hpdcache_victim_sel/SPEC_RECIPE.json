@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module description and declaration for hpdcache_victim_sel",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_victim_sel.sv",
+      "lines": [
+        27,
+        58
+      ],
+      "language": "systemverilog",
+      "sha256": "d5d326dcecd67259c848d8c7d39fa29f249bcd2ba9ec3700906a06b8eef8d3f8"
+    },
+    {
+      "label": "Directory state and victim-policy behavior",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        246,
+        286
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Victim policy encodings",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        26,
+        33
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Way count and victim-policy configuration fields",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        364,
+        384
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "PLRU victim-selector declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_victim_plru.sv",
+      "lines": [
+        27,
+        58
+      ],
+      "language": "systemverilog",
+      "sha256": "2ed614f12e28894d90a6ed7f356c30a16e1131c8928b93dfbf0f2862129ae2c6"
+    },
+    {
+      "label": "Pseudo-random victim-selector declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_victim_random.sv",
+      "lines": [
+        27,
+        58
+      ],
+      "language": "systemverilog",
+      "sha256": "919698df94c00c07fd941bc2464516c4bc7d1fc13d64c66f00f657deadb4a8c0"
+    },
+    {
+      "label": "User configuration type name and its field in the full configuration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        449,
+        453
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Full configuration type name",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        476,
+        476
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_victim_sel`\n\nImplement the complete `hpdcache_victim_sel` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_victim_sel` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Package and imports\n\n### `rtl/src/hpdcache_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Module declaration",
+      "text": "\n```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Dependency declarations; `rtl/src/hpdcache_victim_plru.sv`",
+      "text": "\n```\n\n## Dependency declarations\n\n### `rtl/src/hpdcache_victim_plru.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/hpdcache_victim_random.sv`",
+      "text": "\n```\n\n### `rtl/src/hpdcache_victim_random.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Documentation; `docs/source/architecture.rst`",
+      "text": "\n```\n\n## Documentation\n\n### `docs/source/architecture.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n```\n"
+    }
+  ]
+}

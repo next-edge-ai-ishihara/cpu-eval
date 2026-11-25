@@ -1,0 +1,75 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "cvxif_compressed_if_driver",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "test_target_reconstruction": {
+    "source_revision": "b3149ab0da3ac8bf2179e24595a4b7a860b668ff",
+    "source_path": "vendor/riscv/riscv-isa-sim/arch_test_target",
+    "source_git_tree": "5e77e2b37a453a86b7fa5b67f4c4fce313b49f53",
+    "operation": "copy arch_test_target to riscv-arch-test/riscv-target after checking out the recorded test revision",
+    "required_results": {
+      "riscv-target/spike/model_test.h": "29516fa7061447a8c93aaecb2ac70c7a825655c1358162c9dd79336c68dbe05e",
+      "riscv-target/spike/link.ld": "1d773270d6b3a4ad2cf44864ed95e1b14e7c48368f10d6100a045bafd32af2c5"
+    }
+  },
+  "configuration": "cv32a60x",
+  "source_path": "core/cvxif_compressed_if_driver.sv",
+  "source_sha256": "e5dd565b9a6fcf95129182075d481771c5dc4ae45e5fb760476b50e9fcc5f318",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "9a7c4981ac61741c8fc6739a915b9647b91249acc180c1a9f1b7ef0f802a9203",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../compressed_instr_decoder/harness/testlist_compressed_instr_decoder.yaml",
+  "test_list_sha256": "8557b785d4b647cb0f52c3b80e5124ea296824c2327af598f0f8cc4113450e52",
+  "additional_test": {
+    "test_list_entry": "harness/rejected_compressed.yaml",
+    "test_list_entry_sha256": "8124ad655e6819eb3f982595b262737ed750ca6dbe97c26966eda3d6da1a3ca2",
+    "assembly": "harness/rejected_compressed.S",
+    "assembly_sha256": "3cb16752242a899b64c948ee5ab14eb2021db157db07d73deffdc0388f7dd9a7",
+    "selection": "Append the single local entry to the unchanged compressed-instruction table test list. Install the local assembly beside the reconstructed table assembly under cpu-eval-patches.",
+    "observation": "CVA6's compressed decoder and the example coprocessor reject the compressed encoding 0x0000. The trap handler reads mcause equal to 2 and advances mepc by two bytes. Compare the handler and resumed instruction trace with Spike."
+  },
+  "test_reconstruction": {
+    "patch": "../compressed_instr_decoder/tests/0001-add-compressed-cvxif-table-test.patch",
+    "patch_sha256": "fb50858d1a3adda165152f3571f5ffa5d8028118a42228742d30410eb349e3c0",
+    "application_root": "an empty scratch directory; copy cpu-eval-patches/compressed_instr_decoder_table.S to <CVA6>/verif/tests/cpu-eval-patches after reconstruction",
+    "result": "cpu-eval-patches/compressed_instr_decoder_table.S, reconstructed in the writable CVA6 test tree before every evaluation",
+    "result_sha256": "d43d1f1774003378202ad0a55cfa9d71e1c36a5ab492afe3b58a9fa19c88e6a9",
+    "application_command": "git -C <empty-scratch-directory> apply <absolute path of ../compressed_instr_decoder/tests/0001-add-compressed-cvxif-table-test.patch>"
+  },
+  "reference_model_reconstruction": {
+    "source_revision": "b3149ab0da3ac8bf2179e24595a4b7a860b668ff",
+    "source_path": "vendor/riscv/riscv-isa-sim/customext/cvxif.cc",
+    "source_sha256": "880b27343fc4c9a2de3c325650f32192c158e0fc5cd1c183f914d5090dd28b93",
+    "patches_in_application_order": [
+      {
+        "order": 1,
+        "patch": "../copro_alu/environment/0001-model-example-compressed-cvxif.patch",
+        "patch_sha256": "fd48c0835e956a74ce4aeaba9c1c16681781db9da76215b9d6949ac72f5a6448"
+      },
+      {
+        "order": 2,
+        "patch": "../copro_alu/environment/0002-model-example-r4-cvxif.patch",
+        "patch_sha256": "44fce5c91b055886b4ddfa31b33f36b3c7e2ccc51a3aafc94c0e36d893b2131f"
+      }
+    ],
+    "result_sha256": "4a154b19843de02c15981bac32218b084158d751d254023fa6e3a792585edb78",
+    "build_script": "../copro_alu/environment/build_spike.sh",
+    "build_script_sha256": "0c58bbeb40d966fea5d06ac1837ed78e313549b65a6f3d3e85737ff790d97a7a",
+    "installed_prefix": "/opt/toolchain/spike-cvxif-all-operations"
+  },
+  "environment_setup": {
+    "path_in_cpu_checkout": "verif/sim/setup-env.sh",
+    "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+    "toolchain": "The saved CVA6 grading image provides Verilator 5.008 and riscv64-unknown-elf tools."
+  }
+}

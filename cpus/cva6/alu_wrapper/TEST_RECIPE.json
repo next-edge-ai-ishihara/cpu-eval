@@ -1,0 +1,44 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "alu_wrapper",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/alu_wrapper.sv",
+  "tests": [
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/beq-01.S",
+      "sha256": "6f07d29073a1c213e666624a600c75c484fa455ee77b50431a5f56e14b9e0883"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/cpop-01.S",
+      "sha256": "3aa4565873f316a6671de76ebd790701f2d644054fd96d3a6bcf4eb4f877f8d0"
+    }
+  ],
+  "test_list": {
+    "path": "testlist_alu_wrapper_problem.yaml",
+    "sha256": "e09a0cb9e476b3afa1a35dd73fc83fb36a06c26646c1d24900329ecfc36d95e3"
+  },
+  "evaluator": {
+    "path": "../harness/evaluate_parallel.sh",
+    "sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+    "trace_comparator": {
+      "path": "../harness/compare_architectural_traces.py",
+      "sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb"
+    }
+  },
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/alu_wrapper.sv",
+    "test_sources": "git checkout the recorded test revision and verify the two recorded source hashes"
+  },
+  "comparison": {
+    "values": "Every retired instruction and its general-purpose register or width-masked memory update emitted by CVA6 and Spike",
+    "pass_condition": "Both selected tests complete and their complete architectural traces match"
+  }
+}

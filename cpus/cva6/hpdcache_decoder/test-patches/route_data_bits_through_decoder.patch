@@ -1,0 +1,39 @@
+diff --git a/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_data_resize.sv b/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_data_resize.sv
+--- a/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_data_resize.sv
++++ b/core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_data_resize.sv
+@@ -103,5 +103,26 @@ else if (WR_WIDTH > RD_WIDTH) begin : gen_downsize
+ //  {{{
+ else begin : gen_noresize
++    logic [63:0] test_decoded_low_bits;
++    logic [5:0]  test_reencoded_low_bits;
++    wdata_t      test_wdata;
++
++    hpdcache_decoder #(
++        .N (6)
++    ) test_data_decoder_i (
++        .en_i  (1'b1),
++        .val_i (wdata_i[5:0]),
++        .val_o (test_decoded_low_bits)
++    );
++
++    hpdcache_1hot_to_binary #(
++        .N (64)
++    ) test_data_encoder_i (
++        .val_i (test_decoded_low_bits),
++        .val_o (test_reencoded_low_bits)
++    );
++
++    assign test_wdata = {wdata_i[WR_WIDTH-1:6], test_reencoded_low_bits};
++
+     hpdcache_fifo_reg #(
+         .FIFO_DEPTH     (DEPTH),
+         .FEEDTHROUGH    (1'b0),
+@@ -115,7 +136,7 @@ else begin : gen_noresize
+ 
+         .w_i,
+         .wok_o,
+-        .wdata_i,
++        .wdata_i        (test_wdata),
+ 
+         .r_i,
+         .rok_o,

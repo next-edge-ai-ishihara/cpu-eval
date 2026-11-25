@@ -1,0 +1,31 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/commit_stage_csr.S",
+    "harness/commit_stage_ecall.S",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "commit_stage",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/commit_stage.sv",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "trace_comparator": "../harness/compare_architectural_traces.py",
+  "trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_commit_stage.yaml",
+  "test_list_sha256": "68f66eb404ed8373fa5ca04e0c158969c23e190cc5e036b690fb19feadb91806",
+  "reference_source_sha256": "7bb90c8f04dd669a2df888ad8dfabcf924815c88ed7a67a18eda3fb2a2361f7a",
+  "test_source_sha256": {
+    "harness/commit_stage_csr.S": "a037d4e44ec5c0baadcc1ba6279bb5f381b8d81a6d2a80d6a2ee5807142c607d",
+    "harness/commit_stage_ecall.S": "dfc6f7d183c8bc6713706c5e0da480812585c2b2a292535b180bdcd59ce5df57"
+  },
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/commit_stage.sv",
+    "test_sources": "Check out the recorded test revision and use the two stored adaptations for successful CSR accesses, illegal CSR writes and ECALL coverage"
+  }
+}

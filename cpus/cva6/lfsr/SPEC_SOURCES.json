@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "489b719c49a8815b765475154025299dd561a83862f484a0c988ab3c558f7709",
+  "prompt_sha256": "254fae495e7ed038e55c4f5f31cac020457bd088198e3daf7969ee8d2d178529",
+  "repositories": {
+    "https://github.com/pulp-platform/common_cells.git": {
+      "revision": "dc555643226419b7a602f0aa39d449545ea4c1f2"
+    },
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions; Section heading; Fence",
+      "prompt_bytes": [
+        0,
+        306
+      ],
+      "sha256": "6233132586f4f2c4d7c17f489ab6fdb8f8d132794246aaee49f6c9227c6b30ea"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        306,
+        966
+      ],
+      "sha256": "6288839bfd215d4d7fb2da1bfe3213ba6770bd8c83d82724edaa4696046a9e4c"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "prompt_bytes": [
+        966,
+        1054
+      ],
+      "sha256": "22e81514fb229465645c38bf19a65ded242d05b99fff462f88cf276d16a8b359"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1054,
+        1285
+      ],
+      "sha256": "49aa85e43309d812e8e30bd6ed121fae843dba68f408e3c84d4e4b78ecbcbaf3"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "prompt_bytes": [
+        1285,
+        1355
+      ],
+      "sha256": "5f93154a86bb1fc8ced1544ceceacf25c2e60aae60ee578e30df2df5f86d8863"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1355,
+        1590
+      ],
+      "sha256": "36b8f8d61e93c58ed4d85605c4d282f485bf4ff2052f8dff285fa883ab8012f8"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "prompt_bytes": [
+        1590,
+        1650
+      ],
+      "sha256": "1eeafe6aa5d877ee43328965bc9c543bdde293a7708c453ad0e058c291f656c4"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1650,
+        1837
+      ],
+      "sha256": "161b81c06fc56e89e71969ce3ec01ca81bdfd606e8b69789f2b902edc4eda759"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Fence; Port contract that no upstream text states",
+      "prompt_bytes": [
+        1837,
+        2198
+      ],
+      "sha256": "71ee8181a71d2115f6891c231e5831c76084786c4400ec029b62cb19edaea43a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/pulp-platform/common_cells.git",
+      "commit": "dc555643226419b7a602f0aa39d449545ea4c1f2",
+      "path": "src/lfsr.sv",
+      "lines": [
+        22,
+        35
+      ],
+      "language": "systemverilog",
+      "sha256": "91f6c37be706ca7648cb66635e3f46a210e517f7addb8569ec28e4738599f7d7"
+    },
+    {
+      "label": "Instruction-cache instance",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache.sv",
+      "lines": [
+        408,
+        417
+      ],
+      "language": "systemverilog",
+      "sha256": "272c06abf1f37a3f3a7d18d6c29a08df0a493631e330aefb4c677357a4d901c3"
+    },
+    {
+      "label": "Write-through data-cache instance",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/wt_dcache_missunit.sv",
+      "lines": [
+        200,
+        209
+      ],
+      "language": "systemverilog",
+      "sha256": "22ce8304cb6c4987a614fdee8f192c28c18d9c50c70d217d01eb59dfe62e434e"
+    },
+    {
+      "label": "Shared-TLB instance",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6_mmu/cva6_shared_tlb.sv",
+      "lines": [
+        775,
+        783
+      ],
+      "language": "systemverilog",
+      "sha256": "3ac49fb19105e711fe25a83a730657a23df1ddde1a30b4d2e75212140adb73a4"
+    }
+  ]
+}

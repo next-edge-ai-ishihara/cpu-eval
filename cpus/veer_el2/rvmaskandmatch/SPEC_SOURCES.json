@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "1e5b2e8dfbeadf8dcffc340043df2d7d4fd0395a76a5a2f9ad32418666831a9a",
+  "prompt_sha256": "7f728377e11200e99e021f74d1ce3297cffce5365c4b458217f70ba4c4d70222",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        305
+      ],
+      "sha256": "d14a5a2b56fafd6653579b42050262cea0fa8d98e9ec28f4efbdaa2916055d65"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        305,
+        849
+      ],
+      "sha256": "6fe8443ec2ebd9dfa3099b4b8c81ded18ba577fa828769f6e791d272ce5c95d4"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fence after Module declaration and heading for Parent instantiation",
+      "prompt_bytes": [
+        849,
+        926
+      ],
+      "sha256": "7ec26329ec3ef678f7f9b08e60d9bf40cb396b3090efadd00e26872a3461ce84"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        926,
+        1114
+      ],
+      "sha256": "98668758a8bbe5bd70dc7cf97a339704cf1912cdce3909aaba98442da6ab70ff"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Next parent excerpt",
+      "prompt_bytes": [
+        1114,
+        1165
+      ],
+      "sha256": "913d610e8a5ef06a47e826f934b3da8fe64beb5223a62c0a04c5e4b62887c4f3"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1165,
+        1344
+      ],
+      "sha256": "8306d80ca515db6ffccd08d61714026afd62701098335b9a994175bbd1afae89"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence and heading for Documentation",
+      "prompt_bytes": [
+        1344,
+        1409
+      ],
+      "sha256": "406134873dfe18899691d11e551f18d862fd134b3f294ef4893e10f352fffa63"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1409,
+        1809
+      ],
+      "sha256": "5e08df2d21d1405a7b2045d4fbf57c2d3672b560c643cb60b964fa5077b77bb5"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Fence and the full-mask port requirement",
+      "prompt_bytes": [
+        1809,
+        1935
+      ],
+      "sha256": "67a86f750c1ba9d01d3b1099b86368baa1d0917cc0d9ac4930c6808f56653161"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvmaskandmatch",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        585,
+        593
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Parent instantiation for rvmaskandmatch",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_trigger.sv",
+      "lines": [
+        43,
+        43
+      ],
+      "sha256": "a81301f1fdfe715d1b459a4ff954cc01ee65a30e8a081b84682edd1c09c4c07d"
+    },
+    {
+      "label": "Parent instantiation for rvmaskandmatch",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_trigger.sv",
+      "lines": [
+        60,
+        60
+      ],
+      "sha256": "646a7b45823ec42b9efa5e92138374713260f30a46b8b9fadcc535f6bd4aac4e"
+    },
+    {
+      "label": "Match field of the mcontrol trigger register",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/debugging.md",
+      "lines": [
+        1412,
+        1416
+      ],
+      "language": "markdown",
+      "sha256": "e314e83f8ab1955d6e712bd4f8d4fcb5399df90657ea081a740048cf096a7a0c"
+    }
+  ]
+}

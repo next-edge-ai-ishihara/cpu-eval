@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Default load-to-use configuration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        359,
+        359
+      ],
+      "language": "perl",
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a"
+    },
+    {
+      "label": "Module declaration for el2_lsu_dccm_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_dccm_ctl.sv",
+      "lines": [
+        29,
+        170
+      ],
+      "language": "verilog",
+      "sha256": "fe5243f5b70db1b6ce76f9bff97f929f330f71b050054b0dee9e3070ebe792d8"
+    },
+    {
+      "label": "Parent instantiation for el2_lsu_dccm_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu.sv",
+      "lines": [
+        389,
+        398
+      ],
+      "sha256": "58690ecff8b23840f372b8b2594fa7e2c9a64b8ad1c51f379c36d618d60a343f"
+    },
+    {
+      "label": "el2_lsu_pkt_t type declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        176,
+        193
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "rvdff declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        19,
+        26
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "rvdffs declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        49,
+        56
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "rvdffsc declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        68,
+        76
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "rvdffe declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        166,
+        177
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "el2_lsu_stbuf merged store data inputs",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_stbuf.sv",
+      "lines": [
+        46,
+        49
+      ],
+      "language": "verilog",
+      "sha256": "b4433646f8b49b0b108969cbd7e31d1d5290eab6f150e85b722acef84207367b"
+    },
+    {
+      "label": "Partial writes to core-local memories",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        1154,
+        1158
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "label": "ECC load-to-use generate branch",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_ecc.sv",
+      "lines": [
+        111,
+        111
+      ],
+      "language": "verilog",
+      "sha256": "02f0a45f4d7c509850a9025fc2aa430cc2f8fcd7be66d467fe59218fefe4ed67"
+    },
+    {
+      "label": "ECC branch without load-to-use plus one",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_ecc.sv",
+      "lines": [
+        138,
+        138
+      ],
+      "language": "verilog",
+      "sha256": "02f0a45f4d7c509850a9025fc2aa430cc2f8fcd7be66d467fe59218fefe4ed67"
+    },
+    {
+      "label": "ECC R-stage corrected data registers without load-to-use plus one",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_ecc.sv",
+      "lines": [
+        169,
+        172
+      ],
+      "language": "verilog",
+      "sha256": "02f0a45f4d7c509850a9025fc2aa430cc2f8fcd7be66d467fe59218fefe4ed67"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        181,
+        190
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        199,
+        204
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `el2_lsu_dccm_ctl`\n\nImplement the complete `el2_lsu_dccm_ctl` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_lsu_dccm_ctl` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### configs/veer.config\n\n```perl\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Dependency declarations\n\n### design/include/el2_def.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n### design/lib/beh_lib.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Related source code\n\n### design/lsu/el2_lsu_stbuf.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n### design/lsu/el2_lsu_ecc.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Documentation\n\n### docs/source/memory-map.md\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "eb3f1c11a9e625435a2d34493f10e6c599a1af57cd1bc0e5e92a98ed89dceac1",
+  "prompt_sha256": "cfde69541314b0b3a34bd4820862c65a42c711f80d532b4a4bfebdb3ef994434",
+  "repositories": {
+    "github.com/ucb-bar/berkeley-hardfloat": {
+      "revision": "70455e53f233a06cb5a342d125e22b7b1505c271"
+    },
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, submission format, package heading",
+      "prompt_bytes": [
+        0,
+        364
+      ],
+      "sha256": "8c1a3ce6f7a408c6a416cb7665f7407d265e27af5592086f5bda6e4c8bda1d2d"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        364,
+        399
+      ],
+      "sha256": "1c8de97f43682005aecd538934bb978e07e67e428eea2ee699b7c1b0b732b936"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        399,
+        435
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        435,
+        825
+      ],
+      "sha256": "3e3a4a5a461542d593e6d3f80b9c412e3d49e3d9b1cf1e42b22d195230cadbd7"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        825,
+        899
+      ],
+      "sha256": "a62b57acedf3e1bfd0db0450afd4d2299d2d2921b68b0939aec074fd3bfeb305"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        899,
+        1050
+      ],
+      "sha256": "f20c6002cc2fddb388fdb91a28fd7765abce695b313bd9b43f00c76c4acf4f79"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        1050,
+        1057
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1057,
+        1250
+      ],
+      "sha256": "fff73bcef2000dbe3c2c11f827ecc2488a7b7ad7dd45e08a64e50afc6a70f1dc"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        1250,
+        1307
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        1307,
+        1552
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        1552,
+        1599
+      ],
+      "sha256": "9e617eebb5ecb8337c768580c6131592f730e57ece78f3cb705fab3c8295f555"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1599,
+        2197
+      ],
+      "sha256": "f004d5fc135d5a3799f60460f1d61b765047fee3392da918f199fa8a0e683863"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        2197,
+        2255
+      ],
+      "sha256": "74d93f80fc6bb6a3a82fe3171463243812c3cb251aed25c1d5ef6ee3065ffbab"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        2255,
+        3151
+      ],
+      "sha256": "eed071305be1a0e92f2678f90bdae7590966352f3a3d34ddc8ae8a2dd30cffc0"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        3151,
+        3205
+      ],
+      "sha256": "6d4057d4f789f57258713eb2ad89196b9da1c08e8ade98f04077177af78298bb"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        3205,
+        3979
+      ],
+      "sha256": "a1cc24e247f0b3d8fe6624d3c4effbc2b3e471687ec7434278b1ca86889c5817"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        3979,
+        4015
+      ],
+      "sha256": "efd4e8e089f3b558ae7131513ccd7dd3da32cead512ce338f94df9f625146499"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        4015,
+        4236
+      ],
+      "sha256": "cc4890fa450a59de49df77bc535b139fbdcfbaf575749ec7cde72cf9681ac843"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        4236,
+        4288
+      ],
+      "sha256": "ab5189740f40dc4a12501f6d280ac70ecf81693075845f55b97f50c67303b184"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        4288,
+        4639
+      ],
+      "sha256": "7082cdd30214c10d076bf9e87bbb825ab1c9d1e701effe782b669bb561e0291a"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        4639,
+        4684
+      ],
+      "sha256": "aaec2b2768650532d0c413e1c658225b0bb699df4427edd28ce2c12f3bf2dcda"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        4684,
+        4879
+      ],
+      "sha256": "cd6b6ff40ac5adacded6432d43724ef677b2a5f9a39804fcbe4ce9467fd2d1d4"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        4879,
+        4937
+      ],
+      "sha256": "eddf3492ce7e59b3fe94bffc87e336b9206de80ee2a0b1460056a867b48b2163"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        4937,
+        5443
+      ],
+      "sha256": "761c7e87084b20a3119adeb3aed25d9a5ebadbae4c20bad62c6a88fc56790c62"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        5443,
+        5447
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        5447,
+        5899
+      ],
+      "sha256": "3fc3ff94b4ff826254b74e91da305257a8139796cff4ae7eaf426b7af6563b12"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        5899,
+        5903
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "src/main/scala/CompareRecFN.scala excerpt",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/CompareRecFN.scala",
+      "lines": [
+        38,
+        40
+      ],
+      "sha256": "76d51c3fb42268879d61142be857d14c5fc0d10d176156001d43b8d4ca44d53e"
+    },
+    {
+      "label": "src/main/scala/CompareRecFN.scala excerpt",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/CompareRecFN.scala",
+      "lines": [
+        42,
+        52
+      ],
+      "sha256": "76d51c3fb42268879d61142be857d14c5fc0d10d176156001d43b8d4ca44d53e"
+    },
+    {
+      "label": "src/main/scala/tile/FPU.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        462,
+        465
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "src/main/scala/tile/FPU.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        482,
+        485
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "src/main/scala/common.scala excerpt",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        68,
+        83
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "src/main/scala/rawFloatFromRecFN.scala excerpt",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/rawFloatFromRecFN.scala",
+      "lines": [
+        42,
+        63
+      ],
+      "sha256": "28a89462a5ff0708818d36c3bb2631c998209f1217c15c4457585de58ac0aa09"
+    },
+    {
+      "label": "src/f-st-ext.adoc excerpt",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        443,
+        456
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "src/d-st-ext.adoc excerpt",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/d-st-ext.adoc",
+      "lines": [
+        210,
+        214
+      ],
+      "sha256": "d48c7621b80d57a1421fef6ad7a5d6c1325cf20465e395b4387c157f04b9b195"
+    },
+    {
+      "label": "src/images/wavedrom/float-csr.edn excerpt",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/float-csr.edn",
+      "lines": [
+        5,
+        16
+      ],
+      "sha256": "2b6174381ed9843ac7b970002566ff69bc92d2a055780f4f2fce4211087df8e9"
+    },
+    {
+      "label": "doc/divSqrtRecFN_small.txt excerpt",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "doc/divSqrtRecFN_small.txt",
+      "lines": [
+        38,
+        42
+      ],
+      "sha256": "261cf42926ec5333aee14d9b4d35dc3f15aac2784c124d0c46c1a3cfc25c1ecd"
+    },
+    {
+      "label": "Floating-point comparison output meanings",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "berkeley-softfloat-3/doc/SoftFloat.html",
+      "lines": [
+        1094,
+        1105
+      ],
+      "sha256": "aba2b4306ac97ee19aa91dd1c513ef454f45840840d84cd88b55617e653e6c18"
+    },
+    {
+      "label": "Greater-than comparison relationship",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "berkeley-softfloat-3/doc/SoftFloat.html",
+      "lines": [
+        1119,
+        1125
+      ],
+      "sha256": "aba2b4306ac97ee19aa91dd1c513ef454f45840840d84cd88b55617e653e6c18"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

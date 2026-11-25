@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for compressed_instr_decoder",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/compressed_instr_decoder.sv",
+      "lines": [
+        10,
+        23
+      ],
+      "sha256": "b7a5bfdc09a732770691e350c4efc154a402b3823578134b23c1cd3ad5e14375",
+      "language": "verilog"
+    },
+    {
+      "label": "Parent instantiation for compressed_instr_decoder",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "lines": [
+        74,
+        87
+      ],
+      "sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7",
+      "language": "verilog"
+    },
+    {
+      "label": "CV-X-IF compressed request and response types",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cvxif_types.svh",
+      "lines": [
+        10,
+        17
+      ],
+      "sha256": "1bd2114654627c9df62bdc74165f14b6392e4b17eae591e86e767917c2cadfd0",
+      "language": "verilog"
+    },
+    {
+      "label": "Example coprocessor compressed table entry types",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        35,
+        38
+      ],
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3",
+      "language": "verilog"
+    },
+    {
+      "label": "Example compressed table entry type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        48,
+        52
+      ],
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3",
+      "language": "verilog"
+    },
+    {
+      "label": "Example coprocessor compressed instruction table",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        139,
+        152
+      ],
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3",
+      "language": "verilog"
+    },
+    {
+      "label": "Sibling decoder mask matching rule",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/instr_decoder.sv",
+      "lines": [
+        43,
+        45
+      ],
+      "sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca",
+      "language": "verilog"
+    },
+    {
+      "label": "CV-X-IF compressed instruction operating principle and register fields",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        249,
+        251
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF compressed interface handshake signals",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        394,
+        401
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF compressed request behavior",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        419,
+        420
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF compressed response fields and validity",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        441,
+        449
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF uncompressed register fields",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        257,
+        258
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "Example compressed instruction formats and expansions",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/custom_instructions_cvxif_1_0_0.rst",
+      "lines": [
+        101,
+        115
+      ],
+      "sha256": "e38aa4951cfa059753aa84d974504bad9dbcd4100afa163daa34402b68b53df4",
+      "language": "text"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `compressed_instr_decoder`\n\nImplement the complete `compressed_instr_decoder` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module compressed_instr_decoder` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "```\n\n## Parent instantiation\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "text": "```\n\n## Dependency declarations\n\n### core/include/cvxif_types.svh\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Source heading for the example coprocessor package",
+      "text": "```\n\n### core/cvxif_example/include/cvxif_instr_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between package excerpts",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between package excerpts",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Dependency declarations",
+      "text": "```\n\n## Related source code\n\n### core/cvxif_example/instr_decoder.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Related source code",
+      "text": "```\n\n## Documentation\n\n### docs/source/x_ext.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within the CV-X-IF specification",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within the CV-X-IF specification",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within the CV-X-IF specification",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission within the CV-X-IF specification",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Source heading for the example instruction descriptions",
+      "text": "```\n\n### verif/env/uvme/cvxif_vseq/custom_instructions_cvxif_1_0_0.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Documentation",
+      "text": "```\n"
+    }
+  ]
+}

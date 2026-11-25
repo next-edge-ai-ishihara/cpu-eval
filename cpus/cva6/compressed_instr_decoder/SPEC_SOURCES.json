@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "47bffdc7302ffa794aabfb3fc951fc49b393dac8edf69cd1a3751c165e49a452",
+  "prompt_sha256": "730c730490188122a1e5a4b932317b260b7c2fe5e0ad782285f1fbb0171e89da",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    },
+    "https://github.com/openhwgroup/core-v-xif.git": {
+      "revision": "f08d951d52e3705b54767bbf13dbb4748383fe49"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        341
+      ],
+      "sha256": "6478a2818ef885f5dc7c52345f40e8b94c70ebd0060f8ed8030b15aeab736c88"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        341,
+        1053
+      ],
+      "sha256": "19384f5caf68318bfc62df2a5f233545e6bc0633f3041493b25c9be4eb7efd0c"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        1053,
+        1100
+      ],
+      "sha256": "e2268288abe30a91b3982ee76de3437d2598cf6681ec2fdd47686716bd440c90"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1100,
+        1680
+      ],
+      "sha256": "fa7300c47e73f5829a59ad12929a30a1b5f4890ae6a39b263c20cc2edce1d8ee"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        1680,
+        1764
+      ],
+      "sha256": "0002bb7a235ea4ecc393e17dab8e93296b3697ddd7f2712def8f5d002590f23a"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1764,
+        2181
+      ],
+      "sha256": "ff958289bbf12e3faed18933a830ad91ce5093aeedf301448c03f870c691c5ac"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Source heading for the example coprocessor package",
+      "prompt_bytes": [
+        2181,
+        2254
+      ],
+      "sha256": "f261579df8bd5ea85b415c491e7f72d148e2a73f745d30905950c0f487937226"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2254,
+        2352
+      ],
+      "sha256": "319f99ae4e8f42e8194aea6e85ce30bbba305df1b577bd8255cd95105463d0cd"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Omission between package excerpts",
+      "prompt_bytes": [
+        2352,
+        2361
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2361,
+        2501
+      ],
+      "sha256": "884904036bfcd73729c7330824ef96eca5930775b60047887dc7dc712f643a79"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Omission between package excerpts",
+      "prompt_bytes": [
+        2501,
+        2510
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        2510,
+        3024
+      ],
+      "sha256": "4feb444a5b79694466a7fa30d761602642c7fa7fea941f274f3e62fd719d3b8f"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fence after Dependency declarations",
+      "prompt_bytes": [
+        3024,
+        3111
+      ],
+      "sha256": "2f586b564a608134d1351fad3d8302aad94d16ca3dde7edd8b45f63941de0059"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        3111,
+        3275
+      ],
+      "sha256": "3ec19c29718c809f4a07f4dcaaef2aad3c0be9b27597ed0d4109015f6e270b9a"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Fence after Related source code",
+      "prompt_bytes": [
+        3275,
+        3333
+      ],
+      "sha256": "03d2349b84a025055ceb2c0b7ecb73f5ba2e988f338149ada558cd85b477a7d7"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        3333,
+        3739
+      ],
+      "sha256": "439c92e0016ee1a84800d35ef5d9eb5bb90f1bd8eea5137bc6fa4f38974893fe"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Omission within the CV-X-IF specification",
+      "prompt_bytes": [
+        3739,
+        3745
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        3745,
+        5337
+      ],
+      "sha256": "8ca373c15515ea606b045d7d830d4f7e108460c9657ace455ff09e1d85a45afa"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Omission within the CV-X-IF specification",
+      "prompt_bytes": [
+        5337,
+        5343
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        5343,
+        5550
+      ],
+      "sha256": "2aaf2788530686828ec261e98f5fc41464424c406c0fbf61beab6d8941f92b98"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Omission within the CV-X-IF specification",
+      "prompt_bytes": [
+        5550,
+        5556
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        5556,
+        6864
+      ],
+      "sha256": "d6acaeae250dbc594d26705c3eb475e3769ec38a907be4daaac0193242514ab0"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Omission within the CV-X-IF specification",
+      "prompt_bytes": [
+        6864,
+        6870
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        6870,
+        7047
+      ],
+      "sha256": "1b2e76cef8d7f93d39706f8d2726d95747ac12e843026a52539181f7b60d20d5"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Source heading for the example instruction descriptions",
+      "prompt_bytes": [
+        7047,
+        7127
+      ],
+      "sha256": "f3793d2046b0d477accf43acfde8008afe375e96fb2606e34de1c3ac80a90759"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        7127,
+        7535
+      ],
+      "sha256": "ab7daee0b32f63240846845c76920b2e426e53c9766f5481e84ae203e8cb6d06"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Fence after Documentation",
+      "prompt_bytes": [
+        7535,
+        7539
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for compressed_instr_decoder",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/compressed_instr_decoder.sv",
+      "lines": [
+        10,
+        23
+      ],
+      "sha256": "b7a5bfdc09a732770691e350c4efc154a402b3823578134b23c1cd3ad5e14375",
+      "language": "verilog"
+    },
+    {
+      "label": "Parent instantiation for compressed_instr_decoder",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "lines": [
+        74,
+        87
+      ],
+      "sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7",
+      "language": "verilog"
+    },
+    {
+      "label": "CV-X-IF compressed request and response types",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cvxif_types.svh",
+      "lines": [
+        10,
+        17
+      ],
+      "sha256": "1bd2114654627c9df62bdc74165f14b6392e4b17eae591e86e767917c2cadfd0",
+      "language": "verilog"
+    },
+    {
+      "label": "Example coprocessor compressed table entry types",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        35,
+        38
+      ],
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3",
+      "language": "verilog"
+    },
+    {
+      "label": "Example compressed table entry type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        48,
+        52
+      ],
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3",
+      "language": "verilog"
+    },
+    {
+      "label": "Example coprocessor compressed instruction table",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        139,
+        152
+      ],
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3",
+      "language": "verilog"
+    },
+    {
+      "label": "Sibling decoder mask matching rule",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/instr_decoder.sv",
+      "lines": [
+        43,
+        45
+      ],
+      "sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca",
+      "language": "verilog"
+    },
+    {
+      "label": "CV-X-IF compressed instruction operating principle and register fields",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        249,
+        251
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF compressed interface handshake signals",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        394,
+        401
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF compressed request behavior",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        419,
+        420
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF compressed response fields and validity",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        441,
+        449
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF uncompressed register fields",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        257,
+        258
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "Example compressed instruction formats and expansions",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/custom_instructions_cvxif_1_0_0.rst",
+      "lines": [
+        101,
+        115
+      ],
+      "sha256": "e38aa4951cfa059753aa84d974504bad9dbcd4100afa163daa34402b68b53df4",
+      "language": "text"
+    }
+  ]
+}

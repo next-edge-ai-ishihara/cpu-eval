@@ -1,0 +1,65 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../hwpf_stride/harness/evaluate_ports.py",
+    "../hwpf_stride/harness/stride_ports_tb.sv",
+    "../hwpf_stride_arb/harness/compare_directed_traces.py",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "harness/record_port_compile_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hwpf_stride_wrapper",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "d1432b1f200626bfbf7cb710ec3b06e9c24444e29ac76d9bddb168f667f434e6",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "f7c03050e5beedbf55fa08a53204208d125890e3c39ae7352ce4a0315fc8f212",
+  "port_compile_recorder": "harness/record_port_compile_error.py",
+  "port_compile_recorder_sha256": "76469c881e35ea207e0e91d1cf672d05f7ad4e7124b3f2f391d44ace2e3acd97",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "directed_test_source": "verif/tests/cpu-eval-patches/hwpf_stride_wrapper_store_effect.S after applying directed_test_patch",
+  "directed_test_patch": "test-patches/add_wrapper_store_effect.patch",
+  "directed_test_patch_sha256": "20e85192dcf5d1171ba8999ecd614408fbbe8e9b51b5e730746fcd92cbae949b",
+  "integration_patch": "../hwpf_stride/test-patches/enable_hwpf_stride.patch",
+  "integration_patch_sha256": "fdf7b42156099a242ee8f757498867170d2208939aa63290952c550cf061eb21",
+  "application_order": [
+    "Start with the recorded revisions unpatched, then invoke harness/evaluate.sh with the candidate.",
+    "The evaluator applies integration_patch at the CVA6 repository root to pulse configuration for prefetcher zero with base line 0x8001000",
+    "The evaluator applies directed_test_patch at the CVA6 repository root to reconstruct the directed program",
+    "The evaluator integrates the submitted module and reverses its integration patches on exit. Do not apply these patches before invocation."
+  ],
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hwpf_stride/hwpf_stride_wrapper.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "The ordered patch records describe test provenance. Start with the pinned test sources and leave these patches unapplied before invoking harness/evaluate.sh, which reconstructs the tests.",
+    "address_mapping": "The port test uses cache-line numbers and checks the generated physical request address.",
+    "evaluation": "Start from an unpatched checkout and invoke harness/evaluate.sh with the candidate; the evaluator applies its own patches and restores its inputs."
+  },
+  "evaluation_scope": {
+    "port_scope": "With base line 0, snoop unrelated line 300 and check that it produces no request, then snoop line 0 and observe five prefetches at line offsets 1, 2, 4, 5, 6 with stability during backpressure. Cycle offsets and internal identifiers are not acceptance requirements. A candidate that does not complete the observation within the cycle bound fails.",
+    "directed_scope": "Access 0x80010000, the byte address of configured line 0x8001000, then compare complete retirement traces through the stride-arbiter comparator. The three cycle values are diagnostic observations and are not compared with fixed reference cycle counts.",
+    "reference_contract_exception": "The fixed source identifies the target; its full-offset comparison and erased request tag are not imposed on a solver."
+  },
+  "test_lists": [
+    {
+      "path": "harness/testlist_hwpf_stride_wrapper.yaml",
+      "sha256": "549f00cdf2dcbd963cc81c1ef7bc8da80218ddb2b0b9577f4496eab2c84b3144"
+    },
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049"
+    }
+  ],
+  "port_evaluator": "../hwpf_stride/harness/evaluate_ports.py",
+  "port_evaluator_sha256": "4d123e52862d3633f323f41c06ff77507c7bd1ee26124bd26c5ee70dc13533f1",
+  "port_testbench": "../hwpf_stride/harness/stride_ports_tb.sv",
+  "port_testbench_sha256": "72172ba567debf4c50ea3bd79963d265a1fccabb257271c908af7f176511e4a6"
+}

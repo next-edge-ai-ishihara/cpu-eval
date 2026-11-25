@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "DivSqrtRecF64ToRaw_mulAddZ31",
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64_mulAddZ31.scala",
+      "lines": [
+        38,
+        41
+      ],
+      "sha256": "ad0e11711c7e5c6b0533c32e66b9fa4f834213261d92cfe4a698235fd5613085"
+    },
+    {
+      "label": "DivSqrtRecF64ToRaw_mulAddZ31 declaration and ports",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64_mulAddZ31.scala",
+      "lines": [
+        50,
+        81
+      ],
+      "sha256": "ad0e11711c7e5c6b0533c32e66b9fa4f834213261d92cfe4a698235fd5613085"
+    },
+    {
+      "label": "Parent DivSqrtRecF64_mulAddZ31 declaration",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64_mulAddZ31.scala",
+      "lines": [
+        718,
+        718
+      ],
+      "sha256": "ad0e11711c7e5c6b0533c32e66b9fa4f834213261d92cfe4a698235fd5613085"
+    },
+    {
+      "label": "Parent DivSqrtRecF64_mulAddZ31 instantiation and rounding connection",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64_mulAddZ31.scala",
+      "lines": [
+        750,
+        783
+      ],
+      "sha256": "ad0e11711c7e5c6b0533c32e66b9fa4f834213261d92cfe4a698235fd5613085"
+    },
+    {
+      "label": "Rounding-mode constants",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        42,
+        52
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "RawFloat and isSigNaNRawFloat",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        68,
+        83
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "rawFloatFromRecFN",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/rawFloatFromRecFN.scala",
+      "lines": [
+        42,
+        63
+      ],
+      "sha256": "28a89462a5ff0708818d36c3bb2631c998209f1217c15c4457585de58ac0aa09"
+    },
+    {
+      "label": "Fixed downstream rounder RoundAnyRawFNToRecFN and RoundRawFNToRecFN",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        46,
+        317
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Division, square-root and multiplier-adder interface documentation",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "doc/divSqrtRecodedFloat64_mulAddZ31.txt",
+      "lines": [
+        4,
+        104
+      ],
+      "sha256": "15acee994b04323541bd2ffafcfd1ab75e154c074ea6e72bfc58c22f1cd5e77f"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `DivSqrtRecF64ToRaw_mulAddZ31`\n\nImplement one complete `DivSqrtRecF64ToRaw_mulAddZ31` source-level hardware definition for the BOOM `LargeBoomConfig` configuration. Preserve the definition name, constructor parameters, inheritance, and public interface shown below. Return only the complete `class DivSqrtRecF64ToRaw_mulAddZ31` definition in a single Scala code block, with no text outside the block.\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "## Package and imports\n\n### `src/main/scala/DivSqrtRecF64_mulAddZ31.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "    // ...\n```\n\n## Parent instantiation\n\n### `src/main/scala/DivSqrtRecF64_mulAddZ31.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "    // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### `src/main/scala/common.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "    // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "```\n\n### `src/main/scala/rawFloatFromRecFN.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "```\n\n## Related source code\n\n### `src/main/scala/RoundAnyRawFNToRecFN.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "```\n\n## Documentation\n\n### `doc/divSqrtRecodedFloat64_mulAddZ31.txt`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Heading or excerpt delimiter",
+      "text": "```\n"
+    }
+  ]
+}

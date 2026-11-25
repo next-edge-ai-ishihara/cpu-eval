@@ -1,0 +1,12 @@
+diff --git a/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv b/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv
+--- a/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv
++++ b/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv
+@@ -251,7 +251,7 @@ module hwpf_stride_wrapper
+                hwpf_stride_arb_in_req[i].tid          = hpdcache_req_tid_t'(i),
+                hwpf_stride_arb_in_req[i].need_rsp     = hwpf_stride_req[i].need_rsp,
+                hwpf_stride_arb_in_req[i].phys_indexed = hwpf_stride_req[i].phys_indexed,
+-               hwpf_stride_arb_in_req[i].addr_tag     = '0,
++               hwpf_stride_arb_in_req[i].addr_tag     = hwpf_stride_req[i].addr_tag,
+                hwpf_stride_arb_in_req[i].pma          = '0;
+     end
+     //  }}}

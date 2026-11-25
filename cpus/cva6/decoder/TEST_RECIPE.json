@@ -1,0 +1,47 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_control.sh"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "decoder",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/decoder.sv",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "problem_evaluator": "harness/evaluate.sh",
+  "problem_evaluator_sha256": "1c2ac108f86b4206dbe98d2cc6fbb0f64f01ce6d7200a326b6e43c492e677abd",
+  "test_list": "../harness/testlist_cv32a60x_full.yaml",
+  "test_list_sha256": "4e28d1190dcfd752d5f8b07790cf61056452c73889514a0a73216fc662038e16",
+  "control_evaluator": "harness/evaluate_control.sh",
+  "control_evaluator_sha256": "4c12caecc2554172081fddc33836651254bd5fd460e130111d9b3a9a1ed9c07b",
+  "control_test_list": "harness/testlist_control.yaml",
+  "control_test_list_sha256": "f6fe62e6bf6dfd226f8448307078efdada0e3ed309b065053983fd3ec36e43c1",
+  "parallel_runner": "../../../tools/cva6/run_prebuilt_testharness.sh",
+  "parallel_runner_sha256": "42d3331bd677661fa9ca0b26c8c752a81d64e816f1326cb088fd33df47e0ca34",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/decoder.sv",
+    "test_sources": "Check out the recorded test revision, apply ../harness/normalize-initial-mtvec.patch, run the 106 programs named by ../harness/testlist_cv32a60x_full.yaml, reconstruct four control programs from the eight ordered patches in ../cva6/tests, verify their recorded hashes, and run harness/testlist_control.yaml.",
+    "patch": {
+      "path": "../harness/normalize-initial-mtvec.patch",
+      "sha256": "faf6d5b6659299c86a08189f3126b29e8e27f5d2867f6761345e39303b9a8860",
+      "apply": [
+        "git",
+        "apply",
+        "../harness/normalize-initial-mtvec.patch"
+      ],
+      "output": "riscv-test-suite/rv32i_m/C/src/cebreak-01.S",
+      "input_sha256": "a2b5f95de5f9faaea2161c81af270c57c53a16ddadcb11f7df87697ba41c48fc",
+      "output_sha256": "c944a3d85fd5fccdd4930542089504fcd3f2a25da640d4fed1d1bb3c4f9ea9ae"
+    }
+  },
+  "mtvec_adaptation": "decoder initializes mtvec to zero before the architectural test. compressed_decoder points mtvec to the local continuation label. The patches describe distinct fixed test configurations."
+}

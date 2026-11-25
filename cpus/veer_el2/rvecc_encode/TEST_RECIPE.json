@@ -1,0 +1,89 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2197
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvecc_encode",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca",
+    "post_generation_patches": [
+      {
+        "path": "test/dccm-ecc-coverage.patch",
+        "sha256": "217b917dacabf74fed28afd52e83f06ae3ff44e0acb02bcaec769d6bb8dd1518",
+        "apply_in": "VeeR EL2 repository root",
+        "order": 1
+      },
+      {
+        "path": "../rvecc_decode/test/dccm-single-bit-injection.patch",
+        "sha256": "d7be112e822104fad9ce4bd8f6e7bdae514d1e21e9a149d1aef808cd9b189889",
+        "apply_in": "VeeR EL2 repository root",
+        "order": 2
+      }
+    ],
+    "post_generation_artifacts": [
+      {
+        "path": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S",
+        "sha256": "be723a2c47d6fa010b3fd38659b8aa828c36104f9cf6bc13902960d6dedadc31"
+      },
+      {
+        "path": "third_party/riscv-dv/yaml/iss.yaml",
+        "sha256": "02bb1d6cd0f55e425a657f51cf6ab97cecc9de3d46fceae8c19dd4e816cd22d5"
+      },
+      {
+        "path": "testbench/tb_top.sv",
+        "sha256": "0eb1ec8052b3af75475df2498a6a9e494a2961cdf7b19a059a06d863ac6a6247"
+      }
+    ],
+    "patched_source_sha256": "be723a2c47d6fa010b3fd38659b8aa828c36104f9cf6bc13902960d6dedadc31"
+  },
+  "run": "CPU_EVAL_EXPECTED_MATCHED=2197 bash evaluate_ecc.sh",
+  "grading_dependencies": [
+    "evaluate_ecc.sh",
+    "evaluate_ports.py"
+  ],
+  "port_test": {
+    "comparison": "570 combinational din/ecc_out comparisons against the function in SPEC.md: zero, all ones, 32 single bits, their 32 complements, all 496 distinct two-bit pairs, and 8 fixed multiple-bit patterns.",
+    "patterns": [
+      "aaaaaaaa",
+      "55555555",
+      "f0f0f0f0",
+      "0f0f0f0f",
+      "12345678",
+      "87654321",
+      "5a3c69f0",
+      "deadbeef"
+    ],
+    "environment": "Python 3.10 or later, Verilator with --binary --timing --assert, make and a C++ toolchain; VERILATOR may name its executable. The official evaluate_source_unit.py --timeout bounds both port-test subprocesses in its evaluator process group and restores the source after stopping that group. evaluate_ports.py also stops its build and simulation 900 seconds after it starts and reports INVALID.",
+    "result": "The port stage returns 2 for a build or setup failure. It reports candidate diagnostics at the installed source location so the submission grader can classify attributable compilation failures. Output mismatch, incomplete execution or runtime failure exits 1. Exit 0 requires exactly 570 ordered observations, matching inputs and outputs, and the completion marker; the official entry then runs the recorded CPU comparison."
+  },
+  "comparison": "570 ECC port comparisons followed by ordered GPR state-change comparisons between Spike and RTL, with exactly 2197 matching GPR state-change rows."
+}

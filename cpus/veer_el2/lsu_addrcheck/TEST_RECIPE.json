@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_lsu_addrcheck",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    },
+    {
+      "path": "test/load-store-coverage.patch",
+      "sha256": "6a7392d7b86edd4299085e7f5efc77bc590eb4aa8efc733bebdc2aece29b7bdf",
+      "apply_in": "VeeR EL2 repository root after generating the fixed test",
+      "order": 3
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "reference_matched_instructions": 2207,
+    "generated_source_before_patch_sha256": "a517527d47e564ec91a7212523785059b0d0541812fa19976983775a5d12201b",
+    "generated_source_after_patch_sha256": "1539d765a95bd197b482123351f6afae60c05f8cfccb990be2d737bc2e0cc6ff"
+  },
+  "run": "bash evaluate_all.sh",
+  "comparison": "Ordered state-changing GPR updates in the Spike and RTL traces, followed by direct address-check outputs for a word load and a byte load at the configured PIC base address.",
+  "coverage_limits": "The CPU test stores and reloads in DCCM. The address-check port test compares an aligned word access and an aligned byte access in the PIC range. Alternative internal range comparison is permitted.",
+  "port_probe": {
+    "evaluate_all.sh": "161f3cd9bf0fd59b4cbfa38c1a61aad8e651ef914949156a6ea2d90071ff6571",
+    "test/run_addrcheck_port_probe.py": "65005b8a813f6f59e025ac86939a4c25b1b23d9b7f3d84d5d7aad7647395bb51",
+    "test/addrcheck_port_probe.sv": "2010d2575531a0b2c2623431c191f41d9ea7e07bbcf0d89849ed194914377304"
+  }
+}

@@ -1,0 +1,7 @@
+requirement	tests	rationale
+Dispatch integer micro-operations to the integer issue queue	rv64ui-p-add;rv64ui-p-sub;rv64ui-p-xor;rv64ui-p-dispatcher_routing	Exercise distinct integer arithmetic and logic micro-operations through dispatch and retirement. The added program exposes XOR and SUB results in retired register updates without branching on those results.
+Dispatch memory micro-operations to the memory issue queue	rv64ui-p-lw;rv64ui-p-sw;rv64ui-p-ld;rv64ui-p-sd	Exercise 32-bit and 64-bit load and store micro-operations through dispatch and retirement.
+Dispatch multiply and divide micro-operations to the integer issue queue	rv64um-p-mul;rv64um-p-div	Exercise the variable-latency integer execution paths through dispatch and retirement.
+Dispatch floating-point micro-operations to the floating-point issue queue	rv64uf-p-fadd	Exercise a floating-point micro-operation through dispatch and retirement.
+Dispatch a floating-point store to both issue queues	rv64uf-p-ldst	The FSW store needs the memory address and floating-point data paths. The program reads back the stored words.
+Preserve each dispatched micro-operation	rv64ui-p-add;rv64ui-p-sub;rv64ui-p-xor;rv64ui-p-lw;rv64ui-p-sw;rv64ui-p-ld;rv64ui-p-sd;rv64um-p-mul;rv64um-p-div;rv64uf-p-fadd;rv64ui-p-dispatcher_routing;rv64uf-p-ldst	The retired instruction and architectural update expose corruptions of dispatched micro-operation state. The added program permits the RTL simulation to finish normally when either selected operation is corrupted, leaving the trace comparison to determine the verdict.

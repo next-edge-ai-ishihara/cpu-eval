@@ -1,0 +1,12 @@
+diff --git a/src/test/cpp/regression/main.cpp b/src/test/cpp/regression/main.cpp
+--- a/src/test/cpp/regression/main.cpp
++++ b/src/test/cpp/regression/main.cpp
+@@ -630,7 +630,7 @@
+ 		#endif
+ 
+ 		default: {
+-            if(csr >= 0x3A0 && csr <= 0x3A3 || csr >= 0x3B0 && csr <= 0x3BF) break; //PMP
++            if(csr >= 0x3A0 && csr <= 0x3A3 || csr >= 0x3B0 && csr <= 0x3BF) { *value = 0; break; } //PMP
+             return true;
+ 		}break;
+ 		}

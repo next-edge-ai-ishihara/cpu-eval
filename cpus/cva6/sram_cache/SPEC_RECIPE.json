@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Selected technology implementation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        26,
+        26
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected data-cache user enable",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        118,
+        118
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected instruction-cache user values",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        120,
+        121
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Derived instruction-cache user width",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        159,
+        159
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Derived data-cache user width",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        169,
+        169
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Derived data-cache user enable",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        182,
+        182
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Derived instruction-cache user enable",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        185,
+        185
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Instruction-cache tag connection without user bits",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache.sv",
+      "lines": [
+        460,
+        479
+      ],
+      "sha256": "272c06abf1f37a3f3a7d18d6c29a08df0a493631e330aefb4c677357a4d901c3"
+    },
+    {
+      "label": "Instruction-cache data connection with user bits",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache.sv",
+      "lines": [
+        485,
+        503
+      ],
+      "sha256": "272c06abf1f37a3f3a7d18d6c29a08df0a493631e330aefb4c677357a4d901c3"
+    },
+    {
+      "label": "Data-cache byte-write connection with user bits",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/wt_dcache_mem.sv",
+      "lines": [
+        308,
+        326
+      ],
+      "sha256": "18c4b7105801f9edfaba6dd87b9999a106e820ca9717d4404376bbb409a2ce2f"
+    },
+    {
+      "label": "Selected technology SRAM wrapper declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "common/local/util/tc_sram_wrapper_cache_techno.sv",
+      "lines": [
+        10,
+        39
+      ],
+      "language": "verilog",
+      "sha256": "c10b2faf922c2d7c49a52f93087bb545077d9c82399c985c2bfdaead0a03b220"
+    },
+    {
+      "label": "Generic SRAM parameter contract",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "lines": [
+        13,
+        30
+      ],
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    },
+    {
+      "label": "Generic SRAM port contract",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "lines": [
+        37,
+        45
+      ],
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    },
+    {
+      "label": "Generic SRAM write-output behavior",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "lines": [
+        52,
+        54
+      ],
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    },
+    {
+      "label": "Module declaration for sram_cache",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "common/local/util/sram_cache.sv",
+      "lines": [
+        21,
+        41
+      ],
+      "sha256": "08f855e6fc7b6f79971bc51724d10ccbbd7641cc9a4c63ef61c0f287e97fc962"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "# Implement `sram_cache`\n\nImplement the complete `sram_cache` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module sram_cache` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n### core/include/build_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Parent instantiation\n\n### core/cache_subsystem/cva6_icache.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n### core/cache_subsystem/wt_dcache_mem.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Dependency declarations\n\n### common/local/util/tc_sram_wrapper_cache_techno.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Related source code\n\n### vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n"
+    }
+  ]
+}

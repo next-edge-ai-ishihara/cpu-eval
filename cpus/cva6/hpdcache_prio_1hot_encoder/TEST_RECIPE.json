@@ -1,0 +1,47 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/priority_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_prio_1hot_encoder",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "13275ba066079dd77f334925a30d79196c82f352e112d409ad11593e522f01de",
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "6319564041c557315ccb23e12632383c793aaf1ecddd0b887af5b4cebba71e0b",
+    "test": "harness/priority_ports_tb.sv",
+    "test_sha256": "af6cd14d06d5816ba768230f256a09489c2bc114d7d1bab325d8c6c4b562e948",
+    "parameters": {
+      "N": 4
+    },
+    "inputs": "All 16 binary input vectors in ascending order, followed by a second zero input after the all-ones request.",
+    "comparison": "Compare every val_o bit with the one-hot position of the least significant asserted val_i bit; zero input produces zero output.",
+    "completion": "Exactly one SUMMARY checks=17 errors=0 line and one PRIORITY_PORT_TEST_COMPLETE line, with runtime exit 0.",
+    "build_timeout_seconds": 120,
+    "runtime_timeout_seconds": 10,
+    "tool_version_timeout_seconds": 10,
+    "process_cleanup": "Each tool or model runs in a new session. On timeout or leader completion, stop that process group and wait for all non-zombie group members to stop before returning. Requires Linux /proc.",
+    "order": "Run before the fixed CPU programs. A compiler error attributed to the submission is recorded separately from an output mismatch or tool failure."
+  },
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_prio_1hot_encoder.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Check out the recorded CPU and architectural-test revisions and initialize the HPDcache submodule at source_submodule_revision. Run harness/evaluate.sh with the complete submission. The CPU tests use the fixed cache connections."
+  }
+}

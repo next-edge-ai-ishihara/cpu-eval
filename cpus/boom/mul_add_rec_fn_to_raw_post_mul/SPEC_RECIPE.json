@@ -1,0 +1,370 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "MulAddRecFNToRaw_postMul",
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        38,
+        41
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Target declaration and interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        169,
+        177
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Parent multiplication, addition, and rounding connections",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        314,
+        344
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Intermediate result bundle",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        46,
+        66
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Raw floating-point result bundle and signaling-NaN predicate",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        68,
+        83
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "Rounding encodings",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        42,
+        52
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "Rounding dependency interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        292,
+        304
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Producer interpretation of operands and operation",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        70,
+        116
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Producer alignment and output contract",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        117,
+        164
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Single- and double-precision parameterizations",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        297,
+        298
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "FMA wrapper operand construction and target connections",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        697,
+        716
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "Fixed BOOM operation encoding",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/fpu.scala",
+      "lines": [
+        121,
+        150
+      ],
+      "sha256": "b59404bfa9142bb24c7dc0d783ba497181bf7275e002e7c4493d8091cae7f2b0"
+    },
+    {
+      "label": "Fixed BOOM single- and double-precision consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/fpu.scala",
+      "lines": [
+        205,
+        211
+      ],
+      "sha256": "b59404bfa9142bb24c7dc0d783ba497181bf7275e002e7c4493d8091cae7f2b0"
+    },
+    {
+      "label": "Recoded format",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "README.md",
+      "lines": [
+        14,
+        38
+      ],
+      "sha256": "3ff63f4962e69576cfbd139302a6ae2176827743d60341b50f2e790173f33d7b"
+    },
+    {
+      "label": "Architectural rounding-mode meanings",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        123,
+        136
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Fused multiply-add operations",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        294,
+        303
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Fused multiply-add invalid exception",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        333,
+        334
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission format",
+      "text": "# Implement `MulAddRecFNToRaw_postMul`\n\nImplement the complete `MulAddRecFNToRaw_postMul` module. Preserve the definition name, constructor parameters, inheritance, and public interface shown below. Keep the declarations under Dependency declarations in the fixed source and do not resubmit them.\n\nReturn only the complete `class MulAddRecFNToRaw_postMul` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Parent instantiation\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### `src/main/scala/MulAddRecFN.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/main/scala/common.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Related source code\n\n### `src/main/scala/MulAddRecFN.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/main/scala/RoundAnyRawFNToRecFN.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/main/scala/tile/FPU.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/main/scala/exu/execution-units/fpu.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Documentation\n\n### `README.md`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/f-st-ext.adoc`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n"
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+ "schema_version": 1,
+ "cpu": "BOOM",
+ "configuration": "LargeBoomConfig",
+ "source_unit": "CompareRecFN",
+ "sources": [
+  {
+   "label": "src/main/scala/CompareRecFN.scala excerpt",
+   "repo": "github.com/ucb-bar/berkeley-hardfloat",
+   "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+   "path": "src/main/scala/CompareRecFN.scala",
+   "lines": [
+    38,
+    40
+   ],
+   "sha256": "76d51c3fb42268879d61142be857d14c5fc0d10d176156001d43b8d4ca44d53e"
+  },
+  {
+   "label": "src/main/scala/CompareRecFN.scala excerpt",
+   "repo": "github.com/ucb-bar/berkeley-hardfloat",
+   "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+   "path": "src/main/scala/CompareRecFN.scala",
+   "lines": [
+    42,
+    52
+   ],
+   "sha256": "76d51c3fb42268879d61142be857d14c5fc0d10d176156001d43b8d4ca44d53e"
+  },
+  {
+   "label": "src/main/scala/tile/FPU.scala excerpt",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/tile/FPU.scala",
+   "lines": [
+    462,
+    465
+   ],
+   "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+  },
+  {
+   "label": "src/main/scala/tile/FPU.scala excerpt",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/tile/FPU.scala",
+   "lines": [
+    482,
+    485
+   ],
+   "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+  },
+  {
+   "label": "src/main/scala/common.scala excerpt",
+   "repo": "github.com/ucb-bar/berkeley-hardfloat",
+   "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+   "path": "src/main/scala/common.scala",
+   "lines": [
+    68,
+    83
+   ],
+   "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+  },
+  {
+   "label": "src/main/scala/rawFloatFromRecFN.scala excerpt",
+   "repo": "github.com/ucb-bar/berkeley-hardfloat",
+   "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+   "path": "src/main/scala/rawFloatFromRecFN.scala",
+   "lines": [
+    42,
+    63
+   ],
+   "sha256": "28a89462a5ff0708818d36c3bb2631c998209f1217c15c4457585de58ac0aa09"
+  },
+  {
+   "label": "src/f-st-ext.adoc excerpt",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/f-st-ext.adoc",
+   "lines": [
+    443,
+    456
+   ],
+   "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+  },
+  {
+   "label": "src/d-st-ext.adoc excerpt",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/d-st-ext.adoc",
+   "lines": [
+    210,
+    214
+   ],
+   "sha256": "d48c7621b80d57a1421fef6ad7a5d6c1325cf20465e395b4387c157f04b9b195"
+  },
+  {
+   "label": "src/images/wavedrom/float-csr.edn excerpt",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/images/wavedrom/float-csr.edn",
+   "lines": [
+    5,
+    16
+   ],
+   "sha256": "2b6174381ed9843ac7b970002566ff69bc92d2a055780f4f2fce4211087df8e9"
+  },
+  {
+   "label": "doc/divSqrtRecFN_small.txt excerpt",
+   "repo": "github.com/ucb-bar/berkeley-hardfloat",
+   "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+   "path": "doc/divSqrtRecFN_small.txt",
+   "lines": [
+    38,
+    42
+   ],
+   "sha256": "261cf42926ec5333aee14d9b4d35dc3f15aac2784c124d0c46c1a3cfc25c1ecd"
+  },
+  {
+   "label": "Floating-point comparison output meanings",
+   "repo": "github.com/ucb-bar/berkeley-hardfloat",
+   "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+   "path": "berkeley-softfloat-3/doc/SoftFloat.html",
+   "lines": [
+    1094,
+    1105
+   ],
+   "sha256": "aba2b4306ac97ee19aa91dd1c513ef454f45840840d84cd88b55617e653e6c18"
+  },
+  {
+   "label": "Greater-than comparison relationship",
+   "repo": "github.com/ucb-bar/berkeley-hardfloat",
+   "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+   "path": "berkeley-softfloat-3/doc/SoftFloat.html",
+   "lines": [
+    1119,
+    1125
+   ],
+   "sha256": "aba2b4306ac97ee19aa91dd1c513ef454f45840840d84cd88b55617e653e6c18"
+  },
+  {
+   "label": "Chisel version",
+   "repo": "github.com/ucb-bar/chipyard",
+   "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+   "path": "build.sbt",
+   "lines": [
+    63,
+    67
+   ],
+   "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+  }
+ ],
+ "parts": [
+  {
+   "kind": "authored",
+   "description": "Task, submission format, package heading",
+   "text": "# Implement `CompareRecFN`\n\nImplement one complete `CompareRecFN` source-level hardware definition for BOOM. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class CompareRecFN` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 0
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n## Class declaration\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 1
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n## Parent instantiation\n\n### src/main/scala/tile/FPU.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 2
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "// ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 3
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 12
+  },
+  {
+   "kind": "authored",
+   "description": "heading, task text, or excerpt delimiter",
+   "text": "```\n\n### src/main/scala/common.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 4
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/main/scala/rawFloatFromRecFN.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 5
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n## Documentation\n\n### src/f-st-ext.adoc\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 6
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/d-st-ext.adoc\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 7
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/images/wavedrom/float-csr.edn\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 8
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### doc/divSqrtRecFN_small.txt\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 9
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### berkeley-softfloat-3/doc/SoftFloat.html\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 10
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 11
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n"
+  }
+ ]
+}

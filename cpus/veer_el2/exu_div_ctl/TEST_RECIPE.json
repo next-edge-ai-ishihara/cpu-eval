@@ -1,0 +1,55 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2199
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_exu_div_ctl",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca",
+    "post_generation_patch": {
+      "path": "test/add-remu-coverage.patch",
+      "sha256": "1e271c94cfce2d662e719fdd3a340d4967841a1d1418ca8729545c27c530e79e",
+      "apply_in": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test",
+      "order": 1
+    },
+    "patched_source_sha256": "e031a7d9dd8fa3a979475eef6529b21fc50fbe60e0e468fd82764fab06156a8a",
+    "cancellation_observation": {
+      "source": "test/observe_cancel.sv",
+      "sha256": "341a78d1f49bee34f5634c61f1c63f6c23b209e391eb67fe1db2802ff1aa5590",
+      "testbench": "testbench/tb_top.sv",
+      "stimulus": "The arithmetic test program issues divisions with destination x0, which the fixed decoder cancels.",
+      "success": "A cancellation occurs, and no canceled request signals completion."
+    }
+  },
+  "run": "bash run_division_test.sh",
+  "comparison": "Spike and RTL ordered GPR-update traces; the fixed comparator skips updates that do not change its tracked register state."
+}

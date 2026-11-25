@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Excerpt for el2_veer_wrapper: configs/veer.config",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        304,
+        305
+      ],
+      "language": "perl",
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a"
+    },
+    {
+      "label": "Excerpt for el2_veer_wrapper: configs/veer.config",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        313,
+        314
+      ],
+      "language": "perl",
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a"
+    },
+    {
+      "label": "Excerpt for el2_veer_wrapper: design/el2_veer_wrapper.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_veer_wrapper.sv",
+      "lines": [
+        24,
+        462
+      ],
+      "language": "verilog",
+      "sha256": "61ff0e5656757d7dc0e84e245c5f385f6ecc0273139b11d2114820f0e4f4a2c4"
+    },
+    {
+      "label": "Excerpt for el2_veer_wrapper: design/el2_mem.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_mem.sv",
+      "lines": [
+        19,
+        90
+      ],
+      "language": "verilog",
+      "sha256": "407e49ac960503befbc02fd5eb7aad283e938ae27f546f2089a44246bea46016"
+    },
+    {
+      "label": "Excerpt for el2_veer_wrapper: design/el2_veer.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_veer.sv",
+      "lines": [
+        23,
+        468
+      ],
+      "language": "verilog",
+      "sha256": "3c1df18fbb7c0c753ed51cd842c9d58c7b04c9d485d8ec9d79177885afd610e7"
+    },
+    {
+      "label": "Excerpt for el2_veer_wrapper: design/lib/el2_mem_if.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_mem_if.sv",
+      "lines": [
+        21,
+        150
+      ],
+      "language": "verilog",
+      "sha256": "7badcf1dedd812a056d87160727350bd4fafc6e03952db84ee7e65fb4d3867c9"
+    },
+    {
+      "label": "Excerpt for el2_veer_wrapper: design/dmi/dmi_wrapper.v",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dmi/dmi_wrapper.v",
+      "lines": [
+        24,
+        47
+      ],
+      "language": "verilog",
+      "sha256": "92897cf6d2aea3818e0710f0c45749871fa67b85b6d8f58b442ccb1f39950ee5"
+    },
+    {
+      "label": "Excerpt for el2_veer_wrapper: design/dmi/dmi_mux.v",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dmi/dmi_mux.v",
+      "lines": [
+        4,
+        31
+      ],
+      "language": "verilog",
+      "sha256": "83ea180322a62782cabd36a12a762dde260dbe8b88de6a43f0f7a991c8ecec7b"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "# Implement `el2_veer_wrapper`\n\nImplement the complete `el2_veer_wrapper` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_veer_wrapper` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### configs/veer.config\n\n```perl\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n## Dependency declarations\n\n### design/el2_mem.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n### design/el2_veer.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n### design/lib/el2_mem_if.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n### design/dmi/dmi_wrapper.v\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n### design/dmi/dmi_mux.v\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n## Additional requirement\n\nDrive `dmi_active` high in each cycle in which a DMI register access is requested and low otherwise.\n"
+    }
+  ]
+}

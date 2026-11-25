@@ -1,0 +1,45 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/compare_cycle_measurement.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_sram",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_sram.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "941cdde519394aafb1d147ec3e592d18177a6eea431731ad51457f0d66c35250",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "3d24b578b9315a38012a84a560742dc1b48083f6f718e47776fae81aaf51bbef",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "directed_test_source": "harness/hpdcache_sram_repeated_hit.S",
+  "directed_test_source_sha256": "f22e945e12cd500aa4e56e329eeb4b716086924372b12e164e3754a32986e0b4",
+  "application_order": [
+    "checkout CVA6 at cpu_revision and initialize its HPDcache submodule at source_submodule_revision",
+    "run harness/evaluate.sh with the complete submitted hpdcache_sram module"
+  ],
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_sram.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Use the pinned architectural tests. For a directed test, the evaluator copies the distributed harness/*.S source to <CVA6>/verif/tests/cpu-eval-patches. To reconstruct that source independently, apply its new-file provenance patch in an empty scratch directory and compare the recorded SHA-256; do not apply the provenance patch to either upstream checkout."
+  },
+  "test_materialization": "harness/evaluate_parallel.sh copies the assembly files beside the selected test list into <CVA6>/verif/tests/cpu-eval-patches. The directed test patch is a provenance reconstruction record and is not applied before evaluation.",
+  "test_lists": [
+    {
+      "path": "harness/testlist_sram.yaml",
+      "sha256": "404ce8026007ddc81cdc86a9bcdc038befea8d2ebdb69b8f254b425009f82277"
+    },
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049"
+    }
+  ],
+  "directed_test_scope": "The directed source times 256 repeated loads of one warmed word."
+}

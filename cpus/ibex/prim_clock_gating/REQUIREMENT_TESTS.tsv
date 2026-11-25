@@ -1,0 +1,3 @@
+requirement	source	tests
+prim_clock_gating passes clk_i when either en_i or test_en_i is asserted and suppresses it when both enables are deasserted.	vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_gating.sv:4-28	pmp_smoke_test;dummy_instr_test;dit_test;harness/primitive_tb.cpp
+With test enable held constant, a functional enable change during the low phase determines whether the next rising edge passes. A change during the high phase preserves the current pulse.	vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_gating.sv:20-26	harness/primitive_tb.cpp

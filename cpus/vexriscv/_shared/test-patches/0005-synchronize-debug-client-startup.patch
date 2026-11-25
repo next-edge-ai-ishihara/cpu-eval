@@ -1,0 +1,43 @@
+diff --git a/src/test/cpp/regression/main.cpp b/src/test/cpp/regression/main.cpp
+index 641fa2e..6635e58 100644
+--- a/src/test/cpp/regression/main.cpp
++++ b/src/test/cpp/regression/main.cpp
+@@ -3407,6 +3407,7 @@ class Compliance : public WorkspaceRegression{
+ #include<stdlib.h>
+ #include<unistd.h>
+ #include <netinet/tcp.h>
++#include <atomic>
+ 
+ #define RISCV_SPINAL_FLAGS_RESET 1<<0
+ #define RISCV_SPINAL_FLAGS_HALT 1<<1
+@@ -3425,6 +3426,7 @@ public:
+ 	pthread_t clientThreadId;
+ 	char buffer[1024];
+-	bool clientSuccess = false, clientFail = false;
++	std::atomic<bool> clientReady{false};
++	std::atomic<bool> clientSuccess{false}, clientFail{false};
+ 
+ 	static void* clientThreadWrapper(void *debugModule){
+ 		((DebugPluginTest*)debugModule)->clientThread();
+@@ -3476,6 +3478,12 @@ public:
+ 		//---- Connect the socket to the server using the address struct ----//
+ 		socklen_t addr_size = sizeof serverAddr;
+ 		int error = connect(clientSocket, (struct sockaddr *) &serverAddr, addr_size);
++		if(error != 0){
++			perror("DebugPluginTest connect");
++			clientFail = true;
++			return;
++		}
++		clientReady = true;
+ //		printf("!! %x\n",readCmd(2,0x8));
+ 		uint32_t debugAddress = 0xF00F0000;
+ 		uint32_t readValue;
+@@ -3568,6 +3576,7 @@ public:
+ 	DebugPluginTest() : WorkspaceRegression("DebugPluginTest") {
+ 		loadHex(string(REGRESSION_PATH) + "../../resources/hex/debugPlugin.hex");
+-		 pthread_create(&clientThreadId, NULL, &clientThreadWrapper, this);
++		pthread_create(&clientThreadId, NULL, &clientThreadWrapper, this);
++		while(!clientReady && !clientFail) usleep(100);
+ 	}
+ 
+ 	virtual ~DebugPluginTest(){

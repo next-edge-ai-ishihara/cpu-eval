@@ -1,0 +1,6 @@
+requirement	tests	rationale
+Byte, halfword, word, and doubleword effective addresses for loads	rv64ui-p-lb;rv64ui-p-lbu;rv64ui-p-lh;rv64ui-p-lhu;rv64ui-p-lw;rv64ui-p-lwu;rv64ui-p-ld	Signed and unsigned load self-checks at all selected integer widths, including negative offsets and operand bypass cases.
+Byte, halfword, word, and doubleword effective addresses and store data	rv64ui-p-sb;rv64ui-p-sh;rv64ui-p-sw;rv64ui-p-sd	Stores followed by checked loads observe address calculation and store data at all selected integer widths.
+Misaligned load and store handling	rv64mi-p-ma_addr	The upstream program permits completion or a load/store address-misaligned trap; when trapped it checks mcause and mbadaddr. It does not require every unaligned access to trap.
+Address-translation fence request	rv64si-p-dirty	RTL self-checking supervisor program executes zero-operand SFENCE.VMA during page-table state changes.
+Address-translation fence operand selection	memaddr_fence_ports	Observe each register selection and the supplied virtual address, including a selected register containing zero.

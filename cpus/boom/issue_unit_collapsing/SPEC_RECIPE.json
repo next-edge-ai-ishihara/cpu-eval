@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "IssueUnitCollapsing",
+  "sources": [
+    {
+      "label": "Fixed issue-queue configuration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        192,
+        195
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/issue-units/issue-unit-age-ordered.scala",
+      "lines": [
+        12,
+        21
+      ],
+      "label": "Package and imports",
+      "sha256": "691f10b59b6a0f9123275b33d1da5f92372781b41aaeeb2421725130fa5bb338"
+    },
+    {
+      "label": "Definition documentation and header",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/issue-units/issue-unit-age-ordered.scala",
+      "lines": [
+        23,
+        34
+      ],
+      "sha256": "691f10b59b6a0f9123275b33d1da5f92372781b41aaeeb2421725130fa5bb338"
+    },
+    {
+      "label": "Integer and memory queue instantiations",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        94,
+        110
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Floating-point queue parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/fp-pipeline.scala",
+      "lines": [
+        25,
+        33
+      ],
+      "sha256": "6bae9f003237d28d8566aef368a000fdda1dd8376040b80811db88f720ffbebe"
+    },
+    {
+      "label": "Floating-point queue construction",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/fp-pipeline.scala",
+      "lines": [
+        58,
+        65
+      ],
+      "sha256": "6bae9f003237d28d8566aef368a000fdda1dd8376040b80811db88f720ffbebe"
+    },
+    {
+      "label": "Issue parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/issue-units/issue-unit.scala",
+      "lines": [
+        24,
+        36
+      ],
+      "sha256": "3324a8843a4a6705e89bfee01b49c2e9e97d58ef28563fdcf4003ea85c4b9dc9"
+    },
+    {
+      "label": "Inherited issue-unit interface and declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/issue-units/issue-unit.scala",
+      "lines": [
+        61,
+        112
+      ],
+      "sha256": "3324a8843a4a6705e89bfee01b49c2e9e97d58ef28563fdcf4003ea85c4b9dc9"
+    },
+    {
+      "label": "Inherited dispatch preparation and slot array",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/issue-units/issue-unit.scala",
+      "lines": [
+        114,
+        172
+      ],
+      "sha256": "3324a8843a4a6705e89bfee01b49c2e9e97d58ef28563fdcf4003ea85c4b9dc9"
+    },
+    {
+      "label": "Issue-slot public interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/issue-units/issue-slot.scala",
+      "lines": [
+        27,
+        62
+      ],
+      "sha256": "f2649ef970e9f81b2b321abe1c4c1a5eb7299bde9c2df7ef4114363c147467a7"
+    },
+    {
+      "label": "Micro-operation functional-unit field",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        41,
+        42
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation physical operands",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        81,
+        84
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation exception field",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        92,
+        92
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation fence fields",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        98,
+        99
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation source register types",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Not-a-register constant",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Null micro-operation declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        268,
+        268
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "ROB exception and fence handling",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rob.scala",
+      "lines": [
+        323,
+        329
+      ],
+      "sha256": "c0dc65c09e79f2f90eefc61e72a0b3e43d92cfecd0ecaf049dae77440ec00214"
+    },
+    {
+      "label": "Published queue and removal contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/issue-units.rst",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "457a4c86a32a182faac4f31aa982bd15e519cbd214873a994a1e21263b1fe1c1"
+    },
+    {
+      "label": "Published issue-selection contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/issue-units.rst",
+      "lines": [
+        49,
+        58
+      ],
+      "sha256": "457a4c86a32a182faac4f31aa982bd15e519cbd214873a994a1e21263b1fe1c1"
+    },
+    {
+      "label": "Published age-ordered collapsing contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/issue-units.rst",
+      "lines": [
+        76,
+        86
+      ],
+      "sha256": "457a4c86a32a182faac4f31aa982bd15e519cbd214873a994a1e21263b1fe1c1"
+    },
+    {
+      "label": "Published fence execution contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/execution-stages.rst",
+      "lines": [
+        165,
+        172
+      ],
+      "sha256": "42ed0e7cd6d727facdc485b6edb9376abd25cfe5210c396f076916ea18da5f37"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `IssueUnitCollapsing`\n\nImplement the complete `IssueUnitCollapsing` module. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class IssueUnitCollapsing` definition in a single Scala code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### `src/main/scala/common/config-mixins.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Parent instantiation\n\n### `src/main/scala/exu/core.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n### `src/main/scala/exu/fp-pipeline.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Related source code\n\n### `src/main/scala/exu/issue-units/issue-unit.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n### `src/main/scala/exu/issue-units/issue-slot.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n### `src/main/scala/common/micro-op.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n### `src/main/scala/common/consts.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n### `src/main/scala/exu/rob.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Documentation\n\n### `docs/sections/issue-units.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n### `docs/sections/execution-stages.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n"
+    }
+  ]
+}

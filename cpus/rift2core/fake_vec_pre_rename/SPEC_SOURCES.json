@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "96a879839f469a38a9c363bc4e6699b4c8650e7338165e87b178694b669b5386",
+  "prompt_sha256": "87ff9c5e27202bece2d5a221582b2827c36fd562223e284bca5f2ef6c413cf30",
+  "repositories": {
+    "https://github.com/whutddk/Rift2Core.git": {
+      "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, submission instructions and headings",
+      "prompt_bytes": [
+        0,
+        288
+      ],
+      "sha256": "afdc76ecfed6c71e3ec8c8807776e3314671b0b05d1091b38ee85643589d67f2"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        288,
+        407
+      ],
+      "sha256": "52de2a75976c3cc7c21b67e67c1e161285781d439d2d5dbaf971cfa3e7748469"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        407,
+        492
+      ],
+      "sha256": "e82470df74bb407495dd5ce43cc6de65c4c0fea3c6df4bac7a8db2ef8fb97d55"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        492,
+        597
+      ],
+      "sha256": "e667e84f6bab0edd751b52c6b27269d56076f63aea5f6ab06775f06be4bddea5"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        597,
+        604
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        604,
+        759
+      ],
+      "sha256": "e4071bb7c9712b0d62675c0faf34f33dc4486b66499665c3c6fe21dfbf116757"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        759,
+        857
+      ],
+      "sha256": "1265c491b41b9167ca6f95cf1476cf121efd142e03b963563189207d48e67aa5"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        857,
+        1296
+      ],
+      "sha256": "6f8cbbf7423128905a10dd7fa13513fe078bc18a7b1352cc731a7f61eb81eb12"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1296,
+        1300
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Target declaration",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/vector/VecPreRename.scala",
+      "lines": [
+        466,
+        467
+      ],
+      "sha256": "628dd56c774fbf9a758bdca3113e2df7534593aa0fd9427a4484aa4580da6720",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Pre-rename stage selection",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/rift2Core.scala",
+      "lines": [
+        116,
+        116
+      ],
+      "sha256": "ef923244a87dc248d5715b26ef7d988cff9967f236f10374621072543fd5867c",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Pre-rename pipeline connections",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/rift2Core.scala",
+      "lines": [
+        149,
+        152
+      ],
+      "sha256": "ef923244a87dc248d5715b26ef7d988cff9967f236f10374621072543fd5867c",
+      "line_endings": "lf"
+    },
+    {
+      "label": "Interface",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/vector/VecPreRename.scala",
+      "lines": [
+        42,
+        54
+      ],
+      "sha256": "628dd56c774fbf9a758bdca3113e2df7534593aa0fd9427a4484aa4580da6720",
+      "line_endings": "lf"
+    }
+  ]
+}

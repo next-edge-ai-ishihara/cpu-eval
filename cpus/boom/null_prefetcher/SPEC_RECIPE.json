@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "NullPrefetcher",
+  "sources": [
+    {
+      "label": "Inherited prefetcher interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/prefetcher.scala",
+      "lines": [
+        24,
+        34
+      ],
+      "sha256": "d6aa6b6575912ddf378074996ddf9b902583fcfbdc52dfb39aed0cf6e17b0a1f"
+    },
+    {
+      "label": "Target definition header",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/prefetcher.scala",
+      "lines": [
+        39,
+        40
+      ],
+      "sha256": "d6aa6b6575912ddf378074996ddf9b902583fcfbdc52dfb39aed0cf6e17b0a1f"
+    },
+    {
+      "label": "Parent selection and connection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/mshrs.scala",
+      "lines": [
+        545,
+        548
+      ],
+      "sha256": "da578c710754063834691a429f8bd0ef0582e1ba478cbeb4ba26b02bbfef97f0"
+    },
+    {
+      "label": "Prefetch consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        571,
+        575
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "src/main/scala/lsu/prefetcher.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/prefetcher.scala",
+      "lines": [
+        6,
+        20
+      ],
+      "sha256": "d6aa6b6575912ddf378074996ddf9b902583fcfbdc52dfb39aed0cf6e17b0a1f"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `NullPrefetcher`\n\nImplement the complete `NullPrefetcher` module. Preserve its declaration and I/O interface. Return only the complete `class NullPrefetcher` definition in a single Scala code block, with no text outside the block.\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Package and imports\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/lsu/prefetcher.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Class declaration\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Parent instantiation\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/lsu/mshrs.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/lsu/dcache.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/lsu/prefetcher.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Port contract checked by NullPrefetcherPortsTest",
+      "text": "## Additional requirement\n\n`io.prefetch.valid` must be low in every cycle, independently of all inputs.\n"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_observation.sh",
+    "harness/cmo_flush_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_cmo",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv64a6_imafdc_sv39_hpdcache_wb",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_cmo.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "65dbff93791ef9425531ad31408a5943407edf4a61020756b9c8b7784da4fd9e",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "b24271735cd82796b093a2916c2f230732da441579c98dc76ef4eee099029480",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_fencei.yaml",
+  "test_list_sha256": "798f42c10f4939108c0f24f4aaeaa3b5c18f711a46af89843b60cba84cdf2c8f",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hpdcache_cmo.sv from hpdcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Check out the recorded test revision and run the unmodified RV64 Fencei.S program, then run the recorded direct port fixture.",
+    "upstream_assembly_path": "riscv-test-suite/rv64i_m/Zifencei/src/Fencei.S",
+    "upstream_assembly_sha256": "eae7075585b7a4859852a0b2b665bafb23b7282256371d24a248af38e563ca5b"
+  },
+  "port_test": {
+    "test": "harness/cmo_flush_ports_tb.sv",
+    "test_sha256": "b455649c4104a78a07b94180d9600fbb343766e18bcdbf401440a3a39ad78cb0",
+    "scope": "FLUSH_ALL with the complete HPDcache configuration and types of cv64a6_imafdc_sv39_hpdcache_wb, the configuration this problem is graded in: an 8-way, 256-set write-back cache, with dirty ways 0 and 7 in set 0, the only set in the dirty range. The directory reports clean lines in every other set, so a scan of any set range that includes set 0 is accepted. Compare accepted write-back addresses and response only after outstanding work drains."
+  }
+}

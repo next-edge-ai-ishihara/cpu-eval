@@ -1,0 +1,514 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Selected cv32a60x width declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected cv32a60x pipeline configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        21,
+        27
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected cv32a60x ISA and coprocessor configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        36,
+        54
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected cv32a60x privilege configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        60,
+        62
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected cv32a60x trap and debug configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        71,
+        71
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected cv32a60x trigger configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        89,
+        104
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Derived functional-unit configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        3,
+        21
+      ],
+      "language": "verilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Derived width configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        34,
+        40
+      ],
+      "language": "verilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Module declaration for ex_stage",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        17,
+        262
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Branch resolution, LSU control, and functional-unit data records",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        132,
+        183
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Downstream execute-result writeback mapping",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        805,
+        870
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Parent instantiation for ex_stage",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        986,
+        1143
+      ],
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Dependency module declaration for ex_stage",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu_wrapper.sv",
+      "lines": [
+        15,
+        27
+      ],
+      "language": "verilog",
+      "sha256": "b2de99f62b1d6bda465c4354ba9f88be9c6e0908d524fffb45ab5d8ccdc7a22c"
+    },
+    {
+      "label": "Dependency module declaration for ex_stage",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/branch_unit.sv",
+      "lines": [
+        15,
+        52
+      ],
+      "language": "verilog",
+      "sha256": "39c5c4fad84091c91da5f391e8b6354244823b9ccd4aeec0371415c8d4862bea"
+    },
+    {
+      "label": "Dependency module declaration for ex_stage",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/csr_buffer.sv",
+      "lines": [
+        17,
+        41
+      ],
+      "language": "verilog",
+      "sha256": "abc337764a461e1772f72290a80bdc9fcdeab8676145e458faad80944a29f6f1"
+    },
+    {
+      "label": "Dependency module declaration for ex_stage",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_fu.sv",
+      "lines": [
+        14,
+        53
+      ],
+      "language": "verilog",
+      "sha256": "6bf9957ce56e7ff5f5250258f486989754fe5b1979d49b08260b56c2e099152e"
+    },
+    {
+      "label": "Dependency module declaration for ex_stage",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/load_store_unit.sv",
+      "lines": [
+        16,
+        180
+      ],
+      "language": "verilog",
+      "sha256": "ce091f34f60e489a79d335548355e7d69e7dcd3982f8ece835ce9df2baf72a78"
+    },
+    {
+      "label": "Dependency module declaration for ex_stage",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/mult.sv",
+      "lines": [
+        3,
+        27
+      ],
+      "language": "verilog",
+      "sha256": "e6660a01fc56369e2e1ad96ff89fa1fcafde795d398eaf5c812d7e9afd84ec59"
+    },
+    {
+      "label": "Functional-unit enumeration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        172,
+        203
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Upstream functional-unit busy selection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        433,
+        463
+      ],
+      "language": "verilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Upstream functional-unit valid generation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        748,
+        846
+      ],
+      "language": "verilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "CPU design documentation for execute-stage role",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_execute.adoc",
+      "lines": [
+        7,
+        15
+      ],
+      "sha256": "d92282f130119ed75b98f53a6d41124ad0fbaf0ed5e6458492696198ade34217"
+    },
+    {
+      "label": "CPU design documentation for enabled fixed-latency units",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_execute.adoc",
+      "lines": [
+        30,
+        66
+      ],
+      "language": "verilog",
+      "sha256": "d92282f130119ed75b98f53a6d41124ad0fbaf0ed5e6458492696198ade34217"
+    },
+    {
+      "label": "CPU design documentation for the load-store unit",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_execute.adoc",
+      "lines": [
+        82,
+        90
+      ],
+      "language": "verilog",
+      "sha256": "d92282f130119ed75b98f53a6d41124ad0fbaf0ed5e6458492696198ade34217"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, submission instructions and headings",
+      "text": "# Implement `ex_stage`\n\nImplement the complete `ex_stage` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ex_stage` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### `core/include/cv32a60x_config_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `core/include/build_config_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Package and imports\n\n### `core/include/ariane_pkg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Module declaration\n\n### `core/ex_stage.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Parent instantiation\n\n### `core/cva6.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Dependency declarations\n\n### `core/alu_wrapper.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `core/branch_unit.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `core/csr_buffer.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `core/cvxif_fu.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `core/load_store_unit.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### `core/mult.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Related source code\n\n### `core/issue_read_operands.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Documentation\n\n### `docs/design/design-manual/source/cva6_execute.adoc`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - test: copro-alu-all-operations
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/copro_alu_all_ops.S
+
+  - test: cvxif-example-compressed
+    <<: *common_test_config
+    path_var: CPU_EVAL_CVXIF_EXAMPLE_FIXTURE
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/compressed_instr_decoder_table.S

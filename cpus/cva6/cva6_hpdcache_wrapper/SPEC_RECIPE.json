@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for cva6_hpdcache_wrapper",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_wrapper.sv",
+      "lines": [
+        15,
+        130
+      ],
+      "language": "verilog",
+      "sha256": "8092ed052b8c097e2f3969ae2c43205989666f2495f7c678d2749e5db25872c0"
+    },
+    {
+      "label": "CVA6 data cache port allocation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        1431,
+        1445
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "HPDcache requester allocation in the parent",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+      "lines": [
+        189,
+        197
+      ],
+      "language": "verilog",
+      "sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    {
+      "label": "Parent instantiation for cva6_hpdcache_wrapper",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+      "lines": [
+        298,
+        377
+      ],
+      "language": "verilog",
+      "sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    {
+      "label": "CVA6-to-HPDcache adapter declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_if_adapter.sv",
+      "lines": [
+        12,
+        61
+      ],
+      "language": "verilog",
+      "sha256": "2a73f0d536f9b52d80ca3dbe9213fe408fa559207ea40382f98f21a50bd3af32"
+    },
+    {
+      "label": "HPDcache interface",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache.sv",
+      "lines": [
+        15,
+        137
+      ],
+      "language": "verilog",
+      "sha256": "35d9b2dca6415fca40050bc6fec3d4823701111fb2104db3cd79775268c53b47"
+    },
+    {
+      "label": "Hardware prefetcher configuration records",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hwpf_stride/hwpf_stride_pkg.sv",
+      "lines": [
+        27,
+        65
+      ],
+      "language": "verilog",
+      "sha256": "d35f97634b014c9723ef165e84188eac0be60e1a6b676ae3847b0c5c7fb8c427"
+    },
+    {
+      "label": "Hardware prefetcher wrapper declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hwpf_stride/hwpf_stride_wrapper.sv",
+      "lines": [
+        28,
+        96
+      ],
+      "language": "verilog",
+      "sha256": "d1432b1f200626bfbf7cb710ec3b06e9c24444e29ac76d9bddb168f667f434e6"
+    },
+    {
+      "label": "HPDcache configuration inputs in the upstream lint wrapper",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/lint/hpdcache_lint.sv",
+      "lines": [
+        223,
+        235
+      ],
+      "language": "verilog",
+      "sha256": "8aa874b4304547829e1b81b9d9f79521aef9ce7dab0ce9b2afde936840fc9e5f"
+    },
+    {
+      "label": "HPDcache requester identifier",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        277,
+        280
+      ],
+      "language": "rst",
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `cva6_hpdcache_wrapper`\n\nImplement the complete `cva6_hpdcache_wrapper` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module cva6_hpdcache_wrapper` definition in a single SystemVerilog code\nblock, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading and fence for the module declaration",
+      "text": "\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading and fence for the grandparent port allocation",
+      "text": "\n## Parent instantiation\n\n### core/cva6.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source heading and fence for the parent",
+      "text": "\n### core/cache_subsystem/cva6_hpdcache_subsystem.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence between excerpts",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading and fence for dependency declarations",
+      "text": "\n## Dependency declarations\n\n### core/cache_subsystem/cva6_hpdcache_if_adapter.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fence between excerpts",
+      "text": "```\n\n### rtl/src/hpdcache.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Fence between excerpts",
+      "text": "```\n\n### rtl/src/hwpf_stride/hwpf_stride_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fence between excerpts",
+      "text": "```\n\n### rtl/src/hwpf_stride/hwpf_stride_wrapper.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading and fence for the lint wrapper excerpt",
+      "text": "\n## Related source code\n\n### rtl/lint/hpdcache_lint.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading and fence for the HPDcache documentation",
+      "text": "\n## Documentation\n\n### docs/source/interface.rst\n\n```rst\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n"
+    }
+  ]
+}

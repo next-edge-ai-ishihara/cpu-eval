@@ -1,0 +1,636 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "3997a9ef5163696b076e21bb21d49672acb512201424638383c0927a904cf69c",
+  "prompt_sha256": "693f94303c8e8db9a9f3d2068af1eb56807e85e1745334b118a9cf15fab81eb1",
+  "repositories": {
+    "https://github.com/whutddk/Rift2Core.git": {
+      "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "fa794b679cb50da3b68c49ffd5ae7559f4fa1422"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        0,
+        249
+      ],
+      "sha256": "cd5a245af92f840b240a76aa9b158e6a1004b7274271ae6de9d0edb589d20675"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        249,
+        300
+      ],
+      "sha256": "e095915bf1331f8fc49c3c92a5563f46e97c25bf34fc6ac0a022e8ce97c23b24"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        300,
+        339
+      ],
+      "sha256": "ada51fbbc45cb1c158fe0379dd9f01b0f8f50f6be1a92859e857c76fb196a0d2"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        339,
+        367
+      ],
+      "sha256": "96d88842a05ccfab9afec61e15cfe102c0b529c819309b1f4f8d20b8003ff9fd"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        367,
+        374
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        374,
+        526
+      ],
+      "sha256": "d986ada01d50e4cc888e7da3e9405978bf0f63125a98622c93684ed283165646"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        526,
+        616
+      ],
+      "sha256": "40d1ed949029dcf6eca34165ea6ccf92fa2ca1e3b1940814c00e95ec5af625a2"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        616,
+        1483
+      ],
+      "sha256": "8c4d366e1c3340f1273e5068a00b84bab72cbe662bbbe432e4a289997a864c9d"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        1483,
+        1550
+      ],
+      "sha256": "6e65e0497200e9ccb23f06c94efc739b5756b757e0631dc0aff6d1c7bb53ddfc"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1550,
+        1652
+      ],
+      "sha256": "55ff3c7a61589455c241fb1f63a0debb42aa77e7857aadfe46807afd6b8727f8"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        1652,
+        1659
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1659,
+        1830
+      ],
+      "sha256": "97cc48ef1a7c2c9b0cfbe721bc5acd0d25d0531b845a493681d353664ca1b5e8"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        1830,
+        1837
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        1837,
+        2033
+      ],
+      "sha256": "86330935d99db81deba75f746bd3a81d3974117d48c78af90256186427ab8a0e"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        2033,
+        2040
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        2040,
+        2212
+      ],
+      "sha256": "6bdf6d5301f3491d518cfa6857b09a59b67533f5f32460df1aa7508ab2e9b08e"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        2212,
+        2219
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        2219,
+        2342
+      ],
+      "sha256": "fcf77a8d2fd011b7647643c870ec26a691634c58c3c50449af515ca1aaec4366"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        2342,
+        2349
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        2349,
+        2444
+      ],
+      "sha256": "a0bf8eed5e15127eda637ff90b12eecb6a023e944edbb82eb41c337795c2e986"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        2444,
+        2513
+      ],
+      "sha256": "57b8b2223e50e0824467cfcddd5d52c7b84c600ff886fa245c7441125e22e67a"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        2513,
+        2701
+      ],
+      "sha256": "842787019b4175bca128ca2a0c716356573da1ac32912d7211e79efe233cfa8a"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        2701,
+        2789
+      ],
+      "sha256": "edeec1dff7f997c1e909f2589858055b8d9f29849e3c129e0aead1804f789df2"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        2789,
+        5982
+      ],
+      "sha256": "89500c725976ac87afb071901f4d29a798466aec6bb772dc88b4f829873efb54"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        5982,
+        6051
+      ],
+      "sha256": "57b8b2223e50e0824467cfcddd5d52c7b84c600ff886fa245c7441125e22e67a"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        6051,
+        6403
+      ],
+      "sha256": "46460e513187505ab271c8fa5cf2432c991ccda800bd3ccd1d12a3f009b187bb"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        6403,
+        6471
+      ],
+      "sha256": "9df84658f07bac16b45f27fb05c7b1577ab0fe6ae7b02dce154b0284d2269510"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        6471,
+        6510
+      ],
+      "sha256": "167e44ccafb0ffcbf9ec80067e8348092fc4087db7092220ccff9ac21550bd42"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        6510,
+        6517
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        6517,
+        6563
+      ],
+      "sha256": "bbbdcd2d9c54e44d4368c0cb58fddba2d248bcd4df6cb0740a296abf370eed41"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        6563,
+        6637
+      ],
+      "sha256": "57d650630564720420b1ab394a339c560b30335251bdaffc01a5eca823319d7b"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        6637,
+        7008
+      ],
+      "sha256": "6be4d6f08b14bea3db0aba89a261881976e612957cdc15b7287053ac144067e4"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        7008,
+        7015
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        7015,
+        7152
+      ],
+      "sha256": "baea88669412be6f89e5bb57af9dbda47bd06cbaf50a6523bdbaeae85ac8edd3"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        7152,
+        7159
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        7159,
+        7697
+      ],
+      "sha256": "0f5ff410fd792b06088d0dc175a145275a1fbf35d495e6f2e5138f1cd7fd238d"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        7697,
+        7755
+      ],
+      "sha256": "e8dc0ffbff440501a614aef057f510c137255baf794fac204b152c811b1f157b"
+    },
+    {
+      "index": 37,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        7755,
+        12292
+      ],
+      "sha256": "4d1ff0ebdcc7a32ee8d3bf38fd9ca159802a9225a3aa1902ad868467c0a54c6e"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "prompt_bytes": [
+        12292,
+        12296
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "src/main/scala/rift2Core/backend/Csr.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/backend/Csr.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        169,
+        169
+      ],
+      "sha256": "ddadf9536dec36a142dcc5dbbb4023086e078d5e37a21c45169b3a7c2f73ddca"
+    },
+    {
+      "label": "src/main/scala/rift2Core/backend/Execute.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/backend/Execute.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        175,
+        175
+      ],
+      "sha256": "4bb7e5635d6983792d9c171561f8bb178194f05e5295ced9ba6cb44506c37c3e"
+    },
+    {
+      "label": "src/main/scala/rift2Core/backend/Execute.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/backend/Execute.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        210,
+        213
+      ],
+      "sha256": "4bb7e5635d6983792d9c171561f8bb178194f05e5295ced9ba6cb44506c37c3e"
+    },
+    {
+      "label": "src/main/scala/rift2Core/backend/Csr.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/backend/Csr.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        31,
+        63
+      ],
+      "sha256": "ddadf9536dec36a142dcc5dbbb4023086e078d5e37a21c45169b3a7c2f73ddca"
+    },
+    {
+      "label": "src/main/scala/rift2Core/define/riscv_isa.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        1049,
+        1051
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3"
+    },
+    {
+      "label": "src/main/scala/rift2Core/define/riscv_isa.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        1053,
+        1058
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3"
+    },
+    {
+      "label": "src/main/scala/rift2Core/define/riscv_isa.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        1336,
+        1344
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3"
+    },
+    {
+      "label": "src/main/scala/rift2Core/define/riscv_isa.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        1346,
+        1350
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3"
+    },
+    {
+      "label": "src/main/scala/rift2Core/define/riscv_isa.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        1352,
+        1355
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3"
+    },
+    {
+      "label": "src/main/scala/rift2Core/define/riscv_isa.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/define/riscv_isa.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        1370,
+        1372
+      ],
+      "sha256": "4c8b6bde83cc29cfa12f10d22d6ccab4be3f7f3583816feb259a890b72ad0fc3"
+    },
+    {
+      "label": "src/main/scala/rift2Core/privilege/CsrFiles.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/privilege/CsrFiles.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        28,
+        37
+      ],
+      "sha256": "71f83c8d8dee672b72a7ec4661fe03db2b8a51888056b39d15e521bceac39768"
+    },
+    {
+      "label": "src/main/scala/rift2Core/backend/Issue.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/backend/Issue.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        880,
+        958
+      ],
+      "sha256": "1524204765bc98dc4c7f089fa2f939a0983ebd92276e9417a91c337aeef02ede"
+    },
+    {
+      "label": "src/main/scala/rift2Core/privilege/CsrFiles.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/privilege/CsrFiles.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        40,
+        51
+      ],
+      "sha256": "71f83c8d8dee672b72a7ec4661fe03db2b8a51888056b39d15e521bceac39768"
+    },
+    {
+      "label": "src/main/scala/rift2Core/backend/WriteBack.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/backend/WriteBack.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        117,
+        117
+      ],
+      "sha256": "0cad64a681fc1d31b66e7ae6442b6eeb89ae47cbd015990f5ce0d571f2a26236"
+    },
+    {
+      "label": "src/main/scala/rift2Core/backend/WriteBack.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/backend/WriteBack.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        122,
+        122
+      ],
+      "sha256": "0cad64a681fc1d31b66e7ae6442b6eeb89ae47cbd015990f5ce0d571f2a26236"
+    },
+    {
+      "label": "src/main/scala/rift2Core/privilege/CsrScoreBoard.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/privilege/CsrScoreBoard.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        44,
+        51
+      ],
+      "sha256": "3d9f9e2e4e626d00918fcb935772ee0d90186f6f3e35449536be674c7d4a79f3"
+    },
+    {
+      "label": "src/main/scala/rift2Core/privilege/CsrScoreBoard.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/privilege/CsrScoreBoard.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        201,
+        202
+      ],
+      "sha256": "3d9f9e2e4e626d00918fcb935772ee0d90186f6f3e35449536be674c7d4a79f3"
+    },
+    {
+      "label": "src/main/scala/rift2Core/privilege/CsrScoreBoard.scala excerpt",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "path": "src/main/scala/rift2Core/privilege/CsrScoreBoard.scala",
+      "line_endings": "lf",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "lines": [
+        215,
+        225
+      ],
+      "sha256": "3d9f9e2e4e626d00918fcb935772ee0d90186f6f3e35449536be674c7d4a79f3"
+    },
+    {
+      "label": "src/unpriv/zicsr.adoc excerpt",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "path": "src/unpriv/zicsr.adoc",
+      "line_endings": "lf",
+      "commit": "fa794b679cb50da3b68c49ffd5ae7559f4fa1422",
+      "lines": [
+        20,
+        119
+      ],
+      "sha256": "a4682a79bee8f78c5e3c898ae5fcbc038036c08275a72d54b7bb8c935d4254e2"
+    }
+  ]
+}

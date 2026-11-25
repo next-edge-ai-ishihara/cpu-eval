@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/cva6_fifo_v3/SPEC_RECIPE.json",
+  "recipe_sha256": "3e197c93fae0abb86ea5e82594f8267cbc34422ab7c1ad96358764a1679aff25",
+  "prompt_sha256": "eecc2a8141537dcba1cc3154e3ab9a8df9b28d4c28892347b7d88f1e1c4bcb6e",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        277
+      ],
+      "sha256": "a50f28263873fad104e45dd81c1499a260b81c2f30a6153f6dcbd98f105ee6d4"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Configuration heading",
+      "prompt_bytes": [
+        277,
+        369
+      ],
+      "sha256": "c916ff084acc731efe701ac8ab71f06263780f79d0c33af0d319cc89c575a45c"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        369,
+        470
+      ],
+      "sha256": "1473adfa73befae46ffb710531b575a8a0d179b20d45fe8f598bf8c2bbef7a9f"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Configuration separator",
+      "prompt_bytes": [
+        470,
+        533
+      ],
+      "sha256": "6559383eb2afe92e1ae5d9e38e586dd51fc65344fe6f6bb08f456eb32c8e4d50"
+    },
+    {
+      "index": 4,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        533,
+        585
+      ],
+      "sha256": "25ff8707b3ee55bf50171c6eeaba1718bca5c6afc120d22bfbc7d0c31ba238a4"
+    },
+    {
+      "index": 5,
+      "kind": "authored",
+      "description": "Configuration fence",
+      "prompt_bytes": [
+        585,
+        589
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Module declaration heading",
+      "prompt_bytes": [
+        589,
+        630
+      ],
+      "sha256": "5691ec79a6e8946e264fe09fd5cea07ac968084b78cd9ae1756e1fb3b294d6ed"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        630,
+        2109
+      ],
+      "sha256": "14eebad640416bec76d06f2293ed1cf0331ccae4371872ddb076eff79f814a1c"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Module declaration fence",
+      "prompt_bytes": [
+        2109,
+        2113
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Parent instantiation heading",
+      "prompt_bytes": [
+        2113,
+        2190
+      ],
+      "sha256": "d2bf9864222dd5675d326171acc166a2daa4a02ffbcda9558102826bbab9205d"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2190,
+        2741
+      ],
+      "sha256": "ba1700aac2d8b24964556ad0b4ac2813e8ee023b2bbe08cc095653c2f9ca50cf"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        2741,
+        2750
+      ],
+      "sha256": "8aada41ca19b060bea73ac759a6f9623878b6f792ed2825aaf6a8ebd4474138b"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2750,
+        3332
+      ],
+      "sha256": "8e13e9fccdf5e4222558604d9404bc67618d6dfac9f0b0501f066db5d209e2cb"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        3332,
+        3341
+      ],
+      "sha256": "8aada41ca19b060bea73ac759a6f9623878b6f792ed2825aaf6a8ebd4474138b"
+    },
+    {
+      "index": 14,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        3341,
+        3882
+      ],
+      "sha256": "f459d9d8e497085135f9526e310a6f3f472b3aaad3b5ae5777c19567ad069a30"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Parent instantiation fence",
+      "prompt_bytes": [
+        3882,
+        3886
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Documentation heading",
+      "prompt_bytes": [
+        3886,
+        3970
+      ],
+      "sha256": "413d16d9e8ed8032a33b5c60a0484af3dd8d14d8530b1f9f12216f0eee7f3362"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        3970,
+        4826
+      ],
+      "sha256": "7fb39c2f1f57f9977fdd334fd81c9705db87fba7de61cd62be4a9680558862e5"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        4826,
+        4830
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        4830,
+        4915
+      ],
+      "sha256": "64323cff8bc687e3452c44b078e959b06da52f7394cd9dbdc95a42d446b5097d"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Documentation fence",
+      "prompt_bytes": [
+        4915,
+        4919
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 21,
+      "kind": "authored",
+      "description": "Port contract not shown by any upstream text",
+      "prompt_bytes": [
+        4919,
+        5125
+      ],
+      "sha256": "7170b066ad9f9e834bee38fa0960e9ab9e95a26345472e5649fe8b3e43273ee2"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Selected FIFO depths",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        169,
+        170
+      ],
+      "language": "systemverilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Selected FPGA settings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        24,
+        25
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6_fifo_v3.sv",
+      "lines": [
+        16,
+        40
+      ],
+      "language": "systemverilog",
+      "sha256": "f61e13a52583cc8e1a5a6d46910bed6247cf0dd8b52aa39b4fd683729e3faa68"
+    },
+    {
+      "label": "Instruction FIFO data type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/instr_queue.sv",
+      "lines": [
+        94,
+        102
+      ],
+      "language": "systemverilog",
+      "sha256": "f43b24576db6e6e0da59e31c6dd90e5cf54de12a4bf7a3316b7405618e1b45e5"
+    },
+    {
+      "label": "Instruction-data FIFO instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/instr_queue.sv",
+      "lines": [
+        464,
+        481
+      ],
+      "language": "systemverilog",
+      "sha256": "f43b24576db6e6e0da59e31c6dd90e5cf54de12a4bf7a3316b7405618e1b45e5"
+    },
+    {
+      "label": "Address FIFO instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/instr_queue.sv",
+      "lines": [
+        493,
+        510
+      ],
+      "language": "systemverilog",
+      "sha256": "f43b24576db6e6e0da59e31c6dd90e5cf54de12a4bf7a3316b7405618e1b45e5"
+    },
+    {
+      "label": "Instruction queue design description",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        253,
+        260
+      ],
+      "language": "asciidoc",
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    },
+    {
+      "label": "Instruction queue flush description",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        263,
+        263
+      ],
+      "language": "asciidoc",
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    }
+  ]
+}

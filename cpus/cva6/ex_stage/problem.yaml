@@ -1,0 +1,14 @@
+id: ex_stage
+cpu: cva6
+target:
+  repository: https://github.com/openhwgroup/cva6.git
+  revision: 6348e9e684678f83b40d0520028513d06b36e7b2
+  file: core/ex_stage.sv
+  module: ex_stage
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: harness/evaluate.sh

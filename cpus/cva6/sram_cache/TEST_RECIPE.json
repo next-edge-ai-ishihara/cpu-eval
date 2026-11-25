@@ -1,0 +1,60 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/test_user.py",
+    "harness/user_tb.sv",
+    "../../../tools/cva6/replace_module.py",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "sram_cache",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "common/local/util/sram_cache.sv",
+  "source_sha256": "08f855e6fc7b6f79971bc51724d10ccbbd7641cc9a4c63ef61c0f287e97fc962",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "39932523c6f69d3ae23a4e94dad45fe850d9ed42e6f200f7084bd57d5ba5c893",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_icache_sram.yaml",
+  "test_list_sha256": "c572355860ba88c411ad97e6782016f527b6eb69fb8016f98e8b00c8fe5b864d",
+  "test_selection": "One directed RV32 program executes the same cached instruction line in a 64-iteration loop, and six upstream RISC-V Architectural Tests provide additional complete-CPU execution. In cv32a60x, these refills and later cache hits pass through the technology-cut sram_cache data arrays with BYTE_ACCESS=0 and USER_EN=1.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:common/local/util/sram_cache.sv",
+    "test_sources": "checkout the recorded RISC-V Architectural Tests revision for the six named tests and copy harness/icache_sram_reuse.S, SHA-256 80e684d5bf77f25d31386a2f898ef50a24f4f0f41003fac6527dfb2b01cce4df, as the recorded directed test source"
+  },
+  "selected_user_test": {
+    "evaluator": "harness/test_user.py",
+    "testbench": "harness/user_tb.sv",
+    "configuration": {
+      "DATA_WIDTH": 128,
+      "USER_WIDTH": 128,
+      "USER_EN": 1,
+      "NUM_WORDS": 64,
+      "BYTE_ACCESS": 0,
+      "TECHNO_CUT": 1,
+      "OUT_REGS": 0,
+      "SIM_INIT": "none"
+    },
+    "observations": "128 initialized reads compare data and nonzero user through external ports after full-word writes and after an unselected write enable asserts with different inputs.",
+    "timeout_seconds": 900,
+    "timeout_classification": "A wall-clock timeout is INVALID (2); a build failure, an abnormal end or an incomplete record is FAIL (1); only completed matching output is PASS (0).",
+    "fixed_dependencies": [
+      {
+        "path": "common/local/util/tc_sram_wrapper_cache_techno.sv",
+        "sha256": "c10b2faf922c2d7c49a52f93087bb545077d9c82399c985c2bfdaead0a03b220"
+      },
+      {
+        "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+        "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+      }
+    ],
+    "reconstruction": "Read the reference and both dependencies directly from cpu_revision Git objects into the private log directory; verify every source SHA; preserve original headers.",
+    "build_failure_classification": "A missing sram_cache module or a build failure produces the standard candidate compile receipt and exits 1. A tool or resource failure, signal termination or timeout exits 2."
+  }
+}

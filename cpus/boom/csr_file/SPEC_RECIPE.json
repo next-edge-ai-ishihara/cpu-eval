@@ -1,0 +1,3575 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "CSRFile",
+  "sources": [
+    {
+      "label": "Selected Chipyard configuration",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "generators/chipyard/src/main/scala/config/BoomConfigs.scala",
+      "lines": [
+        17,
+        19
+      ],
+      "sha256": "ec301724d004d1c5918418915b243f31ce0b165bfe7e9d794165c1f30599968b"
+    },
+    {
+      "label": "Base subsystem architectural parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/subsystem/Configs.scala",
+      "lines": [
+        15,
+        18
+      ],
+      "sha256": "21928f23777264f8106f8ebd0c96697d29bb90963d6766fe58fbff88592002d2"
+    },
+    {
+      "label": "BOOM performance-counter count",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        52,
+        52
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM writable PMP count",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        56,
+        56
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM compressed-instruction setting",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        70,
+        70
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM counters, CSR mutability, trap vector, cache flush, multiply-divide, and breakpoint settings",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        75,
+        81
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM interrupt, ISA extension, debug, privilege, and virtual-memory settings",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        85,
+        92
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM clock-gating and context-width settings",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        96,
+        98
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM extension-state and PMP-granularity settings",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        108,
+        109
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM retirement width",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        112,
+        112
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM custom-CSR provider selection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        115,
+        115
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM custom CSR declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        118,
+        140
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Large BOOM decode width",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        190,
+        190
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Large BOOM floating-point setting",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        203,
+        203
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Default page-table level, ASID-width, and VMID-width parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        19,
+        21
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "Debug module parameter defaults",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/devices/debug/Debug.scala",
+      "lines": [
+        102,
+        119
+      ],
+      "sha256": "4149bdce019b4f0a5647a458de2e06e168353557c7ea1ca1396d6255e3a346dd"
+    },
+    {
+      "label": "Debug entry and scratch contracts",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/devices/debug/Debug.scala",
+      "lines": [
+        133,
+        139
+      ],
+      "sha256": "4149bdce019b4f0a5647a458de2e06e168353557c7ea1ca1396d6255e3a346dd"
+    },
+    {
+      "label": "Debug module configuration key",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/devices/debug/Debug.scala",
+      "lines": [
+        151,
+        151
+      ],
+      "sha256": "4149bdce019b4f0a5647a458de2e06e168353557c7ea1ca1396d6255e3a346dd"
+    },
+    {
+      "label": "RoCC construction default",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/LazyRoCC.scala",
+      "lines": [
+        16,
+        16
+      ],
+      "sha256": "883294fb641a56ff2e61245345b1c70abb5d57198f7271f4be70084e645d607e"
+    },
+    {
+      "label": "BOOM bus-error-unit setting",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        62,
+        62
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "Package and imports",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/CSR.scala",
+      "lines": [
+        4,
+        15
+      ],
+      "sha256": "f71e99f82864ba22edc6bdf09f5b44725c3821c758a19c2e64288c11063b2b2a"
+    },
+    {
+      "label": "Definition header and complete IO declaration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/CSR.scala",
+      "lines": [
+        356,
+        363
+      ],
+      "sha256": "f71e99f82864ba22edc6bdf09f5b44725c3821c758a19c2e64288c11063b2b2a"
+    },
+    {
+      "label": "Selected CPU CSR file construction",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        268,
+        277
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Selected CPU CSR command and trap inputs",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        986,
+        1013
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Selected CPU trap-value inputs",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        1015,
+        1029
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Selected CPU floating-point and platform inputs",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        1044,
+        1060
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Core architectural feature parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        17,
+        22
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Core ISA parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        24,
+        26
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Core execution-unit parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        28,
+        30
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Core width, interrupt, protection, and breakpoint parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        32,
+        39
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Core context, counter, status, and mutability parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        41,
+        47
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Core trap-vector, custom-CSR, and supervisor derivation",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        51,
+        55
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Derived floating-point, multiply-divide, and atomic parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        69,
+        77
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Derived compressed, bit-manipulation, and vector parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        80,
+        82
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Derived NMI and retirement-width parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        84,
+        86
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Derived decode-width parameter",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        88,
+        88
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Derived address, protection, counter, and trap-vector parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        95,
+        102
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Commit-log counter configuration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        124,
+        126
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Core module and interrupt interface contracts",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        130,
+        138
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Custom CSR declaration and IO contracts",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/CustomCSRs.scala",
+      "lines": [
+        9,
+        19
+      ],
+      "sha256": "d4219c5cbd8ffff5acb4431a1540acca3a46f0e467235223d415ac03cb140e24"
+    },
+    {
+      "label": "Custom CSR identifiers and declaration sequence",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/CustomCSRs.scala",
+      "lines": [
+        21,
+        33
+      ],
+      "sha256": "d4219c5cbd8ffff5acb4431a1540acca3a46f0e467235223d415ac03cb140e24"
+    },
+    {
+      "label": "Custom CSR lookup contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/CustomCSRs.scala",
+      "lines": [
+        43,
+        50
+      ],
+      "sha256": "d4219c5cbd8ffff5acb4431a1540acca3a46f0e467235223d415ac03cb140e24"
+    },
+    {
+      "label": "Derived active-feature configuration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        43,
+        52
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Derived integer width",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        57,
+        57
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Derived virtual-address parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        60,
+        63
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Page-table level, ASID-width, VMID-width, and physical-address-width derivation",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        70,
+        80
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Machine status interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/CSR.scala",
+      "lines": [
+        17,
+        58
+      ],
+      "sha256": "f71e99f82864ba22edc6bdf09f5b44725c3821c758a19c2e64288c11063b2b2a"
+    },
+    {
+      "label": "Hypervisor status interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/CSR.scala",
+      "lines": [
+        69,
+        85
+      ],
+      "sha256": "f71e99f82864ba22edc6bdf09f5b44725c3821c758a19c2e64288c11063b2b2a"
+    },
+    {
+      "label": "Debug status interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/CSR.scala",
+      "lines": [
+        87,
+        103
+      ],
+      "sha256": "f71e99f82864ba22edc6bdf09f5b44725c3821c758a19c2e64288c11063b2b2a"
+    },
+    {
+      "label": "Interrupt translation and CSR constants",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/CSR.scala",
+      "lines": [
+        105,
+        199
+      ],
+      "sha256": "f71e99f82864ba22edc6bdf09f5b44725c3821c758a19c2e64288c11063b2b2a"
+    },
+    {
+      "label": "CSR file public interface dependencies",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/CSR.scala",
+      "lines": [
+        201,
+        298
+      ],
+      "sha256": "f71e99f82864ba22edc6bdf09f5b44725c3821c758a19c2e64288c11063b2b2a"
+    },
+    {
+      "label": "Tile interrupt interface contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Interrupts.scala",
+      "lines": [
+        12,
+        26
+      ],
+      "sha256": "eb7c76bc553047391f92944a0b2430bdf6753953d42c4fae5102af3eaccfe7d8"
+    },
+    {
+      "label": "Physical memory protection type and conversion contracts",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PMP.scala",
+      "lines": [
+        12,
+        51
+      ],
+      "sha256": "de76f13fc5bbd0c10609e616e3d1bd2631cc78cd6ec5ed355736cf40d3c105ce"
+    },
+    {
+      "label": "Floating-point parameters and CSR field widths",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        18,
+        30
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "Environment-call and breakpoint instruction encodings",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        208,
+        209
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Supervisor and machine return instruction encodings",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        211,
+        212
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Debug return, virtual-memory fence, wait, and cease instruction encodings",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        214,
+        217
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "CSR instruction encodings",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        220,
+        225
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Exception cause constants",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        879,
+        922
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Floating-point and base counter CSR constants",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        923,
+        941
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Supervisor CSR constants",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        974,
+        983
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Machine and PMP CSR constants",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        1021,
+        1050
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Debug and machine counter CSR constants",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        1059,
+        1071
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Machine counter inhibit CSR constant",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        1101,
+        1101
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Machine identification CSR constants",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Instructions.scala",
+      "lines": [
+        1131,
+        1134
+      ],
+      "sha256": "7a09837a27e3455ec1d34072a336749569bbee4a49b2f616362b0c833060fee7"
+    },
+    {
+      "label": "Selected CPU status and breakpoint consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        375,
+        379
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Selected CPU exception and return redirect consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        392,
+        407
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Selected CPU decode and interrupt consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        501,
+        508
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "BOOM custom CSR dispatch consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        677,
+        680
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Selected CPU CSR stall consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        723,
+        727
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "BOOM CSR read-data consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        1148,
+        1158
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Selected CPU execution-status consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        1269,
+        1286
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Selected CPU page-table-walker consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        1402,
+        1407
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Decode legality consumer interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/decode.scala",
+      "lines": [
+        459,
+        464
+      ],
+      "sha256": "df4c81ba804bdc694af1e9cb2caa19ce6ec8565f7d7d1a3b1c29f58d3929ca7c"
+    },
+    {
+      "label": "Decode legality consumer behavior",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/decode.scala",
+      "lines": [
+        487,
+        503
+      ],
+      "sha256": "df4c81ba804bdc694af1e9cb2caa19ce6ec8565f7d7d1a3b1c29f58d3929ca7c"
+    },
+    {
+      "label": "CSR write-flush consumer behavior",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/decode.scala",
+      "lines": [
+        568,
+        570
+      ],
+      "sha256": "df4c81ba804bdc694af1e9cb2caa19ce6ec8565f7d7d1a3b1c29f58d3929ca7c"
+    },
+    {
+      "label": "BOOM pipeline-flush micro-op contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        103,
+        106
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "BOOM retirement flush consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rob.scala",
+      "lines": [
+        571,
+        586
+      ],
+      "sha256": "c0dc65c09e79f2f90eefc61e72a0b3e43d92cfecd0ecaf049dae77440ec00214"
+    },
+    {
+      "label": "Cycle-counter clock-gating contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "3b8674dde75e8ef76137faccab2679bb8c1f5a62",
+      "source_type": "git_commit_message",
+      "path": "COMMIT_MESSAGE",
+      "lines": [
+        1,
+        3
+      ],
+      "sha256": "dca5019478c2b530aa1b1cb945fc4fcda0ca96b8318b5c39d529148efeaffd8f"
+    },
+    {
+      "label": "Machine trap-vector alignment choice",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "7b352b6e132ab0ecb1bbc8f0ff304291071e852c",
+      "source_type": "git_commit_message",
+      "path": "COMMIT_MESSAGE",
+      "lines": [
+        1,
+        5
+      ],
+      "sha256": "666e9e431987a5aaa28d050a10a867a73cc30c834c14acdc7d68771f79cb55af"
+    },
+    {
+      "label": "PMP CSR-bank existence choice",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "3546c8d133f9a0b0dc615e1cc401a89145224bb3",
+      "source_type": "git_commit_message",
+      "path": "COMMIT_MESSAGE",
+      "lines": [
+        1,
+        1
+      ],
+      "sha256": "a8c61dac569db3a80bc488e664c553774fe6867388217a57955681c0571545e3"
+    },
+    {
+      "label": "PMP reserved permission choice",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "7f6b4c65ba73e5b4a5e40b4c82773fcbd95e402f",
+      "source_type": "git_commit_message",
+      "path": "COMMIT_MESSAGE",
+      "lines": [
+        1,
+        5
+      ],
+      "sha256": "0df0068fe0f58f063a6bd7a08d375614b6bc42b9247850b5be01e5b5153622c4"
+    },
+    {
+      "label": "CEASE retirement contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "e88774140cdc3bce4ecfa61a0dddb4a6c8cc9869",
+      "source_type": "git_commit_message",
+      "path": "COMMIT_MESSAGE",
+      "lines": [
+        1,
+        4
+      ],
+      "sha256": "609dba29de118bf72fc275e2ed79938bd1eba21c9b883f64476e2e0b0e539276"
+    },
+    {
+      "label": "BOOM CSR execution contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/execution-stages.rst",
+      "lines": [
+        248,
+        267
+      ],
+      "sha256": "42ed0e7cd6d727facdc485b6edb9376abd25cfe5210c396f076916ea18da5f37"
+    },
+    {
+      "label": "CSR instruction semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zicsr.adoc",
+      "lines": [
+        20,
+        106
+      ],
+      "sha256": "64cf89241db8b9580ce54802febd36b91ddd82d3d84b2049942be740c0b7f1ca"
+    },
+    {
+      "label": "CSR address access encoding",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/priv-csrs.adoc",
+      "lines": [
+        22,
+        30
+      ],
+      "sha256": "29a0909c525b382639b6151c0be90878ab20c19c2b8cc7948c86f37e85c900db"
+    },
+    {
+      "label": "Illegal CSR access behavior",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/priv-csrs.adoc",
+      "lines": [
+        45,
+        62
+      ],
+      "sha256": "29a0909c525b382639b6151c0be90878ab20c19c2b8cc7948c86f37e85c900db"
+    },
+    {
+      "label": "Floating-point CSR semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        81,
+        136
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Floating-point accrued exception flags",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        155,
+        172
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Base counter semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/counters.adoc",
+      "lines": [
+        10,
+        15
+      ],
+      "sha256": "6fa08f086675efa08ade599c544d4f39481643ab46077e91fd6bb9772e871c15"
+    },
+    {
+      "label": "RV64 counter access semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/counters.adoc",
+      "lines": [
+        33,
+        36
+      ],
+      "sha256": "6fa08f086675efa08ade599c544d4f39481643ab46077e91fd6bb9772e871c15"
+    },
+    {
+      "label": "Cycle counter semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/counters.adoc",
+      "lines": [
+        61,
+        69
+      ],
+      "sha256": "6fa08f086675efa08ade599c544d4f39481643ab46077e91fd6bb9772e871c15"
+    },
+    {
+      "label": "Retired-instruction counter semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/counters.adoc",
+      "lines": [
+        151,
+        162
+      ],
+      "sha256": "6fa08f086675efa08ade599c544d4f39481643ab46077e91fd6bb9772e871c15"
+    },
+    {
+      "label": "Machine ISA CSR width",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        19,
+        44
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine ISA extension-field behavior",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        60,
+        74
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine ISA extension encoding",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        102,
+        184
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine ISA privilege and custom extension bits",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        190,
+        193
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine vendor-ID CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        249,
+        255
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine architecture-ID CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        286,
+        293
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine implementation-ID CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        325,
+        331
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine hart-ID CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        346,
+        353
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine status and interrupt-enable stack",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        367,
+        397
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine global interrupt-enable rules",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        406,
+        415
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine trap stack transitions",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        425,
+        449
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine previous-privilege field",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        469,
+        469
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine base ISA control",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        554,
+        576
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine effective memory privilege",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        612,
+        631
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine supervisor-user memory access",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        646,
+        658
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine virtual-memory trap control",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        746,
+        754
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine wait trap control",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        767,
+        777
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "User wait and supervisor return trap control",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        785,
+        795
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine extension-context fields",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        817,
+        830
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine extension-context status encoding and floating-point requirements",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        839,
+        867
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine vector and custom extension-context requirements",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        878,
+        889
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine extension-context dirty summary and state effects",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        898,
+        910
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine trap-vector register",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1172,
+        1186
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine trap-vector modes",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1196,
+        1225
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine trap delegation registers",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1237,
+        1254
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Delegated-trap state and writable subsets",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1264,
+        1283
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Trap delegation direction and bit layout",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1291,
+        1329
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine interrupt eligibility",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1333,
+        1377
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine and supervisor interrupt sources",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1404,
+        1441
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Supervisor timer and software interrupt sources",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1458,
+        1466
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine interrupt priority",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1477,
+        1478
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Supervisor interrupt views",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1508,
+        1512
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine counter-enable CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1552,
+        1570
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Lower-privilege counter shadows",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1582,
+        1589
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine counter-enable implementation requirement",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1598,
+        1602
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine counter-inhibit CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1604,
+        1625
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine scratch CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1638,
+        1643
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine exception-PC format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1665,
+        1682
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine exception-PC trap update",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1692,
+        1699
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine cause CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1702,
+        1718
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine trap-value CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1970,
+        1996
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine trap-value fault location",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        1999,
+        2008
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Environment-call semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        2351,
+        2361
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Environment-break semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        2371,
+        2374
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Environment-call and break trap state",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        2383,
+        2387
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Trap-return semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        2390,
+        2407
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Wait-for-interrupt entry semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        2421,
+        2437
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Wait-for-interrupt permitted implementation",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        2446,
+        2448
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Wait-for-interrupt wakeup semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        2458,
+        2472
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Machine reset-state requirements",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        2511,
+        2534
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Physical memory protection CSR semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        3032,
+        3050
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "RV64 physical memory protection address registers",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        3064,
+        3075
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Physical memory protection configuration fields",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        3092,
+        3104
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Physical memory protection address-matching mode",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        3116,
+        3145
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Physical memory protection locking",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/machine.adoc",
+      "lines": [
+        3223,
+        3230
+      ],
+      "sha256": "c686f26b4cee9346ea9f57a1ebf02b709fb7a61b2310f0b54eea4ccb57963c94"
+    },
+    {
+      "label": "Supervisor interrupt-enable stack",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        102,
+        128
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor base ISA control",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        130,
+        140
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor memory privilege",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        167,
+        185
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor user endianness",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        211,
+        226
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor trap-vector semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        300,
+        339
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor interrupt eligibility",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        341,
+        380
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor interrupt source fields",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        395,
+        409
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor interrupt implemented-bit discovery",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        427,
+        431
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor interrupt register subset relationship",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        435,
+        438
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor interrupt priority",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        447,
+        448
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor counter-enable CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        460,
+        478
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor scratch CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        488,
+        496
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor exception-PC CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        501,
+        525
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor cause CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        527,
+        546
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor trap-value CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        652,
+        671
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor trap-value fault location",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        673,
+        682
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor address-translation CSR",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        847,
+        858
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "RV64 supervisor address-translation register format",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        875,
+        877
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor address-translation mode behavior",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        888,
+        935
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor address-translation mode encoding",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        939,
+        977
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Supervisor memory-management fence semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/supervisor.adoc",
+      "lines": [
+        1026,
+        1046
+      ],
+      "sha256": "836c128c612a29e482601b0022ecad61cb4c2fe0c0ed6f9b6e5d277d8a655a2d"
+    },
+    {
+      "label": "Core debug-mode semantics",
+      "repo": "github.com/riscv/riscv-debug-spec",
+      "commit": "b13891ce9848b4a673e05bcab50359495f830692",
+      "path": "core_debug.tex",
+      "lines": [
+        4,
+        31
+      ],
+      "sha256": "560a1905f9d5f3e19612f7333359a3af8ca22b0e087271222afb7e1028d0a48c"
+    },
+    {
+      "label": "Core debug reset and return behavior",
+      "repo": "github.com/riscv/riscv-debug-spec",
+      "commit": "b13891ce9848b4a673e05bcab50359495f830692",
+      "path": "core_debug.tex",
+      "lines": [
+        59,
+        73
+      ],
+      "sha256": "560a1905f9d5f3e19612f7333359a3af8ca22b0e087271222afb7e1028d0a48c"
+    },
+    {
+      "label": "Core debug register requirement",
+      "repo": "github.com/riscv/riscv-debug-spec",
+      "commit": "b13891ce9848b4a673e05bcab50359495f830692",
+      "path": "core_debug.tex",
+      "lines": [
+        80,
+        83
+      ],
+      "sha256": "560a1905f9d5f3e19612f7333359a3af8ca22b0e087271222afb7e1028d0a48c"
+    },
+    {
+      "label": "Legacy debug-version field matching the fixed Rocket interface",
+      "repo": "github.com/riscv/riscv-debug-spec@ceb5d66",
+      "commit": "ceb5d66a7e0cb5cea0511b50849ee4acc7baaa01",
+      "path": "core_registers.xml",
+      "lines": [
+        4,
+        11
+      ],
+      "sha256": "997c18ffd257511345dcbc3db9e9bcd4d1ae1eac1b3e8afa5384c36ccf29d49d"
+    },
+    {
+      "label": "Core debug status fields",
+      "repo": "github.com/riscv/riscv-debug-spec",
+      "commit": "b13891ce9848b4a673e05bcab50359495f830692",
+      "path": "xml/core_registers.xml",
+      "lines": [
+        13,
+        92
+      ],
+      "sha256": "9e56fb9ca60959919a3ddc640eb8310067b35464dba6fcacb540f17ccecce9e8"
+    },
+    {
+      "label": "Core debug PC ebreak and single-step behavior",
+      "repo": "github.com/riscv/riscv-debug-spec",
+      "commit": "b13891ce9848b4a673e05bcab50359495f830692",
+      "path": "xml/core_registers.xml",
+      "lines": [
+        94,
+        113
+      ],
+      "sha256": "9e56fb9ca60959919a3ddc640eb8310067b35464dba6fcacb540f17ccecce9e8"
+    },
+    {
+      "label": "Core debug PC halt-request, resume, and scratch behavior",
+      "repo": "github.com/riscv/riscv-debug-spec",
+      "commit": "b13891ce9848b4a673e05bcab50359495f830692",
+      "path": "xml/core_registers.xml",
+      "lines": [
+        119,
+        134
+      ],
+      "sha256": "9e56fb9ca60959919a3ddc640eb8310067b35464dba6fcacb540f17ccecce9e8"
+    },
+    {
+      "label": "Zero-trigger CSR behavior",
+      "repo": "github.com/riscv/riscv-debug-spec",
+      "commit": "b13891ce9848b4a673e05bcab50359495f830692",
+      "path": "trigger.tex",
+      "lines": [
+        26,
+        28
+      ],
+      "sha256": "9d1cdad6748067ae159d9bd7c7e89f1231b3c305c264319c411501806e82bd3a"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, submission instruction and configuration heading",
+      "text": "# Implement `CSRFile`\n\nImplement one complete `CSRFile` Chisel definition. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class CSRFile` definition in a single Scala code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### generators/chipyard/src/main/scala/config/BoomConfigs.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/subsystem/Configs.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/common/parameters.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/common/config-mixins.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "              // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/rocket/TLB.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/devices/debug/Debug.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/tile/LazyRoCC.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/common/tile.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Parent instantiation\n\n### src/main/scala/exu/core.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 177
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/tile/Core.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 29
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 30
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 31
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 32
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 33
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 34
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 35
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 36
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 37
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 38
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/tile/CustomCSRs.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 39
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 40
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 41
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/tile/BaseTile.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 42
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 43
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 44
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 45
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/rocket/CSR.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 46
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 47
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 48
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 49
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 50
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/tile/Interrupts.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 51
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/rocket/PMP.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 52
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/tile/FPU.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 53
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/rocket/Instructions.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 54
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 55
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 56
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 57
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 58
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 59
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 60
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 61
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 62
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 63
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 64
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Related source code\n\n### src/main/scala/exu/core.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 65
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 66
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 67
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 68
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 69
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "      // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 70
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 71
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 72
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/exu/decode.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 73
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 74
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 75
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/common/micro-op.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 76
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/exu/rob.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 77
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Documentation\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 78
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 79
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 80
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 81
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 82
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### docs/sections/execution-stages.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 83
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/zicsr.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 84
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/priv-csrs.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 85
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 86
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/f-st-ext.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 87
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 88
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/counters.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 89
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 90
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 91
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 92
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/machine.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 93
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 94
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 95
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 96
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 97
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 98
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 99
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 100
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 101
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 102
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 103
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 104
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 105
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 106
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 107
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 108
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 109
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 110
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 111
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 112
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 113
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 114
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 115
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 116
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 117
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 118
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 119
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 120
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 121
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 122
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 123
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 124
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 125
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 126
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 127
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 128
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 129
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 130
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 131
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 132
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 133
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 134
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 135
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 136
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 137
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 138
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 139
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 140
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 141
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 142
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 143
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 144
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 145
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 146
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 147
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/supervisor.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 148
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 149
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 150
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 151
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 152
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 153
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 154
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 155
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 156
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 157
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 158
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 159
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 160
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 161
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 162
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 163
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 164
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 165
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 166
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 167
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 168
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### core_debug.tex\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 169
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 170
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 171
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### core_registers.xml\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 172
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### xml/core_registers.xml\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 173
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 174
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 175
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### trigger.tex\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 176
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n"
+    }
+  ]
+}

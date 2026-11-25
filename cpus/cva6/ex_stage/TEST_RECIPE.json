@@ -1,0 +1,39 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "ex_stage",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/ex_stage.sv",
+  "source_sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "52a4184fc9416cf068a8e2f7d908c19d85187d81b84d34ba8c3fddfe27715b21",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_ex_stage.yaml",
+  "test_list_sha256": "6efd11e6882f5c13242a4dab21852260460a33a93ef514a7d5c5691ad86afd99",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/ex_stage.sv",
+    "test_sources": "Run the pinned, unmodified beq-01.S, sub-01.S, mul-01.S and div-01.S programs named by harness/testlist_ex_stage.yaml. MUL and DIV exercise the shared fixed-latency result output using the multiplication and division results from the mult unit.",
+    "test_source_sha256": {
+      "riscv-test-suite/rv32i_m/I/src/beq-01.S": "6f07d29073a1c213e666624a600c75c484fa455ee77b50431a5f56e14b9e0883",
+      "riscv-test-suite/rv32i_m/I/src/sub-01.S": "8f5317f66303759272b07a45d3eb430bbd0e0164b9afcc07169475c19956ae10",
+      "riscv-test-suite/rv32i_m/M/src/mul-01.S": "f4f6d72a6f0538e3b29658ff1ea064a29bd399c65efaf8bba34cab05435369cf",
+      "riscv-test-suite/rv32i_m/M/src/div-01.S": "742b30208efc3dcaf3268533d8b6d7c153d5b2d8856341c72d5faa114aea9137"
+    },
+    "test_source_license": {
+      "identifier": "BSD-3-Clause",
+      "copyright": "Copyright (c) 2020. RISC-V International. All rights reserved.",
+      "upstream_path": "COPYING.BSD",
+      "distribution_path": "LICENSES/license-texts/riscv-arch-test-a5a49fc9f244-COPYING.BSD"
+    }
+  }
+}

@@ -1,0 +1,530 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "e03662a0e82b63a646dce6d402903181fc74509d3b963d0c29a5d27157a3b74e",
+  "prompt_sha256": "4519292e3ef750164ce866e52966d0b56c965592b8312fbac2c8fe14fb6fc32e",
+  "repositories": {
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "github.com/ucb-bar/berkeley-hardfloat": {
+      "revision": "70455e53f233a06cb5a342d125e22b7b1505c271"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        338
+      ],
+      "sha256": "5fb0aea07bd2bcd6c2f966dba6ab266730838552151a2b1bbdaa54a97b128c47"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        338,
+        419
+      ],
+      "sha256": "92b57bf8f64dcbfa4db47bd26d4f52d3d3b8f0e2c9e64b67b919be54b585abd2"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        419,
+        426
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        426,
+        461
+      ],
+      "sha256": "cf6c83ec38b8dee8b9c3763396ca9aa515c01a52bacb7807b60fa39e322fd8bc"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        461,
+        497
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        497,
+        1087
+      ],
+      "sha256": "1e72268323504bfe39d8c0c52aed647413ac7b0391267267931ec80549b5afc9"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1087,
+        1126
+      ],
+      "sha256": "ada51fbbc45cb1c158fe0379dd9f01b0f8f50f6be1a92859e857c76fb196a0d2"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1126,
+        1578
+      ],
+      "sha256": "ed74983936b14d63fda5ed1e279de9b0fe1e548617894046de4bba0bfd475fd3"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1578,
+        1635
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        1635,
+        1880
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        1880,
+        1934
+      ],
+      "sha256": "7f5ce0ce63a3621b1a7b73adb8ad4d8c28c84135465bcc4ac219063131a6c4ba"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1934,
+        1952
+      ],
+      "sha256": "82ceab988b46f640e3f949fec7b69fbf5bb0880ef15e3a11a3a7871d3f081f24"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1952,
+        1959
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1959,
+        2689
+      ],
+      "sha256": "1c886d47a9320f71f692855dedf3682cf70eb32488dee242e59a296cf84389ea"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        2689,
+        2696
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        2696,
+        3228
+      ],
+      "sha256": "1702318ab5068ee23ebbd2ae32a55a2fc1735e188c24659b020857b11e3e5d75"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        3228,
+        3235
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        3235,
+        3642
+      ],
+      "sha256": "a1b64b52a26dac2681215f78b606c3d7e1eb8793942cdad8525e93eef740bb8e"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        3642,
+        3691
+      ],
+      "sha256": "c4c6e4cde190e12b3a820cc0688b35c8c9a2b8a351d69b7472cafaa8df257308"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        3691,
+        3709
+      ],
+      "sha256": "82ceab988b46f640e3f949fec7b69fbf5bb0880ef15e3a11a3a7871d3f081f24"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        3709,
+        3716
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        3716,
+        4523
+      ],
+      "sha256": "dcdb82e44e2825715daa35be048a71f6744aa5cbf4fb01be08123f3a59f95863"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        4523,
+        4530
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        4530,
+        4957
+      ],
+      "sha256": "207706c21459f80697257d1d8ccc6d4e310ebac81ff8b1dea57d3d696304a76a"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        4957,
+        5020
+      ],
+      "sha256": "92a9878f2878bed7d8662fb51bd080895d3c5db4e0d2f0cd59be87435e02c7a9"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        5020,
+        5038
+      ],
+      "sha256": "82ceab988b46f640e3f949fec7b69fbf5bb0880ef15e3a11a3a7871d3f081f24"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        5038,
+        5045
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        5045,
+        5591
+      ],
+      "sha256": "f84e6f4a2f22d57e23ec0a20f495201dbb701e70ec8309351ec16d835163933f"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        5591,
+        5656
+      ],
+      "sha256": "8821f4a360d7bb27f616c8b9ecfb51731d92fc55ac1d3600644d98a5865f75e0"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        5656,
+        5788
+      ],
+      "sha256": "90ea5f7dd29a7417de3b2d66cb86f7d26706216068981b1224e7485454f578af"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        5788,
+        5826
+      ],
+      "sha256": "ea60a02ae51249ab02cd1d692372546853c796801f173c3827204cb340c09971"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        5826,
+        6607
+      ],
+      "sha256": "387f1b27ad997f0898bb1853d58b42d761f69ff2e62a4ddf46ded65ca74cefdd"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        6607,
+        6611
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Package and required imports",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        4,
+        6
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "Required utility import",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        15,
+        15
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "Target declaration and interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        625,
+        640
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "Fixed parent connections and output timing",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        709,
+        722
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        38,
+        38
+      ],
+      "label": "HardFloat package of MulAddRecFN.scala",
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Intermediate result bundle",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        46,
+        66
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Pre-multiplication dependency interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        70,
+        82
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Post-multiplication dependency interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        169,
+        177
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        38,
+        38
+      ],
+      "label": "HardFloat package of common.scala",
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "Rounding and tininess encodings",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        42,
+        56
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "Raw floating-point result bundle",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        68,
+        77
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        38,
+        38
+      ],
+      "label": "HardFloat package of RoundAnyRawFNToRecFN.scala",
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Rounding dependency interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        292,
+        304
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Exception flag ordering",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "doc/divSqrtRecFN_small.txt",
+      "lines": [
+        38,
+        40
+      ],
+      "sha256": "261cf42926ec5333aee14d9b4d35dc3f15aac2784c124d0c46c1a3cfc25c1ecd"
+    },
+    {
+      "label": "Fused multiply-add operations",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        294,
+        303
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

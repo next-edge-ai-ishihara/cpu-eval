@@ -1,0 +1,3 @@
+requirement	tests	rationale
+Select the youngest older matching store for load forwarding	youngest_store_forwarding	Eight consecutive stores to one address leave multiple matching store-queue entries before the following load observes the newest value.
+Report the selected store-queue entry and whether a match exists without waiting for a clock edge	youngest_store_forwarding; ForwardingAgeLogicTest	The CPU checks the chosen index when executing a load. The port test compares match presence and any valid index before a clock edge.

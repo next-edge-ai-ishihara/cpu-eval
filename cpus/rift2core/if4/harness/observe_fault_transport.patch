@@ -1,0 +1,71 @@
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -135,6 +135,68 @@
+   if1.io.pc_gen <> if2.io.if2_req
+   if2.io.if2_resp <> if3.io.if3_req
+   if3.io.if3_resp <> if4.io.if4_req
++
++  val if4FaultProbe = Module(new IF4)
++  val if4FaultCase = RegInit(0.U(2.W))
++  val if4FaultPending = RegInit(false.B)
++  val if4FaultFlushPending = RegInit(false.B)
++  val if4FaultGap = RegInit(16.U(5.W))
++  val if4FaultFlush = if4FaultFlushPending && if4FaultGap === 0.U
++  val if4FaultActive = !reset.asBool && if4FaultCase < 3.U &&
++    if4FaultGap === 0.U && !if4FaultFlush
++  val if4FaultInstr = MuxLookup(if4FaultCase, "h0001".U)(Seq(
++    1.U -> "h9c41".U,
++    2.U -> "h9c45".U
++  ))
++  val if4FaultPC = MuxLookup(if4FaultCase, "h80000ffe".U)(Seq(
++    1.U -> "h80001000".U,
++    2.U -> "h80002000".U
++  ))
++  for (i <- 0 until rnChn) {
++    if4FaultProbe.io.if4_req(i).valid := false.B
++    if4FaultProbe.io.if4_req(i).bits := 0.U.asTypeOf(if4FaultProbe.io.if4_req(i).bits)
++    if4FaultProbe.io.btbResp(i).valid := false.B
++    if4FaultProbe.io.btbResp(i).bits := 0.U.asTypeOf(if4FaultProbe.io.btbResp(i).bits)
++    if4FaultProbe.io.bimResp(i).valid := false.B
++    if4FaultProbe.io.bimResp(i).bits := 0.U.asTypeOf(if4FaultProbe.io.bimResp(i).bits)
++    if4FaultProbe.io.tageResp(i).valid := false.B
++    if4FaultProbe.io.tageResp(i).bits := 0.U.asTypeOf(if4FaultProbe.io.tageResp(i).bits)
++    if4FaultProbe.io.if4_resp(i).ready := !reset.asBool && !if4FaultFlush
++  }
++  if4FaultProbe.io.if4_req(0).valid := if4FaultActive && !if4FaultPending
++  if4FaultProbe.io.if4_req(0).bits.instr := if4FaultInstr
++  if4FaultProbe.io.if4_req(0).bits.isRVC := true.B
++  if4FaultProbe.io.if4_req(0).bits.pc := if4FaultPC
++  if4FaultProbe.io.jcmm_update.valid := false.B
++  if4FaultProbe.io.jcmm_update.bits := 0.U.asTypeOf(if4FaultProbe.io.jcmm_update.bits)
++  if4FaultProbe.io.bftq.ready := false.B
++  if4FaultProbe.io.jftq.ready := false.B
++  if4FaultProbe.io.flush := if4FaultFlush
++  when(if4FaultGap =/= 0.U) { if4FaultGap := if4FaultGap - 1.U }
++  when(if4FaultFlush) {
++    if4FaultFlushPending := false.B
++    if4FaultGap := 8.U
++  }
++
++  when(if4FaultProbe.io.if4_req(0).fire) { if4FaultPending := true.B }
++  val if4FaultResp = if4FaultProbe.io.if4_resp(0)
++  when(if4FaultResp.fire && if4FaultCase < 3.U) {
++    val access = if4FaultResp.bits.privil_isa.is_access_fault
++    val page = if4FaultResp.bits.privil_isa.is_paging_fault
++    val matches = access === (if4FaultCase === 1.U) && page === (if4FaultCase === 2.U)
++    printf("CPU_EVAL_IF4_FAULT case=%d pc=%x access=%d page=%d\n",
++      if4FaultCase, if4FaultResp.bits.param.pc, access, page)
++    when(!(if4FaultPending || if4FaultProbe.io.if4_req(0).fire) ||
++        !matches || if4FaultResp.bits.param.pc =/= if4FaultPC) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH IF4 fetch fault flags or PC\n")
++    }
++    if4FaultPending := false.B
++    if4FaultFlushPending := if4FaultCase === 1.U
++    if4FaultGap := 8.U
++    if4FaultCase := if4FaultCase + 1.U
++    when(if4FaultCase === 2.U) { printf("CPU_EVAL_IF4_FAULT_COMPLETE\n") }
++  }
++
+ 
+   if3.io.btbResp  <> if4.io.btbResp
+   if3.io.bimResp  <> if4.io.bimResp

@@ -1,0 +1,55 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/multiplier_ports_tb.sv",
+    "../instr_scan/harness/evaluate_ports.py",
+    "../harness/port_work_directory.py",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "multiplier",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/multiplier.sv",
+  "evaluator": "harness/evaluate.sh",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "test_list": "harness/testlist_multiplier.yaml",
+  "test_list_sha256": "78764a405e6bb950a271d16896261cd9dfa41a1c28de4f8a0dc98c60be7baf6e",
+  "port_evaluator": "harness/evaluate_ports.py",
+  "port_testbench": "harness/multiplier_ports_tb.sv",
+  "port_observation": "With the pinned CV32A60X configuration, observe result, validity and transaction ID after each sampling edge for consecutive, different requests.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/multiplier.sv",
+    "test_sources": "Check out the recorded test revision and use the seven unmodified RISC-V Architectural Tests named by harness/testlist_multiplier.yaml"
+  },
+  "evaluator_sha256": "7d197528eb5da6381c974f3e764318d0f9387d29ae2e74517860858394b94b1c",
+  "port_evaluator_sha256": "52778a298609778d8db66d7ab2bb6a56490fc92240519aa04dcf8036133942be",
+  "port_testbench_sha256": "e0fce609d7d29fed3f198c6a48ef9ad8488b7280b15200d6845718c6f90a1d25",
+  "port_source_inputs": [
+    {
+      "path": "core/include/config_pkg.sv",
+      "sha256": "f6f193daa7dfe1161689f651d6aa6e2b1fdec6560fc83c1313385e944ce4c97c"
+    },
+    {
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "path": "core/include/build_config_pkg.sv",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "path": "core/include/riscv_pkg.sv",
+      "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+    },
+    {
+      "path": "core/include/ariane_pkg.sv",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - {test: rv32im-mul-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/M/src/mul-01.S}
+  - {test: rv32im-mulh-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/M/src/mulh-01.S}
+  - {test: rv32im-mulhsu-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/M/src/mulhsu-01.S}
+  - {test: rv32im-mulhu-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/M/src/mulhu-01.S}
+  - {test: rv32im-div-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/M/src/div-01.S}
+  - {test: rv32im-divu-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/M/src/divu-01.S}
+  - {test: rv32im-rem-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/M/src/rem-01.S}
+  - {test: rv32im-remu-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/M/src/remu-01.S}
+  - {test: rv32ib-clmul-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/B/src/clmul-01.S}
+  - {test: rv32ib-clmulh-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/B/src/clmulh-01.S}
+  - {test: rv32ib-clmulr-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/B/src/clmulr-01.S}

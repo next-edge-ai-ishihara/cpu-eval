@@ -1,0 +1,72 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2193
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_veer",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/remove-replaceable-module-hierarchy.patch",
+      "sha256": "2829f79aa23749b576b33c2e1b9856d4d52727263cba02bda228e77b8e5a5a5e",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 3
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+  },
+  "evaluation_command": "bash evaluate_all.sh",
+  "dependencies": [
+    "../_shared/run_fixed_test.sh",
+    "harness/run_dbg_busy_probe.sh",
+    "evaluate_all.sh",
+    "../veer_wrapper/test/with_observer.sh",
+    "../veer_wrapper/test/observer_verilator.py"
+  ],
+  "exclusive_resources": [
+    "tcp-port-5000"
+  ],
+  "comparison": "Ordered Spike and RTL GPR state-change updates; require 2193 matched updates. This comparison does not compare every retired instruction, PC, opcode, or memory update.",
+  "debug_command_mux_test": {
+    "kind": "fixed_dmi_register_value_probe",
+    "path": "harness/run_dbg_busy_probe.sh",
+    "config": "harness/reg_probe.cfg",
+    "purpose": "Read abstractcs (DMI 0x16, busy bit 12) and data0 (DMI 0x04) once after a fixed delay to check debug-command completion, failure and read-data outputs.",
+    "command_sequence": "After OpenOCD target initialization and halt, issue riscv dmi_write 0x17 0x220b00 (Access Register, 32-bit, regno=0xb00=mcycle), sleep for 50 ms, then issue riscv dmi_read 0x16 and riscv dmi_read 0x4."
+  },
+  "debug_probe_validation": {
+    "runner": "harness/run_dbg_busy_probe.sh",
+    "runner_sha256": "844f861fc69d71e172c06379ba1f4ef9bf069648b20702f30aa199482c420785",
+    "rule": "After the simulator opens the JTAG socket, an OpenOCD error exit, a busy command, a command error, zero data0 or missing values are FAIL. An OpenOCD wall-clock timeout is INVALID."
+  },
+  "decoder_observer": {
+    "boundary": "The trace monitor follows the uniquely elaborated reused el2_dec instance inside the submitted core, including generate scopes; its private instance name is not required to be dec."
+  }
+}

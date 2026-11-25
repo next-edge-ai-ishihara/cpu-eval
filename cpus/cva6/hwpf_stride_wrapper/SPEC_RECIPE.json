@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Prefetch configuration and status types",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hwpf_stride/hwpf_stride_pkg.sv",
+      "lines": [
+        27,
+        65
+      ],
+      "language": "systemverilog",
+      "sha256": "d35f97634b014c9723ef165e84188eac0be60e1a6b676ae3847b0c5c7fb8c427"
+    },
+    {
+      "label": "Cache derived address fields",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        451,
+        465
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Module declaration for hwpf_stride_wrapper",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hwpf_stride/hwpf_stride_wrapper.sv",
+      "lines": [
+        28,
+        96
+      ],
+      "language": "systemverilog",
+      "sha256": "d1432b1f200626bfbf7cb710ec3b06e9c24444e29ac76d9bddb168f667f434e6"
+    },
+    {
+      "label": "CVA6 parent instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_wrapper.sv",
+      "lines": [
+        258,
+        301
+      ],
+      "language": "systemverilog",
+      "sha256": "8092ed052b8c097e2f3969ae2c43205989666f2495f7c678d2749e5db25872c0"
+    },
+    {
+      "label": "Stride-prefetcher declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hwpf_stride/hwpf_stride.sv",
+      "lines": [
+        27,
+        75
+      ],
+      "language": "systemverilog",
+      "sha256": "ccd89b1bf08c77726d984d513f3d41a6798ffacf98e374545fb01b7995e7d787"
+    },
+    {
+      "label": "Stride-prefetcher arbiter declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hwpf_stride/hwpf_stride_arb.sv",
+      "lines": [
+        26,
+        57
+      ],
+      "language": "systemverilog",
+      "sha256": "ff5e13b0f5df4e94075ddfe34b8c47b747e91c18ea647db1448d9a2a4003d046"
+    },
+    {
+      "label": "Prefetch-engine arbitration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/old/source/hpdcache_spec.tex",
+      "lines": [
+        2975,
+        2978
+      ],
+      "sha256": "e1a70cacee6da910616be74b7feb4319885d8207dfcb919dd46e0467f2241d90"
+    },
+    {
+      "label": "Prefetch-engine trigger",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/old/source/hpdcache_spec.tex",
+      "lines": [
+        2990,
+        2999
+      ],
+      "sha256": "e1a70cacee6da910616be74b7feb4319885d8207dfcb919dd46e0467f2241d90"
+    },
+    {
+      "label": "Prefetch status register",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/old/source/hpdcache_spec.tex",
+      "lines": [
+        3172,
+        3217
+      ],
+      "sha256": "e1a70cacee6da910616be74b7feb4319885d8207dfcb919dd46e0467f2241d90"
+    },
+    {
+      "label": "Physical and virtual indexing timing",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        735,
+        788
+      ],
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, submission instructions and headings",
+      "text": "# Implement `hwpf_stride_wrapper`\n\nImplement the complete `hwpf_stride_wrapper` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hwpf_stride_wrapper` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Package and imports\n\n### rtl/src/hwpf_stride/hwpf_stride_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### rtl/src/hpdcache_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Parent instantiation\n\n### core/cache_subsystem/cva6_hpdcache_wrapper.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Dependency declarations\n\n### rtl/src/hwpf_stride/hwpf_stride.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### rtl/src/hwpf_stride/hwpf_stride_arb.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Documentation\n\n### docs/old/source/hpdcache_spec.tex\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### docs/source/interface.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n"
+    }
+  ]
+}

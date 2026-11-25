@@ -1,0 +1,60 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../instr_scan/harness/evaluate_ports.py",
+    "../harness/port_work_directory.py",
+    "../../../tools/cva6/replace_module.py",
+    "harness/check_id_ports.py",
+    "harness/id_stage_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "id_stage",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/id_stage.sv",
+  "source_sha256": "2c6bdf3d746093c95d719d4ccb79cc2a966e8c05724d25853bdabca933740863",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "4d1dcc18f7fed159077bf1623cc8d8538efc0fd5be19cd4245f1a93b004b1eb2",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "directed_test_source": "../instr_queue/harness/id_transport.S",
+  "directed_test_source_sha256": "827b3e7748cb125a178e6703ab4390dbf1de0dad99b26218eddfaea72e856d34",
+  "directed_test_patch": "../instr_queue/test-patches/add_id_transport.patch",
+  "directed_test_patch_sha256": "8c25466bebe10429dcf567cd1576414debd495df1d934b9cf2c3d62e4ab2f062",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/id_stage.sv",
+    "test_sources": "Use the pinned architectural tests. harness/evaluate_parallel.sh copies the assembly files beside the selected test list into <CVA6>/verif/tests/cpu-eval-patches. To reconstruct the directed source independently, apply its new-file provenance patch in an empty scratch directory and compare the recorded SHA-256.",
+    "evaluation": "Start from an unpatched checkout and invoke harness/evaluate.sh with the candidate."
+  },
+  "test_lists": [
+    {
+      "path": "../instr_queue/harness/testlist_id_transport.yaml",
+      "sha256": "5143d7b8e11c7462e664b1c95a5196d486c280ce6e431bdbe993c9cbe07576d3"
+    },
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049"
+    }
+  ],
+  "public_port_test": {
+    "evaluator": "harness/check_id_ports.py",
+    "evaluator_sha256": "b3d44715b7e6b6893227ae60824c47161ba3eacacf18cb5bef8b40a7ea79d24e",
+    "fixture": "harness/id_stage_ports_tb.sv",
+    "fixture_sha256": "9d4c23785d8ad4110dd65f7c155af7154355f4be0e7ff847f69856a3b57c6bfe",
+    "native_files": {
+      "core/cva6.sv": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c",
+      "core/Flist.cva6": "4d3462801bd6212fc0f93aad9dec84981333c0ad97f45fa95533ee6c3a6b6f2a",
+      "core/id_stage.sv": "2c6bdf3d746093c95d719d4ccb79cc2a966e8c05724d25853bdabca933740863",
+      "core/decoder.sv": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95",
+      "core/cvxif_compressed_if_driver.sv": "e5dd565b9a6fcf95129182075d481771c5dc4ae45e5fb760476b50e9fcc5f318",
+      "core/compressed_decoder.sv": "8fcbc36f099de87018068fc788fc488712ba3db2fb7b7f6a9715bd46919c0c62"
+    },
+    "scope": "After the CPU programs pass, use the pinned CV32A60X file list and real children to check valid original instruction and RVFI compressed metadata, issue retention and flush, and a pending/accepted compressed CV-X-IF request."
+  }
+}

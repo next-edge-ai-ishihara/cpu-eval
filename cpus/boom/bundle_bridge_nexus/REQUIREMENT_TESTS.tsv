@@ -1,0 +1,7 @@
+requirement	tests	rationale
+Reduce the connected inputs or forward the default	BundleBridgeNexusTest	Two UInt sources exclude a distinct nonzero default from their reduction. A separate graph with no source transforms the default and never calls inputFn.
+Generate exactly one value per connected output with the supplied output function	BundleBridgeNexusTest	The directed harness connects two sinks and requires distinct transformed values 0x53 and 0x54.
+Drive each diplomatic output edge with the corresponding generated value	BundleBridgeNexusTest	The two sink IOs expose the values delivered through separate output edges.
+Allow no output when the fixed node permits it	BundleBridgeNexusTest	An input-only graph elaborates.
+Reject incompatible input types	BundleBridgeNexusTest	The input function selects the first input unchanged, so both connected input types must be checked even when the resulting value matches the sink.
+Reject incompatible result types and an invalid output count	BundleBridgeNexusTest	One graph generates a wrong-width result and another generates too many values. Each must be rejected during elaboration.

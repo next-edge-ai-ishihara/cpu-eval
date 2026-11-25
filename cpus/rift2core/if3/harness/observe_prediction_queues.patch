@@ -1,0 +1,89 @@
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -112,6 +112,86 @@
+   val if1 = (if (hasuBTB) {Module(new IF1Predict)} else {Module(new IF1NPredict)})
+   val if2 = Module(new IF2(icache_edge))
+   val if3 = Module(new IF3)
++  val if3Probe = Module(new IF3)
++  val if4Probe = Module(new IF4)
++  val if3ProbePhase = RegInit(0.U(2.W))
++  val if3ProbeStep = RegInit(0.U(3.W))
++  val if3ProbeSend = if3ProbeStep === 0.U & if3ProbePhase =/= 3.U & ~reset.asBool
++  val if3ProbeLink = if3ProbePhase =/= 0.U & if3ProbeStep === 3.U
++  val if3ProbeBranchFirst = if3ProbePhase === 2.U
++  val if3ProbeWords = Mux(if3ProbeBranchFirst,
++    VecInit(Seq("h0063".U(16.W), "h0000".U(16.W), "h0067".U(16.W), "h0001".U(16.W))),
++    VecInit(Seq("h0067".U(16.W), "h0001".U(16.W), "h0063".U(16.W), "h0000".U(16.W))))
++  for (i <- 0 until 4) {
++    val req = if3Probe.io.if3_req(i)
++    req.valid := if3ProbeSend
++    req.bits := 0.U.asTypeOf(req.bits)
++    req.bits.pc := ("h80000100".U + (i * 2).U)
++    req.bits.instr := if3ProbeWords(i)
++  }
++  def connectIf3Probe[T <: Data](producer: DecoupledIO[T], consumer: DecoupledIO[T]): Unit = {
++    consumer.valid := if3ProbeLink & producer.valid
++    consumer.bits := producer.bits
++    producer.ready := if3ProbeLink & consumer.ready
++  }
++  for (i <- 0 until rnChn) {
++    connectIf3Probe(if3Probe.io.if3_resp(i), if4Probe.io.if4_req(i))
++    connectIf3Probe(if3Probe.io.btbResp(i), if4Probe.io.btbResp(i))
++    connectIf3Probe(if3Probe.io.bimResp(i), if4Probe.io.bimResp(i))
++    connectIf3Probe(if3Probe.io.tageResp(i), if4Probe.io.tageResp(i))
++    if4Probe.io.if4_resp(i).ready := true.B
++  }
++  if3Probe.io.jcmm_update := 0.U.asTypeOf(if3Probe.io.jcmm_update)
++  if3Probe.io.bcmm_update := 0.U.asTypeOf(if3Probe.io.bcmm_update)
++  if3Probe.io.if4_update_ghist := if4Probe.io.if4_update_ghist
++  if3Probe.io.if4Redirect := if4Probe.io.if4Redirect
++  if3Probe.io.flush := if3ProbePhase === 0.U & if3ProbeStep === 3.U
++  if4Probe.io.flush := if3Probe.io.flush
++  if4Probe.io.jcmm_update := 0.U.asTypeOf(if4Probe.io.jcmm_update)
++  if4Probe.io.bftq.ready := true.B
++  if4Probe.io.jftq.ready := true.B
++
++  val if3BtbPending = if3Probe.io.btbResp.map(_.valid).reduce(_ | _)
++  val if3BimPending = if3Probe.io.bimResp.map(_.valid).reduce(_ | _)
++  val if3InstrPending = if3Probe.io.if3_resp.map(_.valid).reduce(_ | _)
++  val if3OutputPending = if3BtbPending & if3BimPending & if3InstrPending
++  when(if3ProbeSend & if3Probe.io.if3_req.map(_.fire).reduce(_ & _)) {
++    if3ProbeStep := 1.U
++  }.elsewhen(if3ProbeStep === 1.U & if3OutputPending) {
++    if3ProbeStep := 2.U
++  }.elsewhen(if3ProbeStep === 2.U) {
++    when(!if3OutputPending) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH IF3 loses an output while stalled\n")
++    }
++    if3ProbeStep := 3.U
++  }.elsewhen(if3ProbeStep === 3.U) {
++    when(if3ProbeLink) {
++      val btbFired = PopCount(if3Probe.io.btbResp.map(_.fire))
++      val bimFired = PopCount(if3Probe.io.bimResp.map(_.fire))
++      val instruction = if3Probe.io.if3_resp(0)
++      val redirect = if4Probe.io.if4Redirect
++      printf("CPU_EVAL_IF3_REDIRECT phase=%d valid=%d pc=%x target=%x younger=%d btb=%d bim=%d\n",
++             if3ProbePhase, redirect.valid, redirect.bits.pc, redirect.bits.target,
++             if3Probe.io.if3_resp(1).fire, btbFired, bimFired)
++      when(!redirect.valid | redirect.bits.pc =/= "h80000100".U |
++           !instruction.fire | if3Probe.io.if3_resp(1).fire |
++           btbFired =/= (!if3ProbeBranchFirst).asUInt | bimFired =/= if3ProbeBranchFirst.asUInt) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH IF3 prediction transfer does not match the IF4 redirect\n")
++      }
++    }
++    if3ProbeStep := 4.U
++  }.elsewhen(if3ProbeStep === 4.U) {
++    printf("CPU_EVAL_IF3_QUEUE_PHASE phase=%d instruction=%d btb=%d bim=%d\n",
++           if3ProbePhase, if3InstrPending, if3BtbPending, if3BimPending)
++    when(if3InstrPending | if3BtbPending | if3BimPending) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH IF3 exposes stale responses after cancellation or transfer\n")
++    }
++    when(if3ProbePhase === 2.U) {
++      printf("CPU_EVAL_IF3_QUEUE_DONE\n")
++    }
++    if3ProbePhase := if3ProbePhase + 1.U
++    if3ProbeStep := 0.U
++  }
+   val if4 = Module(new IF4)
+   val preRename_stage = if(hasVector) { Module(new VecPreRename) } else { Module(new FakeVecPreRename) }
+   val rnm_stage = Module(new Rename)

@@ -1,0 +1,715 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "BoomProbeUnit",
+  "sources": [
+    {
+      "label": "LargeBoomConfig header",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        175,
+        179
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Selected cache parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        205,
+        207
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Package and imports",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        7,
+        21
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "BoomProbeUnit public interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        145,
+        160
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "DCache metadata-read connection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        558,
+        562
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "DCache s1 tag match",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        620,
+        627
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "DCache s2 tag match and hit state",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        642,
+        644
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "DCache probe connections",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        776,
+        785
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "DCache writeback arbitration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        803,
+        806
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "DCache release destinations and priority",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        813,
+        818
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "Client coherence states",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Metadata.scala",
+      "lines": [
+        10,
+        20
+      ],
+      "sha256": "f4af5705af968b349a7e0e4781bc99d89828eaf48f87fa2ef11ecf8891f5eea2"
+    },
+    {
+      "label": "Client coherence metadata storage",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Metadata.scala",
+      "lines": [
+        33,
+        42
+      ],
+      "sha256": "f4af5705af968b349a7e0e4781bc99d89828eaf48f87fa2ef11ecf8891f5eea2"
+    },
+    {
+      "label": "Client coherence probe transition table",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Metadata.scala",
+      "lines": [
+        115,
+        133
+      ],
+      "sha256": "f4af5705af968b349a7e0e4781bc99d89828eaf48f87fa2ef11ecf8891f5eea2"
+    },
+    {
+      "label": "Client probe operation and constructors",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Metadata.scala",
+      "lines": [
+        150,
+        163
+      ],
+      "sha256": "f4af5705af968b349a7e0e4781bc99d89828eaf48f87fa2ef11ecf8891f5eea2"
+    },
+    {
+      "label": "TileLink permission contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Bundles.scala",
+      "lines": [
+        83,
+        126
+      ],
+      "sha256": "808e3fd3edfdd6cbac097ca8f71c57ffc59114ed10ff6da2d3202426c25292a9"
+    },
+    {
+      "label": "TileLink Probe request fields",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Bundles.scala",
+      "lines": [
+        187,
+        201
+      ],
+      "sha256": "808e3fd3edfdd6cbac097ca8f71c57ffc59114ed10ff6da2d3202426c25292a9"
+    },
+    {
+      "label": "TileLink Probe response fields",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Bundles.scala",
+      "lines": [
+        203,
+        218
+      ],
+      "sha256": "808e3fd3edfdd6cbac097ca8f71c57ffc59114ed10ff6da2d3202426c25292a9"
+    },
+    {
+      "label": "TileLink ProbeAck constructors",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Edges.scala",
+      "lines": [
+        403,
+        416
+      ],
+      "sha256": "66861901bf07acede4832630fb5e4aed19f3c16b59945b90ac6a8a7c00c59859"
+    },
+    {
+      "label": "HellaCache index slicing",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        58,
+        60
+      ],
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "label": "HellaCache index bit positions",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        70,
+        71
+      ],
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "label": "Metadata entry type",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        286,
+        289
+      ],
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "label": "Metadata request types",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        300,
+        308
+      ],
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "label": "Writeback request type",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/NBDcache.scala",
+      "lines": [
+        43,
+        51
+      ],
+      "sha256": "5324e1ac9899c21226e4663de5dd91bada76d7ae4d38443b66d4f70f378a3553"
+    },
+    {
+      "label": "Cache address partitions",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/L1Cache.scala",
+      "lines": [
+        18,
+        28
+      ],
+      "sha256": "13da540037a386eed900115071d35104228d491ada79c824abd2af67026746f8"
+    },
+    {
+      "label": "Maximum core address width",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        95,
+        95
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "Ready-valid transfer event",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        48,
+        50
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "Decoupled interface contract",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        93,
+        100
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "BoomWritebackUnit request interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        24,
+        27
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "BoomWritebackUnit idle state",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        37,
+        39
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "Writeback request ready contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        80,
+        87
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "Local release search",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        1020,
+        1021
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "MSHR Probe-state interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/mshrs.scala",
+      "lines": [
+        66,
+        66
+      ],
+      "sha256": "da578c710754063834691a429f8bd0ef0582e1ba478cbeb4ba26b02bbfef97f0"
+    },
+    {
+      "label": "MSHR conflict use of Probe state",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/mshrs.scala",
+      "lines": [
+        284,
+        284
+      ],
+      "sha256": "da578c710754063834691a429f8bd0ef0582e1ba478cbeb4ba26b02bbfef97f0"
+    },
+    {
+      "label": "DCache SRAM pipeline timing",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/memory-system.rst",
+      "lines": [
+        22,
+        34
+      ],
+      "sha256": "d3661741d7abf7239a7413d6ef80e82e54d4e5de6353eb2b90cc3071d2626db1"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "# Implement `BoomProbeUnit`\n\nImplement one complete `BoomProbeUnit` source-level hardware definition for the selected BOOM configuration. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class BoomProbeUnit` definition in a single Scala code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### src/main/scala/common/config-mixins.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n## Parent instantiation\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 34
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/tilelink/Metadata.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/tilelink/Bundles.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/tilelink/Edges.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/rocket/HellaCache.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/rocket/NBDcache.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/tile/L1Cache.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/tile/Core.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/chisel3/util/Decoupled.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n## Related source code\n\n### src/main/scala/lsu/dcache.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 29
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/lsu/lsu.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 30
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/lsu/mshrs.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 31
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 32
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n## Documentation\n\n### docs/sections/memory-system.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 33
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n## Additional requirement\n\nIn the cycle the metadata response arrives, use `way_en` and `block_state` only if `mshr_rdy` and `wb_rdy` are both high and otherwise read the metadata again, then for an absent or clean line transfer `lsu_release` before asserting `rep.valid` and assert `meta_write.valid` only after `rep` transfers, and for a dirty matched line transfer `wb_req` and wait for `wb_req.ready` to be high again before asserting `meta_write.valid`.\n"
+    }
+  ]
+}

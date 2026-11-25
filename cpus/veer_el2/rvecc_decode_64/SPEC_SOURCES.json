@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "295bf3eb82cbafa4f83e96dc789a2bd10ada26b85e6fbe9fb6ae62eb5f89e493",
+  "prompt_sha256": "6118ead1584bbb16c7d86d026903a0a342131a6595867aa6e9ec6c9c03de3606",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        259
+      ],
+      "sha256": "9d47a800e028e07a4b923a61cd2255ffa117a0880264de6bec9880517a2636ee"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading Module declaration",
+      "prompt_bytes": [
+        259,
+        294
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        294,
+        516
+      ],
+      "sha256": "bb12a6a6ba1a9cbbbe90368132ae01c79f4b5761edc33f72f63b4240d5da7643"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Heading ## Parent instantiation",
+      "prompt_bytes": [
+        516,
+        558
+      ],
+      "sha256": "86a78ac4cc20bc7a27f46858b3f03571d648288040162b8967a223715500b2f6"
+    },
+    {
+      "index": 4,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        558,
+        1877
+      ],
+      "sha256": "2d9edd8cda9d072bcbf22b89e3ee29e7b38a7411faaedcbc2fe96b27a1b50a96"
+    },
+    {
+      "index": 5,
+      "kind": "authored",
+      "description": "Heading ## Related source code with path design/lib/beh_lib.sv",
+      "prompt_bytes": [
+        1877,
+        1945
+      ],
+      "sha256": "a5a92c7c272184444119010d41b44a1b353ccb3c1a814480aff7899027f0cdad"
+    },
+    {
+      "index": 6,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1945,
+        3898
+      ],
+      "sha256": "657404682b2a4a33351e394afbba0fe070c554ed247feef70d65f64611f3687d"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Source path testbench/tests/icache_ecc/icache_ecc.c",
+      "prompt_bytes": [
+        3898,
+        3957
+      ],
+      "sha256": "4165e565475689204ce98cc322dd9b1194c110e3b115cc5cf8a892aef93d0cdd"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        3957,
+        4845
+      ],
+      "sha256": "c9bf11faec06446c89d3f379a758356d1757483a935025e58dfc0ce06bfe6854"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Close excerpt",
+      "prompt_bytes": [
+        4845,
+        4850
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvecc_decode_64",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        741,
+        746
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "Instruction-cache use of rvecc_decode_64",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        804,
+        823
+      ],
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835",
+      "language": "verilog"
+    },
+    {
+      "label": "ECC encoder",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        720,
+        738
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "Upstream instruction-cache ECC test",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "testbench/tests/icache_ecc/icache_ecc.c",
+      "lines": [
+        4,
+        19
+      ],
+      "sha256": "f99a20ec2aa4e77c57ce3e1e1c6db8a54dd311c17ac8567075e1f183514e4bdb",
+      "language": "text"
+    }
+  ]
+}

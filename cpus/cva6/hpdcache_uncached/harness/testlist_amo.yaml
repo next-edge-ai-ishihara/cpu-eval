@@ -1,0 +1,24 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  gcc_opts: "-DXLEN=64 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - {test: rv64im-hpdcache-amo-cached-reload, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/cpu-eval-patches/hpdcache_amo_cached_reload.S}
+  - {test: rv64im-amoadd-d-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoadd.d-01.S}
+  - {test: rv64im-amoadd-w-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoadd.w-01.S}
+  - {test: rv64im-amoand-d-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoand.d-01.S}
+  - {test: rv64im-amoand-w-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoand.w-01.S}
+  - {test: rv64im-amomax-d-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amomax.d-01.S}
+  - {test: rv64im-amomax-w-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amomax.w-01.S}
+  - {test: rv64im-amomaxu-d-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amomaxu.d-01.S}
+  - {test: rv64im-amomaxu-w-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amomaxu.w-01.S}
+  - {test: rv64im-amomin-d-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amomin.d-01.S}
+  - {test: rv64im-amomin-w-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amomin.w-01.S}
+  - {test: rv64im-amominu-d-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amominu.d-01.S}
+  - {test: rv64im-amominu-w-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amominu.w-01.S}
+  - {test: rv64im-amoor-d-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoor.d-01.S}
+  - {test: rv64im-amoor-w-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoor.w-01.S}
+  - {test: rv64im-amoswap-d-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoswap.d-01.S}
+  - {test: rv64im-amoswap-w-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoswap.w-01.S}
+  - {test: rv64im-amoxor-d-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoxor.d-01.S}
+  - {test: rv64im-amoxor-w-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv64i_m/A/src/amoxor.w-01.S}

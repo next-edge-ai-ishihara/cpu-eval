@@ -1,0 +1,41 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/decoder_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_decoder",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_decoder.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "1513c572bc8b2c7ab01b737b761c640bbf04dc1fdc6c710f8e485b804763ed54",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "d7e8056464fa5149a5ff9f03f75904fe97480fe0df33abb46cea7a637f9a2b39",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_connection_patch": "test-patches/route_data_bits_through_decoder.patch",
+  "test_connection_patch_sha256": "8c7c4a04f5253046fde611b6377810099c7a312a2acd5b8f563b16ded97009a9",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_decoder.sv from hpdcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision; no generated test source is stored"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "8e884caecc602def8de445dc7122bc33b30a7b3eb4b2704a22c16970957deb09",
+    "test": "harness/decoder_ports_tb.sv",
+    "test_sha256": "e98bee8c71e1ed6116396933ae8991cbc5a2363e7fca5fef789a3b23d3f5da9a",
+    "configuration": "N=1, the width that cv32a60x instantiates; en_i=0/1 and val_i=0/1; 4 public-output comparisons.",
+    "environment": "Linux with a readable /proc table for its own processes, Python 3, Verilator with --binary --timing --assert, C++ and make. VERILATOR may name its executable.",
+    "result": "PASS (0) requires 4 consecutive observations, SUMMARY checks=4 errors=0 and DECODER_PORT_TEST_COMPLETE, then continues to CPU evaluation. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2). Default build limit is 120 seconds and runtime limit is 10 seconds."
+  }
+}

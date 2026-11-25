@@ -1,0 +1,13 @@
+diff --git a/cpu-eval-patches/cva6_csr_sequence.S b/cpu-eval-patches/cva6_csr_sequence.S
+--- a/cpu-eval-patches/cva6_csr_sequence.S
++++ b/cpu-eval-patches/cva6_csr_sequence.S
+@@ -23,6 +23,9 @@ RVTEST_CODE_BEGIN
+     csrr s0, mscratch
+     csrr s1, mepc
+     add s2, s0, s1
++    li t3, 0x1800
++    csrw mstatus, t3
++    csrr t4, mscratch
+ RVTEST_CODE_END
+ RVMODEL_HALT
+ 

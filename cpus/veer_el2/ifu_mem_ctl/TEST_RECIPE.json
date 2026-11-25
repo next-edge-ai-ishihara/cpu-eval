@@ -1,0 +1,54 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2193
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_ifu_mem_ctl",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+  },
+  "run": "bash evaluate_all.sh",
+  "comparison": "Spike and RTL ordered GPR-update traces for the fixed arithmetic program. The separate RTL program enables instruction caching, observes a cache hit, replaces an instruction in the testbench memory, and requires the new instruction to execute after fence.i. The directed program reports its result through the testbench mailbox within 10,000 cycles.",
+  "checkout_files": [
+    {
+      "source": "harness/ifu_fence_i.s",
+      "destination": "testbench/asm/ifu_fence_i.s",
+      "sha256": "ee955f89ecd7a4de804253d7d70fbf5c00010b406ab9d1db5b4c24ddc21a9fff"
+    },
+    {
+      "source": "harness/ifu-fence-i-shared-memory.patch",
+      "destination": "cpu_eval_ifu_fence_i.patch",
+      "sha256": "1881bd1ce402ad6513828383bcb3aac8ecf8a6bf47b9b4448b96881167468fba"
+    }
+  ],
+  "run_sha256": "aec19e8c1f8bcd1d740773a1ff7a84cea657bdc3b4a97f4fe307b87365b7446a"
+}

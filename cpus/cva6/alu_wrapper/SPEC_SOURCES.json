@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "f842d53a169e0a7f52059a0654d4ac3dc92d6d77564bcc91b531cb7692427c39",
+  "prompt_sha256": "222457412664a90e07c217320f2151ac760c02f10992ab8b249b84642ecd1356",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        362
+      ],
+      "sha256": "41b0fc247a02e0bfcecc18da1941dbc98a1bea0b68ef32cafa0cfa7e76a84fd3"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        362,
+        392
+      ],
+      "sha256": "5fb7cbc472f473e3a6624059b94a526b7331a6d2bd011ceb8010446ee240c47f"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fence after cv32a60x superscalar setting",
+      "prompt_bytes": [
+        392,
+        452
+      ],
+      "sha256": "7f093da87871964e83b059dacd164c338e39adaa88ec33e5c99d1ac5587f80e9"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        452,
+        601
+      ],
+      "sha256": "f128942827f4e00dc6843d4bbdfaecfafc061e08ccce3e5408f86799cec73c48"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Fence after derived ALU count and bypass setting; package heading",
+      "prompt_bytes": [
+        601,
+        679
+      ],
+      "sha256": "7c0ccfc2bf886a46b69fea82922638b46b498d0585f53bca17fbdd86335cb6bb"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        679,
+        769
+      ],
+      "sha256": "37b317bfecc1fd31fbad9c0aaeeb10a65c29e5ce10a949d1b8c3bdeda8c99f9b"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence after package excerpt",
+      "prompt_bytes": [
+        769,
+        814
+      ],
+      "sha256": "16ab8841be19b6437f519e370a014818c34cc127977ddf6ac45cfb13290c150f"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        814,
+        1424
+      ],
+      "sha256": "a04a9b784f57ab303c6af6a6190310f36f9450cb9d344ba86b4aafc1ebe477bd"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        1424,
+        1471
+      ],
+      "sha256": "e2268288abe30a91b3982ee76de3437d2598cf6681ec2fdd47686716bd440c90"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1471,
+        1748
+      ],
+      "sha256": "fb33c8518865717a6324ba022ff1f1a6263feb69512953249f420327e2dbc5b9"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        1748,
+        1798
+      ],
+      "sha256": "81d41ecf78e440f663cc27670adb5ce5de3dc176db1890f1f16bf657c8d49578"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1798,
+        2465
+      ],
+      "sha256": "28f0eb36a1449e8ebe10ba2590f3ea56851448d415cb7900ad545b5d46d2e9ba"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fence after Dependency declarations",
+      "prompt_bytes": [
+        2465,
+        2469
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "cv32a60x superscalar setting for alu_wrapper",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        27,
+        27
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Derived ALU count and bypass setting for alu_wrapper",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        53,
+        54
+      ],
+      "language": "verilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "ALU bypass record type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        543,
+        546
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Module declaration for alu_wrapper",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu_wrapper.sv",
+      "lines": [
+        15,
+        27
+      ],
+      "language": "verilog",
+      "sha256": "b2de99f62b1d6bda465c4354ba9f88be9c6e0908d524fffb45ab5d8ccdc7a22c"
+    },
+    {
+      "label": "Parent instantiation for alu_wrapper",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        341,
+        351
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Dependency module declaration for alu_wrapper",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu.sv",
+      "lines": [
+        21,
+        40
+      ],
+      "language": "verilog",
+      "sha256": "49ba35e04bf1e8cecf8fdf6378a585bad4c0f914291dc4941e0d58dfda834f6a"
+    }
+  ]
+}

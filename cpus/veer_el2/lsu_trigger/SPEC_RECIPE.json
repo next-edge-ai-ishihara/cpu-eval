@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for el2_lsu_trigger",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_trigger.sv",
+      "lines": [
+        25,
+        36
+      ],
+      "language": "verilog",
+      "sha256": "646a7b45823ec42b9efa5e92138374713260f30a46b8b9fadcc535f6bd4aac4e"
+    },
+    {
+      "label": "Parent instantiation for el2_lsu_trigger",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu.sv",
+      "lines": [
+        416,
+        419
+      ],
+      "sha256": "58690ecff8b23840f372b8b2594fa7e2c9a64b8ad1c51f379c36d618d60a343f"
+    },
+    {
+      "label": "el2_trigger_pkt_t type declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        390,
+        398
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "el2_lsu_pkt_t type declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        176,
+        193
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "Dependency module declaration for el2_lsu_trigger",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        587,
+        593
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "mcontrol heading and note",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/debugging.md",
+      "lines": [
+        1313,
+        1317
+      ],
+      "language": "markdown",
+      "sha256": "e314e83f8ab1955d6e712bd4f8d4fcb5399df90657ea081a740048cf096a7a0c"
+    },
+    {
+      "label": "mcontrol select field",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/debugging.md",
+      "lines": [
+        1356,
+        1364
+      ],
+      "language": "markdown",
+      "sha256": "e314e83f8ab1955d6e712bd4f8d4fcb5399df90657ea081a740048cf096a7a0c"
+    },
+    {
+      "label": "mcontrol sizelo field (store-data zero extension, mask for data matches)",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/debugging.md",
+      "lines": [
+        1372,
+        1385
+      ],
+      "language": "markdown",
+      "sha256": "e314e83f8ab1955d6e712bd4f8d4fcb5399df90657ea081a740048cf096a7a0c"
+    },
+    {
+      "label": "mcontrol match field",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/debugging.md",
+      "lines": [
+        1412,
+        1420
+      ],
+      "language": "markdown",
+      "sha256": "e314e83f8ab1955d6e712bd4f8d4fcb5399df90657ea081a740048cf096a7a0c"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `el2_lsu_trigger`\n\nImplement the complete `el2_lsu_trigger` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_lsu_trigger` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Dependency declarations\n\n### design/include/el2_def.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n### design/lib/beh_lib.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Documentation\n\n### docs/source/debugging.md\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n"
+    }
+  ]
+}

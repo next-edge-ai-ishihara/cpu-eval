@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Selected small configuration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "ibex_configs.yaml",
+      "lines": [
+        19,
+        38
+      ],
+      "sha256": "75b4e848face7fa31e1bc227aaa7a83cb2a8f45aa1fc0bd4fe2e2800f6caac28"
+    },
+    {
+      "label": "Ibex base ISA, multiply, and bit-manipulation configuration types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        36,
+        59
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Ibex execution, control, exception, interrupt, and writeback types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        93,
+        393
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Ibex CSR identifiers",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        463,
+        694
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Ibex multi-bit type and values",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        750,
+        760
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "CHERIoT operation identifiers and datapath and CSR selectors",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_cheriot_pkg.sv",
+      "lines": [
+        832,
+        912
+      ],
+      "sha256": "d8b5b51ce99129ebd0c6436689cd85883760ca98f15f45c8a18b977549d007c4"
+    },
+    {
+      "label": "Module declaration for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        21,
+        229
+      ],
+      "language": "verilog",
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Parent instantiation for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        663,
+        858
+      ],
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Dependency module declaration for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_controller.sv",
+      "lines": [
+        14,
+        135
+      ],
+      "language": "verilog",
+      "sha256": "bc3211faf87435b07922e3e61646ef83247ab86c5938d4cd2e108802a4357860"
+    },
+    {
+      "label": "Dependency module declaration for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_decoder.sv",
+      "lines": [
+        17,
+        120
+      ],
+      "language": "verilog",
+      "sha256": "842b520e4a942b6a27f3c44f7e8784e4a8dd40d7531a0ec3dd338f624be18217"
+    },
+    {
+      "label": "Trap references through ibex_id_stage hierarchy",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1842,
+        1853
+      ],
+      "language": "verilog",
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Debug and exception references through ibex_id_stage hierarchy",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1885,
+        1900
+      ],
+      "language": "verilog",
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Interrupt reference through ibex_id_stage hierarchy",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1930,
+        1930
+      ],
+      "language": "verilog",
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Official design documentation for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_decode_execute.rst",
+      "lines": [
+        3,
+        14
+      ],
+      "sha256": "ab60d2567305b1d544cdac813c37a440f89e134bc5d3d8e5551c5a7c69dc3ffb"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission boundary",
+      "text": "# Implement `ibex_id_stage`\n\nImplement the complete `ibex_id_stage` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ibex_id_stage` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for CPU configuration",
+      "text": "\n## CPU configuration used for evaluation\n\n### ibex_configs.yaml\n\n```yaml\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for package types",
+      "text": "\n## Package and imports\n\n### rtl/ibex_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and path heading",
+      "text": "```\n\n### rtl/ibex_cheriot_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "text": "\n## Parent instantiation\n\n### rtl/ibex_core.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Dependency declarations",
+      "text": "\n## Dependency declarations\n\n### rtl/ibex_controller.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and path heading",
+      "text": "```\n\n### rtl/ibex_decoder.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Related source code",
+      "text": "\n## Related source code\n\n### rtl/ibex_core.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "text": "\n## Documentation\n\n### doc/03_reference/instruction_decode_execute.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    }
+  ]
+}

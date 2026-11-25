@@ -1,0 +1,35 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/popcount_ports_tb.sv",
+    "../instr_scan/harness/evaluate_ports.py",
+    "../harness/port_work_directory.py",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "popcount",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "vendor/pulp-platform/common_cells/src/popcount.sv",
+  "evaluator": "harness/evaluate.sh",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "test_list": "harness/testlist_popcount.yaml",
+  "test_list_sha256": "6e9cf37504167d0cde1178a98ed872995e5305abc53b87d8ae095a62501cf67c",
+  "directed_test_source": "harness/popcount_weight_range.S",
+  "directed_test_source_sha256": "7c1069b78882ff32c981301495a2294ea39ad309a4186903153e43d938b87721",
+  "port_evaluator": "harness/evaluate_ports.py",
+  "port_testbench": "harness/popcount_ports_tb.sv",
+  "port_observation": "Instantiate popcount with INPUT_WIDTH=32 and 2, the widths that cv32a60x instantiates. Compare the weight of the highest bit alone, of all 32 bits set and of an alternating pattern, and all four two-bit inputs.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:vendor/pulp-platform/common_cells/src/popcount.sv",
+    "test_sources": "Check out the recorded test revision and use add-01.S and cpop-01.S; the shared evaluator copies the recorded popcount_weight_range.S beside them as named by harness/testlist_popcount.yaml"
+  },
+  "evaluator_sha256": "f71a9768edda716d0f1e7865b7db86e03acd0f2b8642b27e9fc07650a5dc2cf5",
+  "port_evaluator_sha256": "8542f8b255bc8963b84e96f469d943d96348ce9b9e06c8c73b19d67757dad367",
+  "port_testbench_sha256": "0596e45b07665b3ef54ca0d913e368252a5859c1955890644421d58de32dee08"
+}

@@ -1,0 +1,5 @@
+requirement	test_program	test_behavior
+Return zero local history in fetch stage one	rv64mi-p-null_local_history_cycles	The directed program repeatedly reads the HBIM entry selected by stage-one history and commits the measured execution cycles to x20.
+Return zero local history in fetch stage three	rv64mi-p-null_local_history_cycles	The directed program repeatedly trains an always-not-taken branch; stage-three history selects the HBIM update entry, and the program commits the measured execution cycles to x20.
+Return zero local history in fetch stage one	NullLocalBranchPredictorBankPortTest	Observe all bits of f1_lhist before and after each combination of control mask and walking bit in the full-width address and update-history inputs.
+Return zero local history in fetch stage three	NullLocalBranchPredictorBankPortTest	Observe all bits of f3_lhist before and after each combination of control mask and walking bit in the full-width address and update-history inputs.

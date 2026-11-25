@@ -1,0 +1,7 @@
+requirement	tests	test_behavior
+Return the low XLEN bits of the product	rv64um-p-mul	Compare committed multiplication results with Spike for the program's operand cases.
+Return the high XLEN bits of a signed product	rv64um-p-mulh	Compare committed signed high-product results with Spike for the program's operand cases.
+Return the high XLEN bits of an unsigned product	rv64um-p-mulhu	Compare committed unsigned high-product results with Spike for the program's operand cases.
+Return the high XLEN bits of a signed by unsigned product	rv64um-p-mulhsu	Compare committed mixed-signedness high-product results with Spike for the program's operand cases.
+Sign-extend the low 32-bit product for MULW	rv64um-p-mulw;rv64um-p-mulw_negative_results	Compare committed MULW results with Spike, including selected negative 32-bit results. Instruction traces do not check every internal pipeline handshake or cycle.
+Align each product and its valid bit with the request at the selected latency	pipelined_multiplier_valid_timing	Compare valid and valid products across consecutive requests and empty input cycles.

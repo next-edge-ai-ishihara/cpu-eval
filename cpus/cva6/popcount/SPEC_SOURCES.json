@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "77c1dd48c2c60154227aed865a336e722732073f58b4d26c3c77406c81c8a231",
+  "prompt_sha256": "58531fc5bfcec569680ed13c45fb6708a3d8d478e06089ecab5a3d04842b6ff2",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        0,
+        293
+      ],
+      "sha256": "7d5b8cdc76056831e48e378e99a1ca1c6c6b615e9ece13fa8e8e8c3ca3818295"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        293,
+        525
+      ],
+      "sha256": "3c7e72681140c6a90be986172c7b0639e941426b813d125ba41d559bc446ae7d"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        525,
+        605
+      ],
+      "sha256": "3d524b0a40fd932639c932af78c591447ba3572f8c584712311261ee435a34d3"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        605,
+        775
+      ],
+      "sha256": "2405ff554c4419a6a5685d350a534e1e2688209562cc665da1ed2e8fb43118bd"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        775,
+        779
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for popcount",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/popcount.sv",
+      "lines": [
+        19,
+        25
+      ],
+      "language": "verilog",
+      "sha256": "e01dc8c6b0e36bbea5229f12686fbc97ee251133cf9b7bbcf5d91c084aff6822"
+    },
+    {
+      "label": "Common Cells popcount behavior",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/README.md",
+      "lines": [
+        91,
+        91
+      ],
+      "sha256": "553a4193973d569b692fde5cac4c83957989dce1764911156a93038a915a0819"
+    }
+  ]
+}

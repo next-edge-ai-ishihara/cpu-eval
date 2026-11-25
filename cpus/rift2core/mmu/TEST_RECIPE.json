@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "problem": "MMU",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/privilege/MMU.scala",
+    "source_unit": "MMU"
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-*",
+      "rv64um-p-*",
+      "rv64ua-p-*",
+      "rv64uc-p-*",
+      "rv64mi-p-*",
+      "rv64si-p-*"
+    ],
+    "policy": "Run every program in the fixed required-test catalog that matches the selection patterns."
+  },
+  "test_catalog_construction": {
+    "script": "tools/environment/build_environment_images.py",
+    "script_sha256": "ba00feee7be8fc4b5db14bb9e83ff6d7639f64515564fc8678c985c207c23906",
+    "record": "cpus/rift2core/_shared/REFERENCE_TEST_CATALOG.json",
+    "record_sha256": "f8157e50c2082084f5594d5ca4563f904cf5d509e9689ff21c374be785175255"
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "repository": "https://github.com/chipsalliance/chisel.git",
+    "version": "5.1.0",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "environment_patch_sha256": "6adfa0aaf917402aef35b29d4749ba14860b7936c4926bc1e579cf595495adbe",
+  "evaluator": {
+    "script": "cpus/rift2core/_shared/evaluate.sh",
+    "script_sha256": "27899e3b105136e4d107e512db9f5e231964f7b7533754caf4301d6a9ad418e0",
+    "replacement_script": "cpus/rift2core/_shared/replace_class.py",
+    "replacement_script_sha256": "6a66e9a53704dfaa69484bc204991727d9b7f9fb66de7350ffc36f440f4136b2"
+  },
+  "directed_functional_tests": [
+    {
+      "name": "sv39_megapage_offset",
+      "elf": "tests/sv39-megapage/images/sv39_megapage_offset",
+      "elf_sha256": "f37e68f51f8fbe42b24e9052b8d64bab0b1d0b79ea13db67a783cc79c0fab2de",
+      "verilog_image": "tests/sv39-megapage/images/sv39_megapage_offset.verilog",
+      "verilog_image_sha256": "ffc7b9dbd6672ffde4debd76e87b28d2dfe64971a7350db82130ce2a0f2d45ca"
+    }
+  ]
+}

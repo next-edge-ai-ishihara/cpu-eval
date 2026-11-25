@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "problem": "Rename",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/backend/Rename.scala",
+    "source_unit": "Rename",
+    "hidden_definitions": [
+      "RenameMalloc",
+      "WriteBackLookup",
+      "CSRMalloc",
+      "LoadRob",
+      "RenameFeatureCheck"
+    ],
+    "hidden_definitions_description": "Before compilation the evaluator renames these fixed definitions, which implement the target's behavior, in every source file, so a submission cannot reuse them by name."
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-add",
+      "rv64si-p-csr",
+      "rv64si-p-dirty"
+    ],
+    "policy": "Run pinned upstream add for integer register flow, csr for consecutive CSR allocation and update dependencies, and dirty for mstatus-dependent loads and stores. Compare architectural traces without requiring a particular ready expression or cycle count."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches. The directed mstatus/load program must also exercise both scenarios at the native Rename request ports without accepting the load early."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_rename_memory_order.patch",
+      "sha256": "049c0c4719b7b0f091717656784ec32e9e8e510f6c7d70fb608cd2868ed7ff3c",
+      "purpose": "Observe a native younger load in the same group as an older mstatus access and while mstatus is pending."
+    }
+  ],
+  "directed_functional_tests": [
+    {
+      "name": "rename_mstatus_load_order",
+      "elf": "tests/mstatus-load-order/images/rename_mstatus_load_order",
+      "elf_sha256": "198828dca40eecb1b6f3e97e386974ae497f59d28d21c093521779f9756c4c81",
+      "verilog_image": "tests/mstatus-load-order/images/rename_mstatus_load_order.verilog",
+      "verilog_image_sha256": "62e25e0471841aa26722b224424b190bc13f9c17f9468b088d03158f1141fc5a"
+    }
+  ],
+  "required_observation_markers": {
+    "rename_mstatus_load_order": "CPU_EVAL_RENAME_MSTATUS_LOAD_ORDER_DONE"
+  }
+}

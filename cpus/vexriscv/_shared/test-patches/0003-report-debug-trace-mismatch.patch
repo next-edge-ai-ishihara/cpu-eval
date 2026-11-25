@@ -1,0 +1,18 @@
+diff --git a/src/test/cpp/regression/main.cpp b/src/test/cpp/regression/main.cpp
+index a405e12..1123813 100644
+--- a/src/test/cpp/regression/main.cpp
++++ b/src/test/cpp/regression/main.cpp
+@@ -3488,9 +3488,10 @@ public:
+ 			clientFail = true; return;
+ 		}
+ 
+-		writeCmd(2, debugAddress + 4, 0x13 + (1 << 15)); //Read regfile
++		uint32_t injectedInstruction = 0x13 + (1 << 15); //Read x1 through the injected instruction path
++		writeCmd(2, debugAddress + 4, injectedInstruction);
+-		if((readValue = readCmd(2,debugAddress + 4)) != 10){
++		if ((readValue = readCmd(2,debugAddress + 4)) != 10) {
+-			printf("wrong breakB PC %x\n",readValue);
++			printf("DEBUG TRACE MISMATCH injected=%08x EXPECTED register=%08x DUT register=%08x\n",injectedInstruction,10,readValue);
+ 			clientFail = true; return;
+ 		}
+ 

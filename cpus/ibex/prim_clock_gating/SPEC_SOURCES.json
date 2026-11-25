@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "3c41df7962467efe79d85897ec867d887a9fbd719762550e2e67ec7e60be992a",
+  "prompt_sha256": "3c040bfbf1d7179b226512451436b2e0c225910ef7b0c639c7adc78a485ceb5d",
+  "repositories": {
+    "https://github.com/lowRISC/ibex.git": {
+      "revision": "405c6d1d8220a18b2f9196141167a5875422dee4"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        279
+      ],
+      "sha256": "6798ffbe0029970231b7c0ed2c106593b20f23ab0cdecaf15a6c93e2aec27934"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "prompt_bytes": [
+        279,
+        314
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        314,
+        601
+      ],
+      "sha256": "48324656931684eccb9a37da71e173ffb7d45277152c7b2b96db40451b9cfd67"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        601,
+        605
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "prompt_bytes": [
+        605,
+        663
+      ],
+      "sha256": "a1cd167fbb0fe1fa7ba9882f1d4327a1336773b92c2c43140c58df313cbf865c"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        663,
+        804
+      ],
+      "sha256": "d4c871b731f7953072129ec3cb1a2348f36e52f4d1d29569a4abd09acbe087e4"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        804,
+        808
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "prompt_bytes": [
+        808,
+        875
+      ],
+      "sha256": "e2cadd05f29c1d44d22df954078c1e7de6b9647e62ab84d71fdd442d6a15fc67"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        875,
+        1416
+      ],
+      "sha256": "0610a96d8ef63be953d634c314e872f76cd5879cafaf862996a36e3906b63cb4"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1416,
+        1462
+      ],
+      "sha256": "3843ff9b5e2592337dc6962963f151cd6906efb1a6fddef3e7d28583528926a3"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1462,
+        1780
+      ],
+      "sha256": "8ce3ee46deb9c97bac7db6257e5dd127c21d623b18bf653a7aab98c1da519470"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1780,
+        1784
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1784,
+        2102
+      ],
+      "sha256": "2fb015a5cb406968c874bfacb491b8e7e9bfe8043a4235e9b722f7c3ed191721"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Fence after Documentation",
+      "prompt_bytes": [
+        2102,
+        2106
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for prim_clock_gating",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_gating.sv",
+      "lines": [
+        10,
+        18
+      ],
+      "language": "verilog",
+      "sha256": "b2474320674e645d423f32ba1ce60b25509042d40c2de8fe28dcb7760a8fa882"
+    },
+    {
+      "label": "Parent instantiation for prim_clock_gating",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_top.sv",
+      "lines": [
+        333,
+        338
+      ],
+      "sha256": "0db761a029b18d17271200a7ffe438c856db53423efa25912ba7ce60948cdfc5"
+    },
+    {
+      "label": "Clock gating cell requirement in the register file documentation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/register_file.rst",
+      "lines": [
+        51,
+        56
+      ],
+      "sha256": "d5ad01e1b2b4b947dbfdf9e7826b4d032ab8705f6f55045abf2ab1a62ac138f3"
+    },
+    {
+      "label": "Excerpt of doc/02_user/integration.rst",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/02_user/integration.rst",
+      "sha256": "409c745d57cb20923a39295102716793e10771d4e64d04be9b4bafdaa2f6410d",
+      "lines": [
+        370,
+        372
+      ]
+    },
+    {
+      "label": "Excerpt of doc/02_user/integration.rst",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/02_user/integration.rst",
+      "sha256": "409c745d57cb20923a39295102716793e10771d4e64d04be9b4bafdaa2f6410d",
+      "lines": [
+        377,
+        379
+      ]
+    }
+  ]
+}

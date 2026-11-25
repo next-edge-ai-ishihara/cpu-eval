@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "299c41a6b578d1fe43968233789a413881306c874005a698de488eab2c5c4485",
+  "prompt_sha256": "d144c4fa83fd894333be730cd7c6ab55cd195b5d05b1f9e4b9e374141b7bbe97",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        320
+      ],
+      "sha256": "78d13b8d5e0485a16c32e0f8d5aa8d0a7c7870ce625d9b65f493a4bcc0cf5989"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        320,
+        872
+      ],
+      "sha256": "7d237db4a68e684c73b163780b802dc38acb4f464a6ae0347319e4032f940934"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences: Documentation; `docs/source/architecture.rst`",
+      "prompt_bytes": [
+        872,
+        940
+      ],
+      "sha256": "37ffb6fe932fb954a38a912381a576d6148467f2668993c01b6a7ce24adbf7a3"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        940,
+        1087
+      ],
+      "sha256": "9ae31f9d9295c6fa062aa61a71e0390cd9218301790dbe9521969a0200346ae3"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        1087,
+        1093
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1093,
+        1123
+      ],
+      "sha256": "f01b9ef47f13e9713942be902150b73b864cd4ebe7ac5f0a8b8825e9c4159ee8"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        1123,
+        1128
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_sram_1rw",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/macros/behav/hpdcache_sram_1rw.sv",
+      "lines": [
+        13,
+        28
+      ],
+      "language": "systemverilog",
+      "sha256": "271bc9139cc9d51b6a1247cb6507a51e095e918e9c331dc7c468a563c2fd0f5e"
+    },
+    {
+      "label": "HPDcache RAM organization",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        416,
+        417
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "HPDcache RAM read latency",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        426,
+        426
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    }
+  ]
+}

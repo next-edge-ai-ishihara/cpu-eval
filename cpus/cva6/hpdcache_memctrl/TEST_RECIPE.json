@@ -1,0 +1,44 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "harness/evaluate_ports.py",
+    "harness/memctrl_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_memctrl",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_memctrl.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "b1edc2a9a55691ef559e0489447a9bf4f49cff91f794d5518a989d0b5c61e5ef",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "313a79c22e7f4b891888a3ffd6b6150d4f90837b19ec896b33e7fd020284e408",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_memctrl.yaml",
+  "test_list_sha256": "5d658cf6d2bda0de3ab5db5fcd45f12d553e47c9b3f13d9bbcc8665c61f3be1f",
+  "directed_test_source": "harness/hpdcache_memctrl_cached_store.S",
+  "directed_test_source_sha256": "9276a148394a5745859a1bfda2a0b8101987a8aecd4975d7b441e1059ecaaae7",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hpdcache_memctrl.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision and copy the recorded directed test source as performed by the shared evaluator"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "4fa775dd9c262ab469c244c34329c3b640d2cce362862125b980274fb046ba73",
+    "test": "harness/memctrl_ports_tb.sv",
+    "test_sha256": "9d9d1b44f805d245dc28185740bf62fcd66e8799db7ba2f58ce1c78f22e5d1b6",
+    "comparison": {
+      "scope": "Check the two-word refill, lookup, and byte-enable observations with the complete cv32a60x HPDcache configuration, which has two access words.",
+      "implementation_freedom": "No fixed initialization cycle count, victim random sequence, or private implementation names are compared.",
+      "bounded_execution": "Existing fixed dependencies, 64 MiB temporary storage cap, process group timeout, no CPU build for this port phase."
+    }
+  }
+}

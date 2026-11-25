@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/hpdcache_sync_buffer/SPEC_RECIPE.json",
+  "recipe_sha256": "61eb2513287ef5632f4b1f2f54f066c66937f4db1046a4327e2a83fe82608b61",
+  "prompt_sha256": "24fa639ae6f017f7a5bc0464b05aa5c1337ccdfe0af8aca8920bd34f2bbd1ef7",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        329
+      ],
+      "sha256": "c402228912733733e5cda3fc989cf832c272f0a5ccc10fbb2de62716a66ebf38"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        329,
+        756
+      ],
+      "sha256": "ee23aee5572e75e4d683784e4518e56a1442b30030ecd3ca47e5c88dad5b91c8"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences: Parent instantiation; `rtl/src/common/hpdcache_fifo_reg.sv`",
+      "prompt_bytes": [
+        756,
+        847
+      ],
+      "sha256": "84e81e5a355a0a956fa6c95eac75d6385cb95a45f8ba29451a136c695ab4eec0"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        847,
+        1468
+      ],
+      "sha256": "0d5e290aeb4b7a633f4aa5951ff59faf6e32171019b980666fa75342ab132011"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences: Related source code; `rtl/src/common/hpdcache_fifo_reg.sv`",
+      "prompt_bytes": [
+        1468,
+        1558
+      ],
+      "sha256": "1ad699654e3298906f4b58d6b2b9539e0a749b758ae1aedc72878a3cc1adc801"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1558,
+        2622
+      ],
+      "sha256": "b97e1d9908f50a59b92558187ee5d549a06b9d161fe399bb776d311d524e8631"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        2622,
+        2629
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2629,
+        3478
+      ],
+      "sha256": "4286c6f9dfbe94ea7598e6b1aadcb4d0cfb1bf7caf45ea1d4673b454dedca617"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        3478,
+        3483
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module description and declaration for hpdcache_sync_buffer",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_sync_buffer.sv",
+      "lines": [
+        26,
+        45
+      ],
+      "language": "systemverilog",
+      "sha256": "4f8e44eb05307acc9982e2797e454314e76ff4fc3cebaef372f587b07dcd1b14"
+    },
+    {
+      "label": "Single-entry selection and signal mapping in the surrounding register FIFO",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        55,
+        79
+      ],
+      "language": "systemverilog",
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+    },
+    {
+      "label": "Ready, valid, feedthrough, read, and write rules in the surrounding register FIFO",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        81,
+        111
+      ],
+      "language": "systemverilog",
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+    },
+    {
+      "label": "Data retention, feedthrough output, and reset state in the surrounding register FIFO",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        140,
+        168
+      ],
+      "language": "systemverilog",
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+    }
+  ]
+}

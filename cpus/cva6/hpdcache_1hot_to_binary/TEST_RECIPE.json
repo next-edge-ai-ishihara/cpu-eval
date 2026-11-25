@@ -1,0 +1,57 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_observation.sh",
+    "../harness/compare_cycle_measurement.py",
+    "harness/onehot_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_1hot_to_binary",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_1hot_to_binary.sv",
+  "source_sha256": "614752a4144b15b38fe08f79f6a30fb4a77e67db15daeed0c439af4025de6c8f",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "eecee270555f67abb8f688f04c83cf66ebca966354a236fc3540f1734aa83c10",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "directed_test_source": "../hpdcache_victim_sel/harness/hpdcache_victim_sel_concurrent_misses.S",
+  "directed_test_source_sha256": "ac51f2b2d6e4b813bab3d423ed2ebbaa2b89c595f74e72b184e5b025b33030a3",
+  "directed_test_patch": "../hpdcache_victim_sel/test-patches/add_hpdcache_victim_sel_concurrent_misses.patch",
+  "directed_test_patch_sha256": "de8db850917d22c33ced48253f653cf74763c7078f2c13b6c05511cde8fe89f6",
+  "application_order": [
+    "checkout CVA6 at cpu_revision and initialize its HPDcache submodule",
+    "run harness/evaluate.sh with the complete submitted hpdcache_1hot_to_binary module"
+  ],
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_1hot_to_binary.sv",
+    "reference_hdl_preconditions": "Run reference_hdl from the root of the CVA6 checkout at cpu_revision, with core/cache_subsystem/hpdcache initialized as the cv-hpdcache submodule containing commit f404e7ebbda8baa4af3729535f520a6b12a06d03. Verify SHA-256 614752a4144b15b38fe08f79f6a30fb4a77e67db15daeed0c439af4025de6c8f of the retrieved source before use.",
+    "test_sources": "Check out the recorded test revision and run the shared program that accesses four lines in the same cache set. Verify the measurement trace against Spike while recording its cycle delta. Run the 38 standard programs and the direct port test."
+  },
+  "test_materialization": "../harness/evaluate_parallel.sh copies directed_test_source, the assembly file beside the first test list, into <CVA6>/verif/tests/cpu-eval-patches. directed_test_patch is a provenance record of that file and is not applied before evaluation.",
+  "port_test": {
+    "test": "harness/onehot_ports_tb.sv",
+    "test_sha256": "f108cba9dae85ff7be81b692f2fce559bf7b201323e8100af1142a2a403d2268",
+    "widths": [
+      2,
+      8
+    ],
+    "inputs": "Zero and every unit vector at each width."
+  },
+  "test_lists": [
+    {
+      "path": "../hpdcache_victim_sel/harness/testlist_victim_sel.yaml",
+      "sha256": "b6f2ffe90f8a87a0144c662193ae6b6b5921fc576b85bf24e3819c5125637760"
+    },
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049"
+    }
+  ]
+}

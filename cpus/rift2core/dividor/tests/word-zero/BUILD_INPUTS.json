@@ -1,0 +1,99 @@
+{
+  "programs": "Four TEST_RR_OP programs written for this benchmark, using pinned riscv-tests macros and Rift2Core environment headers. The Regents and RISC-V International BSD notices are in the mapped notice files.",
+  "macro_revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+  "environment_revision": "6de71edb142be36319e380ce782c3d1830c65d68",
+  "rift_revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+  "gcc_version": "riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0",
+  "objcopy_version": "GNU objcopy (2.42-1ubuntu1+6) 2.42",
+  "build_script": "build.sh",
+  "build_script_sha256": "32eb7472b79dad58aa6afa580c716700362eeacf610b8b9bcd79990f50d90298",
+  "header_sha256": {
+    "env/encoding.h": "8a8480aaf6cce6df02b483e0cbdf8e375866c5ed86986075e9111fe9149a38c2",
+    "env/p/riscv_test.h": "50300743b9b4c5540838b287b1b5655f67474a2ff98b0eb194f7466cc59489be",
+    "env/p/link.ld": "2bd8d690e54985856599af6e3355ed2969dee43ca8c38bff6a481270c047d606",
+    "isa/macros/scalar/test_macros.h": "b09abb7eec47539dde829096ca973a33b2d293d38f0902133ad2aaa6fab892dc"
+  },
+  "files": [
+    {
+      "path": "build.sh",
+      "sha256": "32eb7472b79dad58aa6afa580c716700362eeacf610b8b9bcd79990f50d90298"
+    },
+    {
+      "path": "images/divuw_control",
+      "sha256": "e0cd2432628b37f120d95711db001dce39666e9709e5c4cdcd64209cb3eee48e"
+    },
+    {
+      "path": "images/divuw_control.verilog",
+      "sha256": "c816ce9c217ef0e29f44294d574fadbe928aefea742049b2a53731f5a4e5758e"
+    },
+    {
+      "path": "images/divuw_zero",
+      "sha256": "db33855809cff2aa29ab5147b0c6f4f5521aab8d95648c31f957ec20f35d9bff"
+    },
+    {
+      "path": "images/divuw_zero.verilog",
+      "sha256": "5a51e878a52c82278f45507f242a3d5bc765d58eb066cdf2a7ac55cc4e329e3c"
+    },
+    {
+      "path": "images/remuw_control",
+      "sha256": "7f54da2be34b6e7f8d920e6d6d73df0308487ca83f4d51d61096c1111045006e"
+    },
+    {
+      "path": "images/remuw_control.verilog",
+      "sha256": "2481a5368eaf5dd6c07cc76f9ff28f39576e29158706a89eef242281d0fdd5eb"
+    },
+    {
+      "path": "images/remuw_zero",
+      "sha256": "160c55663de157036a904c7b1a4da40235dbcaaebe14e29aa455f8b92000c54e"
+    },
+    {
+      "path": "images/remuw_zero.verilog",
+      "sha256": "98a65ef042911d21f36eb697188b5755161a509ec857da8ae8d795d1243fa72a"
+    },
+    {
+      "path": "source/divuw_control.S",
+      "sha256": "de90cbd41f9dbd0c9ecd0cc121810053a848d36fcf82ceca12b7e0b4c2a94354"
+    },
+    {
+      "path": "source/divuw_zero.S",
+      "sha256": "990b31d2e6db87e850d1ee1428dfdb60734a0cf1b07ff8767ba73c64da71a487"
+    },
+    {
+      "path": "source/remuw_control.S",
+      "sha256": "84d5aed23347f636d2e0ef2a29791512e6b3edbab71c6678ccf8ad13f2ab20ec"
+    },
+    {
+      "path": "source/remuw_zero.S",
+      "sha256": "5c9809efb3508cab33e10ffc55e020e31004e74efbe22e8df98238df2864fcc5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3b055b7581f17b114f009d2fef23a9f22fcad0ee02eccbbfb350b0c3c8cd5625"
+    }
+  ],
+  "notices": [
+    {
+      "path": "../../../../../LICENSES/license-texts/Berkeley-BSD-3-Clause-2012-2015.txt",
+      "sha256": "43b7309213293b4323d65301a90e05472579abcd51feb260a850354bcb49ff8f",
+      "copyright": "2012-2015 The Regents of the University of California",
+      "build_inputs": [
+        "env/p/riscv_test.h",
+        "env/p/link.ld",
+        "isa/macros/scalar/test_macros.h"
+      ],
+      "applies_to": "The macro and environment inputs used by all four source programs and incorporated into all four ELF and memory initialization files."
+    },
+    {
+      "path": "../../../../../LICENSES/license-texts/Rift-ALU-encoding-BSD-3-Clause.txt",
+      "sha256": "33a09a78069be117e9dbade21ac718f2ce00daf2a3465cf0d6a03b69c3b8f01b",
+      "copyright": "2023 RISC-V International",
+      "spdx_license_identifier": "BSD-3-Clause",
+      "build_inputs": [
+        "env/encoding.h"
+      ],
+      "upstream_generation": "riscv-opcodes 02b4866, as stated in encoding.h",
+      "copied_from": "LICENSES/license-texts/Rift-ALU-encoding-BSD-3-Clause.txt",
+      "applies_to": "encoding.h used in constructing all four source programs into their ELF and memory initialization files."
+    }
+  ]
+}

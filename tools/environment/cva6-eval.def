@@ -1,0 +1,66 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+%files
+    cvxif-spike-patches/cpus/cva6/copro_alu/environment /opt/cpu-eval/cvxif-spike-patches
+
+
+%post
+    set -eux
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get install -y --no-install-recommends \
+        git build-essential autoconf bison flex perl help2man make g++ \
+        pkg-config ccache python3 python3-pip python3-yaml curl ca-certificates \
+        libfl2 libfl-dev zlib1g-dev device-tree-compiler cmake \
+        gcc-riscv64-unknown-elf binutils-riscv64-unknown-elf \
+        libboost-regex-dev libboost-system-dev
+
+    mkdir -p /opt/toolchain
+
+    git clone --depth 1 --branch v5.008 \
+        https://github.com/verilator/verilator.git /opt/verilator-src
+    cd /opt/verilator-src
+    autoconf
+    ./configure --prefix=/opt/toolchain/verilator-install
+    make -j"$(nproc)"
+    make -j"$(nproc)" install
+
+    cd /
+    rm -rf /opt/verilator-src
+
+    git clone https://github.com/openhwgroup/cva6.git /opt/cva6-pristine
+    cd /opt/cva6-pristine
+    git checkout 6348e9e684678f83b40d0520028513d06b36e7b2
+    git submodule update --init --recursive
+
+    ISA_SIM=/opt/cva6-pristine/verif/core-v-verif/vendor/riscv/riscv-isa-sim
+    mkdir -p "$ISA_SIM/build"
+    cd "$ISA_SIM/build"
+    export CPPFLAGS="-I/opt/toolchain/verilator-install/share/verilator/include/vltstd"
+    ../configure --prefix=/opt/toolchain/spike-install
+    # The generated yaml-cpp targets share one CMake build directory.
+    make -j1 yaml-cpp-static
+    make -j"$(nproc)"
+    make -j"$(nproc)" install
+
+    VERILATOR_INSTALL_DIR=/opt/toolchain/verilator-install \
+      CPU_EVAL_BUILD_JOBS="$(nproc)" \
+      /opt/cpu-eval/cvxif-spike-patches/build_spike.sh \
+      "$ISA_SIM" /opt/toolchain/spike-cvxif-all-operations
+
+    ARCH_TEST=/opt/cva6-pristine/verif/tests/riscv-arch-test
+    git clone https://github.com/riscv-non-isa/riscv-arch-test.git "$ARCH_TEST"
+    git -C "$ARCH_TEST" checkout a5a49fc9f244192649e57fe61b4513d9bc39b1e3
+    cp -a "$ISA_SIM/arch_test_target" "$ARCH_TEST/riscv-target"
+
+%environment
+    export RISCV=/usr
+    export SPIKE_INSTALL_DIR=/opt/toolchain/spike-install
+    export VERILATOR_INSTALL_DIR=/opt/toolchain/verilator-install
+    export CCACHE_DISABLE=1
+    export PATH="/opt/toolchain/verilator-install/bin:/opt/toolchain/spike-install/bin:$PATH"
+
+%help
+    CVA6 evaluator toolchain. Bind the current cpus/cva6 tree and copy
+    /opt/cva6-pristine to a job-private writable directory before evaluation.

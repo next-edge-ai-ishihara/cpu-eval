@@ -1,0 +1,26 @@
+--- a/src/test/scala/rift2Core/rift2Chip_tb.scala
++++ b/src/test/scala/rift2Core/rift2Chip_tb.scala
+@@ -34,7 +34,23 @@
+ 
+ 
+ 
++class CpuEvalLfsr16 extends chisel3.Module {
++  import chisel3._
++
++  val advance = IO(Input(Bool()))
++  val value = IO(Output(UInt(16.W)))
++  value := chisel3.util.random.LFSR(16, advance)
++}
++
+ object testMain extends App {
++  (new circt.stage.ChiselStage).execute(
++    Array("--target-dir", "generated/CpuEvalLfsr16", "--target", "verilog", "--split-verilog"),
++    Seq(
++      chisel3.stage.ChiselGeneratorAnnotation(() => new CpuEvalLfsr16),
++      circt.stage.FirtoolOption("--disable-annotation-unknown"),
++      circt.stage.FirtoolOption("--dedup"),
++    )
++  )
+ 
+   // val cfg = new NormalCfg
+   // val cfg = new Rift2GoCfg

@@ -1,0 +1,23 @@
+diff --git a/src/main/scala/common/config-mixins.scala b/src/main/scala/common/config-mixins.scala
+index fc20726c..cb943aa2 100644
+--- a/src/main/scala/common/config-mixins.scala
++++ b/src/main/scala/common/config-mixins.scala
+@@ -33,6 +33,18 @@ class WithBoomCommitLogPrintf extends Config((site, here, up) => {
+ })
+ 
+ 
++
++
++class WithBoomMemtracePrintf extends Config((site, here, up) => {
++  case TilesLocated(InSubsystem) => up(TilesLocated(InSubsystem), site) map {
++    case tp: BoomTileAttachParams => tp.copy(tileParams = tp.tileParams.copy(core = tp.tileParams.core.copy(
++      enableMemtracePrintf = true
++    )))
++    case other => other
++  }
++})
++
++
+ class WithBoomBranchPrintf extends Config((site, here, up) => {
+   case TilesLocated(InSubsystem) => up(TilesLocated(InSubsystem), site) map {
+     case tp: BoomTileAttachParams => tp.copy(tileParams = tp.tileParams.copy(core = tp.tileParams.core.copy(

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for tc_sram_wrapper_cache_techno",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "common/local/util/tc_sram_wrapper_cache_techno.sv",
+      "lines": [
+        13,
+        39
+      ],
+      "language": "verilog",
+      "sha256": "c10b2faf922c2d7c49a52f93087bb545077d9c82399c985c2bfdaead0a03b220"
+    },
+    {
+      "label": "Declaration of the generic SRAM tc_sram",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "lines": [
+        56,
+        82
+      ],
+      "language": "verilog",
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `tc_sram_wrapper_cache_techno`\n\nImplement the complete `tc_sram_wrapper_cache_techno` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module tc_sram_wrapper_cache_techno` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Dependency declarations\n\n### vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    }
+  ]
+}

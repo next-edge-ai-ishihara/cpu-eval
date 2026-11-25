@@ -1,0 +1,14 @@
+id: tl_xbar
+cpu: boom
+target:
+  repository: https://github.com/chipsalliance/rocket-chip.git
+  revision: 114325b27cfe5312c86a8a325b187be9455a62af
+  file: src/main/scala/tilelink/Xbar.scala
+  class: TLXbar
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: ../_shared/evaluate_source_candidate.sh

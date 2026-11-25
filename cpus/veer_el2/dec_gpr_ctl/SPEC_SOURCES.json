@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "1c2f8c9ed34519fc4ec5d12e2f9ead93cead53da7132a008cd36a976b44d2366",
+  "prompt_sha256": "e4da622cc2956813d67a68533bf6d1ee8ddb833091c8e81dba91694bdf3c4619",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        273
+      ],
+      "sha256": "e32e98525fc15a0a675eb289043bc02957044f1236b6342c5a10cf8f553e61a9"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "prompt_bytes": [
+        273,
+        308
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        308,
+        1373
+      ],
+      "sha256": "5354214bc0e85b76b4f766026f49a69a3f6b880abec4bcb3ba7d2a03b5c60476"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        1373,
+        1378
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "prompt_bytes": [
+        1378,
+        1415
+      ],
+      "sha256": "9df07e47dc82ebd7a335e21c2e3d132e7a2a177372efc33c0e12ffbabf06935c"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1415,
+        2034
+      ],
+      "sha256": "0f0de0fbad561f6038e738ff4facd60f33f5b573bd954cd6b8b9f7473f3ffc6e"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        2034,
+        2039
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Heading for Dependency declarations",
+      "prompt_bytes": [
+        2039,
+        2079
+      ],
+      "sha256": "02afd30fd37181178a6c6933f0688ece6c1445583760b38dba8084fb0373f067"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        2079,
+        2525
+      ],
+      "sha256": "e13c615acb0f0869d81615f1cee1f29e6044bb3d5eb3c4b6ac683a2510bbe19f"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        2525,
+        2533
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        2533,
+        2729
+      ],
+      "sha256": "246555c1183cc88b05c38f7614f1310050b787a83e885425d61aa0f5b3bf2ed9"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        2729,
+        2737
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        2737,
+        2855
+      ],
+      "sha256": "08996b489474bca7a1793c9a7d79dbcac57a3b501de8dab79163fa3a725ea721"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Fence after Dependency declarations",
+      "prompt_bytes": [
+        2855,
+        2860
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Heading for Documentation and source of the RV32I register excerpt",
+      "prompt_bytes": [
+        2860,
+        2908
+      ],
+      "sha256": "e60fe28a078756586058f6948186a9f80a3d21eccaa10e825a0b3e0129a22ae0"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2908,
+        3335
+      ],
+      "sha256": "81858937877c5616f863aebad3045d49abe589af2deed4601fc754cf6587beb5"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Source of the VeeR EL2 reset excerpt",
+      "prompt_bytes": [
+        3335,
+        3381
+      ],
+      "sha256": "37161e32d86c0a00506c6d53da1663a7307fc5500683fd5e22ca7a884ab82c5d"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        3381,
+        3963
+      ],
+      "sha256": "efe7b3efe3c2a12eb611789f15ca0b39c3fa474764164c609c97df95fd98fd93"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Port contract checked by the GPR port probe",
+      "prompt_bytes": [
+        3963,
+        4156
+      ],
+      "sha256": "9d18650df0893b33e6d3cec3a1dd199ee8a30ef08b72b70d4384fdf239dcf0bf"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for el2_dec_gpr_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_gpr_ctl.sv",
+      "lines": [
+        15,
+        50
+      ],
+      "language": "verilog",
+      "sha256": "35d69d835e2db454cdd5f8fdda251344fa0520e1f66c4b244aaf4278c3e93aca"
+    },
+    {
+      "label": "Parent instantiation for el2_dec_gpr_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec.sv",
+      "lines": [
+        479,
+        505
+      ],
+      "sha256": "e8c378100293edfd140fb064cf6f1cb00c8886f12ffc4c7c5a4c2a527af271ba"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec_gpr_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        164,
+        177
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "RV32I general-purpose register behavior",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        39,
+        46
+      ],
+      "language": "asciidoc",
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "VeeR EL2 general-purpose register reset behavior",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        1231,
+        1237
+      ],
+      "language": "markdown",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        181,
+        190
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        199,
+        204
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    }
+  ]
+}

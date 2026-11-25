@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "6f2a0940d0b2fe43ba6a5b7603794a05d5c1ab7c8cbbe6fa874bb021492ccf7f",
+  "prompt_sha256": "43ab6022256ad9b1492f07dcac33b2095e6eaa7c9712d1740dbd9f3e5bb31bea",
+  "repositories": {
+    "https://github.com/lowRISC/ibex.git": {
+      "revision": "405c6d1d8220a18b2f9196141167a5875422dee4"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission boundary",
+      "prompt_bytes": [
+        0,
+        267
+      ],
+      "sha256": "145f08c8d2bc8a67e609bba3c7f521c7a1c35c0af1c4e9366bde1fad319ea206"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading for CPU configuration",
+      "prompt_bytes": [
+        267,
+        341
+      ],
+      "sha256": "3c583bc8d2fa117585baae6fdff339e6775d0fc3e760be105f7ae85abc18d219"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        341,
+        1039
+      ],
+      "sha256": "29b5facedcb9c0b625651b4bec20437a58e60a59161dd889e88a10e95191bae6"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        1039,
+        1043
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading for package types",
+      "prompt_bytes": [
+        1043,
+        1106
+      ],
+      "sha256": "7558e357b33dd30086b12fc73bfb06d0c57ee6640eecbf6cd0ed1b33ed4b8d15"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1106,
+        1660
+      ],
+      "sha256": "c166df11bce86e5b0cfa6e2f8277dab5ef4c896d5bbc5d82f0facf163e79ea39"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        1660,
+        1669
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1669,
+        8266
+      ],
+      "sha256": "8b982665151bc9caa124962398a4e8bc1c07f90fca742fc589be094cacbc5e0a"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        8266,
+        8275
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        8275,
+        15541
+      ],
+      "sha256": "64e2380c7ecd8ceb73e1f7c8efcc5ec92f1d6b5196982e08d5c9c9d564bdc8ab"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        15541,
+        15550
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        15550,
+        16227
+      ],
+      "sha256": "729b29f4e4bbf9595f21f4a6c3f5245895d19adf0fa19c1ec2d28c2ec0324ca7"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fence and path heading",
+      "prompt_bytes": [
+        16227,
+        16278
+      ],
+      "sha256": "e7277e8973a9ceabc3ec9895e992a19128595df5e96d49909dfe6e565bb52f1a"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        16278,
+        19452
+      ],
+      "sha256": "b320f9da50f80b620b64c5f3f274af05b9b8f80c9022577e8d870909402d6d4d"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        19452,
+        19456
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "prompt_bytes": [
+        19456,
+        19491
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 16,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        19491,
+        29260
+      ],
+      "sha256": "494e55d5cc75faf5771f2b3fbccf6e410cc3ca13b1090d02884ff1ce8cc3fd9f"
+    },
+    {
+      "index": 17,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        29260,
+        29264
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "prompt_bytes": [
+        29264,
+        29323
+      ],
+      "sha256": "96a3570bd79ccb139e35e379440353cac7e8614d7d911baaef3f5791d1083397"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        29323,
+        36673
+      ],
+      "sha256": "2c6432c976f1264734653c7d3bfa0acd6a7fd5d578b9d0b18c7cb0ce50ce643c"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        36673,
+        36677
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 21,
+      "kind": "authored",
+      "description": "Heading for Dependency declarations",
+      "prompt_bytes": [
+        36677,
+        36745
+      ],
+      "sha256": "5996f0bbf27faa2045fdd5ae42e1658ee9e73aaf6fd8f4bbeed673fa923a78b7"
+    },
+    {
+      "index": 22,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        36745,
+        43711
+      ],
+      "sha256": "1f64ba4a809875f709fa50b2e775044dd42a71989f6f6f36f1f5d924f9ea8481"
+    },
+    {
+      "index": 23,
+      "kind": "authored",
+      "description": "Fence and path heading",
+      "prompt_bytes": [
+        43711,
+        43752
+      ],
+      "sha256": "2fbdcdb6c9cb6c941e55fa82c71bca76f177cdbe1344954ea7216920b2d0da22"
+    },
+    {
+      "index": 24,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        43752,
+        49462
+      ],
+      "sha256": "de145ccb03b4065b4934d67c02a04fb0dd904614ec942af1c0d1b075fb282a01"
+    },
+    {
+      "index": 25,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        49462,
+        49466
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Heading for Related source code",
+      "prompt_bytes": [
+        49466,
+        49524
+      ],
+      "sha256": "62a81a3b978e9f3e0e1b32f512182dbde1ac80fbf0eab84c5782c5a4214581b2"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        49524,
+        50368
+      ],
+      "sha256": "d654b764b8d5ca454ea0ce308af10d7411b1f8c883546ff020d5853c0ddeaa44"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        50368,
+        50377
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        50377,
+        51384
+      ],
+      "sha256": "3960ca8105a3c5720fc286982bec24164f7bf310994b18974d4cbfaac80d7638"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        51384,
+        51393
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        51393,
+        51478
+      ],
+      "sha256": "35b285db207953b4af71439012be8b665b2c79d85d7ecc554cacca9493ccb4a5"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        51478,
+        51482
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 33,
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "prompt_bytes": [
+        51482,
+        51562
+      ],
+      "sha256": "a0dcbaca3e56924ca40e6e25bcd5dc3899db407663b486d81a3d55d0d818aacd"
+    },
+    {
+      "index": 34,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        51562,
+        52104
+      ],
+      "sha256": "f75475a37403e0e91905f1f8b2d7c0d2e946f3cc72ddfc5326806339a738e9e1"
+    },
+    {
+      "index": 35,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        52104,
+        52108
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Selected small configuration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "ibex_configs.yaml",
+      "lines": [
+        19,
+        38
+      ],
+      "sha256": "75b4e848face7fa31e1bc227aaa7a83cb2a8f45aa1fc0bd4fe2e2800f6caac28"
+    },
+    {
+      "label": "Ibex base ISA, multiply, and bit-manipulation configuration types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        36,
+        59
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Ibex execution, control, exception, interrupt, and writeback types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        93,
+        393
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Ibex CSR identifiers",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        463,
+        694
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Ibex multi-bit type and values",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        750,
+        760
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "CHERIoT operation identifiers and datapath and CSR selectors",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_cheriot_pkg.sv",
+      "lines": [
+        832,
+        912
+      ],
+      "sha256": "d8b5b51ce99129ebd0c6436689cd85883760ca98f15f45c8a18b977549d007c4"
+    },
+    {
+      "label": "Module declaration for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        21,
+        229
+      ],
+      "language": "verilog",
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Parent instantiation for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        663,
+        858
+      ],
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Dependency module declaration for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_controller.sv",
+      "lines": [
+        14,
+        135
+      ],
+      "language": "verilog",
+      "sha256": "bc3211faf87435b07922e3e61646ef83247ab86c5938d4cd2e108802a4357860"
+    },
+    {
+      "label": "Dependency module declaration for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_decoder.sv",
+      "lines": [
+        17,
+        120
+      ],
+      "language": "verilog",
+      "sha256": "842b520e4a942b6a27f3c44f7e8784e4a8dd40d7531a0ec3dd338f624be18217"
+    },
+    {
+      "label": "Trap references through ibex_id_stage hierarchy",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1842,
+        1853
+      ],
+      "language": "verilog",
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Debug and exception references through ibex_id_stage hierarchy",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1885,
+        1900
+      ],
+      "language": "verilog",
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Interrupt reference through ibex_id_stage hierarchy",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1930,
+        1930
+      ],
+      "language": "verilog",
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Official design documentation for ibex_id_stage",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_decode_execute.rst",
+      "lines": [
+        3,
+        14
+      ],
+      "sha256": "ab60d2567305b1d544cdac813c37a440f89e134bc5d3d8e5551c5a7c69dc3ffb"
+    }
+  ]
+}

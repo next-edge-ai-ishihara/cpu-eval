@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "store_unit",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "source_path": "core/store_unit.sv",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "d9c8c63ca5d53573cd75a0f86e72a4f1a6ef3d3ab2359147db9e5a66b18ded64",
+  "store_update_comparator": "harness/compare_store_updates.py",
+  "store_update_comparator_sha256": "08399ebb443fec9b706eb97fe94d7836d5b3927e4925ae3a945b767482bb44be",
+  "testlist": "harness/testlist_store_unit_with_trap.yaml",
+  "testlist_sha256": "1c09cc202ff913bc67e0f53a2148c9127252415cc6f4064c58a21fb3245cec45",
+  "test_programs": [
+    {
+      "path": "riscv-test-suite/rv32i_m/C/src/csw-01.S",
+      "sha256": "1b61e2d97d7d5b30bc7b9760186c2f02aa957b38cf22d972759609038f00bfdc"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/C/src/cswsp-01.S",
+      "sha256": "e60439f5d79b31ef77d908d4cda4743d3366c740c5ae71eb245b3ed5fe6f4c4a"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/sb-align-01.S",
+      "sha256": "607496443f6a196e920563112160573d4654c00a34bc68105f3b1bd890e0c7ba"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/sh-align-01.S",
+      "sha256": "29f07996fe038010819ad441544e28f49954e30f4638f2346c39d4a1e6839f50"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/sw-align-01.S",
+      "sha256": "7298bf6f40dd8f560f77b5b67530b3ed7b5a48cb398ab561371fd7993d2cd3ad"
+    }
+  ],
+  "fixed_patches_in_application_order": [
+    {
+      "order": 1,
+      "purpose": "Record writes accepted by the test-harness DRAM interface for architectural memory-update comparison.",
+      "target": "corev_apu/tb/ariane_testharness.sv",
+      "target_sha256_before": "c671b2f70ea4cd7e27b67f4764e07966abd69e18d168f3de28220b26b8bb8655",
+      "patch": "../harness/0001-log-dram-writes.patch",
+      "patch_sha256": "b79e083a7b0c93b244df434125cdfc1cefd54acc147b4e97e785f8c129aee7cb",
+      "target_sha256_after": "978648dfc2b9016a989a594b38d1136ee6335dac0e7b685a737a086a63b4a7a2"
+    }
+  ],
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/store_unit.sv",
+    "test_program_changes": "Use the five upstream programs byte for byte at test_revision and the authored assembly program listed above. The authored program uses model_test.h and link.ld from the same Spike model as the five upstream tests.",
+    "instrumentation": "Restore the recorded target from cpu_revision, verify target_sha256_before, apply the fixed patch from the CVA6 repository root with git apply, and verify target_sha256_after."
+  },
+  "comparison": {
+    "instruction_and_register_updates": "Use the CVA6 regression's Spike-to-RTL instruction trace comparison.",
+    "memory_updates": "Pair Spike retired stores and accepted test-harness DRAM writes in execution order; compare the store address, byte enable, and write data masked to the Spike store width.",
+    "excluded_termination_address": "0x80001000",
+    "exclusion_reason": "The regression terminates the RTL trace at architectural retirement before the test-harness DRAM write for the tohost store is emitted; the address is the test protocol's termination location rather than test payload memory."
+  },
+  "grading_dependencies": [
+    "../harness/candidate_error.py",
+    "harness/compare_store_updates.py"
+  ],
+  "authored_test_programs": [
+    {
+      "path": "harness/store-misaligned.S",
+      "sha256": "0c4503b9824dee61aee7c3a1deb424fe9f544ed77105d2e034d6809b285ad27b",
+      "license": "Apache-2.0",
+      "purpose": "Check a successful aligned store, machine exception cause and faulting PC for an unaligned word store, and unchanged adjacent words after the exception."
+    }
+  ]
+}

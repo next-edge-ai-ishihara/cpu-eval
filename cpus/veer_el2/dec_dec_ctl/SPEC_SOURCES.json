@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "f580e2495932d2ac86a78fe1bed3f4f456d04cd8dada5aee3dbe8b4c6a6126fe",
+  "prompt_sha256": "d9d34505358553b38345e514640ab306448db3396c86267e6f40a0852d234e7f",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        273
+      ],
+      "sha256": "e2f75adea5f5f272a699edae604cf32f0051541bd5810d6f1191eaf8430c4572"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading for module declaration",
+      "prompt_bytes": [
+        273,
+        308
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        308,
+        416
+      ],
+      "sha256": "56cef932eef19e06cc1f5aa2b906184dab33121830f7d20d5cb0a61d8a81273b"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Fence after module declaration",
+      "prompt_bytes": [
+        416,
+        421
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading for parent instantiation",
+      "prompt_bytes": [
+        421,
+        458
+      ],
+      "sha256": "9df07e47dc82ebd7a335e21c2e3d132e7a2a177372efc33c0e12ffbabf06935c"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        458,
+        521
+      ],
+      "sha256": "da647291048db1fc68d3eb606b00ff46804418bba4e20ee87173112672d7b4b0"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence after parent instantiation",
+      "prompt_bytes": [
+        521,
+        526
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Heading for decode packet type",
+      "prompt_bytes": [
+        526,
+        566
+      ],
+      "sha256": "02afd30fd37181178a6c6933f0688ece6c1445583760b38dba8084fb0373f067"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        566,
+        4062
+      ],
+      "sha256": "c7991cdfbb6bd3df8ebae244f14a0182e97f70ac73d03bd30625c19210c676cd"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Fence after decode packet type",
+      "prompt_bytes": [
+        4062,
+        4067
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Heading for instruction decode table",
+      "prompt_bytes": [
+        4067,
+        4125
+      ],
+      "sha256": "88fac8f9fee8654400e1fcabf1c7f4459c7ce9e9ecece48f3f3f67c19b891470"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        4125,
+        25555
+      ],
+      "sha256": "62dc85fad17b27d041678447c401bfee9725d6889a8d4cb68b9e38c34a6b8e79"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fence after instruction decode table",
+      "prompt_bytes": [
+        25555,
+        25560
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Legal output contract",
+      "prompt_bytes": [
+        25560,
+        25712
+      ],
+      "sha256": "48c3c32139f02fcb8c2e390a36b47f758132f870ab2051c6ce2b67e13cd597c9"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Decode packet type",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        205,
+        302
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "Module declaration for el2_dec_dec_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        1509,
+        1515
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "Parent instantiation for el2_dec_dec_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        774,
+        776
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "Instruction decode table (encodings and asserted output fields)",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/decode",
+      "lines": [
+        1,
+        617
+      ],
+      "sha256": "62dc85fad17b27d041678447c401bfee9725d6889a8d4cb68b9e38c34a6b8e79"
+    }
+  ]
+}

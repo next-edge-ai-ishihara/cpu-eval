@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for ibex_counter",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_counter.sv",
+      "lines": [
+        5,
+        21
+      ],
+      "sha256": "0e953e2e05b5070833029d0f6fed6d3a48fbd3c02dc05785962fb0d451425d8e",
+      "language": "verilog"
+    },
+    {
+      "label": "Parent instantiation of the mcycle and minstret counters and use of minstret_next",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_cs_registers.sv",
+      "lines": [
+        1621,
+        1658
+      ],
+      "sha256": "898d036f141bdf742c0c772a5493b4bccc9636ffd7c57d3cc37011d233954548"
+    },
+    {
+      "label": "Parent instantiation of the optional event counters",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_cs_registers.sv",
+      "lines": [
+        1673,
+        1685
+      ],
+      "sha256": "898d036f141bdf742c0c772a5493b4bccc9636ffd7c57d3cc37011d233954548"
+    },
+    {
+      "label": "Performance counter overview",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/performance_counters.rst",
+      "lines": [
+        3,
+        14
+      ],
+      "sha256": "feff1768d1eab53bdb885721d9f9934d2dd9318f0d2321fd883c81ddf8f96d85"
+    },
+    {
+      "label": "Software access to counter halves",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/performance_counters.rst",
+      "lines": [
+        56,
+        64
+      ],
+      "sha256": "feff1768d1eab53bdb885721d9f9934d2dd9318f0d2321fd883c81ddf8f96d85"
+    },
+    {
+      "label": "CSR writes to counters modified as side effects of instruction execution",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zicsr.adoc",
+      "lines": [
+        156,
+        163
+      ],
+      "sha256": "64cf89241db8b9580ce54802febd36b91ddd82d3d84b2049942be740c0b7f1ca"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "# Implement `ibex_counter`\n\nImplement the complete `ibex_counter` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ibex_counter` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Parent instantiation\n\n### rtl/ibex_cs_registers.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Documentation\n\n### doc/03_reference/performance_counters.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/zicsr.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/lfsr_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_lfsr",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_lfsr.sv",
+  "source_sha256": "487a72a672dab3fc3b16eaaf08f7f64a856a29c663c7983fa16cabe17ce8d265",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "fb5d6b3548042bbffd250a3c19b5a0165819cfe778d571745f8fdf06e42899fc",
+  "port_test": {
+    "test": "harness/lfsr_ports_tb.sv",
+    "test_sha256": "6817bf41ea826831b11fe39f8b5604da219c453026c0efcec5ad1db6669548b0",
+    "observation": "Check asynchronous reset, hold at each nonzero state, the full period, and linearity of the observed next-state mapping at WIDTH=8."
+  },
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_lfsr.sv",
+    "reference_hdl_preconditions": "Run reference_hdl from the root of the CVA6 checkout at cpu_revision, with core/cache_subsystem/hpdcache initialized as the cv-hpdcache submodule containing commit f404e7ebbda8baa4af3729535f520a6b12a06d03. Verify SHA-256 487a72a672dab3fc3b16eaaf08f7f64a856a29c663c7983fa16cabe17ce8d265 of the retrieved source before use.",
+    "test_sources": "Build the distributed port test with the candidate, run the 38 CPU programs with the unmodified CPU, and then run the port test."
+  }
+}

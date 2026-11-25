@@ -1,0 +1,21 @@
+--- a/src/main/scala/rift2Core/backend/LSU/Dcache.scala
++++ b/src/main/scala/rift2Core/backend/LSU/Dcache.scala
+@@ -267,6 +267,18 @@
+     missUnit.get.io.miss_ban  := writeBackUnit.get.io.miss_ban
+     writeBackUnit.get.io.release_ban := missUnit.get.io.release_ban
+ 
++
++    val observedAcquire = missUnit.get.io.cache_acquire
++    when(observedAcquire.fire && observedAcquire.bits.param =/= TLPermissions.NtoT) {
++      printf(p"CPU_EVAL_OBSERVATION_MISMATCH MissUnit acquire permission expected=${TLPermissions.NtoT} actual=${observedAcquire.bits.param}\n")
++    }
++    when(missUnit.get.io.cache_grant.fire) {
++      printf("CPU_EVAL_MISS_GRANT_REACHED\n")
++      when(!missUnit.get.io.release_ban) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH MissUnit permits release while accepting grant data\n")
++      }
++    }
++
+     rd_arb.io.in(0).bits  := pkg_Dcache_Enq_Bundle( missUnit.get.io.rsp.bits )
+     rd_arb.io.in(0).valid := missUnit.get.io.rsp.valid
+     missUnit.get.io.rsp.ready := rd_arb.io.in(0).ready

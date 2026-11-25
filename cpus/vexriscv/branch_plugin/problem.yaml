@@ -1,0 +1,14 @@
+id: branch_plugin
+cpu: vexriscv
+target:
+  repository: https://github.com/SpinalHDL/VexRiscv.git
+  revision: c4b2a55b22f46afb760446cd69f3ca7c36eef778
+  file: src/main/scala/vexriscv/plugin/BranchPlugin.scala
+  class: BranchPlugin
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: ../TEST_RECIPE.json
+  evaluator: ../harness/evaluate_source_unit.py

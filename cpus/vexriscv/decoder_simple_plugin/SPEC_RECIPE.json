@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "lines": [
+        1,
+        10
+      ],
+      "sha256": "09dd76fb7d3b94dcfa76801ccdb9a342f9a833438f977f39579185cdf44e9a0a"
+    },
+    {
+      "label": "src/test/scala/vexriscv/TestIndividualFeatures.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/test/scala/vexriscv/TestIndividualFeatures.scala",
+      "lines": [
+        609,
+        622
+      ],
+      "sha256": "bf1ddd9554037159c6942258fa624935cbcaef3b44b9aa0291c5efd12d8854d1"
+    },
+    {
+      "label": "Plugin interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/Plugin.scala",
+      "lines": [
+        9,
+        25
+      ],
+      "sha256": "8b666fdda181e408ec67fb3d12b8e29dfe73ffddac16f7a6a2df1aac14c5fca9"
+    },
+    {
+      "label": "Decoder service interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Services.scala",
+      "lines": [
+        24,
+        46
+      ],
+      "sha256": "9bc2a71c77958461285990be2187367134db5a2ea33ea8fab39a0585b4c96321"
+    },
+    {
+      "label": "core/src/main/scala/spinal/core/MaskedLiteral.scala",
+      "repo": "https://github.com/SpinalHDL/SpinalHDL.git",
+      "commit": "95a5e6c65c54acfc4707c8fe6ef8b5d297cfcbde",
+      "path": "core/src/main/scala/spinal/core/MaskedLiteral.scala",
+      "lines": [
+        24,
+        35
+      ],
+      "sha256": "236383795a2d1e4f127664e9546075552d17eb271fe4ccf665ec50d879b08b8f"
+    },
+    {
+      "label": "core/src/main/scala/spinal/core/MaskedLiteral.scala",
+      "repo": "https://github.com/SpinalHDL/SpinalHDL.git",
+      "commit": "95a5e6c65c54acfc4707c8fe6ef8b5d297cfcbde",
+      "path": "core/src/main/scala/spinal/core/MaskedLiteral.scala",
+      "lines": [
+        52,
+        75
+      ],
+      "sha256": "236383795a2d1e4f127664e9546075552d17eb271fe4ccf665ec50d879b08b8f"
+    },
+    {
+      "label": "src/main/scala/vexriscv/VexRiscv.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        23,
+        23
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "src/main/scala/vexriscv/VexRiscv.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        63,
+        116
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "src/main/scala/vexriscv/VexRiscv.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        126,
+        126
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "src/main/scala/vexriscv/VexRiscv.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        131,
+        142
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "src/main/scala/vexriscv/VexRiscv.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        158,
+        158
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "lines": [
+        223,
+        242
+      ],
+      "sha256": "09dd76fb7d3b94dcfa76801ccdb9a342f9a833438f977f39579185cdf44e9a0a"
+    },
+    {
+      "label": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "lines": [
+        329,
+        374
+      ],
+      "sha256": "09dd76fb7d3b94dcfa76801ccdb9a342f9a833438f977f39579185cdf44e9a0a"
+    },
+    {
+      "label": "Pipeline lookup interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Pipeline.scala",
+      "lines": [
+        12,
+        28
+      ],
+      "sha256": "adc211106f0288cf8815120d935f786eeeefe596e1da3ceba57241c45567eaeb"
+    },
+    {
+      "label": "Pipeline stage access interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Stage.scala",
+      "lines": [
+        10,
+        70
+      ],
+      "sha256": "0d8210ce9fbcdb3e8f320a9864b1f527701dc99e9306ae4d908bfe4cf2b9ec3d"
+    },
+    {
+      "label": "src/main/scala/vexriscv/Stage.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Stage.scala",
+      "lines": [
+        79,
+        79
+      ],
+      "sha256": "0d8210ce9fbcdb3e8f320a9864b1f527701dc99e9306ae4d908bfe4cf2b9ec3d"
+    },
+    {
+      "label": "Fixed caller of the target class bench method",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "lines": [
+        214,
+        220
+      ],
+      "sha256": "09dd76fb7d3b94dcfa76801ccdb9a342f9a833438f977f39579185cdf44e9a0a"
+    },
+    {
+      "label": "VexRiscv documentation",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "README.md",
+      "lines": [
+        985,
+        1017
+      ],
+      "sha256": "64ddf713ef029913545bb0bae7a60e04e9f61bbc4f20b25df3d2cbcd5a9c6ac7"
+    },
+    {
+      "label": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "lines": [
+        47,
+        52
+      ],
+      "sha256": "09dd76fb7d3b94dcfa76801ccdb9a342f9a833438f977f39579185cdf44e9a0a"
+    },
+    {
+      "label": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala",
+      "lines": [
+        13,
+        45
+      ],
+      "sha256": "09dd76fb7d3b94dcfa76801ccdb9a342f9a833438f977f39579185cdf44e9a0a"
+    },
+    {
+      "label": "cpus/vexriscv/REGRESSION_CONFIGURATION.txt",
+      "repo": "CPU-Eval",
+      "source_type": "benchmark_file",
+      "path": "cpus/vexriscv/REGRESSION_CONFIGURATION.txt",
+      "lines": [
+        77,
+        78
+      ],
+      "sha256": "9bc6192814c72d9c8c0226e6fce828e4981985837793d846fbabd93430e2baf6"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `DecoderSimplePlugin`\n\nImplement the complete `DecoderSimplePlugin` class. Keep the `Masked` definition fixed.\n\nReturn only the complete `class DecoderSimplePlugin` definition in a single Scala code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "text": "\n## CPU configuration used for evaluation\n\n### cpus/vexriscv/REGRESSION_CONFIGURATION.txt\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and excerpt delimiters",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "\n## Class declaration\n\n### src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Parent instantiation\n\n### src/test/scala/vexriscv/TestIndividualFeatures.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Dependency declarations\n\n### src/main/scala/vexriscv/plugin/Plugin.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### src/main/scala/vexriscv/Services.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### core/src/main/scala/spinal/core/MaskedLiteral.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n```\n\n### src/main/scala/vexriscv/VexRiscv.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n```\n\n### src/main/scala/vexriscv/Pipeline.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n```\n\n### src/main/scala/vexriscv/Stage.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "\n```\n\n## Related source code\n\n### src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n## Documentation\n\n### README.md\n\n````text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "````\n"
+    }
+  ]
+}

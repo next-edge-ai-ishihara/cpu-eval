@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "problem": "XRegFiles",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/backend/Regfiles.scala",
+    "source_unit": "XRegFiles",
+    "hidden_definitions": [
+      "RegFilesReName",
+      "XRegFilesLookup",
+      "RegFilesReadOP",
+      "RegFilesWriteBack",
+      "RegFilesCommit",
+      "FRegFilesLookup",
+      "FRegFiles"
+    ],
+    "hidden_definitions_description": "Before compilation the evaluator renames these fixed definitions, which implement the target's behavior, in every source file, so a submission cannot reuse them by name."
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-*",
+      "rv64um-p-*",
+      "rv64ua-p-*",
+      "rv64uc-p-*",
+      "rv64mi-p-*",
+      "rv64si-p-*"
+    ],
+    "policy": "Run every program in the fixed required-test catalog that matches the selection patterns."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch"
+}

@@ -1,0 +1,6 @@
+requirement	tests
+Single-precision fused multiply-add variants	rv64uf-p-fmadd
+Double-precision fused multiply-add variants	rv64ud-p-fmadd
+Single-precision addition, subtraction, multiplication and Inf-minus-Inf invalid result through the FMA pipeline	rv64uf-p-fadd
+Double-precision addition, subtraction, multiplication and Inf-minus-Inf invalid result through the FMA pipeline	rv64ud-p-fadd
+With finite multiplicands and initially clear flags, FMADD.D with a signaling or quiet NaN addend returns canonical NaN and sets the invalid flag only for the signaling addend	fmadd_signaling_addend

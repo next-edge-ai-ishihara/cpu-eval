@@ -1,0 +1,927 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "ccd41c62e35d10277fd23935f0936088370e548ce505ebc828de0512c0d49e90",
+  "prompt_sha256": "701ac8805b5b02954532d1300ee669d6c896f33402157f44a63ea5072e45a06a",
+  "repositories": {
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        0,
+        311
+      ],
+      "sha256": "d1f08752d0821d3f97ac78d6886af213e45d4a2bfdd74603d01b2f8b41da222e"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        311,
+        563
+      ],
+      "sha256": "275187e5c440b7be8bbaf173b595ec0ef9366a0c78f2caeabd4606674ca5d859"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        563,
+        599
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        599,
+        706
+      ],
+      "sha256": "b11db5fb09f93f0dc9085ef968113ee82bbcb7fe70dbb4f2bd1a4c98911b9317"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        706,
+        763
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 28,
+      "prompt_bytes": [
+        763,
+        1008
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        1008,
+        1065
+      ],
+      "sha256": "0dffaec039e0d25a86db7c44f76e1a91c254b6ff3e819daa8a49ce83634dc389"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1065,
+        1332
+      ],
+      "sha256": "36904f61f07a3d7c7ff460b01fe040e0f6605801a1b1b70c233cde7417eae6a1"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        1332,
+        1390
+      ],
+      "sha256": "2195986ee89fb1082d8d7d4665f4d230a02ce0b4afe7f886c2e40c704c464e21"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1390,
+        2173
+      ],
+      "sha256": "2cac489c94b4f9f2443736e5e711b3106d3c3b88e60ffbf26ff21cd82a91112a"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        2173,
+        2180
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2180,
+        2653
+      ],
+      "sha256": "9566f2e3cf1b533513517959bbe54b1b1764a76eec086a95c272c687f5e00e59"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        2653,
+        2715
+      ],
+      "sha256": "306464e3f54832d888e7beb558a05f312a0adb43ef8bc977a1721e231e3855f2"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        2715,
+        3029
+      ],
+      "sha256": "47797ca1e99aca0ebb94b30e43c32c780ad2ac8e6847e5af8e5f41796e4486c6"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        3029,
+        3036
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        3036,
+        4012
+      ],
+      "sha256": "b6de83a9eb4adb04ef82d9a10e4e31c2fe2ceeac1576463c61bba4461b76fc6e"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        4012,
+        4019
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        4019,
+        4308
+      ],
+      "sha256": "b500ceb1f008f2a77da36669be8b3d2e4d46baaec0366d2d2f212c38011ffc21"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        4308,
+        4315
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        4315,
+        4791
+      ],
+      "sha256": "b33a2f913b6fb028ee58d8a6ad4011ee7cf82ed2d8140cf44e27153ed8bf4302"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        4791,
+        4798
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        4798,
+        5372
+      ],
+      "sha256": "fb9df0b07215cf08bcb5fdc19f6f7c61e60e8333fab7c43dc9942637468afa4a"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        5372,
+        5379
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        5379,
+        5939
+      ],
+      "sha256": "892acb3c64e02ac5fa19c568793a33ad811e555f65692e60d321d812c70de6d3"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        5939,
+        5946
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        5946,
+        6652
+      ],
+      "sha256": "834337b589c4b93aa4ccb667a7148850a94f4ce35d87a393290d0a47a3be57e9"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        6652,
+        6659
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        6659,
+        6961
+      ],
+      "sha256": "346107a3c49e457a369d32ef7d9c654eccbb42a4161cc97d739656c9dc675b0e"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        6961,
+        6968
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        6968,
+        7375
+      ],
+      "sha256": "be6c47f418f58b5aa50228ce513032f196ee6f9bfb3a270b454fe8d5661825f9"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        7375,
+        7382
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        7382,
+        7895
+      ],
+      "sha256": "e428d750f8555159b1a6b35a9df0b9966b02f976aa602b8acbff5103ed82c733"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        7895,
+        7958
+      ],
+      "sha256": "17b61d6b1f68183ec14c9939110eafaf8ac09a3216270095aa88941d9004990d"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        7958,
+        8026
+      ],
+      "sha256": "d44fcfe08aef0ca64d4e526c478c8765d9c747fac1d80c1caa80ce782eb7b38a"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        8026,
+        8033
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        8033,
+        8133
+      ],
+      "sha256": "8965b2f85b60a28379f629fbbb0075fffccaf2cab24126a8c231da36ad69a0b0"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        8133,
+        8190
+      ],
+      "sha256": "6ab0c94a46434c8abb211741bc544d809eae745cdb870978330722e4e2c3afda"
+    },
+    {
+      "index": 37,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        8190,
+        8650
+      ],
+      "sha256": "22d30d0b6b4405c4e8ac303b4ebdd1f29ec0abc1a75a4ee238a75711a97ca738"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        8650,
+        8706
+      ],
+      "sha256": "ada9a2e8e6834e8cb9cf16e700af1edf430e96d638f2796b5b5113bc7e1ce045"
+    },
+    {
+      "index": 39,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        8706,
+        10429
+      ],
+      "sha256": "24010cf9e5b6feae3f986936bc0e239eb3d02549fe0686341cabcb1305a84f9b"
+    },
+    {
+      "index": 40,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        10429,
+        10436
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 41,
+      "kind": "verbatim_source",
+      "source": 27,
+      "prompt_bytes": [
+        10436,
+        10438
+      ],
+      "sha256": "412ca345ccf75bf9c0806bce695be8de808b79984251a7a54d202cf6101dd451"
+    },
+    {
+      "index": 42,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        10438,
+        10522
+      ],
+      "sha256": "1045cb98d5afad762497d884d4d449128d466a562a10f655b0d2f9510fd235e0"
+    },
+    {
+      "index": 43,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        10522,
+        11080
+      ],
+      "sha256": "489df16afaf97863e770b626f3cebcba742763dca492ad4aa98cbc75590d3047"
+    },
+    {
+      "index": 44,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        11080,
+        11084
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 45,
+      "kind": "verbatim_source",
+      "source": 26,
+      "prompt_bytes": [
+        11084,
+        11492
+      ],
+      "sha256": "82d947889b8a1cafe7fc3627f7947379476185ec676e05b24fe3bd62799cf476"
+    },
+    {
+      "index": 46,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        11492,
+        11560
+      ],
+      "sha256": "0cb241363f724c244adb16926c694c00cd351a10dc5a81be3ecd9371b05a4bfd"
+    },
+    {
+      "index": 47,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        11560,
+        12028
+      ],
+      "sha256": "0c1220d6d0aa97f375097997d67a022b68bb4db3ee1eae6e195b916b5e19b381"
+    },
+    {
+      "index": 48,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        12028,
+        12032
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 49,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        12032,
+        13209
+      ],
+      "sha256": "8b3307b7244b14849a04e7edb109631f37727917da7099428f36923fb8d099a0"
+    },
+    {
+      "index": 50,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        13209,
+        13213
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 51,
+      "kind": "verbatim_source",
+      "source": 22,
+      "prompt_bytes": [
+        13213,
+        13402
+      ],
+      "sha256": "a621e93bed8e8f0b7f04a6fed189ca5c8ab07a2720d2e74c08626b85606d01e1"
+    },
+    {
+      "index": 52,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        13402,
+        13406
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 53,
+      "kind": "verbatim_source",
+      "source": 23,
+      "prompt_bytes": [
+        13406,
+        13887
+      ],
+      "sha256": "3e3fda7d9203474ae68ba523412ca46d2fc3e251d461cf28a2044c821c4ee72f"
+    },
+    {
+      "index": 54,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        13887,
+        13891
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 55,
+      "kind": "verbatim_source",
+      "source": 24,
+      "prompt_bytes": [
+        13891,
+        14331
+      ],
+      "sha256": "eb3e4fd362b4e4838b4b6c05c613013c818cf28f2771ff5240975c277fa9bd01"
+    },
+    {
+      "index": 56,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        14331,
+        14335
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 57,
+      "kind": "verbatim_source",
+      "source": 25,
+      "prompt_bytes": [
+        14335,
+        15522
+      ],
+      "sha256": "dfbda0a1343893e5b9418ddc4b38922c9403859d7fb689c5c2edc0a544269b6c"
+    },
+    {
+      "index": 58,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        15522,
+        15526
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Xbar.scala",
+      "lines": [
+        1,
+        9
+      ],
+      "sha256": "4fe31cb5df41064d917014f4391d993a4428d82ec5e489f9f8af04689c1654d6"
+    },
+    {
+      "label": "Target declaration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Xbar.scala",
+      "lines": [
+        33,
+        34
+      ],
+      "sha256": "4fe31cb5df41064d917014f4391d993a4428d82ec5e489f9f8af04689c1654d6"
+    },
+    {
+      "label": "TileLink nexus interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Nodes.scala",
+      "lines": [
+        100,
+        104
+      ],
+      "sha256": "21966052bd6a5b997d5f21114086ee72f57e35079d50a536aaa5d0896cf4c430"
+    },
+    {
+      "label": "Nexus mapping contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/Nodes.scala",
+      "lines": [
+        1516,
+        1524
+      ],
+      "sha256": "502fcff0044d7a7492513c31fbb9907ab2dd3ec1e0ade3c126c665f44b8b4071"
+    },
+    {
+      "label": "Nexus type contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/Nodes.scala",
+      "lines": [
+        1563,
+        1570
+      ],
+      "sha256": "502fcff0044d7a7492513c31fbb9907ab2dd3ec1e0ade3c126c665f44b8b4071"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        160,
+        167
+      ],
+      "label": "Slave parameters and FIFO domain",
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        263,
+        280
+      ],
+      "label": "Slave parameter copy",
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Slave port fields",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        510,
+        517
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Slave port validity and width",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        531,
+        544
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Slave port copy contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        706,
+        721
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        799,
+        810
+      ],
+      "label": "Master parameters and source range",
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        860,
+        872
+      ],
+      "label": "Master parameter copy",
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Master port fields",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        1049,
+        1056
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Master source range contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        1070,
+        1082
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Master port copy contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        1177,
+        1191
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/Parameters.scala",
+      "lines": [
+        27,
+        28
+      ],
+      "label": "IdRange declaration",
+      "sha256": "7b47fe2245137024512b6f15e684a0e0cecbeb5af837273fbe4a58eb776eda3f"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/Parameters.scala",
+      "lines": [
+        60,
+        62
+      ],
+      "label": "IdRange shift and size",
+      "sha256": "7b47fe2245137024512b6f15e684a0e0cecbeb5af837273fbe4a58eb776eda3f"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/util/BundleMap.scala",
+      "lines": [
+        54,
+        62
+      ],
+      "label": "Bundle field union",
+      "sha256": "cbbd573a6d780cfca39b5ab33a995534c518ec96824bd79b2d0a839fc6e21bd0"
+    },
+    {
+      "label": "TLXbar companion contracts",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Xbar.scala",
+      "lines": [
+        129,
+        172
+      ],
+      "sha256": "4fe31cb5df41064d917014f4391d993a4428d82ec5e489f9f8af04689c1654d6"
+    },
+    {
+      "label": "Crossbar behavior and policy",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/Widgets.rst",
+      "lines": [
+        307,
+        316
+      ],
+      "sha256": "c28a9d1873106d85df012efc96b493b082fb5620ad7d0d80d993e38eb299a9bb"
+    },
+    {
+      "label": "Client channels and source identifiers",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        6,
+        15
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Source identifier and visibility contracts",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        30,
+        48
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Manager channel contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        64,
+        69
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Manager address routing contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        80,
+        86
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "FIFO-domain contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        125,
+        130
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Nexus parameter transformation contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        210,
+        239
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Crossbar construction and connections",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/Widgets.rst",
+      "lines": [
+        328,
+        343
+      ],
+      "sha256": "c28a9d1873106d85df012efc96b493b082fb5620ad7d0d80d993e38eb299a9bb"
+    },
+    {
+      "label": "TLXbar companion object end",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Xbar.scala",
+      "lines": [
+        184,
+        184
+      ],
+      "sha256": "4fe31cb5df41064d917014f4391d993a4428d82ec5e489f9f8af04689c1654d6"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

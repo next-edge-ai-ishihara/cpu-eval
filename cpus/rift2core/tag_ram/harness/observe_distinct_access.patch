@@ -1,0 +1,33 @@
+diff --git a/src/main/scala/rift2Chip/Rift2Chip.scala b/src/main/scala/rift2Chip/Rift2Chip.scala
+--- a/src/main/scala/rift2Chip/Rift2Chip.scala
++++ b/src/main/scala/rift2Chip/Rift2Chip.scala
+@@ -174,3 +174,29 @@
+   class Impl extends LazyModuleImp(this) {
++    val cpuEvalTag = Module(new base.TagRAM(27, 2))
++    val cpuEvalTagStep = RegInit(0.U(4.W))
++    when (cpuEvalTagStep < 8.U) { cpuEvalTagStep := cpuEvalTagStep + 1.U }
++    cpuEvalTag.io.enw := cpuEvalTagStep === 0.U || cpuEvalTagStep === 1.U ||
++      cpuEvalTagStep === 3.U || cpuEvalTagStep === 5.U
++    cpuEvalTag.io.enr := cpuEvalTagStep >= 2.U && cpuEvalTagStep <= 7.U
++    cpuEvalTag.io.addrw := cpuEvalTagStep === 1.U || cpuEvalTagStep === 3.U
++    cpuEvalTag.io.addrr := cpuEvalTagStep === 2.U || cpuEvalTagStep === 5.U
++
++    cpuEvalTag.io.dataw := chisel3.util.MuxCase(0.U, Seq(
++      (cpuEvalTagStep === 0.U) -> "h12345".U,
++      (cpuEvalTagStep === 1.U) -> "h76543".U,
++      (cpuEvalTagStep === 3.U) -> "h23456".U,
++      (cpuEvalTagStep === 5.U) -> "h65432".U))
++    val cpuEvalTagExpected = chisel3.util.MuxCase(0.U, Seq(
++      (cpuEvalTagStep === 3.U) -> "h76543".U,
++      (cpuEvalTagStep === 4.U) -> "h12345".U,
++      (cpuEvalTagStep === 5.U) -> "h12345".U,
++      (cpuEvalTagStep === 6.U) -> "h23456".U,
++      (cpuEvalTagStep === 7.U) -> "h65432".U))
++    when (cpuEvalTagStep >= 3.U && cpuEvalTagStep <= 7.U &&
++      cpuEvalTag.io.datar =/= cpuEvalTagExpected) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH TagRAM step=%d actual=%x expected=%x\n",
++        cpuEvalTagStep, cpuEvalTag.io.datar, cpuEvalTagExpected)
++    }
++
+ 
+     class Rift2ChipIO extends Bundle{

@@ -1,0 +1,8 @@
+requirement	tests
+ALU request routing, response routing, and bypass	rv64ui-p-add;rv64ui-p-sub
+branch and jump execution	rv64ui-p-beq;rv64ui-p-jalr
+integer multiply routing	rv64um-p-mul
+integer divide readiness and routing	rv64um-p-div
+memory-address execution and long-latency response routing	rv64ui-p-lw;rv64ui-p-sw
+CSR execution routing	rv64mi-p-scall
+integer-to-floating-point execution routing	rv64uf-p-move

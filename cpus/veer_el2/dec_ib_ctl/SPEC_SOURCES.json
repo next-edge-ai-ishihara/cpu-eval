@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "d076623b811ff0cb2113e3213a0d812e1cadbba76042ba90bad9250de8d3a1e6",
+  "prompt_sha256": "1fa8489675a208aa0fa1e0395fa5263bcc569c84147b735dffe2d90d4ad75d21",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        270
+      ],
+      "sha256": "780c707d098c03c40972e5fb394307d1b5e27db61e2601cfd581357b52dbd404"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "prompt_bytes": [
+        270,
+        305
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        305,
+        3479
+      ],
+      "sha256": "7385e8b0eb5f2982391850779300a8ed44fbd6614ffb5bf664dc760d0b6f0e2f"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        3479,
+        3484
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "prompt_bytes": [
+        3484,
+        3521
+      ],
+      "sha256": "9df07e47dc82ebd7a335e21c2e3d132e7a2a177372efc33c0e12ffbabf06935c"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        3521,
+        3566
+      ],
+      "sha256": "caa7c1a9145cf13cfce34166b94a209f00d83ea80532fea38fe1f3644ea342c4"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        3566,
+        3571
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Heading for branch packet type",
+      "prompt_bytes": [
+        3571,
+        3644
+      ],
+      "sha256": "6cb22762644df36dedab9ae4c547243bf964a35abb2eeee76bb979aa5505df90"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        3644,
+        4085
+      ],
+      "sha256": "3d604f647747f2c1866531bcbf6acd994b756ed31f7ecd4ad2b71685dc33b6d2"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Fence after branch packet type",
+      "prompt_bytes": [
+        4085,
+        4090
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Heading for debug-command input derivation",
+      "prompt_bytes": [
+        4090,
+        4155
+      ],
+      "sha256": "ff334aca3b74a6919de8094a1d464d792718a3b07febb5ab7982ffab0198e3c2"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        4155,
+        4697
+      ],
+      "sha256": "3a6e90f56301ac686659d61956453311ff1449271885e9f46d01ba2f31f53151"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fence after debug-command input derivation",
+      "prompt_bytes": [
+        4697,
+        4702
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Heading for debug-command signal definitions",
+      "prompt_bytes": [
+        4702,
+        4740
+      ],
+      "sha256": "f3591afc04bf266d2d92dae9c9b7ed83c0462ab6306772fa0ed572ad526e487c"
+    },
+    {
+      "index": 14,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        4740,
+        5318
+      ],
+      "sha256": "d704b5c0525dfa61f2795a62f342425602488c5ddcd1a285209cceaac3d22228"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Fence after debug-command signal definitions",
+      "prompt_bytes": [
+        5318,
+        5323
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Heading for fetch-unit outputs",
+      "prompt_bytes": [
+        5323,
+        5364
+      ],
+      "sha256": "d7a8b3dc3f827fc638968b12f400ea7aeb50d46a592730d3d4e375f312f0f1aa"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        5364,
+        6639
+      ],
+      "sha256": "863d6f144c065db4035022213a5711a3d3fa8d36e0f0767a858c7bee13091e73"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Fence after fetch-unit outputs",
+      "prompt_bytes": [
+        6639,
+        6644
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 19,
+      "kind": "authored",
+      "description": "Heading for execution-unit use of debug write data",
+      "prompt_bytes": [
+        6644,
+        6685
+      ],
+      "sha256": "49f3b27c97dba6073bacea7018a23a304784291d2036a61ccf829b814d2fc1f3"
+    },
+    {
+      "index": 20,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        6685,
+        7304
+      ],
+      "sha256": "1210abc383fd63dc727cfdac81f3a183e49870e531b214c6890edbd537fbb919"
+    },
+    {
+      "index": 21,
+      "kind": "authored",
+      "description": "Fence after execution-unit use of debug write data",
+      "prompt_bytes": [
+        7304,
+        7309
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Heading for decode-unit use of the debug fence",
+      "prompt_bytes": [
+        7309,
+        7361
+      ],
+      "sha256": "061f5015e7d15c45918350da9e10b9efc00be95e072059052b5f614efee202ab"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        7361,
+        7688
+      ],
+      "sha256": "f0ec5f60ae433a8f4ec8d84f3ca3a2d321351544ba123924a554bad3bb0200e6"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Fence after decode-unit use of the debug fence",
+      "prompt_bytes": [
+        7688,
+        7693
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 25,
+      "kind": "authored",
+      "description": "Heading for abstract command register documentation",
+      "prompt_bytes": [
+        7693,
+        7752
+      ],
+      "sha256": "2cb8bd3a687d7c5f7e561fc110ac44db7c574397b5e98c846b6131b89a6fde55"
+    },
+    {
+      "index": 26,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        7752,
+        11769
+      ],
+      "sha256": "f2a98947f58824e33c056edbeecd66a5634d4fbb9c4530438ea93ef691bee5df"
+    },
+    {
+      "index": 27,
+      "kind": "authored",
+      "description": "Fence after abstract command register documentation",
+      "prompt_bytes": [
+        11769,
+        11774
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Heading for dmst register documentation",
+      "prompt_bytes": [
+        11774,
+        11816
+      ],
+      "sha256": "a8d105fbb2c5fde449ba0bf6022bf3e5229a9acdeaa4b146e559ac4fa5df572d"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        11816,
+        12967
+      ],
+      "sha256": "aedc40a7f89cd33d58f1956c22d692e4c79ffce208f469becb66881efbbf4c06"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Fence after dmst register documentation",
+      "prompt_bytes": [
+        12967,
+        12972
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 31,
+      "kind": "authored",
+      "description": "Port requirement for synthesized debug instructions",
+      "prompt_bytes": [
+        12972,
+        13323
+      ],
+      "sha256": "64581ccd8a68a9e9570d0100ea1e7b68f1f158c90ea5ea15146aff508d2ef83f"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for el2_dec_ib_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_ib_ctl.sv",
+      "lines": [
+        15,
+        69
+      ],
+      "language": "verilog",
+      "sha256": "e5aea85a31b90ff591460e6114c0c81c48936a0f99ec4f95e0f62b7cb2e66fb0"
+    },
+    {
+      "label": "Parent instantiation for el2_dec_ib_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec.sv",
+      "lines": [
+        430,
+        432
+      ],
+      "sha256": "e8c378100293edfd140fb064cf6f1cb00c8886f12ffc4c7c5a4c2a527af271ba"
+    },
+    {
+      "label": "Branch-prediction packet type",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        50,
+        60
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "Debug-command input derivation",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dbg/el2_dbg.sv",
+      "lines": [
+        623,
+        627
+      ],
+      "language": "verilog",
+      "sha256": "b68928eb9a34f23bcb54163543ecbf54b41ce2e27596a9a1763ad5a638303dc7"
+    },
+    {
+      "label": "VeeR EL2 debug-command signal definitions",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_veer.sv",
+      "lines": [
+        852,
+        856
+      ],
+      "language": "verilog",
+      "sha256": "3c1df18fbb7c0c753ed51cd842c9d58c7b04c9d485d8ec9d79177885afd610e7"
+    },
+    {
+      "label": "Instruction and prediction inputs from the fetch unit",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu.sv",
+      "lines": [
+        170,
+        187
+      ],
+      "language": "verilog",
+      "sha256": "f7300e7a2f0e4e530f1dba8c8298d045e4dcb20071f00f3f326ecb3c53cb3113"
+    },
+    {
+      "label": "Use of debug write data in the execution unit",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu.sv",
+      "lines": [
+        203,
+        206
+      ],
+      "language": "verilog",
+      "sha256": "84d25ee8c0550ef38a6a15d6ae5788d0c0bb13785bb19c5e9e1911ce05fd07af"
+    },
+    {
+      "label": "Use of a debug fence in the decode unit",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        1030,
+        1037
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "VeeR EL2 abstract register command behavior",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/debugging.md",
+      "lines": [
+        682,
+        778
+      ],
+      "language": "markdown",
+      "sha256": "e314e83f8ab1955d6e712bd4f8d4fcb5399df90657ea081a740048cf096a7a0c"
+    },
+    {
+      "label": "Memory Synchronization Trigger Register (dmst) address and fields",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        727,
+        764
+      ],
+      "language": "text",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+requirement	test_program	test_behavior
+Enqueue and dequeue ready-valid transfers	rv64ui-p-add;rv64ui-p-beq	These upstream integer tests retire dependent arithmetic and control-flow instructions through queues in the selected BOOM configuration.
+Queued data preservation	rv64ui-p-lw;rv64ui-p-sw	These upstream load and store tests transfer addresses and data through decoupled queues and compare the resulting retired architectural state with Spike.
+Queue flow control under instruction dependencies	rv64ui-p-add;rv64ui-p-lw	Dependent arithmetic and load instructions activate producer and consumer backpressure paths while the retirement trace comparison checks the delivered values.
+Preserve pipelined replacement when a one-entry queue dequeues and enqueues	rv64mi-p-loop_branch_cycles	The complete CPU repeatedly transfers fetch bundles through one-entry pipelined queues; the committed x20 cycle count detects bubbles inserted by incorrect enqueue readiness.
+Present the next queued item immediately after a dequeue with synchronous memory	queue-sync-read-ports	Fill an initially empty queue, stop writes, and observe each valid item across consecutive dequeue cycles.

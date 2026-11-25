@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "problem": "Rift2CoreImp",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/rift2Core.scala",
+    "source_unit": "Rift2CoreImp",
+    "hidden_definitions": [
+      "Rift2CoreImpFrontend",
+      "Rift2CoreImpBackend",
+      "Rift2CoreImpPredict",
+      "Rift2CoreImpBus",
+      "Rift2CoreImpMMU",
+      "Rift2CoreImpCommit"
+    ],
+    "hidden_definitions_description": "Before compilation the evaluator renames these fixed definitions, which implement the target's behavior, in every source file, so a submission cannot reuse them by name."
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-add",
+      "rv64si-p-icache-alias"
+    ],
+    "policy": "Run the pinned integer-add test and the pinned instruction-cache alias test. Compare integer execution and writeback and instruction fetch across a nonidentity Sv39 page mapping."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "version": "5.1.0",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch"
+}

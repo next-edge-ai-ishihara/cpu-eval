@@ -1,0 +1,9 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  iterations: 1
+  asm_tests: <path_var>/cpu-eval-patches/hpdcache_sram_repeated_hit.S
+
+testlist:
+  - test: hpdcache-sram-repeated-hit-cycles
+    <<: *common_test_config
+    gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"

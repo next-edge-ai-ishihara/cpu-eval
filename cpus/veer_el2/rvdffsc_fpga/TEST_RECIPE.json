@@ -1,0 +1,31 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvdffsc_fpga",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "rvdffsc_fpga_dma_probe",
+    "path": "test/rvdffsc_fpga_dma_probe.s",
+    "sha256": "6522272b9b80918765e783668c214e8e986663bb9999d614d060426830100193"
+  },
+  "run": "bash evaluate_all.sh",
+  "run_sha256": "1ffbb13db37912fab764156fa2d162ea77621e4a508cb841fcc4de2cde9844ba",
+  "process_exit_contract": "PASS requires TEST_PASSED, a normal make exit, and no TEST_FAILED marker. TEST_FAILED without TEST_PASSED remains FAIL even when make exits nonzero. Conflicting markers, an abnormal exit after TEST_PASSED and a cycle-limit marker are FAIL. Interrupted execution and a log without the Verilator command are INVALID.",
+  "comparison": "self-checking directed program that stores two known words to the ICCM address range and reads each back through the testbench's axi_lsu_dma_bridge DMA-loopback path, not a retired-instruction trace comparison; after a passing DMA run, check that the selected buffer-valid output holds a pending enable while the DMA clock is disabled and captures it when enabled.",
+  "port_probe": {
+    "test/run_clock_gate_probe.py": "572720919132dc461bcd45ff7d6af2ad5cd728bf074a6db84872fec512683b69",
+    "test/clock_gate_probe.sv": "418d1f84b5c12c0b02c657fe8887b880bca556c93045ce846339a4ab7db2da33"
+  },
+  "dma_runner": {
+    "run": "bash test/evaluate_rvdffsc_fpga.sh",
+    "sha256": "442a8b51154e2efc6e4a41861dca2e94d73c449bf9f257d770bc40e87494f51c"
+  }
+}

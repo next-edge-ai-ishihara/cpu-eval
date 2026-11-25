@@ -1,0 +1,755 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "BoomTileModuleImp",
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        6,
+        31
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "Definition documentation and header",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        150,
+        155
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "BOOM tile declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        68,
+        81
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "BOOM tile module, data cache, frontend and RoCC members",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        131,
+        148
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "Subsystem reads the core monitor bundle",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "generators/chipyard/src/main/scala/Subsystem.scala",
+      "lines": [
+        50,
+        57
+      ],
+      "sha256": "4809349f4e4ce7d9f7e569b8a7b57f4b08ce82efb000ffcc6fc5ff2d6956dc8b"
+    },
+    {
+      "label": "BOOM tile parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        47,
+        55
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "BOOM core interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        49,
+        66
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "BOOM frontend declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/frontend.scala",
+      "lines": [
+        297,
+        299
+      ],
+      "sha256": "d2d0a42d6a8bf8c41259646b926dcae610ca1bf58010e3aa930a660951eb2ed0"
+    },
+    {
+      "label": "BOOM frontend integration ports",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/frontend.scala",
+      "lines": [
+        311,
+        314
+      ],
+      "sha256": "d2d0a42d6a8bf8c41259646b926dcae610ca1bf58010e3aa930a660951eb2ed0"
+    },
+    {
+      "label": "BOOM frontend module interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/frontend.scala",
+      "lines": [
+        324,
+        328
+      ],
+      "sha256": "d2d0a42d6a8bf8c41259646b926dcae610ca1bf58010e3aa930a660951eb2ed0"
+    },
+    {
+      "label": "LSU interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        160,
+        167
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "LSU declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        203,
+        206
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "BOOM data-cache bundle, module, edge and IO",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        407,
+        418
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "Tile parameters trait",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        23,
+        33
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Non-diplomatic tile parameters",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        43,
+        45
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Tile parameters trait for modules",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        161,
+        161
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Base tile declaration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        185,
+        190
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Tile hart-id node",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        214,
+        218
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Tile trace node",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        271,
+        276
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Tile breakpoint node",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        297,
+        303
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "Base tile module declaration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/BaseTile.scala",
+      "lines": [
+        374,
+        374
+      ],
+      "sha256": "b2a6fe9ff168bd85503a9915a78e4859a15274297ad619b4682ad0b5d335fd91"
+    },
+    {
+      "label": "External interrupt sink trait",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Interrupts.scala",
+      "lines": [
+        29,
+        29
+      ],
+      "sha256": "eb7c76bc553047391f92944a0b2430bdf6753953d42c4fae5102af3eaccfe7d8"
+    },
+    {
+      "label": "Interrupt decoding contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Interrupts.scala",
+      "lines": [
+        69,
+        83
+      ],
+      "sha256": "eb7c76bc553047391f92944a0b2430bdf6753953d42c4fae5102af3eaccfe7d8"
+    },
+    {
+      "label": "External notification trait",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Interrupts.scala",
+      "lines": [
+        86,
+        86
+      ],
+      "sha256": "eb7c76bc553047391f92944a0b2430bdf6753953d42c4fae5102af3eaccfe7d8"
+    },
+    {
+      "label": "WFI reporting contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Interrupts.scala",
+      "lines": [
+        121,
+        127
+      ],
+      "sha256": "eb7c76bc553047391f92944a0b2430bdf6753953d42c4fae5102af3eaccfe7d8"
+    },
+    {
+      "label": "Core interrupts bundle",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/Core.scala",
+      "lines": [
+        136,
+        138
+      ],
+      "sha256": "2d47d05bb7d536a1132c178fad2cbe8139ecf2ab52d644c11d556a146f5f05c8"
+    },
+    {
+      "label": "TLB page-table-walker port type",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PTW.scala",
+      "lines": [
+        41,
+        42
+      ],
+      "sha256": "1a0ee9b797d36ffa0420311571de5f18d40289ad265a99814926c4075a77d93c"
+    },
+    {
+      "label": "Datapath page-table-walker port type",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PTW.scala",
+      "lines": [
+        62,
+        63
+      ],
+      "sha256": "1a0ee9b797d36ffa0420311571de5f18d40289ad265a99814926c4075a77d93c"
+    },
+    {
+      "label": "Page-table-walker module interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/PTW.scala",
+      "lines": [
+        115,
+        121
+      ],
+      "sha256": "1a0ee9b797d36ffa0420311571de5f18d40289ad265a99814926c4075a77d93c"
+    },
+    {
+      "label": "Single-requestor cache arbiter behavior",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCacheArbiter.scala",
+      "lines": [
+        9,
+        17
+      ],
+      "sha256": "a8a592ea3ab3d0ea5bbe68720b0cce99de4631bdd0bae39f512da3535c7e6387"
+    },
+    {
+      "label": "Default RoCC configuration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/LazyRoCC.scala",
+      "lines": [
+        16,
+        16
+      ],
+      "sha256": "883294fb641a56ff2e61245345b1c70abb5d57198f7271f4be70084e645d607e"
+    },
+    {
+      "label": "Extended traced instruction",
+      "repo": "github.com/ucb-bar/testchipip",
+      "commit": "aaf0cd18100a1b6b11f554b9acfcf2c01c0d40a4",
+      "path": "src/main/scala/TraceIO.scala",
+      "lines": [
+        33,
+        35
+      ],
+      "sha256": "6e61f72b0aa1ccbd3cf0b803aaea6f3a00f4b90884d0f3587828284f3f8d4675"
+    },
+    {
+      "label": "Extended trace node",
+      "repo": "github.com/ucb-bar/testchipip",
+      "commit": "aaf0cd18100a1b6b11f554b9acfcf2c01c0d40a4",
+      "path": "src/main/scala/TraceIO.scala",
+      "lines": [
+        135,
+        144
+      ],
+      "sha256": "6e61f72b0aa1ccbd3cf0b803aaea6f3a00f4b90884d0f3587828284f3f8d4675"
+    },
+    {
+      "label": "Tile implementation class contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/Customization/Custom-Core.rst",
+      "lines": [
+        211,
+        218
+      ],
+      "sha256": "e5cf2eb5a4e4555b27c2875c5c9154d7a55f8892da0efe1cae2526431dd764a7"
+    },
+    {
+      "label": "Tile interrupt integration contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/Customization/Custom-Core.rst",
+      "lines": [
+        234,
+        253
+      ],
+      "sha256": "e5cf2eb5a4e4555b27c2875c5c9154d7a55f8892da0efe1cae2526431dd764a7"
+    },
+    {
+      "label": "Tile notification contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/Customization/Custom-Core.rst",
+      "lines": [
+        262,
+        272
+      ],
+      "sha256": "e5cf2eb5a4e4555b27c2875c5c9154d7a55f8892da0efe1cae2526431dd764a7"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, submission instruction and imports heading",
+      "text": "# Implement `BoomTileModuleImp`\n\nImplement one complete `BoomTileModuleImp` Chisel definition. Preserve the definition name, constructor parameter, and inheritance shown below.\n\nReturn only the complete `class BoomTileModuleImp` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Parent instantiation\n\n### src/main/scala/common/tile.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### generators/chipyard/src/main/scala/Subsystem.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 36
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### src/main/scala/common/tile.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/exu/core.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/ifu/frontend.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/lsu/lsu.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/lsu/dcache.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/tile/BaseTile.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/tile/Interrupts.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/tile/Core.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/rocket/PTW.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/rocket/HellaCacheArbiter.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 29
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/tile/LazyRoCC.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 30
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n### src/main/scala/TraceIO.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 31
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 32
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n\n## Documentation\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 33
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 34
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 35
+    },
+    {
+      "kind": "authored",
+      "description": "Authored text",
+      "text": "```\n"
+    }
+  ]
+}

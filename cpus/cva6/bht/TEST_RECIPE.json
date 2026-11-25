@@ -1,0 +1,40 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "../harness/compare_cycle_measurement.py",
+    "../instr_scan/harness/evaluate_ports.py",
+    "harness/bht_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "bht",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "configuration": "cv32a60x",
+  "source_path": "core/frontend/bht.sv",
+  "reference_hdl_sha256": "a80924695e868d5ae1d96874af8a3accd82d14b522d1fef1c39cc059744879e0",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "f699c58a0e4ffd83d3345d411d47dfba2fe8b017374b53627e2af33a9f50f970",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "test_list": "harness/testlist_bht_cycles.yaml",
+  "test_list_sha256": "343940e66ddafd34f7b082f187b1c773828143ac7c2820fa5f6c17c8e24015f7",
+  "directed_test": "harness/bht_cycles.S",
+  "directed_test_sha256": "525a06c924ce4b7584515496857325abfad9ecaf20c3ebac05928da1c43f1756",
+  "comparison": {
+    "kind": "rtl_only_fixed_cycle_count",
+    "value": "the mcycle delta committed to x20 after a fixed warmup and fixed branch-heavy interval"
+  },
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/frontend/bht.sv",
+    "test_sources": "copy the recorded directed test beside the pinned RISC-V Architectural Tests as performed by the evaluator",
+    "expected_cycle_delta": 49184,
+    "evaluation": "CPU_EVAL_LOG_ROOT=<output> harness/evaluate.sh <candidate.sv>"
+  },
+  "port_evaluator": "../instr_scan/harness/evaluate_ports.py",
+  "port_testbench": "harness/bht_ports_tb.sv",
+  "port_testbench_sha256": "c4d73e55b439c99124e653a7326cf7777901d00f2f56087b8c0905f03424b9de",
+  "port_test_scope": "Observe both fetch slots for all 32 entries, at word-aligned and halfword-aligned fetch addresses, during five taken and five not-taken updates per entry. After taken training, verify that toggling the first PC bit above the row index preserves both valid predictions.",
+  "port_evaluator_sha256": "4ada650951191124054d4b96d5c3b2003d9944ce15dde544476f07afad117562"
+}

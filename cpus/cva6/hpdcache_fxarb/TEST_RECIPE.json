@@ -1,0 +1,46 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.sh",
+    "harness/fxarb_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 1,
+  "cpu": "cva6",
+  "module": "hpdcache_fxarb",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_fxarb.sv",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "651d0c7206ad17be0355ca7974afc72fc7fe3864ba28a9b3ec5b126c02137db3",
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.sh",
+    "evaluator_sha256": "bc14f12f67950c7c85e8147238d3def440f6b53d218acd8feb6f81a9d9ae1e48",
+    "test": "harness/fxarb_ports_tb.sv",
+    "test_sha256": "1a24072c0f0829fe801abb463b47145cce93e1b35866eff2ca29b7447c94cd51",
+    "configuration": "Standalone N=8, independent of the requester counts in the CPU.",
+    "comparison": "261 public-port expectations: all 256 request vectors with ready_i=1, then a held request with newly asserted higher-priority requesters, acceptance, and the next selection. No internal signals are compared.",
+    "environment": "Verilator 5.008 with --binary --timing --assert, a C++ toolchain and make; VERILATOR may name its executable. CVA6_REPO must contain the recorded HPDcache Git objects. The dependency encoder is read from f404e7ebbda8baa4af3729535f520a6b12a06d03.",
+    "result": "Success requires process exit 0, SUMMARY checks=261 errors=0 and FXARB_PORT_TEST_COMPLETE, then continues to the CPU evaluator. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2).",
+    "timeouts": {
+      "build_seconds": 120,
+      "runtime_seconds": 30,
+      "classification": "Wall-clock timeout is INVALID (2)."
+    }
+  },
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_patch": "test-patches/route_data_bits_through_fxarb.patch",
+  "test_patch_sha256": "6e65d20cb5cf82595cb8401795859efbf1b3ba437c0403f0895bbb08d541e6b3",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_fxarb.sv",
+    "reference_hdl_preconditions": "Run reference_hdl from the root of the CVA6 checkout at cpu_revision, with core/cache_subsystem/hpdcache initialized as the cv-hpdcache submodule containing commit f404e7ebbda8baa4af3729535f520a6b12a06d03. Verify SHA-256 873d1c3f00b4036c4441ffa3ccd42a7995865f64ca8b0eaa2e22cab45533ac49 of the retrieved source before use.",
+    "test_sources": "check out the recorded CPU and architectural-test revisions, initialize the recorded HPDcache submodule, then run harness/evaluate.sh with the complete candidate; the evaluator applies and reverses test_patch, so do not apply it separately"
+  }
+}

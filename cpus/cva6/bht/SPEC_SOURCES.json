@@ -1,0 +1,472 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/bht/SPEC_RECIPE.json",
+  "recipe_sha256": "df1f1c761b2df3ffd9531cf4cf60a10f59af91218512ce447ec9bf33488933ea",
+  "prompt_sha256": "df3be3156d721165cbbe261e790882834732e9f82ab5fab4cb4201a6ba1f41c8",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    },
+    "https://github.com/riscv-boom/riscv-boom.git": {
+      "revision": "5223e44cfeb26f41380057a2eb4d651197475f69"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        338
+      ],
+      "sha256": "e68ebf1e39ccb36eeb05022c18aeaf6808050b4ce195855474b1db2bea43ab99"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        338,
+        361
+      ],
+      "sha256": "902a563fe4ecec966e1add88b0dd469f4401cdd70f7b32935a9731fa0a1abaa4"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        361,
+        374
+      ],
+      "sha256": "dd416bf9ab092f43b694a12851051b3aaf7d6f3a00a571ef258cf16ae3768de9"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        374,
+        404
+      ],
+      "sha256": "5fb7cbc472f473e3a6624059b94a526b7331a6d2bd011ceb8010446ee240c47f"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        404,
+        417
+      ],
+      "sha256": "dd416bf9ab092f43b694a12851051b3aaf7d6f3a00a571ef258cf16ae3768de9"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        417,
+        437
+      ],
+      "sha256": "d58e5e88ab6629fe9ebee2127586ecd10a876d6b80cf1aebc0a0eee16e5ac10c"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        437,
+        450
+      ],
+      "sha256": "dd416bf9ab092f43b694a12851051b3aaf7d6f3a00a571ef258cf16ae3768de9"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        450,
+        514
+      ],
+      "sha256": "86f980beb3ec5dcb2be0256c7275c03385a2a609e9fafc46ffb6444e45737bfc"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        514,
+        574
+      ],
+      "sha256": "7f093da87871964e83b059dacd164c338e39adaa88ec33e5c99d1ac5587f80e9"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        574,
+        640
+      ],
+      "sha256": "30d9119cc22f6dac46bae773311390feffa5be4f1bd32a4bc6e396992b6a1e89"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        640,
+        651
+      ],
+      "sha256": "9033503658b384bb926226f96fe7f0fbf2381c7e07dfa9e13a2063c122c9fc7a"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        651,
+        720
+      ],
+      "sha256": "c84c9814ea5ea9a9a644ee034b33fcfb9ef77c77d93b63b5c20b48b5ba228273"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        720,
+        798
+      ],
+      "sha256": "7c0ccfc2bf886a46b69fea82922638b46b498d0585f53bca17fbdd86335cb6bb"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        798,
+        880
+      ],
+      "sha256": "ff29faeca75d976cf11e7d4c308dcf736a736c3975763cb6fc811efa9974ce74"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        880,
+        925
+      ],
+      "sha256": "16ab8841be19b6437f519e370a014818c34cc127977ddf6ac45cfb13290c150f"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        925,
+        1652
+      ],
+      "sha256": "cd30e6e39e74311a2f85049238b170241c2c66ed09084ad3288e1951cad88678"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        1652,
+        1730
+      ],
+      "sha256": "26d3ce173088179627b8b02673470edd923a1c7deea8e266114eeab7adec106c"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        1730,
+        1909
+      ],
+      "sha256": "2954d1589430d571783dadacbeaf69bd112bb2f78cf563a11b9a9f9aed1a944e"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        1909,
+        1918
+      ],
+      "sha256": "8aada41ca19b060bea73ac759a6f9623878b6f792ed2825aaf6a8ebd4474138b"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        1918,
+        2404
+      ],
+      "sha256": "2da831acbe257104963cdcb909ec17b5512a6ddf24580759387fe2cf267293e2"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        2404,
+        2501
+      ],
+      "sha256": "a58a70b777ee52ab5e3eb7f35565312bd7bbcd6b0492bdb0d0106c06f7cd67f0"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        2501,
+        3209
+      ],
+      "sha256": "4298340ac0243316b6cc4266c5bbd55f86084e3e893bd02f33a01e4a86b1c6ce"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        3209,
+        3213
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        3213,
+        3483
+      ],
+      "sha256": "f22ed099350110342b0d61b806e0b85fc9b5ec46e4de19212f72e83fc425c992"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        3483,
+        3487
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        3487,
+        3886
+      ],
+      "sha256": "24edfc796ffeb6ee9f6631845da485c6ee08d6117012465f80db0b47b0ace324"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        3886,
+        3958
+      ],
+      "sha256": "1e0d757ed89facc1f3ec17472f349822c5a4cfdd359e0e2924616719913f1f11"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        3958,
+        4375
+      ],
+      "sha256": "2dac2e00e2614430769221527ae5d0e9571886f1f418520d45130aec4b128415"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        4375,
+        4565
+      ],
+      "sha256": "83fdc151877170ba941ae8ef1024ac9ed44c181aab94622cc5a34f9d11e59b26"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Selected non-FPGA implementation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        24,
+        24
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected issue width",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        27,
+        27
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected compressed ISA",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        45,
+        45
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected branch predictor",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        67,
+        68
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Derived fetch width",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        188,
+        188
+      ],
+      "language": "verilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Derived instructions per fetch",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        190,
+        190
+      ],
+      "language": "verilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "BHT prediction type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        180,
+        183
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/bht.sv",
+      "lines": [
+        24,
+        43
+      ],
+      "language": "verilog",
+      "sha256": "a80924695e868d5ae1d96874af8a3accd82d14b522d1fef1c39cc059744879e0"
+    },
+    {
+      "label": "BHT update type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/frontend.sv",
+      "lines": [
+        71,
+        75
+      ],
+      "language": "verilog",
+      "sha256": "10a3a3cbcb75ab9a70167f9ea1cdbfbe7c942fae2eab17663fb23396ee880515"
+    },
+    {
+      "label": "Active parent instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/frontend.sv",
+      "lines": [
+        514,
+        529
+      ],
+      "language": "verilog",
+      "sha256": "10a3a3cbcb75ab9a70167f9ea1cdbfbe7c942fae2eab17663fb23396ee880515"
+    },
+    {
+      "label": "BHT organization",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        281,
+        292
+      ],
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    },
+    {
+      "label": "BHT reset and resolved-branch update",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        310,
+        312
+      ],
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    },
+    {
+      "label": "BHT prediction and update",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        317,
+        320
+      ],
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    },
+    {
+      "label": "Two-bit branch-counter behavior",
+      "repo": "https://github.com/riscv-boom/riscv-boom.git",
+      "commit": "5223e44cfeb26f41380057a2eb4d651197475f69",
+      "path": "docs/sections/branch-prediction/backing-predictor.rst",
+      "lines": [
+        230,
+        236
+      ],
+      "sha256": "d39340c9c86748c23df5d5fce7515c6114a61455f8a27c28e0bda4193ab03929"
+    }
+  ]
+}

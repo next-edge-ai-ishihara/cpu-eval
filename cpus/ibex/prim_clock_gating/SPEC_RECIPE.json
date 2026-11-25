@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for prim_clock_gating",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_gating.sv",
+      "lines": [
+        10,
+        18
+      ],
+      "language": "verilog",
+      "sha256": "b2474320674e645d423f32ba1ce60b25509042d40c2de8fe28dcb7760a8fa882"
+    },
+    {
+      "label": "Parent instantiation for prim_clock_gating",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_top.sv",
+      "lines": [
+        333,
+        338
+      ],
+      "sha256": "0db761a029b18d17271200a7ffe438c856db53423efa25912ba7ce60948cdfc5"
+    },
+    {
+      "label": "Clock gating cell requirement in the register file documentation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/register_file.rst",
+      "lines": [
+        51,
+        56
+      ],
+      "sha256": "d5ad01e1b2b4b947dbfdf9e7826b4d032ab8705f6f55045abf2ab1a62ac138f3"
+    },
+    {
+      "label": "Excerpt of doc/02_user/integration.rst",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/02_user/integration.rst",
+      "sha256": "409c745d57cb20923a39295102716793e10771d4e64d04be9b4bafdaa2f6410d",
+      "lines": [
+        370,
+        372
+      ]
+    },
+    {
+      "label": "Excerpt of doc/02_user/integration.rst",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/02_user/integration.rst",
+      "sha256": "409c745d57cb20923a39295102716793e10771d4e64d04be9b4bafdaa2f6410d",
+      "lines": [
+        377,
+        379
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `prim_clock_gating`\n\nImplement the complete `prim_clock_gating` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module prim_clock_gating` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "text": "\n## Parent instantiation\n\n### rtl/ibex_top.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "text": "\n## Documentation\n\n### doc/03_reference/register_file.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "text": "```\n\n### doc/02_user/integration.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Documentation",
+      "text": "```\n"
+    }
+  ]
+}

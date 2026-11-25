@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "4f3f940d83d188bae4448b2718d1aa53b5305c47d43fa3c1e2994fc2cd68b4d2",
+  "prompt_sha256": "c23abb4975e5495fe522e47a3a346f80d7c3580142cad921b5081469660e3b30",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        260
+      ],
+      "sha256": "6311c5b4cf9ab3df663c430e6e8f70f121b94da3092dbe3af2b3bc89aeae98ac"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading CPU configuration",
+      "prompt_bytes": [
+        260,
+        311
+      ],
+      "sha256": "596c556dcf5eba6dffd62919402822c246c0568a4eb07920aabe09a0061fb794"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        311,
+        408
+      ],
+      "sha256": "d6512f3d87217815c7f5542fd25d4762cbc64a4b10b69bb844b26bd5eb05d425"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        408,
+        412
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 4,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        412,
+        435
+      ],
+      "sha256": "328c27599d2b39091ac41f135ff24eefb61256f6b99e1b22c5a342bffc16808f"
+    },
+    {
+      "index": 5,
+      "kind": "authored",
+      "description": "Heading ## Module declaration",
+      "prompt_bytes": [
+        435,
+        475
+      ],
+      "sha256": "445bc632175ad1aa53a68fa8a69475f2bb1ac1f871084ec76bd7189239d5b66d"
+    },
+    {
+      "index": 6,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        475,
+        777
+      ],
+      "sha256": "92168b8bbdd18b85a8d4c27941c288c1589136b636ac80a7f65e6b9383a88c00"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Heading ## Parent instantiation with path design/el2_dma_ctrl.sv",
+      "prompt_bytes": [
+        777,
+        847
+      ],
+      "sha256": "8e8a30cdd52cb294708096cc60327eae19fb70bef5c49d4c82d46880f4623d0f"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        847,
+        987
+      ],
+      "sha256": "3ef52b642cfedb297fa1271e1999a37d30f8a6214849c3b947671e6505204b70"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        987,
+        994
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        994,
+        1421
+      ],
+      "sha256": "c871e9044dc6a02eb7f59e8d310475011e611312179b6367993a6764a6ac2618"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1421,
+        1428
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1428,
+        1638
+      ],
+      "sha256": "1cd89ac85015cae67d115bb24f7d229dfef4f167def69ac124b7223674236bd7"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1638,
+        1645
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 14,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        1645,
+        2044
+      ],
+      "sha256": "b3efb22bd8c5c901d457de9e93137ec70a38ac9a074aa31dec556c8c8949922d"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        2044,
+        2051
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 16,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        2051,
+        2226
+      ],
+      "sha256": "c0eea3008158fa5277b6c08454845454ce946eb400897e2c82951e9259076988"
+    },
+    {
+      "index": 17,
+      "kind": "authored",
+      "description": "Source path design/ifu/el2_ifu_bp_ctl.sv",
+      "prompt_bytes": [
+        2226,
+        2277
+      ],
+      "sha256": "9bd7ff042fa25c2978af9d6fb7488a188586dbd72bba0663f7c80f44e8a802c4"
+    },
+    {
+      "index": 18,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        2277,
+        2610
+      ],
+      "sha256": "e7ee21f2488cbefc6eb83aedfbe3fa0ed2bd4e49565d3bc2b82da1eecbe0a9ad"
+    },
+    {
+      "index": 19,
+      "kind": "authored",
+      "description": "Source path design/ifu/el2_ifu_mem_ctl.sv",
+      "prompt_bytes": [
+        2610,
+        2662
+      ],
+      "sha256": "56a55b2821f6411399c6ba4f6dd83946b28be747ca987533742608776f1bc66b"
+    },
+    {
+      "index": 20,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        2662,
+        3164
+      ],
+      "sha256": "248928e90df8f3fa6c828fdf160e8ed5734e8f2d78092edc7b3034ed88f82281"
+    },
+    {
+      "index": 21,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        3164,
+        3171
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 22,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        3171,
+        3856
+      ],
+      "sha256": "4b4f14c15c45ea508e507dfbd932df9f129f614ee2d3cb5de8c7e7d9ba175666"
+    },
+    {
+      "index": 23,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        3856,
+        3863
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 24,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        3863,
+        4710
+      ],
+      "sha256": "879819c13907551cd2894c0039b9a1aa7a8ca1c12bdf1153414f65d597fc02df"
+    },
+    {
+      "index": 25,
+      "kind": "authored",
+      "description": "Source path design/lsu/el2_lsu_bus_buffer.sv",
+      "prompt_bytes": [
+        4710,
+        4765
+      ],
+      "sha256": "cf8a2ecd9c875389f62925ce5348e05b96752aa498a0705b09f823046fbee12f"
+    },
+    {
+      "index": 26,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        4765,
+        6382
+      ],
+      "sha256": "90b4bbc36f69431780440223fa5ef0a191074f7116ff6db10a75027dcd3ebd67"
+    },
+    {
+      "index": 27,
+      "kind": "authored",
+      "description": "Heading ## Dependency declarations",
+      "prompt_bytes": [
+        6382,
+        6427
+      ],
+      "sha256": "6ca7e0b19ea621beb40e4cbd823823fd0962fc32ec3200b9254510e261688140"
+    },
+    {
+      "index": 28,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        6427,
+        6629
+      ],
+      "sha256": "cd0262956b9a2488ae14713c0e71c8e6f58d70a595a225db9436e9af12817ad3"
+    },
+    {
+      "index": 29,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        6629,
+        6637
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 30,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        6637,
+        6983
+      ],
+      "sha256": "778fe5d086cdf820ecdd832959290a6cc2cfe04f6f58e906a8a2d291f9375dc9"
+    },
+    {
+      "index": 31,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        6983,
+        6991
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Close excerpt",
+      "prompt_bytes": [
+        6991,
+        6996
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 33,
+      "kind": "authored",
+      "description": "Heading Documentation",
+      "prompt_bytes": [
+        6996,
+        7042
+      ],
+      "sha256": "9b87522a0aa29ddbaaf309f1a190b52e3631736816cdf9667ebaeee450618638"
+    },
+    {
+      "index": 34,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        7042,
+        7091
+      ],
+      "sha256": "4bdf33588347a0d52a75ee49361d27d1ceb30b1939e8adc93f55e48361661481"
+    }
+  ],
+  "sources": [
+    {
+      "label": "fpga_optimize option",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        214,
+        215
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "text"
+    },
+    {
+      "label": "fpga_optimize default",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        366,
+        366
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "text"
+    },
+    {
+      "label": "Module declaration for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        113,
+        123
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "DMA bus clock",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_dma_ctrl.sv",
+      "lines": [
+        424,
+        428
+      ],
+      "sha256": "d11485a16ce5f5037f383f604af7a668ffeed9ce257a596feb27481eea15c614"
+    },
+    {
+      "label": "Parent instantiation for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_dma_ctrl.sv",
+      "lines": [
+        439,
+        440
+      ],
+      "sha256": "d11485a16ce5f5037f383f604af7a668ffeed9ce257a596feb27481eea15c614"
+    },
+    {
+      "label": "Parent instantiation for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_dma_ctrl.sv",
+      "lines": [
+        443,
+        443
+      ],
+      "sha256": "d11485a16ce5f5037f383f604af7a668ffeed9ce257a596feb27481eea15c614"
+    },
+    {
+      "label": "Parent instantiation for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_dma_ctrl.sv",
+      "lines": [
+        451,
+        452
+      ],
+      "sha256": "d11485a16ce5f5037f383f604af7a668ffeed9ce257a596feb27481eea15c614"
+    },
+    {
+      "label": "Parent instantiation for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_dma_ctrl.sv",
+      "lines": [
+        476,
+        476
+      ],
+      "sha256": "d11485a16ce5f5037f383f604af7a668ffeed9ce257a596feb27481eea15c614"
+    },
+    {
+      "label": "Parent instantiation for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_bp_ctl.sv",
+      "lines": [
+        868,
+        874
+      ],
+      "sha256": "9b7065201916511b3e1fb6d0b8415ce74b4caf3afbd913b39d005c4db0bdf611"
+    },
+    {
+      "label": "Parent instantiation for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1267,
+        1276
+      ],
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "Parent instantiation for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1569,
+        1583
+      ],
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "Parent instantiation for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1628,
+        1644
+      ],
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "Parent instantiation for rvdffs_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_buffer.sv",
+      "lines": [
+        564,
+        570
+      ],
+      "sha256": "fc1a654fa9fb37543586db710a54f2e3027b9abf35f58d0c1f23c5fdb33526b0"
+    },
+    {
+      "label": "rvdff and rvdffs dependencies",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        19,
+        26
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "rvdffs dependency",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        48,
+        60
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "Core complex reset",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/clocks.md",
+      "lines": [
+        170,
+        170
+      ],
+      "sha256": "95740cffcbecb218bb2923364023c902af5de866f749d6156689de71a99f1181",
+      "language": "markdown"
+    }
+  ]
+}

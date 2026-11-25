@@ -1,0 +1,6 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - {test: rv32im-hpdcache-ctrl-pe-store-reload, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/cpu-eval-patches/hpdcache_ctrl_pe_store_reload.S}

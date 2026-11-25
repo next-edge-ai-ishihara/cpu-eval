@@ -1,0 +1,35 @@
+--- a/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
++++ b/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
+@@ -62,7 +62,16 @@
+                   li x30, 0x80000000
+                   li x31, 0xa
+                   la x27, user_stack_end
+-main:             li         t0, 0x52d893a0 #start riscv_int_numeric_corner_stream_5
++main:             li t0, 0xf0040000
++                  li t1, 0xa5a55a5a
++                  li t2, 0xb6b66b6b
++                  li t3, 0xc7c77c7c
++                  li a3, 0xd8d88d8d
++                  sw t1, 0(t0)
++                  sw t2, 4(t0)
++                  sw t3, 8(t0)
++                  sw a3, 12(t0)
++                  li         t0, 0x52d893a0 #start riscv_int_numeric_corner_stream_5
+                   li         t6, 0x83c22e1
+                   li         s6, 0x1
+                   li         t3, 0x20f26623
+@@ -1995,6 +2004,14 @@
+                   auipc       a6, 583280
+                   c.srli      s1, 10
+                   or          a6, s3, sp
++                  li a0, 0xf0040000
++                  lw a1, 0(a0)
++                  lw a2, 4(a0)
++                  lw a4, 8(a0)
++                  lw a5, 12(a0)
++                  sb a5, 17(a0)
++                  fence rw, rw
++                  lbu a6, 17(a0)
+                   xori        t0, a0, -263
+                   c.addi      a3, 29
+                   li         t6, 0x0 #start riscv_int_numeric_corner_stream_2

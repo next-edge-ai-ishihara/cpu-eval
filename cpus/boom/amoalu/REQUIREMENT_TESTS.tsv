@@ -1,0 +1,20 @@
+requirement	width	test	source_observation
+amoadd upper word	32	rv64ua-p-amoadd_w_upper	TEST_CASE 2 checks the old upper word; TEST_CASE 3 loads the whole doubleword to check the sum and preservation of the lower word
+amoadd	64	rv64ua-p-amoadd_d	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amoadd	32	rv64ua-p-amoadd_w	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amoand	64	rv64ua-p-amoand_d	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amoand	32	rv64ua-p-amoand_w	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amomax	64	rv64ua-p-amomax_d	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amomax	32	rv64ua-p-amomax_w	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amomaxu	64	rv64ua-p-amomaxu_d	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amomaxu	32	rv64ua-p-amomaxu_w	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amomin	64	rv64ua-p-amomin_d	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amomin	32	rv64ua-p-amomin_w	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amominu	64	rv64ua-p-amominu_d	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amominu	32	rv64ua-p-amominu_w	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amoor	64	rv64ua-p-amoor_d	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amoor	32	rv64ua-p-amoor_w	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amoswap	64	rv64ua-p-amoswap_d	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amoswap	32	rv64ua-p-amoswap_w	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amoxor	64	rv64ua-p-amoxor_d	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants
+amoxor	32	rv64ua-p-amoxor_w	TEST_CASE 2/4 checks old value; TEST_CASE 3/5 loads updated memory and compares constants

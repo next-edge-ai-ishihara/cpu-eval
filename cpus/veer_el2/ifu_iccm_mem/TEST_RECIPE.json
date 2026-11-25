@@ -1,0 +1,55 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2201
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_ifu_iccm_mem",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "544e0547ce60f8d1a0a03221ed3dd16c59fda831ec40e45c56b097781dea8142",
+    "post_generation_patch": {
+      "path": "patches/iccm-read-coverage.patch",
+      "sha256": "7dc0d678b1c593a8cb0f4c8e771cd0968bb5698c6793a30a452cfeea29f8225c",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    "patched_source_sha256": "9d4e9a2573f339608fab0573fdfde4094a21fc6e70d95c2052b099d479dc990b"
+  },
+  "run": "bash evaluate_all.sh",
+  "directed_tests": [
+    {
+      "name": "iccm_correction_probe",
+      "bench": "test/iccm_correction_probe.sv",
+      "checks": ["external_bit_flip", "corrected_read", "coherent_word_write"]
+    }
+  ],
+  "comparison": "Spike and RTL ordered GPR-update traces; the comparator skips writes that do not change its tracked register state."
+}

@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/boom/hella_cache_arbiter/SPEC_RECIPE.json",
+  "recipe_sha256": "ab85969c57315a53863e927b7ef333f6514ad71169cc002ba510287dbea3c3f1",
+  "prompt_sha256": "c90a96c9e0a80c33789263f544bda7fddeb0237dccd6dd6bb25e91561ccad1e8",
+  "repositories": {
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "github.com/riscv-boom/riscv-boom": {
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        397
+      ],
+      "sha256": "f9160aa99f257967f6e5cdb1fffc9b834b31e3597ae9ca9db15a816aa922dd33"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        397,
+        496
+      ],
+      "sha256": "0af3f1f2d39a984485979e8fea73392dd1476beceaaacba17c8526c7ad7a45d0"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        496,
+        585
+      ],
+      "sha256": "ffd64f9a8989f67f5ddf3923a74010799bbd9982bbc9cc991c782841223bf399"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        585,
+        767
+      ],
+      "sha256": "c0ac86a3a7686519ce8074e010b39ddd3a14d095ec59c3d4579ae30181441d9c"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        767,
+        846
+      ],
+      "sha256": "53bcd2267f8faf339c410ad22b59bd07aeec5084fa909c8016636314f02ded77"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        846,
+        1386
+      ],
+      "sha256": "83d2851f81a6e721cc19e55e4f3b3026ecb998ace300a075a5f69e84bf5a2063"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        1386,
+        1395
+      ],
+      "sha256": "8aada41ca19b060bea73ac759a6f9623878b6f792ed2825aaf6a8ebd4474138b"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1395,
+        1819
+      ],
+      "sha256": "8a94ca2aa8cf4af605567fbba8dec2b6656a789b79ab8994fa723ec98e2f7da2"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        1819,
+        1876
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1876,
+        2121
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        2121,
+        2181
+      ],
+      "sha256": "bc9068013524562606ab339b70dbb142fbc5be49af2c1be56766d009b66f22ce"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2181,
+        5284
+      ],
+      "sha256": "67bd1941d8c301842384b15761977f57eb035c101c87f11cd0bbada74236f15f"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        5284,
+        5288
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "src/main/scala/rocket/HellaCacheArbiter.scala",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCacheArbiter.scala",
+      "lines": [
+        4,
+        7
+      ],
+      "sha256": "a8a592ea3ab3d0ea5bbe68720b0cce99de4631bdd0bae39f512da3535c7e6387"
+    },
+    {
+      "label": "src/main/scala/rocket/HellaCacheArbiter.scala",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCacheArbiter.scala",
+      "lines": [
+        9,
+        14
+      ],
+      "sha256": "a8a592ea3ab3d0ea5bbe68720b0cce99de4631bdd0bae39f512da3535c7e6387"
+    },
+    {
+      "label": "src/main/scala/common/tile.scala",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        183,
+        192
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "src/main/scala/common/tile.scala",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        229,
+        239
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "src/main/scala/rocket/HellaCache.scala",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        102,
+        187
+      ],
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

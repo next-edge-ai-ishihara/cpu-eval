@@ -1,0 +1,14 @@
+id: el2_exu_alu_ctl
+cpu: veer_el2
+target:
+  repository: https://github.com/chipsalliance/cores-veer-el2.git
+  revision: aefefae20b77fa61ba306bff36a72f42ae4cc028
+  file: design/exu/el2_exu_alu_ctl.sv
+  module: el2_exu_alu_ctl
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: ../_shared/evaluate_candidate.py

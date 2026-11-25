@@ -1,0 +1,44 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/fifo_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_fifo_reg",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_fifo_reg.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "8daaaebb0fe934105e6d1a3177ec839d7f3a3f3f96ef3845199f36925b471596",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_fifo_reg.sv from hpdcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision; no generated test source is stored"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "e33be6af08db443f9519ba2c584df970d3915690261ab396b855d5f485194c7d",
+    "test": "harness/fifo_ports_tb.sv",
+    "test_sha256": "881e44c6792725cc2cf192912fb7ca66565c6642aa9747aebe7cb9bee5484709",
+    "fixed_dependencies": {
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_sync_buffer.sv": "4f8e44eb05307acc9982e2797e454314e76ff4fc3cebaef372f587b07dcd1b14",
+      "CVA6 6348e9e684678f83b40d0520028513d06b36e7b2:vendor/pulp-platform/common_cells/src/fifo_v3.sv": "08cc968a5b26b5a68ad2c548755e6b3b0d07a7ad75a3f11e92bc1bab71eeb7c6"
+    },
+    "configuration": "(FIFO_DEPTH, FEEDTHROUGH) = (1,0), (1,1), (2,0), (4,0) and (8,0), the cv32a60x instances; 2500 cycles each. The data widths are those of cv32a60x instances with the same parameters: 4, 38, 3, 64 and 35 bits. The write payload advances by 0x9e3779b97f4a7c15, truncated to the width, after each accepted write. Initial and midstream reset, backpressure, simultaneous transfers and repeated wrap.",
+    "comparison_scope": "Feedthrough full/read may accept or defer write; accepted data must retain order and capacity. Internal pointers and invalid data are not compared.",
+    "environment": "Linux, Python 3, Git, Verilator --binary --timing --public-flat-rw, C++ and make. CVA6_REPO must contain the recorded CVA6 and HPDcache submodule Git objects. VERILATOR may name its executable.",
+    "result": "PASS (0) requires 12500 ordered observations, SUMMARY configurations=5 cycles=2500 observations=12500 errors=0, FIFO_PORT_TEST_COMPLETE and normal exit. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2). Build limit 120 seconds; run limit 10 seconds. CPU evaluation follows only after port-test PASS."
+  }
+}

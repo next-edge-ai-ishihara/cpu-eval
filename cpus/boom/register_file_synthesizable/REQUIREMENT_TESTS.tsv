@@ -1,0 +1,7 @@
+requirement	tests	rationale
+Store and retrieve integer register values	rv64ui-p-add,rv64ui-p-sub,rv64ui-p-xor	Exercise repeated integer physical-register writes and reads.
+Store and retrieve memory-operation operands	rv64ui-p-lw,rv64ui-p-sw,rv64ui-p-ld,rv64ui-p-sd	Exercise integer address and store-data register values.
+Return a same-cycle bypassable write at a matching read address	rv64ui-p-xor,rv64um-p-mul,rv64um-p-div	Exercise dependent operations that require current producer values.
+Store and retrieve floating-point register values	rv64uf-p-fadd,rv64uf-p-fmadd	Exercise the floating-point physical register file, including three-source FMA.
+Preserve register values across control flow	rv64ui-p-beq,rv64ui-p-jalr	Exercise register reads and writes around taken branches and indirect jumps.
+Separate storage updates from disabled write forwarding	RegisterFileWriteTimingTest	Observe the stored value before a valid write reaches the edge and the updated value after the edge with the all-disabled FP forwarding mask.

@@ -1,0 +1,78 @@
+--- a/src/main/scala/rift2Core/backend/LSU/Dcache.scala
++++ b/src/main/scala/rift2Core/backend/LSU/Dcache.scala
+@@ -228,6 +228,75 @@
+ 
+ class Dcache(edge: TLEdgeOut, id: Int)(implicit p: Parameters) extends DcacheBase(edge, id) with DcacheScoreBoard{
+ 
++  if (hasL2) {
++    val nativeProbeCount = RegInit(0.U(3.W))
++    when(probeUnit.get.io.cache_probe.fire && nativeProbeCount < 4.U) {
++      printf("CPU_EVAL_PROBE_NATIVE_IN address=%x ban=%d\n",
++        probeUnit.get.io.cache_probe.bits.address, probeUnit.get.io.probeBan)
++      nativeProbeCount := nativeProbeCount + 1.U
++    }
++    val probe = Module(new ProbeUnit(edge))
++    val writeback = Module(new WriteBackUnit(edge, setting = 2, id = id))
++    val submitted = RegInit(0.U(2.W))
++    val forwarded = RegInit(0.U(2.W))
++    val seenBan = RegInit(false.B)
++    val done = RegInit(false.B)
++    val reported = RegInit(false.B)
++    val startDelay = RegInit(128.U(8.W))
++    when(startDelay =/= 0.U) { startDelay := startDelay - 1.U }
++    val active = !reset.asBool && !done && startDelay === 0.U
++    val firstAddress = "h80000010".U
++    val secondAddress = "h80000000".U
++    val first = submitted === 0.U
++    val issuing = active && (first || (submitted === 1.U && forwarded === 1.U))
++    val blocked = writeback.io.miss_ban
++
++    probe.io.cache_probe.valid := issuing
++    probe.io.cache_probe.bits := 0.U.asTypeOf(probe.io.cache_probe.bits)
++    probe.io.cache_probe.bits.opcode := TLMessages.Probe
++    probe.io.cache_probe.bits.param := TLPermissions.toN
++    probe.io.cache_probe.bits.size := log2Ceil(dw / 8).U
++    probe.io.cache_probe.bits.source := id.U
++    probe.io.cache_probe.bits.address := Mux(first, firstAddress, secondAddress)
++    probe.io.cache_probe.bits.mask := Fill(l1BeatBits / 8, 1.U)
++    probe.io.probeBan := blocked
++    probe.io.req.ready := true.B
++
++    val hasInput = forwarded < submitted || probe.io.cache_probe.fire
++    val firstForwarded = probe.io.req.fire && hasInput && forwarded === 0.U
++    writeback.io.wb_req.valid := RegNext(RegNext(firstForwarded, false.B), false.B)
++    writeback.io.wb_req.bits := 0.U.asTypeOf(writeback.io.wb_req.bits)
++    writeback.io.wb_req.bits.paddr := firstAddress
++    writeback.io.wb_req.bits.is_probe := true.B
++    writeback.io.release_ban := false.B
++    writeback.io.cache_grant.valid := false.B
++    writeback.io.cache_grant.bits := 0.U.asTypeOf(writeback.io.cache_grant.bits)
++    writeback.io.cache_release.ready := true.B
++
++    when(probe.io.cache_probe.fire) { submitted := submitted + 1.U }
++    when(active && blocked && !seenBan) {
++      printf("CPU_EVAL_PROBE_BAN submitted=%d forwarded=%d\n", submitted, forwarded)
++      seenBan := true.B
++    }
++    when(probe.io.req.fire && active) {
++      val address = probe.io.req.bits.paddr
++      val expected = Mux(forwarded === 0.U, firstAddress, secondAddress)
++      when(hasInput) {
++        forwarded := forwarded + 1.U
++        printf("CPU_EVAL_PROBE_TRANSFER seq=%d address=%x ban=%d\n", forwarded, address, blocked)
++      }
++      when((!hasInput || blocked || address =/= expected) && !reported) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH ProbeUnit forwarded an unexpected request\n")
++        reported := true.B
++      }
++    }
++    when(active && forwarded === 2.U && seenBan && !blocked) {
++      printf("CPU_EVAL_PROBE_COMPLETE\n")
++      done := true.B
++    }
++  }
++
++
+ 
+ 
+ 

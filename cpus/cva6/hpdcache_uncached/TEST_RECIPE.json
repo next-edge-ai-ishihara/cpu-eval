@@ -1,0 +1,39 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_with_diagnostics.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_uncached",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv64a6_imafdc_sv39_hpdcache_wb",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_uncached.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "afe48f13f234b03631702f06d21facbd908f957d94ed84672c9bfad964ae6f07",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "f08a206fc61a615ae5d37fd16374f624dad3a467f10bfb59bc5aac12336f87d6",
+  "diagnostic_evaluator": "harness/evaluate_with_diagnostics.py",
+  "diagnostic_evaluator_sha256": "e489feae06d71e2d31a499acaeea9d5896381e747db43f5a47807286db42935e",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_amo.yaml",
+  "test_list_sha256": "490945c5d1da95716ba0a57e0d77c8b36e205b58280eb2f587810405b1246f8f",
+  "directed_test_source": "harness/hpdcache_amo_cached_reload.S",
+  "directed_test_source_sha256": "fda94e0ee1fd9bc9c6aec3d21cef3000658c592030637a0f77557f26299b3918",
+  "application_order": [
+    "checkout CVA6 at cpu_revision and initialize its HPDcache submodule at source_submodule_revision",
+    "verify that the distributed directed test has directed_test_source_sha256",
+    "run harness/evaluate.sh with the complete submitted hpdcache_uncached module"
+  ],
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hpdcache_uncached.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Use the pinned architectural tests. The evaluator copies the distributed assembly files beside the selected test list into <CVA6>/verif/tests/cpu-eval-patches. To reconstruct the additional source independently, apply the recorded provenance patch in an empty scratch directory and compare directed_test_source_sha256."
+  },
+  "test_materialization": "The selected test list and assembly source are in this problem's harness. The shared evaluator copies that source before execution; the provenance patch is not an evaluation prerequisite."
+}

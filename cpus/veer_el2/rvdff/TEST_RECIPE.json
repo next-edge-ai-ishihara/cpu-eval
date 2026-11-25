@@ -1,0 +1,47 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2193
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvdff",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+  },
+  "public_port_test": {
+    "testbench": "test/test_rvdff_ports.sv",
+    "testbench_sha256": "c5e9fe2bfeebf77b84192ff4f586612a251a744b70335e808ef7e8a0d217fd10",
+    "runner_sha256": "26c2481f3719460f46c17a0cc045b7671d755a2b937d44e48f1a2545321accf8",
+    "observations": ["rising-edge capture", "hold between rising edges", "asynchronous active-low reset", "clock- and reset-independent SHORT bypass"]
+  },
+  "run": "bash evaluate_all.sh",
+  "comparison": "The public-port test must pass, and the ordered architectural GPR comparison must report exactly 2193 matched updates and no mismatch. No separate mailbox success marker is required. The shared runner rejects cycle-limit termination before accepting the comparison."
+}

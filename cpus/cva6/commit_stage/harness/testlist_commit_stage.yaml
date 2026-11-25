@@ -1,0 +1,40 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - test: rv32im-add-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/add-01.S
+
+  - test: rv32im-fence-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/fence-01.S
+
+  - test: rv32im-lw-align-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/lw-align-01.S
+
+  - test: rv32im-sw-align-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/sw-align-01.S
+
+  - test: rv32im-zifencei-fencei
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/Zifencei/src/Fencei.S
+
+  - test: commit-stage-csr
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/commit_stage_csr.S
+
+  - test: rv32im-privilege-ecall
+    path_var: TESTS_PATH
+    gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -Drvtest_mtrap_routine=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/commit_stage_ecall.S

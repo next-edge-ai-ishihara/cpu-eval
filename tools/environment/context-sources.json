@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "boom/boom-chipyard": {
+      "kind": "boom_chipyard",
+      "url": "https://github.com/ucb-bar/chipyard.git",
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "submodules": [
+        "generators/boom",
+        "generators/cva6",
+        "generators/gemmini",
+        "generators/hwacha",
+        "generators/ibex",
+        "generators/icenet",
+        "generators/nvdla",
+        "generators/riscv-sodor",
+        "generators/rocket-chip",
+        "generators/sha3",
+        "generators/sifive-blocks",
+        "generators/sifive-cache",
+        "generators/testchipip",
+        "sims/firesim",
+        "toolchains/riscv-tools/riscv-tests",
+        "tools/DRAMSim2",
+        "tools/api-config-chipsalliance",
+        "tools/barstools",
+        "tools/dsptools",
+        "tools/rocket-dsp-utils"
+      ],
+      "nested_submodules": {
+        "generators/rocket-chip": ["api-config-chipsalliance", "hardfloat"],
+        "toolchains/riscv-tools/riscv-tests": ["env"]
+      },
+      "patches": [
+        {"directory": ".", "path": "cpus/boom/_shared/patches/0001-add-large-boom-commit-trace-config.patch"},
+        {"directory": ".", "path": "cpus/boom/_shared/patches/0002-use-published-chipyard-dependencies.patch"},
+        {"directory": ".", "path": "cpus/boom/_shared/patches/0006-enable-boom-memory-trace.patch"},
+        {"directory": "generators/boom", "path": "cpus/boom/_shared/patches/0005-add-boom-memory-trace-config.patch"},
+        {"directory": "tools/barstools", "path": "cpus/boom/_shared/patches/0003-use-published-barstools-dependencies.patch"},
+        {"directory": "tools/dsptools", "path": "cpus/boom/_shared/patches/0004-use-published-dsptools-dependencies.patch"},
+        {"directory": "generators/boom", "path": "cpus/boom/nbdtlb/patches/0001-discard-invalidated-refills.patch"}
+      ],
+      "directed_test": {
+        "source": "cpus/boom/arbiter/tests/arbiter_collision.S",
+        "target": "toolchains/riscv-tools/riscv-tests/isa/rv64ud/arbiter_collision.S",
+        "makefrag": "toolchains/riscv-tools/riscv-tests/isa/rv64ud/Makefrag"
+      },
+      "sha256": "66846b2a80a87d1d8b0f604a902b4d14ca2c87283740d05743b7bc86020f9962"
+    },
+    "boom/boom-chisel": {
+      "kind": "git_archive",
+      "url": "https://github.com/chipsalliance/chisel3.git",
+      "revision": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "empty_directories": ["project/project"],
+      "sha256": "a7e24fd2bf1ffc6b8061dcd93c8b5e9f26186d40d6a0c7e4d4f5bd3d1b9e00d5"
+    },
+    "boom/boom-spike-source": {
+      "kind": "git_archive",
+      "url": "https://github.com/riscv/riscv-isa-sim.git",
+      "revision": "ce42f1b55a3fa5a3a522439b5370be2256f68862",
+      "sha256": "c59ceb4c12282dc24cb91c6537dc743389bb8e2c58a9610d180a16344ad9e25e"
+    },
+    "rift2core/golden-catalog": {
+      "kind": "rift2core_golden_catalog",
+      "manifest": "tools/environment/rift2core-golden-tests.json",
+      "sha256": "d987721c25e65df84ce8143c6c66a44abe22da7a8ac763035481c9fe3afacdfb"
+    },
+    "rift2core/shim-template": {
+      "kind": "git_files",
+      "files": [
+        {
+          "url": "https://github.com/lefou/millw.git",
+          "revision": "8d89314ef7c770a8dbd83ec2b83da7ac178e3eec",
+          "path": "millw",
+          "target": "mill",
+          "executable": true
+        },
+        {
+          "url": "https://github.com/chipsalliance/chisel.git",
+          "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438",
+          "path": "src/main/scala/chisel3/util/Arbiter.scala",
+          "target": "shim/src/Arbiter.scala"
+        },
+        {
+          "url": "https://github.com/chipsalliance/chisel.git",
+          "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438",
+          "path": "src/main/scala/chisel3/util/Arbiter.scala",
+          "target": "shim/src/Arbiter.scala.pristine"
+        }
+      ],
+      "literal_files": {
+        ".mill-version": "0.11.6\n",
+        "build.sc": "import mill._, scalalib._\n\nobject shim extends ScalaModule {\n  def scalaVersion = \"2.13.10\"\n  def ivyDeps = Agg(ivy\"org.chipsalliance::chisel:5.1.0\")\n  def scalacPluginIvyDeps = Agg(ivy\"org.chipsalliance:::chisel-plugin:5.1.0\")\n}\n"
+      },
+      "sha256": "ac76591218bf3548be6ce86d5f3f266dc5cddafd2d29c9d261f9c31b3b9af901"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+requirement	tests	test_behavior
+Pipelined single-precision arithmetic and three input operands	rv64uf-p-fadd;rv64uf-p-fmadd	Finite arithmetic and flag cases.
+Single-precision divide and square root	rv64uf-p-fdiv	The program includes fdiv.s and fsqrt.s; it does not independently check backpressure or branch-kill behavior.
+Floating-point to integer result transfer	rv64uf-p-fcvt_w	Conversion cases observe integer destination values and flags.
+Single-precision store-data transfer	rv64uf-p-ldst	The program uses flw and fsw; the comparator checks architectural memory values.
+Shared floating-point writeback	FPUExeUnitWritebackTest	The port test checks that a division and independent additions each reach the shared write port once, with their associated values and flags.

@@ -1,0 +1,42 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2193
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvdffpcie",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+  },
+  "run": "bash evaluate_all.sh",
+  "comparison": "The fixed arithmetic program is compared with Spike as 2193 ordered GPR changes. An additional test observes enabled capture, disabled hold, and asynchronous reset at the fixed 31-bit port without relying on an implementation hierarchy.",
+  "run_sha256": "c4bc8ab6e055f360e4e586bb1ee22ef800a3834700a976c44f8e232960fdc74b"
+}

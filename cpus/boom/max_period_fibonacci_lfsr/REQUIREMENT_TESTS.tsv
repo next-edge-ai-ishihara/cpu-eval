@@ -1,0 +1,5 @@
+requirement	test_program	test_behavior
+Advance using the selected maximal-period taps and reduction	MaxPeriodFibonacciLFSRPortsTest	Check the 16-bit replacement recurrence and complete six-bit XOR and XNOR periods. Accept either listed six-bit tap sequence.
+Hold state when idle and load a requested seed directly	MaxPeriodFibonacciLFSRPortsTest	Drive held state, seed alone, and seed with increment through the public input ports.
+Use the constructor seed or a safe reset value	MaxPeriodFibonacciLFSRPortsTest	Check explicit resets and the safe least significant bit for both reductions with no constructor seed.
+Preserve the end-to-end BOOM cache replacement result	rv64mi-p-cache_replacement_cycles	Require normal CPU completion and the committed x20 = 2154.

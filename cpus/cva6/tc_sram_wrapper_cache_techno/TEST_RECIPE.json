@@ -1,0 +1,49 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_word_ports.py",
+    "harness/word_ports_tb.sv",
+    "../instr_scan/harness/evaluate_ports.py",
+    "../harness/port_work_directory.py",
+    "../../../tools/cva6/replace_module.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "tc_sram_wrapper_cache_techno",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "common/local/util/tc_sram_wrapper_cache_techno.sv",
+  "source_sha256": "c10b2faf922c2d7c49a52f93087bb545077d9c82399c985c2bfdaead0a03b220",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "17b75365c54776acd1d8a672d93bc2c3406aa0a946b13bb1e1bff00a0b94a3da",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../sram_cache/harness/testlist_icache_sram.yaml",
+  "test_list_sha256": "c572355860ba88c411ad97e6782016f527b6eb69fb8016f98e8b00c8fe5b864d",
+  "test_selection": "One directed RV32 program executes the same cached instruction line in a 64-iteration loop, and six upstream RISC-V Architectural Tests provide additional complete-CPU execution. In cv32a60x, each 128-bit instruction-cache line is stored together with 128 user bits in a 256-bit tc_sram_wrapper_cache_techno instance with BYTE_ACCESS=0.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:common/local/util/tc_sram_wrapper_cache_techno.sv",
+    "test_sources": "checkout the recorded RISC-V Architectural Tests revision for the six named tests and copy ../sram_cache/harness/icache_sram_reuse.S, SHA-256 80e684d5bf77f25d31386a2f898ef50a24f4f0f41003fac6527dfb2b01cce4df, as the recorded directed test source"
+  },
+  "port_test": {
+    "configuration": {
+      "NumWords": 64,
+      "DataWidth": 256,
+      "ByteWidth": 8,
+      "NumPorts": 1,
+      "Latency": 1,
+      "SimInit": "none",
+      "BYTE_ACCESS": 0
+    },
+    "behavior": "Write and read two initialized addresses using all byte enables; compare all 256 output bits at the selected one-cycle read latency.",
+    "fixed_dependency": {
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    }
+  }
+}

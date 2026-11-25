@@ -1,0 +1,8 @@
+requirement	test_program	test_behavior
+Return byte, halfword, word, and doubleword loads	rv64ui-p-lb;rv64ui-p-lh;rv64ui-p-lw;rv64ui-p-ld	The fixed upstream load tests exercise each architectural load width through the data cache.
+Accept byte, halfword, word, and doubleword stores	rv64ui-p-sb;rv64ui-p-sh;rv64ui-p-sw;rv64ui-p-sd	The fixed upstream store tests exercise each architectural store width through the data cache.
+Process atomic and reservation traffic	rv64ua-p-amoadd_w;rv64ua-p-lrsc	The fixed upstream atomic tests exercise read-modify-write and load-reserved/store-conditional requests.
+Honor instruction/data synchronization	rv64ui-p-fence_i	The fixed upstream fence test exercises completion ordering for memory effects.
+Expose independent cache-miss responses	rv64ui-p-parallel_misses	Eight loads from distinct cache lines expose returned values as destination-register updates while keeping the pass path independent.
+Expose a cacheable store and its following load	rv64ui-p-cache_store_observe	A fixed store and load expose the committed memory update and returned register value while keeping the pass path independent.
+Preserve data carried by an uncached completion	uncached_msip	Write one to a CLINT software interrupt register, read it, and clear it. The retired load exposes data returned by the uncached TileLink path while keeping the pass path independent of that value.

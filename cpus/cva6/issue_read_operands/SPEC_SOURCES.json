@@ -1,0 +1,2060 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/issue_read_operands/SPEC_RECIPE.json",
+  "recipe_sha256": "ba71cd65a761f320563e85c5a55d27b6d7961bd3c80b3e1c0514bbe0aec41e78",
+  "prompt_sha256": "e2da0023e13cba8f851639c765dcf1c4963cb45956d40c47cbf807dce3a9c739",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    },
+    "https://github.com/openhwgroup/core-v-xif.git": {
+      "revision": "f08d951d52e3705b54767bbf13dbb4748383fe49"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, submission instructions and headings",
+      "prompt_bytes": [
+        0,
+        386
+      ],
+      "sha256": "c81c42bfb635c713747653ad59564ec23493b5c91e7c7ccca960d76334ab2937"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        386,
+        420
+      ],
+      "sha256": "393e1e2b6e472b8cf3db0198f2ab6fffefe807014d0a9d089fc18035511687b9"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        420,
+        427
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        427,
+        545
+      ],
+      "sha256": "89e8d3fad3b4ca20cfcfc2a928dad240b97b6fb98c9f837aaaeb49942eafa3a7"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        545,
+        552
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        552,
+        643
+      ],
+      "sha256": "cb02b700d1c4679cc60bf4d62a6ccaf70bfe640bf8c45114ff24333d5322eee3"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        643,
+        650
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        650,
+        755
+      ],
+      "sha256": "3f3edec337f84886d7f16e7907e8761da797fcbc0d5540051d213e89740479ea"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        755,
+        762
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        762,
+        802
+      ],
+      "sha256": "4c16709c1aa4207ba151a5ac2ab98225d6173696108e542d41cee61ca2dbaeaa"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        802,
+        809
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        809,
+        852
+      ],
+      "sha256": "5896f4c5eb1dcc502d28fe43e4d5a158ecc72484867fee3975b6c48bc59de207"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        852,
+        859
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        859,
+        927
+      ],
+      "sha256": "0a5e918d3154628fa3ce027f3f45ac67d79173f6eec765de7c217ca9914b07fa"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        927,
+        934
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        934,
+        975
+      ],
+      "sha256": "96f54cca1ed57392d8bb0dda0c726a647b5e56fc7d46c40c686f628c2d1d0ef5"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        975,
+        982
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        982,
+        1002
+      ],
+      "sha256": "318692f5663cc7dd7ca39ff03969a3e595b0cb846301258e5af8acb2de8e6dda"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1002,
+        1062
+      ],
+      "sha256": "7f093da87871964e83b059dacd164c338e39adaa88ec33e5c99d1ac5587f80e9"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        1062,
+        1363
+      ],
+      "sha256": "d24f3f80f5063536be19500aaa3320b1ceb9afa86c1d4b256ec9f8e14e929089"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1363,
+        1370
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        1370,
+        1610
+      ],
+      "sha256": "c238c2aa3fc8052ae1629131b90a31a132d2fb490e00e60a7f6e0d92fbdcf1e1"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1610,
+        1617
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        1617,
+        1780
+      ],
+      "sha256": "01e543453e44987079eec837be76257c7424bf904b07e5c37fc8d02a40a87074"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1780,
+        1787
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        1787,
+        1845
+      ],
+      "sha256": "a4b3953aa47dafbda99ec9af61eeef43486983418f55351aa4c8dcdb03767ea8"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1845,
+        1852
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        1852,
+        1930
+      ],
+      "sha256": "45890270c27871bca0de6bec4a6e0b2b985c3c4315bd6128d5c80d2353938147"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1930,
+        1937
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        1937,
+        2332
+      ],
+      "sha256": "f8fa5f22dffebb3db7f9fae9a56f91a200f9959d33ac2088886555b155c38999"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2332,
+        2339
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        2339,
+        2366
+      ],
+      "sha256": "f7eee19ba498e32442a64262799f5e9ff71b766b0b3a231463834eb9b85cd72b"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2366,
+        2373
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        2373,
+        2400
+      ],
+      "sha256": "c434fab8b0c8f5c1d16aa1399567cfb2f21cb3616c4f633bdb5b2087dedd253e"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2400,
+        2407
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        2407,
+        2440
+      ],
+      "sha256": "63111fc0511694ef49d8590ca8fb4a6bfeec947eb5cadf2d8335faa65e7338cc"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2440,
+        2447
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 37,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        2447,
+        2482
+      ],
+      "sha256": "982c0df49d23dadbc21e5ba9e8715a28c258a550b3ec3e34e4139b0b9f0b6442"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2482,
+        2489
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 39,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        2489,
+        2603
+      ],
+      "sha256": "33eb0d30f5d426d6482e90bd905b32e7abcf72a62e2b206b5fcc1295119313b5"
+    },
+    {
+      "index": 40,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2603,
+        2610
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 41,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        2610,
+        2647
+      ],
+      "sha256": "1f443dc756e09af07c212f96dee180a01b1fd67097f7fbb9d90fc66cd0fcb98f"
+    },
+    {
+      "index": 42,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2647,
+        2654
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 43,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        2654,
+        2686
+      ],
+      "sha256": "c752435b82a571b2fbac85856f4f255afd42b233c16482c1d5d4ab36e924c478"
+    },
+    {
+      "index": 44,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2686,
+        2693
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 45,
+      "kind": "verbatim_source",
+      "source": 22,
+      "prompt_bytes": [
+        2693,
+        2928
+      ],
+      "sha256": "51a0f44c76a250a6221259d94bc1f8c92c467f9cdee6a5e22fce8bf2e64b717c"
+    },
+    {
+      "index": 46,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2928,
+        2935
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 47,
+      "kind": "verbatim_source",
+      "source": 23,
+      "prompt_bytes": [
+        2935,
+        2962
+      ],
+      "sha256": "60de69d76f2084f75d68c2cf1ec33c01a5eabe5a89800067c3c56248991205c9"
+    },
+    {
+      "index": 48,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2962,
+        2969
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 49,
+      "kind": "verbatim_source",
+      "source": 24,
+      "prompt_bytes": [
+        2969,
+        3273
+      ],
+      "sha256": "10d938dd5ecd516ef90c7bfb064b500653dba3384eba1494f04b5768ec8b77eb"
+    },
+    {
+      "index": 50,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        3273,
+        3351
+      ],
+      "sha256": "7c0ccfc2bf886a46b69fea82922638b46b498d0585f53bca17fbdd86335cb6bb"
+    },
+    {
+      "index": 51,
+      "kind": "verbatim_source",
+      "source": 25,
+      "prompt_bytes": [
+        3351,
+        3644
+      ],
+      "sha256": "60e14d3125d774bd2bee0db987f53874d91a2ac0fd247a7617ac73a339dc9642"
+    },
+    {
+      "index": 52,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        3644,
+        3651
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 53,
+      "kind": "verbatim_source",
+      "source": 26,
+      "prompt_bytes": [
+        3651,
+        3741
+      ],
+      "sha256": "37b317bfecc1fd31fbad9c0aaeeb10a65c29e5ce10a949d1b8c3bdeda8c99f9b"
+    },
+    {
+      "index": 54,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        3741,
+        3797
+      ],
+      "sha256": "e71505aba065ddb281ea6da02417bd65c95a740ada6c5d5ca45e66efa5d428d2"
+    },
+    {
+      "index": 55,
+      "kind": "verbatim_source",
+      "source": 27,
+      "prompt_bytes": [
+        3797,
+        5139
+      ],
+      "sha256": "7334607b1aa0816986fd1295de2dd6c6641c4dd9d01f1ea0d72461f8fc936584"
+    },
+    {
+      "index": 56,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        5139,
+        5184
+      ],
+      "sha256": "16ab8841be19b6437f519e370a014818c34cc127977ddf6ac45cfb13290c150f"
+    },
+    {
+      "index": 57,
+      "kind": "verbatim_source",
+      "source": 28,
+      "prompt_bytes": [
+        5184,
+        10490
+      ],
+      "sha256": "f4d925e67d5632269288e51487e09995ead3048c5a071b5afe3478a16ffbbbea"
+    },
+    {
+      "index": 58,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        10490,
+        10555
+      ],
+      "sha256": "dbc229eab1a43817da7496f2edc4d31ad8a0806ca8014269f3f58dd41952e4d9"
+    },
+    {
+      "index": 59,
+      "kind": "verbatim_source",
+      "source": 29,
+      "prompt_bytes": [
+        10555,
+        10981
+      ],
+      "sha256": "f7b58317957d45715672841c961a33489a5f87c764b226eaf61c8985ab4e39e6"
+    },
+    {
+      "index": 60,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        10981,
+        10988
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 61,
+      "kind": "verbatim_source",
+      "source": 30,
+      "prompt_bytes": [
+        10988,
+        11699
+      ],
+      "sha256": "4724d1e4f3911703df2cd7fac1e0f557df5e0b30ab1d0a66342dc5073179cdad"
+    },
+    {
+      "index": 62,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        11699,
+        11706
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 63,
+      "kind": "verbatim_source",
+      "source": 31,
+      "prompt_bytes": [
+        11706,
+        14024
+      ],
+      "sha256": "72713ae94bf9be8026eab33a5a397be4ef3f84577a587c330c9f2bbbaa74eda7"
+    },
+    {
+      "index": 64,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        14024,
+        14031
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 65,
+      "kind": "verbatim_source",
+      "source": 32,
+      "prompt_bytes": [
+        14031,
+        14378
+      ],
+      "sha256": "2eb355716bd35a9891a0ae385e55d430c2302e85c0a9bd68ca2d8a72c8fff8bc"
+    },
+    {
+      "index": 66,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        14378,
+        14385
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 67,
+      "kind": "verbatim_source",
+      "source": 33,
+      "prompt_bytes": [
+        14385,
+        14622
+      ],
+      "sha256": "a86c9d0ca44584b7198102777ba8487fdd8b0481d47fa5853bf128aefe07bbaa"
+    },
+    {
+      "index": 68,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        14622,
+        14629
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 69,
+      "kind": "verbatim_source",
+      "source": 34,
+      "prompt_bytes": [
+        14629,
+        14960
+      ],
+      "sha256": "ba4e5780331d727bc9ca65551345e5b210698451404301750a78d48d0da4b5da"
+    },
+    {
+      "index": 70,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        14960,
+        15007
+      ],
+      "sha256": "a170f23fb6bda45f8c9b68e3609238d12cbed5500d94bbae68aab307738d21e1"
+    },
+    {
+      "index": 71,
+      "kind": "verbatim_source",
+      "source": 35,
+      "prompt_bytes": [
+        15007,
+        16005
+      ],
+      "sha256": "f452c33861ad46119cf6e118b8caf193fbb70459117ff9d8467324f5d6253ee7"
+    },
+    {
+      "index": 72,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        16005,
+        16012
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 73,
+      "kind": "verbatim_source",
+      "source": 36,
+      "prompt_bytes": [
+        16012,
+        18850
+      ],
+      "sha256": "a33e901f18351a38615e75f880239b682b2b855239d56dce19c0e263a32b621d"
+    },
+    {
+      "index": 74,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        18850,
+        18925
+      ],
+      "sha256": "99c3aca7b7c35a45cec54badae7882e32de36ae92cbcef51a6adbf5d38b54d55"
+    },
+    {
+      "index": 75,
+      "kind": "verbatim_source",
+      "source": 37,
+      "prompt_bytes": [
+        18925,
+        20115
+      ],
+      "sha256": "6c6c532c29fc399cff6e21df153e0f084e2b1bf31d4ec25f232bf19e34b26282"
+    },
+    {
+      "index": 76,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        20115,
+        20168
+      ],
+      "sha256": "b19ef0944ef535f903db69ce93af2bb0dec14622fde6827385d7f35c812cb82b"
+    },
+    {
+      "index": 77,
+      "kind": "verbatim_source",
+      "source": 38,
+      "prompt_bytes": [
+        20168,
+        21283
+      ],
+      "sha256": "1e40caf99d96e4b4d4ba9c00f5d4c8d1b96636a1329973e501190236f1d5cdbf"
+    },
+    {
+      "index": 78,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        21283,
+        21356
+      ],
+      "sha256": "2e9497a132dba8d6e69de246b8c50db6d81e559bd335ae9e1c22c5b9e085050e"
+    },
+    {
+      "index": 79,
+      "kind": "verbatim_source",
+      "source": 39,
+      "prompt_bytes": [
+        21356,
+        22492
+      ],
+      "sha256": "a7f44a33b46a84278f9faa2bbb427da265d55c833936f43255a322e7b070d278"
+    },
+    {
+      "index": 80,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        22492,
+        22555
+      ],
+      "sha256": "e0916e921764a1323a5016bfd4b0a91c3996b7c2c1106a5cbf99f5d612cddc72"
+    },
+    {
+      "index": 81,
+      "kind": "verbatim_source",
+      "source": 40,
+      "prompt_bytes": [
+        22555,
+        22639
+      ],
+      "sha256": "bae1e4349ffa1e076698b1f28043a29ef6a25c955fffe6222e22abdb43b27192"
+    },
+    {
+      "index": 82,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        22639,
+        22646
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 83,
+      "kind": "verbatim_source",
+      "source": 41,
+      "prompt_bytes": [
+        22646,
+        22740
+      ],
+      "sha256": "c78235555a921ac5b5674d48610c49ec69a085fae28a935295405f6c18159775"
+    },
+    {
+      "index": 84,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        22740,
+        22747
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 85,
+      "kind": "verbatim_source",
+      "source": 42,
+      "prompt_bytes": [
+        22747,
+        23661
+      ],
+      "sha256": "67c257ecf7ca67010c379377329f03afb4f7066db95e69fa821f35a28de4a2b2"
+    },
+    {
+      "index": 86,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        23661,
+        23708
+      ],
+      "sha256": "557a90023ace4531841c9ff679dd79999d4dedb285e6b146cc41e6d3ec2a3e19"
+    },
+    {
+      "index": 87,
+      "kind": "verbatim_source",
+      "source": 43,
+      "prompt_bytes": [
+        23708,
+        23814
+      ],
+      "sha256": "a50fbdee7036919d64a83a38742c2161d31df124d0bc7a64a84ad98400716405"
+    },
+    {
+      "index": 88,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        23814,
+        23821
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 89,
+      "kind": "verbatim_source",
+      "source": 44,
+      "prompt_bytes": [
+        23821,
+        23916
+      ],
+      "sha256": "974fe7d5a5452d07c900b27ce6deb19d44b2323ca3da4a3f9f88bce1303ce1bc"
+    },
+    {
+      "index": 90,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        23916,
+        23956
+      ],
+      "sha256": "7bdfb570b23999981f5742a39f12a65b54b8e11df6c71c8105d239b73ea2f00d"
+    },
+    {
+      "index": 91,
+      "kind": "verbatim_source",
+      "source": 45,
+      "prompt_bytes": [
+        23956,
+        24723
+      ],
+      "sha256": "55e8e82d8e9122edf34c6034b5027816239ed823f5f3afcf5a6631ad5dd95989"
+    },
+    {
+      "index": 92,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        24723,
+        24774
+      ],
+      "sha256": "ca8977909e90e94351882793cfc75a36fa2599b807fb005384f55fefe267e92e"
+    },
+    {
+      "index": 93,
+      "kind": "verbatim_source",
+      "source": 46,
+      "prompt_bytes": [
+        24774,
+        24862
+      ],
+      "sha256": "48f844c16705056b1999c331e2cb30fd8a8792e6203159866fd141f878ccf4ec"
+    },
+    {
+      "index": 94,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        24862,
+        24869
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 95,
+      "kind": "verbatim_source",
+      "source": 47,
+      "prompt_bytes": [
+        24869,
+        25164
+      ],
+      "sha256": "bbbb01355bbe13481ba719fd8b64f8e3d9fe65dcc4b41243d9e208bee3b468df"
+    },
+    {
+      "index": 96,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        25164,
+        25255
+      ],
+      "sha256": "f725c7d1f423e2f87ababc4b5f6aa9998a6a6021b9ba89e53d33d2c5252fea18"
+    },
+    {
+      "index": 97,
+      "kind": "verbatim_source",
+      "source": 48,
+      "prompt_bytes": [
+        25255,
+        25511
+      ],
+      "sha256": "b96a63e1bf4e1e247b2eb991965767300c7e8fddbdb43aa4a26bd768376a14fa"
+    },
+    {
+      "index": 98,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        25511,
+        25515
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 99,
+      "kind": "verbatim_source",
+      "source": 49,
+      "prompt_bytes": [
+        25515,
+        26289
+      ],
+      "sha256": "68c001d109d8f93d39413823e5c795109617d29d7823979d386b72a20cdaf587"
+    },
+    {
+      "index": 100,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        26289,
+        26293
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 101,
+      "kind": "verbatim_source",
+      "source": 50,
+      "prompt_bytes": [
+        26293,
+        27277
+      ],
+      "sha256": "e0699e24519053164ec18312b49fa036c67108662234d6352cc1baeb72b7a78c"
+    },
+    {
+      "index": 102,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        27277,
+        27281
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 103,
+      "kind": "verbatim_source",
+      "source": 51,
+      "prompt_bytes": [
+        27281,
+        27334
+      ],
+      "sha256": "6c0386897c45a7edc827b9b3323380f2c17610a3b640f96856b06f38ead43fbf"
+    },
+    {
+      "index": 104,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        27334,
+        27338
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 105,
+      "kind": "verbatim_source",
+      "source": 52,
+      "prompt_bytes": [
+        27338,
+        27752
+      ],
+      "sha256": "023a7a755359adfca1149ab746b2e0f122ed06df275799525a3643dc4f253131"
+    },
+    {
+      "index": 106,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        27752,
+        27756
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 107,
+      "kind": "verbatim_source",
+      "source": 53,
+      "prompt_bytes": [
+        27756,
+        27981
+      ],
+      "sha256": "bf716262d46cb5528b8de9803df111f7f1c532b8ce37183b7c3d9052021cc934"
+    },
+    {
+      "index": 108,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        27981,
+        27985
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 109,
+      "kind": "verbatim_source",
+      "source": 54,
+      "prompt_bytes": [
+        27985,
+        28104
+      ],
+      "sha256": "81e07586c723a596a8b472040da22da1a478faaee00b5c11c731863ea0fa3dc1"
+    },
+    {
+      "index": 110,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        28104,
+        28108
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 111,
+      "kind": "verbatim_source",
+      "source": 55,
+      "prompt_bytes": [
+        28108,
+        28167
+      ],
+      "sha256": "146f154ee5d3592a5df0e752c33523f74d340ff8785111b711473d6959f23123"
+    },
+    {
+      "index": 112,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        28167,
+        28171
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 113,
+      "kind": "verbatim_source",
+      "source": 56,
+      "prompt_bytes": [
+        28171,
+        28438
+      ],
+      "sha256": "a0303ff2fd71ab759d80263e375bb9abfd7a32b6361454acafbbb5414008915e"
+    },
+    {
+      "index": 114,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        28438,
+        28442
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 115,
+      "kind": "verbatim_source",
+      "source": 57,
+      "prompt_bytes": [
+        28442,
+        28843
+      ],
+      "sha256": "06a4aba18dca2f0a2b871e8fde700ce4c897322c288a1a20bf0c5d751157bd4b"
+    },
+    {
+      "index": 116,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        28843,
+        28847
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 117,
+      "kind": "verbatim_source",
+      "source": 58,
+      "prompt_bytes": [
+        28847,
+        28958
+      ],
+      "sha256": "138ac527377809cb74c98d3fb67811c61b2dbbc8123d491687c0906e59c5aaee"
+    },
+    {
+      "index": 118,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        28958,
+        28998
+      ],
+      "sha256": "c6b23129fedd6a7ff46ddaf8e1e0a98c75be7753f22b7a0cc7c643e7e0f9cbb9"
+    },
+    {
+      "index": 119,
+      "kind": "verbatim_source",
+      "source": 59,
+      "prompt_bytes": [
+        28998,
+        34529
+      ],
+      "sha256": "2654fa1df23bf62451e829feaa01c2448415ebedd82365495d9ce4ae119a039b"
+    },
+    {
+      "index": 120,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        34529,
+        34533
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 121,
+      "kind": "verbatim_source",
+      "source": 60,
+      "prompt_bytes": [
+        34533,
+        36910
+      ],
+      "sha256": "fba82383dbafc95c259e98e65936a201ecd1b61243112959911f7b8adbbf39b7"
+    },
+    {
+      "index": 122,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        36910,
+        36914
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 123,
+      "kind": "verbatim_source",
+      "source": 61,
+      "prompt_bytes": [
+        36914,
+        38932
+      ],
+      "sha256": "cc15614a2190030a7cff272c94ac8ea81da8d0ab3d889cc3af3eda139dacdc7d"
+    },
+    {
+      "index": 124,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        38932,
+        38936
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 125,
+      "kind": "verbatim_source",
+      "source": 62,
+      "prompt_bytes": [
+        38936,
+        43527
+      ],
+      "sha256": "e285ab9dfae68bdfc6e1742814e39d861d072719f16c3dfbf9d0758b3b395885"
+    },
+    {
+      "index": 126,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        43527,
+        43531
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 127,
+      "kind": "verbatim_source",
+      "source": 63,
+      "prompt_bytes": [
+        43531,
+        44723
+      ],
+      "sha256": "98c523f2bb6b9494036bf8e13be2a1ac4cab5ac07768da69647a2cd62c6f5a3a"
+    },
+    {
+      "index": 128,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        44723,
+        44727
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "core/include/cv32a60x_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "core/include/cv32a60x_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        22,
+        25
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "core/include/cv32a60x_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        27,
+        29
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "core/include/cv32a60x_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        36,
+        40
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "core/include/cv32a60x_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        43,
+        44
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "core/include/cv32a60x_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        46,
+        47
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "core/include/cv32a60x_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        51,
+        52
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "core/include/cv32a60x_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        57,
+        57
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "core/include/cv32a60x_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        60,
+        60
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        3,
+        6
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        8,
+        13
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        21,
+        22
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        34,
+        35
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        44,
+        45
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        48,
+        54
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        71,
+        71
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        74,
+        74
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        76,
+        76
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        79,
+        79
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        85,
+        86
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        88,
+        88
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        90,
+        90
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        95,
+        98
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        102,
+        102
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/build_config_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        209,
+        217
+      ],
+      "language": "systemverilog",
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "core/include/ariane_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        190,
+        203
+      ],
+      "language": "systemverilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "core/include/ariane_pkg.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        543,
+        546
+      ],
+      "language": "systemverilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "core/include/cvxif_types.svh",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cvxif_types.svh",
+      "lines": [
+        19,
+        41
+      ],
+      "language": "systemverilog",
+      "sha256": "1bd2114654627c9df62bdc74165f14b6392e4b17eae591e86e767917c2cadfd0"
+    },
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        17,
+        138
+      ],
+      "language": "systemverilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "core/cva6.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        34,
+        40
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "core/cva6.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        42,
+        52
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "core/cva6.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        97,
+        130
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "core/cva6.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        176,
+        183
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "core/cva6.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        305,
+        309
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "core/cva6.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        312,
+        315
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "core/issue_stage.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_stage.sv",
+      "lines": [
+        176,
+        194
+      ],
+      "language": "systemverilog",
+      "sha256": "5d5fd9c1c3e0b7fbc43c907b716de7091a74197110de935b3f0fdc1b07e36618"
+    },
+    {
+      "label": "core/issue_stage.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_stage.sv",
+      "lines": [
+        242,
+        316
+      ],
+      "language": "systemverilog",
+      "sha256": "5d5fd9c1c3e0b7fbc43c907b716de7091a74197110de935b3f0fdc1b07e36618"
+    },
+    {
+      "label": "core/raw_checker.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/raw_checker.sv",
+      "lines": [
+        10,
+        36
+      ],
+      "language": "systemverilog",
+      "sha256": "758273502e408f962340ca7a8ec1c35f1a9285ae88946f38300166b2756fa59c"
+    },
+    {
+      "label": "core/ariane_regfile_ff.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ariane_regfile_ff.sv",
+      "lines": [
+        20,
+        43
+      ],
+      "language": "systemverilog",
+      "sha256": "e8b86693adf85bcdbfb40b650698fc38f675d840213be55eff1468bff273e95f"
+    },
+    {
+      "label": "core/cvxif_issue_register_commit_if_driver.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_issue_register_commit_if_driver.sv",
+      "lines": [
+        10,
+        40
+      ],
+      "language": "systemverilog",
+      "sha256": "79577da9e81421b986255b84f5249979c5b1f3218d83ed761b564dd5821ad553"
+    },
+    {
+      "label": "core/alu.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu.sv",
+      "lines": [
+        64,
+        65
+      ],
+      "language": "systemverilog",
+      "sha256": "49ba35e04bf1e8cecf8fdf6378a585bad4c0f914291dc4941e0d58dfda834f6a"
+    },
+    {
+      "label": "core/alu.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu.sv",
+      "lines": [
+        85,
+        85
+      ],
+      "language": "systemverilog",
+      "sha256": "49ba35e04bf1e8cecf8fdf6378a585bad4c0f914291dc4941e0d58dfda834f6a"
+    },
+    {
+      "label": "core/alu.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu.sv",
+      "lines": [
+        113,
+        139
+      ],
+      "language": "systemverilog",
+      "sha256": "49ba35e04bf1e8cecf8fdf6378a585bad4c0f914291dc4941e0d58dfda834f6a"
+    },
+    {
+      "label": "core/branch_unit.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/branch_unit.sv",
+      "lines": [
+        61,
+        61
+      ],
+      "language": "systemverilog",
+      "sha256": "39c5c4fad84091c91da5f391e8b6354244823b9ccd4aeec0371415c8d4862bea"
+    },
+    {
+      "label": "core/branch_unit.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/branch_unit.sv",
+      "lines": [
+        73,
+        73
+      ],
+      "language": "systemverilog",
+      "sha256": "39c5c4fad84091c91da5f391e8b6354244823b9ccd4aeec0371415c8d4862bea"
+    },
+    {
+      "label": "core/cva6.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        156,
+        171
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "core/load_store_unit.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/load_store_unit.sv",
+      "lines": [
+        204,
+        204
+      ],
+      "language": "systemverilog",
+      "sha256": "ce091f34f60e489a79d335548355e7d69e7dcd3982f8ece835ce9df2baf72a78"
+    },
+    {
+      "label": "core/load_store_unit.sv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/load_store_unit.sv",
+      "lines": [
+        870,
+        887
+      ],
+      "language": "systemverilog",
+      "sha256": "ce091f34f60e489a79d335548355e7d69e7dcd3982f8ece835ce9df2baf72a78"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        21,
+        24
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        53,
+        60
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        129,
+        142
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        159,
+        160
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        169,
+        173
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        178,
+        180
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        184,
+        184
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        190,
+        190
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        224,
+        227
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        237,
+        239
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        245,
+        245
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "docs/source/x_ext.rst",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        472,
+        520
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "docs/source/x_ext.rst",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        543,
+        562
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "docs/source/x_ext.rst",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        578,
+        600
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "docs/source/x_ext.rst",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        620,
+        659
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "docs/source/x_ext.rst",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        676,
+        684
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "cpu": "Ibex",
+  "cpu_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+  "configuration": "small",
+  "source": {
+    "repository": "https://github.com/lowRISC/ibex.git",
+    "paths": [
+      "examples/sw/simple_system/pmp_smoke_test",
+      "examples/sw/simple_system/dummy_instr_test",
+      "examples/sw/simple_system/dit_test",
+      "examples/sw/simple_system/common"
+    ]
+  },
+  "build": {
+    "command_template": "make -B -C examples/sw/simple_system/<program> ARCH=rv32imc_zicsr CC=riscv64-unknown-elf-gcc OBJCOPY=riscv64-unknown-elf-objcopy <program>.elf",
+    "source_patch": null,
+    "toolchain": {
+      "gcc": "riscv64-unknown-elf-gcc 13.2.0-11ubuntu1+12"
+    },
+    "checker_source": "dv/cosim/spike_cosim.cc",
+    "checker_source_sha256": "700f6044ed0e5d6b25a70f780ad901e1138a690a76313ab65e5c35531b22fcef"
+  },
+  "programs": [
+    {
+      "name": "pmp_smoke_test",
+      "elf_sha256": "13e4a4cf338e6e597b9a84c195cc9a1ab2ace9da2300a63c799326612c6e4618"
+    },
+    {
+      "name": "dummy_instr_test",
+      "elf_sha256": "012a8777f033edf5e093491bd4a5425761e323529d07320a15eb276aeb2f67f9"
+    },
+    {
+      "name": "dit_test",
+      "elf_sha256": "8ca5b6a7aa0fb737ab481d2dea38bf2bd76af61fa444414ed79369d5fe181146"
+    }
+  ],
+  "simulation_limit": {
+    "option": "--term-after-cycles=2000000",
+    "rule": "A candidate receives PASS or functional FAIL only when the RTL and ISA executions contain compared architectural values. A program that does not finish within the 2,000,000-cycle limit is FAIL. A host timeout is also an infrastructure failure."
+  },
+  "directed_test_build": {
+    "command_template": "cpus/ibex/harness/build_directed_test.sh <ibex> <test>.S <test>.elf",
+    "script": "cpus/ibex/harness/build_directed_test.sh",
+    "script_sha256": "0a27098fd181c038cb1428b81ff5f955d3c4bc968062558d541a859d24da32b3",
+    "upstream_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+    "upstream_crt0_sha256": "b0117f2e94ab0f65eb54806c67c727cd54142713a15422d5bc81e8431d853b9f",
+    "upstream_linker_script_sha256": "318b9ed40edb2cd0e329e5617f58cacad59d8137f12e550260be29c33f824068"
+  },
+  "problem_specific_additions": [
+    {
+      "module": "ibex_compressed_decoder",
+      "source": "cpus/ibex/compressed_decoder/harness/zcb_gate_test.S",
+      "source_sha256": "48cfa8ae234ab2a70010042d45bfdc0845c7121192ab1e369b0e50141eadb092",
+      "elf_sha256": "c67b1c9e2d3bb3c302d31a270beb5f95803bee9ff6498410f794b51d304d3379",
+      "reason": "The selected configuration sets RV32ZC to ibex_pkg::RV32Zca. The quoted RISC-V Zc specification identifies Zcb as a separate extension whose encodings are reserved without Zcb. This test checks that the decoder does not accept a Zcb-shaped encoding when only Zca is selected."
+    },
+    {
+      "module": "ibex_compressed_decoder",
+      "source": "cpus/ibex/compressed_decoder/harness/zcmp_gate_test.S",
+      "source_sha256": "016151db3adfa9e75263d7c5c48bf77268c24545a1741c3c9fbc1982522edbdb",
+      "elf_sha256": "81c5a770cca2a7854b9e8de0f5c7030e564d7bfd3e6f5a681e94a064d1529108",
+      "reason": "The selected configuration sets RV32ZC to ibex_pkg::RV32Zca. The quoted RISC-V Zc specification identifies Zcmp as a separate extension. This test checks that the decoder does not accept a Zcmp-shaped cm.push/cm.pop encoding when only Zca is selected."
+    },
+    {
+      "module": "ibex_compressed_decoder",
+      "source": "cpus/ibex/compressed_decoder/harness/negative_lui_test.S",
+      "source_sha256": "76078ccf6dd2c6a8790a2c480aaa056441b104d5facddb0d29f94e3d526d2cb5",
+      "elf_sha256": "47494798590e311534843f886e76dbaeaaa0fff2c3e70951ab0ab264dc210ee7",
+      "reason": "C.LUI is a legal Zca instruction. The cosimulator compares the register write produced by a negative six-bit immediate, which requires sign extension."
+    }
+  ],
+  "problem": "ibex_compressed_decoder",
+  "assigned_programs": [
+    "pmp_smoke_test",
+    "dummy_instr_test",
+    "dit_test",
+    "zcb_gate_test",
+    "zcmp_gate_test",
+    "negative_lui_test"
+  ]
+}

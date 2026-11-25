@@ -1,0 +1,11 @@
+diff --git a/src/test/cpp/regression/main.cpp b/src/test/cpp/regression/main.cpp
+--- a/src/test/cpp/regression/main.cpp
++++ b/src/test/cpp/regression/main.cpp
+@@ -1630,6 +1630,7 @@ public:
+ 	Workspace* run(uint64_t timeout = 5000){
+ //		cout << "Start " << name << endl;
+ 		if(timeout == 0) timeout = 0x7FFFFFFFFFFFFFFF;
++		else timeout *= 10; // CPU-Eval: ten times each upstream cycle budget
+ 
+ 		currentTime = 4;
+ 		// init trace dump

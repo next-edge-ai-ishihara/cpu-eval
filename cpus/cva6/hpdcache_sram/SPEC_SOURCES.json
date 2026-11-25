@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/hpdcache_sram/SPEC_RECIPE.json",
+  "recipe_sha256": "e4948a3059da3cfbae5be8e0d69bc39154f71cf290d43ac6d16b1bcdb7ce8727",
+  "prompt_sha256": "b2c37159c5b54ff39979cf253d0004f6cda0f5132aa590fb376db6b6d00ccfb6",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    },
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        405
+      ],
+      "sha256": "79128ef45ee406170cdd6d85510bc5c712ddd645e030b238777cbe0b95bc14ec"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        405,
+        745
+      ],
+      "sha256": "0ec80ffb3b08edd1cdc9322c39bbaa55c8c0a321171ae950c443b49029df9345"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences: Module declaration",
+      "prompt_bytes": [
+        745,
+        791
+      ],
+      "sha256": "4ab99e40d4b7d80010b4a0c624af22bb0b3417c6086257be00e771774d4e247a"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        791,
+        1606
+      ],
+      "sha256": "9cb8523ee2da0e102b6b04e68dbf5118cab258f18ca6d750e310061b60d9fa1d"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences: Parent instantiation; `rtl/src/hpdcache_memctrl.sv`",
+      "prompt_bytes": [
+        1606,
+        1689
+      ],
+      "sha256": "ab27859a80bc485cef5ab7110757a511458dc2b359557940686b9fd9480f8344"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1689,
+        2729
+      ],
+      "sha256": "c19a5c1610807b1e0ae8be8c81dd98f8ca5102bf6b575d40e46c3cf15ee5a5c1"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and fences: Dependency declarations; `rtl/src/common/macros/behav/hpdcache_sram_1rw.sv`",
+      "prompt_bytes": [
+        2729,
+        2836
+      ],
+      "sha256": "3259bc9b065427fe90a62528625d6702eca58deaee12c1bf1798e8ffb1e16b51"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        2836,
+        3388
+      ],
+      "sha256": "7d237db4a68e684c73b163780b802dc38acb4f464a6ae0347319e4032f940934"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/common/macros/behav/hpdcache_sram_ecc_1rw.sv`",
+      "prompt_bytes": [
+        3388,
+        3471
+      ],
+      "sha256": "357c95a21827cc595b76ce18431f260e4875ca6b5d007f82e00dfd133f29b21b"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        3471,
+        4252
+      ],
+      "sha256": "db98732dbddf142d44565a203b90a34a6753e1687db6942c56f937f4d83e9642"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        4252,
+        4257
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_sram",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_sram.sv",
+      "lines": [
+        13,
+        34
+      ],
+      "language": "systemverilog",
+      "sha256": "941cdde519394aafb1d147ec3e592d18177a6eea431731ad51457f0d66c35250"
+    },
+    {
+      "label": "Selected CVA6 data-cache configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        109,
+        117
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Plain SRAM dependency declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/macros/behav/hpdcache_sram_1rw.sv",
+      "lines": [
+        13,
+        28
+      ],
+      "language": "systemverilog",
+      "sha256": "271bc9139cc9d51b6a1247cb6507a51e095e918e9c331dc7c468a563c2fd0f5e"
+    },
+    {
+      "label": "ECC SRAM dependency declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/macros/behav/hpdcache_sram_ecc_1rw.sv",
+      "lines": [
+        15,
+        35
+      ],
+      "language": "systemverilog",
+      "sha256": "9dabd7ed2448fa3555f066e2d4079e2d9e4588a5135a5d8ba8568c6a328ec2f3"
+    },
+    {
+      "label": "Parent instantiation in the cache directory",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_memctrl.sv",
+      "lines": [
+        394,
+        417
+      ],
+      "language": "systemverilog",
+      "sha256": "b1edc2a9a55691ef559e0489447a9bf4f49cff91f794d5518a989d0b5c61e5ef"
+    }
+  ]
+}

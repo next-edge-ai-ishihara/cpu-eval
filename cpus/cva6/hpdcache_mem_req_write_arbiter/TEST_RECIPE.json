@@ -1,0 +1,61 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/write_arbiter_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_mem_req_write_arbiter",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv64a6_imafdc_sv39_hpdcache_wb for the directed writeback test; cv32a60x for the standard suite",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_req_write_arbiter.sv",
+  "source_sha256": "91763bf92a12126d953141eda1706589c83869db232c02e83f70b6acbe324bbb",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "a8a96bdfef67665cb8653b5c1283e740fd462ce0b78db7e5c8ffbc3ffb8170f3",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_write_arbiter.yaml",
+  "test_list_sha256": "0452368b6f1ed8dd782db1558401b3974ffc614d1c2f89ec1e275afe8abcbe35",
+  "directed_test_source": "harness/hpdcache_write_arbiter_writeback.S",
+  "directed_test_source_sha256": "54d0ec2b8d6d7e4461135a0d5af6747eeef69611aa47009069dd3a5fe545b3a0",
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/utils/hpdcache_mem_req_write_arbiter.sv",
+    "reference_hdl_preconditions": "Run reference_hdl from the root of the CVA6 checkout at cpu_revision, with core/cache_subsystem/hpdcache initialized as the cv-hpdcache submodule containing commit f404e7ebbda8baa4af3729535f520a6b12a06d03. Verify SHA-256 91763bf92a12126d953141eda1706589c83869db232c02e83f70b6acbe324bbb of the retrieved source before use.",
+    "test_sources": "Use the recorded upstream tests and directed test source without an integration patch; run the port test before the CPU evaluation."
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "39a24816efb18a7fe3e846535cabeda5b89627aab1341ab2d60b9a3e1a2cbc66",
+    "test": "harness/write_arbiter_ports_tb.sv",
+    "test_sha256": "ef47c274004225c7c566c5013d9351ca78a5833da858c695e08ba45cef870ff4",
+    "fixed_dependencies": {
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_fifo_reg.sv": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5",
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_fxarb.sv": "873d1c3f00b4036c4441ffa3ccd42a7995865f64ca8b0eaa2e22cab45533ac49",
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_mux.sv": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1",
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_prio_1hot_encoder.sv": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55",
+      "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_sync_buffer.sv": "4f8e44eb05307acc9982e2797e454314e76ff4fc3cebaef372f587b07dcd1b14"
+    },
+    "configuration": "N=3, as hpdcache instantiates it; the hpdcache memory write request layout with a 64-bit address, 8-bit burst length and 4-bit ID, and the write-data layout with 64-bit data, 8-bit byte enable and last; eight requests per source; burst lengths one, two, three, recorded in the request length field; 600 cycles with independent request and data backpressure.",
+    "comparison_scope": "Ready-valid handshake and burst-last marker. The first request or data output transfer selects an accepted transaction; the other output channel must agree on the same transaction order. Requests and beats within each source retain their order. No total order across sources is imposed from their acceptance times. Arbitration during simultaneous valid requests is observed without enforcing a fixed priority choice. Only transfers and stalled valid payloads are compared; buffer capacity and feed-through mode are not fixed.",
+    "environment": "Linux, Python 3, Git, Verilator --binary --timing, C++ and make. CVA6_REPO must contain the recorded HPDcache submodule Git objects.",
+    "result": "PASS (0): all 600 cycle observations complete with 24 requests and bursts and zero errors. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2). The submission dispatcher distinguishes a candidate compile error using its compiler receipt. CPU evaluation follows port-test PASS."
+  },
+  "test_lists": [
+    {
+      "path": "harness/testlist_write_arbiter.yaml",
+      "sha256": "0452368b6f1ed8dd782db1558401b3974ffc614d1c2f89ec1e275afe8abcbe35",
+      "target": "cv64a6_imafdc_sv39_hpdcache_wb"
+    },
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+      "target": "cv32a60x"
+    }
+  ]
+}

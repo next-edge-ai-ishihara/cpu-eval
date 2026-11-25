@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Excerpt for el2_mem: design/el2_mem.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_mem.sv",
+      "lines": [
+        19,
+        90
+      ],
+      "language": "verilog",
+      "sha256": "407e49ac960503befbc02fd5eb7aad283e938ae27f546f2089a44246bea46016"
+    },
+    {
+      "label": "Excerpt for el2_mem: design/el2_veer_wrapper.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_veer_wrapper.sv",
+      "lines": [
+        914,
+        920
+      ],
+      "language": "verilog",
+      "sha256": "61ff0e5656757d7dc0e84e245c5f385f6ecc0273139b11d2114820f0e4f4a2c4"
+    },
+    {
+      "label": "Excerpt for el2_mem: design/lib/el2_mem_if.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_mem_if.sv",
+      "lines": [
+        21,
+        150
+      ],
+      "language": "verilog",
+      "sha256": "7badcf1dedd812a056d87160727350bd4fafc6e03952db84ee7e65fb4d3867c9"
+    },
+    {
+      "label": "Excerpt for el2_mem: design/ifu/el2_ifu_ic_mem.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ic_mem.sv",
+      "lines": [
+        20,
+        59
+      ],
+      "language": "verilog",
+      "sha256": "d40029dd544aad109a6572ddeb8e7bfd0bb877f94ac94f9292c34275b1b87289"
+    },
+    {
+      "label": "Excerpt for el2_mem: design/ifu/el2_ifu_iccm_mem.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_iccm_mem.sv",
+      "lines": [
+        23,
+        49
+      ],
+      "language": "verilog",
+      "sha256": "45c2a87ca6eab5aab3f98e5c785d59ac93e15d62810e8e08c1e2c1635165e444"
+    },
+    {
+      "label": "Excerpt for el2_mem: design/lib/beh_lib.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        814,
+        823
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Excerpt for el2_mem: design/lsu/el2_lsu_dccm_mem.sv",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_dccm_mem.sv",
+      "lines": [
+        30,
+        57
+      ],
+      "language": "verilog",
+      "sha256": "ab1ac2d02eef9c646f51c73bc96626eec732b9b48db1e5e77331637a1a7b21e1"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "# Implement `el2_mem`\n\nImplement the complete `el2_mem` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_mem` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n## Parent instantiation\n\n### design/el2_veer_wrapper.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n## Dependency declarations\n\n### design/lib/el2_mem_if.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n### design/ifu/el2_ifu_ic_mem.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n### design/ifu/el2_ifu_iccm_mem.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n### design/lib/beh_lib.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n\n### design/lsu/el2_lsu_dccm_mem.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and instructions",
+      "text": "```\n"
+    }
+  ]
+}

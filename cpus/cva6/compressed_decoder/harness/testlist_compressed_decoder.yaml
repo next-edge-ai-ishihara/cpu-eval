@@ -1,0 +1,173 @@
+# Copyright Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# ================================================================================
+#                  Regression test list format
+# --------------------------------------------------------------------------------
+# testlist        : Assembly test list
+# test            : Assembly test name
+# description     : Description of this test
+# gen_opts        : Instruction generator options
+# iterations      : Number of iterations of this test
+# no_iss          : Enable/disable ISS simulator (Optional)
+# gen_test        : Test name used by the instruction generator
+# asm_tests       : Path to directed, hand-coded assembly test file or directory
+# rtl_test        : RTL simulation test name
+# cmp_opts        : Compile options passed to the instruction generator
+# sim_opts        : Simulation options passed to the instruction generator
+# no_post_compare : Enable/disable comparison of trace log and ISS log (Optional)
+# compare_opts    : Options for the RTL & ISS trace comparison
+# gcc_opts        : gcc compile options
+# --------------------------------------------------------------------------------
+## C
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - test: rv32im-cadd-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cadd-01.S
+
+  - test: rv32im-caddi-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/caddi-01.S
+
+  - test: rv32im-caddi16sp-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/caddi16sp-01.S
+
+  - test: rv32im-caddi4spn-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/caddi4spn-01.S
+
+  - test: rv32im-cand-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cand-01.S
+
+  - test: rv32im-candi-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/candi-01.S
+
+  - test: rv32im-cbeqz-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cbeqz-01.S
+
+  - test: rv32im-cbnez-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cbnez-01.S
+
+  - test: rv32im-cebreak-01
+    <<: *common_test_config
+    iterations: 1
+    gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -Drvtest_mtrap_routine -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+    asm_tests: <path_var>/cpu-eval-patches/cebreak-01.S
+
+  - test: rv32im-cj-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cj-01.S
+
+  - test: rv32im-cjal-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cjal-01.S
+
+  - test: rv32im-cjalr-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cjalr-01.S
+
+  - test: rv32im-cjr-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cjr-01.S
+
+  - test: rv32im-cli-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cli-01.S
+
+  - test: rv32im-clui-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/clui-01.S
+
+  - test: rv32im-clw-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/clw-01.S
+
+  - test: rv32im-clwsp-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/clwsp-01.S
+
+  - test: rv32im-cmv-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cmv-01.S
+
+  - test: rv32im-cnop-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cnop-01.S
+
+  - test: rv32im-cor-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cor-01.S
+
+  - test: rv32im-cslli-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cslli-01.S
+
+  - test: rv32im-csrai-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/csrai-01.S
+
+  - test: rv32im-csrli-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/csrli-01.S
+
+  - test: rv32im-csub-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/csub-01.S
+
+  - test: rv32im-csw-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/csw-01.S
+
+  - test: rv32im-cswsp-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cswsp-01.S
+
+  - test: rv32im-cxor-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cxor-01.S

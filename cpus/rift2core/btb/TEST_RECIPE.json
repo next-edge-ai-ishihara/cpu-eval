@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "problem": "BTB",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/frontend/BTB.scala",
+    "source_unit": "BTB"
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-add"
+    ],
+    "policy": "The upstream program supplies CPU execution after a separate BTB instance receives two successive target updates and requests at the same PC, then holds response ready low and resumes it. The observer compares learned targets and actual accepted/returned request counts without requiring a fixed initialization interval, initial target, request acceptance rate, or response latency. An update without an outstanding lookup also checks that the BTB does not transfer a response."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Both successive BTB update/request transactions return the expected learned targets; after response stall and restart, every accepted probe request returns one learned-target response without duplicate responses; and every selected program completes with zero RTL-versus-ISA trace mismatches and no observation mismatch. An update with no outstanding lookup produces no response transfer."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "repository": "https://github.com/chipsalliance/chisel.git",
+    "version": "5.1.0",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_initialization.patch",
+      "sha256": "46c1fae8c0368ba6a1db6583d83a945172fedb0ac657f1a79210f1bfff980d28",
+      "purpose": "Compare learned targets and response counts across stall and restart, and reject a response transfer during a standalone update."
+    }
+  ]
+}

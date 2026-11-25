@@ -1,0 +1,34 @@
+--- a/src/main/scala/rift2Core/backend/Alu.scala
++++ b/src/main/scala/rift2Core/backend/Alu.scala
+@@ -42,6 +42,31 @@
+   io.alu_exe_iwb <> alu_exe_iwb_fifo.io.deq
+   alu_exe_iwb_fifo.reset := reset.asBool | io.flush
+ 
++
++  val cpuEvalQueueReported = RegInit(false.B)
++  withReset(reset.asBool | io.flush) {
++    val cpuEvalQueueHeld = RegInit(false.B)
++    when(alu_exe_iwb_fifo.io.enq.fire =/= alu_exe_iwb_fifo.io.deq.fire) {
++      cpuEvalQueueHeld := alu_exe_iwb_fifo.io.enq.fire
++    }
++    val cpuEvalDeqValid = cpuEvalQueueHeld
++    val cpuEvalEnqReady = !cpuEvalQueueHeld || alu_exe_iwb_fifo.io.deq.ready
++    when(
++      !cpuEvalQueueReported &&
++        ((alu_exe_iwb_fifo.io.deq.valid =/= cpuEvalDeqValid) ||
++          (alu_exe_iwb_fifo.io.enq.ready =/= cpuEvalEnqReady))
++    ) {
++      cpuEvalQueueReported := true.B
++      printf(
++        "CPU_EVAL_OBSERVATION_MISMATCH Alu.alu_exe_iwb_fifo deq.valid=%d expected=%d enq.ready=%d expected=%d\n",
++        alu_exe_iwb_fifo.io.deq.valid,
++        cpuEvalDeqValid,
++        alu_exe_iwb_fifo.io.enq.ready,
++        cpuEvalEnqReady
++      )
++    }
++  }
++
+ 
+   val is_32w = io.alu_iss_exe.bits.param.is_32w
+   val is_usi = io.alu_iss_exe.bits.param.is_usi

@@ -1,0 +1,365 @@
+{
+ "schema_version": 1,
+ "cpu": "BOOM",
+ "configuration": "LargeBoomConfig",
+ "source_unit": "BasicDispatcher",
+ "sources": [
+  {
+   "label": "Selected decode width",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/common/config-mixins.scala",
+   "lines": [
+    190,
+    190
+   ],
+   "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+  },
+  {
+   "label": "Large BOOM issue-queue configuration",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/common/config-mixins.scala",
+   "lines": [
+    192,
+    195
+   ],
+   "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+  },
+  {
+   "label": "Package and imports",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/dispatch.scala",
+   "lines": [
+    13,
+    21
+   ],
+   "sha256": "614f80c5af93ef8f6565ed9d588a8e5b898e0c9fa6420673466c443355ba4995"
+  },
+  {
+   "label": "Class declaration",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/dispatch.scala",
+   "lines": [
+    43,
+    44
+   ],
+   "sha256": "614f80c5af93ef8f6565ed9d588a8e5b898e0c9fa6420673466c443355ba4995"
+  },
+  {
+   "label": "Parent instantiation",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/core.scala",
+   "lines": [
+    111,
+    111
+   ],
+   "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+  },
+  {
+   "label": "Parent dispatch hazards",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/core.scala",
+   "lines": [
+    689,
+    702
+   ],
+   "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+  },
+  {
+   "label": "Parent dispatch fire",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/core.scala",
+   "lines": [
+    707,
+    709
+   ],
+   "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+  },
+  {
+   "label": "Parent connections",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/core.scala",
+   "lines": [
+    757,
+    776
+   ],
+   "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+  },
+  {
+   "label": "Dispatcher interface",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/dispatch.scala",
+   "lines": [
+    23,
+    37
+   ],
+   "sha256": "614f80c5af93ef8f6565ed9d588a8e5b898e0c9fa6420673466c443355ba4995"
+  },
+  {
+   "label": "Micro-operation routing fields",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/common/micro-op.scala",
+   "lines": [
+    29,
+    41
+   ],
+   "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+  },
+  {
+   "label": "Issue-queue type encoding",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/common/consts.scala",
+   "lines": [
+    24,
+    32
+   ],
+   "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+  },
+  {
+   "label": "Issue-queue parameter declaration",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/issue-units/issue-unit.scala",
+   "lines": [
+    24,
+    36
+   ],
+   "sha256": "3324a8843a4a6705e89bfee01b49c2e9e97d58ef28563fdcf4003ea85c4b9dc9"
+  },
+  {
+   "label": "Core dispatch width",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/common/parameters.scala",
+   "lines": [
+    149,
+    156
+   ],
+   "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+  },
+  {
+   "label": "Ready-valid transfer semantics",
+   "repo": "github.com/chipsalliance/chisel3",
+   "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+   "path": "src/main/scala/chisel3/util/Decoupled.scala",
+   "lines": [
+    12,
+    42
+   ],
+   "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+  },
+  {
+   "label": "Decoupled interface semantics",
+   "repo": "github.com/chipsalliance/chisel3",
+   "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+   "path": "src/main/scala/chisel3/util/Decoupled.scala",
+   "lines": [
+    93,
+    100
+   ],
+   "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+  },
+  {
+   "label": "Chisel version",
+   "repo": "github.com/ucb-bar/chipyard",
+   "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+   "path": "build.sbt",
+   "lines": [
+    63,
+    67
+   ],
+   "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+  }
+ ],
+ "parts": [
+  {
+   "kind": "authored",
+   "description": "Task and submission",
+   "text": "# Implement `BasicDispatcher`\n\nImplement one complete `BasicDispatcher` source-level hardware definition for the selected BOOM configuration. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class BasicDispatcher` definition in a single Scala code block, with no text outside the block.\n\n"
+  },
+  {
+   "kind": "authored",
+   "description": "CPU configuration used for evaluation heading",
+   "text": "## CPU configuration used for evaluation\n\n### src/main/scala/common/config-mixins.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 0
+  },
+  {
+   "kind": "authored",
+   "description": "Omission mark",
+   "text": "  // ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 1
+  },
+  {
+   "kind": "authored",
+   "description": "Close excerpt",
+   "text": "```\n\n"
+  },
+  {
+   "kind": "authored",
+   "description": "Package and imports heading",
+   "text": "## Package and imports\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 2
+  },
+  {
+   "kind": "authored",
+   "description": "Close excerpt",
+   "text": "```\n\n"
+  },
+  {
+   "kind": "authored",
+   "description": "Class declaration heading",
+   "text": "## Class declaration\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 3
+  },
+  {
+   "kind": "authored",
+   "description": "Close excerpt",
+   "text": "```\n\n"
+  },
+  {
+   "kind": "authored",
+   "description": "Parent instantiation heading",
+   "text": "## Parent instantiation\n\n### src/main/scala/exu/core.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 4
+  },
+  {
+   "kind": "authored",
+   "description": "Omission mark",
+   "text": "  // ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 5
+  },
+  {
+   "kind": "authored",
+   "description": "Omission mark",
+   "text": "  // ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 6
+  },
+  {
+   "kind": "authored",
+   "description": "Omission mark",
+   "text": "  // ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 7
+  },
+  {
+   "kind": "authored",
+   "description": "Close excerpt",
+   "text": "```\n\n"
+  },
+  {
+   "kind": "authored",
+   "description": "Dependency declarations heading",
+   "text": "## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 15
+  },
+  {
+   "kind": "authored",
+   "description": "heading, task text, or excerpt delimiter",
+   "text": "```\n\n### src/main/scala/exu/dispatch.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 8
+  },
+  {
+   "kind": "authored",
+   "description": "Next excerpt",
+   "text": "```\n\n### src/main/scala/common/micro-op.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 9
+  },
+  {
+   "kind": "authored",
+   "description": "Omission mark",
+   "text": "  // ...\n"
+  },
+  {
+   "kind": "authored",
+   "description": "Next excerpt",
+   "text": "```\n\n### src/main/scala/common/consts.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 10
+  },
+  {
+   "kind": "authored",
+   "description": "Next excerpt",
+   "text": "```\n\n### src/main/scala/exu/issue-units/issue-unit.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 11
+  },
+  {
+   "kind": "authored",
+   "description": "Next excerpt",
+   "text": "```\n\n### src/main/scala/common/parameters.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 12
+  },
+  {
+   "kind": "authored",
+   "description": "Next excerpt",
+   "text": "```\n\n### src/main/scala/chisel3/util/Decoupled.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 13
+  },
+  {
+   "kind": "authored",
+   "description": "Next excerpt",
+   "text": "// ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 14
+  },
+  {
+   "kind": "authored",
+   "description": "Close excerpt",
+   "text": "```\n"
+  }
+ ]
+}

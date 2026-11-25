@@ -1,0 +1,200 @@
+{
+ "schema_version": 1,
+ "cpu": "BOOM",
+ "configuration": "LargeBoomConfig",
+ "source_unit": "AMOALU",
+ "sources": [
+  {
+   "label": "Package and imports",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/AMOALU.scala",
+   "lines": [
+    1,
+    7
+   ],
+   "sha256": "f193f45a7faa1d29662782a178fbf130b65cb90c8a01d23dfb891222715c41d5"
+  },
+  {
+   "label": "Definition header and interface",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/AMOALU.scala",
+   "lines": [
+    51,
+    62
+   ],
+   "sha256": "f193f45a7faa1d29662782a178fbf130b65cb90c8a01d23dfb891222715c41d5"
+  },
+  {
+   "label": "BOOM data cache store and AMO hit stage",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/lsu/dcache.scala",
+   "lines": [
+    868,
+    871
+   ],
+   "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+  },
+  {
+   "label": "Parent instantiation and connections",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/lsu/dcache.scala",
+   "lines": [
+    895,
+    909
+   ],
+   "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+  },
+  {
+   "label": "Rocket package object",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/package.scala",
+   "lines": [
+    3,
+    5
+   ],
+   "sha256": "520268bb7f4b889cc0e45cbf449ad4d9a2d390e8aab0f89da58f397e00d63475"
+  },
+  {
+   "label": "Memory-operation command constants",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/Consts.scala",
+   "lines": [
+    50,
+    87
+   ],
+   "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+  },
+  {
+   "label": "Masked and unmasked AMO output connections",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/DCache.scala",
+   "lines": [
+    953,
+    966
+   ],
+   "sha256": "eb62288e095a3c88e6be5dd0b80e93de8f140c8dae7d6494aa16f53ddc19dd49"
+  },
+  {
+   "label": "Atomic memory operation semantics",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/a-st-ext.adoc",
+   "lines": [
+    355,
+    395
+   ],
+   "sha256": "9fa56f9bc7edc8802fea7f32b10270f8c1e2449c7dc7b985b56e695a10b7f65e"
+  },
+  {
+   "label": "Chisel version",
+   "repo": "github.com/ucb-bar/chipyard",
+   "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+   "path": "build.sbt",
+   "lines": [
+    63,
+    67
+   ],
+   "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+  }
+ ],
+ "parts": [
+  {
+   "kind": "authored",
+   "description": "Task and submission instructions",
+   "text": "# Implement `AMOALU`\n\nImplement one complete `AMOALU` source-level hardware definition for BOOM. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class AMOALU` definition in a single Scala code block, with no text outside the block.\n"
+  },
+  {
+   "kind": "authored",
+   "description": "Package heading",
+   "text": "\n## Package and imports\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 0
+  },
+  {
+   "kind": "authored",
+   "description": "Class heading",
+   "text": "```\n\n## Class declaration\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 1
+  },
+  {
+   "kind": "authored",
+   "description": "Parent heading",
+   "text": "```\n\n## Parent instantiation\n\n### src/main/scala/lsu/dcache.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 2
+  },
+  {
+   "kind": "authored",
+   "description": "Omission",
+   "text": "  // ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 3
+  },
+  {
+   "kind": "authored",
+   "description": "Dependency heading",
+   "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 8
+  },
+  {
+   "kind": "authored",
+   "description": "heading, task text, or excerpt delimiter",
+   "text": "```\n\n### src/main/scala/rocket/package.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 4
+  },
+  {
+   "kind": "authored",
+   "description": "Dependency path heading",
+   "text": "```\n\n### src/main/scala/rocket/Consts.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 5
+  },
+  {
+   "kind": "authored",
+   "description": "Related source heading",
+   "text": "```\n\n## Related source code\n\n### src/main/scala/rocket/DCache.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 6
+  },
+  {
+   "kind": "authored",
+   "description": "Documentation heading",
+   "text": "```\n\n## Documentation\n\n### src/a-st-ext.adoc\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 7
+  },
+  {
+   "kind": "authored",
+   "description": "Documentation fence",
+   "text": "```\n"
+  }
+ ]
+}

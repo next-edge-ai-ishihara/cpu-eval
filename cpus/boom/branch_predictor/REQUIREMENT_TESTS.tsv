@@ -1,0 +1,6 @@
+requirement	tests	rationale
+Return the request PC with its F3 response	BranchPredictorPublicTest	Compare the PCs of consecutive requests that start in different physical banks. The fixed frontend checks the F3 PC at dequeue.
+Return predictions in fetch order for requests starting in either bank	BranchPredictorPublicTest	Compare the position and target of learned direct jumps at the public F2 and F3 responses.
+Connect the configured predictors to the CPU frontend	rv64ui-p-beq;rv64ui-p-bne;rv64ui-p-blt;rv64ui-p-bltu;rv64ui-p-bge;rv64ui-p-bgeu;rv64ui-p-jal;rv64ui-p-jalr	Compare CPU architectural traces with Spike for the eight branch and jump programs.
+Return metadata to its originating bank when handling a commit update	BranchPredictorPublicTest	Return opaque metadata from F3 and train distinct targets through the public update. Compare the resulting predictions for both bank orders.
+Use the global history of the requested bank	BranchPredictorPublicTest	The same conditional branch in the second physical bank learns opposing directions for two global histories. The history used for that bank's prediction must match the history routed to that bank's update.

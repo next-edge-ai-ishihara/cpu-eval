@@ -1,0 +1,84 @@
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -122,6 +122,81 @@
+   val cmm_stage = Module(new Commit)
+   val i_mmu = Module(new MMU(edge = mmu_edge ))
+   val diff = Module(new diff)
++
++  val executeProbe = Module(new Execute(Seq(dcache_edge, system_edge, periph_edge)))
++  val executeProbeIO = executeProbe.io
++
++  def idleExecuteInput[T <: Data](port: ReadyValidIO[T]): Unit = {
++    port.valid := false.B
++    port.bits := 0.U.asTypeOf(port.bits)
++  }
++
++  idleExecuteInput(executeProbeIO.bru_iss_exe)
++  idleExecuteInput(executeProbeIO.csr_iss_exe)
++  idleExecuteInput(executeProbeIO.lsu_iss_exe)
++  executeProbeIO.mul_iss_exe.foreach(port => idleExecuteInput(port))
++  executeProbeIO.fpu_iss_exe.foreach(port => idleExecuteInput(port))
++  idleExecuteInput(executeProbeIO.bftq)
++  idleExecuteInput(executeProbeIO.jftq)
++  idleExecuteInput(executeProbeIO.mmu_lsu)
++  idleExecuteInput(executeProbeIO.system_access)
++  idleExecuteInput(executeProbeIO.periph_access)
++  executeProbeIO.missUnit_dcache_grant.foreach(port => idleExecuteInput(port))
++  executeProbeIO.probeUnit_dcache_probe.foreach(port => idleExecuteInput(port))
++  executeProbeIO.writeBackUnit_dcache_grant.foreach(port => idleExecuteInput(port))
++  executeProbeIO.dcache_access.foreach(port => idleExecuteInput(port))
++
++  executeProbeIO.bru_exe_iwb.ready := false.B
++  executeProbeIO.csr_exe_iwb.ready := false.B
++  executeProbeIO.lsu_exe_iwb.ready := false.B
++  executeProbeIO.lsu_exe_fwb.ready := false.B
++  executeProbeIO.lsu_exe_vwb.ready := false.B
++  executeProbeIO.mul_exe_iwb.foreach(_.ready := false.B)
++  executeProbeIO.fpu_exe_iwb.foreach(_.ready := false.B)
++  executeProbeIO.fpu_exe_fwb.foreach(_.ready := false.B)
++  executeProbeIO.bctq.ready := false.B
++  executeProbeIO.jctq.ready := false.B
++  executeProbeIO.lsu_mmu.ready := false.B
++  executeProbeIO.missUnit_dcache_acquire.foreach(_.ready := false.B)
++  executeProbeIO.missUnit_dcache_grantAck.foreach(_.ready := false.B)
++  executeProbeIO.writeBackUnit_dcache_release.foreach(_.ready := false.B)
++  executeProbeIO.dcache_getPut.foreach(_.ready := false.B)
++  executeProbeIO.system_getPut.ready := false.B
++  executeProbeIO.periph_getPut.ready := false.B
++  executeProbeIO.cmm_lsu := 0.U.asTypeOf(executeProbeIO.cmm_lsu)
++  executeProbeIO.flush := false.B
++
++  require(aluNum == 2)
++  val executeProbeIssued = RegInit(VecInit(Seq.fill(aluNum)(false.B)))
++  val executeProbeReturned = RegInit(VecInit(Seq.fill(aluNum)(false.B)))
++  val executeProbeComplete = RegInit(false.B)
++  for (lane <- 0 until aluNum) {
++    val issue = executeProbeIO.alu_iss_exe(lane)
++    val writeback = executeProbeIO.alu_exe_iwb(lane)
++    val (left, right, destination) = Seq((11, 36, 5), (37, 19, 8))(lane)
++    issue.valid := !reset.asBool && !executeProbeIssued(lane)
++    issue.bits := 0.U.asTypeOf(issue.bits)
++    issue.bits.fun.add := true.B
++    issue.bits.param.dat.op1 := left.U
++    issue.bits.param.dat.op2 := right.U
++    issue.bits.param.rd0 := destination.U
++    writeback.ready := !reset.asBool
++    when(issue.fire) {
++      executeProbeIssued(lane) := true.B
++    }
++    when(writeback.fire) {
++      printf(p"CPU_EVAL_EXECUTE_ALU lane=${lane.U} destination=${writeback.bits.rd0} result=${writeback.bits.res}\n")
++      when((!executeProbeIssued(lane) && !issue.fire) || executeProbeReturned(lane) ||
++           writeback.bits.rd0 =/= destination.U || writeback.bits.res =/= (left + right).U) {
++        printf(p"CPU_EVAL_OBSERVATION_MISMATCH Execute ALU writeback lane=${lane.U}\n")
++      }
++      executeProbeReturned(lane) := true.B
++    }
++  }
++  when(!reset.asBool && executeProbeReturned.asUInt.andR && !executeProbeComplete) {
++    printf("CPU_EVAL_EXECUTE_ALUS_COMPLETE\n")
++    executeProbeComplete := true.B
++  }
+ 
+ 
+ 

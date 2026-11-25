@@ -1,0 +1,115 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - test: rv32im-i-beq-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/beq-01.S
+
+  - test: rv32im-i-bge-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/bge-01.S
+
+  - test: rv32im-i-bgeu-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/bgeu-01.S
+
+  - test: rv32im-i-blt-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/blt-01.S
+
+  - test: rv32im-i-bltu-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/bltu-01.S
+
+  - test: rv32im-i-bne-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/bne-01.S
+
+  - test: rv32im-i-jal-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/jal-01.S
+
+  - test: rv32im-i-misalign1-jalr-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/misalign1-jalr-01.S
+
+  - test: rv32im-c-cbeqz-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cbeqz-01.S
+
+  - test: rv32im-c-cbnez-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cbnez-01.S
+
+  - test: rv32im-c-cj-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cj-01.S
+
+  - test: rv32im-c-cjal-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cjal-01.S
+
+  - test: rv32im-c-cjalr-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cjalr-01.S
+
+  - test: rv32im-c-cjr-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/C/src/cjr-01.S
+
+  - test: rv32im-add-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/add-01.S
+
+  - test: rv32im-fence-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/fence-01.S
+
+  - test: rv32im-lw-align-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/lw-align-01.S
+
+  - test: rv32im-sw-align-01
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/sw-align-01.S
+
+  - test: rv32im-zifencei-fencei
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/Zifencei/src/Fencei.S
+
+  - test: controller-csr
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/controller_csr.S
+
+  - test: rv32im-privilege-ecall
+    path_var: TESTS_PATH
+    gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -Drvtest_mtrap_routine=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/controller_ecall.S
+
+  - test: controller-wfi-resume
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/cpu-eval-patches/controller_wfi_resume.S

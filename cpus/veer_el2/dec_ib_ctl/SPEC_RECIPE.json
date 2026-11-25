@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for el2_dec_ib_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_ib_ctl.sv",
+      "lines": [
+        15,
+        69
+      ],
+      "language": "verilog",
+      "sha256": "e5aea85a31b90ff591460e6114c0c81c48936a0f99ec4f95e0f62b7cb2e66fb0"
+    },
+    {
+      "label": "Parent instantiation for el2_dec_ib_ctl",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec.sv",
+      "lines": [
+        430,
+        432
+      ],
+      "sha256": "e8c378100293edfd140fb064cf6f1cb00c8886f12ffc4c7c5a4c2a527af271ba"
+    },
+    {
+      "label": "Branch-prediction packet type",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        50,
+        60
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "Debug-command input derivation",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dbg/el2_dbg.sv",
+      "lines": [
+        623,
+        627
+      ],
+      "language": "verilog",
+      "sha256": "b68928eb9a34f23bcb54163543ecbf54b41ce2e27596a9a1763ad5a638303dc7"
+    },
+    {
+      "label": "VeeR EL2 debug-command signal definitions",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_veer.sv",
+      "lines": [
+        852,
+        856
+      ],
+      "language": "verilog",
+      "sha256": "3c1df18fbb7c0c753ed51cd842c9d58c7b04c9d485d8ec9d79177885afd610e7"
+    },
+    {
+      "label": "Instruction and prediction inputs from the fetch unit",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu.sv",
+      "lines": [
+        170,
+        187
+      ],
+      "language": "verilog",
+      "sha256": "f7300e7a2f0e4e530f1dba8c8298d045e4dcb20071f00f3f326ecb3c53cb3113"
+    },
+    {
+      "label": "Use of debug write data in the execution unit",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu.sv",
+      "lines": [
+        203,
+        206
+      ],
+      "language": "verilog",
+      "sha256": "84d25ee8c0550ef38a6a15d6ae5788d0c0bb13785bb19c5e9e1911ce05fd07af"
+    },
+    {
+      "label": "Use of a debug fence in the decode unit",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        1030,
+        1037
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "VeeR EL2 abstract register command behavior",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/debugging.md",
+      "lines": [
+        682,
+        778
+      ],
+      "language": "markdown",
+      "sha256": "e314e83f8ab1955d6e712bd4f8d4fcb5399df90657ea081a740048cf096a7a0c"
+    },
+    {
+      "label": "Memory Synchronization Trigger Register (dmst) address and fields",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/memory-map.md",
+      "lines": [
+        727,
+        764
+      ],
+      "language": "text",
+      "sha256": "bba075c75a76a9582f6676def2a4e94a68204d9fcd669c6a4d2bc78eccf17a16"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `el2_dec_ib_ctl`\n\nImplement the complete `el2_dec_ib_ctl` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_dec_ib_ctl` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "text": "\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for branch packet type",
+      "text": "\n## Dependency declarations\n\n### `design/include/el2_def.sv`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after branch packet type",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for debug-command input derivation",
+      "text": "\n## Related source code\n\n### `design/dbg/el2_dbg.sv`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after debug-command input derivation",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for debug-command signal definitions",
+      "text": "\n### `design/el2_veer.sv`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after debug-command signal definitions",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for fetch-unit outputs",
+      "text": "\n### `design/ifu/el2_ifu.sv`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after fetch-unit outputs",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for execution-unit use of debug write data",
+      "text": "\n### `design/exu/el2_exu.sv`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after execution-unit use of debug write data",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for decode-unit use of the debug fence",
+      "text": "\n### `design/dec/el2_dec_decode_ctl.sv`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after decode-unit use of the debug fence",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for abstract command register documentation",
+      "text": "\n## Documentation\n\n### `docs/source/debugging.md`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after abstract command register documentation",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for dmst register documentation",
+      "text": "\n### `docs/source/memory-map.md`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after dmst register documentation",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Port requirement for synthesized debug instructions",
+      "text": "\n## Additional requirement\n\nWhile `dbg_cmd_valid` is 1, `dec_i0_instr_d` must be `or x0, xN, x0` to read GPR xN, `or xN, x0, x0` to write GPR xN, `csrrs x0, csr, x0` to read CSR csr, and `csrrw x0, csr, x0` to write CSR csr when `dbg_cmd_type` is 0 or 1, and every output must keep the value it has with `dbg_cmd_valid` at 0 when `dbg_cmd_type` is 2.\n"
+    }
+  ]
+}

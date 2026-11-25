@@ -1,0 +1,4 @@
+requirement	tests	test_behavior
+Involuntary ProbeAckData and voluntary ReleaseData	BoomWritebackUnitTest	Across two line addresses with distinct tags and indices, the test checks the address of the local notification and four external data beats, including opcode, permission report, dedicated source, address and row data.
+Every selected cache row returned in address order	BoomWritebackUnitTest	The test supplies distinct rows two cycles after coupled reads, rejects any buffer-complete notification before every row has arrived and checks each external data beat.
+Read and output backpressure, early and late ReleaseAck	BoomWritebackUnitTest	Finite scenarios with bounded handshake waits.

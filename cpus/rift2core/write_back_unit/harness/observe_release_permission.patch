@@ -1,0 +1,20 @@
+diff --git a/src/main/scala/rift2Core/rift2Core.scala b/src/main/scala/rift2Core/rift2Core.scala
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -253,3 +253,16 @@ trait Rift2CoreImpBus{ this: Rift2CoreImpBase =>
+     dcache_bus.c.valid := exe_stage.io.writeBackUnit_dcache_release.get.valid
++
++    val cpuEvalRelease = dcache_bus.c.bits.opcode === TLMessages.Release ||
++      dcache_bus.c.bits.opcode === TLMessages.ReleaseData
++    val cpuEvalObservedRelease = RegInit(false.B)
++    when(dcache_bus.c.fire && cpuEvalRelease) {
++      when(!cpuEvalObservedRelease) {
++        printf("CPU_EVAL_WRITE_BACK_RELEASE_PERMISSION expected=%d actual=%d\n", TLPermissions.TtoN, dcache_bus.c.bits.param)
++        cpuEvalObservedRelease := true.B
++      }
++      when(dcache_bus.c.bits.param =/= TLPermissions.TtoN) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH write_back_unit Release permission expected=%d actual=%d\n", TLPermissions.TtoN, dcache_bus.c.bits.param)
++      }
++    }
+     dcache_bus.c.bits  := exe_stage.io.writeBackUnit_dcache_release.get.bits
+     exe_stage.io.writeBackUnit_dcache_release.get.ready := dcache_bus.c.ready

@@ -1,0 +1,6 @@
+requirement	test_program	test_behavior
+Return translated instruction bytes in address order	ICachePublicContractTest	Finite public ports compare refilled byte patterns at aligned and bank-offset requests, including conflicting cache sets.
+Refill the requested physical block and respect kills and invalidation	ICachePublicContractTest	Finite TileLink Get addresses, kill suppression and invalidated-block refill are observed without replacement-way requirements.
+Separate virtual and physical addresses	ICachePublicContractTest	The same virtual address with two different translated physical addresses requests the corresponding physical blocks and returns each block's bytes.
+Invalidate a refill already in progress	ICachePublicContractTest	Invalidate after the first data beat, then finish the TileLink transaction. The next fetch must request a fresh refill before returning its bytes.
+Complete the fixed repeated-load CPU program	rv64mi-p-cache_replacement_cycles	Require normal exit and PASSED; x20 is recorded as a diagnostic, not an exact replacement-policy verdict.

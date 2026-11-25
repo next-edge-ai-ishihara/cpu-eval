@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module description and declaration for hpdcache_sync_buffer",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_sync_buffer.sv",
+      "lines": [
+        26,
+        45
+      ],
+      "language": "systemverilog",
+      "sha256": "4f8e44eb05307acc9982e2797e454314e76ff4fc3cebaef372f587b07dcd1b14"
+    },
+    {
+      "label": "Single-entry selection and signal mapping in the surrounding register FIFO",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        55,
+        79
+      ],
+      "language": "systemverilog",
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+    },
+    {
+      "label": "Ready, valid, feedthrough, read, and write rules in the surrounding register FIFO",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        81,
+        111
+      ],
+      "language": "systemverilog",
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+    },
+    {
+      "label": "Data retention, feedthrough output, and reset state in the surrounding register FIFO",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        140,
+        168
+      ],
+      "language": "systemverilog",
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_sync_buffer`\n\nImplement the complete `hpdcache_sync_buffer` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_sync_buffer` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Parent instantiation; `rtl/src/common/hpdcache_fifo_reg.sv`",
+      "text": "\n```\n\n## Parent instantiation\n\n### `rtl/src/common/hpdcache_fifo_reg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences: Related source code; `rtl/src/common/hpdcache_fifo_reg.sv`",
+      "text": "\n```\n\n## Related source code\n\n### `rtl/src/common/hpdcache_fifo_reg.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "\n```\n"
+    }
+  ]
+}

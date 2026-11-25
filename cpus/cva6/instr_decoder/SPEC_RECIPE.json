@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/instr_decoder.sv",
+      "lines": [
+        10,
+        36
+      ],
+      "language": "systemverilog",
+      "sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca"
+    },
+    {
+      "label": "Coprocessor instruction opcodes and response types",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        14,
+        45
+      ],
+      "language": "systemverilog",
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3"
+    },
+    {
+      "label": "Coprocessor instruction decode table",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        54,
+        137
+      ],
+      "language": "systemverilog",
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3"
+    },
+    {
+      "label": "CVA6 CV-X-IF issue request and response types",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cvxif_types.svh",
+      "lines": [
+        19,
+        28
+      ],
+      "language": "systemverilog",
+      "sha256": "1bd2114654627c9df62bdc74165f14b6392e4b17eae591e86e767917c2cadfd0"
+    },
+    {
+      "label": "CV-X-IF issue transaction contract",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        472,
+        520
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF issue response fields",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        543,
+        562
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF issue acceptance contract",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        578,
+        600
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF register fields",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        620,
+        660
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CV-X-IF combined issue and register transaction",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        676,
+        684
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CVA6 CV-X-IF issue connection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/CVX_Interface_Coprocessor.adoc",
+      "lines": [
+        165,
+        205
+      ],
+      "sha256": "ebbcc60522b89669599d922f6c8bca0aa8a73d8a3dc7fd283463eca027b20abf"
+    },
+    {
+      "label": "Parent declaration and interface wiring",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "lines": [
+        10,
+        72
+      ],
+      "language": "systemverilog",
+      "sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7"
+    },
+    {
+      "label": "Parent instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "lines": [
+        89,
+        115
+      ],
+      "language": "systemverilog",
+      "sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions; Section heading; Fence",
+      "text": "# Implement `instr_decoder`\n\nImplement the complete `instr_decoder` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module instr_decoder` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Parent instantiation\n\n### core/cvxif_example/cvxif_example_coprocessor.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Dependency declarations\n\n### core/cvxif_example/include/cvxif_instr_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### core/include/cvxif_types.svh\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Section heading; Source path heading",
+      "text": "```\n\n## Documentation\n\n### docs/source/x_ext.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Source path heading",
+      "text": "```\n\n### docs/design/design-manual/source/CVX_Interface_Coprocessor.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    }
+  ]
+}

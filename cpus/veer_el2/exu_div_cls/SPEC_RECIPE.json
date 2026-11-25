@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu_div_ctl.sv",
+      "lines": [
+        1736,
+        1741
+      ],
+      "sha256": "80bf0b3cb3b2585341fc98194dea410550fb604ad66ac2047afb086f835343b4",
+      "label": "design/exu/el2_exu_div_ctl.sv 1736-1741"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu_div_ctl.sv",
+      "lines": [
+        1658,
+        1680
+      ],
+      "sha256": "80bf0b3cb3b2585341fc98194dea410550fb604ad66ac2047afb086f835343b4",
+      "label": "design/exu/el2_exu_div_ctl.sv 1658-1680"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "# Implement `el2_exu_div_cls`\n\nImplement the complete `el2_exu_div_cls` module. Preserve the module name, parameters, and ports shown below. Return only the complete `module el2_exu_div_cls` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "\n```\n\n## Additional requirement\n\n`operand[32]` is the sign bit for the leading sign bit count of `operand[31:0]`, and `cls` is 31 when every bit of `operand` is 1.\n"
+    }
+  ]
+}

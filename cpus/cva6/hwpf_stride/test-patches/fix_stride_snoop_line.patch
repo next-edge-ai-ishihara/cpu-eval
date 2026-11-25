@@ -1,0 +1,12 @@
+diff --git a/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv b/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv
+--- a/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv
++++ b/rtl/src/hwpf_stride/hwpf_stride_wrapper.sv
+@@ -199,6 +199,7 @@ module hwpf_stride_wrapper
+                     snoop_offset = snoop_addr_offset_q[j];
+                 end
+-                snoop_nline = {snoop_addr_tag_i[j], snoop_offset};
++                snoop_nline = {snoop_addr_tag_i[j],
++                               snoop_offset[HPDcacheCfg.clOffsetWidth +: HPDcacheCfg.setWidth]};
+                 hwpf_snoop_match[i] |= (snoop_valid         && !snoop_abort_i[j] &&
+                                        (hwpf_snoop_nline[i] ==  snoop_nline));
+             end

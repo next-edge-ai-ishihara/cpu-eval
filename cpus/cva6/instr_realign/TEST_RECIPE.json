@@ -1,0 +1,36 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/realign_ports_tb.sv",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "instr_realign",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/instr_realign.sv",
+  "source_sha256": "3ad0190ed64c81d1ecaaf6c9b3641f6ee9b0ebc17db9af7eca33316da2768f05",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "113cf4d90997fc9ab5fbb4571f94a3394c8b9d3fff5b7ffe13e8ef4448ea8faa",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_instr_realign.yaml",
+  "test_list_sha256": "31ca47c577fe0bc9fc7da8306766788e9bb6a9be7a5636f51520e823b2ec6dca",
+  "test_selection": "Nine RISC-V Architectural Tests maintained by the recorded test repository exercise compressed arithmetic instructions in both 16-bit positions of a 32-bit fetch block. They retain the CPU developers' complete-CPU execution and Spike comparison while targeting the selected RVC realignment behavior.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/instr_realign.sv",
+    "test_sources": "checkout the recorded RISC-V Architectural Tests revision and select the nine recorded C-extension sources with harness/testlist_instr_realign.yaml"
+  },
+  "port_evaluator": "harness/evaluate_ports.py",
+  "port_evaluator_sha256": "d3fd9a710b135ff3f096aae46b4995b7507f002c5ea3ebc104a6a502196180f6",
+  "port_testbench": "harness/realign_ports_tb.sv",
+  "port_testbench_sha256": "55dd8c6b2adbab4a4ba36de7ac86cf8ffb94792ece2beff8cb6b7d0b4ba1ddb7",
+  "port_alignment_observation": "Check serving_unaligned_o when output slot zero is valid. The flag is high when slot zero completes an instruction split across fetch blocks, and low for a complete instruction from the current block."
+}

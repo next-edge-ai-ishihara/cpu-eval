@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "ac7de47ea29f1bfda16f4b4c0d37d8c1740a67c85d8a4b4c0b66b37738c3a3f4",
+  "prompt_sha256": "6958e7d925311a8652af1e982adf120b0ae414b6a0760b6fd24c88f128cabae0",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        284
+      ],
+      "sha256": "ab84d8dead2ecd8e3be4deca8740e3b7e8adce48677ba0e11f7f9116daed5e96"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        284,
+        689
+      ],
+      "sha256": "51d7d471f2efffa1d3b0b144bf6de84a1ad47763791418636663b6a59b662cc6"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Parent instantiation",
+      "prompt_bytes": [
+        689,
+        768
+      ],
+      "sha256": "3febb4bfe9ee60d7ffeb9c42326bd80ce7e1b4073be8f0ec4c796ed38255505e"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        768,
+        1221
+      ],
+      "sha256": "f7ca46ebf513141976bcc3856901b5b2213d08509a405aa529239783c8b584ae"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Next parent excerpt",
+      "prompt_bytes": [
+        1221,
+        1264
+      ],
+      "sha256": "e3547ffaa2c367f73d37b67b7e9ab8f2606ad5f636ea2dc0344b79398fdf17ee"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1264,
+        1618
+      ],
+      "sha256": "a5f3c20366203299ec7d5c3d63617d7ad637710d5030704bb62ce6c81aa5cddc"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Dependency declarations",
+      "prompt_bytes": [
+        1618,
+        1689
+      ],
+      "sha256": "be3bbe0934c18c23c16215787e2c3cf94fbed7386d861d4bf9f30d3b3d70985a"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1689,
+        1891
+      ],
+      "sha256": "cd0262956b9a2488ae14713c0e71c8e6f58d70a595a225db9436e9af12817ad3"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Omission",
+      "prompt_bytes": [
+        1891,
+        1900
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1900,
+        2172
+      ],
+      "sha256": "ac137a20e4c88ae70d4689450fc19a23eca8c6ed7bcfa85901bd6f971f73827b"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Documentation",
+      "prompt_bytes": [
+        2172,
+        2234
+      ],
+      "sha256": "f424647ea3754f11427332ddaba00f077095b9f86e289a155c7dd208a40be2b0"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        2234,
+        2610
+      ],
+      "sha256": "b9488eb4ded0274ad789a969926c8ec653501656374b00fd89094f194ec1e51a"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        2610,
+        2614
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvdffie",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        349,
+        360
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Parent instantiation for rvdffie",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        436,
+        440
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "Parent instantiation for rvdffie",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu.sv",
+      "lines": [
+        178,
+        179
+      ],
+      "language": "verilog",
+      "sha256": "84d25ee8c0550ef38a6a15d6ae5788d0c0bb13785bb19c5e9e1911ce05fd07af"
+    },
+    {
+      "label": "rvdff declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        19,
+        26
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "rvclkhdr declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        791,
+        800
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Core complex reset",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/clocks.md",
+      "lines": [
+        166,
+        170
+      ],
+      "language": "markdown",
+      "sha256": "95740cffcbecb218bb2923364023c902af5de866f749d6156689de71a99f1181"
+    }
+  ]
+}

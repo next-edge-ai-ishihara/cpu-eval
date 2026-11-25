@@ -1,0 +1,31 @@
+--- a/src/main/scala/rift2Core/frontend/IF3.scala
++++ b/src/main/scala/rift2Core/frontend/IF3.scala
+@@ -76,6 +76,28 @@
+   val bimFifo =  Module(new MultiPortFifo( new BIMResp_Bundle, aw = (if(!isMinArea) 4 else 1), in = 1, out = rnChn, flow = true ) )
+   val tageFifo = Module(new MultiPortFifo( Vec(6, new TageTableResp_Bundle ), aw = (if(!isMinArea) 4 else 1), in = 1, out = rnChn, flow = true ) )
+ 
++
++  if (fpuNum == 0) {
++    val cpuEvalIndex = RegInit(0.U(4.W))
++    val cpuEvalPatterns = VecInit(Seq("h2000".U(16.W), "ha000".U(16.W), "h2082".U(16.W), "ha006".U(16.W),
++      "h9c41".U(16.W), "h9c45".U(16.W), "h6000".U(16.W), "he000".U(16.W)))
++    val cpuEvalInstruction = cpuEvalPatterns(cpuEvalIndex(2, 0))
++    val decoded = Decode16(cpuEvalInstruction.pad(32), 0.U, false)
++    when(!reset.asBool && cpuEvalIndex < 8.U) {
++      printf(p"CPU_EVAL_DECODE16 instruction=0x${Hexadecimal(cpuEvalInstruction)} fld=${decoded.lsuIsa.fld} fsd=${decoded.lsuIsa.fsd} access=${decoded.privil_isa.is_access_fault} paging=${decoded.privil_isa.is_paging_fault} ld=${decoded.lsuIsa.ld} sd=${decoded.lsuIsa.sd}\n")
++      when(decoded.lsuIsa.fld || decoded.lsuIsa.fsd ||
++        decoded.privil_isa.is_access_fault =/= (cpuEvalIndex === 4.U) ||
++        decoded.privil_isa.is_paging_fault =/= (cpuEvalIndex === 5.U) ||
++        decoded.lsuIsa.ld =/= (cpuEvalIndex === 6.U) ||
++        decoded.lsuIsa.sd =/= (cpuEvalIndex === 7.U)) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH Decode16 configured operation or fault differs\n")
++      }
++      when(cpuEvalIndex === 7.U) {
++        printf("CPU_EVAL_DECODE16_COMPLETE\n")
++      }
++      cpuEvalIndex := cpuEvalIndex + 1.U
++    }
++  }
+ 
+   val predictor_ready = btb.io.isReady & bim.io.isReady & (if (!isMinArea) { tage.io.isReady } else {true.B})
+ 

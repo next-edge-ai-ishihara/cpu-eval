@@ -1,0 +1,39 @@
+--- a/src/test/scala/rift2Core/rift2Chip_tb.scala
++++ b/src/test/scala/rift2Core/rift2Chip_tb.scala
+@@ -34,7 +34,36 @@
+ 
+ 
+ 
++class CpuEvalQueue3 extends chisel3.Module {
++  import chisel3._
++
++  val enqValid = IO(Input(Bool()))
++  val enqBits = IO(Input(UInt(32.W)))
++  val enqReady = IO(Output(Bool()))
++  val deqReady = IO(Input(Bool()))
++  val deqValid = IO(Output(Bool()))
++  val deqBits = IO(Output(UInt(32.W)))
++  val count = IO(Output(UInt(2.W)))
++
++  val queue = Module(new chisel3.util.Queue(UInt(32.W), 3, flow = true))
++  queue.io.enq.valid := enqValid
++  queue.io.enq.bits := enqBits
++  enqReady := queue.io.enq.ready
++  queue.io.deq.ready := deqReady
++  deqValid := queue.io.deq.valid
++  deqBits := queue.io.deq.bits
++  count := queue.io.count
++}
++
+ object testMain extends App {
++  (new circt.stage.ChiselStage).execute(
++    Array("--target-dir", "generated/CpuEvalQueue3", "--target", "verilog", "--split-verilog"),
++    Seq(
++      chisel3.stage.ChiselGeneratorAnnotation(() => new CpuEvalQueue3),
++      circt.stage.FirtoolOption("--disable-annotation-unknown"),
++      circt.stage.FirtoolOption("--dedup"),
++    )
++  )
+ 
+   // val cfg = new NormalCfg
+   // val cfg = new Rift2GoCfg

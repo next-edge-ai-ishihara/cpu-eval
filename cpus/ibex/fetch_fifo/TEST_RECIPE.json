@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "cpu": "Ibex",
+  "cpu_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+  "configuration": "small",
+  "source": {
+    "repository": "https://github.com/lowRISC/ibex.git",
+    "paths": [
+      "examples/sw/simple_system/pmp_smoke_test",
+      "examples/sw/simple_system/dummy_instr_test",
+      "examples/sw/simple_system/dit_test",
+      "examples/sw/simple_system/common"
+    ]
+  },
+  "build": {
+    "command_template": "make -B -C examples/sw/simple_system/<program> ARCH=rv32imc_zicsr CC=riscv64-unknown-elf-gcc OBJCOPY=riscv64-unknown-elf-objcopy <program>.elf",
+    "source_patch": null,
+    "toolchain": {
+      "gcc": "riscv64-unknown-elf-gcc 13.2.0-11ubuntu1+12"
+    },
+    "checker_source": "dv/cosim/spike_cosim.cc",
+    "checker_source_sha256": "700f6044ed0e5d6b25a70f780ad901e1138a690a76313ab65e5c35531b22fcef"
+  },
+  "programs": [
+    {
+      "name": "pmp_smoke_test",
+      "elf_sha256": "13e4a4cf338e6e597b9a84c195cc9a1ab2ace9da2300a63c799326612c6e4618"
+    },
+    {
+      "name": "dummy_instr_test",
+      "elf_sha256": "012a8777f033edf5e093491bd4a5425761e323529d07320a15eb276aeb2f67f9"
+    },
+    {
+      "name": "dit_test",
+      "elf_sha256": "8ca5b6a7aa0fb737ab481d2dea38bf2bd76af61fa444414ed79369d5fe181146"
+    }
+  ],
+  "simulation_limit": {
+    "option": "--term-after-cycles=2000000",
+    "rule": "A candidate receives PASS or functional FAIL only when the RTL and ISA executions contain compared architectural values. A program that does not finish within the 2,000,000-cycle limit is FAIL. A host timeout is also an infrastructure failure."
+  },
+  "directed_test_build": {
+    "command_template": "cpus/ibex/harness/build_directed_test.sh <ibex> <test>.S <test>.elf",
+    "script": "cpus/ibex/harness/build_directed_test.sh",
+    "script_sha256": "0a27098fd181c038cb1428b81ff5f955d3c4bc968062558d541a859d24da32b3",
+    "upstream_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+    "upstream_crt0_sha256": "b0117f2e94ab0f65eb54806c67c727cd54142713a15422d5bc81e8431d853b9f",
+    "upstream_linker_script_sha256": "318b9ed40edb2cd0e329e5617f58cacad59d8137f12e550260be29c33f824068"
+  },
+  "problem_specific_additions": [
+    {
+      "name": "fetch_fifo_external_ports",
+      "command_template": "bash cpus/ibex/fetch_fifo/evaluate_ports.sh <Ibex checkout> <candidate> <new results directory>",
+      "script": "cpus/ibex/fetch_fifo/evaluate_ports.sh",
+      "script_sha256": "b7c71b5b03a839d5aaa8e20cf60621a095d12c03fffc22860645fc54934fe96b",
+      "harness": "cpus/ibex/fetch_fifo/harness/fetch_fifo_error_tb.cpp",
+      "harness_sha256": "601520c515e4b7f07edf2ea39044e4826b6c23d3369bc2cc88899624dd2a8464",
+      "parameters": {
+        "NUM_REQS": 2,
+        "ResetAll": 0
+      },
+      "requirements": "Observe valid instruction data, instruction PC, and fetch error outputs. Check empty aligned feedthrough error, normal halfword instruction reconstruction, and first-half versus second-half-only fetch errors. When both fetch words for an unaligned instruction return errors, check that the first word determines the reported fault address. Initialize instruction PC using clear_i. After a 32-bit instruction is accepted from an empty FIFO, supply a different compressed instruction and check its PC and low halfword. Check simultaneous input and consumption with one or two buffered words, retention of the upper compressed halfword after lower-half consumption, and nonempty clear with and without simultaneous input and consumption. Check that clear removes queued and same-edge incoming words on the following cycle and selects the PC for a fresh word. Record actual instruction data in mismatch diagnostics. Do not compare invalid output data, unused upper bits of compressed instructions, error instruction length, or busy_o representation.",
+      "scope": "Provide each incoming fetch word once. For second-word reconstruction, observe either the immediate valid output or a valid output after one storage edge. For transfer observations, allow up to eight edges to establish a valid output. Failure to establish a valid observation within these budgets is FAIL.",
+      "input_evidence": "Inputs do not push a full FIFO or require full push/pop exchange.",
+      "integration": "Run after the three CPU programs through the shared suite. An output mismatch, a build failure and a run that does not complete or observe a valid output are FAIL; a wall-clock interruption is INVALID."
+    }
+  ],
+  "problem": "ibex_fetch_fifo",
+  "assigned_programs": [
+    "pmp_smoke_test",
+    "dummy_instr_test",
+    "dit_test"
+  ]
+}

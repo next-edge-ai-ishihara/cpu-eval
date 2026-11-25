@@ -1,0 +1,7 @@
+requirement	tests	rationale
+Signed division	rv64um-p-div;rv64um-p-divw	TEST_RR_OP executes DIV and DIVW and compares signed quotients, sign combinations, overflow, and divide-by-zero results at XLEN and 32-bit widths.
+Unsigned division	rv64um-p-divu;rv64um-p-divuw	TEST_RR_OP executes DIVU and DIVUW and compares unsigned quotients and divide-by-zero results; DIVUW results are sign-extended to XLEN.
+Signed remainder	rv64um-p-rem;rv64um-p-remw	TEST_RR_OP executes REM and REMW and compares dividend-sign remainders, overflow, and divide-by-zero results at XLEN and 32-bit widths.
+Unsigned remainder	rv64um-p-remu;rv64um-p-remuw	TEST_RR_OP executes REMU and REMUW and compares unsigned remainders and divide-by-zero results; REMUW results are sign-extended to XLEN.
+Accepted request and response retention	MulDivPortsTest	Change the inputs after request acceptance and keep response ready low. Check the retained quotient, occupied request port, and exactly one delivery.
+Cancellation and reuse	MulDivPortsTest	Cancel accepted work and a stalled result, observe the response after the cancellation edge, and check a distinct subsequent quotient.

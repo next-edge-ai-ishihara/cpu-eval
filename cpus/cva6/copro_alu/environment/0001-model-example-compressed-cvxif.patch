@@ -1,0 +1,32 @@
+diff --git a/customext/cvxif.cc b/customext/cvxif.cc
+--- a/customext/cvxif.cc
++++ b/customext/cvxif.cc
+@@ -136,6 +136,20 @@ class cvxif_t : public cvxif_extn_t
+     return (reg_t) -1;
+   }
+ 
++  static reg_t compressed_nop(processor_t* p, insn_t insn, reg_t pc)
++  {
++    return pc + 2;
++  }
++
++  static reg_t compressed_add(processor_t* p, insn_t insn, reg_t pc)
++  {
++    uint16_t bits = insn.bits();
++    reg_t rs1 = (bits >> 7) & 0x1f;
++    reg_t rs2 = (bits >> 2) & 0x1f;
++    WRITE_REG(10, READ_REG(rs1) + READ_REG(rs2));
++    return pc + 2;
++  }
++
+   cvxif_t()
+   {
+   }
+@@ -207,5 +221,7 @@ class cvxif_t : public cvxif_extn_t
+     insns.push_back((insn_desc_t){0x2b, 0x7f, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, c1});
+     insns.push_back((insn_desc_t){0x5b, 0x7f, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, &::illegal_instruction, c2});
+     insns.push_back((insn_desc_t){0x7b, 0x7f, &c3, &c3, &c3, &c3, &c3, &c3, &c3, c3});
++    insns.push_back((insn_desc_t){0xe000, 0xf003, &compressed_nop, &compressed_nop, &compressed_nop, &compressed_nop, &compressed_nop, &compressed_nop, &compressed_nop, compressed_nop});
++    insns.push_back((insn_desc_t){0xf000, 0xf003, &compressed_add, &compressed_add, &compressed_add, &compressed_add, &compressed_add, &compressed_add, &compressed_add, compressed_add});
+     return insns;
+   }

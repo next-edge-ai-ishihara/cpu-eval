@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_prio_1hot_encoder",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+      "lines": [
+        26,
+        35
+      ],
+      "language": "verilog",
+      "sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55"
+    },
+    {
+      "label": "Fixed-priority arbiter connection",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fxarb.sv",
+      "lines": [
+        20,
+        59
+      ],
+      "language": "verilog",
+      "sha256": "873d1c3f00b4036c4441ffa3ccd42a7995865f64ca8b0eaa2e22cab45533ac49"
+    },
+    {
+      "label": "Requester arbiter instance",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_core_arbiter.sv",
+      "lines": [
+        101,
+        109
+      ],
+      "language": "verilog",
+      "sha256": "5d895629db5a75ae8ce76385641e7ead0053d6ebd031b896e378a945b8cad4ea"
+    },
+    {
+      "label": "Requester fixed-priority order",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/overview.rst",
+      "lines": [
+        56,
+        57
+      ],
+      "sha256": "4f9a251c7d61e8576698c7644ad59f8f771e21de4183f06f6e4af223f2ca11ac"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `hpdcache_prio_1hot_encoder`\n\nImplement the complete `hpdcache_prio_1hot_encoder` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module hpdcache_prio_1hot_encoder` definition in a single SystemVerilog code\nblock, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Parent instantiation\n\n### `rtl/src/common/hpdcache_fxarb.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Related source code\n\n### `rtl/src/hpdcache_core_arbiter.sv`\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n\n## Documentation\n\n### `docs/source/overview.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings and fences",
+      "text": "\n```\n"
+    }
+  ]
+}

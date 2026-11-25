@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "07a4ef5e565b9862c04ff4d98a0310b0033d2cad2833170f6b150fd1d154f03f",
+  "prompt_sha256": "4400ad8124c0f3fd171e9f9d8e08a26e7c9fe2da3b21f2c636ebcfac8f5e210f",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        302
+      ],
+      "sha256": "58cc048d7f113669c1f4630549dcd89fbaec895c83df0f1a690723bd5a7a2ba3"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        302,
+        605
+      ],
+      "sha256": "a5a3e0c22b036b177b470389910bfd060ddd68a1081da3d0539ebf1291811a26"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Module declaration closing fence",
+      "prompt_bytes": [
+        605,
+        647
+      ],
+      "sha256": "86a78ac4cc20bc7a27f46858b3f03571d648288040162b8967a223715500b2f6"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        647,
+        1194
+      ],
+      "sha256": "e9ccdfc5763314584093fc9b5a749a89c5dbd7b091148b9ca96be9dfbc37f640"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1194,
+        1202
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1202,
+        1325
+      ],
+      "sha256": "009cc06f872250074131c61c9b71ed6182806ccd645caf8ca0f0f42f6840fb1e"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1325,
+        1333
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Parent instantiation closing fence",
+      "prompt_bytes": [
+        1333,
+        1405
+      ],
+      "sha256": "3b30802c476c0d1a23c9a5af60772395e42cd2bee393fd8ade7c2b580a1fd32a"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1405,
+        1607
+      ],
+      "sha256": "cd0262956b9a2488ae14713c0e71c8e6f58d70a595a225db9436e9af12817ad3"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1607,
+        1616
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1616,
+        1884
+      ],
+      "sha256": "05283d201547259dd59af46961187e43dc3a1bd88b0aece8eb0a42a669577f47"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Dependency declarations closing fence and Documentation heading",
+      "prompt_bytes": [
+        1884,
+        1935
+      ],
+      "sha256": "438a091e73b80e8319dc9a5f1129089efa99dea545a1655a93d2f840f3e40284"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1935,
+        2189
+      ],
+      "sha256": "e5c0bee622a03e94b4b1b2854231846550e0105f3151a9eb67f1199eb1dfd028"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        2189,
+        2195
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 14,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        2195,
+        2244
+      ],
+      "sha256": "4bdf33588347a0d52a75ee49361d27d1ceb30b1939e8adc93f55e48361661481"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvsyncss_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        449,
+        457
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Parent instantiation for rvsyncss_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_pic_ctrl.sv",
+      "lines": [
+        566,
+        577
+      ],
+      "language": "verilog",
+      "sha256": "1dd6b90a3c50a5e0c9f6dc7b8f10f9dc0283e573c27421a526bd8e0f91a6d3cc"
+    },
+    {
+      "label": "Dependency declaration rvdff",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        19,
+        26
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Dependency declaration rvdff_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        89,
+        98
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Core-complex synchronizer documentation",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/clocks.md",
+      "lines": [
+        98,
+        100
+      ],
+      "language": "markdown",
+      "sha256": "95740cffcbecb218bb2923364023c902af5de866f749d6156689de71a99f1181"
+    },
+    {
+      "label": "Parent instantiation for rvsyncss_fpga",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_pic_ctrl.sv",
+      "lines": [
+        582,
+        585
+      ],
+      "language": "verilog",
+      "sha256": "1dd6b90a3c50a5e0c9f6dc7b8f10f9dc0283e573c27421a526bd8e0f91a6d3cc"
+    },
+    {
+      "label": "Core complex reset",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/clocks.md",
+      "lines": [
+        170,
+        170
+      ],
+      "language": "markdown",
+      "sha256": "95740cffcbecb218bb2923364023c902af5de866f749d6156689de71a99f1181"
+    }
+  ]
+}

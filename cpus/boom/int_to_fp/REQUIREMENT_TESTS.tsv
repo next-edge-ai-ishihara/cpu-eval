@@ -1,0 +1,10 @@
+requirement	tests
+Signed and unsigned 64-bit integer conversion to single precision	rv64uf-p-fcvt (cases 6-9)
+Signed and unsigned 32-bit integer conversion to single precision	rv64uf-p-fcvt (cases 2-5)
+Signed and unsigned 64-bit integer conversion to double precision	rv64ud-p-fcvt (cases 6-9)
+Signed and unsigned 32-bit integer conversion to double precision	rv64ud-p-fcvt (cases 2-5)
+FMV.W.X bit-preserving move to single precision	rv64uf-p-move (cases 10-33)
+FMV.D.X used before single/double conversion of a NaN	rv64ud-p-fcvt (case 12)
+Single-precision rounding directly from a 64-bit integer	rv64ud-p-int_to_fp_direct_rounding (case 2)
+Single-precision rounding toward positive infinity	rv64ud-p-int_to_fp_direct_rounding (case 5)
+Inexact and exact conversion flags for single and double precision	rv64ud-p-int_to_fp_direct_rounding (cases 3, 4, and 6)

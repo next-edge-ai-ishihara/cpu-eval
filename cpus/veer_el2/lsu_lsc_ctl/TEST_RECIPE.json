@@ -1,0 +1,66 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2195
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_lsu_lsc_ctl",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca",
+    "post_generation_patch": {
+      "path": "test/signed-load-coverage.patch",
+      "sha256": "83dcbff89c2565bad941054c98d1635f801adb3bc6382b5297d9f1544ff43fb9",
+      "apply_in": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test",
+      "order": 1
+    },
+    "patched_source_sha256": "268096961fbbf35ed65b2b110bbe6d5491b3527a5a434d7475a36adf0c8de897",
+    "post_generation_patches": [
+      {
+        "path": "test/dccm-word-boundary.patch",
+        "sha256": "a08575a78fcdd97827614d576863cb65811c7363c2c75006be7deecaae1e35ea",
+        "apply_in": "VeeR EL2 repository root",
+        "order": 2
+      }
+    ],
+    "post_generation_artifacts": [
+      {
+        "path": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S",
+        "sha256": "268096961fbbf35ed65b2b110bbe6d5491b3527a5a434d7475a36adf0c8de897"
+      },
+      {
+        "path": "third_party/riscv-dv/yaml/iss.yaml",
+        "sha256": "02bb1d6cd0f55e425a657f51cf6ab97cecc9de3d46fceae8c19dd4e816cd22d5"
+      }
+    ]
+  },
+  "run": "bash ../_shared/run_fixed_test.sh",
+  "comparison": "Ordered Spike and RTL GPR state-change updates, including a word load crossing two DCCM words."
+}

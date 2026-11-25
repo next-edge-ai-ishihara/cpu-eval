@@ -1,0 +1,48 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2201
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_lsu_dccm_ctl",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    },
+    {
+      "path": "patches/dccm-ctl-read-coverage.patch",
+      "sha256": "73c3894f8cde582aae7112817c86203bdff1ddc854425f5b73b3f60cb1f6f629",
+      "apply_in": "VeeR EL2 repository root after generating the fixed test",
+      "order": 3
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_before_patch_sha256": "544e0547ce60f8d1a0a03221ed3dd16c59fda831ec40e45c56b097781dea8142",
+    "generated_source_after_patch_sha256": "e29c60bfce6449a635db121280e9a78185b891b8643639aef36de07eaa4a04f6"
+  },
+  "run": "bash ../_shared/run_fixed_test.sh",
+  "comparison": "The program reads the initialized DCCM word, changes one byte, and reads the resulting word after a fence. Spike and RTL GPR state updates are compared in order; exactly 2201 matching updates are required."
+}

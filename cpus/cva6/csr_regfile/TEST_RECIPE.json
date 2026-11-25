@@ -1,0 +1,136 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/check_wfi_ports.py",
+    "harness/csr_wfi_ports_tb.sv.in"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "csr_regfile",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "source_path": "core/csr_regfile.sv",
+  "reference_source_sha256": "86732e6d98215b984b9ba8eb08c5bd6496a9c918c40c7f91059c572316ee1f8e",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "719dc16533a8e6ee45e42fbd318cd8846f6b388ffb2811a535eb2ebbb7d49d01",
+  "shared_evaluator": "../harness/evaluate.sh",
+  "shared_evaluator_sha256": "eae5fa793df4494a0d5debc04a8692a1083cbf7e1215205274f3e9a2d6d6c7e5",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "testlist": "harness/testlist_csr_regfile.yaml",
+  "testlist_sha256": "b2c3f5f72956decb148815fa0a530577551dbc877f39f5a97aef00cfc5e11bee",
+  "fixed_patches_in_application_order": [
+    {
+      "order": 1,
+      "target": "cpu-eval-patches/csr_regfile_sequence.S",
+      "target_state_before": "absent",
+      "patch": "tests/0001-add-csr-regfile-sequence.patch",
+      "patch_sha256": "ff2e24f8ce14c8727d0a3c325f630491aaf8862abd562a59d85984dd0d85a09a",
+      "target_sha256_after": "d93a5637705a790465924cf7efc8bf5ece7dbb12b9faaeb446074ee438c9cf42"
+    },
+    {
+      "order": 2,
+      "target": "cpu-eval-patches/csr_regfile_sequence.S",
+      "target_sha256_before": "d93a5637705a790465924cf7efc8bf5ece7dbb12b9faaeb446074ee438c9cf42",
+      "patch": "tests/0002-delay-csr-retirement-with-cache-miss.patch",
+      "patch_sha256": "88db60e5b5646f7722de1e9ead9a49f9ccccc5d5ecbad7efd7147c325e25b779",
+      "target_sha256_after": "1ad7b5e718368a5d665abbc64dd0188d6ebd42f534178a0a325d04fdb0570022"
+    },
+    {
+      "order": 3,
+      "target": "cpu-eval-patches/csr_regfile_sequence.S",
+      "target_sha256_before": "1ad7b5e718368a5d665abbc64dd0188d6ebd42f534178a0a325d04fdb0570022",
+      "patch": "tests/0003-exercise-csr-triggered-flush.patch",
+      "patch_sha256": "f613d5a63dd93ca1f9c46963c023b880df17b2583ed25e8f8826eee20adc0db8",
+      "target_sha256_after": "c42354102e665ac5793070d624ef0d1bead9df218206290901732b8bb6831cb8"
+    },
+    {
+      "order": 4,
+      "target": "cpu-eval-patches/csr_regfile_sequence.S",
+      "target_sha256_before": "c42354102e665ac5793070d624ef0d1bead9df218206290901732b8bb6831cb8",
+      "patch": "tests/0004-exercise-custom-icache-csr.patch",
+      "patch_sha256": "d5e0f4929c292762e7e2010a7f648136906def09bcc62b0108f060d40b27058c",
+      "target_sha256_after": "dec9ace0cb8657f2091b4689358df39d6e5572face10771aa9d95cf38bf794d3"
+    },
+    {
+      "order": 5,
+      "target": "cpu-eval-patches/csr_regfile_illegal.S",
+      "target_state_before": "absent",
+      "patch": "tests/0005-add-illegal-csr-test.patch",
+      "patch_sha256": "dc08b0b786a7c0192dfd7e2278acd2c5f9feb64c4f3727d836bec58ee5b4a105",
+      "target_sha256_after": "4cc1cbd41b1b4bc32807be9d849119adb0a7e81ce94dedd966cf51678b0d7800"
+    },
+    {
+      "order": 6,
+      "target": "cpu-eval-patches/csr_regfile_ecall.S",
+      "target_state_before": "absent",
+      "patch": "tests/0006-add-ecall-test.patch",
+      "patch_sha256": "28484fe41441b69532b7657fb2115e82d8da1343d1c5a893cc00d4cb052926fc",
+      "target_sha256_after": "068179cc3ac739d16df4461bead22d085d01a769ed93c9742734fe682dc9abae"
+    },
+    {
+      "order": 7,
+      "target": "cpu-eval-patches/csr_regfile_wfi.S",
+      "target_state_before": "absent",
+      "patch": "tests/0007-add-timer-interrupt-test.patch",
+      "patch_sha256": "e90613395a393795e4404ff0f2bedb148821bd22429e4dd8b2dc49ff100b4d5d",
+      "target_sha256_after": "ab815f45d41b75ed54c2492d807d3627dccc5c9d2cc67c640ba3845c2ad07a89"
+    }
+  ],
+  "test_programs": [
+    {
+      "name": "csr-regfile-sequence",
+      "path_after_reconstruction": "cpu-eval-patches/csr_regfile_sequence.S",
+      "sha256": "dec9ace0cb8657f2091b4689358df39d6e5572face10771aa9d95cf38bf794d3"
+    },
+    {
+      "name": "csr-regfile-illegal",
+      "path_after_reconstruction": "cpu-eval-patches/csr_regfile_illegal.S",
+      "sha256": "4cc1cbd41b1b4bc32807be9d849119adb0a7e81ce94dedd966cf51678b0d7800"
+    },
+    {
+      "name": "csr-regfile-ecall",
+      "path_after_reconstruction": "cpu-eval-patches/csr_regfile_ecall.S",
+      "sha256": "068179cc3ac739d16df4461bead22d085d01a769ed93c9742734fe682dc9abae"
+    },
+    {
+      "name": "csr-regfile-wfi",
+      "path_after_reconstruction": "cpu-eval-patches/csr_regfile_wfi.S",
+      "sha256": "ab815f45d41b75ed54c2492d807d3627dccc5c9d2cc67c640ba3845c2ad07a89"
+    }
+  ],
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/csr_regfile.sv",
+    "test_programs": "Check out test_revision, verify that the four cpu-eval-patches targets are absent, apply the seven fixed patches in recorded order in an empty scratch directory with git apply, then copy cpu-eval-patches/*.S to <CVA6>/verif/tests/cpu-eval-patches, and verify every recorded before and after SHA-256."
+  },
+  "comparison": {
+    "values": "Retired instructions, register updates, and width-masked store updates produced by the CVA6 RTL model and Spike.",
+    "completion_requirement": "Passing requires CPU regression completion, trace comparison, and the public-port checks of the halt request and machine counters. The fixed tree builds and runs every program with the reference module, so after only the target is replaced a build failure, a missing target module, an RTL simulation that does not complete (including the fixed RVFI cycle limit and assertions) and a comparison mismatch are FAIL. Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID."
+  },
+  "public_port_test": {
+    "runner": "harness/check_wfi_ports.py",
+    "runner_sha256": "b70a81540eaf3bd84e6dc8a865c9a97060f819fecc9aa6703e3e8f3c78074353",
+    "template": "harness/csr_wfi_ports_tb.sv.in",
+    "template_sha256": "f72cc1803823f533ce83e2e14223cee1531bbd0159d670425b677c40e1c60599",
+    "source_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+    "configuration": "cv32a60x",
+    "source_inputs": [
+      "core/include/config_pkg.sv",
+      "core/include/cv32a60x_config_pkg.sv",
+      "core/include/riscv_pkg.sv",
+      "core/include/ariane_pkg.sv",
+      "core/include/build_config_pkg.sv",
+      "core/include/rvfi_types.svh",
+      "core/cva6.sv",
+      "core/csr_regfile.sv"
+    ],
+    "observation": "Observe halt_csr_o during WFI, its hold without an interrupt, release on a timer interrupt, and reset. Read MCYCLE/MCYCLEH and MINSTRET/MINSTRETH through csr_rdata_o. Start each low half at 0xfffffffe and check propagation into its high half when it wraps. MINSTRET holds without commit acknowledgement and advances on each acknowledged retirement.",
+    "window": "Drive each WFI and timer-release condition for four full clocks before the final observation; hold the no-interrupt state for four clocks after WFI. Inputs change only while the clock is low. This finite window accommodates direct/registered responses and interrupt synchronization; it is not an exact one-cycle or universal maximum latency requirement.",
+    "tools": "Python 3, Verilator with --binary/--timing support, C++ compiler and make. No CPU-wide build.",
+    "completion": "Exit 0 requires successful build, simulator exit 0 and both fixture PASS markers. The original four CPU/Spike programs must also pass. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2)."
+  }
+}

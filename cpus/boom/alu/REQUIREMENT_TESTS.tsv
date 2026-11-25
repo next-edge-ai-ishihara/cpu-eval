@@ -1,0 +1,15 @@
+requirement	tests
+addition	rv64ui-p-add,rv64ui-p-addi,rv64ui-p-addw,rv64ui-p-addiw
+subtraction	rv64ui-p-sub,rv64ui-p-subw
+bitwise_and	rv64ui-p-srl_and_64bit_boundary,rv64ui-p-and,rv64ui-p-andi
+bitwise_or	rv64ui-p-or,rv64ui-p-ori
+bitwise_xor	rv64ui-p-xor,rv64ui-p-xori
+logical_left_shift	rv64ui-p-sll,rv64ui-p-slli,rv64ui-p-sllw,rv64ui-p-slliw
+logical_right_shift	rv64ui-p-srl_and_64bit_boundary,rv64ui-p-srl,rv64ui-p-srli,rv64ui-p-srlw,rv64ui-p-srliw
+arithmetic_right_shift	rv64ui-p-sra_64bit_shift_amount,rv64ui-p-sra,rv64ui-p-srai,rv64ui-p-sraw,rv64ui-p-sraiw
+signed_comparison	rv64ui-p-slt,rv64ui-p-slti
+unsigned_comparison	rv64ui-p-sltu,rv64ui-p-sltiu
+word_result_sign_extension	rv64ui-p-addw,rv64ui-p-addiw,rv64ui-p-subw,rv64ui-p-sllw,rv64ui-p-slliw,rv64ui-p-srlw,rv64ui-p-srliw,rv64ui-p-sraw,rv64ui-p-sraiw
+rv64_register_sra_shift_amount_bit5	rv64ui-p-sra_64bit_shift_amount
+rv64_register_srl_shift_amount_bit5	rv64ui-p-srl_and_64bit_boundary
+rv64_and_upper_result_bits	rv64ui-p-srl_and_64bit_boundary

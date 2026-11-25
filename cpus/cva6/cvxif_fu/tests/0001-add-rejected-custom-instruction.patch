@@ -1,0 +1,30 @@
+--- a/cvxif_fu_rejection.S
++++ b/cvxif_fu_rejection.S
+@@ -7,6 +7,9 @@
+ rvtest_entry_point:
+ RVMODEL_BOOT
+ RVTEST_CODE_BEGIN
++    la t3, cvxif_rejection_trap
++    csrw mtvec, t3
++    li s1, 0
+     li t0, 5
+     li t1, 7
+     li t2, 3
+@@ -22,8 +25,17 @@
+     .word 0x386288cb  # CUS_ADD_RS3_NMSUB a7, t0, t1, t2
+     .word 0x0862957b  # CUS_ADD_RS3_RTYPE t0, t1, a0
+     addi s0, a0, 1
++    .word 0x0000002b  # Unsupported custom opcode: illegal-instruction exception
++    addi s1, s1, 1
+ RVTEST_CODE_END
+ RVMODEL_HALT
++
++.balign 4
++cvxif_rejection_trap:
++    csrr s2, mcause
++    csrr s3, mepc
++    addi t3, s3, 4
++    jr t3
+ 
+ RVTEST_DATA_BEGIN
+ RVTEST_DATA_END

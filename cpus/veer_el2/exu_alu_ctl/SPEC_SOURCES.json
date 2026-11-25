@@ -1,0 +1,768 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "a4c3dc5ea659d638338ce2d74e6297338d8a9cb13619f00c383e3f532a60c977",
+  "prompt_sha256": "81c14299d7c057ed8d69c66c3a9af2cc8c2e9a6b713bfaea88f0770f0863104e",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        0,
+        323
+      ],
+      "sha256": "4167d50e14626716ecad4da3a6756e6cf3c8000d46a8fe96fe9fd3c1f95e0e37"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        323,
+        526
+      ],
+      "sha256": "54a6cc06adf6e208932fc5f9d9344d9ef2e4beecd4a4f42b30524a324cd576df"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        526,
+        567
+      ],
+      "sha256": "fbbb30c8841fa0318564b78f70f3ea79ffeda5829cdf79b6c09bcd87c0782cdd"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        567,
+        1245
+      ],
+      "sha256": "8fc62333db2ada32c291e6f5801bc555e93d7df7b923579644cd33f0fc56c14d"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        1245,
+        1254
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1254,
+        2801
+      ],
+      "sha256": "38a16010d56db8b84537c31748725298f8d953784510891325d21db3174efb28"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        2801,
+        2841
+      ],
+      "sha256": "445bc632175ad1aa53a68fa8a69475f2bb1ac1f871084ec76bd7189239d5b66d"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2841,
+        4677
+      ],
+      "sha256": "171235aa3eb7984d3d3d938adf7e614c0f456e6f1c7ae8c6ab569a6f0651f0d9"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        4677,
+        4746
+      ],
+      "sha256": "ad23daeda88dda415cad11c7e86d7297915c41f210b097444afe9e656afdda77"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        4746,
+        6403
+      ],
+      "sha256": "12eb816994ebd1555f0332c4c28958bac740399be37cdcf52a96165a2094217e"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        6403,
+        6448
+      ],
+      "sha256": "6ca7e0b19ea621beb40e4cbd823823fd0962fc32ec3200b9254510e261688140"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        6448,
+        6892
+      ],
+      "sha256": "705a2b5f92046d4fe2c39a992625724f77bca77cd5a165dd6eacfe48eb988c55"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        6892,
+        6900
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        6900,
+        7096
+      ],
+      "sha256": "246555c1183cc88b05c38f7614f1310050b787a83e885425d61aa0f5b3bf2ed9"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        7096,
+        7104
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        7104,
+        7222
+      ],
+      "sha256": "08996b489474bca7a1793c9a7d79dbcac57a3b501de8dab79163fa3a725ea721"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        7222,
+        7231
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        7231,
+        7664
+      ],
+      "sha256": "079b06e2bc73a9fbcd5c3399d430a370ff5d65b1a66c0b0d14addd70a9cf7797"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        7664,
+        7672
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 22,
+      "prompt_bytes": [
+        7672,
+        7735
+      ],
+      "sha256": "6e6c59f1cca6a19bbd557188d7fb900a5ed0750e95598da171868a4cff3d267f"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        7735,
+        7743
+      ],
+      "sha256": "7e5fa434d114f68bea9b0cfb3122f9f5cfa0f7fb6cb50c54537f40a710088cac"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 23,
+      "prompt_bytes": [
+        7743,
+        7833
+      ],
+      "sha256": "8c1f2be4d97f8e029f8c8ac5c3eb847e797a7d9d51d6ca89872916086d126486"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        7833,
+        7842
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        7842,
+        7940
+      ],
+      "sha256": "82f1bdddc73e72ae1f3ecdf537c1dffb9b3ae411952a1259ad8443f0b2de317b"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        7940,
+        8019
+      ],
+      "sha256": "794c06aee19471b07e510fabb3149c3ec014657aa6a5fc06a220971695d61005"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        8019,
+        8251
+      ],
+      "sha256": "d2024c3f10fd6955cc0840f44491909f3caf13fa9341d9b31c7565af4724ab06"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        8251,
+        8263
+      ],
+      "sha256": "a0b375b66e671c6fc6820e9e54e69b0e127e075a3dc2b8cfd0bd2241feedf44c"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        8263,
+        8557
+      ],
+      "sha256": "6cf065bdddc12b9bc3046aae5016d9b54100b67318cb00e410aa82ebef9ecbe0"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        8557,
+        8569
+      ],
+      "sha256": "a0b375b66e671c6fc6820e9e54e69b0e127e075a3dc2b8cfd0bd2241feedf44c"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        8569,
+        9556
+      ],
+      "sha256": "52dd8e52e60a1b99c8d64afa522d44c9ba83792d231dc8b287a5ad8788da0cf4"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        9556,
+        9568
+      ],
+      "sha256": "a0b375b66e671c6fc6820e9e54e69b0e127e075a3dc2b8cfd0bd2241feedf44c"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        9568,
+        9632
+      ],
+      "sha256": "0358a90c974992ade6f0c65ed7fbfe3b8236d7969b4f162253ee317203d364c5"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        9632,
+        9644
+      ],
+      "sha256": "a0b375b66e671c6fc6820e9e54e69b0e127e075a3dc2b8cfd0bd2241feedf44c"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        9644,
+        9811
+      ],
+      "sha256": "c8afdb7699dc6a143cae171245f7535ed0dab325509eaf4df1afc53c596e0456"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        9811,
+        9823
+      ],
+      "sha256": "a0b375b66e671c6fc6820e9e54e69b0e127e075a3dc2b8cfd0bd2241feedf44c"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        9823,
+        10103
+      ],
+      "sha256": "b22f469f65bd0edab1ab191307a74b5bcd77e5b73c57e8bb3873c708179ce2b8"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        10103,
+        10140
+      ],
+      "sha256": "bdd6af9f1f45601c89704f740b63175eb3c12d17d2db78753213c5e26689fa94"
+    },
+    {
+      "index": 37,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        10140,
+        12524
+      ],
+      "sha256": "44e2a995d68e77f4040679ad38ca499279cc36def1b75098d0e2a00289b9d79a"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        12524,
+        12530
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 39,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        12530,
+        12948
+      ],
+      "sha256": "7e99846af1a541cca71908967c803f64d81a38f898ad491f0edf7ab27d13d5f3"
+    },
+    {
+      "index": 40,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        12948,
+        12954
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 41,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        12954,
+        16297
+      ],
+      "sha256": "fb3c5af71ef92b5b7894b0718798000a39d193ffad7dd1868aff4ea67f7c6b9f"
+    },
+    {
+      "index": 42,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        16297,
+        16358
+      ],
+      "sha256": "cf9c3604c5d4b8ce71d2334582da6aea44c62a07a2a03454480dfe2a074f94d4"
+    },
+    {
+      "index": 43,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        16358,
+        20990
+      ],
+      "sha256": "cdc8ab46bc9b1351142e574537c3a06c1641d0b606f464174ef3521b736de555"
+    },
+    {
+      "index": 44,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        20990,
+        21023
+      ],
+      "sha256": "204eca49cc7cab3e6dc8c0345159385553c6e412c74ce95cf53209866edc3ed3"
+    },
+    {
+      "index": 45,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        21023,
+        33312
+      ],
+      "sha256": "d3cb674777d6f5ea92ca330383fc272e6172f9df80e69af01ff438e73e213584"
+    },
+    {
+      "index": 46,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        33312,
+        33349
+      ],
+      "sha256": "b91f1167b9e19ed017160604b1e4b54c06c229daa619306ef0bcb5800fd1dd53"
+    },
+    {
+      "index": 47,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        33349,
+        40714
+      ],
+      "sha256": "85a3ab2cd2e2d5fb6210c6b92f134363b2643661bc91eed41ede0f05aedb6fe7"
+    },
+    {
+      "index": 48,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        40714,
+        40719
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        368,
+        376
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "label": "configs/veer.config 368-376"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        71,
+        87
+      ],
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6",
+      "label": "design/include/el2_def.sv 71-87"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        131,
+        174
+      ],
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6",
+      "label": "design/include/el2_def.sv 131-174"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu_alu_ctl.sv",
+      "lines": [
+        17,
+        51
+      ],
+      "sha256": "0f8e5cbbeb9c04757362ce655ec021db2a029d8b6e8550941893594383c5059d",
+      "label": "design/exu/el2_exu_alu_ctl.sv 17-51"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu.sv",
+      "lines": [
+        236,
+        255
+      ],
+      "sha256": "84d25ee8c0550ef38a6a15d6ae5788d0c0bb13785bb19c5e9e1911ce05fd07af",
+      "label": "design/exu/el2_exu.sv 236-255"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        547,
+        550
+      ],
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56",
+      "label": "design/dec/el2_dec_decode_ctl.sv 547-550"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        591,
+        599
+      ],
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56",
+      "label": "design/dec/el2_dec_decode_ctl.sv 591-599"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        801,
+        818
+      ],
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56",
+      "label": "design/dec/el2_dec_decode_ctl.sv 801-818"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        917,
+        917
+      ],
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56",
+      "label": "design/dec/el2_dec_decode_ctl.sv 917-917"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        991,
+        992
+      ],
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56",
+      "label": "design/dec/el2_dec_decode_ctl.sv 991-992"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        1005,
+        1007
+      ],
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56",
+      "label": "design/dec/el2_dec_decode_ctl.sv 1005-1007"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        166,
+        177
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "label": "design/lib/beh_lib.sv 166-177"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        209,
+        220
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "label": "design/lib/beh_lib.sv 209-220"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        496,
+        502
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "label": "design/lib/beh_lib.sv 496-502"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/decode",
+      "lines": [
+        431,
+        464
+      ],
+      "sha256": "62dc85fad17b27d041678447c401bfee9725d6889a8d4cb68b9e38c34a6b8e79",
+      "label": "design/dec/decode 431-464"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/decode",
+      "lines": [
+        490,
+        497
+      ],
+      "sha256": "62dc85fad17b27d041678447c401bfee9725d6889a8d4cb68b9e38c34a6b8e79",
+      "label": "design/dec/decode 490-497"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/decode",
+      "lines": [
+        517,
+        613
+      ],
+      "sha256": "62dc85fad17b27d041678447c401bfee9725d6889a8d4cb68b9e38c34a6b8e79",
+      "label": "design/dec/decode 517-613"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/overview.md",
+      "lines": [
+        26,
+        101
+      ],
+      "sha256": "b3a3d7617ca14fd86a935e88d180dbb7cec0ad0390c0781ea6c7f9aae50c724e",
+      "label": "docs/source/overview.md 26-101"
+    },
+    {
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        299,
+        582
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd",
+      "label": "src/rv32.adoc 299-582"
+    },
+    {
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        447,
+        832
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e",
+      "label": "src/b-st-ext.adoc 447-832"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        181,
+        190
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        199,
+        204
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        224,
+        226
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        236,
+        240
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    }
+  ]
+}

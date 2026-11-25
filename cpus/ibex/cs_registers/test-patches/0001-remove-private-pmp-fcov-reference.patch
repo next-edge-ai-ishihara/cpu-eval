@@ -1,0 +1,16 @@
+diff --git a/rtl/ibex_core.sv b/rtl/ibex_core.sv
+--- a/rtl/ibex_core.sv
++++ b/rtl/ibex_core.sv
+@@ -2478,12 +2478,5 @@ module ibex_core import ibex_pkg::*; import ibex_cheriot_pkg::*; #(
+       `DV_FCOV_SIGNAL(logic, pmp_region_dchan_access,
+           g_pmp.pmp_i.region_match_all[PMP_D][i_region] & data_req_out)
+-      // pmp_cfg[5:6] is reserved and because of that the width of it inside cs_registers module
+-      // is 6-bit.
+-      `DV_FCOV_SIGNAL(logic, warl_check_pmpcfg,
+-          fcov_csr_write &&
+-          (cs_registers_i.g_pmp_registers.g_pmp_csrs[i_region].u_pmp_cfg_csr.wr_data_i !=
+-          {cs_registers_i.csr_wdata_int[(i_region%4)*PMP_CFG_W+:5],
+-           cs_registers_i.csr_wdata_int[(i_region%4)*PMP_CFG_W+7]}))
+ 
+       if (i_region > 0) begin : g_region_priority
+         assign fcov_pmp_region_ichan_priority[i_region] =

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "cpu": "Ibex",
+  "cpu_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+  "configuration": "small",
+  "source": {
+    "repository": "https://github.com/lowRISC/ibex.git",
+    "paths": [
+      "examples/sw/simple_system/pmp_smoke_test",
+      "examples/sw/simple_system/dummy_instr_test",
+      "examples/sw/simple_system/dit_test",
+      "examples/sw/simple_system/common"
+    ]
+  },
+  "build": {
+    "command_template": "make -B -C examples/sw/simple_system/<program> ARCH=rv32imc_zicsr CC=riscv64-unknown-elf-gcc OBJCOPY=riscv64-unknown-elf-objcopy <program>.elf",
+    "source_patch": null,
+    "toolchain": {
+      "gcc": "riscv64-unknown-elf-gcc 13.2.0-11ubuntu1+12"
+    },
+    "checker_source": "dv/cosim/spike_cosim.cc",
+    "checker_source_sha256": "700f6044ed0e5d6b25a70f780ad901e1138a690a76313ab65e5c35531b22fcef"
+  },
+  "programs": [
+    {
+      "name": "pmp_smoke_test",
+      "elf_sha256": "13e4a4cf338e6e597b9a84c195cc9a1ab2ace9da2300a63c799326612c6e4618"
+    },
+    {
+      "name": "dummy_instr_test",
+      "elf_sha256": "012a8777f033edf5e093491bd4a5425761e323529d07320a15eb276aeb2f67f9"
+    },
+    {
+      "name": "dit_test",
+      "elf_sha256": "8ca5b6a7aa0fb737ab481d2dea38bf2bd76af61fa444414ed79369d5fe181146"
+    }
+  ],
+  "simulation_limit": {
+    "option": "--term-after-cycles=2000000",
+    "rule": "A candidate receives PASS or functional FAIL only when the RTL and ISA executions contain compared architectural values. A program that does not finish within the 2,000,000-cycle limit is FAIL. A host timeout is also an infrastructure failure."
+  },
+  "directed_test_build": {
+    "command_template": "cpus/ibex/harness/build_directed_test.sh <ibex> <test>.S <test>.elf",
+    "script": "cpus/ibex/harness/build_directed_test.sh",
+    "script_sha256": "0a27098fd181c038cb1428b81ff5f955d3c4bc968062558d541a859d24da32b3",
+    "upstream_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+    "upstream_crt0_sha256": "b0117f2e94ab0f65eb54806c67c727cd54142713a15422d5bc81e8431d853b9f",
+    "upstream_linker_script_sha256": "318b9ed40edb2cd0e329e5617f58cacad59d8137f12e550260be29c33f824068"
+  },
+  "problem_specific_additions": [
+    {
+      "name": "register_file_ff_inactive_capability_ports",
+      "command_template": "bash cpus/ibex/register_file_ff/evaluate_ports.sh <Ibex checkout> <candidate> <new results directory>",
+      "script": "cpus/ibex/register_file_ff/evaluate_ports.sh",
+      "script_sha256": "1e16cb796c2120acc3e55734611a49bd7dba760abb7abafb2a65f925cc2b30ea",
+      "harness": "cpus/ibex/register_file_ff/harness/register_file_ff_tb.sv",
+      "harness_sha256": "59c74d6e531a8a1c711a529a11c109b16ab31b246e83485e89f61b0de94670e3",
+      "parameters": {
+        "BaseIsa": "BaseIsaRV32I",
+        "RV32E": 0,
+        "DataWidth": 32,
+        "DummyInstructions": 0,
+        "WordZeroVal": 0,
+        "CapWidth": "ibex_cheriot_pkg::REGCAP_W",
+        "CapWordZeroVal": 0,
+        "cheriot_enable_i": "IbexMuBiOff"
+      },
+      "requirements": "Both capability read ports produce the zero capability throughout the selected non-CHERIoT configuration for all address encodings, including when a nonzero capability is offered on the write port.",
+      "scope": "The test compares only the two capability outputs. It does not impose a reset policy on the integer register storage or exercise CHERIoT mode.",
+      "integration": "Run after the three CPU programs. A completed comparison with a nonzero capability gives functional FAIL. A port-build failure and an absent or repeated terminal outcome are FAIL; a wall-clock interruption is INVALID."
+    }
+  ],
+  "problem": "ibex_register_file_ff",
+  "assigned_programs": [
+    "pmp_smoke_test",
+    "dummy_instr_test",
+    "dit_test"
+  ]
+}

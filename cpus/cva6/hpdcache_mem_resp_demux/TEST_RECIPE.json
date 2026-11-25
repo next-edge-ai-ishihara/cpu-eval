@@ -1,0 +1,35 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/response_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_mem_resp_demux",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/utils/hpdcache_mem_resp_demux.sv",
+  "source_sha256": "df921af34241cea3884ec81f05e1bc2db470c98f5a72b686eba312e883d0b4ee",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "ee550cdd5df672ac21b8694925ceeea11fd548b557681df16d906b38b0504b1c",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/utils/hpdcache_mem_resp_demux.sv",
+    "reference_hdl_preconditions": "Run reference_hdl from the root of the CVA6 checkout at cpu_revision, with core/cache_subsystem/hpdcache initialized as the cv-hpdcache submodule containing commit f404e7ebbda8baa4af3729535f520a6b12a06d03. Verify SHA-256 df921af34241cea3884ec81f05e1bc2db470c98f5a72b686eba312e883d0b4ee of the retrieved source before use.",
+    "test_sources": "Check out the recorded CPU and architectural-test revisions and initialize the HPDcache submodule at the recorded revision. The port bench compiles the submission with hpdcache_demux.sv and hpdcache_mux.sv from the same submodule."
+  },
+  "port_test": {
+    "test": "harness/response_ports_tb.sv",
+    "test_sha256": "b8e55feec4fdafd646b74f9cd531c3d4830cabd9f60aec43d5204bae3babf9fd",
+    "configuration": "Two outputs as in cv32a60x, 4-bit IDs, and the cv32a60x read-response layout with error, ID, 64-bit data and last fields. IDs 1, 4, 8, and 15 select outputs 1, 0, 1, and 0 respectively. Each responding output stalls once and then accepts, with contrasting ready values on the other outputs.",
+    "checks": "Compare the selected output's payload and the entire valid vector while the response is valid, and compare upstream ready with the selected ready. Check all valid outputs are low on an invalid response. Payload on invalid outputs is unspecified."
+  }
+}

@@ -1,0 +1,412 @@
+diff --git a/build.sc b/build.sc
+index 17eeec0..128b41f 100644
+--- a/build.sc
++++ b/build.sc
+@@ -125,6 +125,10 @@ trait Constellation extends ConstellationModule with HasChisel {
+   def cdeModule = rocketchip("chisel").cde
+   def scalaVersion: T[String] = T(defaultScalaVersion)
+
++
++  override def chiselIvy: Option[Dep] = Some(defaultVersions("chisel")("chisel"))
++  override def chiselPluginIvy: Option[Dep] = Some(defaultVersions("chisel")("chisel-plugin"))
++
+   override def millSourcePath = os.pwd /"dependencies"/ "constellation"
+ }
+
+diff --git a/dependencies/constellation/src/main/scala/channel/WidthWidget.scala b/dependencies/constellation/src/main/scala/channel/WidthWidget.scala
+index 30499ca..706e2fd 100644
+--- a/dependencies/constellation/src/main/scala/channel/WidthWidget.scala
++++ b/dependencies/constellation/src/main/scala/channel/WidthWidget.scala
+@@ -23,7 +23,7 @@ object WidthWidget {
+     out.bits.tail := in.bits.tail && last
+     out.bits.payload := Mux(first, in.bits.payload, stored)
+     in.ready := last && out.ready
+-    when (out.fire()) {
++    when ((out.valid && out.ready)) {
+       count := Mux(last, 0.U, count + 1.U)
+       stored := Mux(first, in.bits.payload, stored) >> outBits
+     }
+@@ -45,7 +45,7 @@ object WidthWidget {
+     out.bits.tail := last && in.bits.tail
+     out.bits.payload := Cat(in.bits.payload, payload.asUInt)
+     in.ready := !last || out.ready
+-    when (in.fire()) {
++    when ((in.valid && in.ready)) {
+       count := Mux(last, 0.U, count + 1.U)
+       payload(count) := in.bits.payload
+       when (first) {
+diff --git a/dependencies/constellation/src/main/scala/protocol/AXI4.scala b/dependencies/constellation/src/main/scala/protocol/AXI4.scala
+index e1e6c11..cd96fe1 100644
+--- a/dependencies/constellation/src/main/scala/protocol/AXI4.scala
++++ b/dependencies/constellation/src/main/scala/protocol/AXI4.scala
+@@ -103,12 +103,12 @@ class AXI4MasterToNoC(
+     for (id <- master.id.start until master.id.end) {
+       arFIFOMap(id) := idTracker(
+         arTag,
+-        arSel(id) && io.axi4.ar.fire(),
+-        rSel(id) && io.axi4.r.fire() && io.axi4.r.bits.last)
++        arSel(id) && (io.axi4.ar.valid && io.axi4.ar.ready),
++        rSel(id) && (io.axi4.r.valid && io.axi4.r.ready) && io.axi4.r.bits.last)
+       awFIFOMap(id) := idTracker(
+         awTag,
+-        awSel(id) && io.axi4.aw.fire(),
+-        bSel(id) && io.axi4.b.fire())
++        awSel(id) && (io.axi4.aw.valid && io.axi4.aw.ready),
++        bSel(id) && (io.axi4.b.valid && io.axi4.b.ready))
+     }
+   }
+
+@@ -145,7 +145,7 @@ class AXI4MasterToNoC(
+   io.flits.w.bits.egress_id := Mux1H(requestWIO.zipWithIndex.map { case (r, i) =>
+     r -> (slaveToEgressOffset(i) + 1).U
+   })
+-  when (io.flits.w.fire()) { w_first := in.w.bits.last }
++  when ((io.flits.w.valid && io.flits.w.ready)) { w_first := in.w.bits.last }
+
+   io.flits.ar.valid := in.ar.valid
+   in.ar.ready := io.flits.ar.ready
+@@ -203,14 +203,14 @@ class AXI4SlaveToNoC(
+   io.axi4.aw <> aw_q.io.deq
+
+   out.aw.ready       := !aw_val(out.aw.bits.id)
+-  when (out.aw.fire()) {
++  when ((out.aw.valid && out.aw.ready)) {
+     aw_val(out.aw.bits.id) := true.B
+     aw_buf(out.aw.bits.id) := out.aw.bits
+   }
+
+   aw_q.io.enq.valid := out.w.valid && Mux1H(out_w_in_id, aw_val) && out_w_in_head
+   aw_q.io.enq.bits  :=                Mux1H(out_w_in_id, aw_buf)
+-  when (aw_q.io.enq.fire()) {
++  when ((aw_q.io.enq.valid && aw_q.io.enq.ready)) {
+     aw_val(OHToUInt(out_w_in_id)) := false.B
+     w_fire := true.B
+   }
+@@ -223,7 +223,7 @@ class AXI4SlaveToNoC(
+     w_fire || (out_w_in_head && aw_q.io.enq.ready && Mux1H(out_w_in_id, aw_val))
+   )
+
+-  when (out.w.fire() && out.w.bits.last) { w_fire := false.B }
++  when ((out.w.valid && out.w.ready) && out.w.bits.last) { w_fire := false.B }
+
+   val r_first = RegInit(true.B)
+   io.flits.r.valid := out.r.valid
+@@ -234,7 +234,7 @@ class AXI4SlaveToNoC(
+   io.flits.r.bits.egress_id := Mux1H(requestROI.zipWithIndex.map { case (r, i) =>
+     r -> (masterToEgressOffset(i) + 0).U
+   })
+-  when (io.flits.r.fire()) { r_first := out.r.bits.last }
++  when ((io.flits.r.valid && io.flits.r.ready)) { r_first := out.r.bits.last }
+
+   io.flits.b.valid := out.b.valid
+   out.b.ready := io.flits.b.ready
+diff --git a/dependencies/constellation/src/main/scala/protocol/TilelinkAdapters.scala b/dependencies/constellation/src/main/scala/protocol/TilelinkAdapters.scala
+index 5d7c97c..b1cb8db 100644
+--- a/dependencies/constellation/src/main/scala/protocol/TilelinkAdapters.scala
++++ b/dependencies/constellation/src/main/scala/protocol/TilelinkAdapters.scala
+@@ -29,8 +29,8 @@ abstract class TLChannelToNoC[T <: TLChannel](gen: => T, edge: TLEdge, idToEgres
+   val has_body = Wire(Bool())
+   val body_fields = getBodyFields(protocol.bits)
+   val const_fields = getConstFields(protocol.bits)
+-  val head = edge.first(protocol.bits, protocol.fire())
+-  val tail = edge.last(protocol.bits, protocol.fire())
++  val head = edge.first(protocol.bits, (protocol.valid && protocol.ready))
++  val tail = edge.last(protocol.bits, (protocol.valid && protocol.ready))
+   def requestOH: Seq[Bool]
+
+   val body  = Cat( body_fields.filter(_.getWidth > 0).map(_.asUInt))
+@@ -47,8 +47,8 @@ abstract class TLChannelToNoC[T <: TLChannel](gen: => T, edge: TLEdge, idToEgres
+   })
+   io.flit.bits.payload    := Mux(is_body, body, const)
+
+-  when (io.flit.fire() && io.flit.bits.head) { is_body := true.B }
+-  when (io.flit.fire() && io.flit.bits.tail) { is_body := false.B }
++  when ((io.flit.valid && io.flit.ready) && io.flit.bits.head) { is_body := true.B }
++  when ((io.flit.valid && io.flit.ready) && io.flit.bits.tail) { is_body := false.B }
+ }
+
+ abstract class TLChannelFromNoC[T <: TLChannel](gen: => T)(implicit val p: Parameters) extends Module with TLFieldHelper {
+@@ -81,8 +81,8 @@ abstract class TLChannelFromNoC[T <: TLChannel](gen: => T)(implicit val p: Param
+   assign(const, const_fields)
+   assign(io.flit.bits.payload, body_fields)
+
+-  when (io.flit.fire() && io.flit.bits.head) { is_const := false.B; const_reg := io.flit.bits.payload }
+-  when (io.flit.fire() && io.flit.bits.tail) { is_const := true.B }
++  when ((io.flit.valid && io.flit.ready) && io.flit.bits.head) { is_const := false.B; const_reg := io.flit.bits.payload }
++  when ((io.flit.valid && io.flit.ready) && io.flit.bits.tail) { is_const := true.B }
+ }
+
+ trait HasAddressDecoder {
+diff --git a/dependencies/constellation/src/main/scala/router/IngressUnit.scala b/dependencies/constellation/src/main/scala/router/IngressUnit.scala
+index 40db171..aee3de3 100644
+--- a/dependencies/constellation/src/main/scala/router/IngressUnit.scala
++++ b/dependencies/constellation/src/main/scala/router/IngressUnit.scala
+@@ -59,9 +59,9 @@ class IngressUnit(
+   io.in.ready := route_buffer.io.enq.ready && (
+     io.router_req.ready || !io.in.bits.head || at_dest)
+
+-  route_q.io.enq.valid := io.router_req.fire()
++  route_q.io.enq.valid := (io.router_req.valid && io.router_req.ready)
+   route_q.io.enq.bits := io.router_resp
+-  when (io.in.fire() && io.in.bits.head && at_dest) {
++  when ((io.in.valid && io.in.ready) && io.in.bits.head && at_dest) {
+     route_q.io.enq.valid := true.B
+     route_q.io.enq.bits.vc_sel.foreach(_.foreach(_ := false.B))
+     for (o <- 0 until nEgress) {
+@@ -94,10 +94,10 @@ class IngressUnit(
+     (route_q.io.deq.valid || !head) &&
+     (io.vcalloc_req.ready || !head) &&
+     (vcalloc_q.io.enq.ready || !head))
+-  route_q.io.deq.ready := (route_buffer.io.deq.fire() && tail)
++  route_q.io.deq.ready := ((route_buffer.io.deq.valid && route_buffer.io.deq.ready) && tail)
+
+ 
+-  vcalloc_q.io.enq.valid := io.vcalloc_req.fire()
++  vcalloc_q.io.enq.valid := (io.vcalloc_req.valid && io.vcalloc_req.ready)
+   vcalloc_q.io.enq.bits := io.vcalloc_resp
+   assert(!(vcalloc_q.io.enq.valid && !vcalloc_q.io.enq.ready))
+
+@@ -108,7 +108,7 @@ class IngressUnit(
+   val vcalloc_tail = vcalloc_buffer.io.deq.bits.tail
+   io.salloc_req(0).valid := vcalloc_buffer.io.deq.valid && vcalloc_q.io.deq.valid && c && !io.block
+   vcalloc_buffer.io.deq.ready := io.salloc_req(0).ready && vcalloc_q.io.deq.valid && c && !io.block
+-  vcalloc_q.io.deq.ready := vcalloc_tail && vcalloc_buffer.io.deq.fire()
++  vcalloc_q.io.deq.ready := vcalloc_tail && (vcalloc_buffer.io.deq.valid && vcalloc_buffer.io.deq.ready)
+
+   val out_bundle = if (combineSAST) {
+     Wire(Valid(new SwitchBundle(outParams, egressParams)))
+@@ -117,7 +117,7 @@ class IngressUnit(
+   }
+   io.out(0) := out_bundle
+
+-  out_bundle.valid := vcalloc_buffer.io.deq.fire()
++  out_bundle.valid := (vcalloc_buffer.io.deq.valid && vcalloc_buffer.io.deq.ready)
+   out_bundle.bits.flit := vcalloc_buffer.io.deq.bits
+   out_bundle.bits.flit.virt_channel_id := 0.U
+   val out_channel_oh = vcalloc_q.io.deq.bits.vc_sel.map(_.reduce(_||_)).toSeq
+diff --git a/dependencies/constellation/src/main/scala/router/InputUnit.scala b/dependencies/constellation/src/main/scala/router/InputUnit.scala
+index 63559d1..bd6fb42 100644
+--- a/dependencies/constellation/src/main/scala/router/InputUnit.scala
++++ b/dependencies/constellation/src/main/scala/router/InputUnit.scala
+@@ -136,7 +136,7 @@ class InputBuffer(cParam: ChannelParams)(implicit p: Parameters) extends Module
+     } else {
+       qs.map(_.io.deq.ready := false.B)
+       val ready_sel = io.deq.map(_.ready)
+-      val fire = io.deq.map(_.fire())
++      val fire = io.deq.map(rv => rv.valid && rv.ready)
+       assert(PopCount(fire) <= 1.U)
+       val head = Mux1H(fire, heads)
+       when (fire.orR) {
+@@ -202,7 +202,7 @@ class InputUnit(cParam: ChannelParams, outParams: Seq[ChannelParams],
+   }
+
+   for (i <- 0 until cParam.srcSpeedup) {
+-    when (io.in.flit(i).fire() && io.in.flit(i).bits.head) {
++    when (io.in.flit(i).valid && io.in.flit(i).bits.head) {
+       val id = io.in.flit(i).bits.virt_channel_id
+       assert(id < nVirtualChannels.U)
+       assert(states(id).g === g_i)
+@@ -229,14 +229,14 @@ class InputUnit(cParam: ChannelParams, outParams: Seq[ChannelParams],
+       i.valid := s.g === g_r
+       i.bits.flow := s.flow
+       i.bits.src_virt_id := idx.U
+-      when (i.fire()) { s.g := g_v }
++      when ((i.valid && i.ready)) { s.g := g_v }
+     } else {
+       i.valid := false.B
+       i.bits := DontCare
+     }
+   }
+
+-  when (io.router_req.fire()) {
++  when ((io.router_req.valid && io.router_req.ready)) {
+     val id = io.router_req.bits.src_virt_id
+     assert(states(id).g === g_r)
+     states(id).g := g_v
+@@ -253,7 +253,7 @@ class InputUnit(cParam: ChannelParams, outParams: Seq[ChannelParams],
+   val vcalloc_filter = PriorityEncoderOH(Cat(vcalloc_vals.asUInt, vcalloc_vals.asUInt & ~mask))
+   val vcalloc_sel = vcalloc_filter(nVirtualChannels-1,0) | (vcalloc_filter >> nVirtualChannels)
+   // Prioritize incoming packetes
+-  when (io.router_req.fire()) {
++  when ((io.router_req.valid && io.router_req.ready)) {
+     mask := (1.U << io.router_req.bits.src_virt_id) - 1.U
+   } .elsewhen (vcalloc_vals.orR) {
+     mask := Mux1H(vcalloc_sel, (0 until nVirtualChannels).map { w => ~(0.U((w+1).W)) })
+@@ -269,7 +269,7 @@ class InputUnit(cParam: ChannelParams, outParams: Seq[ChannelParams],
+       vcalloc_reqs(idx).flow := s.flow
+       when (vcalloc_vals(idx) && vcalloc_sel(idx) && io.vcalloc_req.ready) { s.g := g_a }
+       if (combineRCVA) {
+-        when (route_arbiter.io.in(idx).fire()) {
++        when ((route_arbiter.io.in(idx).valid && route_arbiter.io.in(idx).ready)) {
+           vcalloc_vals(idx) := true.B
+           vcalloc_reqs(idx).vc_sel := io.router_resp.vc_sel
+         }
+@@ -282,7 +282,7 @@ class InputUnit(cParam: ChannelParams, outParams: Seq[ChannelParams],
+
+   io.debug.va_stall := PopCount(vcalloc_vals) - io.vcalloc_req.ready
+
+-  when (io.vcalloc_req.fire()) {
++  when ((io.vcalloc_req.valid && io.vcalloc_req.ready)) {
+     for (i <- 0 until nVirtualChannels) {
+       when (vcalloc_sel(i)) {
+         states(i).vc_sel := io.vcalloc_resp.vc_sel
+@@ -306,7 +306,7 @@ class InputUnit(cParam: ChannelParams, outParams: Seq[ChannelParams],
+       r.bits.vc_sel := s.vc_sel
+       val deq_tail = input_buffer.io.deq(i).bits.tail
+       r.bits.tail := deq_tail
+-      when (r.fire() && deq_tail) {
++      when ((r.valid && r.ready) && deq_tail) {
+         s.g := g_i
+       }
+       input_buffer.io.deq(i).ready := r.ready
+@@ -337,21 +337,21 @@ class InputUnit(cParam: ChannelParams, outParams: Seq[ChannelParams],
+   }
+
+   io.in.credit_return := salloc_arb.io.out.zipWithIndex.map { case (o, i) =>
+-    Mux(o.fire(), salloc_arb.io.chosen_oh(i), 0.U)
++    Mux((o.valid && o.ready), salloc_arb.io.chosen_oh(i), 0.U)
+   }.reduce(_|_)
+   io.in.vc_free := salloc_arb.io.out.zipWithIndex.map { case (o, i) =>
+-    Mux(o.fire() && Mux1H(salloc_arb.io.chosen_oh(i), input_buffer.io.deq.map(_.bits.tail)),
++    Mux((o.valid && o.ready) && Mux1H(salloc_arb.io.chosen_oh(i), input_buffer.io.deq.map(_.bits.tail)),
+       salloc_arb.io.chosen_oh(i), 0.U)
+   }.reduce(_|_)
+
+   for (i <- 0 until cParam.destSpeedup) {
+     val salloc_out = salloc_outs(i)
+-    salloc_out.valid := salloc_arb.io.out(i).fire()
++    salloc_out.valid := (salloc_arb.io.out(i).valid && salloc_arb.io.out(i).ready)
+     salloc_out.vid := OHToUInt(salloc_arb.io.chosen_oh(i))
+     val vc_sel = Mux1H(salloc_arb.io.chosen_oh(i), states.map(_.vc_sel))
+     val channel_oh = vc_sel.map(_.reduce(_||_)).toSeq
+     val virt_channel = Mux1H(channel_oh, vc_sel.map(v => OHToUInt(v)).toSeq)
+-    when (salloc_arb.io.out(i).fire()) {
++    when ((salloc_arb.io.out(i).valid && salloc_arb.io.out(i).ready)) {
+       salloc_out.out_vid := virt_channel
+       salloc_out.flit.payload := Mux1H(salloc_arb.io.chosen_oh(i), input_buffer.io.deq.map(_.bits.payload))
+       salloc_out.flit.head    := Mux1H(salloc_arb.io.chosen_oh(i), input_buffer.io.deq.map(_.bits.head))
+diff --git a/dependencies/constellation/src/main/scala/router/Router.scala b/dependencies/constellation/src/main/scala/router/Router.scala
+index 787f4c5..97cd27d 100644
+--- a/dependencies/constellation/src/main/scala/router/Router.scala
++++ b/dependencies/constellation/src/main/scala/router/Router.scala
+@@ -136,7 +136,7 @@ class Router(
+     val route_computer = Module(new RouteComputer(routerParams, inParams, outParams, ingressParams, egressParams))
+
+ 
+-    val fires_count = WireInit(PopCount(vc_allocator.io.req.map(_.fire())))
++    val fires_count = WireInit(PopCount(vc_allocator.io.req.map(rv => rv.valid && rv.ready)))
+     dontTouch(fires_count)
+
+ 
+@@ -212,13 +212,13 @@ class Router(
+     }
+
+     destNodes.map(_.in(0)).foreach { case (in, edge) => in.flit.map { f =>
+-      sample(f.fire(), s"${edge.cp.srcId} $nodeId")
++      sample(f.valid, s"${edge.cp.srcId} $nodeId")
+     } }
+     ingressNodes.map(_.in(0)).foreach { case (in, edge) =>
+-      sample(in.flit.fire(), s"i${edge.cp.asInstanceOf[IngressChannelParams].ingressId} $nodeId")
++      sample((in.flit.valid && in.flit.ready), s"i${edge.cp.asInstanceOf[IngressChannelParams].ingressId} $nodeId")
+     }
+     egressNodes.map(_.out(0)).foreach { case (out, edge) =>
+-      sample(out.flit.fire(), s"$nodeId e${edge.cp.asInstanceOf[EgressChannelParams].egressId}")
++      sample((out.flit.valid && out.flit.ready), s"$nodeId e${edge.cp.asInstanceOf[EgressChannelParams].egressId}")
+     }
+
+   }
+diff --git a/dependencies/constellation/src/main/scala/router/SwitchAllocator.scala b/dependencies/constellation/src/main/scala/router/SwitchAllocator.scala
+index 61da606..2a5645b 100644
+--- a/dependencies/constellation/src/main/scala/router/SwitchAllocator.scala
++++ b/dependencies/constellation/src/main/scala/router/SwitchAllocator.scala
+@@ -49,12 +49,12 @@ class SwitchArbiter(inN: Int, outN: Int, outParams: Seq[ChannelParams], egressPa
+       }
+     }
+     chosens = chosens | chosen
+-    when (io.out(i).fire()) {
++    when ((io.out(i).valid && io.out(i).ready)) {
+       lock(i) := chosen & ~in_tails
+     }
+   }
+
+-  when (io.out(0).fire()) {
++  when ((io.out(0).valid && io.out(0).ready)) {
+     mask := (0 until inN).map { i => (io.chosen_oh(0) >> i) }.reduce(_|_)
+   } .otherwise {
+     mask := Mux(~mask === 0.U, 0.U, (mask << 1) | 1.U(1.W))
+@@ -94,7 +94,7 @@ class SwitchAllocator(
+     arbs.zipWithIndex.foreach { case (a,i) =>
+       a.io.in(idx).valid := o.valid && o.bits.vc_sel(i).reduce(_||_)
+       a.io.in(idx).bits := o.bits
+-      fires(i) := a.io.in(idx).fire()
++      fires(i) := (a.io.in(idx).valid && a.io.in(idx).ready)
+     }
+     o.ready := fires.reduce(_||_)
+     idx += 1
+diff --git a/dependencies/constellation/src/main/scala/router/vcalloc/MultiVCAllocator.scala b/dependencies/constellation/src/main/scala/router/vcalloc/MultiVCAllocator.scala
+index 80f1490..0aa2f04 100644
+--- a/dependencies/constellation/src/main/scala/router/vcalloc/MultiVCAllocator.scala
++++ b/dependencies/constellation/src/main/scala/router/vcalloc/MultiVCAllocator.scala
+@@ -17,7 +17,7 @@ abstract class MultiVCAllocator(vP: VCAllocatorParams)(implicit p: Parameters) e
+   val in_allocs = allInParams.zipWithIndex.map { case (iP,i) =>
+     val a = Wire(MixedVec(allOutParams.map { u => Vec(u.nVirtualChannels, Bool()) }))
+     a := Mux(io.req(i).valid,
+-      inputAllocPolicy(io.req(i).bits.flow, io.req(i).bits.vc_sel, i.U, io.req(i).bits.in_vc, io.req(i).fire()),
++      inputAllocPolicy(io.req(i).bits.flow, io.req(i).bits.vc_sel, i.U, io.req(i).bits.in_vc, (io.req(i).valid && io.req(i).ready)),
+       0.U.asTypeOf(a))
+     a
+   }
+diff --git a/dependencies/constellation/src/main/scala/test/TestHarness.scala b/dependencies/constellation/src/main/scala/test/TestHarness.scala
+index 0e4c0f9..3dd0b31 100644
+--- a/dependencies/constellation/src/main/scala/test/TestHarness.scala
++++ b/dependencies/constellation/src/main/scala/test/TestHarness.scala
+@@ -94,7 +94,7 @@ class InputGen(idx: Int, cParams: IngressChannelParams)
+   out_payload.flits_fired := 0.U
+
+   io.n_flits := packet_remaining + 1.U
+-  io.fire := can_fire && io.out.fire()
++  io.fire := can_fire && (io.out.valid && io.out.ready)
+
+   when (io.fire && !io.out.bits.tail) {
+     flits_left := packet_remaining
+@@ -111,7 +111,7 @@ class InputGen(idx: Int, cParams: IngressChannelParams)
+     out_payload := payload
+     out_payload.flits_fired := flits_fired
+
+-    when (io.out.fire()) {
++    when ((io.out.valid && io.out.ready)) {
+       flits_fired := flits_fired + 1.U
+       flits_left := flits_left - 1.U
+     }
+@@ -206,7 +206,7 @@ class NoCTester(inputParams: Seq[IngressChannelParams], outputParams: Seq[Egress
+     val packet_rob_idx = Reg(UInt(log2Ceil(robSz).W))
+
+     val flow_ctrs = RegInit(VecInit.fill(outputParams(i).possibleFlows.size) { 0.U(8.W) })
+-    when (o.flit.fire()) {
++    when ((o.flit.valid && o.flit.ready)) {
+       val flows = outputParams(i).possibleFlows.toSeq
+       val fifo = flows.filter(_.fifo).map(_.ingressId.U === o.flit.bits.ingress_id).orR
+       val flow_id = flows.zipWithIndex.map { case (f, fid) =>
+@@ -236,13 +236,13 @@ class NoCTester(inputParams: Seq[IngressChannelParams], outputParams: Seq[Egress
+       when (o.flit.bits.head) { packet_valid := true.B; packet_rob_idx := rob_idx }
+       when (o.flit.bits.tail) { packet_valid := false.B }
+     }
+-    rob_frees = rob_frees | ((o.flit.fire() && o.flit.bits.tail) << rob_idx)
++    rob_frees = rob_frees | (((o.flit.valid && o.flit.ready) && o.flit.bits.tail) << rob_idx)
+   }
+
+ 
+   rob_valids := (rob_valids | rob_allocs) & ~rob_frees
+   idle := rob_allocs === 0.U && rob_frees === 0.U
+-  flits := flits + io.from_noc.map(_.flit.fire().asUInt).reduce(_+&_)
++  flits := flits + io.from_noc.map(rv => (rv.flit.valid && rv.flit.ready).asUInt).reduce(_+&_)
+   txs := txs + PopCount(tx_fire)
+
+   for (i <- 0 until robSz) {
+diff --git a/dependencies/rocket-chip/src/main/resources/META-INF/services/firrtl.options.RegisteredLibrary b/dependencies/rocket-chip/src/main/resources/META-INF/services/firrtl.options.RegisteredLibrary
+deleted file mode 100644
+index abfcceb05..000000000
+--- a/dependencies/rocket-chip/src/main/resources/META-INF/services/firrtl.options.RegisteredLibrary
++++ /dev/null
+@@ -1 +0,0 @@
+-firrtl.passes.memlib.MemLibOptions

@@ -1,0 +1,79 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvecc_decode_64",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    },
+    {
+      "path": "test/icache-ecc-detection-window.patch",
+      "sha256": "8b62b746a7db80e21f091e7b7a60f5f0753b05bf1249346435dd0c6cc71284ce",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 3
+    },
+    {
+      "path": "test/icache-ecc-bit-sweep.patch",
+      "sha256": "8261ede179fbff2efded88ec46f32c2f9591d311ddf3f5d000a4441910b195af",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 4
+    }
+  ],
+  "tests": [
+    {
+      "name": "riscv_arithmetic_basic_test",
+      "iterations": 1,
+      "seed": 999,
+      "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca",
+      "run": "bash ../_shared/run_fixed_test.sh",
+      "comparison": "Ordered Spike and RTL GPR state-change updates; exactly 2193 updates must match"
+    },
+    {
+      "name": "icache_ecc",
+      "source": "testbench/tests/icache_ecc/icache_ecc.c",
+      "source_sha256": "f99a20ec2aa4e77c57ce3e1e1c6db8a54dd311c17ac8567075e1f183514e4bdb",
+      "build_and_run": "make -f $RV_ROOT/tools/Makefile verilator TEST=icache_ecc TEST_DIR=$RV_ROOT/testbench/tests/icache_ecc TB_EXTRA_ARGS=\"--test-halt [plusarg]\"",
+      "pass_condition": "The simulation prints TEST_PASSED after micect increments by one and execution resumes. If the injected error is not detected within 200 cycles, the testbench prints TEST_FAILED and ends the simulation. An execution that prints both TEST_PASSED and TEST_FAILED is FAIL.",
+      "variants": {
+        "icache_ecc": "No plusarg. Preserve the original forced instruction-cache read value.",
+        "icache_ecc_bit0 through icache_ecc_bit6": "Repeat the same program with +cpu_eval_ecc_bit=0 through 6. Force zero data and one asserted check bit in the lower 71-bit read lane; check architectural error accounting and program recovery in every run."
+      }
+    }
+  ],
+  "run": "bash evaluate_all.sh",
+  "run_sha256": "60d8fdf50c4eeeeeb7158b6ba7d33ac2b09b5100f01518a5600e7ef11bba668b",
+  "test": {
+    "post_generation_artifacts": [
+      {
+        "path": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S",
+        "sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+      },
+      {
+        "path": "testbench/tests/icache_ecc/icache_ecc.c",
+        "sha256": "f99a20ec2aa4e77c57ce3e1e1c6db8a54dd311c17ac8567075e1f183514e4bdb"
+      }
+    ]
+  }
+}

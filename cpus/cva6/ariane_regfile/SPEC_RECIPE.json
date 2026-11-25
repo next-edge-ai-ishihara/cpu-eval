@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ariane_regfile_ff.sv",
+      "lines": [
+        25,
+        43
+      ],
+      "language": "verilog",
+      "sha256": "e8b86693adf85bcdbfb40b650698fc38f675d840213be55eff1468bff273e95f"
+    },
+    {
+      "label": "Parent instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        932,
+        946
+      ],
+      "language": "verilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "FPGA register-file access timing",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ariane_regfile_fpga.sv",
+      "lines": [
+        21,
+        23
+      ],
+      "language": "verilog",
+      "sha256": "8032c173aeceb7e62675db1132baede2f7b8f0696137f38da3739eb122901557"
+    },
+    {
+      "label": "Register-file operands and zero register",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        237,
+        239
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "Integer register architectural behavior",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        39,
+        46
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `ariane_regfile`\n\nImplement the complete `ariane_regfile` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ariane_regfile` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "```\n\n## Parent instantiation\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "text": "```\n\n## Related source code\n\n### core/ariane_regfile_fpga.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after FPGA register-file access timing",
+      "text": "```\n\n## Documentation\n\n### docs/design/design-manual/source/cva6_issue_stage.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Register-file operands and zero register",
+      "text": "```\n\n### src/rv32.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Integer register architectural behavior",
+      "text": "```\n"
+    }
+  ]
+}

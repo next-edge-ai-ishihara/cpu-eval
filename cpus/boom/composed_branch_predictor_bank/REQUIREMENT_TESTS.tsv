@@ -1,0 +1,5 @@
+requirement	tests	rationale
+Expose the configured components' final predictions	ComposedPredictorPortsTest	Compare learned jump targets and conditional directions from the configured components at the public response.
+Return each component's prediction metadata when training it	ComposedPredictorPortsTest	Save the external metadata packet, return it with the outcome, and compare the resulting behavior with separate component-local storage.
+Report the memory inventory of the configured components	ComposedPredictorPortsTest	Compare the memory descriptors as a multiset so the check does not require an internal order.
+Work as part of the fixed CPU	rv64ui-p-beq;rv64ui-p-jalr	Compare architectural branch and indirect jump traces with Spike.

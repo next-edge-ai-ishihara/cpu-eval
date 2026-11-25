@@ -1,0 +1,79 @@
+--- a/src/main/scala/rift2Core/backend/WriteBack.scala
++++ b/src/main/scala/rift2Core/backend/WriteBack.scala
+@@ -115,6 +115,76 @@
+   val fReg = if( fpuNum > 0 ) { Module(new FRegFiles(dw = 65, dp = fRegNum, rnChn, opChn, 2, cmChn)) } else {  Module(new FakeRegFiles(dw = 65, dp = fRegNum, rnChn, opChn, 2, cmChn) ) }
+   val vReg = if( hasVector )  { Module(new VRegFiles) } else {  Module(new FakeVRegFiles ) }
+   val cReg = Module(new CsrScoreBoard)
++
++  val csrProbe = Module(new CsrScoreBoard)
++  val csrProbeState = RegInit(0.U(4.W))
++  val csrProbeActive = !reset.asBool
++  val csrProbeSecond = csrProbeState >= 4.U
++  val csrProbeData = Mux(csrProbeSecond, "h176b".U, "h53a".U)
++  for (i <- 0 until rnChn) {
++    csrProbe.io.xpu.molloc(i).valid := i.U === 0.U && csrProbeActive &&
++      (csrProbeState === 0.U || csrProbeState === 4.U)
++    csrProbe.io.xpu.molloc(i).bits := "h340".U
++    csrProbe.io.fpu.molloc(i).valid := false.B
++    csrProbe.io.fpu.molloc(i).bits := false.B
++    csrProbe.io.vpu.molloc(i).valid := false.B
++    csrProbe.io.vpu.molloc(i).bits := false.B
++  }
++  csrProbe.io.xpu.writeBack.valid := csrProbeActive &&
++    (csrProbeState === 1.U || csrProbeState === 5.U)
++  csrProbe.io.xpu.writeBack.bits.addr := "h340".U
++  csrProbe.io.xpu.writeBack.bits.dat_i := csrProbeData
++  csrProbe.io.xpu.writeBack.bits.op_rw := true.B
++  csrProbe.io.xpu.writeBack.bits.op_rs := false.B
++  csrProbe.io.xpu.writeBack.bits.op_rc := false.B
++  csrProbe.io.fpu.writeBack.valid := false.B
++  csrProbe.io.fpu.writeBack.bits := 0.U.asTypeOf(csrProbe.io.fpu.writeBack.bits)
++  csrProbe.io.vpu.writeBack.valid := false.B
++  csrProbe.io.vpu.writeBack.bits := 0.U.asTypeOf(csrProbe.io.vpu.writeBack.bits)
++  csrProbe.io.xpu.commit.ready := csrProbeState === 3.U && csrProbeActive
++  csrProbe.io.fpu.commit.ready := false.B
++  csrProbe.io.vpu.commit.ready := false.B
++  csrProbe.io.isAbort := csrProbeState === 7.U && csrProbeActive
++
++  val csrProbeCommit = csrProbe.io.xpu.commit
++  val csrProbePayload = csrProbeCommit.bits.addr === "h340".U &&
++    csrProbeCommit.bits.dat_i === csrProbeData && csrProbeCommit.bits.op_rw &&
++    !csrProbeCommit.bits.op_rs && !csrProbeCommit.bits.op_rc
++
++  when(csrProbeActive) {
++    switch(csrProbeState) {
++      is(0.U, 4.U) {
++        when(csrProbe.io.xpu.molloc(0).fire) { csrProbeState := csrProbeState + 1.U }
++      }
++      is(1.U, 5.U) { csrProbeState := csrProbeState + 1.U }
++      is(2.U, 6.U) {
++        when(csrProbeCommit.valid) {
++          printf("CPU_EVAL_CSR_SCOREBOARD_BLOCKED second=%d address=%x data=%x\n",
++            csrProbeSecond, csrProbeCommit.bits.addr, csrProbeCommit.bits.dat_i)
++          when(!csrProbePayload) {
++            printf("CPU_EVAL_OBSERVATION_MISMATCH CSR scoreboard blocked writeback payload\n")
++          }
++          csrProbeState := csrProbeState + 1.U
++        }
++      }
++      is(3.U) {
++        when(!csrProbeCommit.valid || !csrProbePayload) {
++          printf("CPU_EVAL_OBSERVATION_MISMATCH CSR scoreboard uncancelled writeback\n")
++        }
++        printf("CPU_EVAL_CSR_SCOREBOARD_CONTROL transfer=%d\n", csrProbeCommit.fire)
++        csrProbeState := 4.U
++      }
++      is(7.U) { csrProbeState := 8.U }
++      is(8.U) {
++        printf("CPU_EVAL_CSR_SCOREBOARD_ABORT valid=%d\n", csrProbeCommit.valid)
++        when(csrProbeCommit.valid) {
++          printf("CPU_EVAL_OBSERVATION_MISMATCH CSR scoreboard cancelled writeback remains valid\n")
++        }
++        printf("CPU_EVAL_CSR_SCOREBOARD_COMPLETE\n")
++        csrProbeState := 9.U
++      }
++    }
++  }
+ 
+ 
+ 

@@ -1,0 +1,22 @@
+diff --git a/testbench/tb_top.sv b/testbench/tb_top.sv
+index 8e927b7..00f78a1 100644
+--- a/testbench/tb_top.sv
++++ b/testbench/tb_top.sv
+@@ -1013,7 +1013,7 @@ module tb_top;
+             end
+             if(mailbox_write && mailbox_data[7:0] == 8'hff) begin
+                 $display("[%0t ns] TEST_PASSED",$time);
+-                $display("[%0t ns] \nFinished : minstret = %0d, mcycle = %0d",$time, `DEC.tlu.minstretl[31:0],`DEC.tlu.mcyclel[31:0]);
++                $display("[%0t ns] \nFinished",$time);
+                 $display("[%0t ns] See \"exec.log\" for execution trace with register updates..\n",$time);
+                 // OpenOCD test breaks if simulation closes the TCP connection first.
+                 // This delay allows OpenOCD to close the connection before the #finish.
+@@ -1089,7 +1089,7 @@ module tb_top;
+                 release `LOCKSTEP_CONST_DELAY_ASSERT_DISABLE;
+             `endif
+         end else begin
+-            ic_perr_r_d1 <= rvtop_wrapper.rvtop.veer.dec.tlu.ic_perr_r;
++            ic_perr_r_d1 <= 1'b0;
+             if (mailbox_write && mailbox_data[7:0] == 8'h89) begin
+                 `ifdef RV_ASSERT_OR_VERILATOR
+                     force `LOCKSTEP_CONST_DELAY_ASSERT_DISABLE = '1;

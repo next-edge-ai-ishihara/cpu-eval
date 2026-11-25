@@ -1,0 +1,36 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_shift_reg_ports.py",
+    "harness/shift_reg_ports_tb.sv",
+    "../instr_scan/harness/evaluate_ports.py",
+    "../harness/port_work_directory.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "shift_reg",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "vendor/pulp-platform/common_cells/src/shift_reg.sv",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:vendor/pulp-platform/common_cells/src/shift_reg.sv",
+    "test_sources": "git checkout the recorded test revision; no generated test source is stored"
+  },
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "ab37a9497923b6c8397d5d7b8396845d72cd0896623af73eff96b7c6f706e610",
+  "port_test": {
+    "evaluator": "harness/evaluate_shift_reg_ports.py",
+    "evaluator_sha256": "10845ef9ed1ae9a1b59cc2cc6a42d9e84b319b4085c1ac4eb70e789cca15e48e",
+    "test": "harness/shift_reg_ports_tb.sv",
+    "test_sha256": "3cdbe1c292ba040901f4a869e80a1b60fa53af0201abeb934aff9d704feeae38",
+    "scope": "After the unchanged CVA6 program list passes, compare the entire selected 168-bit load/store result type at Depth=0 with the clock held and during reset.",
+    "acceptance": "Known inputs propagate unchanged for all six observations, regardless of clock and reset."
+  }
+}

@@ -1,0 +1,6 @@
+requirement	tests	rationale
+CSR read, write, set, and clear operations	rv64mi-p-csr_file_state	The directed program checks deterministic mscratch write, read, set, clear, returned old values, and final values.
+Breakpoint exception state and return	rv64mi-p-csr_file_breakpoint	The directed program checks breakpoint cause, the faulting instruction address in mepc, the resumed address, and mret.
+Environment-call exception state and return	rv64mi-p-csr_file_state;rv64mi-p-scall;rv64si-p-scall	The directed program checks mcause, mepc, and mret explicitly; the upstream programs exercise machine and supervisor environment calls.
+Supervisor privilege state	rv64si-p-csr;rv64si-p-scall;rv64si-p-wfi	The fixed supervisor programs exercise supervisor CSR access, trap entry, return, and wait-for-interrupt handling.
+Floating-point accrued flags	rv64uf-p-fadd;rv64uf-p-csr_file_fflags	The upstream program checks flags for individual operations. The directed program checks accumulation across distinct exceptions, preservation after an exact operation, and explicit clearing.

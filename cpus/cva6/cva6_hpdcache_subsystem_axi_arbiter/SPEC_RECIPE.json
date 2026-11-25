@@ -1,0 +1,489 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for cva6_hpdcache_subsystem_axi_arbiter",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv",
+      "lines": [
+        15,
+        89
+      ],
+      "language": "verilog",
+      "sha256": "1b6b1b7ebd594cd5e5d49405adb490f5e22178231c421f918661a980cf790b9b"
+    },
+    {
+      "label": "cv32a60x AXI widths",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        16,
+        19
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x AXI transaction and load buffer inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        30,
+        35
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x cache line widths",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        106,
+        112
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Instruction cache transaction identifier selected by the parent",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+      "lines": [
+        148,
+        182
+      ],
+      "sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    {
+      "label": "Parent instantiation for cva6_hpdcache_subsystem_axi_arbiter",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+      "lines": [
+        468,
+        523
+      ],
+      "sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    {
+      "label": "Instruction cache request and return records",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        185,
+        202
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Instruction cache return event values",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/wt_cache_pkg.sv",
+      "lines": [
+        45,
+        48
+      ],
+      "language": "verilog",
+      "sha256": "8ffd0b9fd1ba2c0adfc49263f6970f47ede65901da84c46322459208a765e3f4"
+    },
+    {
+      "label": "HPDcache memory operation values",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        263,
+        297
+      ],
+      "language": "verilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "HPDcache memory request and response records",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/include/hpdcache_typedef.svh",
+      "lines": [
+        13,
+        65
+      ],
+      "language": "verilog",
+      "sha256": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126"
+    },
+    {
+      "label": "Icache request persistence comment",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache_axi_wrapper.sv",
+      "lines": [
+        77,
+        78
+      ],
+      "language": "verilog",
+      "sha256": "ba84da3c3fd16241671fc37fdea23e9177d04ac291758d2fab29b71446c221da"
+    },
+    {
+      "label": "Uncached refill word placement",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache_axi_wrapper.sv",
+      "lines": [
+        192,
+        195
+      ],
+      "language": "verilog",
+      "sha256": "ba84da3c3fd16241671fc37fdea23e9177d04ac291758d2fab29b71446c221da"
+    },
+    {
+      "label": "Single-entry request buffer contract declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        20,
+        46
+      ],
+      "language": "verilog",
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5"
+    },
+    {
+      "label": "Refill data upsizer contract and behavior declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_data_upsize.sv",
+      "lines": [
+        20,
+        62
+      ],
+      "language": "verilog",
+      "sha256": "3945c19d53c4209df848f6185be651d46e0ebaf4f8b6e70a39c2fe43f2f10452"
+    },
+    {
+      "label": "Read request arbitration contract and behavior declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_req_read_arbiter.sv",
+      "lines": [
+        20,
+        51
+      ],
+      "language": "verilog",
+      "sha256": "7f37b2fb12fa9216b36d1a959619aada6b2e09810a3c9784d55a82d0a71412fc"
+    },
+    {
+      "label": "Read response demultiplexing contract and behavior declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_resp_demux.sv",
+      "lines": [
+        20,
+        55
+      ],
+      "language": "verilog",
+      "sha256": "df921af34241cea3884ec81f05e1bc2db470c98f5a72b686eba312e883d0b4ee"
+    },
+    {
+      "label": "HPDcache-to-AXI read mapping declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_to_axi_read.sv",
+      "lines": [
+        20,
+        50
+      ],
+      "language": "verilog",
+      "sha256": "b83579bbf51c1a5d9ce80b8bd7a99151a54e3076504263329b0a2d32c19f6004"
+    },
+    {
+      "label": "HPDcache-to-AXI write mapping declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_to_axi_write.sv",
+      "lines": [
+        20,
+        60
+      ],
+      "language": "verilog",
+      "sha256": "eed309d22eaf8d8c5b40a5c8b41bda6c9a70bae34f6f23aa86942240570a92ad"
+    },
+    {
+      "label": "Icache external burst and return fields",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache_axi_wrapper.sv",
+      "lines": [
+        88,
+        103
+      ],
+      "language": "verilog",
+      "sha256": "ba84da3c3fd16241671fc37fdea23e9177d04ac291758d2fab29b71446c221da"
+    },
+    {
+      "label": "HPDcache read transaction identifiers",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/interface.rst",
+      "lines": [
+        1186,
+        1230
+      ],
+      "sha256": "a5eb573d4f446f5c71ca71361e4d7d7f08c5fbc95a4064aedfa28920d6ca33f3"
+    },
+    {
+      "label": "Refill data upsizer control and data path",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_data_upsize.sv",
+      "lines": [
+        64,
+        172
+      ],
+      "language": "verilog",
+      "sha256": "3945c19d53c4209df848f6185be651d46e0ebaf4f8b6e70a39c2fe43f2f10452"
+    },
+    {
+      "label": "Read response routing-table lookup",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_resp_demux.sv",
+      "lines": [
+        58,
+        66
+      ],
+      "language": "verilog",
+      "sha256": "df921af34241cea3884ec81f05e1bc2db470c98f5a72b686eba312e883d0b4ee"
+    },
+    {
+      "label": "HPDcache-to-AXI read field mapping",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/utils/hpdcache_mem_to_axi_read.sv",
+      "lines": [
+        74,
+        93
+      ],
+      "language": "verilog",
+      "sha256": "b83579bbf51c1a5d9ce80b8bd7a99151a54e3076504263329b0a2d32c19f6004"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `cva6_hpdcache_subsystem_axi_arbiter`\n\nImplement the complete `cva6_hpdcache_subsystem_axi_arbiter` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module cva6_hpdcache_subsystem_axi_arbiter` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Parent instantiation\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Dependency declarations\n\n### core/cva6.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### core/include/wt_cache_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### rtl/src/hpdcache_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### rtl/include/hpdcache_typedef.svh\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### rtl/src/common/hpdcache_fifo_reg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### rtl/src/common/hpdcache_data_upsize.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### rtl/src/utils/hpdcache_mem_req_read_arbiter.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### rtl/src/utils/hpdcache_mem_resp_demux.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### rtl/src/utils/hpdcache_mem_to_axi_read.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n### rtl/src/utils/hpdcache_mem_to_axi_write.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Related source code\n\n### core/cache_subsystem/cva6_icache_axi_wrapper.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "\n// ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for hpdcache_data_upsize.sv",
+      "text": "```\n\n### rtl/src/common/hpdcache_data_upsize.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for hpdcache_mem_resp_demux.sv",
+      "text": "```\n\n### rtl/src/utils/hpdcache_mem_resp_demux.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for hpdcache_mem_to_axi_read.sv",
+      "text": "```\n\n### rtl/src/utils/hpdcache_mem_to_axi_read.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading",
+      "text": "```\n\n## Documentation\n\n### docs/source/interface.rst\n\n```rst\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+diff --git a/core/load_store_unit.sv b/core/load_store_unit.sv
+--- a/core/load_store_unit.sv
++++ b/core/load_store_unit.sv
+@@ -493,7 +493,6 @@ module load_store_unit
+     always_comb begin
+       // Feed forward
+       lsu_ctrl = lsu_ctrl_byp;
+-      // Mask the lsu valid so that cva6's req gets buffered in the
++      // Hold a newly accepted request in the bypass queue, and mask requests while the accelerator owns the MMU.
+-      // bypass queue when the MMU is being used by the accelerator.
+-      lsu_ctrl.valid = (mmu_state_q == ACC) ? 1'b0 : lsu_ctrl_byp.valid;
++      lsu_ctrl.valid = (mmu_state_q == ACC) ? 1'b0 : (lsu_ctrl_byp.valid && !(lsu_ready_o && lsu_valid_i));
+     end
+@@ -512,7 +512,10 @@ module load_store_unit
+     // No accelerator
+     assign acc_mmu_resp_o         = '0;
+     // Feed forward the lsu_ctrl bypass
+-    assign lsu_ctrl               = lsu_ctrl_byp;
++    always_comb begin
++      lsu_ctrl = lsu_ctrl_byp;
++      lsu_ctrl.valid = lsu_ctrl_byp.valid && !(lsu_ready_o && lsu_valid_i);
++    end
+   end
+ 
+   logic store_buffer_empty;

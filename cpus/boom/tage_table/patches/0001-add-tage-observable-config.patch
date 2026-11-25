@@ -1,0 +1,39 @@
+diff --git a/generators/chipyard/src/main/scala/config/BoomConfigs.scala b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+index 87bd0a98..00000000 100644
+--- a/generators/chipyard/src/main/scala/config/BoomConfigs.scala
++++ b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+@@ -1,6 +1,9 @@
+ package chipyard
+ 
+ import freechips.rocketchip.config.{Config}
++import freechips.rocketchip.subsystem.{InSubsystem, TilesLocated}
++import boom.common.BoomTileAttachParams
++import boom.ifu.BranchPredictionBankResponse
+ 
+ // ---------------------
+ // BOOM Configs
+@@ -26,1 +29,24 @@
++
++class WithTageOnlyBPD extends Config((site, here, up) => {
++  case TilesLocated(InSubsystem) => up(TilesLocated(InSubsystem), site) map {
++    case tp: BoomTileAttachParams => tp.copy(tileParams = tp.tileParams.copy(core = tp.tileParams.core.copy(
++      bpdMaxMetaLength = 64,
++      globalHistoryLength = 64,
++      branchPredictor = ((resp_in: BranchPredictionBankResponse, p: freechips.rocketchip.config.Parameters) => {
++        val tage = chisel3.Module(new boom.ifu.TageBranchPredictorBank()(p))
++        tage.io := chisel3.DontCare
++        tage.io.resp_in(0) := resp_in
++        (Seq(tage), tage.io.resp)
++      })
++    )))
++    case other => other
++  }
++})
++
++class LargeBoomTageObservableConfig extends Config(
++  new boom.common.WithBoomCommitLogPrintf ++
++  new WithTageOnlyBPD ++
++  new boom.common.WithNLargeBooms(1) ++
++  new chipyard.config.AbstractConfig)
++
+ class MegaBoomConfig extends Config(

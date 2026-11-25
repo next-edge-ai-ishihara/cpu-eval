@@ -1,0 +1,65 @@
+diff --git a/customext/cvxif.cc b/customext/cvxif.cc
+--- a/customext/cvxif.cc
++++ b/customext/cvxif.cc
+@@ -66,6 +66,8 @@ class cvxif_t : public cvxif_extn_t
+             return true;
+           case Func7::CUS_ADD_MULTICYCLE:
+             return true;
++          case 0x04:
++            return true;
+           default:
+             return false;
+         }
+@@ -127,6 +129,8 @@ class cvxif_t : public cvxif_extn_t
+             return (reg_t) ((reg_t) RS2 + (reg_t) RS2);
+           case Func7::CUS_ADD_MULTICYCLE:
+             return (reg_t) ((reg_t) RS1 + (reg_t) RS2);
++          case 0x04:
++            return (reg_t) ((reg_t) RS1 + (reg_t) RS2);
+           default:
+             illegal_instruction();
+         }
+@@ -153,6 +157,33 @@ class cvxif_t : public cvxif_extn_t
+     return pc + 2;
+   }
+ 
++  static reg_t r4_arithmetic(processor_t* p, insn_t insn, reg_t pc)
++  {
++    uint32_t bits = insn.bits();
++    reg_t lhs = READ_REG((bits >> 15) & 0x1f);
++    reg_t rhs = READ_REG((bits >> 20) & 0x1f);
++    reg_t result;
++    switch (bits & 0x7f)
++    {
++      case 0x43:
++        result = lhs + rhs;
++        break;
++      case 0x47:
++        result = lhs - rhs;
++        break;
++      case 0x4f:
++        result = ~(lhs + rhs);
++        break;
++      case 0x4b:
++        result = ~(lhs - rhs);
++        break;
++      default:
++        return ::illegal_instruction(p, insn, pc);
++    }
++    WRITE_REG((bits >> 7) & 0x1f, result);
++    return pc + 4;
++  }
++
+   cvxif_t()
+   {
+   }
+@@ -226,5 +257,9 @@ class cvxif_t : public cvxif_extn_t
+     insns.push_back((insn_desc_t){0x7b, 0x7f, &c3, &c3, &c3, &c3, &c3, &c3, &c3, c3});
+     insns.push_back((insn_desc_t){0xe000, 0xf003, &compressed_nop, &compressed_nop, &compressed_nop, &compressed_nop, &compressed_nop, &compressed_nop, &compressed_nop, compressed_nop});
+     insns.push_back((insn_desc_t){0xf000, 0xf003, &compressed_add, &compressed_add, &compressed_add, &compressed_add, &compressed_add, &compressed_add, &compressed_add, compressed_add});
++    insns.push_back((insn_desc_t){0x43, 0x0600707f, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, r4_arithmetic});
++    insns.push_back((insn_desc_t){0x47, 0x0600707f, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, r4_arithmetic});
++    insns.push_back((insn_desc_t){0x4b, 0x0600707f, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, r4_arithmetic});
++    insns.push_back((insn_desc_t){0x4f, 0x0600707f, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, &r4_arithmetic, r4_arithmetic});
+     return insns;
+   }

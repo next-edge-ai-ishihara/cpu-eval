@@ -1,0 +1,43 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "ariane",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "corev_apu/src/ariane.sv",
+  "tests": [
+    {
+      "path": "ariane_cvxif_add.S",
+      "sha256": "2fc438a7b3e39f9bb158770da5e8d72d2237932270064b98f6a90f9c76b7cd31",
+      "upstream_basis": "verif/tests/custom/cv_xif/cvxif_add_nop.S",
+      "upstream_basis_sha256": "f158e2729f94cbe058d135f63121cb97d0f45a6e94a71b67a8bfc388facc7c59",
+      "adaptation": "Retain the developer test's custom addition opcode and execute it in the pinned Architectural Test environment."
+    }
+  ],
+  "test_list": {
+    "path": "testlist_ariane_problem.yaml",
+    "sha256": "331020881b27bfc7a2f5b58967371cf407996a0c5ce0045749020b5c381bfdb9"
+  },
+  "evaluator": {
+    "path": "../harness/evaluate_parallel.sh",
+    "sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+    "trace_comparator": {
+      "path": "../harness/compare_architectural_traces.py",
+      "sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb"
+    }
+  },
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:corev_apu/src/ariane.sv",
+    "test_environment": "git checkout the recorded riscv-arch-test revision and materialize the recorded ariane_cvxif_add.S beside the test list"
+  },
+  "comparison": {
+    "values": "Every retired instruction and its general-purpose register or width-masked memory update emitted by CVA6 and the CV-X-IF-enabled Spike model",
+    "pass_condition": "The selected test completes and its complete architectural traces match"
+  }
+}

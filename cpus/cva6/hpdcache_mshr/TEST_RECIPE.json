@@ -1,0 +1,39 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/mshr_ports_tb.sv",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "../../../tools/cva6/replace_module.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_mshr",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_mshr.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "fb01c23a96bc2d913e6e12a2b662265796363d6c8bd95b3e64f7f6171f936f68",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "187b5117eb89426f2c8db6f7d195f6514335775bf3db15ee3e5040c5d97dfac3",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hpdcache_mshr.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Check out the recorded riscv-arch-test revision and select the recorded standard RV32 list."
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "8bada442dcbd7386b8793ee6d7734a7ef47ab0a8a96d01e2ee1d350fd5e7c4b6",
+    "test": "harness/mshr_ports_tb.sv",
+    "test_sha256": "d9a1c82f8881d31be9ab8f253a74ea509cc7e9ceb48b6f5be5b37c01d80bdac1",
+    "scope": "The cv32a60x HPDcache configuration and MSHR types: 34-bit physical address, one MSHR set and two ways. The first mode checks the previous set and current tag. The second mode checks grant-cycle cache set and later acknowledgement payload, preserving source IDs 1 and 2 and word indices 1 and 2. The two accepted allocations may use either order of free ways."
+  }
+}

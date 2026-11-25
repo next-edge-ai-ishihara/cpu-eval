@@ -1,0 +1,543 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "811157ca0667f5d3134604c9d981fdad3f0fc5a93651f812e12e9937218ef779",
+  "prompt_sha256": "786b017c2c1fe5c78105638a905cdfb94f5c570fe7be933e75d79447c0fad6ed",
+  "repositories": {
+    "github.com/ucb-bar/berkeley-hardfloat": {
+      "revision": "70455e53f233a06cb5a342d125e22b7b1505c271"
+    },
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html": {
+      "revision": "20190821012312"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission format",
+      "prompt_bytes": [
+        0,
+        451
+      ],
+      "sha256": "0f7a6625a2c8f18e16fedcebbd712b5177b8ef7b73cdf311631febde5c3a7fec"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        451,
+        502
+      ],
+      "sha256": "0c91c555968a1ca28de255468062b8dd711f6e4e7dcae7491ee22b1e1e2b8e16"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        502,
+        538
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        538,
+        1258
+      ],
+      "sha256": "5a9940c8fc3a6352c95166a24360045c6e2232b0f8a6d5e2ea80797701102467"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        1258,
+        1346
+      ],
+      "sha256": "e68cde4a6ab0f1bae585e723e3feaea6f1332867f714f86f662adcc05ca24d2f"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1346,
+        2470
+      ],
+      "sha256": "f40fde6623f730790dd3a2c1d232c64a839d639688a47b8ed2f3eafca986ba01"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        2470,
+        2522
+      ],
+      "sha256": "d9a01f16cfc640b42e99d4cdb6c8e0e7933f9f3af0d4e7de52111a9e3519b296"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2522,
+        3866
+      ],
+      "sha256": "ad2eceb5499bfe54b24184556336b519bf5b3cff4643f5f2ad92eb9332c718c8"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        3866,
+        3921
+      ],
+      "sha256": "479782e97b58bcb35afa1a1abf62450c7f7e467789148f29ef81c9d05279632a"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        3921,
+        5882
+      ],
+      "sha256": "7e2e6d8643cdae74ef226431c6e03a519726d66f07720117a6246a31b6092e7d"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        5882,
+        5939
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        5939,
+        6184
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        6184,
+        6233
+      ],
+      "sha256": "c4c6e4cde190e12b3a820cc0688b35c8c9a2b8a351d69b7472cafaa8df257308"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        6233,
+        8175
+      ],
+      "sha256": "d1572b2cde82bee1c421ffab0ad623adb04841518c573ca611b8e9f20b0085bd"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        8175,
+        8228
+      ],
+      "sha256": "5a80e444ec166153383249bdfa805660dd70fc281292058fa236dc1d25397a9a"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        8228,
+        10037
+      ],
+      "sha256": "d6a19add641df4fc62ebcd90d07f7cc0b1fd75796289e99c6d93510346efc493"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        10037,
+        10112
+      ],
+      "sha256": "b979e94c958e80b874a69f72efd7b58913f21f4edbfe1a261dc59408aa8172a5"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        10112,
+        10506
+      ],
+      "sha256": "0cc75a1847931e8e20efc1f89d72d32e7c7ea413f2e14b031d3332e7c0e9a173"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        10506,
+        10567
+      ],
+      "sha256": "44b6f9a4d660914144bb145ae664dd8e9e3c37756b7af75685ac660d4bea8c34"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        10567,
+        19895
+      ],
+      "sha256": "67f5ea53db0336f94614cfd64aaeabe8131a08d7fdfd16e8901d56021adf1b22"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        19895,
+        19901
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        19901,
+        22191
+      ],
+      "sha256": "f586f9465f4d556585c5eb2ad2e617924342bad25eb28ef012ff901810d1372d"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        22191,
+        22197
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        22197,
+        22549
+      ],
+      "sha256": "c4eef53272a0e4e7337b509de80987dddb14b79bc44f83792b76cf2db80d856d"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        22549,
+        22555
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        22555,
+        22828
+      ],
+      "sha256": "24ebf8015fdaeb71ee41161bb41af36a7d9a2f62ebe3a4bc472974f0a80e1bc4"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        22828,
+        22834
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        22834,
+        26057
+      ],
+      "sha256": "f6059205be33dda34c01f476bc5c9ad28068eac82a912cce540acbcb084c436e"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        26057,
+        26117
+      ],
+      "sha256": "2f803daeca6a0ab985ffddc7fa498c0abad1ae425601d306f672a83da988050e"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        26117,
+        26872
+      ],
+      "sha256": "dfac4def8b5d42ceddffb55853c0893d23eefb321b6157efdc12f9017e31f499"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        26872,
+        26910
+      ],
+      "sha256": "ea60a02ae51249ab02cd1d692372546853c796801f173c3827204cb340c09971"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        26910,
+        27243
+      ],
+      "sha256": "1f2b81ef79be823067326c4c992409c597573efe0981009c833b78d2f0ad3567"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        27243,
+        27247
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        38,
+        41
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Definition header and interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        46,
+        65
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Parent interface and connection",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        292,
+        317
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Integer-conversion use",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/INToRecFN.scala",
+      "lines": [
+        43,
+        73
+      ],
+      "sha256": "d10952a3a75c487472f8b52edacb04ccf061cde5e83d8f7ec2d1b97c1208bebf"
+    },
+    {
+      "label": "Precision-conversion use",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RecFNToRecFN.scala",
+      "lines": [
+        43,
+        87
+      ],
+      "sha256": "6246cc024b9e9150b05e21067cdc98dc7a79a03988428c682202d72e30e90413"
+    },
+    {
+      "label": "Rounding and option constants and raw floating-point input fields",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        42,
+        83
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "Complete round-mask helper",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/primitives.scala",
+      "lines": [
+        38,
+        86
+      ],
+      "sha256": "2eeb91dbb7c3ecb05dec9975de233f955a0c21a24791cbdf2a677a89abcec6c9"
+    },
+    {
+      "label": "Selected CPU recoded quiet NaN",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        236,
+        243
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "Recoded and raw deconstructed floating-point encodings",
+      "repo": "http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html",
+      "commit": "20190821012312",
+      "path": "HardFloat-Verilog.html",
+      "lines": [
+        468,
+        700
+      ],
+      "sha256": "4914dba25de554405db518b3476e69ee8bd244ea0e680c5c098173e3014dbd4b",
+      "source_type": "archived_webpage",
+      "url": "https://web.archive.org/web/20190821012312id_/http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html"
+    },
+    {
+      "label": "Rounding modes and exception flag order",
+      "repo": "http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html",
+      "commit": "20190821012312",
+      "path": "HardFloat-Verilog.html",
+      "lines": [
+        769,
+        836
+      ],
+      "sha256": "4914dba25de554405db518b3476e69ee8bd244ea0e680c5c098173e3014dbd4b",
+      "source_type": "archived_webpage",
+      "url": "https://web.archive.org/web/20190821012312id_/http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html"
+    },
+    {
+      "label": "Rounding module purpose",
+      "repo": "http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html",
+      "commit": "20190821012312",
+      "path": "HardFloat-Verilog.html",
+      "lines": [
+        1912,
+        1918
+      ],
+      "sha256": "4914dba25de554405db518b3476e69ee8bd244ea0e680c5c098173e3014dbd4b",
+      "source_type": "archived_webpage",
+      "url": "https://web.archive.org/web/20190821012312id_/http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html"
+    },
+    {
+      "label": "Parameter meanings",
+      "repo": "http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html",
+      "commit": "20190821012312",
+      "path": "HardFloat-Verilog.html",
+      "lines": [
+        1946,
+        1950
+      ],
+      "sha256": "4914dba25de554405db518b3476e69ee8bd244ea0e680c5c098173e3014dbd4b",
+      "source_type": "archived_webpage",
+      "url": "https://web.archive.org/web/20190821012312id_/http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html"
+    },
+    {
+      "label": "Input, exception and option meanings",
+      "repo": "http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html",
+      "commit": "20190821012312",
+      "path": "HardFloat-Verilog.html",
+      "lines": [
+        1956,
+        2033
+      ],
+      "sha256": "4914dba25de554405db518b3476e69ee8bd244ea0e680c5c098173e3014dbd4b",
+      "source_type": "archived_webpage",
+      "url": "https://web.archive.org/web/20190821012312id_/http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html"
+    },
+    {
+      "label": "Tininess detection",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "berkeley-softfloat-3/doc/SoftFloat.html",
+      "lines": [
+        607,
+        626
+      ],
+      "sha256": "aba2b4306ac97ee19aa91dd1c513ef454f45840840d84cd88b55617e653e6c18"
+    },
+    {
+      "label": "Canonical NaN encoding",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        183,
+        188
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

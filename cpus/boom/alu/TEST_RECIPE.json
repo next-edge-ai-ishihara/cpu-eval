@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "problem": "alu",
+  "source_unit": "ALU",
+  "configuration": "LargeBoomConfig",
+  "repositories": [
+    {
+      "url": "https://github.com/ucb-bar/chipyard.git",
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    },
+    {
+      "path": "generators/boom",
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    {
+      "path": "generators/rocket-chip",
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    {
+      "path": "toolchains/riscv-tools/riscv-tests",
+      "revision": "1ce128fa78c24bb0ed399c647e7139322b5353a7"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/0001-add-large-boom-commit-trace-config.patch",
+      "sha256": "5764e42ba82e678639b09cda4a1ae4232fedcc9bf863ca01503c9f7f901180f1",
+      "directory": ".",
+      "order": 1,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0002-use-published-chipyard-dependencies.patch",
+      "sha256": "fd4b1da1b47c08f649bbaacb21ebc9781c33eba61c94c016e053136e593e4fa1",
+      "directory": ".",
+      "order": 2,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0006-enable-boom-memory-trace.patch",
+      "sha256": "a30863ac106de00048fd5684b11c14db19a437596bceeaedb69cfc2df22e3360",
+      "directory": ".",
+      "order": 3,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0005-add-boom-memory-trace-config.patch",
+      "sha256": "66a83361fd75b78c82f4a8ecbd8cc7eb36b47a16fe0f424f50904161dcc0f1fb",
+      "directory": "generators/boom",
+      "order": 4,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0003-use-published-barstools-dependencies.patch",
+      "sha256": "febdc08263769899fd996309cd166494f43a41e279ae4ad583d9b7688759ea14",
+      "directory": "tools/barstools",
+      "order": 5,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0004-use-published-dsptools-dependencies.patch",
+      "sha256": "4d211926851a9bc2da16379dfb6888ee14b4665b4e32e3d35bc10099e19729f1",
+      "directory": "tools/dsptools",
+      "order": 6,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../nbdtlb/patches/0001-discard-invalidated-refills.patch",
+      "sha256": "92703fccab25b70f29d635bc1c8b301409dc729e955fbef9ba0bbeff81c89640",
+      "directory": "generators/boom",
+      "order": 7,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0007-use-local-chisel-snapshot.patch",
+      "sha256": "1b2f28650bb13d3b3a7fc2e09e138e56d115e664cc7384071b86e4ae982ad475",
+      "directory": ".",
+      "order": 1,
+      "stage": "candidate_evaluation"
+    },
+    {
+      "path": "../_shared/patches/0008-use-local-chisel-in-hardfloat.patch",
+      "sha256": "4c08a4520400bf46c068db885d1a35bb749d5ec1ded3cc92407657a4c2603bb0",
+      "directory": "generators/rocket-chip/hardfloat",
+      "order": 2,
+      "stage": "candidate_evaluation"
+    },
+    {
+      "path": "../_shared/patches/0009-use-local-chisel-in-rocket-chip.patch",
+      "sha256": "f187eb6a068cd55e88c00ce0eb0ee3583399a00ff6022f82c36d837d31207271",
+      "directory": "generators/rocket-chip",
+      "order": 3,
+      "stage": "candidate_evaluation"
+    },
+    {
+      "path": "../_shared/patches/0010-use-local-chisel-in-gemmini.patch",
+      "sha256": "108b59f625d0220662852ec37558e4f917e26f02820d68b121ceaf2f9376dadf",
+      "directory": "generators/gemmini",
+      "order": 4,
+      "stage": "candidate_evaluation"
+    }
+  ],
+  "test_source": {
+    "kind": "upstream_and_added_riscv_tests",
+    "list": "TESTS.txt",
+    "selection": "The 28 upstream RV64 arithmetic, logic, shift, and comparison tests, plus directed 64-bit SRA and SRL shift-amount tests and an upper-bit AND result check.",
+    "added_source": "tests/sra_64bit_shift_amount.S",
+    "added_source_sha256": "09bebd95684c9ff43727e352d59611b242600a51cc31d681e9ac1b449af1609d",
+    "added_build": "tools/environment/build_boom_test_assets.py using the common profile in tools/environment/boom-directed-test-assets.json",
+    "added_stripped_elf_sha256": "e7c73cd8944f6d2a7e5f7d60caa1cf257e985e82d7c88c7da991875a883b0c6a",
+    "additional_directed_tests": [
+      {
+        "name": "rv64ui-p-srl_and_64bit_boundary",
+        "source": "tests/srl_and_64bit_boundary.S",
+        "source_sha256": "c1fe6bb9d9e262523b7dcd2a1c998f795f8eb763cadc72db858f92389c7da468",
+        "build": "tools/environment/build_boom_test_assets.py using the common profile in tools/environment/boom-directed-test-assets.json",
+        "stripped_elf_sha256": "ed1e420cf17425ee0c4b3d38fc3f9db12b800dc2218707defd20bf83a6edba92"
+      }
+    ]
+  },
+  "build": {
+    "command": "make -C sims/verilator -j8 CONFIG=LargeBoomCommitTraceConfig VERILATOR_THREADS=1 RISCV=<riscv-tools-prefix>"
+  },
+  "comparison": {
+    "rtl_model": "LargeBoomCommitTraceConfig",
+    "isa_model": "Spike",
+    "values": "privilege mode, program counter, instruction encoding, destination register, destination-register value, memory-write address and memory-write value in execution order",
+    "normalization": "Align the first common eight-instruction sequence after model-specific boot code and omit only a retiring ECALL or EBREAK record that BOOM prints but Spike represents by direct trap transfer."
+  },
+  "requirement_mapping": {
+    "path": "REQUIREMENT_TESTS.tsv",
+    "sha256": "6f49b75c5dd7c4ca40028d9f144f082915e11ac96f671944baf348ad7db09261",
+    "scope": "The table associates the selected architectural arithmetic, logic, shift, and less-than instruction families and word-result sign extension with concrete test programs.",
+    "test_count": 30
+  },
+  "environment_reconstruction": {
+    "source": "../../../tools/environment/context-sources.json",
+    "key": "boom/boom-chipyard",
+    "test_assets_builder": "../../../tools/environment/build_boom_test_assets.py",
+    "test_assets_manifest": "../../../tools/environment/boom-directed-test-assets.json",
+    "reference_correction": "The NBDTLB invalidated-refill correction is included in the reference CPU for every BOOM problem.",
+    "test_patches": "The fp_to_fp sign-injection patch is applied to riscv-tests before all image test assets are built; programs such as fmin are therefore patched reference programs."
+  },
+  "verdict_rule": "The fixed tree builds and passes with the reference unit, so a failure after only the candidate is integrated is FAIL: a rejected class, compile or elaboration error at any file, simulator failure or missing test output. Only an integrated source that differs from the submission, a failed fixed-input check, a missing tool, resource exhaustion and a wall-clock interruption are INVALID.",
+  "simulation_limit": {
+    "option": "+max-cycles=2500000",
+    "wall_clock_seconds": 3600,
+    "rule": "A program that reaches the cycle limit, ends without its PASSED or FAILED line, or exits the simulator abnormally is FAIL_INCOMPLETE_EXECUTION. The longest program with the reference CPU, rv64mi-p-cache_replacement_cycles, ends after 202,604 cycles. A wall-clock interruption or a resource or tool failure is INVALID unless the trace already differs from Spike."
+  }
+}

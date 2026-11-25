@@ -1,0 +1,36 @@
+diff --git a/src/main/scala/rift2Core/backend/LSU/Dcache.scala b/src/main/scala/rift2Core/backend/LSU/Dcache.scala
+index 040c622..2b2f577 100644
+--- a/src/main/scala/rift2Core/backend/LSU/Dcache.scala
++++ b/src/main/scala/rift2Core/backend/LSU/Dcache.scala
+@@ -263,6 +263,31 @@ class Dcache(edge: TLEdgeOut, id: Int)(implicit p: Parameters) extends DcacheBas
+   if ( hasL2 ) {
+     stage.io.missUnit_req      <> missUnit.get.io.req
+     stage.io.wb_req <> writeBackUnit.get.io.wb_req
++
++    val cpuEvalExpectedWriteBack =
++      Module(new Queue(new Info_writeBack_req, 2, false, true))
++    cpuEvalExpectedWriteBack.io.enq.valid := stage.io.wb_req.valid
++    cpuEvalExpectedWriteBack.io.enq.bits := stage.io.wb_req.bits
++    val (_, _, cpuEvalReleaseLast, cpuEvalReleaseBeat) =
++      edge.count(io.writeBackUnit_dcache_release.get)
++    cpuEvalExpectedWriteBack.io.deq.ready :=
++      io.writeBackUnit_dcache_release.get.fire && cpuEvalReleaseLast
++    val cpuEvalExpectedLine = cpuEvalExpectedWriteBack.io.deq.bits.data >>
++      (cpuEvalReleaseBeat << log2Ceil(edge.bundle.dataBits))
++    val cpuEvalExpectedData = cpuEvalExpectedLine(edge.bundle.dataBits - 1, 0)
++    val cpuEvalCarriesData =
++      cpuEvalExpectedWriteBack.io.deq.bits.is_releaseData ||
++      cpuEvalExpectedWriteBack.io.deq.bits.is_probeData
++    when(io.writeBackUnit_dcache_release.get.fire &&
++      cpuEvalExpectedWriteBack.io.deq.valid && cpuEvalCarriesData &&
++      io.writeBackUnit_dcache_release.get.bits.data =/= cpuEvalExpectedData) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH write_back_unit release payload beat=%d expected=%x actual=%x\n",
++        cpuEvalReleaseBeat, cpuEvalExpectedData,
++        io.writeBackUnit_dcache_release.get.bits.data)
++    }
++    when(stage.io.wb_req.valid) {
++      assert(cpuEvalExpectedWriteBack.io.enq.ready)
++    }
+   
+     probeUnit.get.io.probeBan := writeBackUnit.get.io.miss_ban
+     missUnit.get.io.miss_ban  := writeBackUnit.get.io.miss_ban

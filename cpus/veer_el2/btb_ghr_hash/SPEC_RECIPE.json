@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for el2_btb_ghr_hash",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_lib.sv",
+      "lines": [
+        51,
+        60
+      ],
+      "language": "verilog",
+      "sha256": "54f7fa4953f2e3350d91fe986d2a50ea9d934953695f4a72e4e171dc37741ca7"
+    },
+    {
+      "label": "Parent instantiation for el2_btb_ghr_hash",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_bp_ctl.sv",
+      "lines": [
+        637,
+        640
+      ],
+      "sha256": "9b7065201916511b3e1fb6d0b8415ce74b4caf3afbd913b39d005c4db0bdf611"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `el2_btb_ghr_hash`\n\nImplement the complete `el2_btb_ghr_hash` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_btb_ghr_hash` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "text": "\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "text": "```\n"
+    }
+  ]
+}

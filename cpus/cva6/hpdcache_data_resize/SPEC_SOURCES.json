@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/hpdcache_data_resize/SPEC_RECIPE.json",
+  "recipe_sha256": "e102cdc8c652695a6dc5b5512d77c1a5c7b368b424a9e887716a9195281be5aa",
+  "prompt_sha256": "b749388c45494dc308eb8339e943b70c066067e54ff7343bf3a1a9724c65501f",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, submission instructions and headings",
+      "prompt_bytes": [
+        0,
+        329
+      ],
+      "sha256": "44e7ca595b7882557423952bfe9959be03f6df7548fdd0e8eade86e74496b9d8"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        329,
+        914
+      ],
+      "sha256": "adb4fdb47132fa1c2596c2517bd86d7e8d477500c422182477cce02057fe1dae"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        914,
+        994
+      ],
+      "sha256": "af952f4b5091633157e9ede5035215effb0710d2eea865f9e6e94bf3627c2ac0"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        994,
+        1629
+      ],
+      "sha256": "5c76b5a3880f8de19f9991efc139700267cb1ec5060622ab57aa0366598ac302"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1629,
+        1691
+      ],
+      "sha256": "a7369b3edfbc64e6e49edfa9efeb20e80e201cc514b8049a553bbccdeee09e45"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1691,
+        2258
+      ],
+      "sha256": "1b89ca9365d4885a37bd2fea1d3cfd841d4b859263a8f8e3d0464b7166bc2735"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2258,
+        2356
+      ],
+      "sha256": "5c49d89184bad7100aa7432447d08bf7b4121051815abdd4c496d2b65d93a623"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2356,
+        3208
+      ],
+      "sha256": "e00e075f8fcfa49107419ecafacedf08bd5f27d65988c5c1dbd9294e3ed33017"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        3208,
+        3276
+      ],
+      "sha256": "5a11ddfbe4344b030a44cd51ffbd2113eb5cc7f5f6379224a3daf5e48d136aea"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        3276,
+        4123
+      ],
+      "sha256": "97d6e46e191f54ac5ac0b659e07dfc0b2fdb5fa9b7d1486bdf1ed95a45727e8e"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        4123,
+        4188
+      ],
+      "sha256": "4ae1fea3764d579387f4a4cfe876b99a8abe107362aba6fa0f6879dd5b60db93"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        4188,
+        4740
+      ],
+      "sha256": "facf300482b60c707cba400a0f943a76b037463c4c72831f519c95e89c1e6d8a"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        4740,
+        4744
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_data_resize.sv",
+      "lines": [
+        26,
+        55
+      ],
+      "sha256": "0571f7068cef28d54d684d5faed566d09830b96686874f377545dfb48f1f7966",
+      "language": "verilog"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_flush.sv",
+      "lines": [
+        344,
+        361
+      ],
+      "sha256": "ff1cf8c71c820c694976205a688994f582637142ac25e846d14e39e63d3888e2"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_miss_handler.sv",
+      "lines": [
+        640,
+        657
+      ],
+      "sha256": "ac26528a861d1e237a56e9add5bf77c37c84db2f179e78118832926c8d9e54f0"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_data_downsize.sv",
+      "lines": [
+        26,
+        62
+      ],
+      "sha256": "ff676d8d9ecc9fbf0c8dbce795a799a11c25b163f5efbd494a15680e3558231c",
+      "language": "verilog"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_data_upsize.sv",
+      "lines": [
+        26,
+        62
+      ],
+      "sha256": "3945c19d53c4209df848f6185be651d46e0ebaf4f8b6e70a39c2fe43f2f10452",
+      "language": "verilog"
+    },
+    {
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fifo_reg.sv",
+      "lines": [
+        26,
+        46
+      ],
+      "sha256": "36081c55fb66cc1f5505c8e66788a71a729d41228f6e7f90d4729f82878cd4d5",
+      "language": "verilog"
+    }
+  ]
+}

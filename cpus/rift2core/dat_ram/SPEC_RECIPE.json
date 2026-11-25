@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Class declaration",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/base/CacheRAM.scala",
+      "lines": [
+        26,
+        26
+      ],
+      "sha256": "e215e72c7d88ff7ec3e3543025f29b3b1a2368f7be9cb30df1fb13577b326a94"
+    },
+    {
+      "label": "Address width and interface",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/base/CacheRAM.scala",
+      "lines": [
+        29,
+        43
+      ],
+      "sha256": "e215e72c7d88ff7ec3e3543025f29b3b1a2368f7be9cb30df1fb13577b326a94"
+    },
+    {
+      "label": "DcacheStage instantiation",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/LSU/DcacheStage.scala",
+      "lines": [
+        60,
+        60
+      ],
+      "sha256": "c17694d2422010652f5c8f7c462810b9403fe86450e7557c9eb0efd6e61d9e0f"
+    },
+    {
+      "label": "DcacheStage pipeline register",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/LSU/DcacheStage.scala",
+      "lines": [
+        69,
+        70
+      ],
+      "sha256": "c17694d2422010652f5c8f7c462810b9403fe86450e7557c9eb0efd6e61d9e0f"
+    },
+    {
+      "label": "DcacheStage connections",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/backend/LSU/DcacheStage.scala",
+      "lines": [
+        107,
+        138
+      ],
+      "sha256": "c17694d2422010652f5c8f7c462810b9403fe86450e7557c9eb0efd6e61d9e0f"
+    },
+    {
+      "label": "IF2 instantiation",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/frontend/IF2.scala",
+      "lines": [
+        167,
+        167
+      ],
+      "sha256": "4bbfb5b31e8ca0df0dc7b669438bf1f68f00f9d35a855fae108f6b5a7b52e3f1",
+      "line_endings": "lf"
+    },
+    {
+      "label": "PTW instantiation",
+      "repo": "https://github.com/whutddk/Rift2Core.git",
+      "commit": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "path": "src/main/scala/rift2Core/privilege/PTW.scala",
+      "lines": [
+        260,
+        260
+      ],
+      "sha256": "05b3d889fc621f25e92bcf75197f0cd8d38d01aae7e7d0ecdb5eac7d82cfe253",
+      "line_endings": "lf"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task boundary",
+      "text": "# Implement `DatRAM`\n\nImplement the complete `DatRAM` class. Preserve the class name and interface shown below.\n\nReturn only the complete `class DatRAM` definition in a single Scala code block, with no text outside the block.\n\n## Class declaration\n\n### src/main/scala/base/CacheRAM.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n## Parent instantiation\n\n### src/main/scala/rift2Core/backend/LSU/DcacheStage.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n### src/main/scala/rift2Core/frontend/IF2.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n### src/main/scala/rift2Core/privilege/PTW.scala\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Section boundary",
+      "text": "```\n\n## Additional requirement\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Additional requirement",
+      "text": "When `enr` is high at a rising clock edge, `datar` presents the row at `addrr` throughout the following cycle whatever the value of `enr` in that cycle, and when `enw` is high at a rising clock edge, each byte `i` of the row at `addrw` whose `datawm(i)` is set takes the value of `dataw(i)` while the other bytes keep their values.\n"
+    }
+  ]
+}

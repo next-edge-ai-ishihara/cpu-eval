@@ -1,0 +1,21 @@
+--- a/copro_alu_all_ops.S
++++ b/copro_alu_all_ops.S
+@@ -9,12 +9,18 @@
+ RVTEST_CODE_BEGIN
+     li t0, 5
+     li t1, 7
++    li t2, 3
+ 
+     .word 0x0000007b  # CUS_NOP
+     .word 0x0062957b  # CUS_ADD a0, t0, t1
+     .word 0x026295fb  # CUS_DOUBLE_RS1 a1, t0, t1
+     .word 0x0462967b  # CUS_DOUBLE_RS2 a2, t0, t1
+     .word 0x066296fb  # CUS_ADD_MULTI a3, t0, t1
++    .word 0x38628743  # CUS_ADD_RS3_MADD a4, t0, t1, t2
++    .word 0x386287c7  # CUS_ADD_RS3_MSUB a5, t0, t1, t2
++    .word 0x3862884f  # CUS_ADD_RS3_NMADD a6, t0, t1, t2
++    .word 0x386288cb  # CUS_ADD_RS3_NMSUB a7, t0, t1, t2
++    .word 0x0862957b  # CUS_ADD_RS3_RTYPE t0, t1, a0
+     addi s0, a0, 1
+ RVTEST_CODE_END
+ RVMODEL_HALT

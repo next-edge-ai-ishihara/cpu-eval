@@ -1,0 +1,16 @@
+--- a/riscv_arithmetic_basic_test_0.S
++++ b/riscv_arithmetic_basic_test_0.S
+@@ -65,2 +65,13 @@
+ main:             li         t0, 0x52d893a0 #start riscv_int_numeric_corner_stream_5
++                  la         t4, kernel_data_start
++                  li         t0, -1
++                  sb         t0, 0(t4)
++                  lb         t1, 0(t4)
++                  lbu        t3, 0(t4)
++                  li         t0, 0x8000
++                  sh         t0, 0(t4)
++                  lh         t2, 0(t4)
++                  lhu        t5, 0(t4)
++                  li         t0, 0
++                  sw         t0, 0(t4)
+                   li         t6, 0x83c22e1

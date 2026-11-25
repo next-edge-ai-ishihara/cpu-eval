@@ -1,0 +1,35 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate.sh",
+    "harness/check_ports.py",
+    "harness/lzc_ports_tb.sv",
+    "../instr_scan/harness/evaluate_ports.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "lzc",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "vendor/pulp-platform/common_cells/src/lzc.sv",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "test_list": "harness/testlist_lzc.yaml",
+  "test_list_sha256": "7f20eb401f8dd127b7708e044f8c0d2d9dbadd2da66f22840243504cba72dea9",
+  "reconstruction": {
+    "reference_hdl": "Check out CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 recursively and read vendor/pulp-platform/common_cells/src/lzc.sv; verify SHA-256 c47046cab67cd9e9ff46f9b2a4c055f301eabd0f135d76d96639eb41c9fa3609.",
+    "test_sources": "Check out the recorded riscv-arch-test revision. The two sources named by harness/testlist_lzc.yaml are unmodified upstream files."
+  },
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "930c98d749650fc83ac2b9a13d1835d5504b4545fce875309527ebd3121a9b95",
+  "port_evaluator": "harness/check_ports.py",
+  "port_evaluator_sha256": "7c05ec5654bc23ae7e6d355eca609a7aa05cabc3c8e45f4016efc9240739eb66",
+  "port_testbench": "harness/lzc_ports_tb.sv",
+  "port_testbench_sha256": "1dfaecedbe009386b2dc0d959a57efd7651c537cd5b49a90786076ac4e3407a0",
+  "port_runtime": "../instr_scan/harness/evaluate_ports.py",
+  "port_runtime_sha256": "4ada650951191124054d4b96d5c3b2003d9944ce15dde544476f07afad117562",
+  "port_test_scope": "All four inputs for WIDTH=2 with MODE=0, the narrow instance that cv32a60x uses. Compare cnt_o and empty_o with the trailing-zero count, and cnt_o with WIDTH-1 for the zero input. The CPU tests run the cv32a60x configuration with harness/testlist_lzc.yaml."
+}

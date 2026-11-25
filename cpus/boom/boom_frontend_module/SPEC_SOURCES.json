@@ -1,0 +1,1852 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "86020fd8211bfa67e40177b1b66086798ee0b681ff24aa6721cd533c999a463c",
+  "prompt_sha256": "1760b52428e96d4251042a981dd4ceeb6df19b60a3c6ce096c3227769f234aea",
+  "repositories": {
+    "github.com/riscv-boom/riscv-boom": {
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        291
+      ],
+      "sha256": "4e620a0efc375c67d2c519c9337678ac27a3543de93fcac5406da2010da790bd"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        291,
+        387
+      ],
+      "sha256": "2638f31f48ad502c2c61b9a062791545accfeae1fc8fb655a74f46ccbde196c4"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        387,
+        422
+      ],
+      "sha256": "fed0f1791d99e2580274f3eb60fc0fdfa09c99c3f065700107d53fd53a7fe762"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        422,
+        429
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 4,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        429,
+        543
+      ],
+      "sha256": "e27fa8d4052af548f89b2a6411104bc19bb190874458066e299fa6f1da695e47"
+    },
+    {
+      "index": 5,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        543,
+        550
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 6,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        550,
+        590
+      ],
+      "sha256": "eca13f203dc0b662963f01d535704dd2149c17ec56f74d116ff1314f40e84e4e"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        590,
+        597
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        597,
+        1124
+      ],
+      "sha256": "80d3ed6cbe3e6b4f6e973aba3683543bc912b1e94eb11e690034cfa0d1f1fe2b"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1124,
+        1131
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1131,
+        1205
+      ],
+      "sha256": "6f7340ecb6d0074eb44d9ea6cd88359ebcb9ad2af0abd7235f4dbec06e0600f0"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        1205,
+        1209
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        1209,
+        1266
+      ],
+      "sha256": "a22e6e1ff1d7d56b76acb255150a1252785d0e92e1f06bd20a788b4a64af01eb"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1266,
+        1527
+      ],
+      "sha256": "93252bae75e6c0b3aa6d3f4046dbf0e918e459609322f4fa22e80c6bfaf171b6"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1527,
+        1534
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        1534,
+        1630
+      ],
+      "sha256": "88b4bff8668e17e6534839d5695c01441cca53fba3c2764605ef36af113c917e"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1630,
+        1637
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        1637,
+        1758
+      ],
+      "sha256": "fffc6fef4f7a8f58d284191bb872c90b9c1b80597f5d09ce086e1ce18fcf3cdd"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1758,
+        1765
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        1765,
+        1908
+      ],
+      "sha256": "da251ab69d3aaad0ccdb8f2d8fc72e743b5a63a70cca58a7b1f414abab0c2655"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1908,
+        1915
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        1915,
+        2004
+      ],
+      "sha256": "00a55390d4252fd103d42d5b7d4fb6b50e6ee6fe2e0b8f56cd441644f57b3f3d"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        2004,
+        2011
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        2011,
+        3143
+      ],
+      "sha256": "1b553a041475452e5dc39a9d4cb47507ff51e383f740f2296acd6c9808fb65cc"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        3143,
+        3147
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 25,
+      "kind": "authored",
+      "description": "Section heading and fence",
+      "prompt_bytes": [
+        3147,
+        3181
+      ],
+      "sha256": "47ea1bdcd52e7ac2e2a79f554fb7b58ad1f4871ba087e9c97dd03de53e437f34"
+    },
+    {
+      "index": 26,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        3181,
+        4386
+      ],
+      "sha256": "6aabc225e34c1bc52c2703d386f71cdd63cdee52591f8518d7ff146b295389a6"
+    },
+    {
+      "index": 27,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        4386,
+        4390
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Section heading and fence",
+      "prompt_bytes": [
+        4390,
+        4422
+      ],
+      "sha256": "9931a914da777f92bd15dda913403de8764d8a87f8b15c940bbc04c5ace8658f"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        4422,
+        7008
+      ],
+      "sha256": "b8875028128a4a87f68467ec707930ca9416e56b2fe91fa889d0ea69949c06c6"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        7008,
+        7012
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 31,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        7012,
+        7085
+      ],
+      "sha256": "fc23d6e47b834381d327618c231a4367acc189383c67d022131d0489fb173728"
+    },
+    {
+      "index": 32,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        7085,
+        7301
+      ],
+      "sha256": "307d831aedbf6570cebae4983c6ad88877cc33520f4b2a430c120715d8375b04"
+    },
+    {
+      "index": 33,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        7301,
+        7308
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 34,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        7308,
+        7537
+      ],
+      "sha256": "feab2f4251cd6282016dbd0ce1eb675eb1038ef8d1389abad1a0de307a728151"
+    },
+    {
+      "index": 35,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        7537,
+        7544
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 36,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        7544,
+        7649
+      ],
+      "sha256": "ae4dfdcebb3e1b5c229a6194a7c3f94b2c0848c2972e1fdc5bb17ec6837e1f50"
+    },
+    {
+      "index": 37,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        7649,
+        7653
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        7653,
+        7706
+      ],
+      "sha256": "bc01cf77406ce31b4e28d26963f49b4fad14c73a3bf7a7ab33b4b65d4b37414f"
+    },
+    {
+      "index": 39,
+      "kind": "verbatim_source",
+      "source": 50,
+      "prompt_bytes": [
+        7706,
+        7951
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 40,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        7951,
+        8009
+      ],
+      "sha256": "cc836cf9464eec285c2acbe981ba71ce896da06580d65145f089f0de2693ebff"
+    },
+    {
+      "index": 41,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        8009,
+        8521
+      ],
+      "sha256": "cedead90506a4370b310a66ca4a917bb049969b0e180f1872c653d04487ff4a8"
+    },
+    {
+      "index": 42,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        8521,
+        8528
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 43,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        8528,
+        8835
+      ],
+      "sha256": "bbe5feb239446de4fa9317aedc4ed85271189f8da25e0b10e4e35e2b8ce9b74b"
+    },
+    {
+      "index": 44,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        8835,
+        8842
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 45,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        8842,
+        9025
+      ],
+      "sha256": "f5fe869fe493a436a3aca5f5f20f7df0740d19e94715ce37c8662902295aa63a"
+    },
+    {
+      "index": 46,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9025,
+        9032
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 47,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        9032,
+        9718
+      ],
+      "sha256": "c44122456444e3b840634fbce0ac80a594adb6826f4fdddb33b3be087f478c2e"
+    },
+    {
+      "index": 48,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9718,
+        9725
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 49,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        9725,
+        9894
+      ],
+      "sha256": "a88a18e64bfb07ab10a44fc2d4289b83370c23aa582aac2072ec4bbcad082b86"
+    },
+    {
+      "index": 50,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        9894,
+        9898
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 51,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        9898,
+        9947
+      ],
+      "sha256": "24f60e3b19d31baa7080b340940a23936ecc9887d66facac2ce311ef37fb8e1d"
+    },
+    {
+      "index": 52,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        9947,
+        18095
+      ],
+      "sha256": "28975951d467ddf0223d67277aa6242fa638123917664ddd936805ce79f8679a"
+    },
+    {
+      "index": 53,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        18095,
+        18099
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 54,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        18099,
+        18149
+      ],
+      "sha256": "533df64a00df4d02974fe72a82497d3d2a70010a46b74236a088ee6fd4813902"
+    },
+    {
+      "index": 55,
+      "kind": "verbatim_source",
+      "source": 22,
+      "prompt_bytes": [
+        18149,
+        19016
+      ],
+      "sha256": "11b3a753271321b49cffff9acc8270cbe9f5397ff8aa4b1d6d61f5c681487a28"
+    },
+    {
+      "index": 56,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        19016,
+        19020
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 57,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        19020,
+        19067
+      ],
+      "sha256": "5f6036732ba0ea375f5830a6ffc1cf2af92eace07d59e7bf0788d022314e8c67"
+    },
+    {
+      "index": 58,
+      "kind": "verbatim_source",
+      "source": 23,
+      "prompt_bytes": [
+        19067,
+        19981
+      ],
+      "sha256": "0481090b273c42c017466bcfb2e63de4eb8161faf5d3c78dccde452f12e87428"
+    },
+    {
+      "index": 59,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        19981,
+        19985
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 60,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        19985,
+        20032
+      ],
+      "sha256": "8585132ad2cce4f9cb963ee015987dd002c4191e7290680b7af36bbf5db31aea"
+    },
+    {
+      "index": 61,
+      "kind": "verbatim_source",
+      "source": 24,
+      "prompt_bytes": [
+        20032,
+        21107
+      ],
+      "sha256": "bfc6edf5d5597d4ee4fcd39eca96f8c65b2ddfaed666e4ddc8cc3ce03a592208"
+    },
+    {
+      "index": 62,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        21107,
+        21114
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 63,
+      "kind": "verbatim_source",
+      "source": 25,
+      "prompt_bytes": [
+        21114,
+        21622
+      ],
+      "sha256": "a6d4f857bc55ba85d04828d2f5868761cf2a4dc6197871641554afdb59907724"
+    },
+    {
+      "index": 64,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        21622,
+        21626
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 65,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        21626,
+        21678
+      ],
+      "sha256": "b666bd632113270e517619494637951706181d8d5a5a9c10e981662ae06e3f67"
+    },
+    {
+      "index": 66,
+      "kind": "verbatim_source",
+      "source": 26,
+      "prompt_bytes": [
+        21678,
+        21872
+      ],
+      "sha256": "2e43e54fd8e9008891e289750f7334f36d938cd720da1e5fe3df4e5ea03ecb20"
+    },
+    {
+      "index": 67,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        21872,
+        21879
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 68,
+      "kind": "verbatim_source",
+      "source": 27,
+      "prompt_bytes": [
+        21879,
+        21969
+      ],
+      "sha256": "10cfb5278c98cc897ee86fb74f75060dd11f0449200dba1a3c570d3ab624744d"
+    },
+    {
+      "index": 69,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        21969,
+        21973
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 70,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        21973,
+        22020
+      ],
+      "sha256": "1d3c8097d9df6933abd03ad118bc3663d3f402ab97ba07155be2b1f2bedfb8ef"
+    },
+    {
+      "index": 71,
+      "kind": "verbatim_source",
+      "source": 28,
+      "prompt_bytes": [
+        22020,
+        23002
+      ],
+      "sha256": "c065eb894ad7ff50f65d0b1cc356dbf108fa5cbc394584f9c3a980fd1ff0f22b"
+    },
+    {
+      "index": 72,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        23002,
+        23006
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 73,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        23006,
+        23060
+      ],
+      "sha256": "14c72aac2061d67b69191946e3a563efc723fe0a3044d03e1b4ada26b7f704c2"
+    },
+    {
+      "index": 74,
+      "kind": "verbatim_source",
+      "source": 29,
+      "prompt_bytes": [
+        23060,
+        25481
+      ],
+      "sha256": "ed63b114d315f8524728134a20e37ca1f077c10184b7816787add4a1d06cc905"
+    },
+    {
+      "index": 75,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        25481,
+        25488
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 76,
+      "kind": "verbatim_source",
+      "source": 30,
+      "prompt_bytes": [
+        25488,
+        25908
+      ],
+      "sha256": "0febfda6bb2d96f40c4f197aaefce01890861c24bd8534d84687eaf9d2428d39"
+    },
+    {
+      "index": 77,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        25908,
+        25915
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 78,
+      "kind": "verbatim_source",
+      "source": 31,
+      "prompt_bytes": [
+        25915,
+        26416
+      ],
+      "sha256": "2c9bb074b28a7d88999de4516d9f6d569d4168790012affb3acd35f5996c3802"
+    },
+    {
+      "index": 79,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        26416,
+        26420
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 80,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        26420,
+        26468
+      ],
+      "sha256": "845d94bb0dde1cf9af21750206ab9414de238d0ae2a06c4367a8ef6eca2d3f67"
+    },
+    {
+      "index": 81,
+      "kind": "verbatim_source",
+      "source": 32,
+      "prompt_bytes": [
+        26468,
+        26828
+      ],
+      "sha256": "78615cdebbf096bdb0cbb29f4c577d2b02e76f4e6b12f85214a76ecf6d55bfaa"
+    },
+    {
+      "index": 82,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        26828,
+        26832
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 83,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        26832,
+        26885
+      ],
+      "sha256": "2f38eae074558328d0aeaef476132c2f146c912d79d3908ebbc2d54446c1dd90"
+    },
+    {
+      "index": 84,
+      "kind": "verbatim_source",
+      "source": 33,
+      "prompt_bytes": [
+        26885,
+        27831
+      ],
+      "sha256": "bf209d5f98c8968c7c2e33fc7a26022042480b746cc617cc6c86e86021ca64eb"
+    },
+    {
+      "index": 85,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        27831,
+        27835
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 86,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        27835,
+        27894
+      ],
+      "sha256": "7fb09f2319959bf872fb1cf5bcb815beff6ca95bafa820cc2c4386c3249a1a33"
+    },
+    {
+      "index": 87,
+      "kind": "verbatim_source",
+      "source": 34,
+      "prompt_bytes": [
+        27894,
+        31252
+      ],
+      "sha256": "b3dd7f55833f8ffdd0714d0f3eab1a8ed5cb947837383b0db40e3f6500650952"
+    },
+    {
+      "index": 88,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        31252,
+        31256
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 89,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        31256,
+        31303
+      ],
+      "sha256": "7cf628b7149bd9054e760e95ea2ec8a053094e65bd28f1ec96f556f0c4e0f231"
+    },
+    {
+      "index": 90,
+      "kind": "verbatim_source",
+      "source": 35,
+      "prompt_bytes": [
+        31303,
+        32031
+      ],
+      "sha256": "a81f6be43c27f4c3e5611e2cbb5f8c035187b316d6bf199ec4c46cac71b0d5ee"
+    },
+    {
+      "index": 91,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        32031,
+        32035
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 92,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        32035,
+        32089
+      ],
+      "sha256": "6d7a70e96096a45577af85ebd589dd5925e1ee429f18f1517637cd9d9ee6d3a8"
+    },
+    {
+      "index": 93,
+      "kind": "verbatim_source",
+      "source": 36,
+      "prompt_bytes": [
+        32089,
+        32932
+      ],
+      "sha256": "95152b41f870a51c809db38346f3b46ef9c0b8cdd2a33a78dcef91d73e2e29b4"
+    },
+    {
+      "index": 94,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        32932,
+        32936
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 95,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        32936,
+        32986
+      ],
+      "sha256": "93de3ecbc04dc6d6247f651660eb674974b5b4c4ae4ca94a541e1c8f65888247"
+    },
+    {
+      "index": 96,
+      "kind": "verbatim_source",
+      "source": 37,
+      "prompt_bytes": [
+        32986,
+        33491
+      ],
+      "sha256": "630bea3218038c01799914c10c7a491ffa9e199fb49621cc59dc4ce94825c179"
+    },
+    {
+      "index": 97,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        33491,
+        33498
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 98,
+      "kind": "verbatim_source",
+      "source": 38,
+      "prompt_bytes": [
+        33498,
+        33887
+      ],
+      "sha256": "0b72f8efe594b1079384bb94ee0866d7d79f7ca89e845915816b2ea8c3e64ecd"
+    },
+    {
+      "index": 99,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        33887,
+        33891
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 100,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        33891,
+        33937
+      ],
+      "sha256": "20e96e4b0a5a44dd9cd31368e52b02e9cbf693bd0e970cff7493fc9bc6a073c4"
+    },
+    {
+      "index": 101,
+      "kind": "verbatim_source",
+      "source": 39,
+      "prompt_bytes": [
+        33937,
+        34310
+      ],
+      "sha256": "3394a9d87e1f9e8e3f56b4548ae3e419fd7082b640d384a3b5d6d05dc4a0d55b"
+    },
+    {
+      "index": 102,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        34310,
+        34314
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 103,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        34314,
+        34383
+      ],
+      "sha256": "82dc811ff4c53a64c14cf8645c2301bc1722abc00eb0598980f0d5495952c680"
+    },
+    {
+      "index": 104,
+      "kind": "verbatim_source",
+      "source": 40,
+      "prompt_bytes": [
+        34383,
+        34413
+      ],
+      "sha256": "1e1f086fed11c30f417ad52e6533de14d7baa9183af078a24e0548943c9e39f6"
+    },
+    {
+      "index": 105,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        34413,
+        34420
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 106,
+      "kind": "verbatim_source",
+      "source": 41,
+      "prompt_bytes": [
+        34420,
+        34884
+      ],
+      "sha256": "f87fd82fdbab54accfbfd44be1bccf1c54b09cac0ee71241c41fb0b36c748e73"
+    },
+    {
+      "index": 107,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        34884,
+        34891
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 108,
+      "kind": "verbatim_source",
+      "source": 42,
+      "prompt_bytes": [
+        34891,
+        38699
+      ],
+      "sha256": "e887f2ff9b04ab5e2fd725ce5c8a96ac52076807a1c4f877796440aa15aeb1c8"
+    },
+    {
+      "index": 109,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        38699,
+        38706
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 110,
+      "kind": "verbatim_source",
+      "source": 43,
+      "prompt_bytes": [
+        38706,
+        38790
+      ],
+      "sha256": "e3eab75c21aff33aa5216881ace5cd3d0171693850645ac4bb0f447b83c9e155"
+    },
+    {
+      "index": 111,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        38790,
+        38797
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 112,
+      "kind": "verbatim_source",
+      "source": 44,
+      "prompt_bytes": [
+        38797,
+        39949
+      ],
+      "sha256": "187522138e8d1c3a752c1f3e5f685e95fbdae964c2d33840923ee3eb10bb915b"
+    },
+    {
+      "index": 113,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        39949,
+        39956
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 114,
+      "kind": "verbatim_source",
+      "source": 45,
+      "prompt_bytes": [
+        39956,
+        40503
+      ],
+      "sha256": "8b93c666b3df6579ed4320e3b8ad651e9c7fe6e5d67405d9eeabf992020ec61b"
+    },
+    {
+      "index": 115,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        40503,
+        40507
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 116,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        40507,
+        40581
+      ],
+      "sha256": "83b81194517f8f3058dc2be5b50b19f073853bf01b6a751092ddf47677faa1d5"
+    },
+    {
+      "index": 117,
+      "kind": "verbatim_source",
+      "source": 46,
+      "prompt_bytes": [
+        40581,
+        46637
+      ],
+      "sha256": "bcbee5725868fa3a2edaacbc691bd92ba5f11ddf08b0201119053e98e748e6ef"
+    },
+    {
+      "index": 118,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        46637,
+        46641
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 119,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        46641,
+        46709
+      ],
+      "sha256": "8feac357e9e9b24ad8a11beb541ea5fa70f977b11df02b4bae69f52afaae89ab"
+    },
+    {
+      "index": 120,
+      "kind": "verbatim_source",
+      "source": 47,
+      "prompt_bytes": [
+        46709,
+        53365
+      ],
+      "sha256": "e7bb3494f0c87a7c7a206bf528befdec7bb3fec4d290f5cca515e74b26da6fbf"
+    },
+    {
+      "index": 121,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        53365,
+        53369
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 122,
+      "kind": "authored",
+      "description": "Section heading, source path and fence",
+      "prompt_bytes": [
+        53369,
+        53432
+      ],
+      "sha256": "37d53f06ab0836c93d1fa40ae263cfc7e4529c1ccef4ec06c3b0a6c95554e4ab"
+    },
+    {
+      "index": 123,
+      "kind": "verbatim_source",
+      "source": 48,
+      "prompt_bytes": [
+        53432,
+        56095
+      ],
+      "sha256": "522ca8b04c71aae8f8a4a5fbcb834b3ce9263f2c644771669a940d5caa9c89a7"
+    },
+    {
+      "index": 124,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        56095,
+        56099
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 125,
+      "kind": "verbatim_source",
+      "source": 49,
+      "prompt_bytes": [
+        56099,
+        57479
+      ],
+      "sha256": "4fde4715d630a51978cfce3e2f02a6afd6a75532ced977331d94d4ebbf02316d"
+    },
+    {
+      "index": 126,
+      "kind": "authored",
+      "description": "Close fence",
+      "prompt_bytes": [
+        57479,
+        57483
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Fetch-buffer-entry default",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        39,
+        39
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "BOOM frontend feature defaults",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        45,
+        47
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "FTQ parameter default",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        49,
+        49
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Branch-prediction, history, RAS, and compression defaults",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        59,
+        70
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Breakpoint-count default",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        81,
+        81
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Selected Large BOOM declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        175,
+        181
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Selected fetch and core widths",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        188,
+        190
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Selected fetch-buffer and FTQ sizes",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        200,
+        202
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Selected instruction-cache geometry",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        208,
+        210
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Selected system-bus width and XLEN",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        217,
+        218
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Selected TAGE-L branch-predictor composition",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        424,
+        451
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Package and imports",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/frontend.scala",
+      "lines": [
+        1,
+        29
+      ],
+      "sha256": "d2d0a42d6a8bf8c41259646b926dcae610ca1bf58010e3aa930a660951eb2ed0"
+    },
+    {
+      "label": "Frontend public interface, wrapper, and target declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/frontend.scala",
+      "lines": [
+        254,
+        328
+      ],
+      "sha256": "d2d0a42d6a8bf8c41259646b926dcae610ca1bf58010e3aa930a660951eb2ed0"
+    },
+    {
+      "label": "Parent construction",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        139,
+        142
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "Parent page-table connection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        159,
+        162
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "Parent CPU connection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        176,
+        177
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "Derived core width",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        145,
+        159
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Derived FTQ and fetch-buffer sizes",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        168,
+        170
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Derived instruction-cache parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        216,
+        219
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Derived branch-prediction parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        225,
+        242
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Derived frontend feature switches",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        249,
+        251
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Frontend data types, address helpers, and fetch bundle",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/frontend.scala",
+      "lines": [
+        32,
+        250
+      ],
+      "sha256": "d2d0a42d6a8bf8c41259646b926dcae610ca1bf58010e3aa930a660951eb2ed0"
+    },
+    {
+      "label": "Instruction-cache parameters and request",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/ICache.scala",
+      "lines": [
+        19,
+        46
+      ],
+      "sha256": "e8a075a00f1fb3aa24b8ff56dbf7cc0e17a237ce5b8bc80cd2f285bb3dcf5eb6"
+    },
+    {
+      "label": "BOOM instruction-cache response and interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/icache.scala",
+      "lines": [
+        77,
+        110
+      ],
+      "sha256": "c4cb2508c1fd7fc66a7f0fc4a826b9f5c15a79d4c13e22ad90b0b7a610bbcbb1"
+    },
+    {
+      "label": "SFENCE request type, TLB request and response",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        24,
+        63
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "TLB construction and interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        171,
+        184
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "Frontend exception type",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Frontend.scala",
+      "lines": [
+        23,
+        33
+      ],
+      "sha256": "6e2c0d4d8cf8fe798ceb14af65849ad0a72ebc494e3e9edc227c221a89722622"
+    },
+    {
+      "label": "Frontend performance events",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Frontend.scala",
+      "lines": [
+        44,
+        47
+      ],
+      "sha256": "6e2c0d4d8cf8fe798ceb14af65849ad0a72ebc494e3e9edc227c221a89722622"
+    },
+    {
+      "label": "Machine-status type",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/CSR.scala",
+      "lines": [
+        17,
+        58
+      ],
+      "sha256": "f71e99f82864ba22edc6bdf09f5b44725c3821c758a19c2e64288c11063b2b2a"
+    },
+    {
+      "label": "Branch-prediction data types",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/predictor.scala",
+      "lines": [
+        16,
+        84
+      ],
+      "sha256": "49b5ca9ba0c75a8089da49127b592b86bfde4b723cb7d175e8f61e531a2c7091"
+    },
+    {
+      "label": "Branch-prediction request and staged response",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/predictor.scala",
+      "lines": [
+        117,
+        130
+      ],
+      "sha256": "49b5ca9ba0c75a8089da49127b592b86bfde4b723cb7d175e8f61e531a2c7091"
+    },
+    {
+      "label": "Branch-predictor interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/predictor.scala",
+      "lines": [
+        194,
+        212
+      ],
+      "sha256": "49b5ca9ba0c75a8089da49127b592b86bfde4b723cb7d175e8f61e531a2c7091"
+    },
+    {
+      "label": "Return-address-stack interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/ras.scala",
+      "lines": [
+        26,
+        35
+      ],
+      "sha256": "ea62ba87ebd1f31833744f6b7641375820c5fb3460516b986b5b9885f09123fd"
+    },
+    {
+      "label": "Fetch-buffer interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/fetch-buffer.scala",
+      "lines": [
+        25,
+        54
+      ],
+      "sha256": "cd07512010d2ce57410f49d070fe2f8817d379863f0859635cace4dacc750a4c"
+    },
+    {
+      "label": "Fetch-target-queue types and interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/fetch-target-queue.scala",
+      "lines": [
+        29,
+        132
+      ],
+      "sha256": "9ebeff82de4d1bdfe0dabce0e803378f4983cf7109a5725fde68db4d043b4140"
+    },
+    {
+      "label": "Frontend branch-decoder interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/decode.scala",
+      "lines": [
+        598,
+        625
+      ],
+      "sha256": "df4c81ba804bdc694af1e9cb2caa19ce6ec8565f7d7d1a3b1c29f58d3929ca7c"
+    },
+    {
+      "label": "Breakpoint-unit interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Breakpoint.scala",
+      "lines": [
+        72,
+        95
+      ],
+      "sha256": "648e63baa7afffcdb0546313159fa9f1ed9310cfad79de6ef7c782013f09c932"
+    },
+    {
+      "label": "Prediction-source and control-flow constants",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        48,
+        62
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Compressed-instruction expansion helper",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        322,
+        333
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Mask helper contracts",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/util/util.scala",
+      "lines": [
+        366,
+        386
+      ],
+      "sha256": "f701ed3dee77ee4621f9c207d50176469aa3265af1983f3d81897b5585159f18"
+    },
+    {
+      "label": "Core branch-update connection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        224,
+        224
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Core breakpoint and instruction-cache-flush connections",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        372,
+        384
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Core redirect, commit and SFENCE connections",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        395,
+        472
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Core fetch-packet consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        495,
+        496
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Core FTQ PC, exception and misprediction consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        529,
+        554
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Core debug FTQ connection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        1432,
+        1441
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Instruction-fetch, compressed-instruction, fetch-buffer and FTQ behavior",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/instruction-fetch-stage.rst",
+      "lines": [
+        11,
+        132
+      ],
+      "sha256": "7794ad1e5d69fe309d0ef958355ec2f19a09a579bdb4b0c2c4a92f662dd9ef2e"
+    },
+    {
+      "label": "Backing-predictor integration, prediction, update and global-history contracts",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/branch-prediction/backing-predictor.rst",
+      "lines": [
+        22,
+        128
+      ],
+      "sha256": "a93b0f02fa7bf8472a7ff3cb0477e462677b40bf46db50549b5a3e51e2502b04"
+    },
+    {
+      "label": "Next-line predictor integration, prediction and RAS contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/branch-prediction/nl-predictor.rst",
+      "lines": [
+        4,
+        50
+      ],
+      "sha256": "5bbe0eb34283d9b1e2ff0f1c728db974df94faf50649551ee21df6afa8e921bf"
+    },
+    {
+      "label": "Next-line predictor update contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/branch-prediction/nl-predictor.rst",
+      "lines": [
+        55,
+        87
+      ],
+      "sha256": "5bbe0eb34283d9b1e2ff0f1c728db974df94faf50649551ee21df6afa8e921bf"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

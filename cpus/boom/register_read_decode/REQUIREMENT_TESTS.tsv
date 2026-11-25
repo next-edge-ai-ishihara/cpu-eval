@@ -1,0 +1,9 @@
+requirement	tests	rationale
+Integer ALU and immediate decode	rv64ui-p-add;rv64ui-p-sub;rv64ui-p-xor	Exercise arithmetic and logical decode controls.
+Branch and jump decode	rv64ui-p-beq;rv64ui-p-jal	Exercise conditional-branch and direct-jump controls.
+Load, store, and atomic-memory decode	rv64ui-p-lw;rv64ui-p-sw;rv64ua-p-amoadd_w	Exercise memory pipeline selection, operands, and atomic address generation.
+Keep ordinary load offsets and use the base address for LR and AMO	register-read-decode-ports	Compare the output immediate for a load with a nonzero offset, and its address-offset bits 19:8 for two atomic instructions with nonzero packed instruction fields.
+Integer multiply and divide decode	rv64um-p-mul;rv64um-p-div	Exercise multiply and divide pipeline controls.
+Single-precision floating-point decode	rv64uf-p-fadd;rv64uf-p-fdiv;rv64uf-p-move	Exercise arithmetic, divide, and integer/floating-point move controls.
+Double-precision floating-point decode	rv64ud-p-fadd;rv64ud-p-fdiv;rv64ud-p-move	Exercise arithmetic, divide, and integer/floating-point move controls.
+CSR and address-translation controls	rv64si-p-csr;rv64si-p-icache-alias	Exercise CSR commands and address-translation fence handling.

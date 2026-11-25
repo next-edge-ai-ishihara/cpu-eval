@@ -1,0 +1,27 @@
+--- a/src/main/scala/rift2Core/privilege/TLB.scala
++++ b/src/main/scala/rift2Core/privilege/TLB.scala
+@@ -63,6 +63,15 @@
+   /** The PTE info of page */
+   val pte = RegInit( VecInit( Seq.fill(tlbEntry)(0.U.asTypeOf( new Info_pte_sv39 ))))
+ 
++
++  require( (log2Ceil(tlbEntry) max 2) == 2, "the Rift2330 configuration gives a two bit replacement selector" )
++  val cpuEvalReplacementIdx = LFSR( log2Ceil(tlbEntry) max 2 )
++  val cpuEvalGoldenIdx = RegInit( 1.U(2.W) )
++  cpuEvalGoldenIdx := Cat( cpuEvalGoldenIdx(0), cpuEvalGoldenIdx(1) ^ cpuEvalGoldenIdx(0) )
++  when( cpuEvalGoldenIdx =/= cpuEvalReplacementIdx ) {
++    printf("CPU_EVAL_OBSERVATION_MISMATCH TLB replacement index golden=%d actual=%d\n", cpuEvalGoldenIdx, cpuEvalReplacementIdx)
++  }
++
+   when( io.sfence_vma ) {
+     for( i <- 0 until tlbEntry ) yield tag(i) := 0.U.asTypeOf( new Info_tlb_tag )
+   }
+@@ -86,7 +95,7 @@
+   def tlb_update_idx: UInt = {
+     val is_runout = tag.forall( (x:Info_tlb_tag) => (x.is_valid === true.B) )
+ 
+-    val random_idx = LFSR( log2Ceil(tlbEntry) max 2 )
++    val random_idx = cpuEvalReplacementIdx
+     val empty_idx  = tag.indexWhere( (x:Info_tlb_tag) => (x.is_valid === false.B) )
+ 
+     return Mux( is_runout, random_idx, empty_idx )

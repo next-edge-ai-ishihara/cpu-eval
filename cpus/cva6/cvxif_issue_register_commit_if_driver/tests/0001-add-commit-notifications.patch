@@ -1,0 +1,69 @@
+--- a/commit_notifications.S
++++ b/commit_notifications.S
+@@ -1,49 +1,36 @@
+ #include "model_test.h"
+ #include "arch_test.h"
+ RVTEST_ISA("RV32I")
+-
+ .section .text.init
+ .globl rvtest_entry_point
+ rvtest_entry_point:
+ RVMODEL_BOOT
+ RVTEST_CODE_BEGIN
+-    li t0, 5
+-    li t1, 7
+-    li t2, 3
+-
+-    .word 0x0000007b  # CUS_NOP
+-    .word 0x0062957b  # CUS_ADD a0, t0, t1
+-    .word 0x026295fb  # CUS_DOUBLE_RS1 a1, t0, t1
+-    .word 0x0462967b  # CUS_DOUBLE_RS2 a2, t0, t1
+-    .word 0x066296fb  # CUS_ADD_MULTI a3, t0, t1
+-    .word 0x38628743  # CUS_ADD_RS3_MADD a4, t0, t1, t2
+-    .word 0x386287c7  # CUS_ADD_RS3_MSUB a5, t0, t1, t2
+-    .word 0x3862884f  # CUS_ADD_RS3_NMADD a6, t0, t1, t2
+-    .word 0x386288cb  # CUS_ADD_RS3_NMSUB a7, t0, t1, t2
+-    .word 0x0862957b  # CUS_ADD_RS3_RTYPE t0, t1, a0
+-    addi s0, a0, 1
++    .option norvc
++    la t2, rejected_instruction
++    csrw mtvec, t2
++    li t0, 3
++    li t1, 5
++    .word 0x0062807b
++    .word 0xfe62807b
++    csrw mtvec, zero
++    j notifications_done
++    .align 2
++rejected_instruction:
++    csrr s0, mcause
++    csrr t3, mepc
++    addi t3, t3, 4
++    csrw mepc, t3
++    mret
++notifications_done:
+ RVTEST_CODE_END
+ RVMODEL_HALT
+-
+ RVTEST_DATA_BEGIN
+ RVTEST_DATA_END
+-
+ RVMODEL_DATA_BEGIN
+ rvtest_sig_begin:
+ sig_begin_canary:
+ CANARY;
+-#ifdef rvtest_mtrap_routine
+-tsig_begin_canary:
+-CANARY;
+-mtrap_sigptr:
+-    .fill 64*(XLEN/32),4,0xdeadbeef
+-tsig_end_canary:
+-CANARY;
+-#endif
+-#ifdef rvtest_gpr_save
+-gpr_save:
+-    .fill 32*(XLEN/32),4,0xdeadbeef
+-#endif
+ sig_end_canary:
+ CANARY;
+ rvtest_sig_end:

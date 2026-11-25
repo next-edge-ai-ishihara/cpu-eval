@@ -1,0 +1,585 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "1a828eff7fcaa32dce2552a6b202e5eeff2277aee70af74b8c21153b385941c4",
+  "prompt_sha256": "d548e374cb2e66eeffd6d29ef98a7515b9dc7a7851a4b619f9e94393a1ed50a3",
+  "repositories": {
+    "github.com/ucb-bar/berkeley-hardfloat": {
+      "revision": "70455e53f233a06cb5a342d125e22b7b1505c271"
+    },
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "github.com/riscv-boom/riscv-boom": {
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission format",
+      "prompt_bytes": [
+        0,
+        463
+      ],
+      "sha256": "f6633186b951c6e850812533bd4a7123319c2fc6753be730fbd63e9819e4f812"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        463,
+        514
+      ],
+      "sha256": "0c91c555968a1ca28de255468062b8dd711f6e4e7dcae7491ee22b1e1e2b8e16"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        514,
+        550
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        550,
+        957
+      ],
+      "sha256": "a1b64b52a26dac2681215f78b606c3d7e1eb8793942cdad8525e93eef740bb8e"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        957,
+        996
+      ],
+      "sha256": "ada51fbbc45cb1c158fe0379dd9f01b0f8f50f6be1a92859e857c76fb196a0d2"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        996,
+        2436
+      ],
+      "sha256": "8f5c4b08a238db9ecd53697032cdd46d172852e344d7938a8601df6062a95b14"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        2436,
+        2493
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        2493,
+        2738
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        2738,
+        2792
+      ],
+      "sha256": "7f5ce0ce63a3621b1a7b73adb8ad4d8c28c84135465bcc4ac219063131a6c4ba"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2792,
+        3522
+      ],
+      "sha256": "1c886d47a9320f71f692855dedf3682cf70eb32488dee242e59a296cf84389ea"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        3522,
+        3571
+      ],
+      "sha256": "c4c6e4cde190e12b3a820cc0688b35c8c9a2b8a351d69b7472cafaa8df257308"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        3571,
+        4129
+      ],
+      "sha256": "81e84c1af38a8b9932eba7bb6d2eba7ae3f9056bcc91b5c7150820c6b9a1fc6c"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        4129,
+        4138
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        4138,
+        4736
+      ],
+      "sha256": "f004d5fc135d5a3799f60460f1d61b765047fee3392da918f199fa8a0e683863"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        4736,
+        4814
+      ],
+      "sha256": "8fc860f6896defc564399dfead527707886f986daf81d9043deb25e9b3f4e08d"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        4814,
+        6939
+      ],
+      "sha256": "25a8bd4cd25c83077d3f9cc99a60c4a8aeb910de894af64025d32765c98ca299"
+    },
+    {
+      "index": 16,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        6939,
+        8830
+      ],
+      "sha256": "96c027bb81faf80eae498d996190b59d5b4f5231761fa70880d4bd25a6b5f70a"
+    },
+    {
+      "index": 17,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        8830,
+        8893
+      ],
+      "sha256": "92a9878f2878bed7d8662fb51bd080895d3c5db4e0d2f0cd59be87435e02c7a9"
+    },
+    {
+      "index": 18,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        8893,
+        9439
+      ],
+      "sha256": "f84e6f4a2f22d57e23ec0a20f495201dbb701e70ec8309351ec16d835163933f"
+    },
+    {
+      "index": 19,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        9439,
+        9490
+      ],
+      "sha256": "143395bfef0a7e38a741eb0e4f6b4fa0582228044196b583ec28918f355771b5"
+    },
+    {
+      "index": 20,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        9490,
+        9545
+      ],
+      "sha256": "fbc5d3939b2c9a56c8de9288b4b1d1e3367fcccc58663eed5b567d3dc0a34f27"
+    },
+    {
+      "index": 21,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        9545,
+        9554
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 22,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        9554,
+        10245
+      ],
+      "sha256": "a45597986006d297fe262fa82e8993f337d95b3843847c55a06d90049f34ecd5"
+    },
+    {
+      "index": 23,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        10245,
+        10311
+      ],
+      "sha256": "1064b1f3a82b5cdb4459449f73d41ddd54c5ac6c21456eee5d1ac3fdd60ec0fd"
+    },
+    {
+      "index": 24,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        10311,
+        11374
+      ],
+      "sha256": "a41e1b6b81f0634d0299b5c29f2dc10812364ba5436b2078cc3456a9cf09d515"
+    },
+    {
+      "index": 25,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11374,
+        11383
+      ],
+      "sha256": "ac25279fc3a0e46107cbf94bf067742f4b9377d937cc93b12488bcf417de8baf"
+    },
+    {
+      "index": 26,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        11383,
+        11794
+      ],
+      "sha256": "c58c08192f728814adfab1de3e6e3f9854b877b373d9058233ce065d482b95f3"
+    },
+    {
+      "index": 27,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        11794,
+        11842
+      ],
+      "sha256": "4fb2b89bd73011c2b070867564b8810d803acf08988c044c09f940b3402742a6"
+    },
+    {
+      "index": 28,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        11842,
+        13466
+      ],
+      "sha256": "4d24012da74928d645bbbfe2b780e7022d368d53c5ec48c0d7db9026bc8ba150"
+    },
+    {
+      "index": 29,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        13466,
+        13504
+      ],
+      "sha256": "ea60a02ae51249ab02cd1d692372546853c796801f173c3827204cb340c09971"
+    },
+    {
+      "index": 30,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        13504,
+        14062
+      ],
+      "sha256": "aaa3ce9a9d51f6faa0efa4ce2d330c0a8766ada24294e2b1ef23bc7aab3a7831"
+    },
+    {
+      "index": 31,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        14062,
+        14068
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 32,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        14068,
+        14849
+      ],
+      "sha256": "387f1b27ad997f0898bb1853d58b42d761f69ff2e62a4ddf46ded65ca74cefdd"
+    },
+    {
+      "index": 33,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        14849,
+        14855
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 34,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        14855,
+        15032
+      ],
+      "sha256": "03aff332f7ffb213ecb01ecb466aef89862907e351995b76f70fc326a3bdb7f3"
+    },
+    {
+      "index": 35,
+      "kind": "authored",
+      "description": "Section framing",
+      "prompt_bytes": [
+        15032,
+        15036
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        38,
+        41
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Target declaration and interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        169,
+        177
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Parent multiplication, addition, and rounding connections",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        314,
+        344
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Intermediate result bundle",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        46,
+        66
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Raw floating-point result bundle and signaling-NaN predicate",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        68,
+        83
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "Rounding encodings",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        42,
+        52
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "Rounding dependency interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        292,
+        304
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Producer interpretation of operands and operation",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        70,
+        116
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Producer alignment and output contract",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/MulAddRecFN.scala",
+      "lines": [
+        117,
+        164
+      ],
+      "sha256": "8ed674a199ffc0746f52b90dca096a7f67b0102f745d5232b07b797715c1f311"
+    },
+    {
+      "label": "Single- and double-precision parameterizations",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        297,
+        298
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "FMA wrapper operand construction and target connections",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tile/FPU.scala",
+      "lines": [
+        697,
+        716
+      ],
+      "sha256": "90f7371161ed714f6513e4498f9b9aeef5bfbd7c777e049d2fb0d054c3664a77"
+    },
+    {
+      "label": "Fixed BOOM operation encoding",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/fpu.scala",
+      "lines": [
+        121,
+        150
+      ],
+      "sha256": "b59404bfa9142bb24c7dc0d783ba497181bf7275e002e7c4493d8091cae7f2b0"
+    },
+    {
+      "label": "Fixed BOOM single- and double-precision consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/fpu.scala",
+      "lines": [
+        205,
+        211
+      ],
+      "sha256": "b59404bfa9142bb24c7dc0d783ba497181bf7275e002e7c4493d8091cae7f2b0"
+    },
+    {
+      "label": "Recoded format",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "README.md",
+      "lines": [
+        14,
+        38
+      ],
+      "sha256": "3ff63f4962e69576cfbd139302a6ae2176827743d60341b50f2e790173f33d7b"
+    },
+    {
+      "label": "Architectural rounding-mode meanings",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        123,
+        136
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Fused multiply-add operations",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        294,
+        303
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Fused multiply-add invalid exception",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/f-st-ext.adoc",
+      "lines": [
+        333,
+        334
+      ],
+      "sha256": "3332cce4343e6278d5239643c77f9b905d695df9ed1a4572fba8064c22c0ac52"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "hpdcache",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache.sv",
+  "source_sha256": "35d9b2dca6415fca40050bc6fec3d4823701111fb2104db3cd79775268c53b47",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "996b1ec5b97d2fc5011663b053f8c4b88f8b1627fa94c0e1cbfcb056b356f4b0",
+  "instruction_evaluator": "../harness/evaluate_parallel.sh",
+  "instruction_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "store_evaluator": "../cva6_hpdcache_if_adapter/harness/evaluate_store_updates.sh",
+  "store_evaluator_sha256": "aec817f439d9e2c4983e918968ae00578cdf9316c3d01ad6056bb36e3e99b869",
+  "store_update_comparator": "../harness/compare_store_updates.py",
+  "store_update_comparator_sha256": "95c09b5518e952731898dbacdfbd7ba815fccdf045fd08bec2ef36675612cf3e",
+  "memory_trace_patch": "../harness/0001-log-dram-writes.patch",
+  "memory_trace_patch_sha256": "b79e083a7b0c93b244df434125cdfc1cefd54acc147b4e97e785f8c129aee7cb",
+  "load_test_list": "../harness/testlist_cv32a60x.yaml",
+  "load_test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "store_test_list": "../harness/testlist_store_updates.yaml",
+  "store_test_list_sha256": "26c138d221eedd44d04734f1ceee8be075784f6df9c6d1a9a63976012624ec1b",
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/hpdcache.sv",
+    "reference_hdl_preconditions": "Run reference_hdl from the root of the CVA6 checkout at cpu_revision, with core/cache_subsystem/hpdcache initialized as the cv-hpdcache submodule containing commit f404e7ebbda8baa4af3729535f520a6b12a06d03. Verify SHA-256 35d9b2dca6415fca40050bc6fec3d4823701111fb2104db3cd79775268c53b47 of the retrieved source before use.",
+    "test_sources": "Use the 43 recorded test-list entries byte for byte at test_revision; no test source is modified.",
+    "instrumentation": "Verify the test-harness source hash, apply the recorded memory_trace_patch, verify the patched source hash, and record writes accepted by the DRAM interface."
+  },
+  "comparison": {
+    "loads": "Compare retired instructions and destination-register updates with Spike.",
+    "stores": "Pair Spike retired stores and accepted DRAM writes in execution order; compare addresses, byte enables, and values masked to the store width.",
+    "excluded_termination_address": "0x80001000"
+  }
+}

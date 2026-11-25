@@ -1,0 +1,40 @@
+--- a/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
++++ b/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
+@@ -3245,6 +3245,38 @@
+                   c.sub       a3, a2
+                   c.andi      s1, -1
++                  la          sp, user_stack_end
++                  c.addi16sp  sp, -16
++                  c.li        s0, 7
++                  c.swsp      s0, 0(sp)
++                  c.lwsp      s1, 0(sp)
++                  c.mv        s0, sp
++                  c.sw        s1, 4(s0)
++                  c.lw        s1, 4(s0)
++                  c.li        s0, 0
++                  c.beqz      s0, cpueval_c_nonzero
++                  c.ebreak
++cpueval_c_nonzero:
++                  c.li        s0, 1
++                  c.bnez      s0, cpueval_c_jump
++                  c.ebreak
++cpueval_c_jump:
++                  c.j         cpueval_c_jal
++                  c.ebreak
++cpueval_c_jal:
++                  c.jal       cpueval_c_return
++                  c.j         cpueval_c_jalr
++cpueval_c_return:
++                  c.jr        ra
++cpueval_c_jalr:
++                  la          s0, cpueval_c_return_jalr
++                  c.jalr      s0
++                  c.j         cpueval_c_done
++cpueval_c_return_jalr:
++                  c.jr        ra
++cpueval_c_done:
++                  c.ebreak
++                  c.addi16sp  sp, 16
+                   la x30, test_done
+                   jalr x0, x30, 0
+ test_done:        

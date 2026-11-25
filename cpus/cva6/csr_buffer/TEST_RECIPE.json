@@ -1,0 +1,77 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "../instr_scan/harness/evaluate_ports.py",
+    "harness/evaluate_flush_ports.py",
+    "harness/flush_ports_tb.sv"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "csr_buffer",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "source_path": "core/csr_buffer.sv",
+  "reference_source_sha256": "abc337764a461e1772f72290a80bdc9fcdeab8676145e458faad80944a29f6f1",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "9b36d1e03be37caae38b6169893976f521d3c0bbbb9d4cabdd255dc40551d1c0",
+  "shared_evaluator": "../harness/evaluate.sh",
+  "shared_evaluator_sha256": "eae5fa793df4494a0d5debc04a8692a1083cbf7e1215205274f3e9a2d6d6c7e5",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "testlist": "harness/testlist_csr_buffer.yaml",
+  "testlist_sha256": "ec4acaac06e79f2f16e361aa8645d26e62ce6f9f48c71b829b401fd99ac0af00",
+  "port_evaluator": "harness/evaluate_flush_ports.py",
+  "port_evaluator_sha256": "b14dab3a1112e76c08575613bdb8fb8233b44b265b306cd7f0ce0993416df246",
+  "port_testbench": "harness/flush_ports_tb.sv",
+  "port_testbench_sha256": "8aa42f38bac5311bdb57d0b9184dc2008c51938ecd6717dcc920e2c9d7178653",
+  "fixed_patches_in_application_order": [
+    {
+      "order": 1,
+      "purpose": "Add a focused sequence of consecutive CSR register and immediate operations whose results are compared in the architectural execution trace.",
+      "target": "cpu-eval-patches/csr_buffer_sequence.S",
+      "target_state_before": "absent",
+      "patch": "tests/0001-add-csr-buffer-sequence.patch",
+      "patch_sha256": "575ba56366b58c00d485ba8ab0dc923e7946aab4a56494b4a3d95c3eae6515e3",
+      "target_sha256_after": "d93a5637705a790465924cf7efc8bf5ece7dbb12b9faaeb446074ee438c9cf42"
+    },
+    {
+      "order": 2,
+      "purpose": "Load csr_buffer_delay_data before the CSR instruction sequence.",
+      "target": "cpu-eval-patches/csr_buffer_sequence.S",
+      "target_sha256_before": "d93a5637705a790465924cf7efc8bf5ece7dbb12b9faaeb446074ee438c9cf42",
+      "patch": "tests/0002-delay-csr-retirement-with-cache-miss.patch",
+      "patch_sha256": "6bf1fe9286620f781cfdadec212fa53b31edef813fb2087efd577ef0224aaa1b",
+      "target_sha256_after": "1ad7b5e718368a5d665abbc64dd0188d6ebd42f534178a0a325d04fdb0570022"
+    },
+    {
+      "order": 3,
+      "purpose": "Write 0x1800 to mstatus, then read mscratch into t4.",
+      "target": "cpu-eval-patches/csr_buffer_sequence.S",
+      "target_sha256_before": "1ad7b5e718368a5d665abbc64dd0188d6ebd42f534178a0a325d04fdb0570022",
+      "patch": "tests/0003-exercise-csr-triggered-flush.patch",
+      "patch_sha256": "16415aaae4c32ea65d33b7a1b104d6af5a3f876e5dc229a5d5fe6d960cecdedb",
+      "target_sha256_after": "c42354102e665ac5793070d624ef0d1bead9df218206290901732b8bb6831cb8"
+    }
+  ],
+  "test_programs": [
+    {
+      "name": "csr-buffer-sequence",
+      "path_after_reconstruction": "cpu-eval-patches/csr_buffer_sequence.S",
+      "sha256": "c42354102e665ac5793070d624ef0d1bead9df218206290901732b8bb6831cb8"
+    }
+  ],
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/csr_buffer.sv",
+    "test_program": "Check out test_revision, verify that cpu-eval-patches/csr_buffer_sequence.S is absent, apply the fixed patches in recorded order in an empty scratch directory with git apply, then copy cpu-eval-patches/*.S to <CVA6>/verif/tests/cpu-eval-patches, and verify each before and after SHA-256."
+  },
+  "comparison": {
+    "values": "Retired instructions, register updates, and width-masked store updates produced by the CVA6 RTL model and Spike.",
+    "flush_ports": "After accepting address 0x340, the pending address keeps ready low. Pulse flush without a commit and check that ready returns high after the edge.",
+    "completion_requirement": "Passing requires CPU regression completion, matching traces, and the flush port comparison. The fixed tree builds and runs every program with the reference module, so after only the target is replaced a build failure, a missing target module, an RTL simulation that does not complete (including the fixed RVFI cycle limit and assertions) and a comparison mismatch are FAIL. Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "cva6_icache",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "source_path": "core/cache_subsystem/cva6_icache.sv",
+  "reference_source_sha256": "272c06abf1f37a3f3a7d18d6c29a08df0a493631e330aefb4c677357a4d901c3",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "9cdf89aaa548cec86c0d497224a3b0126853ae0fa9c1ff9769b1f1b0901dca36",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "testlist": "../harness/testlist_cv32a60x.yaml",
+  "testlist_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "test_count": 39,
+  "directed_testlist_append": "harness/fence_i_test.yaml",
+  "directed_testlist_append_sha256": "cfee5690d6cc3ddad471cf2058c8104004f2a3b44a3562c6d804527a33b2d87e",
+  "directed_test": "harness/icache_fence_i.S",
+  "directed_test_sha256": "7018813f6b00c5122d6c2f6e3ae2433f65d7afc69a9201f6aab5ce6bf472b599",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/cache_subsystem/cva6_icache.sv",
+    "test_programs": "Use the 38 test-list entries byte for byte at test_revision and append the FENCE.I test. The evaluator stages the local assembly for the shared harness."
+  },
+  "comparison": {
+    "architectural_traces": "After excluding the fixed RTL boot prefix before the first Spike PC, compare each retired instruction, destination-register update, and width-masked architectural store update between CVA6 and Spike.",
+    "completion_requirement": "Every CPU run and both comparisons must complete. The fixed tree builds and runs every program with the reference module, so after only the target is replaced a build failure, a missing target module, an RTL simulation that does not complete (including the fixed RVFI cycle limit and assertions) and a comparison mismatch are FAIL. Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID."
+  }
+}

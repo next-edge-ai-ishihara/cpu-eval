@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/lzc.sv",
+      "lines": [
+        25,
+        41
+      ],
+      "language": "verilog",
+      "sha256": "c47046cab67cd9e9ff46f9b2a4c055f301eabd0f135d76d96639eb41c9fa3609"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions; Section heading; Fence",
+      "text": "# Implement `lzc`\n\nImplement the complete `lzc` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module lzc` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence; Port contract that no upstream text states",
+      "text": "```\n\n## Additional requirement\n\nWhen `in_i` is all zeros, `cnt_o` is `WIDTH - 1`.\n"
+    }
+  ]
+}

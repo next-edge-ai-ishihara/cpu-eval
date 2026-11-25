@@ -1,0 +1,30 @@
+diff --git a/isa/rv64uf/fmin.S b/isa/rv64uf/fmin.S
+index 9aef8d0..a448fcc 100644
+--- a/isa/rv64uf/fmin.S
++++ b/isa/rv64uf/fmin.S
+@@ -40,6 +40,10 @@ RVTEST_CODE_BEGIN
+   TEST_FP_OP2_S(32,  fmax.s, 0,        0.0,       -0.0,        0.0 );
+   TEST_FP_OP2_S(33,  fmax.s, 0,        0.0,        0.0,       -0.0 );
+ 
++  TEST_FP_OP2_S(40, fsgnj.s,  0, -1.0,  1.0, -2.0 );
++  TEST_FP_OP2_S(41, fsgnjn.s, 0,  1.0,  1.0, -2.0 );
++  TEST_FP_OP2_S(42, fsgnjx.s, 0,  1.0, -1.0, -2.0 );
++
+   TEST_PASSFAIL
+ 
+ RVTEST_CODE_END
+diff --git a/isa/rv64ud/fmin.S b/isa/rv64ud/fmin.S
+index 4891448..91a542e 100644
+--- a/isa/rv64ud/fmin.S
++++ b/isa/rv64ud/fmin.S
+@@ -40,6 +40,10 @@ RVTEST_CODE_BEGIN
+   TEST_FP_OP2_D(32,  fmax.d, 0,        0.0,       -0.0,        0.0 );
+   TEST_FP_OP2_D(33,  fmax.d, 0,        0.0,        0.0,       -0.0 );
+ 
++  TEST_FP_OP2_D(40, fsgnj.d,  0, -1.0,  1.0, -2.0 );
++  TEST_FP_OP2_D(41, fsgnjn.d, 0,  1.0,  1.0, -2.0 );
++  TEST_FP_OP2_D(42, fsgnjx.d, 0,  1.0, -1.0, -2.0 );
++
+   TEST_PASSFAIL
+ 
+ RVTEST_CODE_END

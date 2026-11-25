@@ -1,0 +1,515 @@
+{
+ "schema_version": 1,
+ "cpu": "BOOM",
+ "configuration": "LargeBoomConfig",
+ "source_unit": "ALUUnit",
+ "sources": [
+  {
+   "label": "Package and imports",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+   "lines": [
+    1,
+    31
+   ],
+   "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+  },
+  {
+   "label": "Definition header",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+   "lines": [
+    283,
+    292
+   ],
+   "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+  },
+  {
+   "label": "Parent instantiation and connections",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/execution-units/execution-unit.scala",
+   "lines": [
+    259,
+    290
+   ],
+   "sha256": "851331e61affdfc8f849bac6b3fd5c673c1f115cbf99d103ea9d6d23d99bd624"
+  },
+  {
+   "label": "Parent integer-response connections",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/execution-units/execution-unit.scala",
+   "lines": [
+    398,
+    413
+   ],
+   "sha256": "851331e61affdfc8f849bac6b3fd5c673c1f115cbf99d103ea9d6d23d99bd624"
+  },
+  {
+   "label": "Functional-unit constants",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+   "lines": [
+    33,
+    55
+   ],
+   "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+  },
+  {
+   "label": "Inherited functional-unit interfaces and pipelined base class",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+   "lines": [
+    82,
+    273
+   ],
+   "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+  },
+  {
+   "label": "MicroOp and CtrlSignals",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/common/micro-op.scala",
+   "lines": [
+    29,
+    174
+   ],
+   "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+  },
+  {
+   "label": "Scalar operation constants trait",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/common/consts.scala",
+   "lines": [
+    38,
+    38
+   ],
+   "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+  },
+  {
+   "label": "BOOM control-signal constants",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/common/consts.scala",
+   "lines": [
+    54,
+    103
+   ],
+   "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+  },
+  {
+   "label": "BOOM common package object",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/common/package.scala",
+   "lines": [
+    6,
+    14
+   ],
+   "sha256": "738042b20e5d92a7d9087e0980d54a88783a7d064d04940d37d7b94ecaadbbf2"
+  },
+  {
+   "label": "Fetch-target-queue interface",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/ifu/fetch-target-queue.scala",
+   "lines": [
+    73,
+    90
+   ],
+   "sha256": "9ebeff82de4d1bdfe0dabce0e803378f4983cf7109a5725fde68db4d043b4140"
+  },
+  {
+   "label": "Immediate generation",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/util/util.scala",
+   "lines": [
+    265,
+    284
+   ],
+   "sha256": "f701ed3dee77ee4621f9c207d50176469aa3265af1983f3d81897b5585159f18"
+  },
+  {
+   "label": "Rocket ALU package",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/ALU.scala",
+   "lines": [
+    4,
+    4
+   ],
+   "sha256": "b0d4dcdbb704c9398149e793e56b18f844ed2da1683f3ff9d6b3d261b510264e"
+  },
+  {
+   "label": "Wrapped Rocket ALU interface",
+   "repo": "github.com/chipsalliance/rocket-chip",
+   "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+   "path": "src/main/scala/rocket/ALU.scala",
+   "lines": [
+    10,
+    58
+   ],
+   "sha256": "b0d4dcdbb704c9398149e793e56b18f844ed2da1683f3ff9d6b3d261b510264e"
+  },
+  {
+   "label": "Fetch-buffer edge-instruction PC bits",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/ifu/fetch-buffer.scala",
+   "lines": [
+    105,
+    111
+   ],
+   "sha256": "cd07512010d2ce57410f49d070fe2f8817d379863f0859635cace4dacc750a4c"
+  },
+  {
+   "label": "Core use of resolved branch targets",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/core.scala",
+   "lines": [
+    418,
+    430
+   ],
+   "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+  },
+  {
+   "label": "Pipelined functional-unit behavior",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "docs/sections/execution-stages.rst",
+   "lines": [
+    56,
+    99
+   ],
+   "sha256": "42ed0e7cd6d727facdc485b6edb9376abd25cfe5210c396f076916ea18da5f37"
+  },
+  {
+   "label": "Branch and jump behavior",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "docs/sections/execution-stages.rst",
+   "lines": [
+    128,
+    163
+   ],
+   "sha256": "42ed0e7cd6d727facdc485b6edb9376abd25cfe5210c396f076916ea18da5f37"
+  },
+  {
+   "label": "RISC-V integer computational instructions",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv32.adoc",
+   "lines": [
+    299,
+    389
+   ],
+   "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+  },
+  {
+   "label": "RISC-V JAL",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv32.adoc",
+   "lines": [
+    431,
+    439
+   ],
+   "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+  },
+  {
+   "label": "RISC-V JALR",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv32.adoc",
+   "lines": [
+    458,
+    464
+   ],
+   "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+  },
+  {
+   "label": "RISC-V conditional branches",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv32.adoc",
+   "lines": [
+    558,
+    576
+   ],
+   "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+  },
+  {
+   "label": "RISC-V C.JR and C.JALR",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/c-st-ext.adoc",
+   "lines": [
+    516,
+    527
+   ],
+   "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+  },
+  {
+   "label": "RISC-V 64-bit integer computational instructions",
+   "repo": "https://github.com/riscv/riscv-isa-manual.git",
+   "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+   "path": "src/rv64.adoc",
+   "lines": [
+    14,
+    129
+   ],
+   "sha256": "90c6fa854d8a2d90bfb912fd190d93cfef7a98d8a70f0fcd1d7a40cdfc274fe6"
+  },
+  {
+   "label": "Chisel version",
+   "repo": "github.com/ucb-bar/chipyard",
+   "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+   "path": "build.sbt",
+   "lines": [
+    63,
+    67
+   ],
+   "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+  }
+ ],
+ "parts": [
+  {
+   "kind": "authored",
+   "description": "Task, submission format, package heading",
+   "text": "# Implement `ALUUnit`\n\nImplement one complete `ALUUnit` source-level hardware definition for BOOM. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class ALUUnit` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 0
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n## Class declaration\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 1
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n## Parent instantiation\n\n### src/main/scala/exu/execution-units/execution-unit.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 2
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "// ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 3
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 24
+  },
+  {
+   "kind": "authored",
+   "description": "heading, task text, or excerpt delimiter",
+   "text": "```\n\n### src/main/scala/exu/execution-units/functional-unit.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 4
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "// ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 5
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/main/scala/common/micro-op.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 6
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/main/scala/common/consts.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 7
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "// ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 8
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/main/scala/common/package.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 9
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/main/scala/ifu/fetch-target-queue.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 10
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/main/scala/util/util.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 11
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/main/scala/rocket/ALU.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 12
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "// ...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 13
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n## Related source code\n\n### src/main/scala/ifu/fetch-buffer.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 14
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/main/scala/exu/core.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 15
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n## Documentation\n\n### docs/sections/execution-stages.rst\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 16
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 17
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/rv32.adoc\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 18
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 19
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 20
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "...\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 21
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/c-st-ext.adoc\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 22
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n\n### src/rv64.adoc\n\n```text\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 23
+  },
+  {
+   "kind": "authored",
+   "description": "Heading, fence or omission",
+   "text": "```\n"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+id: arbiter
+cpu: rift2core
+target:
+  repository: https://github.com/chipsalliance/chisel.git
+  revision: 066fb4705472e07bde340810ee45eaf8c1ad9438
+  file: src/main/scala/chisel3/util/Arbiter.scala
+  class: Arbiter
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: harness/evaluate.sh

@@ -1,0 +1,4 @@
+requirement	tests	test_behavior
+Clean miss and clean hit ProbeAck permissions and metadata update	BoomProbeUnitTest	For an absent line the test checks NtoN on both ProbeAck outputs and accepts at most one metadata write that selects no way; for a Branch hit it checks BtoN and a metadata write changing the matched way to Nothing.
+Registered metadata response, conflicting set retry and dirty delegation	BoomProbeUnitTest	The test drives a two-cycle metadata response, independently stalls wb_rdy and mshr_rdy, and waits for dirty writeback completion. It checks distinct nonzero cache-set indices.
+Backpressured metadata, LSU and TileLink transfers	BoomProbeUnitTest	Finite backpressured transfer cases.

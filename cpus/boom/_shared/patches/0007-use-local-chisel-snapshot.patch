@@ -1,0 +1,18 @@
+diff --git a/build.sbt b/build.sbt
+index b97191d3..8fe2691a 100644
+--- a/build.sbt
++++ b/build.sbt
+@@ -60,7 +60,12 @@ def isolateAllTests(tests: Seq[TestDefinition]) = tests map { test =>
+   new Group(test.name, Seq(test), SubProcess(options))
+ } toSeq
+ 
+-val chiselVersion = "3.5.0"
++val chiselVersion = "3.5-SNAPSHOT"
++ThisBuild / dependencyOverrides ++= Seq(
++  "edu.berkeley.cs" %% "chisel3" % chiselVersion,
++  "edu.berkeley.cs" %% "chisel3-core" % chiselVersion,
++  "edu.berkeley.cs" %% "chisel3-macros" % chiselVersion
++)
+ 
+ lazy val chiselSettings = Seq(
+   libraryDependencies ++= Seq("edu.berkeley.cs" %% "chisel3" % chiselVersion),

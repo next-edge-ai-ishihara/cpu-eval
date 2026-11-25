@@ -1,0 +1,14 @@
+id: hpdcache_lfsr
+cpu: cva6
+target:
+  repository: https://github.com/openhwgroup/cv-hpdcache.git
+  revision: f404e7ebbda8baa4af3729535f520a6b12a06d03
+  file: rtl/src/common/hpdcache_lfsr.sv
+  module: hpdcache_lfsr
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: harness/evaluate.sh

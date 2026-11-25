@@ -1,0 +1,61 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_store_updates.sh"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "cva6_hpdcache_subsystem",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "source_path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+  "reference_source_sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "b5f658b0f1947d4bacbc58268d828173bf687f36acc0e36849ba909b1b867174",
+  "instruction_trace_evaluator": "../harness/evaluate_parallel.sh",
+  "instruction_trace_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "store_update_evaluator": "harness/evaluate_store_updates.sh",
+  "store_update_evaluator_sha256": "1d5a864058e993d24ae09b620f6cc4ceae7387b044a565d51a0d01ba3905a2d5",
+  "testlists": [
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+      "tests": 38
+    },
+    {
+      "path": "../harness/testlist_store_updates.yaml",
+      "sha256": "26c138d221eedd44d04734f1ceee8be075784f6df9c6d1a9a63976012624ec1b",
+      "tests": 5
+    }
+  ],
+  "fixed_patches_in_application_order": [
+    {
+      "order": 1,
+      "purpose": "Record writes accepted by the test-harness DRAM interface for architectural memory-update comparison.",
+      "target": "corev_apu/tb/ariane_testharness.sv",
+      "target_sha256_before": "c671b2f70ea4cd7e27b67f4764e07966abd69e18d168f3de28220b26b8bb8655",
+      "patch": "../harness/0001-log-dram-writes.patch",
+      "patch_sha256": "b79e083a7b0c93b244df434125cdfc1cefd54acc147b4e97e785f8c129aee7cb",
+      "target_sha256_after": "978648dfc2b9016a989a594b38d1136ee6335dac0e7b685a737a086a63b4a7a2"
+    }
+  ],
+  "store_update_comparator": "../harness/compare_store_updates.py",
+  "store_update_comparator_sha256": "95c09b5518e952731898dbacdfbd7ba815fccdf045fd08bec2ef36675612cf3e",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+    "test_programs": "Use the 43 test-list entries byte for byte at test_revision; no test source is modified.",
+    "instrumentation": "Restore the recorded test-harness target, verify target_sha256_before, apply the fixed patch from the CVA6 repository root with git apply, and verify target_sha256_after."
+  },
+  "comparison": {
+    "loads": "Compare corresponding retired instructions, integer-register updates, and width-masked memory updates using the architectural trace comparator.",
+    "stores": "Pair retired Spike stores and accepted test-harness DRAM writes in execution order; compare address, byte enable, and the write value masked to the store width.",
+    "excluded_termination_address": "0x80001000",
+    "completion_requirement": "Both CPU regressions must complete and match. The fixed tree builds and runs every program with the reference module, so after only the target is replaced a build failure, a missing target module, an RTL simulation that does not complete (including the fixed RVFI cycle limit and assertions) and a comparison mismatch are FAIL. Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID."
+  }
+}

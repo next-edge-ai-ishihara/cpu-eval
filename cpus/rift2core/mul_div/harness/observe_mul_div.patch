@@ -1,0 +1,74 @@
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -164,6 +164,71 @@
+   iss_stage.io.lsu_iss_exe <> exe_stage.io.lsu_iss_exe
+   iss_stage.io.csr_iss_exe <> exe_stage.io.csr_iss_exe
+   iss_stage.io.mul_iss_exe <> exe_stage.io.mul_iss_exe
++
++  require(mulNum == 1)
++  val mulDivProbe = Module(new MulDiv)
++  val probeRequest = mulDivProbe.io.mul_iss_exe
++  val probeResult = mulDivProbe.io.mul_exe_iwb
++  val Seq(waiting, sendDivide, sendMultiply, holdResult, drainResults, sendCanceled,
++    cancel, sendRecovery, drainRecovery, finished) = Enum(10)
++  val probeState = RegInit(waiting)
++  val regularMulRequest = exe_stage.io.mul_iss_exe(0)
++  when(probeState === waiting && regularMulRequest.valid && regularMulRequest.bits.fun.mul &&
++      regularMulRequest.bits.param.dat.op1 === "h7e00".U &&
++      regularMulRequest.bits.param.dat.op2 === "h6db6db6db6db6db7".U) {
++    probeState := sendDivide
++  }
++  val probeIssued = RegInit(VecInit(Seq.fill(4)(false.B)))
++  val probeReturned = RegInit(VecInit(Seq.fill(4)(false.B)))
++  val probeIndex = MuxLookup(probeState, 0.U, Seq(
++    sendMultiply -> 1.U, sendCanceled -> 2.U, sendRecovery -> 3.U))
++  val probeSending = probeState === sendDivide || probeState === sendMultiply ||
++    probeState === sendCanceled || probeState === sendRecovery
++  val probeDestination = 8.U + probeIndex
++  probeRequest.valid := !reset.asBool && probeSending
++  probeRequest.bits := 0.U.asTypeOf(probeRequest.bits)
++  probeRequest.bits.fun.mul := probeState === sendMultiply
++  probeRequest.bits.fun.divu := probeSending && probeState =/= sendMultiply
++  probeRequest.bits.param.dat.op1 := "h7ffffffffffffffd".U
++  probeRequest.bits.param.dat.op2 := 3.U
++  probeRequest.bits.param.rd0 := probeDestination
++  mulDivProbe.io.flush := probeState === cancel
++  probeResult.ready := !reset.asBool && probeState =/= waiting &&
++    probeState =/= holdResult && probeState =/= cancel
++
++  when(probeRequest.fire) {
++    probeIssued(probeIndex) := true.B
++    switch(probeState) {
++      is(sendDivide) { probeState := sendMultiply }
++      is(sendMultiply) { probeState := holdResult }
++      is(sendCanceled) { probeState := cancel }
++      is(sendRecovery) { probeState := drainRecovery }
++    }
++  }
++  when(probeState === holdResult && probeResult.valid) { probeState := drainResults }
++  when(probeState === drainResults && probeReturned(0) && probeReturned(1)) {
++    probeState := sendCanceled
++  }
++  when(probeState === cancel) { probeState := sendRecovery }
++  when(probeState === drainRecovery && probeReturned(3)) {
++    printf("CPU_EVAL_MULDIV_PROBE_COMPLETE\n")
++    probeState := finished
++  }
++  when(probeResult.fire) {
++    val index = (probeResult.bits.rd0 - 8.U)(1, 0)
++    val inGroup = probeResult.bits.rd0 >= 8.U && probeResult.bits.rd0 <= 11.U
++    val accepted = probeIssued(index) || (probeRequest.fire && probeIndex === index)
++    val expected = Mux(index === 1.U, "h7ffffffffffffff7".U, "h2aaaaaaaaaaaaaa9".U)
++    printf(p"CPU_EVAL_MULDIV_RESULT rd=${probeResult.bits.rd0} accepted=${accepted} value=${probeResult.bits.res}\n")
++    when(!inGroup || !accepted || probeReturned(index) || index === 2.U ||
++          probeResult.bits.res =/= expected) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH MulDiv writeback transfer\n")
++    }
++    when(index === 0.U && !probeIssued(1) && !(probeRequest.fire && probeIndex === 1.U)) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH MulDiv did not accept independent multiply\n")
++    }
++    probeReturned(index) := true.B
++  }
+   iss_stage.io.fpu_iss_exe <> exe_stage.io.fpu_iss_exe
+ 
+   iwb_stage.io.xLookup <> rnm_stage.io.xLookup

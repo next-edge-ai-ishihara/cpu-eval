@@ -1,0 +1,53 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "harness/evaluate_ports.py",
+    "harness/sram_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_sram_1rw",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/macros/behav/hpdcache_sram_1rw.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "271bc9139cc9d51b6a1247cb6507a51e095e918e9c331dc7c468a563c2fd0f5e",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "1de2c806bec2e7545ddd5dc0f21f6799c9f0dc356fb7f3806abc257c3d48202c",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_hpdcache_sram_1rw.yaml",
+  "test_list_sha256": "d8f91070108f684b5a1033de463a9150762f2e3fa6e9c28e29f749e493de2bce",
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/macros/behav/hpdcache_sram_1rw.sv",
+    "source_repository": "https://github.com/openhwgroup/cv-hpdcache.git",
+    "source_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+    "test_sources": "Check out the recorded test revision and copy harness/hpdcache_sram_1rw_conflict.S to verif/tests/cpu-eval-patches/.",
+    "directed_test_sha256": "524074701cd34aee0ee8d38ea8d7dbc3975ec295e27d6d88ca2a098377f8078b"
+  },
+  "evaluation_scope": "Run harness/testlist_hpdcache_sram_1rw.yaml once: it already contains the 38 standard programs and the directed conflict program.",
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "dd17e5e1bd251b209225e2ce0ad5d5069f8960fbfd58c639b150653cd6e276bb",
+    "test": "harness/sram_ports_tb.sv",
+    "test_sha256": "89e155de50341eea69b7ea37b95c9178ff645cc360c29efd374d80f668a6ba4a",
+    "geometry": {
+      "ADDR_SIZE": 6,
+      "DATA_SIZE": 28,
+      "DEPTH": 64,
+      "NDATA": 1
+    },
+    "checks": [
+      "distinct initialized addresses",
+      "read data before the sampling edge",
+      "read data after the sampling edge",
+      "unselected write"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+diff --git a/tb/sw/clint_Plic/main.c b/tb/sw/clint_Plic/main.c
+index 1146e11..9e05d73 100644
+--- a/tb/sw/clint_Plic/main.c
++++ b/tb/sw/clint_Plic/main.c
+@@ -143,12 +143,26 @@
+ int main()
+ {
++	uint64_t observed;
++	volatile uint64_t *probe = aclint_mtimecmp;
+ 
+-	// setUpAClintTimmer();
+-	// setUpAClintSoft();
+-	setUpPlicExt();
+-
+-	while(flag_finish != 1);
++	(*probe) = 0;
++	observed = (*probe);
++	if (observed != 0) {
++		return 1;
++	}
+ 
+-	return 0;
++	(*probe) = 1;
++	observed = (*probe);
++	if (observed != 1) {
++		return 1;
++	}
++
++	(*probe) = 0x1234567800000001ULL;
++	observed = (*probe);
++	if (observed != 0x1234567800000001ULL) {
++		return 1;
++	}
+
++	(*probe) = 0;
++	return 0;
+ }
+diff --git a/tb/sw/clint_Plic/Makefile b/tb/sw/clint_Plic/Makefile
+index 25041d0..2541594 100644
+--- a/tb/sw/clint_Plic/Makefile
++++ b/tb/sw/clint_Plic/Makefile
+@@ -2,10 +2,10 @@
+ 
+ 
+ all:
+-	riscv64-unknown-elf-gcc -Os -ggdb -march=rv64imac -mabi=lp64 -Wall -mcmodel=medany -mexplicit-relocs \
++	riscv64-unknown-elf-gcc -Os -ggdb -march=rv64imac_zicsr -mabi=lp64 -Wall -mcmodel=medany -mexplicit-relocs \
+ 	-c ./main.c \
+ 	-o ./main.o
+ 
+-	riscv64-unknown-elf-gcc -Os -ggdb -march=rv64imc -mabi=lp64 -Wall -mcmodel=medany -mexplicit-relocs -mcmodel=medany -mexplicit-relocs \
++	riscv64-unknown-elf-gcc -Os -ggdb -march=rv64imc_zicsr -mabi=lp64 -Wall -mcmodel=medany -mexplicit-relocs -mcmodel=medany -mexplicit-relocs \
+ 	-c ./startup.S \
+ 	-o ./startup.o

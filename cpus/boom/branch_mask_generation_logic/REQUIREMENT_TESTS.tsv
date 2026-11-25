@@ -1,0 +1,4 @@
+requirement	tests	rationale
+Allocate tags up to the selected capacity	BranchMaskGenerationLogicTest	Fill all 16 distinct tags across three decode lanes, stall only tag requests that exceed capacity and reuse tags after resolution.
+Track dependencies, branch acceptance and recovery	BranchMaskGenerationLogicTest	Observe each lane's dependency mask and the registered unresolved tags across backpressure, resolution, misprediction and a pipeline flush.
+Commit the correct branch and jump behavior	rv64ui-p-beq;rv64ui-p-bne;rv64ui-p-blt;rv64ui-p-bge;rv64ui-p-bltu;rv64ui-p-bgeu;rv64ui-p-jal;rv64ui-p-jalr	Compare retired architectural records with Spike.

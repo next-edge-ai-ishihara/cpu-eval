@@ -1,0 +1,13 @@
+--- a/testbench/tb_top.sv
++++ b/testbench/tb_top.sv
+@@ -3198,6 +3198,9 @@
+         end
+     end
+     for (genvar i=0; i<pt.DCCM_NUM_BANKS; i++) begin: dccm_loop
+-        assign dccm_wr_fdata_bank[i][pt.DCCM_FDATA_WIDTH-1:0] = {el2_mem_export.dccm_wr_ecc_bank[i], el2_mem_export.dccm_wr_data_bank[i]} ^ dccm_wdata_bitflip[i];
++        assign dccm_wr_fdata_bank[i][pt.DCCM_FDATA_WIDTH-1:0] =
++            {el2_mem_export.dccm_wr_ecc_bank[i], el2_mem_export.dccm_wr_data_bank[i]} ^
++            dccm_wdata_bitflip[i] ^
++            ((el2_mem_export.dccm_wr_data_bank[i] == 32'h5a3c69f0) ? 39'b1 : 39'b0);
+         assign el2_mem_export.dccm_bank_dout[i] = dccm_bank_fdout[i][31:0];
+         assign el2_mem_export.dccm_bank_ecc[i] = dccm_bank_fdout[i][38:32];

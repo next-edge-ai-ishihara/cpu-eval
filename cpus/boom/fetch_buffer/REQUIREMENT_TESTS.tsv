@@ -1,0 +1,5 @@
+requirement	tests	rationale
+Preserve instruction order and semantics	rv64ui-p-add;FetchBufferPortsTest	Compare the retired instruction trace with Spike. Drive sparse masks and verify the compacted order and raw and expanded instructions at the output slots.
+Deliver and hold partial groups until decode accepts the complete group	FetchBufferPortsTest	Expose a single faulting instruction with no following fetch. Verify known slots do not move when new packets append entries and while ready is low.
+Preserve instruction program-counter and fetch metadata	FetchBufferPortsTest	Compare high and low PC information at a cache-line boundary, compression, FTQ choice, taken prediction, and fetch exceptions.
+Discard buffered instructions on clear	FetchBufferPortsTest	Clear with a partial group and a concurrent incoming packet. Verify the post-clear outputs contain only newly accepted instructions.

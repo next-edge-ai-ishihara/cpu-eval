@@ -1,0 +1,662 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/hpdcache_rtab/SPEC_RECIPE.json",
+  "recipe_sha256": "5bec516635d67d72463de5056507781ab0776d39ca5450e07bd861a3707c1e82",
+  "prompt_sha256": "73db75d33adbcb2cd28d5f6bbf8986e22aa5606a7558cb5a93a5861b82b690dc",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    },
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        382
+      ],
+      "sha256": "61400d1732dd935e34d00fcc82bf9e8c949fb9df1ee217a670ca11012658f08a"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        382,
+        411
+      ],
+      "sha256": "ad1c8388d26676fb9a055031595911a61d3abb8612508573191eae86053cd78e"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences: `core/cache_subsystem/cva6_hpdcache_wrapper.sv`",
+      "prompt_bytes": [
+        411,
+        487
+      ],
+      "sha256": "c18753d4844deb4791ce258ed44b54042de63c48e7aff04440c22cc8afdc7873"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        487,
+        537
+      ],
+      "sha256": "46b07a05330e469e3dda03761a23e0fbbb37de08f51afad16bc026490c023493"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences: Package and imports; `rtl/src/hpdcache_pkg.sv`",
+      "prompt_bytes": [
+        537,
+        615
+      ],
+      "sha256": "1789a378f5c497afee49cbead763acb763b41969389eeb69f3d10d9136ef4ca3"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        615,
+        819
+      ],
+      "sha256": "a18a54521bb385f7a3285384213b204b32fe79caed5de3bcc6fb1a515410c37c"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        819,
+        826
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        826,
+        966
+      ],
+      "sha256": "39b0788af7f30d7e8bfb4d636251288d693b5821de4895f18dbadec0de30499d"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        966,
+        973
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        973,
+        1386
+      ],
+      "sha256": "411d53a153c4f843fc10a6081fb88476415acd90f60cb38f7ec80fae10a25347"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Headings and fences: Module declaration",
+      "prompt_bytes": [
+        1386,
+        1432
+      ],
+      "sha256": "4ab99e40d4b7d80010b4a0c624af22bb0b3417c6086257be00e771774d4e247a"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1432,
+        5168
+      ],
+      "sha256": "25c26bc79944d1d2b3a30cc28bccf5756e472de4733eea51020b4e08e0e31f9b"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Headings and fences: Parent instantiation; `rtl/src/hpdcache_ctrl.sv`",
+      "prompt_bytes": [
+        5168,
+        5248
+      ],
+      "sha256": "899de4f97aea0c753bd1c5c7c1ad984b166f8bc4d7128d00d17a683971f684ec"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        5248,
+        6216
+      ],
+      "sha256": "cb3d5cd013e9ea8ced83d877f7aae02277c6a679a3a9c0d39447a3a8f0b45337"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        6216,
+        6223
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        6223,
+        6295
+      ],
+      "sha256": "05611f3be6cff4ea28e7f478534b76e46da463bdb6d825d44e36cc203b777928"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        6295,
+        6302
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        6302,
+        6770
+      ],
+      "sha256": "f818093e66e621dd738e06935336159153ed63690189358cc81dedf7c7aa1f11"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        6770,
+        6777
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        6777,
+        9950
+      ],
+      "sha256": "bbca3f1bdd3df574e02971c797d9d90aa372a6be606fc37549245c0190c78005"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Headings and fences: Dependency declarations; `rtl/include/hpdcache_typedef.svh`",
+      "prompt_bytes": [
+        9950,
+        10041
+      ],
+      "sha256": "e1b7257a2e313e6b0cca459aebcbc8d3db224012046d121e4e7544c3a2ea6161"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        10041,
+        10723
+      ],
+      "sha256": "256cc42aff6f5cd08a4d257fbc943000f3c4bff07664f6cf6ee1a41e6d1e70c8"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/hpdcache_wbuf.sv`",
+      "prompt_bytes": [
+        10723,
+        10778
+      ],
+      "sha256": "c168ec5ae46b28c99c2fad5393634fa9a648d88da5c51cc832b8450b6452f78a"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        10778,
+        11121
+      ],
+      "sha256": "64792218162d65712a0e3ca3362ca74717601128deed938abd172ad88085fc94"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Headings and fences: Related source code; `rtl/src/hpdcache_wbuf.sv`",
+      "prompt_bytes": [
+        11121,
+        11200
+      ],
+      "sha256": "00f7721353e22de49f51c74985f5e6944f077ac226b350893e27b39474630bde"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        11200,
+        12925
+      ],
+      "sha256": "156bab590d6ba887e96e5ee4984a12dfa7ad647378106caba66390c0b7c6b012"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/hpdcache_ctrl_pe.sv`",
+      "prompt_bytes": [
+        12925,
+        12983
+      ],
+      "sha256": "9ed0038cce10edb5810b217a11714eab2fdef4a3861a527247a93d8c95e307cf"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        12983,
+        13939
+      ],
+      "sha256": "50b6159f412db369bfdf8410b1ea2c7957e87a4aefa998286e8c0b152ea26a2b"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Headings and fences: Documentation; `docs/source/architecture.rst`",
+      "prompt_bytes": [
+        13939,
+        14007
+      ],
+      "sha256": "37ffb6fe932fb954a38a912381a576d6148467f2668993c01b6a7ce24adbf7a3"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        14007,
+        15163
+      ],
+      "sha256": "2ed9abe88be48cbf32b6b48389319868ef5d056d3f2d879c5036e9ca6db246fa"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        15163,
+        15169
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        15169,
+        17782
+      ],
+      "sha256": "70680b7553fb6a9db4c2dd2e72ba77820be421e494695bb98a4485e81b5a3113"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        17782,
+        17788
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        17788,
+        19064
+      ],
+      "sha256": "712a3401711cc176337c7aa108650cbb97f55e8ff4bed5f1091a8e8f9e6637c1"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        19064,
+        19070
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        19070,
+        21292
+      ],
+      "sha256": "228f8d8a0027c60fc4340387b79befe1df604162260f7ee0b973b7d1fc9532be"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        21292,
+        21298
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 37,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        21298,
+        22542
+      ],
+      "sha256": "b0faf14692b15cba889b9b1561a539404c1127bc26dfc4edb717d94a040069d6"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        22542,
+        22548
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 39,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        22548,
+        23842
+      ],
+      "sha256": "78c70614d4e358a3279b828219b2470dffa4c09b1422cea1068f7852255603c3"
+    },
+    {
+      "index": 40,
+      "kind": "authored",
+      "description": "Headings and fences: Additional requirement",
+      "prompt_bytes": [
+        23842,
+        24048
+      ],
+      "sha256": "864bd7f91c0ea6c924d076cc073da5b812ff8008213e833d915acabd65d9b8c5"
+    }
+  ],
+  "sources": [
+    {
+      "label": "CVA6 replay-table entry count",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_subsystem.sv",
+      "lines": [
+        233,
+        233
+      ],
+      "language": "systemverilog",
+      "sha256": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    {
+      "label": "CVA6 replay-table single-entry setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_hpdcache_wrapper.sv",
+      "lines": [
+        389,
+        389
+      ],
+      "language": "systemverilog",
+      "sha256": "8092ed052b8c097e2f3969ae2c43205989666f2495f7c678d2749e5db25872c0"
+    },
+    {
+      "label": "Module declaration for hpdcache_rtab",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_rtab.sv",
+      "lines": [
+        13,
+        101
+      ],
+      "language": "systemverilog",
+      "sha256": "5a61d9aade361532b4df8463172d536aeee887d7f0c349ed0ddafa3e25c2169c"
+    },
+    {
+      "label": "Replay-table dependency fields",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        345,
+        359
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Replay-table pointer and request types",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        253,
+        280
+      ],
+      "language": "systemverilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    },
+    {
+      "label": "Load operation predicate",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        100,
+        105
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Prefetch operation predicate",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_pkg.sv",
+      "lines": [
+        225,
+        227
+      ],
+      "language": "systemverilog",
+      "sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf"
+    },
+    {
+      "label": "Replay-table architecture",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        812,
+        830
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table operation set",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        885,
+        930
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table allocation and linked allocation algorithms",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        932,
+        980
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table pop algorithm",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        982,
+        1052
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table commit, rollback, and ready-selection algorithms",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        1054,
+        1099
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Replay-table dependency and lookup algorithms",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/architecture.rst",
+      "lines": [
+        1102,
+        1171
+      ],
+      "sha256": "6457b51da86ecaf3681397e001cde2760ee180a93481d728b886d8d8e644d2f9"
+    },
+    {
+      "label": "Parent instantiation in hpdcache_ctrl",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        793,
+        871
+      ],
+      "language": "systemverilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    },
+    {
+      "label": "Pending-transaction completion conditions",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        768,
+        777
+      ],
+      "language": "systemverilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    },
+    {
+      "label": "Write-buffer replay-check interface",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_wbuf.sv",
+      "lines": [
+        83,
+        89
+      ],
+      "language": "systemverilog",
+      "sha256": "134fefdfd7f7846896ed814a4710859b0b9bc884cf498079a4a93c3ea939e21c"
+    },
+    {
+      "label": "Write-buffer replay address matching and status rules",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_wbuf.sv",
+      "lines": [
+        391,
+        425
+      ],
+      "language": "systemverilog",
+      "sha256": "134fefdfd7f7846896ed814a4710859b0b9bc884cf498079a4a93c3ea939e21c"
+    },
+    {
+      "label": "Request field declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/include/hpdcache_typedef.svh",
+      "lines": [
+        67,
+        80
+      ],
+      "language": "systemverilog",
+      "sha256": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126"
+    },
+    {
+      "label": "Fence detection and RTAB pending-transaction dependency",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl_pe.sv",
+      "lines": [
+        251,
+        264
+      ],
+      "language": "systemverilog",
+      "sha256": "a2dc2bc28900d9f9285286fbd1a8ee8d716853d975c7131121e4de8fcbd877f8"
+    },
+    {
+      "label": "Parent connection of the RTAB fence dependency",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_ctrl.sv",
+      "lines": [
+        721,
+        721
+      ],
+      "language": "systemverilog",
+      "sha256": "1e73a4bd6dabe4c6fcc8663819a9f6072e46f03181000961ba7d2ca85210c1a3"
+    }
+  ]
+}

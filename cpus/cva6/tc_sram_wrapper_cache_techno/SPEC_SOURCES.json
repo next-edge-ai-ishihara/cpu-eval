@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "a479c0306d61a97519fd9632779af41049ed272a785abf75b6de6c5938b48cb4",
+  "prompt_sha256": "e24ef54e1328505ae830026a1b63a8cbee94002adf14e77c03edb35d041b587d",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        353
+      ],
+      "sha256": "837518772a4229d6680fbe44d0bd4f6f0072800be3ee266a0be750e0ff9b1212"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        353,
+        1914
+      ],
+      "sha256": "d776ceacd7f81ecd6dbd9c76066a8c16d457d07dbb01a35ac9b3b2deabb12eff"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fence and heading",
+      "prompt_bytes": [
+        1914,
+        2028
+      ],
+      "sha256": "13d86bd0a5cc7cd3cbe7a750b49b691b7bcdd54d37bc305b21dd7fd906156d98"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        2028,
+        3615
+      ],
+      "sha256": "3fdcf600edba7593400d9458c24cf6cfbc837876ce3ae745c5098ec232e9d74d"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Fence",
+      "prompt_bytes": [
+        3615,
+        3619
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for tc_sram_wrapper_cache_techno",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "common/local/util/tc_sram_wrapper_cache_techno.sv",
+      "lines": [
+        13,
+        39
+      ],
+      "language": "verilog",
+      "sha256": "c10b2faf922c2d7c49a52f93087bb545077d9c82399c985c2bfdaead0a03b220"
+    },
+    {
+      "label": "Declaration of the generic SRAM tc_sram",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv",
+      "lines": [
+        56,
+        82
+      ],
+      "language": "verilog",
+      "sha256": "32e9cb89cf89902e9fa566a66f931f6fe00a616cd426ba440b1e634d0caeb607"
+    }
+  ]
+}

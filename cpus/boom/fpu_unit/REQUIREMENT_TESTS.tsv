@@ -1,0 +1,5 @@
+requirement	tests	test_behavior
+Forward the first and second floating-point operands through the wrapper and return the low-level FPU result.	rv64uf-p-fadd	
+Forward the third floating-point operand through the wrapper for fused multiply-add operations.	rv64uf-p-fmadd	
+Return the low-level FPU exception flags with the response micro-operation.	rv64uf-p-fadd;rv64uf-p-fmadd	
+Forward the CSR rounding mode for dynamic instructions while preserving static rounding.	rv64ud-p-fp_to_fp_rounding_and_nan	Compare double-to-single conversion at a halfway value with static RUP, static RNE and dynamic RUP, and check the inexact flags.

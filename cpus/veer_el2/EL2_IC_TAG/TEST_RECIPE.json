@@ -1,0 +1,23 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "EL2_IC_TAG",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "icache_dccm_selfcheck",
+    "path": "harness/icache_dccm_selfcheck.s",
+    "sha256": "756975951221cd3c307628fb7de73edf9a499874a32c6a1aaec745396b004112"
+  },
+  "run": "bash harness/evaluate_icache_dccm_selfcheck.sh",
+  "run_sha256": "d3ec6bbeed4339443c3cd7f5d5bb3d64bc883912f3027a1268b334f80bdb1ef5",
+  "comparison": "self-checking directed program checking a 64-call running total, a first-to-last call cycle ratio, and the distinct return values of two alternated routines whose addresses differ only in bit 13 and select the same cache set, through a mailbox exit code (0xff pass, 0x01 fail)",
+  "completion_classification": "An interrupted build or simulation, or a log without the Verilator command because the fixed program did not build or stale build artifacts were reused, is INVALID. The sole TEST_PASSED marker is PASS. TEST_FAILED, the cycle-limit marker, a nonzero build or simulation exit, conflicting markers and an absent verdict are FAIL."
+}

@@ -1,0 +1,449 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for el2_ifu_iccm_mem",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_iccm_mem.sv",
+      "lines": [
+        22,
+        49
+      ],
+      "language": "verilog",
+      "sha256": "45c2a87ca6eab5aab3f98e5c785d59ac93e15d62810e8e08c1e2c1635165e444"
+    },
+    {
+      "label": "Parent instantiation for el2_ifu_iccm_mem",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_mem.sv",
+      "lines": [
+        167,
+        171
+      ],
+      "sha256": "407e49ac960503befbc02fd5eb7aad283e938ae27f546f2089a44246bea46016"
+    },
+    {
+      "label": "Dependency module declaration for el2_ifu_iccm_mem",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        19,
+        26
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Dependency module declaration for el2_ifu_iccm_mem",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        49,
+        56
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Icache/ICCM memory-export interface",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_mem_if.sv",
+      "lines": [
+        21,
+        40
+      ],
+      "language": "verilog",
+      "sha256": "7badcf1dedd812a056d87160727350bd4fafc6e03952db84ee7e65fb4d3867c9"
+    },
+    {
+      "label": "Selected ICCM configuration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        340,
+        343
+      ],
+      "language": "perl",
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a"
+    },
+    {
+      "label": "ICCM address parameter derivation",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        1739,
+        1746
+      ],
+      "language": "perl",
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a"
+    },
+    {
+      "label": "Parent DMA alignment checks",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_dma_ctrl.sv",
+      "lines": [
+        313,
+        321
+      ],
+      "language": "verilog",
+      "sha256": "d11485a16ce5f5037f383f604af7a668ffeed9ce257a596feb27481eea15c614"
+    },
+    {
+      "label": "Parent corrected-buffer request",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1029,
+        1031
+      ],
+      "language": "verilog",
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "Parent correction address alignment",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1391,
+        1392
+      ],
+      "language": "verilog",
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "Parent ICCM request and size generation",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1347,
+        1350
+      ],
+      "language": "verilog",
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "Parent normal and corrected write-word format",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1365,
+        1375
+      ],
+      "language": "verilog",
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "Partial RAM access body (macro declaration and ports omitted)",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/mem_lib.sv",
+      "lines": [
+        46,
+        53
+      ],
+      "language": "verilog",
+      "sha256": "a72a54780581748f725a249cebaae4ac30f74d88e631ec2c476a95ff4011f318"
+    },
+    {
+      "label": "ICCM memory-export modport",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_mem_if.sv",
+      "lines": [
+        93,
+        98
+      ],
+      "language": "verilog",
+      "sha256": "7badcf1dedd812a056d87160727350bd4fafc6e03952db84ee7e65fb4d3867c9"
+    },
+    {
+      "label": "Memory-export interface terminator",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_mem_if.sv",
+      "lines": [
+        150,
+        150
+      ],
+      "language": "verilog",
+      "sha256": "7badcf1dedd812a056d87160727350bd4fafc6e03952db84ee7e65fb4d3867c9"
+    },
+    {
+      "label": "Parent ICCM read-word and ECC consumption",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1428,
+        1448
+      ],
+      "language": "verilog",
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "External ICCM preload mapping function signature",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "testbench/tb_top.sv",
+      "lines": [
+        3098,
+        3098
+      ],
+      "language": "verilog",
+      "sha256": "5e6554c8c8941fa519f297f45b63928670d4084e5d0d05ffbeef9e54494678a3"
+    },
+    {
+      "label": "External ICCM preload mapping for four banks",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "testbench/tb_top.sv",
+      "lines": [
+        3102,
+        3104
+      ],
+      "language": "verilog",
+      "sha256": "5e6554c8c8941fa519f297f45b63928670d4084e5d0d05ffbeef9e54494678a3"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/error-protection.md",
+      "lines": [
+        236,
+        243
+      ],
+      "sha256": "79596e06222a906c2d596c03070a11aa582cb14a25f6e0585c042f2dbcaae496",
+      "language": "markdown"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        1200,
+        1388
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "perl"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "configs/veer.config",
+      "lines": [
+        2695,
+        2712
+      ],
+      "sha256": "2a4db040847f2dcf820582ee80b3af9b901e553d9fae09872329f6336f13d49a",
+      "language": "perl"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "# Implement `el2_ifu_iccm_mem`\n\nImplement the complete `el2_ifu_iccm_mem` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_ifu_iccm_mem` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### configs/veer.config\n\n```perl\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Package and imports\n\n### configs/veer.config\n\n```perl\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Dependency declarations\n\n### `rvdff`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### `rvdffs`\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### design/lib/el2_mem_if.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Related source code\n\n### design/lib/mem_lib.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### design/el2_dma_ctrl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### design/ifu/el2_ifu_mem_ctl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n### testbench/tb_top.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n\n## Documentation\n\n### docs/source/error-protection.md\n\n```markdown\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Headings, fences and task instructions",
+      "text": "\n```\n"
+    }
+  ]
+}

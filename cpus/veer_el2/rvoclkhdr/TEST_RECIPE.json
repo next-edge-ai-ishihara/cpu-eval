@@ -1,0 +1,61 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvoclkhdr",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "post_generation_artifacts": [
+      {
+        "path": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S",
+        "sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+      }
+    ],
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+  },
+  "run": "bash evaluate_all.sh",
+  "run_sha256": "e49ecbd1c331f2fea963cd7e6d9eb354baef0f12fd425cccf69c04e6e2460b36",
+  "clock_port_files": [
+    {
+      "path": "evaluate_all.sh",
+      "sha256": "e49ecbd1c331f2fea963cd7e6d9eb354baef0f12fd425cccf69c04e6e2460b36"
+    },
+    {
+      "path": "harness/evaluate_clock_ports.sh",
+      "sha256": "eb0ca58465351b2ac62842670c2b230f6bd63cef410927273de4a77c12777fc6"
+    },
+    {
+      "path": "harness/clock_gate.cpp",
+      "sha256": "595dbacf89ec08b9125e06e017bb46374aca6f2a02f3d3583bcdaefc3902857d"
+    }
+  ],
+  "comparison": "The clock port test must report all 24 l1clk observations with scan_mode 0 as expected, and the ordered Spike and RTL GPR state-change updates must give 2193 matches. The GPR comparator skips updates that do not change its tracked register state."
+}

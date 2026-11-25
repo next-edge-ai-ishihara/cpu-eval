@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "configuration": {
+    "vexriscv_revision": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+    "spinalhdl_revision": "95a5e6c65c54acfc4707c8fe6ef8b5d297cfcbde",
+    "regression_seed": 42,
+    "regression_test_id": 0
+  },
+  "units": [
+    {"id": "vexriscv", "class": "VexRiscv", "repository": "vexriscv", "path": "src/main/scala/vexriscv/VexRiscv.scala"},
+    {"id": "data_cache", "class": "DataCache", "repository": "vexriscv", "path": "src/main/scala/vexriscv/ip/DataCache.scala"},
+    {"id": "stream_fifo_low_latency", "class": "StreamFifoLowLatency", "repository": "spinalhdl", "path": "lib/src/main/scala/spinal/lib/Stream.scala"},
+    {"id": "stream_fifo", "class": "StreamFifo", "repository": "spinalhdl", "path": "lib/src/main/scala/spinal/lib/Stream.scala"},
+    {"id": "int_alu_plugin", "class": "IntAluPlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/IntAluPlugin.scala"},
+    {"id": "i_bus_simple_plugin", "class": "IBusSimplePlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/IBusSimplePlugin.scala"},
+    {"id": "d_bus_cached_plugin", "class": "DBusCachedPlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/DBusCachedPlugin.scala"},
+    {"id": "mul_div_iterative_plugin", "class": "MulDivIterativePlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/MulDivIterativePlugin.scala"},
+    {"id": "full_barrel_shifter_plugin", "class": "FullBarrelShifterPlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/ShiftPlugins.scala"},
+    {"id": "branch_plugin", "class": "BranchPlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/BranchPlugin.scala"},
+    {"id": "hazard_simple_plugin", "class": "HazardSimplePlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/HazardSimplePlugin.scala"},
+    {"id": "reg_file_plugin", "class": "RegFilePlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/RegFilePlugin.scala"},
+    {"id": "src_plugin", "class": "SrcPlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/SrcPlugin.scala"},
+    {"id": "csr_plugin", "class": "CsrPlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/CsrPlugin.scala"},
+    {"id": "decoder_simple_plugin", "class": "DecoderSimplePlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/DecoderSimplePlugin.scala"},
+    {"id": "debug_plugin", "class": "DebugPlugin", "repository": "vexriscv", "path": "src/main/scala/vexriscv/plugin/DebugPlugin.scala"}
+  ]
+}

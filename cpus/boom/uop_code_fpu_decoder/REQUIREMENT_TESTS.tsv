@@ -1,0 +1,9 @@
+requirement	tests	rationale
+Classify and move single-precision values	rv64uf-p-fclass;rv64uf-p-move	Exercise FCLASS.S and moves between integer and floating-point registers.
+Convert single-precision and integer values	rv64uf-p-fcvt;rv64uf-p-fcvt_w	Exercise conversions into and out of single precision.
+Compare, sign-inject, and select single-precision values	rv64uf-p-fcmp;rv64uf-p-fmin;rv64uf-p-move	Exercise comparisons, sign injection, minimum, and maximum.
+Add, subtract, multiply, and fused-operate on single-precision values	rv64uf-p-fadd;rv64uf-p-fmadd	Exercise the single-precision arithmetic and fused-operation control groups.
+Classify and move double-precision values	rv64ud-p-fclass;rv64ud-p-move	Exercise FCLASS.D and moves between integer and floating-point registers.
+Convert double-precision, single-precision, and integer values	rv64ud-p-fcvt;rv64ud-p-fcvt_w	Exercise conversions into and out of double precision and between floating-point precisions.
+Compare, sign-inject, and select double-precision values	rv64ud-p-fcmp;rv64ud-p-fmin;rv64ud-p-move	Exercise comparisons, sign injection, minimum, and maximum.
+Add, subtract, multiply, and fused-operate on double-precision values	rv64ud-p-fadd;rv64ud-p-fmadd	Exercise the double-precision arithmetic and fused-operation control groups.

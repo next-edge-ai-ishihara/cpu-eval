@@ -1,0 +1,22 @@
+--- a/copro_alu_custom3.S
++++ b/copro_alu_custom3.S
+@@ -7,10 +7,15 @@
+ rvtest_entry_point:
+ RVMODEL_BOOT
+ RVTEST_CODE_BEGIN
+-    li a0, 5
+-    li a1, 7
+-    .insn r CUSTOM_3, 0x1, 0x0, a2, a0, a1
+-    addi a3, a2, 1
++    li t0, 5
++    li t1, 7
++
++    .word 0x0000007b  # CUS_NOP
++    .word 0x0062957b  # CUS_ADD a0, t0, t1
++    .word 0x026295fb  # CUS_DOUBLE_RS1 a1, t0, t1
++    .word 0x0462967b  # CUS_DOUBLE_RS2 a2, t0, t1
++    .word 0x066296fb  # CUS_ADD_MULTI a3, t0, t1
++    addi s0, a0, 1
+ RVTEST_CODE_END
+ RVMODEL_HALT
+ 

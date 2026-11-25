@@ -1,0 +1,36 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_flush_ports.py",
+    "harness/store_buffer_flush_tb.sv",
+    "../instr_scan/harness/evaluate_ports.py",
+    "../harness/port_work_directory.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "store_buffer",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/store_buffer.sv",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "test_list": "harness/testlist_store_buffer.yaml",
+  "test_list_sha256": "890397fa60e8543b874d8eba99520fdcc7c0dcba71534372119174479d1b3f0b",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/store_buffer.sv",
+    "upstream_test": "riscv-test-suite/rv32i_m/I/src/sw-align-01.S",
+    "upstream_test_sha256": "7298bf6f40dd8f560f77b5b67530b3ed7b5a48cb398ab561371fd7993d2cd3ad",
+    "patch": "tests/patches/0001-read-back-first-word-store.patch",
+    "patch_sha256": "11140efd15ec70520b0f2220f6f1c1d7b13f5cf884b7876ab01d3abd468e81e5",
+    "patched_test": "harness/sw-align-01.S",
+    "patched_test_sha256": "884017e841eb5f9db61934a8143a807b4c6f70cf755f40eebfa8ed248fbe2b86",
+    "command": "git checkout a5a49fc9f244192649e57fe61b4513d9bc39b1e3 && patch -p1 < <problem-directory>/tests/patches/0001-read-back-first-word-store.patch",
+    "flush_ports": "Compile the submission using the pinned CV32A60X packages and parent cache-port types. Run the flush port test before the five CPU programs in harness/testlist_store_buffer.yaml."
+  },
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "11ef1b5369ab1551b3f179a76e01bfc748666f04d99dda8e8eb8f228597eae1c",
+  "test_selection": "Check that a flush discards a speculative store and preserves a committed store awaiting a cache grant, then execute the five selected complete-CPU programs."
+}

@@ -1,0 +1,102 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "../../../tools/cva6/replace_module.py",
+    "harness/evaluate_load_cancel.py",
+    "harness/evaluate_store_updates.sh",
+    "harness/load_cancel_tb.sv"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "cva6_hpdcache_if_adapter",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "source_path": "core/cache_subsystem/cva6_hpdcache_if_adapter.sv",
+  "reference_source_sha256": "2a73f0d536f9b52d80ca3dbe9213fe408fa559207ea40382f98f21a50bd3af32",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "49e2993f915c0e4b0707ab9e039422d15b54b35ed97403f60c3a712fd44f2676",
+  "load_evaluator": "../harness/evaluate_parallel.sh",
+  "load_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "store_evaluator": "harness/evaluate_store_updates.sh",
+  "store_evaluator_sha256": "aec817f439d9e2c4983e918968ae00578cdf9316c3d01ad6056bb36e3e99b869",
+  "testlists": [
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+      "tests": 38
+    },
+    {
+      "path": "../harness/testlist_store_updates.yaml",
+      "sha256": "26c138d221eedd44d04734f1ceee8be075784f6df9c6d1a9a63976012624ec1b",
+      "tests": 5
+    },
+    {
+      "path": "harness/testlist_distinct_loads.yaml",
+      "sha256": "2695aec94bae235fb6bba07c617a075470b0b4f3a9fb0db91cb3f1b2a0182f86",
+      "tests": 1
+    }
+  ],
+  "fixed_patches_in_application_order": [
+    {
+      "order": 1,
+      "purpose": "Record writes accepted by the test-harness DRAM interface for architectural memory-update comparison.",
+      "target": "corev_apu/tb/ariane_testharness.sv",
+      "target_sha256_before": "c671b2f70ea4cd7e27b67f4764e07966abd69e18d168f3de28220b26b8bb8655",
+      "patch": "../harness/0001-log-dram-writes.patch",
+      "patch_sha256": "b79e083a7b0c93b244df434125cdfc1cefd54acc147b4e97e785f8c129aee7cb",
+      "target_sha256_after": "978648dfc2b9016a989a594b38d1136ee6335dac0e7b685a737a086a63b4a7a2"
+    }
+  ],
+  "store_update_comparator": "../harness/compare_store_updates.py",
+  "store_update_comparator_sha256": "95c09b5518e952731898dbacdfbd7ba815fccdf045fd08bec2ef36675612cf3e",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/cache_subsystem/cva6_hpdcache_if_adapter.sv",
+    "test_programs": "Use the 43 upstream test-list entries byte for byte at test_revision. The additional load test is supplied in harness/distinct_loads.S and is installed by the shared evaluator before the run.",
+    "instrumentation": "Restore the recorded test-harness target, verify target_sha256_before, apply the fixed patch from the CVA6 repository root with git apply, and verify target_sha256_after."
+  },
+  "comparison": {
+    "loads": "Compare corresponding retired instructions, integer-register updates, and width-masked memory updates using the architectural trace comparator.",
+    "stores": "Pair Spike retired stores and accepted test-harness DRAM writes in execution order; compare address, byte enable, and the write value masked to the store width.",
+    "excluded_termination_address": "0x80001000",
+    "completion_requirement": "The three CPU regressions and the load cancellation port check must complete and match. The fixed tree builds and runs every program with the reference module, so after only the target is replaced a build failure, a missing target module, an RTL simulation that does not complete (including the fixed RVFI cycle limit and assertions) and a comparison mismatch are FAIL. Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID."
+  },
+  "directed_test_sources": [
+    {
+      "path": "harness/distinct_loads.S",
+      "sha256": "1abfe6b0aa0078ff98b377b2a390f24f1ad0bd8fec66ea21087f121e1804bf1c"
+    }
+  ],
+  "load_cancellation": {
+    "evaluator": "harness/evaluate_load_cancel.py",
+    "evaluator_sha256": "8db19ff29c80571a3266ba6e6d090ac5386a956a64df421e38d7b1261f3d8c8c",
+    "testbench_body": "harness/load_cancel_tb.sv",
+    "testbench_body_sha256": "9514d91b1e7b2c0429da4da6a38f72a2ff5c4cc7015ca58f0af19ccce5632daa",
+    "testbench_sha256": "36572533e7d020053da0140aa1b4357fee1c1fbe3024c48e29947ac568c3dc0f",
+    "helper_sha256": {
+      "../harness/port_work_directory.py": "e93f719e8e1a33fe160c75c4285594284db60dc8b04daa45262fee8d2ff36da1",
+      "../../../tools/cva6/replace_module.py": "ace98165de117c8e15c1ba7aa2258bfe6a08b63705a6d3eedafdc4f2a2e66997"
+    },
+    "hpdcache_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+    "cpu_inputs_sha256": {
+      "core/include/config_pkg.sv": "f6f193daa7dfe1161689f651d6aa6e2b1fdec6560fc83c1313385e944ce4c97c",
+      "core/include/cv32a60x_config_pkg.sv": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8",
+      "core/include/build_config_pkg.sv": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc",
+      "core/include/riscv_pkg.sv": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a",
+      "core/include/ariane_pkg.sv": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7",
+      "core/cva6.sv": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c",
+      "core/cache_subsystem/cva6_hpdcache_subsystem.sv": "460981ffe77fc496dfccfe8bf3cda7e82b127d64a5e715fe1156e3bb44d98309"
+    },
+    "hpdcache_inputs_sha256": {
+      "rtl/src/hpdcache_pkg.sv": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf",
+      "rtl/include/hpdcache_typedef.svh": "db5500bf9ea739ca57bf67fe9b76a838e18c4f39705656670ac7302749495126"
+    },
+    "stimulus": "Accept a load with no cancellation. In the next cycle, drive the pinned load unit's WAIT_FLUSH outputs for the accepted request. Check that the HPDcache abort port is asserted only in the cancellation cycle."
+  }
+}

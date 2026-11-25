@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "problem": "TLB",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/privilege/TLB.scala",
+    "source_unit": "TLB"
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64si-p-dirty",
+      "rv64si-p-icache-alias"
+    ],
+    "policy": "Run every program in the fixed required-test catalog that matches the selection patterns."
+  },
+  "test_catalog_construction": {
+    "script": "tools/environment/build_environment_images.py",
+    "script_sha256": "ba00feee7be8fc4b5db14bb9e83ff6d7639f64515564fc8678c985c207c23906",
+    "record": "cpus/rift2core/_shared/REFERENCE_TEST_CATALOG.json",
+    "record_sha256": "f8157e50c2082084f5594d5ca4563f904cf5d509e9689ff21c374be785175255"
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches, no CPU_EVAL_OBSERVATION_MISMATCH marker, and its required literal reuse-observation line. The reference prints that line, so a missing observation is a functional failure."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "repository": "https://github.com/chipsalliance/chisel.git",
+    "version": "5.1.0",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "required_observation_markers": {
+    "rv64si-p-dirty": "CPU_EVAL_TLB_REUSE_CHECKED dtlb",
+    "sv39_megapage_reuse": "CPU_EVAL_TLB_MEGAPAGE_REUSE_CHECKED dtlb"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "environment_patch_sha256": "6adfa0aaf917402aef35b29d4749ba14860b7936c4926bc1e579cf595495adbe",
+  "evaluator": {
+    "script": "cpus/rift2core/_shared/evaluate.sh",
+    "script_sha256": "27899e3b105136e4d107e512db9f5e231964f7b7533754caf4301d6a9ad418e0",
+    "replacement_script": "cpus/rift2core/_shared/replace_class.py",
+    "replacement_script_sha256": "6a66e9a53704dfaa69484bc204991727d9b7f9fb66de7350ffc36f440f4136b2"
+  },
+  "fixed_test_patches": [
+    {
+      "path": "patches/observe_tlb_reuse.patch",
+      "sha256": "dc4b85bbd2115edf874ad7ee6663cbcb12b8743292505958faec1a003ae8daf2",
+      "applies_to": "Rift2Core revision 64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "purpose": "Observe the public TLB request, refill, fence and hit ports in the parent MMU. After a refill, require a hit for a valid request matching the last refilled ASID and page, until the next refill, fence or ASID change. Ignore the fence/refill cycle, use the refill page-size flags for the VPN mask, and do not inspect entry indices, replacement state, random generators or other target internals. Emit CPU_EVAL_OBSERVATION_MISMATCH on a missed reuse and CPU_EVAL_TLB_REUSE_CHECKED when a reuse is checked. Required test-specific output lines make an unobserved reuse invalid. For the directed megapage program, additionally require that a reuse observation crossed a 4 KiB boundary within the last refilled 2 MiB page."
+    }
+  ],
+  "directed_functional_tests": [
+    {
+      "name": "sv39_megapage_reuse",
+      "elf": "tests/sv39-megapage-reuse/images/sv39_megapage_reuse",
+      "elf_sha256": "fd6064656df7c3dabbb0573e84fa3a5fdc007369c3d6de13425c3ae6f07e3bf1",
+      "verilog_image": "tests/sv39-megapage-reuse/images/sv39_megapage_reuse.verilog",
+      "verilog_image_sha256": "09709098987832f7f710a08821fe0d9b967df046dbb0afe9c3e168e5c8899930"
+    }
+  ]
+}

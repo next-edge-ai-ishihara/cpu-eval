@@ -1,0 +1,82 @@
+# Written by harness/regression_configuration.py: the draws of TestIndividualFeatures for this seed and test ID.
+# The regression prints this START TEST line; the DebugPlugin problem prints CONCURRENT_OS_EXECUTIONS=no in the make line.
+
+VEXRISCV_REGRESSION_CONFIG_COUNT=1
+VEXRISCV_REGRESSION_CONFIG_DEMW_RATE=0.6
+VEXRISCV_REGRESSION_CONFIG_DEM_RATE=0.5
+VEXRISCV_REGRESSION_CONFIG_LINUX_RATE=0.3
+VEXRISCV_REGRESSION_CONFIG_MACHINE_OS_RATE=0.5
+VEXRISCV_REGRESSION_CONFIG_PMP_NAPOT_RANGE=0.5
+VEXRISCV_REGRESSION_CONFIG_RVC_RATE=0.5
+VEXRISCV_REGRESSION_CONFIG_SECURE_RATE=0.2
+VEXRISCV_REGRESSION_COREMARK=no
+VEXRISCV_REGRESSION_SEED=42
+VEXRISCV_REGRESSION_TEST_ID=0
+VEXRISCV_REGRESSION_THREAD_COUNT=1
+VEXRISCV_REGRESSION_ZEPHYR_COUNT=0
+
+START TEST test_id_0_noWritebackStage_IBus_Simple2InjStagevexriscv.plugin.DYNAMIC_TARGET_DBus_Cached64d64cS2048W2BPL8Amo _MulDiv_MulDivFpgaNoDspFastMul_Shift_FullLate_Branch_Early_Hazard_Interlock_RegFile_SyncDR_Src_Execute_Csr_MachineOs_Decoder__Debug_Enable_DBus_NoMemProtect
+make run REGRESSION_PATH=../../src/test/cpp/regression VEXRISCV_FILE=VexRiscv.v WITH_USER_IO=no REDO=10 TRACE=yes TRACE_START=100000000000ll FLOW_INFO=no STOP_ON_ERROR=no DHRYSTONE=yes COREMARK=no THREAD_COUNT=1  SEED=134940315 IBUS=SIMPLE DBUS=CACHED DBUS_LOAD_DATA_WIDTH=64 DBUS_STORE_DATA_WIDTH=64 LRSC=yes AMO=yes  MUL=yes DIV=yes      CSR=yes CSR_SKIP_TEST=no FREERTOS=0 ZEPHYR=0  CONCURRENT_OS_EXECUTIONS=yes MMU=no PMP=no
+
+universe = CATCH_ALL, NO_WRITEBACK
+
+VexRiscvConfig
+  withMemoryStage = true
+  withWriteBackStage = false
+
+IBus Simple2InjStagevexriscv.plugin.DYNAMIC_TARGET
+  mmuConfig = null
+  latency = 2
+  compressed = false
+  injectorStage = true
+  prediction = DYNAMIC_TARGET
+  catchAll = true
+  cmdForkOnSecondStage = false
+  cmdForkPersistence = false
+
+DBus Cached64d64cS2048W2BPL8Amo
+  catchAll = true
+  twoStageMmu = false
+  mmuConfig = null
+  memDataWidth = 64
+  cpuDataWidth = 64
+  bytePerLine = 8
+  cacheSize = 2048
+  wayCount = 2
+  withLrSc = true
+  withSmp = false
+  withAmo = true
+  dBusRspSlavePipe = false
+  relaxedMemoryTranslationRegister = false
+  earlyWaysHits = false
+  directTlbHit = false
+  dBusCmdMasterPipe = false
+  dBusCmdSlavePipe = false
+  asyncTagMemory = false
+
+MulDiv MulDivFpgaNoDspFastMul
+
+Shift FullLate
+
+Branch Early
+  catchAll = true
+  early = true
+
+Hazard Interlock
+
+RegFile SyncDR
+  executeRf = false
+  regFileReadyKind = plugin.SYNC
+
+Src Execute
+  separatedAddSub = false
+  executeInsertion = true
+
+Csr MachineOs
+
+Decoder
+  catchAll = true
+
+Debug Enable
+
+DBus NoMemProtect

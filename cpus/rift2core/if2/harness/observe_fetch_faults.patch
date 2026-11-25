@@ -1,0 +1,68 @@
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -111,6 +111,65 @@
+ 
+   val if1 = (if (hasuBTB) {Module(new IF1Predict)} else {Module(new IF1NPredict)})
+   val if2 = Module(new IF2(icache_edge))
++
++  val cpuEvalFetch = Module(new IF2(icache_edge))
++  val cpuEvalCycle = RegInit(0.U(5.W))
++  val cpuEvalAccess = cpuEvalCycle >= 1.U && cpuEvalCycle <= 6.U
++  val cpuEvalPage = cpuEvalCycle >= 9.U && cpuEvalCycle <= 14.U
++  val cpuEvalFault = cpuEvalAccess || cpuEvalPage
++  val cpuEvalPC = Mux(cpuEvalCycle < 8.U, "h80001002".U, "h80002004".U)
++  cpuEvalFetch.io.if2_req.valid := cpuEvalCycle < 16.U
++  cpuEvalFetch.io.if2_req.bits := 0.U.asTypeOf(cpuEvalFetch.io.if2_req.bits)
++  cpuEvalFetch.io.if2_req.bits.pc := cpuEvalPC
++  for (active <- cpuEvalFetch.io.if2_req.bits.isActive) {
++    active := true.B
++  }
++  cpuEvalFetch.io.if_mmu.ready := cpuEvalFetch.io.mmu_if.fire && !cpuEvalFetch.io.flush
++  cpuEvalFetch.io.mmu_if.valid := cpuEvalFault && cpuEvalFetch.io.if_mmu.valid
++  cpuEvalFetch.io.mmu_if.bits := 0.U.asTypeOf(cpuEvalFetch.io.mmu_if.bits)
++  cpuEvalFetch.io.mmu_if.bits.vaddr := cpuEvalFetch.io.if_mmu.bits.vaddr
++  cpuEvalFetch.io.mmu_if.bits.paddr := cpuEvalFetch.io.if_mmu.bits.vaddr
++  cpuEvalFetch.io.mmu_if.bits.is_access_fault := cpuEvalAccess && cpuEvalFetch.io.if_mmu.valid
++  cpuEvalFetch.io.mmu_if.bits.is_paging_fault := cpuEvalPage && cpuEvalFetch.io.if_mmu.valid
++  cpuEvalFetch.io.icache_access.valid := false.B
++  cpuEvalFetch.io.icache_access.bits := 0.U.asTypeOf(cpuEvalFetch.io.icache_access.bits)
++  cpuEvalFetch.io.icache_get.ready := true.B
++  for (response <- cpuEvalFetch.io.if2_resp) {
++    response.ready := true.B
++  }
++  cpuEvalFetch.io.flush := cpuEvalCycle === 7.U || cpuEvalCycle === 15.U
++  cpuEvalFetch.io.ifence := false.B
++
++  val cpuEvalAccessCount = RegInit(0.U(4.W))
++  val cpuEvalPageCount = RegInit(0.U(4.W))
++  val cpuEvalResponse = cpuEvalFetch.io.if2_resp(0)
++  when(!reset.asBool && cpuEvalCycle < 16.U) {
++    when(cpuEvalFault && (cpuEvalFetch.io.mmu_if.ready ||
++      cpuEvalFetch.io.if_cmm.ill_vaddr =/= cpuEvalPC)) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH IF2 MMU fault response handshake or address\n")
++    }
++    when(cpuEvalFetch.io.icache_get.valid || cpuEvalFetch.io.if2_resp.drop(1).map(_.valid).reduce(_ || _)) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH IF2 unexpected cache request or additional fetch lane\n")
++    }
++    when(cpuEvalResponse.fire) {
++      val accessPhase = cpuEvalCycle < 7.U
++      val expected = Mux(accessPhase, "h9c41".U, "h9c45".U)
++      printf(p"CPU_EVAL_IF2_FAULT pc=0x${Hexadecimal(cpuEvalResponse.bits.pc)} instruction=0x${Hexadecimal(cpuEvalResponse.bits.instr)} fault=${cpuEvalResponse.bits.isFault} redirect=${cpuEvalResponse.bits.isRedirect}\n")
++      when(cpuEvalResponse.bits.instr =/= expected || !cpuEvalResponse.bits.isFault ||
++        cpuEvalResponse.bits.pc =/= cpuEvalPC || cpuEvalResponse.bits.isRedirect) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH IF2 fault word, PC, flag or redirect\n")
++      }
++      when(accessPhase) { cpuEvalAccessCount := cpuEvalAccessCount + 1.U }
++        .otherwise { cpuEvalPageCount := cpuEvalPageCount + 1.U }
++    }
++    when(cpuEvalCycle === 15.U) {
++      when(cpuEvalAccessCount =/= 1.U || cpuEvalPageCount =/= 1.U) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH IF2 expected exactly one response per fault\n")
++      }
++      printf("CPU_EVAL_IF2_FAULT_COMPLETE\n")
++    }
++    cpuEvalCycle := cpuEvalCycle + 1.U
++  }
+   val if3 = Module(new IF3)
+   val if4 = Module(new IF4)
+   val preRename_stage = if(hasVector) { Module(new VecPreRename) } else { Module(new FakeVecPreRename) }

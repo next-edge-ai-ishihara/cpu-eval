@@ -1,0 +1,1030 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "9bd12f44f602ed05f3340e957636b33f2bd55232066008879041af092e909135",
+  "prompt_sha256": "f799a2952307a292f5210d2d96c5fe10ff88c61fb15e149c302fa2226959abe4",
+  "repositories": {
+    "https://github.com/SpinalHDL/VexRiscv.git": {
+      "revision": "c4b2a55b22f46afb760446cd69f3ca7c36eef778"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        229
+      ],
+      "sha256": "c5f65357ec4b000743ede7a703a906fa4a0d3baace52fb2e075612252076365d"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        229,
+        316
+      ],
+      "sha256": "8f170134c490d417e23ef5fd5d59fa3b2a320f33422a5c96e729dc18abae1a04"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        316,
+        786
+      ],
+      "sha256": "87a51e550259d02243271700d349c34170dde68a5c2152479cd3395177d4571b"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        786,
+        877
+      ],
+      "sha256": "acf704204fd65aafed000ca7909d3a1712f6a2e445ad6d170d120ffe88f2ac77"
+    },
+    {
+      "index": 4,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        877,
+        1354
+      ],
+      "sha256": "ff559d59107638b25a0b0c918b0a6533995aed529169426085337aca10e8d817"
+    },
+    {
+      "index": 5,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1354,
+        1361
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 6,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1361,
+        1363
+      ],
+      "sha256": "412ca345ccf75bf9c0806bce695be8de808b79984251a7a54d202cf6101dd451"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1363,
+        1421
+      ],
+      "sha256": "e96dfec0c21dcc433c9b9cfe1b05a3b292e48b05769942a567627952861ae190"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1421,
+        1689
+      ],
+      "sha256": "c4e2df4e90e9192fc6c8aaf5e7cbbc0277cafa83902de13f6bd63ac3772d52ef"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1689,
+        1747
+      ],
+      "sha256": "33920e8a4ec2c812e52172445f95e2dc6649d49a746b79f168b9724a826bd459"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1747,
+        1776
+      ],
+      "sha256": "24d6bbf9e820f74477558a5debc56dbffa48832c58850627870b84c7da92055f"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1776,
+        1783
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1783,
+        2120
+      ],
+      "sha256": "025052eb4345616b58a7584bbb275d44446982c4620bcc49ec2a79a0af053d9d"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2120,
+        2127
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 14,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        2127,
+        2172
+      ],
+      "sha256": "5402c5f9d6199bd2d289c6d617ac025899254bb6291d9ecdf6cf1258390c09e6"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2172,
+        2179
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 16,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        2179,
+        2233
+      ],
+      "sha256": "7ef3c737e8a87949ad268c820f60c2cc4c0eef9232ce30363381942f118595f3"
+    },
+    {
+      "index": 17,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2233,
+        2240
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 18,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        2240,
+        2354
+      ],
+      "sha256": "44b23dd404f5696e5f771dc940fe0edd3a6ec43fc12cae16c571178e4d5ae41c"
+    },
+    {
+      "index": 19,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2354,
+        2361
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 20,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        2361,
+        2802
+      ],
+      "sha256": "efb836483c509fc8708260a1703e520545a0576e4e5eb6e19366e1469718d2d7"
+    },
+    {
+      "index": 21,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2802,
+        2809
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 22,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        2809,
+        3226
+      ],
+      "sha256": "43288b4e7e983cc5646611c620e235ac11f82737e73a5122bf0aa2376986abdf"
+    },
+    {
+      "index": 23,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        3226,
+        3233
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 24,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        3233,
+        3235
+      ],
+      "sha256": "412ca345ccf75bf9c0806bce695be8de808b79984251a7a54d202cf6101dd451"
+    },
+    {
+      "index": 25,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        3235,
+        3293
+      ],
+      "sha256": "b18622e51360ea7379727b1c6b02233bea3479ede2dff90f32709624781cd454"
+    },
+    {
+      "index": 26,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        3293,
+        3372
+      ],
+      "sha256": "75ed150ee3969cfbf94560ccd9bcc55cb83cee1f2cb3437539824bb9c9d0cfa0"
+    },
+    {
+      "index": 27,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        3372,
+        3379
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 28,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        3379,
+        3589
+      ],
+      "sha256": "f434e4c656bb35d95b2cb7210e2131cdaa4c4a54e6197302fe21c9486c58a15a"
+    },
+    {
+      "index": 29,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        3589,
+        3596
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 30,
+      "kind": "verbatim_source",
+      "source": 31,
+      "prompt_bytes": [
+        3596,
+        3598
+      ],
+      "sha256": "412ca345ccf75bf9c0806bce695be8de808b79984251a7a54d202cf6101dd451"
+    },
+    {
+      "index": 31,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        3598,
+        3653
+      ],
+      "sha256": "0614b4aabb2b9316f35c2cc434cda25438b9c3d81d24bb4ad08fb78cfb7305c2"
+    },
+    {
+      "index": 32,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        3653,
+        5580
+      ],
+      "sha256": "622dd4eac679b622f2b9a79946daac1119df3f5f34aed390a60e004107cb1291"
+    },
+    {
+      "index": 33,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        5580,
+        5587
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 34,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        5587,
+        5588
+      ],
+      "sha256": "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2"
+    },
+    {
+      "index": 35,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        5588,
+        5644
+      ],
+      "sha256": "cffefc58020ccc828605609608f1ab677f8f2ec190f9fc0e0bc5a0bb85523954"
+    },
+    {
+      "index": 36,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        5644,
+        5658
+      ],
+      "sha256": "6b684edee41167ee2261dbba534ae0ac21bb8c9eeb9bd1114078c9be69f0c687"
+    },
+    {
+      "index": 37,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        5658,
+        5665
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 38,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        5665,
+        5791
+      ],
+      "sha256": "21563471beff3d73ba4692dc3a39a7d7006d85b83844222f172772f91490a8e0"
+    },
+    {
+      "index": 39,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        5791,
+        5798
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 40,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        5798,
+        5987
+      ],
+      "sha256": "ed8cf78d857b94ba2d2103b57f09ec2b533c4804b541928dcf8e4cd2e4f22a8a"
+    },
+    {
+      "index": 41,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        5987,
+        5994
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 42,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        5994,
+        6184
+      ],
+      "sha256": "4b66c841dcaf8f0b0c477ce3f82822d55340442d12b6a3635fe03ebbf9a219ed"
+    },
+    {
+      "index": 43,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        6184,
+        6191
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 44,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        6191,
+        6380
+      ],
+      "sha256": "a6c9c81e619c993d7556de801e4515b4910c73d21d07afda6c12ea32cfab8626"
+    },
+    {
+      "index": 45,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        6380,
+        6387
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 46,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        6387,
+        6513
+      ],
+      "sha256": "ca77b48f9e69770d3238c980fbece5e3fcf4e0e6c46de095dc7e6e1d11fb7996"
+    },
+    {
+      "index": 47,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        6513,
+        6520
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 48,
+      "kind": "verbatim_source",
+      "source": 22,
+      "prompt_bytes": [
+        6520,
+        6646
+      ],
+      "sha256": "83b27ca99cd813813c839070d02393c5f7366badac3621f81c49826786a80226"
+    },
+    {
+      "index": 49,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        6646,
+        6653
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 50,
+      "kind": "verbatim_source",
+      "source": 23,
+      "prompt_bytes": [
+        6653,
+        6655
+      ],
+      "sha256": "412ca345ccf75bf9c0806bce695be8de808b79984251a7a54d202cf6101dd451"
+    },
+    {
+      "index": 51,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        6655,
+        6749
+      ],
+      "sha256": "cd91bf891f93bfbf7f2fff367cd63d0a05124d28dc7d8be8875a21180dc6e43a"
+    },
+    {
+      "index": 52,
+      "kind": "verbatim_source",
+      "source": 24,
+      "prompt_bytes": [
+        6749,
+        7047
+      ],
+      "sha256": "7be2d3498f19fa7d180b8b656980fd12f2b5bf92ae64ab4881a45a46044d9a88"
+    },
+    {
+      "index": 53,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        7047,
+        7120
+      ],
+      "sha256": "18e0471994f79af8b03c8b9c3f8185d5b02838d2139872ea860d0bbe9b856089"
+    },
+    {
+      "index": 54,
+      "kind": "verbatim_source",
+      "source": 25,
+      "prompt_bytes": [
+        7120,
+        9901
+      ],
+      "sha256": "e7a2a8c67f6879e377a9981d5d44a71a7ba51d5c238c545bb371cbcf903d9efd"
+    },
+    {
+      "index": 55,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        9901,
+        9947
+      ],
+      "sha256": "6bf7662fc2ba18b1f7f161175c8dc798ffb07127ea9ca8f5b0db7e1619603f55"
+    },
+    {
+      "index": 56,
+      "kind": "verbatim_source",
+      "source": 26,
+      "prompt_bytes": [
+        9947,
+        10211
+      ],
+      "sha256": "381288017e3e7282588fb71b85ac25dcd07eead059398a5ed415023a0f47284b"
+    },
+    {
+      "index": 57,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        10211,
+        10243
+      ],
+      "sha256": "92d87202f7706d2c63014fd6a92f58102d98f2ce1edf430190376d895d5ef7b3"
+    },
+    {
+      "index": 58,
+      "kind": "verbatim_source",
+      "source": 27,
+      "prompt_bytes": [
+        10243,
+        11252
+      ],
+      "sha256": "0760cb2a3b3e4f932998a12bb7114a0b9e67a08c47075c7035c920198831e8a3"
+    },
+    {
+      "index": 59,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        11252,
+        11256
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 60,
+      "kind": "verbatim_source",
+      "source": 28,
+      "prompt_bytes": [
+        11256,
+        11760
+      ],
+      "sha256": "ecb1845e2e320510b618eef4c9d607863dce1620c2526d65d1d73a58b0610bae"
+    },
+    {
+      "index": 61,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        11760,
+        11764
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 62,
+      "kind": "verbatim_source",
+      "source": 29,
+      "prompt_bytes": [
+        11764,
+        11989
+      ],
+      "sha256": "cfad3c7988163b07272b27743d6f4a9a2560c641e79b69aff360abf8c364c15d"
+    },
+    {
+      "index": 63,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        11989,
+        11993
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 64,
+      "kind": "verbatim_source",
+      "source": 30,
+      "prompt_bytes": [
+        11993,
+        12495
+      ],
+      "sha256": "727521a1c6b5c66e4153ae670a93b867e218af55bb76909447aebd44c9a51644"
+    },
+    {
+      "index": 65,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        12495,
+        12499
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Fixed companion definitions and replacement boundary",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/IntAluPlugin.scala",
+      "lines": [
+        1,
+        17
+      ],
+      "sha256": "5562f0b3923b53861d4d29ca15a8e1b29950652f435c322921da67da89e29223"
+    },
+    {
+      "label": "Plugin interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/Plugin.scala",
+      "lines": [
+        9,
+        21
+      ],
+      "sha256": "8b666fdda181e408ec67fb3d12b8e29dfe73ffddac16f7a6a2df1aac14c5fca9"
+    },
+    {
+      "label": "Plugin interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/Plugin.scala",
+      "lines": [
+        25,
+        25
+      ],
+      "sha256": "8b666fdda181e408ec67fb3d12b8e29dfe73ffddac16f7a6a2df1aac14c5fca9"
+    },
+    {
+      "label": "Decoder service interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Services.scala",
+      "lines": [
+        24,
+        29
+      ],
+      "sha256": "9bc2a71c77958461285990be2187367134db5a2ea33ea8fab39a0585b4c96321"
+    },
+    {
+      "label": "src/main/scala/vexriscv/VexRiscv.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        23,
+        23
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "Core pipeline stageables and source-operand control",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        64,
+        70
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "Core pipeline stageables and source-operand control",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        72,
+        72
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "Core pipeline stageables and source-operand control",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        74,
+        74
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "Core pipeline stageables and source-operand control",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        77,
+        78
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "Core pipeline stageables and source-operand control",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        83,
+        91
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "Core pipeline stageables and source-operand control",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        108,
+        116
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "src/main/scala/vexriscv/VexRiscv.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/VexRiscv.scala",
+      "lines": [
+        126,
+        126
+      ],
+      "sha256": "46f33ef67ab301f273373077340242af97270b27ee5b29f06fa7a762f9c4fd2b"
+    },
+    {
+      "label": "Pipeline lookup interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Pipeline.scala",
+      "lines": [
+        12,
+        14
+      ],
+      "sha256": "adc211106f0288cf8815120d935f786eeeefe596e1da3ceba57241c45567eaeb"
+    },
+    {
+      "label": "Pipeline lookup interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Pipeline.scala",
+      "lines": [
+        24,
+        28
+      ],
+      "sha256": "adc211106f0288cf8815120d935f786eeeefe596e1da3ceba57241c45567eaeb"
+    },
+    {
+      "label": "Pipeline stage access interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Stage.scala",
+      "lines": [
+        10,
+        44
+      ],
+      "sha256": "0d8210ce9fbcdb3e8f320a9864b1f527701dc99e9306ae4d908bfe4cf2b9ec3d"
+    },
+    {
+      "label": "Pipeline stage access interface",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Stage.scala",
+      "lines": [
+        79,
+        79
+      ],
+      "sha256": "0d8210ce9fbcdb3e8f320a9864b1f527701dc99e9306ae4d908bfe4cf2b9ec3d"
+    },
+    {
+      "label": "Riscv object declaration",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Riscv.scala",
+      "lines": [
+        6,
+        6
+      ],
+      "sha256": "1fc7dee8b93de939950e20d02620c90cee329529a8fe81a9749d84d7d658bed1"
+    },
+    {
+      "label": "ADD and SUB instruction definitions",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Riscv.scala",
+      "lines": [
+        36,
+        37
+      ],
+      "sha256": "1fc7dee8b93de939950e20d02620c90cee329529a8fe81a9749d84d7d658bed1"
+    },
+    {
+      "label": "Set-less-than and XOR instruction definitions",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Riscv.scala",
+      "lines": [
+        39,
+        41
+      ],
+      "sha256": "1fc7dee8b93de939950e20d02620c90cee329529a8fe81a9749d84d7d658bed1"
+    },
+    {
+      "label": "OR, AND, and ADDI instruction definitions",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Riscv.scala",
+      "lines": [
+        44,
+        47
+      ],
+      "sha256": "1fc7dee8b93de939950e20d02620c90cee329529a8fe81a9749d84d7d658bed1"
+    },
+    {
+      "label": "Immediate comparison and XOR instruction definitions",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Riscv.scala",
+      "lines": [
+        49,
+        51
+      ],
+      "sha256": "1fc7dee8b93de939950e20d02620c90cee329529a8fe81a9749d84d7d658bed1"
+    },
+    {
+      "label": "ORI and ANDI instruction definitions",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Riscv.scala",
+      "lines": [
+        54,
+        55
+      ],
+      "sha256": "1fc7dee8b93de939950e20d02620c90cee329529a8fe81a9749d84d7d658bed1"
+    },
+    {
+      "label": "LUI and AUIPC instruction definitions",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Riscv.scala",
+      "lines": [
+        87,
+        88
+      ],
+      "sha256": "1fc7dee8b93de939950e20d02620c90cee329529a8fe81a9749d84d7d658bed1"
+    },
+    {
+      "label": "src/main/scala/vexriscv/Riscv.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Riscv.scala",
+      "lines": [
+        251,
+        251
+      ],
+      "sha256": "1fc7dee8b93de939950e20d02620c90cee329529a8fe81a9749d84d7d658bed1"
+    },
+    {
+      "label": "Fixed register-file control defaults",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/RegFilePlugin.scala",
+      "lines": [
+        28,
+        34
+      ],
+      "sha256": "01eb23f2af97c2c3491ae5897ddf6c1725ff841dd0b8f81c65a5091981f64ccb"
+    },
+    {
+      "label": "Fixed source-operand implementation",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/plugin/SrcPlugin.scala",
+      "lines": [
+        8,
+        83
+      ],
+      "sha256": "726492033173bb3e731da7fa6374ae510db2b13c4916e84a224d467586dd0c17"
+    },
+    {
+      "label": "VexRiscv instruction-set support",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "README.md",
+      "lines": [
+        1061,
+        1065
+      ],
+      "sha256": "64ddf713ef029913545bb0bae7a60e04e9f61bbc4f20b25df3d2cbcd5a9c6ac7"
+    },
+    {
+      "label": "src/rv32.adoc",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        304,
+        320
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RV32I upper-immediate instruction semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        338,
+        346
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RV32I register-register instruction semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        369,
+        372
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RV32I register-register instruction semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        378,
+        385
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "src/main/scala/vexriscv/Pipeline.scala",
+      "repo": "https://github.com/SpinalHDL/VexRiscv.git",
+      "commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+      "path": "src/main/scala/vexriscv/Pipeline.scala",
+      "lines": [
+        162,
+        162
+      ],
+      "sha256": "adc211106f0288cf8815120d935f786eeeefe596e1da3ceba57241c45567eaeb"
+    }
+  ]
+}

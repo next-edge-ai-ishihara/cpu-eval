@@ -1,0 +1,4 @@
+requirement	tests	rationale
+Architectural execution of conditional branches	rv64ui-p-beq;rv64ui-p-bne;rv64ui-p-blt;rv64ui-p-bltu;rv64ui-p-bge;rv64ui-p-bgeu	The retired instruction records must agree with Spike, including after the CPU recovers from a misprediction.
+Architectural execution of unconditional jumps	rv64ui-p-jal;rv64ui-p-jalr	The retired instruction records must agree with Spike for both direct and indirect jumps.
+CPU cycles on a repeating branch workload	rv64mi-p-bim_cycle_probe	After 200 warm-up repetitions, the program measures 4,000 repetitions in a separate loop. The CPU must finish normally and the final x22 value must be at most 0x5000.

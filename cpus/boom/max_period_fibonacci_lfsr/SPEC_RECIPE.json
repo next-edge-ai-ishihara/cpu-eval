@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "MaxPeriodFibonacciLFSR",
+  "sources": [
+    {
+      "label": "Target package and import",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        1,
+        5
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "Target name and constructor parameters",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        65,
+        65
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "Six-bit maximal-period tap used by BOOM TAGE",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/LFSR.scala",
+      "lines": [
+        113,
+        113
+      ],
+      "sha256": "27656516e63183e0655957b681987a0fb79b2e81746b33159e47dbfd09b442a2"
+    },
+    {
+      "label": "Sixteen-bit maximal-period tap used by BOOM I-cache",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/LFSR.scala",
+      "lines": [
+        123,
+        123
+      ],
+      "sha256": "27656516e63183e0655957b681987a0fb79b2e81746b33159e47dbfd09b442a2"
+    },
+    {
+      "label": "BOOM instruction-cache replacement use",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/icache.scala",
+      "lines": [
+        178,
+        178
+      ],
+      "sha256": "c4cb2508c1fd7fc66a7f0fc4a826b9f5c15a79d4c13e22ad90b0b7a610bbcbb1"
+    },
+    {
+      "label": "BOOM TAGE table count",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/tage.scala",
+      "lines": [
+        186,
+        201
+      ],
+      "sha256": "7db9109f35d89b3faa9438a8936dcd68bcb84be751fb2258ca2603a35f0ae085"
+    },
+    {
+      "label": "BOOM TAGE allocation use",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/bpd/tage.scala",
+      "lines": [
+        285,
+        285
+      ],
+      "sha256": "7db9109f35d89b3faa9438a8936dcd68bcb84be751fb2258ca2603a35f0ae085"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        82,
+        82
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        99,
+        112
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/PRNG.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/PRNG.scala",
+      "lines": [
+        82,
+        98
+      ],
+      "sha256": "8c5e6d094f3f398cdbfe8e023592efdc04bad629d8c45f5f1cc69d9414fd93d7"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        7,
+        12
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "lines": [
+        41,
+        54
+      ],
+      "sha256": "6f25a9f1b26be481eaa763241739e7fc47dade2cee746be6fcee6e514609678a"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/LFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/LFSR.scala",
+      "lines": [
+        7,
+        69
+      ],
+      "sha256": "27656516e63183e0655957b681987a0fb79b2e81746b33159e47dbfd09b442a2"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/LFSR.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/LFSR.scala",
+      "lines": [
+        78,
+        108
+      ],
+      "sha256": "27656516e63183e0655957b681987a0fb79b2e81746b33159e47dbfd09b442a2"
+    },
+    {
+      "label": "src/main/scala/chisel3/util/random/PRNG.scala excerpt",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/random/PRNG.scala",
+      "lines": [
+        8,
+        80
+      ],
+      "sha256": "8c5e6d094f3f398cdbfe8e023592efdc04bad629d8c45f5f1cc69d9414fd93d7"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `MaxPeriodFibonacciLFSR`\n\nImplement the complete `MaxPeriodFibonacciLFSR` module. Preserve its constructor parameters. Return only the complete `class MaxPeriodFibonacciLFSR` definition in a single Scala code block, with no text outside the block.\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Package and imports\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/chisel3/util/random/FibonacciLFSR.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Class declaration\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Parent instantiation\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/chisel3/util/random/FibonacciLFSR.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/chisel3/util/random/PRNG.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/ifu/icache.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/ifu/bpd/tage.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading",
+      "text": "## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/chisel3/util/random/PRNG.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/chisel3/util/random/FibonacciLFSR.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "  * ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Source path and code fence",
+      "text": "### `src/main/scala/chisel3/util/random/LFSR.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Code fence",
+      "text": "```\n"
+    }
+  ],
+  "rights_notes": [
+    "Chisel and RISC-V BOOM declarations and integration excerpts retain their attributed source revisions.",
+    "The authored requirements describe the observed state behavior. The target implementation is omitted."
+  ]
+}

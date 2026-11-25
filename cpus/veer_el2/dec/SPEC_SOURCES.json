@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "3e1b4a92300b84f4a72700b22e756bef467c3bb4e9cd67c87815ea2cb6a8c107",
+  "prompt_sha256": "63e693a899831ff876f45b3d4c9aeec8de17572f31c5fec65c2aef69ab66eabc",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        249
+      ],
+      "sha256": "a350eef500649e50ed7e722f7cbed123de94f59249391a5cbfe20db05b703ce9"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "prompt_bytes": [
+        249,
+        284
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        284,
+        15843
+      ],
+      "sha256": "5380a63ab62aca9304221ee4c755d14bf70261a8a0a91d8ce56cb1b1df3eb473"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        15843,
+        15847
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "prompt_bytes": [
+        15847,
+        15884
+      ],
+      "sha256": "9df07e47dc82ebd7a335e21c2e3d132e7a2a177372efc33c0e12ffbabf06935c"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        15884,
+        16136
+      ],
+      "sha256": "51d500a87261e5a8c7807a97016ec52e5f0d8b170d5e92e127ae2c4cc2164b45"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        16136,
+        16140
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Heading for Dependency declarations",
+      "prompt_bytes": [
+        16140,
+        16211
+      ],
+      "sha256": "d716cd3dca97144b0ef2e04da1f86426871b808d8cba8b8814535c2b023d287e"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        16211,
+        16666
+      ],
+      "sha256": "af3f004585e2b589b2844508f23f960d5a9c9d79911f38c36f778fda26700e61"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_decode_ctl.sv",
+      "prompt_bytes": [
+        16666,
+        16720
+      ],
+      "sha256": "a1115f7e86ba40097415160d51873cbecddaf713d2f9ace6e73a784e0627a485"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        16720,
+        26858
+      ],
+      "sha256": "67c28895247f48d02268ab9aa6b27c8063f99856765c75f6a36f5ec8424983f1"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_gpr_ctl.sv",
+      "prompt_bytes": [
+        26858,
+        26909
+      ],
+      "sha256": "e7c4278925ec7e8870a83c8f016e1ca37218207312013058403cda8e95404a6a"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        26909,
+        27973
+      ],
+      "sha256": "a6b657ec9c9f1171f5e211f85218590ab7df5a1c0ff0d7f5232597fb2cf64100"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_ib_ctl.sv",
+      "prompt_bytes": [
+        27973,
+        28023
+      ],
+      "sha256": "84d99474e055911f6b37517ddecccc636a29dd397b34052c77fa903d6b1b9168"
+    },
+    {
+      "index": 14,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        28023,
+        31196
+      ],
+      "sha256": "bde0229b82399a08ca1c36a202ef70490b4f04ed59924794fbed872bb270cd9f"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_tlu_ctl.sv",
+      "prompt_bytes": [
+        31196,
+        31247
+      ],
+      "sha256": "0b89156b6a55884c022075ef9649d7ba61d1fac655b3b917eee6e83b688ae717"
+    },
+    {
+      "index": 16,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        31247,
+        43137
+      ],
+      "sha256": "a8810e9484172897e58a250ba2e2c413473a9196cced30d48efdea0136c22310"
+    },
+    {
+      "index": 17,
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_trigger.sv",
+      "prompt_bytes": [
+        43137,
+        43188
+      ],
+      "sha256": "60cf4c1ad290d826214f7bf0f7aecf439de392243e7ccf0e15f694e7fec61fca"
+    },
+    {
+      "index": 18,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        43188,
+        43603
+      ],
+      "sha256": "6db56080e8378f8e6d6ea0342908b44e983c1ac500f7671276e357788e35dc36"
+    },
+    {
+      "index": 19,
+      "kind": "authored",
+      "description": "Fence after Dependency declarations",
+      "prompt_bytes": [
+        43603,
+        43607
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "prompt_bytes": [
+        43607,
+        43672
+      ],
+      "sha256": "3b06be477df0153fdc411ba166d12dde9e1846bea6a1c5df3a596732732ebb10"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        43672,
+        44135
+      ],
+      "sha256": "2ed5a80f7521b76424e3c204101f66c21178c16c7c5b1b1e4548e0e3800e6b35"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Omission between documentation excerpts",
+      "prompt_bytes": [
+        44135,
+        44141
+      ],
+      "sha256": "6abb0df5056448cc352b1e45d22e32009b046a3c3174420615abed0e8f00cde2"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        44141,
+        44675
+      ],
+      "sha256": "0f596f80c861130cb9cc355a50ae33bc563fbcca0038de7eb53192d5d764bb7c"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Fence after Documentation",
+      "prompt_bytes": [
+        44675,
+        44679
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec.sv",
+      "lines": [
+        30,
+        341
+      ],
+      "language": "verilog",
+      "sha256": "e8c378100293edfd140fb064cf6f1cb00c8886f12ffc4c7c5a4c2a527af271ba"
+    },
+    {
+      "label": "Parent instantiation for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_veer.sv",
+      "lines": [
+        1019,
+        1024
+      ],
+      "sha256": "3c1df18fbb7c0c753ed51cd842c9d58c7b04c9d485d8ec9d79177885afd610e7"
+    },
+    {
+      "label": "Dependency type declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        8,
+        16
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        17,
+        203
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_gpr_ctl.sv",
+      "lines": [
+        16,
+        50
+      ],
+      "language": "verilog",
+      "sha256": "35d69d835e2db454cdd5f8fdda251344fa0520e1f66c4b244aaf4278c3e93aca"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_ib_ctl.sv",
+      "lines": [
+        16,
+        69
+      ],
+      "language": "verilog",
+      "sha256": "e5aea85a31b90ff591460e6114c0c81c48936a0f99ec4f95e0f62b7cb2e66fb0"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_tlu_ctl.sv",
+      "lines": [
+        26,
+        271
+      ],
+      "language": "verilog",
+      "sha256": "242ed4667d0e849aac636b0646bc3750aa1e9afc8a19a95a82b4e97f8e6f22fc"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_trigger.sv",
+      "lines": [
+        25,
+        35
+      ],
+      "language": "verilog",
+      "sha256": "a81301f1fdfe715d1b459a4ff954cc01ee65a30e8a081b84682edd1c09c4c07d"
+    },
+    {
+      "label": "Trace port signals in the core complex port list",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/complex-ports.md",
+      "sha256": "e38ce3eed6f59884968a14776863b18b4a076441c240a61a6c0b68c8a065b4b8",
+      "lines": [
+        821,
+        844
+      ]
+    },
+    {
+      "label": "Trace port footnote in the core complex port list",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/complex-ports.md",
+      "sha256": "e38ce3eed6f59884968a14776863b18b4a076441c240a61a6c0b68c8a065b4b8",
+      "lines": [
+        880,
+        883
+      ]
+    }
+  ]
+}

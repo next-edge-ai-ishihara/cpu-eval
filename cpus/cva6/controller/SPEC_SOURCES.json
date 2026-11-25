@@ -1,0 +1,877 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/controller/SPEC_RECIPE.json",
+  "recipe_sha256": "d5245125e358a1241b4307aa08088d96debda74b52bb750565890467da542049",
+  "prompt_sha256": "65676abc11bae2486d56f4b9c0ba42b2e482839e300d087de02172a3ba6e4950",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        359
+      ],
+      "sha256": "babb9cecd9b8232d18f5cd8d076723d5fd3237729d99e275747ba4fc96cb24d4"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        359,
+        414
+      ],
+      "sha256": "0d843d201d9701b7b987de76fb864a21cf4a5cea463a3156bd508a358ea48f64"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        414,
+        421
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        421,
+        441
+      ],
+      "sha256": "91cb304e0a8f6eb3cd2ca6a5e50513b77ca8363aa339b2d68c38c747a25319b4"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        441,
+        448
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        448,
+        468
+      ],
+      "sha256": "67d407793903c6597ff170767b7198f2bb2b38d800550b5b867dc466c03a4ee3"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        468,
+        475
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        475,
+        495
+      ],
+      "sha256": "318692f5663cc7dd7ca39ff03969a3e595b0cb846301258e5af8acb2de8e6dda"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        495,
+        515
+      ],
+      "sha256": "8d939ba500679d734fd8ec6591f8fe6ecc38ff3d121271131fecfd3cea6e8b59"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        515,
+        522
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        522,
+        546
+      ],
+      "sha256": "629ee273d6cdb07965dd78f1062aeaa68877d337d25a27a1a2651047b7734483"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        546,
+        553
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        553,
+        624
+      ],
+      "sha256": "d9ab8288d1932337e4d5d2b82c48a7aa34d9fe33372aaaefe1dac47c3ac13c1a"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        624,
+        669
+      ],
+      "sha256": "16ab8841be19b6437f519e370a014818c34cc127977ddf6ac45cfb13290c150f"
+    },
+    {
+      "index": 14,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        669,
+        3253
+      ],
+      "sha256": "2cd85778aa5d01d51c15d4bce9370cc893b8d1865d272913bdec1a21d426105c"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        3253,
+        3318
+      ],
+      "sha256": "dbc229eab1a43817da7496f2edc4d31ad8a0806ca8014269f3f58dd41952e4d9"
+    },
+    {
+      "index": 16,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        3318,
+        4029
+      ],
+      "sha256": "0ed06b6a809be5da375bea813926ec66bbeeaa711d5d6edd0fc67e99dd466907"
+    },
+    {
+      "index": 17,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        4029,
+        4036
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 18,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        4036,
+        4438
+      ],
+      "sha256": "176dd9d5c0251eb8805bdd94018a60888bd6dc57ce65ffa9c582686671f2568a"
+    },
+    {
+      "index": 19,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        4438,
+        4445
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 20,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        4445,
+        4617
+      ],
+      "sha256": "0c77884401cf31a5212c3b8fea926f2478fe781129a3f80f3d8cf084922e850d"
+    },
+    {
+      "index": 21,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        4617,
+        4624
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 22,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        4624,
+        6276
+      ],
+      "sha256": "c2f34eb6887e3d9d4d52eb2919fe2ab4d1d3d41ba2da567f1edd02da30e80eb0"
+    },
+    {
+      "index": 23,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        6276,
+        6347
+      ],
+      "sha256": "38122e89a1e2cc0d0562ab8abf5e63c259c53bf062aeba3c0a2cb6d8f14afe05"
+    },
+    {
+      "index": 24,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        6347,
+        9099
+      ],
+      "sha256": "85fa5e02775056839bc4a080ec5014b6c7c93fb49fd090a91c8054e8dd11c1cf"
+    },
+    {
+      "index": 25,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        9099,
+        9147
+      ],
+      "sha256": "3f36c9cb1f29931bd5b3a32c2ea8f6ac6a6ecd700aa2324342d59a11c7fea64d"
+    },
+    {
+      "index": 26,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        9147,
+        10301
+      ],
+      "sha256": "8e3ae9118fe6e233061dcefdc7be5146303706f7862142756a584200aa81dc08"
+    },
+    {
+      "index": 27,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        10301,
+        10354
+      ],
+      "sha256": "df5dce35afbffbc6e61f1d95a2fa6663a6964d434f1385a6213d5ee585cd2141"
+    },
+    {
+      "index": 28,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        10354,
+        11170
+      ],
+      "sha256": "b9c16e2360d74c54d6f3d29503fcd1e68b196e981c8d6615632a3e04d4dc490a"
+    },
+    {
+      "index": 29,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        11170,
+        11177
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 30,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        11177,
+        11925
+      ],
+      "sha256": "6f2aed5bd337e4e13e8def12f2d0e4013b14e5c9cb9c5ba4e44703773b59b865"
+    },
+    {
+      "index": 31,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        11925,
+        11972
+      ],
+      "sha256": "a170f23fb6bda45f8c9b68e3609238d12cbed5500d94bbae68aab307738d21e1"
+    },
+    {
+      "index": 32,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        11972,
+        12273
+      ],
+      "sha256": "dcedee361c99e22e5ef2ae0bd88df34132275052b1fc1a6b91bfe44c5dc05ef2"
+    },
+    {
+      "index": 33,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        12273,
+        12319
+      ],
+      "sha256": "f78949d55132783d9e2160aef1dad93055b2b0e3f1ae59644ac1001c7dab2510"
+    },
+    {
+      "index": 34,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        12319,
+        13159
+      ],
+      "sha256": "939ddb1dfdf9fb524dddd9bf1541ef951385e9a6808e62fb71e709d1b662bde6"
+    },
+    {
+      "index": 35,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        13159,
+        13166
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 36,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        13166,
+        13506
+      ],
+      "sha256": "c9d8437078e0f9a155aa01d33d73356c6164908163af7920a93662a08dab3034"
+    },
+    {
+      "index": 37,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        13506,
+        13550
+      ],
+      "sha256": "66c31009c8f1367cc79081d96249f527badb2f4f6be2272313be1e53805b32e7"
+    },
+    {
+      "index": 38,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        13550,
+        13651
+      ],
+      "sha256": "3ad44c2fe2ac0b808e8ca20caddaa601ea5504d3d3faef208f3f79cbb80333ec"
+    },
+    {
+      "index": 39,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        13651,
+        13701
+      ],
+      "sha256": "0b670cfe57d7e860ad2a1b8b742b50ee0bfc257df01e60ebbc0132f3f6173a62"
+    },
+    {
+      "index": 40,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        13701,
+        14198
+      ],
+      "sha256": "0d0ab9b38555cb2d55e72663ff31cb66841067bdb58f6808ecb5dd2febc51ff3"
+    },
+    {
+      "index": 41,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        14198,
+        14205
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 42,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        14205,
+        14417
+      ],
+      "sha256": "c693162ea387cdeadb75622d48c82f86e2ccba7a89d86dd3adae4cc9f2834ea6"
+    },
+    {
+      "index": 43,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        14417,
+        14464
+      ],
+      "sha256": "ac44b75098007cfefca7c320c3aacdea4c32b1f66beaa381ad58fdb7badbf1e5"
+    },
+    {
+      "index": 44,
+      "kind": "verbatim_source",
+      "source": 22,
+      "prompt_bytes": [
+        14464,
+        15154
+      ],
+      "sha256": "223132bc55d1db33675e92fa00c64ce3fb3532ec5746844621fb3f691756ba09"
+    },
+    {
+      "index": 45,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        15154,
+        15198
+      ],
+      "sha256": "b45b4d2e57490f6c7d8797d43250dfbafe18436f465347f241d0a4a1218d9ae3"
+    },
+    {
+      "index": 46,
+      "kind": "verbatim_source",
+      "source": 23,
+      "prompt_bytes": [
+        15198,
+        15539
+      ],
+      "sha256": "a7791573151c3867d81d6b242bd0c93e7552781fb11f1dad65f21e7511305f90"
+    },
+    {
+      "index": 47,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        15539,
+        15602
+      ],
+      "sha256": "c3b9535a8b09a298253373fcbafa7e82b75952624df29e15d1eba80533ed9780"
+    },
+    {
+      "index": 48,
+      "kind": "verbatim_source",
+      "source": 24,
+      "prompt_bytes": [
+        15602,
+        15956
+      ],
+      "sha256": "2b5a6f38c4422225b87c98705fab996aefae41e0c8727cf995ccb065f88d68f1"
+    },
+    {
+      "index": 49,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        15956,
+        16031
+      ],
+      "sha256": "0890469c059e819192d6a35f9c4b01e01172571eb21a94d5c59b1c3bacff95c8"
+    },
+    {
+      "index": 50,
+      "kind": "verbatim_source",
+      "source": 25,
+      "prompt_bytes": [
+        16031,
+        19006
+      ],
+      "sha256": "ce2a7b7d66470bfe006e252f5ac66efca3963af60f2c3d3f51d3397b3e155d47"
+    },
+    {
+      "index": 51,
+      "kind": "authored",
+      "description": "Documentation file heading",
+      "prompt_bytes": [
+        19006,
+        19060
+      ],
+      "sha256": "5a23a070c7dafca9f787254c7f42104d06b548d480736adf485fe4f49994c636"
+    },
+    {
+      "index": 52,
+      "kind": "verbatim_source",
+      "source": 26,
+      "prompt_bytes": [
+        19060,
+        19405
+      ],
+      "sha256": "e2f173cd4662122968de0ae417b1a4a9455e66764b3c2be071b49a57670494c6"
+    },
+    {
+      "index": 53,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        19405,
+        19409
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Selected configuration declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        21,
+        21
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration atomic-extension setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        41,
+        41
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration hypervisor-extension setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        46,
+        46
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration supervisor-extension setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        60,
+        60
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration user-extension setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        61,
+        61
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration debug setting",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        89,
+        89
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected configuration fence cache-flush settings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        113,
+        114
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Module declaration for controller",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/controller.sv",
+      "lines": [
+        16,
+        84
+      ],
+      "language": "systemverilog",
+      "sha256": "ab22c8b7dae0c31e9c55cd524b5a804929d63a2c3b496b14d38aef4fa51373e3"
+    },
+    {
+      "label": "Resolved-branch record used by controller",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        132,
+        143
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Frontend connection of branch-predictor and pipeline flushes",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        711,
+        720
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Execution-stage connection of pipeline flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        1003,
+        1008
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Parent instantiation for controller",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        1385,
+        1423
+      ],
+      "language": "systemverilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Branch-unit production of controller input",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/branch_unit.sv",
+      "lines": [
+        63,
+        110
+      ],
+      "language": "systemverilog",
+      "sha256": "39c5c4fad84091c91da5f391e8b6354244823b9ccd4aeec0371415c8d4862bea"
+    },
+    {
+      "label": "Commit-stage production of fence inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/commit_stage.sv",
+      "lines": [
+        278,
+        301
+      ],
+      "language": "systemverilog",
+      "sha256": "7bb90c8f04dd669a2df888ad8dfabcf924815c88ed7a67a18eda3fb2a2361f7a"
+    },
+    {
+      "label": "Frontend consumption of misprediction and flush inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/frontend.sv",
+      "lines": [
+        308,
+        321
+      ],
+      "language": "systemverilog",
+      "sha256": "10a3a3cbcb75ab9a70167f9ea1cdbfbe7c942fae2eab17663fb23396ee880515"
+    },
+    {
+      "label": "Frontend consumption of commit-PC control",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/frontend.sv",
+      "lines": [
+        395,
+        409
+      ],
+      "language": "systemverilog",
+      "sha256": "10a3a3cbcb75ab9a70167f9ea1cdbfbe7c942fae2eab17663fb23396ee880515"
+    },
+    {
+      "label": "Issue-stage meanings of controller flush inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_stage.sv",
+      "lines": [
+        36,
+        43
+      ],
+      "language": "systemverilog",
+      "sha256": "5d5fd9c1c3e0b7fbc43c907b716de7091a74197110de935b3f0fdc1b07e36618"
+    },
+    {
+      "label": "Scoreboard consumption of unissued-instruction flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/scoreboard.sv",
+      "lines": [
+        162,
+        180
+      ],
+      "language": "systemverilog",
+      "sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022"
+    },
+    {
+      "label": "Scoreboard consumption of full flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/scoreboard.sv",
+      "lines": [
+        251,
+        260
+      ],
+      "language": "systemverilog",
+      "sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022"
+    },
+    {
+      "label": "ID-stage consumption of flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/id_stage.sv",
+      "lines": [
+        436,
+        439
+      ],
+      "language": "systemverilog",
+      "sha256": "2c6bdf3d746093c95d719d4ccb79cc2a966e8c05724d25853bdabca933740863"
+    },
+    {
+      "label": "Accelerator production of halt request",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/acc_dispatcher.sv",
+      "lines": [
+        340,
+        348
+      ],
+      "language": "systemverilog",
+      "sha256": "3bb09e7dc4be73e397eeb59a90be25e2354576787b56d19f74b9a9c89dedcbc8"
+    },
+    {
+      "label": "Accelerator production of pipeline-flush input",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/acc_dispatcher.sv",
+      "lines": [
+        444,
+        450
+      ],
+      "language": "systemverilog",
+      "sha256": "3bb09e7dc4be73e397eeb59a90be25e2354576787b56d19f74b9a9c89dedcbc8"
+    },
+    {
+      "label": "CSR production of wait-for-interrupt halt request",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/csr_regfile.sv",
+      "lines": [
+        2659,
+        2674
+      ],
+      "language": "systemverilog",
+      "sha256": "86732e6d98215b984b9ba8eb08c5bd6496a9c918c40c7f91059c572316ee1f8e"
+    },
+    {
+      "label": "Execution-stage CSR-buffer consumption of pipeline flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        381,
+        395
+      ],
+      "language": "systemverilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Instruction-cache consumption of cache flush",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cache_subsystem/cva6_icache.sv",
+      "lines": [
+        192,
+        201
+      ],
+      "language": "systemverilog",
+      "sha256": "272c06abf1f37a3f3a7d18d6c29a08df0a493631e330aefb4c677357a4d901c3"
+    },
+    {
+      "label": "Control-flow precedence and pipeline-flush documentation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/03_cva6_design/pcgen_stage.md",
+      "lines": [
+        18,
+        69
+      ],
+      "sha256": "922be4608563d561591d365b5d79220e2f3a5bd60042c05e11de73c4ee925b34"
+    },
+    {
+      "label": "Commit-stage halt and fence documentation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/03_cva6_design/commit_stage.rst",
+      "lines": [
+        35,
+        39
+      ],
+      "sha256": "13b8ce66aa324f708e9f0aebaed9a2cd4599bedb63ceb2b87630fca7012a139c"
+    }
+  ]
+}

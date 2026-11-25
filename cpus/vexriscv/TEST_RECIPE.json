@@ -1,0 +1,177 @@
+{
+  "schema_version": 3,
+  "cpu_repository": "https://github.com/SpinalHDL/VexRiscv.git",
+  "cpu_commit": "c4b2a55b22f46afb760446cd69f3ca7c36eef778",
+  "spinalhdl_repository": "https://github.com/SpinalHDL/SpinalHDL.git",
+  "spinalhdl_commit": "95a5e6c65c54acfc4707c8fe6ef8b5d297cfcbde",
+  "source_units": "SOURCE_UNITS.json",
+  "source_replacement": {
+    "tool": "harness/replace_scala_definition.py",
+    "scope": "Replace exactly one complete Scala class definition and retain every other CPU source definition."
+  },
+  "configuration": {
+    "VEXRISCV_REGRESSION_SEED": "42",
+    "VEXRISCV_REGRESSION_CONFIG_COUNT": "1",
+    "VEXRISCV_REGRESSION_TEST_ID": "0",
+    "VEXRISCV_REGRESSION_THREAD_COUNT": "1",
+    "VEXRISCV_REGRESSION_ZEPHYR_COUNT": "0",
+    "VEXRISCV_REGRESSION_CONFIG_RVC_RATE": "0.5",
+    "VEXRISCV_REGRESSION_CONFIG_LINUX_RATE": "0.3",
+    "VEXRISCV_REGRESSION_CONFIG_MACHINE_OS_RATE": "0.5",
+    "VEXRISCV_REGRESSION_CONFIG_SECURE_RATE": "0.2",
+    "VEXRISCV_REGRESSION_CONFIG_DEMW_RATE": "0.6",
+    "VEXRISCV_REGRESSION_CONFIG_DEM_RATE": "0.5",
+    "VEXRISCV_REGRESSION_CONFIG_PMP_NAPOT_RANGE": "0.5",
+    "VEXRISCV_REGRESSION_COREMARK": "no"
+  },
+  "patches": [
+    {
+      "path": "_shared/test-patches/0001-enable-selected-csr-tests.patch",
+      "sha256": "f10b74d7d915360973e468d2d1607db56d4571a1ab5ee09ce8940877808400cf",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0001-enable-selected-csr-tests.patch"
+      ],
+      "purpose": "Run the upstream CSR compliance tests that the selected hardware configuration otherwise disables through a test-only argument."
+    },
+    {
+      "path": "_shared/test-patches/0002-enable-debug-plugin-test.patch",
+      "sha256": "834458c95548e99c7ab4ff368814176430f68cf3c6e17b775c221fbe80d9bfef",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0002-enable-debug-plugin-test.patch"
+      ],
+      "scope": "DebugPlugin source problem only.",
+      "purpose": "Run the upstream DebugPluginTest only when evaluating DebugPlugin."
+    },
+    {
+      "path": "_shared/test-patches/0003-report-debug-trace-mismatch.patch",
+      "sha256": "9249b62d2453ac96c8a0ff363382fec73c95330b002376575ef5dc89b51704b1",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0003-report-debug-trace-mismatch.patch"
+      ],
+      "scope": "DebugPlugin source problem",
+      "purpose": "Report the injected instruction and the expected and observed register values when the upstream debug-bus check fails."
+    },
+    {
+      "path": "_shared/test-patches/0005-synchronize-debug-client-startup.patch",
+      "sha256": "3e13cf8ae94254035dac2d74cd34801a4b225f73491ae06b3ba16cb7efcf0782",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0005-synchronize-debug-client-startup.patch"
+      ],
+      "scope": "DebugPlugin source problem only.",
+      "purpose": "Wait for the upstream debug client to connect before simulated time advances, so host scheduling cannot cause a correct implementation to time out before the debug transaction starts."
+    },
+    {
+      "path": "_shared/test-patches/0006-add-public-csr-observation.patch",
+      "sha256": "5de9448c2752628862d3e249b450e26220df6573a3dcd8a7811875b89ac9c907",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0006-add-public-csr-observation.patch"
+      ],
+      "scope": "All sixteen source-unit problems. The fixed CSR class is adapted before replacement; a submitted CSR class must implement the public observation service.",
+      "purpose": "Expose CSR wait and trap events through a documented service and top-level outputs without requiring private CSR identifiers. Keep the reference-model comparisons and selected configuration unchanged."
+    },
+    {
+      "path": "_shared/test-patches/0007-stabilize-fixed-fetch-pc-name.patch",
+      "sha256": "835f8f5fb664e926241b675443712d39bdf14ff425aa740abe3fb3e1be2cbbe7",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0007-stabilize-fixed-fetch-pc-name.patch"
+      ],
+      "scope": "All sixteen source-unit problems. The fixed instruction fetcher keeps its PC observation name independently of the replacement fetch-area naming helper.",
+      "purpose": "Retain the fixed regression boot-PC initialization without requiring a submitted IBusSimplePlugin to reproduce the private area hierarchy naming method."
+    },
+    {
+      "path": "_shared/test-patches/0008-zero-unmapped-pmp-read.patch",
+      "sha256": "5ba19136c7c6817934fa568207b44ac6aac2220285b3a60aaa4b1ba58bcf1a87",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0008-zero-unmapped-pmp-read.patch"
+      ],
+      "scope": "All VexRiscv evaluation profiles and all sixteen source-unit problems.",
+      "purpose": "Return deterministic zero for accepted unmapped PMP reads in the fixed reference model instead of an uninitialized value. Preserve accepted CSR ranges, non-PMP illegal-access fallback, writes and all other reference behavior."
+    },
+    {
+      "path": "_shared/test-patches/0009-establish-debug-first-use-through-bus.patch",
+      "sha256": "9e7de6132a381c2578294c38c6d97aef8338b9c3a379d9aafee10b7861a24272",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0009-establish-debug-first-use-through-bus.patch"
+      ],
+      "scope": "DebugPlugin source problem and its selected STD debug profile only. Non-STD preprocessing retains the original upstream behavior.",
+      "purpose": "Establish first debug use through an accepted state-register read. Set and clear the reset request, checking both the public status bit and reset output while the CPU is held in external reset."
+    },
+    {
+      "path": "_shared/test-patches/0010-extend-cycle-budgets.patch",
+      "sha256": "a54a5c62f8063a51717dc0f93ed1886209dc08c2ad891102dc45926833883d29",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0010-extend-cycle-budgets.patch"
+      ],
+      "scope": "All VexRiscv evaluation profiles and all sixteen source-unit problems.",
+      "purpose": "Multiply every upstream per-program cycle budget by ten. The reference implementation uses at most 39.5% of each upstream budget (lrsc: 3,946 of 10,000 cycles), so a program that reaches the raised budget runs at least 25 times longer than the reference and does not finish."
+    },
+    {
+      "path": "_shared/test-patches/0011-bind-debug-server-to-free-port.patch",
+      "sha256": "0516465e52d6b4c0f4d8618f5d5cacf64d109ab54a9a2fbba2dbca4c58873d02",
+      "apply": [
+        "git",
+        "apply",
+        "_shared/test-patches/0011-bind-debug-server-to-free-port.patch"
+      ],
+      "scope": "All VexRiscv evaluation profiles and all sixteen source-unit problems.",
+      "purpose": "Bind the simulated debug server to a free port and connect the debug client to that port, so concurrent simulations on one host cannot connect to each other's server. Report a bind failure."
+    }
+  ],
+  "command": [
+    "sbt",
+    "testOnly vexriscv.TestIndividualFeatures"
+  ],
+  "test_programs": "The upstream regression selects its ISA, CSR, data-cache, atomic-operation, debug, and Dhrystone programs in src/test/cpp/regression/main.cpp.",
+  "additional_tests": {
+    "stream_fifo": {
+      "sbt_command": "Test / runMain vexriscv.StreamFifoPortTest",
+      "source": "harness/StreamFifoPortTest.scala",
+      "sha256": "e37ba0bd47a45e40581630b4276ae95785ddd86e43239cd9209d6bef1d5cefb7",
+      "comparison": "Check the depth-zero handshake, then fill, hold, flush, refill and drain queues through their public ports at depths 1, 2 and 3 with factory latencies 1, 0 and 2, respectively. Check occupancy, availability and data order."
+    },
+    "stream_fifo_low_latency": {
+      "sbt_command": "Test / runMain vexriscv.FifoPortTest",
+      "source": "harness/FifoPortTest.scala",
+      "sha256": "aca911b0cbe6465565b1a343091b4b63a14f5fadf24c3f6d9d476f06a4a90c75",
+      "comparison": "Simulate the public FIFO ports at depth 2 and latency 0, then depth 4 and latency 1. Check empty-queue latency, hold two different words under backpressure, flush the queue, refill it and consume the new head. At depth zero, check that both latency settings pass through each combination of valid and ready and the valid payload."
+    }
+  },
+  "comparison": "The upstream RiscvGolden reference model compares retired PCs, instructions, register writes, and memory effects against RTL execution.",
+  "program_liveness": "FAIL_PROGRAM_LIVENESS records a completed regression when every failed program stopped at its cycle budget or at the reference model's liveness check (10,000 cycles without a retired instruction; the reference retires one at least every 139 cycles). INVALID_TIMEOUT records an evaluator invocation interrupted by the wall-clock limit.",
+  "wall_clock_limit": "tools/evaluation/evaluate_vexriscv_submissions.py limits each evaluation to 3,600 s. Running every program to its raised cycle budget simulates 386 million cycles, 636 s at the 607 kHz measured for the reference regression, so the cycle budgets end a run that does not finish before the wall-clock limit.",
+  "runtime_dependencies": [
+    {
+      "path": "harness/patch_profiles.py",
+      "sha256": "8d466cb241b6e3a7fad31a32581554b194d954d82538225929f4f65934bd47cb"
+    },
+    {
+      "path": "harness/prepare_evaluation_checkout.py",
+      "sha256": "39620078f7cd16e5c846e8f80e66da52a5889ec4ad3e690e93ddc2bcce4ecc49"
+    }
+  ],
+  "configuration_record": {
+    "path": "REGRESSION_CONFIGURATION.txt",
+    "sha256": "9bc6192814c72d9c8c0226e6fce828e4981985837793d846fbabd93430e2baf6",
+    "tool": "harness/regression_configuration.py",
+    "check": "The evaluator reports INVALID_CONFIGURATION_MISMATCH when the regression prints a START TEST line other than the recorded one."
+  },
+  "verdicts": "The fixed checkout passes with the reference class, so after only that class is replaced every build or run failure is the answer's: FAIL_CANDIDATE_DEFINITION (the submission cannot be integrated), FAIL_CANDIDATE_COMPILE (Scala, Verilator or C++ build, wherever the error is reported), FAIL_ELABORATION (SpinalHDL generation), FAIL_TRACE_MISMATCH or FAIL_PROGRAM_LIVENESS (a failed program), FAIL_INCOMPLETE_EXECUTION (the simulator or port test ends without its completion line) and FAIL_DIRECTED_PUBLIC_OUTPUT_MISMATCH. Only a wall-clock interruption, a tool, resource or host failure in the log, a different START TEST line, a target source that differs from the integrated submission and an unparsable fixed source are INVALID."
+}

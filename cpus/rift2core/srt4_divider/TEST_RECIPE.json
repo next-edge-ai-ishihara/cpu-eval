@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "problem": "SRT4Divider",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/backend/Mul.scala",
+    "source_unit": "SRT4Divider"
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64um-p-div",
+      "rv64um-p-divu",
+      "rv64um-p-divuw",
+      "rv64um-p-divw",
+      "rv64um-p-rem",
+      "rv64um-p-remu",
+      "rv64um-p-remuw",
+      "rv64um-p-remw"
+    ],
+    "policy": "Run all eight pinned division and remainder programs. Each issues division requests and checks architectural results; no private algorithm or cycle count is required. A second divider in the fixed MulDiv observes accepted requests and result transfers across flush and downstream backpressure."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches. The separate port observation in rv64um-p-divu must complete with correct request information, quotients and remainders, and no result from a cancelled request."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "repository": "https://github.com/chipsalliance/chisel.git",
+    "version": "5.1.0",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "required_observation_markers": {
+    "rv64um-p-divu": "CPU_EVAL_SRT4_COMPLETE"
+  },
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_divider_handoffs.patch",
+      "sha256": "b27ab667b4fccab951e04a823672dd43169d8ca80838e6e1c995d30de619a3f6",
+      "purpose": "Observe result transfers following flush and during legal downstream backpressure."
+    }
+  ]
+}

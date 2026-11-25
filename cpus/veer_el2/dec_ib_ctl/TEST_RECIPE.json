@@ -1,0 +1,59 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2193
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_dec_ib_ctl",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+  },
+  "run": "bash evaluate_all.sh",
+  "comparison": "Ordered Spike and RTL GPR state-change updates; the comparator skips updates that do not change its tracked register state and does not compare every retired instruction, PC, opcode, or memory update.",
+  "debug_port_check": {
+    "run": "bash harness/evaluate_debug_ports.sh",
+    "files": [
+      {
+        "path": "evaluate_all.sh",
+        "sha256": "9f5b735fdff36ea25a2891a7251552c614d7415a8619fc86fc49b51e7f262277"
+      },
+      {
+        "path": "harness/evaluate_debug_ports.sh",
+        "sha256": "7bd7acdd13ee759ab7ec50068ef40bfecd8af7e19c7934cdac8af5b74b76117a"
+      },
+      {
+        "path": "harness/debug_commands.cpp",
+        "sha256": "f837eab79a5caf585bb37c1b01280f2b5b0f4170619ff8111a312fc04b844b4b"
+      }
+    ],
+    "scope": "Combinational external-port observations for GPR x0/x13/x31 and CSR mstatus/mtvec/dmst reads and writes with no ordinary valid instruction. Compare synthesized instruction, decode valid, debug valid, write-data selection, and the dmst write fence. Type-2 debug reads and writes at the selected DCCM base must leave decode valid, debug valid, write-data selection, and the fence inactive with no valid fetch. An idle-debug case checks ordinary instruction forwarding and inactive debug outputs."
+  }
+}

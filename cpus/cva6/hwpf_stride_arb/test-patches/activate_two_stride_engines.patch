@@ -1,0 +1,20 @@
+diff --git a/core/cva6.sv b/core/cva6.sv
+--- a/core/cva6.sv
++++ b/core/cva6.sv
+@@ -1586,10 +1586,10 @@ module cva6 #(
+-        .hwpf_base_set_i    ({3'b000, hwpf_test_cfg_set}),
+-        .hwpf_base_i        (256'h0000000000000000000000000000000000000000000000000000000200040001),
++        .hwpf_base_set_i    ({2'b00, {2{hwpf_test_cfg_set}}}),
++        .hwpf_base_i        ({128'b0, {2{64'h0000000200040001}}}),
+         .hwpf_base_o        (  /*FIXME*/),
+-        .hwpf_param_set_i   ({3'b000, hwpf_test_cfg_set}),
+-        .hwpf_param_i       (256'h0000000000000000000000000000000000000000000000000000000300000000),
++        .hwpf_param_set_i   ({2'b00, {2{hwpf_test_cfg_set}}}),
++        .hwpf_param_i       ({128'b0, {2{64'h0000000300000000}}}),
+         .hwpf_param_o       (  /*FIXME*/),
+-        .hwpf_throttle_set_i({3'b000, hwpf_test_cfg_set}),
+-        .hwpf_throttle_i    ('0  /*FIXME*/),
++        .hwpf_throttle_set_i({2'b00, {2{hwpf_test_cfg_set}}}),
++        .hwpf_throttle_i    ({64'b0, {2{32'h00010000}}}),
+         .hwpf_throttle_o    (  /*FIXME*/),
+         .hwpf_status_o      (  /*FIXME*/),

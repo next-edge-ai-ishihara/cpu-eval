@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "982c6e0444c3aa95814019c4236f4e65578c682e747e18e260491fbd2c2aa5d0",
+  "prompt_sha256": "11eb3160dce005e9fbc7d130d0b784cb6f6462fb51557383045896e047baf6e4",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        245
+      ],
+      "sha256": "fac7959e56e67ae6d5412606debd641d32bda48d8c93d9a438c4ece619d43719"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading Module declaration",
+      "prompt_bytes": [
+        245,
+        280
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        280,
+        515
+      ],
+      "sha256": "8c444dd82753eede533ef8834bf70445b886a451749e03b4a36e5b8890d48938"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Heading ## Parent instantiation",
+      "prompt_bytes": [
+        515,
+        557
+      ],
+      "sha256": "86a78ac4cc20bc7a27f46858b3f03571d648288040162b8967a223715500b2f6"
+    },
+    {
+      "index": 4,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        557,
+        708
+      ],
+      "sha256": "11a44f198785406a07b96ea500275b515d87a1982b46d287235c070a75e73659"
+    },
+    {
+      "index": 5,
+      "kind": "authored",
+      "description": "Heading ## Dependency declarations",
+      "prompt_bytes": [
+        708,
+        753
+      ],
+      "sha256": "6ca7e0b19ea621beb40e4cbd823823fd0962fc32ec3200b9254510e261688140"
+    },
+    {
+      "index": 6,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        753,
+        955
+      ],
+      "sha256": "cd0262956b9a2488ae14713c0e71c8e6f58d70a595a225db9436e9af12817ad3"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Close excerpt",
+      "prompt_bytes": [
+        955,
+        960
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Heading Documentation",
+      "prompt_bytes": [
+        960,
+        1006
+      ],
+      "sha256": "9b87522a0aa29ddbaaf309f1a190b52e3631736816cdf9667ebaeee450618638"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1006,
+        1055
+      ],
+      "sha256": "4bdf33588347a0d52a75ee49361d27d1ceb30b1939e8adc93f55e48361661481"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvdffs",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        49,
+        56
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "Parent instantiation for rvdffs",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        723,
+        723
+      ],
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56",
+      "language": "verilog"
+    },
+    {
+      "label": "rvdff dependency",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        19,
+        26
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "Core complex reset",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/clocks.md",
+      "lines": [
+        170,
+        170
+      ],
+      "sha256": "95740cffcbecb218bb2923364023c902af5de866f749d6156689de71a99f1181",
+      "language": "markdown"
+    }
+  ]
+}

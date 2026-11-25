@@ -1,0 +1,4 @@
+requirement	tests	rationale
+Return learned targets for the corresponding fetch at each pipeline stage	MicroBTBPublicContractTest	Send a learned and an untrained fetch on consecutive cycles and check the target at f1/f2/f3.
+Learn committed conditional direction and JAL targets	MicroBTBPublicContractTest	Keep the prediction after one contrary outcome at saturation and change it after the second; preserve the learned target through speculative, repair and BTB-correction updates.
+Preserve architectural control flow	rv64ui-p-beq;rv64ui-p-bne;rv64ui-p-blt;rv64ui-p-bge;rv64ui-p-jal;rv64ui-p-jalr	The wrapper compares every retired architectural record with Spike.

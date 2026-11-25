@@ -1,0 +1,14 @@
+id: ibex_register_file_ff
+cpu: ibex
+target:
+  repository: https://github.com/lowRISC/ibex.git
+  revision: 405c6d1d8220a18b2f9196141167a5875422dee4
+  file: rtl/ibex_register_file_ff.sv
+  module: ibex_register_file_ff
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: ../_shared/evaluate_suite.sh

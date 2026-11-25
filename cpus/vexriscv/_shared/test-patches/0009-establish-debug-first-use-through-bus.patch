@@ -1,0 +1,55 @@
+diff --git a/src/test/cpp/regression/main.cpp b/src/test/cpp/regression/main.cpp
+--- a/src/test/cpp/regression/main.cpp
++++ b/src/test/cpp/regression/main.cpp
+@@ -3567,7 +3567,51 @@
+ 
+     virtual void postReset(){
+         Workspace::postReset();
++        #ifdef DEBUG_PLUGIN_STD
++        // Exercise the debug bus while the CPU remains externally reset.
++        top->reset = 1;
++        const auto cycle = [&]() {
++            top->clk = 0;
++            top->eval();
++            const bool ready = top->debug_bus_cmd_ready;
++            top->clk = 1;
++            top->eval();
++            return ready;
++        };
++        const auto issue = [&](bool write, uint32_t data) {
++            top->debug_bus_cmd_valid = 1;
++            top->debug_bus_cmd_payload_wr = write;
++            top->debug_bus_cmd_payload_address = 0;
++            top->debug_bus_cmd_payload_data = data;
++            bool accepted = false;
++            for(uint32_t clocks = 0; clocks < 1000000 && !accepted; clocks++){
++                accepted = cycle();
++            }
++            top->debug_bus_cmd_valid = 0;
++            return accepted;
++        };
++        const auto checkReset = [&](bool expected) {
++            const bool accepted = issue(false, 0);
++            const bool status = (top->debug_bus_rsp_data & RISCV_SPINAL_FLAGS_RESET) != 0;
++            const bool output = top->debug_resetOut;
++            if(!accepted || status != expected || output != expected){
++                printf("Debug reset request: expected=%d status=%d resetOut=%d accepted=%d\n",
++                       expected, status, output, accepted);
++                clientFail = true;
++            }
++        };
++        // This first read also establishes ordinary debug use.
++        checkReset(false);
++        if(!issue(true, RISCV_SPINAL_FLAGS_RESET_SET)) clientFail = true;
++        checkReset(true);
++        if(!issue(true, RISCV_SPINAL_FLAGS_RESET_CLEAR)) clientFail = true;
++        checkReset(false);
++        top->clk = 0;
++        top->reset = 0;
++        top->eval();
++        #else
+         top->VexRiscv->DebugPlugin_debugUsed = 1;
++        #endif
+     }
+ };
+ 

@@ -1,0 +1,42 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "../instr_scan/harness/evaluate_ports.py",
+    "harness/lfsr_ports_tb.sv",
+    "harness/compare_cycle_trace.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "lfsr",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "vendor/pulp-platform/common_cells/src/lfsr.sv",
+  "source_sha256": "91f6c37be706ca7648cb66635e3f46a210e517f7addb8569ec28e4738599f7d7",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "83edee7ccd40b6b12c61ba3cbeb2ae9ee2f0ecbd7b8c12bb61537294dea366d3",
+  "complete_trace_comparator": "harness/compare_cycle_trace.py",
+  "complete_trace_comparator_sha256": "d74e4203945d39902c72cb37ecbfb812879c5a7a85df044efe3ddae01b9556f5",
+  "test_list": "harness/testlist_lfsr_icache_cycles.yaml",
+  "test_list_sha256": "8479e8579a80690442a5abaa5f2da9de7ff5d018365db46447f7227d6348a3b4",
+  "directed_test": "harness/lfsr_icache_cycles.S",
+  "directed_test_sha256": "026d2d5dd2638d4eb8d253397cdfa5b08853a262a343b8a845fd3d0cd05d37eb",
+  "comparison": {
+    "kind": "fixed_cycle_count_with_remaining_architectural_trace",
+    "value": "the five per-access mcycle deltas, each increased by 100, committed to x20 through x24 after a fixed 128-iteration warmup, using three instruction lines mapping to one two-way instruction-cache set"
+  },
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:vendor/pulp-platform/common_cells/src/lfsr.sv",
+    "test_sources": "Use the pinned architectural tests. For a directed test, the evaluator copies the distributed harness/*.S source to <CVA6>/verif/tests/cpu-eval-patches. To reconstruct that source independently, apply its new-file provenance patch in an empty scratch directory and compare the recorded SHA-256; do not apply the provenance patch to either upstream checkout.",
+    "expected_cycle_vector": "108,112,117,115,108"
+  },
+  "test_materialization": "harness/evaluate_parallel.sh copies the assembly files beside the selected test list into <CVA6>/verif/tests/cpu-eval-patches. The directed test patch is a provenance reconstruction record and is not applied before evaluation.",
+  "port_evaluator": "../instr_scan/harness/evaluate_ports.py",
+  "port_testbench": "harness/lfsr_ports_tb.sv",
+  "port_testbench_sha256": "102720df35cd93352a2b9f65eeb2ed9864452d3c3dc7f67994849c23270b264c",
+  "port_test_scope": "Observe the low output bit of the selected eight-bit LFSR after reset and each enabled or held rising edge. Assert reset with the clock held low when the output is zero and check that it returns to one before the next rising edge. The eight-bit feedback mask is 0xfa and the default seed is all ones.",
+  "port_evaluator_sha256": "4ada650951191124054d4b96d5c3b2003d9944ce15dde544476f07afad117562"
+}

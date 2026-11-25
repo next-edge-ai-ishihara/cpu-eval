@@ -1,0 +1,34 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "controller",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/controller.sv",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "244c78363ac3bf3d8adf9a74e119723b39a5ddaf60fd9e063ee098ec7344d5de",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_controller.yaml",
+  "test_list_sha256": "410b9af0c46f521fbb8679996ada4ef35839c18c90e9a14d799cff1e3894060e",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/controller.sv",
+    "test_patch": "tests/0001-add-controller-tests.patch",
+    "test_patch_sha256": "39ff11ef6c7461cc48a9e06e4c3437a14d3495497131132cb37d5de12f2fc845",
+    "application_root": "verif/tests in the recorded CVA6 checkout",
+    "application_command": "git -C <cva6-checkout> apply --directory=verif/tests tests/0001-add-controller-tests.patch",
+    "result_sha256": {
+      "cpu-eval-patches/controller_csr.S": "07e9c620dfa11826c43db6a3afc41544ed64f9ddfd82d5607527dac419b94b7d",
+      "cpu-eval-patches/controller_ecall.S": "068179cc3ac739d16df4461bead22d085d01a769ed93c9742734fe682dc9abae",
+      "cpu-eval-patches/controller_wfi_resume.S": "ab815f45d41b75ed54c2492d807d3627dccc5c9d2cc67c640ba3845c2ad07a89"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvdffsc",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "stbuf_bank_coalesce_probe",
+    "path": "test/evaluate_stbuf_bank_coalesce.sh",
+    "sha256": "e4fae2ee54053d6d0de8ec7c87dbde8aa52576ccc67ffa0fc39c39bb73cf616e",
+    "config_path": "test/stbuf_probe.cfg",
+    "config_sha256": "0db15ff75d21253dfbdf8b14111c98157858a2ad78fb6ae0557b447cc60a2136",
+    "program_path": "test/stbuf_bank_contend.s",
+    "program_sha256": "bf92ab52d82516a2fca65c63e17e98829974230bdd458e7e9727d8e90dfa923b"
+  },
+  "run": "bash test/evaluate_stbuf_bank_coalesce.sh",
+  "exclusive_resources": [
+    "tcp-port-5000"
+  ],
+  "checkout_files": [
+    {
+      "source": "test/stbuf_bank_contend.s",
+      "destination": "testbench/asm/stbuf_bank_contend.s",
+      "sha256": "bf92ab52d82516a2fca65c63e17e98829974230bdd458e7e9727d8e90dfa923b"
+    }
+  ],
+  "run_sha256": "e4fae2ee54053d6d0de8ec7c87dbde8aa52576ccc67ffa0fc39c39bb73cf616e",
+  "comparison": "OpenOCD Access Memory abstract-command reads (mdw) of the coalesced store-buffer result and its CPU-load copy, and a direct port test that clear is synchronous and dominates a simultaneous write at widths 1, 2 and 4",
+  "clear_priority_probe": {
+    "path": "test/clear_priority_probe.sv",
+    "sha256": "3aad2e2eddabb3d7dc5e7394ad2908a1a9f5e91c44a7ab0df82de543383086d3"
+  }
+}

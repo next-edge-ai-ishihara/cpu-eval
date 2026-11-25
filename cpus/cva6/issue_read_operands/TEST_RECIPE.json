@@ -1,0 +1,25 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 1,
+  "cpu": "cva6",
+  "module": "issue_read_operands",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/issue_read_operands.sv",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "584f5258e6e9a85f96476299036762a84ec17c1ce9e3439d12c0eed566555d0c",
+  "test_list": "harness/testlist_issue_read_operands.yaml",
+  "test_list_sha256": "1ece3083793dd8e78a50f894934c9bc522d8b9c683fea435c58039e52dee35d8",
+  "selection": "The upstream RV32I AND and OR tests exercise both integer operand paths. The directed program uses equal and unequal register values in two BEQ comparisons and observes the resulting instruction path and register writes.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/issue_read_operands.sv",
+    "test_sources": "Use the pinned RISC-V Architectural Tests revision. The evaluator copies the distributed branch_operands.S beside the test list into the CVA6 cpu-eval-patches test directory."
+  },
+  "directed_test_source": "harness/branch_operands.S",
+  "directed_test_source_sha256": "ce3bfdce00014d68c4f6d9a829674fbb340255d9bec803c19f930f063c8a7114"
+}

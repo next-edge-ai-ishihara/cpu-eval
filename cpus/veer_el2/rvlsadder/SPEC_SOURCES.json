@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "43267a5cf29f3d377a1502da0c2385ce61c604208743353996a34543cafcb890",
+  "prompt_sha256": "fc1b488569011300833e1dfdf1b54ba5432446bcd8f56c1cbc824f0a6aef8b60",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        290
+      ],
+      "sha256": "288c648efa0cded4f516f7b30adf6b3dbf7a180960348da6d20a7d984bf2a9a3"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        290,
+        407
+      ],
+      "sha256": "6f2c2926e761e05c0835b29be94a1270f88130e38b38e06fb42e731fe74c4afe"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        407,
+        448
+      ],
+      "sha256": "2634324360114f430bc87e7e1610214b93f9ad44b83b2c265a7e6918d5653b80"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        448,
+        614
+      ],
+      "sha256": "2bf64f8758fb7b748b1c72641526977e88af638b29ebc68a86823208aab752c8"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        614,
+        664
+      ],
+      "sha256": "0e291ac7438bcadfd295a72a89997082df22f353d2ab50e976fe738f200999ed"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        664,
+        1000
+      ],
+      "sha256": "9753ad4dfb8715acd959351178cd65921d9dcc3b99989f23246f8ecfb62b9f6e"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "prompt_bytes": [
+        1000,
+        1004
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvlsadder",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        466,
+        472
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Parent instantiation for rvlsadder",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_lsc_ctl.sv",
+      "lines": [
+        162,
+        165
+      ],
+      "language": "verilog",
+      "sha256": "df2b2ff5c14742d40e67becc6b3f2043e2bf9b987edfac6406cfa384543e0109"
+    },
+    {
+      "label": "RV32I effective address",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        706,
+        710
+      ],
+      "language": "asciidoc",
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    }
+  ]
+}

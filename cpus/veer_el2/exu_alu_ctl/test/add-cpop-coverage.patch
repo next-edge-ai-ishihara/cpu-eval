@@ -1,0 +1,12 @@
+--- a/riscv_bitmanip_default_test_veer_0.S
++++ b/riscv_bitmanip_default_test_veer_0.S
+@@ -62,6 +62,9 @@
+                   li x30, 0x80000000
+                   li x31, 0xa
+                   la x27, user_stack_end
++                  cpop       t2, a2
++                  cpop       t2, a4
++                  li         t2, 0
+ main:             sltiu       a4, a3, 34
+                   clz        t3, t1
+                   c.srli      a3, 31

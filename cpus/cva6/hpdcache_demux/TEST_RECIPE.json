@@ -1,0 +1,41 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/demux_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_demux",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_demux.sv",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "ff7c5a6d7612b9dcbd9f5078159cdff6c5acd02bdbbbec70e8a9c66b7983117d",
+  "directed_evaluator": "harness/evaluate.sh",
+  "directed_evaluator_sha256": "ff7c5a6d7612b9dcbd9f5078159cdff6c5acd02bdbbbec70e8a9c66b7983117d",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "git -C core/cache_subsystem/hpdcache show f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_demux.sv",
+    "source_repository": "https://github.com/openhwgroup/cv-hpdcache.git",
+    "source_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+    "test_sources": "git checkout the recorded test revision; no generated test source is stored"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "821511e6b0383c7bdd0a412403ab12dd30f5ba18d43be3e733baf49edb776791",
+    "test": "harness/demux_ports_tb.sv",
+    "test_sha256": "eb6c13c538efb1eb724e0526518731729053f327adc7da0368a7a465cd584c23",
+    "configuration": "NOUTPUT=2 with binary selection and DATA_WIDTH=1, 4 and 71, the instances of cv32a60x; 20 full-output comparisons. Width-1 data are 0/1; width-4 data are 0/1/8/f; width-71 data are zero, one, the top bit and all ones.",
+    "environment": "Linux with a readable /proc table for its own processes, Python 3, Verilator with --binary --timing --assert, C++ and make. VERILATOR may name its executable.",
+    "result": "PASS (0) requires 20 consecutive observations, SUMMARY checks=20 errors=0 and DEMUX_PORT_TEST_COMPLETE, then normal exit before CPU evaluation. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2). Default build limit is 120 seconds and runtime limit is 10 seconds."
+  }
+}

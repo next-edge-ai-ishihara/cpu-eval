@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Division and remainder semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        61,
+        71
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36"
+    },
+    {
+      "label": "Division exceptional-result semantics",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        88,
+        111
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36"
+    },
+    {
+      "label": "CVA6 serial-divider latency contract",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_execute.adoc",
+      "lines": [
+        78,
+        78
+      ],
+      "sha256": "d92282f130119ed75b98f53a6d41124ad0fbaf0ed5e6458492696198ade34217"
+    },
+    {
+      "label": "Selected integer width",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Parent connection and opcode mapping",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/mult.sv",
+      "lines": [
+        125,
+        142
+      ],
+      "sha256": "e6660a01fc56369e2e1ad96ff89fa1fcafde795d398eaf5c812d7e9afd84ec59"
+    },
+    {
+      "label": "docs/design/design-manual/source/cva6_issue_stage.adoc:245-245 (excerpt)",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        245,
+        245
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "Module declaration for serdiv",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/serdiv.sv",
+      "lines": [
+        18,
+        51
+      ],
+      "sha256": "7b4d4b0be7512ec025fd3f4cec4e140e2f4466115237dd244fabc6b2095425f6"
+    },
+    {
+      "label": "Division request and output arbitration in mult",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/mult.sv",
+      "lines": [
+        42,
+        53
+      ],
+      "sha256": "e6660a01fc56369e2e1ad96ff89fa1fcafde795d398eaf5c812d7e9afd84ec59"
+    },
+    {
+      "label": "Structural hazards and division latency",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        169,
+        172
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "# Implement `serdiv`\n\nImplement the complete `serdiv` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module serdiv` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Parent instantiation\n\n### core/mult.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Documentation\n\n### src/m-st-ext.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n### docs/design/design-manual/source/cva6_execute.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n### docs/design/design-manual/source/cva6_issue_stage.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n"
+    }
+  ]
+}

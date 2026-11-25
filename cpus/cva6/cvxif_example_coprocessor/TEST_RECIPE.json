@@ -1,0 +1,56 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../compressed_instr_decoder/tests/0001-add-compressed-cvxif-table-test.patch"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "cvxif_example_coprocessor",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cvxif_example/cvxif_example_coprocessor.sv",
+  "source_sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "0638fed4ca5c6ad975792e211384a16565cfda7227134d8cf0b1d7651dbfaefa",
+  "test_list": "harness/testlist_cvxif_example_coprocessor.yaml",
+  "test_list_sha256": "9111fa45c618b7a0b60bc20a3498b8a22797128efd52c2c984d523089c3f7c12",
+  "compressed_test": {
+    "test": "cvxif-example-compressed",
+    "source_reconstruction_patch": "../compressed_instr_decoder/tests/0001-add-compressed-cvxif-table-test.patch",
+    "source_reconstruction_patch_sha256": "fb50858d1a3adda165152f3571f5ffa5d8028118a42228742d30410eb349e3c0",
+    "reconstructed_source_sha256": "d43d1f1774003378202ad0a55cfa9d71e1c36a5ab492afe3b58a9fa19c88e6a9",
+    "observation": "Both CPU and Spike retire the custom compressed NOP and ADD with encodings 0xe000 and 0xf52c. Compare the full architectural traces, including x10 = 12 from the ADD with inputs 5 and 7. Apply the same successful termination and RVFI cycle-limit criteria as for the all-operations test."
+  },
+  "reused_test": {
+    "problem": "../copro_alu",
+    "evaluator": "../copro_alu/harness/evaluate.sh",
+    "evaluator_sha256": "e17bd8f8d37ac08ca3c353aa7bbdd94788f7b225d4ac974845bddc2c9473c5b2",
+    "retired_trace_comparator": "../copro_alu/harness/compare_retired_instructions.py",
+    "retired_trace_comparator_sha256": "80126e0c1f27a5f6d513ed45611666e4769133206beb663da93d4b47c0f698f2",
+    "test_source_reconstruction": "Use the pinned CVA6 cvxif_add_nop.S and apply the three ordered patches recorded by ../copro_alu/TEST_RECIPE.json; the final copro_alu_all_ops.S SHA-256 is 8480494585b19d414b50589bd3fbd9f9c5140731e4f0ac53f82b8d1b5b40bd99.",
+    "test_list": "../copro_alu/harness/testlist_copro_alu.yaml",
+    "test_list_sha256": "5202801d822c3b9f2c2e810cfca52e407ec3f3cf0ad367b62e9aea6321bfc912",
+    "reference_model_build_script": "../copro_alu/environment/build_spike.sh",
+    "reference_model_build_script_sha256": "0c58bbeb40d966fea5d06ac1837ed78e313549b65a6f3d3e85737ff790d97a7a",
+    "reference_model_patches_in_application_order": [
+      {
+        "order": 1,
+        "patch": "../copro_alu/environment/0001-model-example-compressed-cvxif.patch",
+        "sha256": "fd48c0835e956a74ce4aeaba9c1c16681781db9da76215b9d6949ac72f5a6448"
+      },
+      {
+        "order": 2,
+        "patch": "../copro_alu/environment/0002-model-example-r4-cvxif.patch",
+        "sha256": "44fce5c91b055886b4ddfa31b33f36b3c7e2ccc51a3aafc94c0e36d893b2131f"
+      }
+    ]
+  },
+  "environment_setup": {
+    "path_in_cpu_checkout": "verif/sim/setup-env.sh",
+    "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+    "toolchain": "The saved CVA6 grading image provides Verilator 5.008 and riscv64-unknown-elf tools."
+  }
+}

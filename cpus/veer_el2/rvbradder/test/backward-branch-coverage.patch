@@ -1,0 +1,11 @@
+--- a/riscv_arithmetic_basic_test_0.S
++++ b/riscv_arithmetic_basic_test_0.S
+@@ -3243,5 +3243,8 @@
+                   c.sub       a3, a2
+                   c.andi      s1, -1
++                  li          t0, 2
++1:                addi        t0, t0, -1
++                  bnez        t0, 1b
+                   la x30, test_done
+                   jalr x0, x30, 0
+ test_done:        

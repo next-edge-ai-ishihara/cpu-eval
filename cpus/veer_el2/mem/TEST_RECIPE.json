@@ -1,0 +1,32 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_mem",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "icache_dccm_selfcheck",
+    "path": "harness/icache_dccm_selfcheck.s",
+    "sha256": "a3c8ce417dbab08ae52c0f805eae31650bac74b7ea770a95834ed6f0935f31c1",
+    "post_generation_artifacts": [
+      {
+        "path": "testbench/asm/hello_world_iccm.s",
+        "sha256": "56113a214c091a0479ff804dbbbb27d96d86926c00613edf8f493e6ecc8bc123"
+      },
+      {
+        "path": "testbench/asm/hello_world_iccm.ld",
+        "sha256": "d5dbc4959b16e8ddf5d0d69a01443d56eee07276970bcfdc09394abef911f354"
+      }
+    ]
+  },
+  "run": "bash harness/evaluate_icache_dccm_selfcheck.sh",
+  "run_sha256": "de5d8558b3b44da49ea2aef8bc1a0ddebc69596fc99fcbe06b866c97b851b172",
+  "comparison": "Conjunction of two RTL mailbox self-checks: DCCM immediate and delayed reads, cache content and self-relative timing, then pinned upstream hello_world_iccm instruction execution. No retired-instruction trace comparison."
+}

@@ -1,0 +1,4 @@
+requirement	test_program	test_behavior
+Translate supervisor data addresses after a page-table walk	rv64si-p-dirty	The supervisor test enables virtual memory and performs loads and stores through page-table mappings.
+Return load and store page-fault information from cached translation permissions	rv64si-p-dirty	The test checks accessed and dirty permission handling while exercising translated memory operations.
+Do not reuse a translation returned after a global SFENCE invalidated its outstanding walk; preserve a subsequent uninvalidated walk	sfence_pending_refill	The external-port test sends a global fence during an accepted walk, then checks that its late response cannot produce a hit; a new walk must return the supplied physical address.

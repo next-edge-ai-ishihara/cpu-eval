@@ -1,0 +1,79 @@
+`include "rvfi_types.svh"
+module csr_wfi_ports_tb;
+  import ariane_pkg::*;
+  localparam config_pkg::cva6_cfg_t CVA6Cfg = build_config_pkg::build_config(cva6_config_pkg::cva6_cfg);
+@@PARENT_TYPES@@
+  typedef `RVFI_PROBES_CSR_T(CVA6Cfg) rvfi_probes_csr_t;
+  logic clk=0, rst_n=0, timer_irq=0;
+  logic halt;
+  fu_op op=ADD;
+  logic [11:0] addr=0;
+  logic [CVA6Cfg.XLEN-1:0] wdata=0, rdata;
+  logic [CVA6Cfg.NrCommitPorts-1:0] commit_ack='0;
+@@INSTANCE@@
+  task automatic tick;
+    #5; clk=1; #1; #4; clk=0; #1;
+  endtask
+  task automatic check(input bit ok, input string description);
+    if (!ok) begin $fatal(1,"FAIL: %s",description); end
+  endtask
+  task automatic write_csr(input logic [11:0] address, input logic [31:0] value);
+    addr=address; wdata=value; op=CSR_WRITE; commit_ack='1;
+    tick();
+    op=ADD; commit_ack='0;
+  endtask
+  task automatic check_csr(input logic [11:0] address, input logic [31:0] expected,
+                           input string description);
+    addr=address; op=CSR_READ; commit_ack='1;
+    #1;
+    check(rdata===expected,$sformatf("%s expected %08h observed %08h",description,expected,rdata));
+    op=ADD; commit_ack='0;
+  endtask
+  bit saw_halt;
+  initial begin
+    repeat(4) tick();
+    check(halt===0,"reset clears halt request");
+    rst_n=1;
+    repeat(2) tick();
+    addr=12'h304; wdata=32'h80; op=CSR_WRITE; tick();
+    op=ADD; repeat(2) tick();
+    op=WFI; saw_halt=0;
+    repeat(4) begin tick(); saw_halt|=(halt===1); end
+    check(saw_halt,"WFI with no pending interrupt requests halt");
+    op=ADD;
+    repeat(4) begin tick(); check(halt===1,"halt persists after WFI operation while interrupt is absent"); end
+    timer_irq=1;
+    repeat(4) tick();
+    check(halt===0,"enabled timer interrupt releases halt");
+    timer_irq=0;
+    repeat(4) begin tick(); check(halt===0,"halt remains clear without another WFI"); end
+    op=WFI; saw_halt=0;
+    repeat(4) begin tick(); saw_halt|=(halt===1); end
+    check(saw_halt,"WFI can request halt again");
+    rst_n=0; op=ADD;
+    repeat(2) tick();
+    check(halt===0,"reset clears an active WFI halt");
+    rst_n=1; repeat(4) tick();
+    check(halt===0,"halt remains clear after reset");
+    $display("PASS: WFI halt, hold, timer release, repeat and reset");
+
+    write_csr(12'hb80,32'h00123456);
+    write_csr(12'hb00,32'hfffffffe);
+    repeat(2) tick();
+    check_csr(12'hb00,0,"MCYCLE wraps after two clocks");
+    check_csr(12'hb80,32'h00123457,"MCYCLE carries into MCYCLEH");
+
+    write_csr(12'hb82,32'h00234567);
+    write_csr(12'hb02,32'hfffffffe);
+    repeat(3) tick();
+    check_csr(12'hb02,32'hfffffffe,"MINSTRET holds without retirement");
+    check_csr(12'hb82,32'h00234567,"MINSTRETH holds without retirement");
+    commit_ack='1;
+    repeat(2) tick();
+    commit_ack='0;
+    check_csr(12'hb02,0,"MINSTRET wraps after two retirements");
+    check_csr(12'hb82,32'h00234568,"MINSTRET carries into MINSTRETH");
+    $display("PASS: cycle and retired-instruction counter rollover");
+    $finish;
+  end
+endmodule

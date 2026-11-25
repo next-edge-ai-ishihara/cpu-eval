@@ -1,0 +1,9 @@
+diff --git a/riscv-test-suite/rv32i_m/C/src/cebreak-01.S b/riscv-test-suite/rv32i_m/C/src/cebreak-01.S
+--- a/riscv-test-suite/rv32i_m/C/src/cebreak-01.S
++++ b/riscv-test-suite/rv32i_m/C/src/cebreak-01.S
+@@ -17,4 +17,5 @@ RVTEST_ISA("RV32IC_Zicsr")
+ .globl rvtest_entry_point
+ rvtest_entry_point:
+ RVMODEL_BOOT
++    csrw    mtvec, zero
+ RVTEST_CODE_BEGIN

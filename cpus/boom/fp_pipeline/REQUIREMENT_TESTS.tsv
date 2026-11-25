@@ -1,0 +1,6 @@
+requirement	test_program	test_behavior
+Floating-point issue, register read, and result writeback	rv64uf-p-fadd;rv64uf-p-fdiv;rv64uf-p-fmadd	The selected single-precision programs traverse fixed-latency, iterative, and three-operand paths.
+Integer-to-floating-point and result readback transfer	rv64uf-p-fcvt	Program converts integers to single precision; test macro fmv.x.s reads the resulting bits through the integer response path.
+Single-precision floating-point load and store transfer	rv64uf-p-ldst	The program uses flw and fsw; the comparator checks architectural memory values.
+Double-precision floating-point load recoding	rv64ud-p-fadd	The arithmetic operands come from fld; both loaded register values and subsequent double-precision results appear in the architectural trace.
+Floating-point wakeup data propagation	rv64uf-p-fadd	The fadd program compares its destination-register result.

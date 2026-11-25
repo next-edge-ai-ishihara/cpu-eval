@@ -1,0 +1,19 @@
+--- a/src/main/scala/base/RePort.scala
++++ b/src/main/scala/base/RePort.scala
+@@ -194,6 +194,16 @@
+     val mdl = Module(new ReDirect( chiselTypeOf(enq(0).bits), enq.length ))
+     mdl.io.mapper := mapper
+     enq <> mdl.io.enq
++
++    for ( j <- 0 until enq.length ) {
++      val cpuEvalReDirectRank = if (j == 0) 0.U else PopCount(mapper.take(j))
++      when ( mapper(j) & enq(cpuEvalReDirectRank).valid ) {
++        when ( mdl.io.deq(j).bits.asUInt =/= enq(cpuEvalReDirectRank).bits.asUInt ) {
++          printf("CPU_EVAL_OBSERVATION_MISMATCH ReDirect valid deq.bits j=%d\n", j.U)
++        }
++      }
++    }
++
+     return mdl.io.deq
+   }
+ }

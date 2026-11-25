@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for el2_lsu_clkdomain",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_clkdomain.sv",
+      "lines": [
+        26,
+        80
+      ],
+      "language": "verilog",
+      "sha256": "b697d897d2922e27533be1b9d9feac3bdbf4c9b033920e9e87434f002544005e"
+    },
+    {
+      "label": "Parent instantiation for el2_lsu_clkdomain",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu.sv",
+      "lines": [
+        422,
+        422
+      ],
+      "sha256": "58690ecff8b23840f372b8b2594fa7e2c9a64b8ad1c51f379c36d618d60a343f"
+    },
+    {
+      "label": "el2_lsu_pkt_t type declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        176,
+        193
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "rvdff declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        19,
+        26
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "rvclkhdr declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        791,
+        800
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "rvoclkhdr declaration",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        814,
+        823
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "LSU packet registers clocked by the M and R clocks",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_lsc_ctl.sv",
+      "lines": [
+        238,
+        253
+      ],
+      "language": "verilog",
+      "sha256": "df2b2ff5c14742d40e67becc6b3f2043e2bf9b987edfac6406cfa384543e0109"
+    },
+    {
+      "label": "Store data and address registers clocked by the M and R clocks",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_lsc_ctl.sv",
+      "lines": [
+        315,
+        318
+      ],
+      "language": "verilog",
+      "sha256": "df2b2ff5c14742d40e67becc6b3f2043e2bf9b987edfac6406cfa384543e0109"
+    },
+    {
+      "label": "DCCM write-enable register clocked by lsu_free_c2_clk",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_dccm_ctl.sv",
+      "lines": [
+        405,
+        405
+      ],
+      "language": "verilog",
+      "sha256": "fe5243f5b70db1b6ce76f9bff97f929f330f71b050054b0dee9e3070ebe792d8"
+    },
+    {
+      "label": "R-stage store data register clocked by lsu_store_c1_r_clk",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_dccm_ctl.sv",
+      "lines": [
+        409,
+        409
+      ],
+      "language": "verilog",
+      "sha256": "fe5243f5b70db1b6ce76f9bff97f929f330f71b050054b0dee9e3070ebe792d8"
+    },
+    {
+      "label": "DCCM read-enable registers clocked by the C2 clocks",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_dccm_ctl.sv",
+      "lines": [
+        461,
+        462
+      ],
+      "language": "verilog",
+      "sha256": "fe5243f5b70db1b6ce76f9bff97f929f330f71b050054b0dee9e3070ebe792d8"
+    },
+    {
+      "label": "ECC error registers clocked by lsu_free_c2_clk",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_dccm_ctl.sv",
+      "lines": [
+        467,
+        469
+      ],
+      "language": "verilog",
+      "sha256": "fe5243f5b70db1b6ce76f9bff97f929f330f71b050054b0dee9e3070ebe792d8"
+    },
+    {
+      "label": "Store buffer valid registers",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_stbuf.sv",
+      "lines": [
+        210,
+        211
+      ],
+      "language": "verilog",
+      "sha256": "b4433646f8b49b0b108969cbd7e31d1d5290eab6f150e85b722acef84207367b"
+    },
+    {
+      "label": "Store buffer byte-enable register",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_stbuf.sv",
+      "lines": [
+        213,
+        213
+      ],
+      "language": "verilog",
+      "sha256": "b4433646f8b49b0b108969cbd7e31d1d5290eab6f150e85b722acef84207367b"
+    },
+    {
+      "label": "Store buffer pointer registers",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_stbuf.sv",
+      "lines": [
+        338,
+        340
+      ],
+      "language": "verilog",
+      "sha256": "b4433646f8b49b0b108969cbd7e31d1d5290eab6f150e85b722acef84207367b"
+    },
+    {
+      "label": "Input buffer registers",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_buffer.sv",
+      "lines": [
+        476,
+        477
+      ],
+      "language": "verilog",
+      "sha256": "fc1a654fa9fb37543586db710a54f2e3027b9abf35f58d0c1f23c5fdb33526b0"
+    },
+    {
+      "label": "Input buffer timer register",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_buffer.sv",
+      "lines": [
+        489,
+        489
+      ],
+      "language": "verilog",
+      "sha256": "fc1a654fa9fb37543586db710a54f2e3027b9abf35f58d0c1f23c5fdb33526b0"
+    },
+    {
+      "label": "Output buffer registers",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_buffer.sv",
+      "lines": [
+        557,
+        559
+      ],
+      "language": "verilog",
+      "sha256": "fc1a654fa9fb37543586db710a54f2e3027b9abf35f58d0c1f23c5fdb33526b0"
+    },
+    {
+      "label": "Output buffer tag registers",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_buffer.sv",
+      "lines": [
+        564,
+        565
+      ],
+      "language": "verilog",
+      "sha256": "fc1a654fa9fb37543586db710a54f2e3027b9abf35f58d0c1f23c5fdb33526b0"
+    },
+    {
+      "label": "Bus buffer state registers",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_buffer.sv",
+      "lines": [
+        768,
+        770
+      ],
+      "language": "verilog",
+      "sha256": "fc1a654fa9fb37543586db710a54f2e3027b9abf35f58d0c1f23c5fdb33526b0"
+    },
+    {
+      "label": "AXI sample register",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_buffer.sv",
+      "lines": [
+        926,
+        926
+      ],
+      "language": "verilog",
+      "sha256": "fc1a654fa9fb37543586db710a54f2e3027b9abf35f58d0c1f23c5fdb33526b0"
+    },
+    {
+      "label": "R-stage bus registers",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_bus_buffer.sv",
+      "lines": [
+        944,
+        948
+      ],
+      "language": "verilog",
+      "sha256": "fc1a654fa9fb37543586db710a54f2e3027b9abf35f58d0c1f23c5fdb33526b0"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `el2_lsu_clkdomain`\n\nImplement the complete `el2_lsu_clkdomain` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_lsu_clkdomain` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Dependency declarations\n\n### design/include/el2_def.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n### design/lib/beh_lib.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n## Related source code\n\n### design/lsu/el2_lsu_lsc_ctl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n### design/lsu/el2_lsu_dccm_ctl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n### design/lsu/el2_lsu_stbuf.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n\n### design/lsu/el2_lsu_bus_buffer.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt fence",
+      "text": "```\n"
+    }
+  ]
+}

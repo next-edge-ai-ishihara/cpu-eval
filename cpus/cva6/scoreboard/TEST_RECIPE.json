@@ -1,0 +1,35 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../raw_checker/harness/raw_checker_wrap.S",
+    "../harness/candidate_error.py",
+    "harness/evaluate_cvxif_ports.py",
+    "harness/scoreboard_cvxif_ports_tb.sv",
+    "../issue_stage/harness/check_issue_ports.py",
+    "../instr_scan/harness/evaluate_ports.py",
+    "../harness/port_work_directory.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "scoreboard",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/scoreboard.sv",
+  "source_sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "d7b1c7c396856cbccd8a25da82b8f4f0a8239aa8a56c78795521eec9c131e5d8",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../raw_checker/harness/testlist_raw_checker.yaml",
+  "test_list_sha256": "8256a0240f4bcc16af0d1232cbbb59e15d204645398f4166c57176e0420c14f0",
+  "test_selection": "Check issue-time register dependencies and later completion of one CVXIF instruction without a register write and one with a register write, then execute the existing complete-CPU directed program and four RISC-V Architectural Tests.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/scoreboard.sv",
+    "test_sources": "checkout the recorded RISC-V Architectural Tests revision, copy ../raw_checker/harness/raw_checker_wrap.S to verif/tests/cpu-eval-patches/raw_checker_wrap.S, and select all five programs named by the shared raw_checker test list",
+    "cvxif_ports": "Compile the submission against the pinned CV32A60X packages and parent port types. Run the port fixture before invoking the existing five CPU tests."
+  }
+}

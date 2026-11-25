@@ -1,0 +1,46 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2193
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvdff_fpga",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+  },
+  "run": "bash evaluate_all.sh",
+  "comparison": "Ordered architectural GPR state changes from Spike and RTL traces must give 2193 matches, and the storage observer must report no instance whose dout, sampled at the falling rawclk edge, differs from a flop clocked by clk.",
+  "storage_observer_inputs": {
+    "evaluate_all.sh": "7d27a9e1e2e0303fca6cdf6afc495f53ba5be9e485879e1e036d63ba353894a7",
+    "test/verilate_with_storage_observer.sh": "ae3f7bad7c6b453738c2a20a850ef41e40d25d11022d99a6b9eca3d7871441df",
+    "test/observe_storage.sv": "e236715b6aeb1c5d360f333ce5955e4d160d00aa1a996e2abe6fd1df7fb6ec59"
+  }
+}

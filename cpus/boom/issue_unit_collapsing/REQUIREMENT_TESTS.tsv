@@ -1,0 +1,7 @@
+requirement	tests	rationale
+Preserve accepted age and compatible-port issue	IssuePublicContractTest	Dispatch six waiting operations, complete ordinary wake-up, and compare oldest-first issue without loss or duplication across sixteen reset and delay phases.
+Select retained ready operations on available compatible ports	IssuePublicContractTest	Enable ports after operands are ready and check available-port outputs while ready operations remain; private slot storage and compaction encodings are not compared.
+Retain work whose functional unit is unavailable while other ports issue	IssuePublicContractTest	Wake a divide older than two additions with the divider busy. Both additions can issue and the retained divide issues once its port announces availability.
+Respect dispatch backpressure and recover on pipeline flush	IssuePublicContractTest	Wait for ready before accepting operations and check eventual acceptance and an empty queue after flush.
+Preserve architectural arithmetic and memory effects	rv64ui-p-add;rv64ui-p-sub;rv64ui-p-lw;rv64ui-p-sw	Compare complete-CPU retired instruction results with Spike and require the program pass endpoint.
+Record cache-workload cycle measurement	rv64mi-p-cache_replacement_cycles	Require completion and record x20 as a diagnostic without a cycle equality verdict.

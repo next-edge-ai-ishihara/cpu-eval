@@ -1,0 +1,43 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "harness/ctrl_pe_ports_tb.sv",
+    "harness/evaluate_ports.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_ctrl_pe",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_ctrl_pe.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "a2dc2bc28900d9f9285286fbd1a8ee8d716853d975c7131121e4de8fcbd877f8",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "7ecef92d2b0e17980358fba5e929d31a4e2fae4f29710407d45b51bcabf40b6b",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "directed_test_list": "harness/testlist_store_reload.yaml",
+  "directed_test_list_sha256": "3ebe3b8e9db339f2e6351a285c54e634c74c51ff881bf2eeb002dc0593924ac2",
+  "directed_test_source": "harness/hpdcache_ctrl_pe_store_reload.S",
+  "directed_test_source_sha256": "6d642594a51fa9db109d7417aec5123b256b5acadc95a1a6f09eff34a1175aa8",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hpdcache_ctrl_pe.sv from hpdcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision and copy the recorded directed test source as performed by the evaluator"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "df75924826da2e06811728f54bedc8b927b9492df5b666d5ce99a8b77027f2c4",
+    "test": "harness/ctrl_pe_ports_tb.sv",
+    "test_sha256": "2510571afe2e3000e86fb3d5ad7518ce9cc0d1d78fed4346b4a26b072b3fb948",
+    "scope": "With the cv32a60x HPDcache configuration, a cacheable prefetch hit completes with response iff need_rsp is 1, without miss allocation.",
+    "verdicts": "The fixture reports exactly one completed check on exit 0. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2)."
+  }
+}

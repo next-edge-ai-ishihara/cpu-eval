@@ -1,0 +1,24 @@
+diff --git a/src/main/scala/rift2Core/rift2Core.scala b/src/main/scala/rift2Core/rift2Core.scala
+index 64999a0..4d36211 100644
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -332,9 +332,16 @@ trait Rift2CoreImpCommit{ this: Rift2CoreImpBase =>
+   cmm_stage.io.if_cmm := if2.io.if_cmm
+   cmm_stage.io.aclint := io.aclint
+   cmm_stage.io.plic := io.plic
+-  if2.io.ifence := cmm_stage.io.ifence
+-
+-  iwb_stage.io.xpuCsrCommit <> cmm_stage.io.xpuCsrCommit
++  if2.io.ifence := cmm_stage.io.ifence
++
++  for (i <- 0 until cmChn) {
++    when (cmm_stage.io.diff_commit.abort(i) && cmm_stage.io.rod(i).bits.is_fence_i &&
++          cmm_stage.io.xCommit(i).is_writeback && !cmm_stage.io.ifence) {
++      printf("CPU_EVAL_OBSERVATION_MISMATCH Commit instruction-fetch-fence\n")
++    }
++  }
++
++  iwb_stage.io.xpuCsrCommit <> cmm_stage.io.xpuCsrCommit
+   iwb_stage.io.fpuCsrCommit <> cmm_stage.io.fpuCsrCommit
+   iwb_stage.io.vpuCsrCommit <> cmm_stage.io.vpuCsrCommit
+   rnm_stage.io.isCSRMMUReady := iwb_stage.io.isCSRMMUReady 

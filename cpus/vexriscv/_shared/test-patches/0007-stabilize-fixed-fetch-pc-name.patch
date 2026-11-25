@@ -1,0 +1,11 @@
+diff --git a/src/main/scala/vexriscv/plugin/Fetcher.scala b/src/main/scala/vexriscv/plugin/Fetcher.scala
+--- a/src/main/scala/vexriscv/plugin/Fetcher.scala
++++ b/src/main/scala/vexriscv/plugin/Fetcher.scala
+@@ -125,6 +125,7 @@ abstract class IBusFetcherImpl(var resetVector : BigInt,
+       //PC calculation without Jump
+       val output = Stream(UInt(32 bits))
+       val pcReg = Reg(UInt(32 bits)) init(if(resetVector != null) resetVector else externalResetVector) addAttribute(Verilator.public)
++      pcReg.setName(IBusFetcherImpl.this.getName() + "_fetchPc_pcReg")
+       val correction = False
+       val correctionReg = RegInit(False) setWhen(correction) clearWhen(output.fire)
+       val corrected = correction || correctionReg

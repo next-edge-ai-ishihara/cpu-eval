@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "problem": "Arbiter",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/chipsalliance/chisel.git",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438",
+    "path": "src/main/scala/chisel3/util/Arbiter.scala",
+    "source_unit": "Arbiter",
+    "pristine_source_sha256": "1b36d393cd4e5cbf5cbcb9bf9c9c88888530ff6e8ec9ac4b2b7cf4ed0d1ed98f",
+    "delivery": "Rift2Core's build.sc declares Chisel as the compiled Maven artifact org.chipsalliance::chisel:5.1.0, so this definition reaches the CPU as a class file rather than as a file in the CPU source tree. harness/evaluate.sh splices the candidate class into a pristine copy of the pinned file above with ../_shared/replace_class.py, compiles that single file against the same pinned artifact in a throwaway mill module, rewrites the Arbiter class entries of chisel_2.13-5.1.0.jar inside a private copy of the pinned Coursier cache, and builds Rift2Core with COURSIER_CACHE pointed at that copy. The other definitions in the pinned file (ArbiterIO, ArbiterCtrl, LockingArbiterLike, LockingRRArbiter, LockingArbiter, RRArbiter) stay at their pinned revision."
+  },
+  "cpu_source": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e"
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-*",
+      "rv64um-p-*",
+      "rv64ua-p-*",
+      "rv64uc-p-*",
+      "rv64mi-p-*",
+      "rv64si-p-*"
+    ],
+    "policy": "Run every program in the fixed required-test catalog that matches the selection patterns."
+  },
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_arbiter.patch",
+      "sha256": "00c3c13081a7c62c4a50a2eb3a0ff465a6e06b4fed264627d148b3df1a5625af",
+      "applies_to": "Rift2Core revision 64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "purpose": "Add a CPU_EVAL_OBSERVATION_MISMATCH probe to LsuBase and DcacheBase, outside the chisel3.util.Arbiter class body candidates replace, covering the six live multi-input instantiations Lsu.ls_arb, Lsu.lu_wb_arb, Lsu.irtn_arb, Lsu.frtn_arb, Dcache.op_arb and Dcache.rd_arb. The probe re-derives the arbitration contract from each site's own input valid signals and flags any cycle where the candidate's driven chosen, out.valid or per-input transfer disagrees, comparing only protocol-observable quantities so that the value of ready on an input that is not asserting valid is not constrained. The probe also emits CPU_EVAL_ARBITER_CONTENTION, a per-instance counter capped at eight reports for cycles in which two or more inputs compete. This marker does not affect the verdict."
+    }
+  ],
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches and no CPU_EVAL_OBSERVATION_MISMATCH marker from harness/observe_arbiter.patch."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch"
+}

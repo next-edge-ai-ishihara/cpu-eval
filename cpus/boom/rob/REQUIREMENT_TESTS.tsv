@@ -1,0 +1,7 @@
+requirement	test_program	test_behavior
+Dispatch, track completion, and commit instructions in order	rv64ui-p-add;rv64ui-p-lw;rv64ui-p-sw	The fixed upstream arithmetic and memory tests exercise ROB allocation, writeback completion, and in-order retirement.
+Preserve precise state across branch recovery	rv64ui-p-beq	The conditional-branch test exercises speculative entries and redirect recovery while retired state is compared with Spike.
+Preserve precise architectural state at an environment call	rv64mi-p-scall	The fixed upstream environment-call test checks the architectural trap cause and return address in the complete CPU.
+Commit a ready head entry without an extra ROB-originated stall	test/RobPublicContractTest.scala	The public-port test checks completed head-row retirement and CSR stall.
+Flush younger work when reporting an exception at the commit head	test/RobPublicContractTest.scala	The public-port test checks the reported cause, simultaneous flush validity, and absence of architectural retirement for an exception injected at dispatch.
+Complete a branch-heavy loop program	rv64mi-p-loop_branch_cycles	The complete CPU must report PASSED and commit x20; the cycle count is recorded but not compared.

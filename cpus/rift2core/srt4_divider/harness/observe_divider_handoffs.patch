@@ -1,0 +1,96 @@
+--- a/src/main/scala/rift2Core/backend/Mul.scala
++++ b/src/main/scala/rift2Core/backend/Mul.scala
+@@ -119,6 +119,93 @@
+ 
+ 
+ class MulDiv(implicit p: Parameters) extends MulDivBase with Mul with Div {
++
++  val probe = Module(new SRT4Divider(new Mul_iss_info, 64))
++  val initialDelay = RegInit(32.U(6.W))
++  when(initialDelay =/= 0.U) { initialDelay := initialDelay - 1.U }
++  val state = RegInit(0.U(3.W))
++  val restartDelay = RegInit(0.U(5.W))
++  val triedB = RegInit(false.B)
++  val acceptedB = RegInit(false.B)
++  val acceptedC = RegInit(false.B)
++  val returnedB = RegInit(false.B)
++  val returnedC = RegInit(false.B)
++  val sawError = RegInit(false.B)
++  val active = !reset.asBool && initialDelay === 0.U
++  val requestA = state === 0.U
++  val requestB = state === 4.U
++  val requestC = state === 5.U
++  val stall = active && requestB && !triedB
++  val flushing = active && state === 2.U
++  val afterFlush = state >= 3.U
++  val dividendA = "h7fffffffffffffff".U(64.W)
++  val dividend = Mux(requestA, dividendA, Mux(requestB, 37.U, 88.U))
++  val divisor = Mux(requestA, 3.U, Mux(requestB, 7.U, 9.U))
++
++  probe.io.enq.valid := active && (requestA || requestB || requestC)
++  probe.io.enq.bits := 0.U.asTypeOf(probe.io.enq.bits)
++  probe.io.enq.bits.fun.divu := true.B
++  probe.io.enq.bits.param.rd0 := Mux(requestC, 33.U, 32.U)
++  probe.io.enq.bits.param.dat.op1 := dividend
++  probe.io.enq.bits.param.dat.op2 := divisor
++  probe.io.op1 := dividend
++  probe.io.op2 := divisor
++  probe.io.flush := flushing
++  probe.io.deq.ready := !stall
++
++  when(active) {
++    when(requestA && probe.io.enq.fire) {
++      state := 1.U
++    }.elsewhen(state === 1.U) {
++      state := 2.U
++    }.elsewhen(flushing) {
++      printf("CPU_EVAL_SRT4_FLUSH\n")
++      restartDelay := 16.U
++      state := 3.U
++    }.elsewhen(state === 3.U) {
++      restartDelay := restartDelay - 1.U
++      when(restartDelay === 1.U) { state := 4.U }
++    }.elsewhen(requestB) {
++      triedB := true.B
++      when(probe.io.enq.fire) { state := 5.U }
++    }.elsewhen(requestC && probe.io.enq.fire) {
++      state := 6.U
++    }
++  }
++
++  val acceptB = active && requestB && probe.io.enq.fire
++  val acceptC = active && requestC && probe.io.enq.fire
++  val output = probe.io.deq.bits
++  when(acceptB) { acceptedB := true.B }
++  when(acceptC) { acceptedC := true.B }
++  when(acceptB || acceptC) {
++    printf("CPU_EVAL_SRT4_ACCEPT rd=%d ready=%d\n",
++      probe.io.enq.bits.param.rd0, probe.io.deq.ready)
++  }
++  when(active && afterFlush && probe.io.deq.fire) {
++    printf("CPU_EVAL_SRT4_RESULT rd=%d op1=%d quo=%d rem=%d\n",
++      output.param.rd0, output.param.dat.op1, probe.io.quo, probe.io.rem)
++    val matchesB = (acceptedB || acceptB) && !returnedB &&
++      output.param.rd0 === 32.U && output.param.dat.op1 === 37.U && output.param.dat.op2 === 7.U &&
++      probe.io.quo === 5.U && probe.io.rem === 2.U
++    val matchesC = (acceptedC || acceptC) && !returnedC &&
++      output.param.rd0 === 33.U && output.param.dat.op1 === 88.U && output.param.dat.op2 === 9.U &&
++      probe.io.quo === 9.U && probe.io.rem === 7.U
++    when(output.fun.divu && (matchesB || matchesC)) {
++      when(matchesB) { returnedB := true.B }
++      when(matchesC) { returnedC := true.B }
++    }.otherwise {
++      when(!sawError) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH SRT4Divider stale, duplicate, or incorrect result\n")
++        sawError := true.B
++      }
++    }
++  }
++  when(active && state === 6.U && returnedB && returnedC) {
++    printf("CPU_EVAL_SRT4_COMPLETE\n")
++    state := 7.U
++  }
++
+ 
+ 
+   // io.mul_iss_exe.ready := ~isDivBusy

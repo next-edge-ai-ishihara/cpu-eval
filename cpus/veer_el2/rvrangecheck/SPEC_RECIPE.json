@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for rvrangecheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        614,
+        620
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Parent instantiation for rvrangecheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ifc_ctl.sv",
+      "lines": [
+        223,
+        228
+      ],
+      "language": "verilog",
+      "sha256": "f0085e3288f3e4ed54dfaa45c386c16daf6a2298c3ae39721726a168f07576f8"
+    },
+    {
+      "label": "Parent instantiation for rvrangecheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_addrcheck.sv",
+      "lines": [
+        80,
+        85
+      ],
+      "language": "verilog",
+      "sha256": "3fe66d70ff9da1de31e7ca98b818c3c3c62516511636da114e2af79351f480f0"
+    },
+    {
+      "label": "Core-memory alignment rules and memory size build arguments",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/build-args.md",
+      "lines": [
+        31,
+        53
+      ],
+      "language": "markdown",
+      "sha256": "db2204b93ef78d2fba2fa39ef3994a91f051c805a800fdcc405afb0bfca8d690"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `rvrangecheck`\n\nImplement the complete `rvrangecheck` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module rvrangecheck` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Parent instantiation",
+      "text": "```\n\n## Parent instantiation\n\n### design/ifu/el2_ifu_ifc_ctl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Next parent excerpt",
+      "text": "```\n\n### design/lsu/el2_lsu_addrcheck.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Documentation",
+      "text": "```\n\n## Documentation\n\n### docs/source/build-args.md\n\n```markdown\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n"
+    }
+  ]
+}

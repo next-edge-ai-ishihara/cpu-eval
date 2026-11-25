@@ -1,0 +1,22 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_cmp_and_mux",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "pic_cmp_and_mux",
+    "path": "test/pic_cmp_and_mux.s",
+    "sha256": "dc4880a02701a8da9e7bab94ab6cd33d36cf0d7a7932b8fdb616fd6a53d866da"
+  },
+  "run": "bash test/evaluate_pic_cmp_and_mux.sh",
+  "run_sha256": "4c6bf9bee04fd9bef7811c91e6a32b335e795c5ed61d758ced29b12be5e44b52",
+  "comparison": "The bare-metal program checks the recorded fast-redirect ID for unequal and equal priority, then writes 0xff for pass or 0x01 for fail to the testbench mailbox."
+}

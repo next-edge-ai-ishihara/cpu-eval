@@ -1,0 +1,45 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/sync_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_sync_buffer",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_sync_buffer.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "4f8e44eb05307acc9982e2797e454314e76ff4fc3cebaef372f587b07dcd1b14",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "daeae4932d1c0cef1f2808f1644ed42013e3e5fb722bb7e8b20e56b782610c89",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "application_order": [
+    "checkout the recorded CVA6 revision and initialize the HPDcache submodule at the recorded revision",
+    "replace rtl/src/common/hpdcache_sync_buffer.sv in the HPDcache submodule with the submitted candidate",
+    "run harness/evaluate.sh, which first tests external ports after reset release and then invokes the shared architectural trace evaluator on the native CPU connections without an added test connection patch"
+  ],
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_sync_buffer.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision; no generated test source is stored"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "2203782c8d8b7654a1085d998b4d5600cf78f803fa3f56e8e4386decdaa25102",
+    "test": "harness/sync_ports_tb.sv",
+    "test_sha256": "6d4622425c6efc4c6c4a5636658b0fafc0b14ecd9b424e809398da7aebcc73cf",
+    "configuration": "The data widths of the cv32a60x instances: 4 and 86 bits with FEEDTHROUGH=0, 38 and 86 bits with FEEDTHROUGH=1; 2048 occupied/write/read/payload cases across the four configurations, with each 8-bit payload repeated across the data width. Legal port writes establish occupancy; assert and release reset between clock edges, then check empty state before any subsequent clock edge. Idle edges test retention.",
+    "comparison_scope": "Compare permissions and valid data after reset release only; internal signals, invalid data and outputs while reset is asserted are not compared.",
+    "environment": "Linux, Python 3, Verilator --binary --timing, C++ and make. VERILATOR may name its executable.",
+    "result": "PASS (0) requires 2048 ordered OBS records, SUMMARY configurations=4 cases=2048 errors=0, SYNC_PORT_TEST_COMPLETE and normal exit. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2). Build limit 120 seconds; run limit 10 seconds. CPU evaluation follows only after port-test PASS."
+  }
+}

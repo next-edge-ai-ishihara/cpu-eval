@@ -1,0 +1,14 @@
+id: stream_fifo_low_latency
+cpu: vexriscv
+target:
+  repository: https://github.com/SpinalHDL/SpinalHDL.git
+  revision: 95a5e6c65c54acfc4707c8fe6ef8b5d297cfcbde
+  file: lib/src/main/scala/spinal/lib/Stream.scala
+  class: StreamFifoLowLatency
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: ../TEST_RECIPE.json
+  evaluator: ../harness/evaluate_source_unit.py

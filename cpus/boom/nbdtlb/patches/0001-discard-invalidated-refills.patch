@@ -1,0 +1,12 @@
+diff --git a/src/main/scala/lsu/tlb.scala b/src/main/scala/lsu/tlb.scala
+--- a/src/main/scala/lsu/tlb.scala
++++ b/src/main/scala/lsu/tlb.scala
+@@ -174,7 +174,7 @@
+   val ppn = widthMap(w => Mux1H(hitsVec(w) :+ !vm_enabled(w), all_entries.map(_.ppn(vpn(w))) :+ vpn(w)(ppnBits-1, 0)))
+ 
+     // permission bit arrays
+-  when (do_refill) {
++  when (do_refill && !invalidate_refill) {
+     val pte = io.ptw.resp.bits.pte
+     val newEntry = Wire(new EntryData)
+     newEntry.ppn := pte.ppn

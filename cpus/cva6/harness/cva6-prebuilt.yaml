@@ -1,0 +1,13 @@
+- iss: spike
+  path_var: RTL_PATH
+  tool_path: SPIKE_PATH
+  tb_path: TB_PATH
+  cmd: >
+    make spike steps=2000000 target=<target> variant=<variant> priv=<priv> elf=<elf> tool_path=<tool_path> log=<log> spike_params='<spike_params>'
+
+- iss: veri-testharness
+  path_var: RTL_PATH
+  tool_path: SPIKE_PATH
+  tb_path: TB_PATH
+  cmd: >
+    <path_var>/../cpu-eval-prebuilt-runner/run_prebuilt_testharness.sh <path_var> <tool_path> <variant> <elf> <issrun_opts> <isspostrun_opts> <log>

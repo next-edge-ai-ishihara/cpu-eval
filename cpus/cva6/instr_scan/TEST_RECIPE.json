@@ -1,0 +1,39 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/scanner_ports_tb.sv",
+    "../harness/candidate_error.py",
+    "../harness/compare_cycle_measurement.py",
+    "../harness/port_work_directory.py"
+  ],
+  "schema_version": 1,
+  "cpu": "cva6",
+  "module": "instr_scan",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/frontend/instr_scan.sv",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "66e5e6d74c9431429072c5cacf92ab70c68dc164f420ba80004cb62311077bc3",
+  "test_list": "harness/testlist_instr_scan_cycles.yaml",
+  "test_list_sha256": "dbe200e0b71f4cb28a923090f47e01f0e6dbd2bad449ab70f2016c33fcee6ea1",
+  "directed_test": "harness/instr_scan_cycles.S",
+  "directed_test_sha256": "525a06c924ce4b7584515496857325abfad9ecaf20c3ebac05928da1c43f1756",
+  "comparison": {
+    "kind": "rtl_only_fixed_cycle_count",
+    "value": "the mcycle delta committed to x20 after a fixed 256-iteration warmup and a fixed 4096-iteration branch, call, and return interval"
+  },
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/frontend/instr_scan.sv",
+    "test_sources": "copy the recorded directed_test beside the pinned RISC-V Architectural Tests as performed by the evaluator",
+    "expected_cycle_delta": 49184
+  },
+  "directed_semantic_comparator": "../harness/compare_cycle_measurement.py",
+  "directed_semantic_comparator_sha256": "d71f759219882f5ea2af555cca9ba8a113a6a774aaa042dd52941eed086eff5d",
+  "port_evaluator": "harness/evaluate_ports.py",
+  "port_evaluator_sha256": "4ada650951191124054d4b96d5c3b2003d9944ce15dde544476f07afad117562",
+  "port_testbench": "harness/scanner_ports_tb.sv",
+  "port_testbench_sha256": "2a54dcbfa9d345d23658399c97188d8d391c805e0c8014719650d9f8ac3b4ece"
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "problem": "WriteBackUnit",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/backend/LSU/wrtieBackUnit.scala",
+    "source_unit": "WriteBackUnit"
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-*",
+      "rv64um-p-*",
+      "rv64ua-p-*",
+      "rv64uc-p-*",
+      "rv64mi-p-*",
+      "rv64si-p-*"
+    ],
+    "policy": "Run every program in the fixed required-test catalog that matches the selection patterns."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches and no write-back payload or voluntary release permission mismatch."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_release_payload.patch",
+      "sha256": "aa9bc81adf9ca0386e824bcd09932404c25b7ce4487455c8160136f395477097",
+      "purpose": "Compare each emitted TileLink C data beat with the corresponding write-back request at the CPU cache boundary."
+    },
+    {
+      "path": "harness/observe_release_permission.patch",
+      "sha256": "ea8467874b9c9769bb843317cc12692fb0e26ef61b54b1bb5927ce252fcab738",
+      "purpose": "Check the permission field on voluntary releases at the D-cache TileLink C port."
+    }
+  ]
+}

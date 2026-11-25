@@ -1,0 +1,46 @@
+diff --git a/pygen/pygen_src/target/rv32imc/riscv_core_setting.py b/pygen/pygen_src/target/rv32imc/riscv_core_setting.py
+index d91f2ed..a57dc72 100644
+--- a/pygen/pygen_src/target/rv32imc/riscv_core_setting.py
++++ b/pygen/pygen_src/target/rv32imc/riscv_core_setting.py
+@@ -12,8 +12,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ 
+ import math
+ from pygen_src.riscv_instr_pkg import (privileged_reg_t, satp_mode_t,
+-                                       riscv_instr_group_t, mtvec_mode_t,
+-                                       privileged_mode_t)
++                                       riscv_instr_group_t, riscv_instr_name_t,
++                                       mtvec_mode_t, privileged_mode_t)
+ 
+ 
+ # -----------------------------------------------------------------------------
+@@ -30,10 +30,28 @@ SATP_MODE = satp_mode_t.BARE
+ supported_privileged_mode = [privileged_mode_t.MACHINE_MODE]
+ 
+ # Unsupported instructions
+-unsupported_instr = []
++unsupported_instr = [
++    riscv_instr_name_t.PCNT, riscv_instr_name_t.PCNTW,
++    riscv_instr_name_t.SLO, riscv_instr_name_t.SLOI,
++    riscv_instr_name_t.SLOW, riscv_instr_name_t.SLOIW,
++    riscv_instr_name_t.SRO, riscv_instr_name_t.SROI,
++    riscv_instr_name_t.SROW, riscv_instr_name_t.SROIW,
++    riscv_instr_name_t.SBCLR, riscv_instr_name_t.SBCLRI,
++    riscv_instr_name_t.SBCLRW, riscv_instr_name_t.SBCLRIW,
++    riscv_instr_name_t.SBSET, riscv_instr_name_t.SBSETI,
++    riscv_instr_name_t.SBSETW, riscv_instr_name_t.SBSETIW,
++    riscv_instr_name_t.SBINV, riscv_instr_name_t.SBINVI,
++    riscv_instr_name_t.SBINVW, riscv_instr_name_t.SBINVIW,
++    riscv_instr_name_t.SBEXT, riscv_instr_name_t.SBEXTI,
++    riscv_instr_name_t.SBEXTW,
++    riscv_instr_name_t.PACK, riscv_instr_name_t.PACKW,
++    riscv_instr_name_t.PACKU, riscv_instr_name_t.PACKUW,
++    riscv_instr_name_t.PACKH,
++]
+ 
+ # ISA supported by the processor
+-supported_isa = [riscv_instr_group_t.RV32I, riscv_instr_group_t.RV32M, riscv_instr_group_t.RV32C]
++supported_isa = [riscv_instr_group_t.RV32I, riscv_instr_group_t.RV32M,
++                 riscv_instr_group_t.RV32C, riscv_instr_group_t.RV32B]
+ 
+ # Interrupt mode support
+ supported_interrupt_mode = [mtvec_mode_t.DIRECT, mtvec_mode_t.VECTORED]

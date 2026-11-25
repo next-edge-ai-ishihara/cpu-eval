@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec.sv",
+      "lines": [
+        30,
+        341
+      ],
+      "language": "verilog",
+      "sha256": "e8c378100293edfd140fb064cf6f1cb00c8886f12ffc4c7c5a4c2a527af271ba"
+    },
+    {
+      "label": "Parent instantiation for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/el2_veer.sv",
+      "lines": [
+        1019,
+        1024
+      ],
+      "sha256": "3c1df18fbb7c0c753ed51cd842c9d58c7b04c9d485d8ec9d79177885afd610e7"
+    },
+    {
+      "label": "Dependency type declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/include/el2_def.sv",
+      "lines": [
+        8,
+        16
+      ],
+      "language": "verilog",
+      "sha256": "3cd80efbf48788104ecc3f1d2c0c69ed9433e36a85e2f9a0a21a8ac2abeb9dc6"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_decode_ctl.sv",
+      "lines": [
+        17,
+        203
+      ],
+      "language": "verilog",
+      "sha256": "d9aa32a9512b55755685351fdfa0681a6b645becea0ee6a5beeef92f4bb2ab56"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_gpr_ctl.sv",
+      "lines": [
+        16,
+        50
+      ],
+      "language": "verilog",
+      "sha256": "35d69d835e2db454cdd5f8fdda251344fa0520e1f66c4b244aaf4278c3e93aca"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_ib_ctl.sv",
+      "lines": [
+        16,
+        69
+      ],
+      "language": "verilog",
+      "sha256": "e5aea85a31b90ff591460e6114c0c81c48936a0f99ec4f95e0f62b7cb2e66fb0"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_tlu_ctl.sv",
+      "lines": [
+        26,
+        271
+      ],
+      "language": "verilog",
+      "sha256": "242ed4667d0e849aac636b0646bc3750aa1e9afc8a19a95a82b4e97f8e6f22fc"
+    },
+    {
+      "label": "Dependency module declaration for el2_dec",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_trigger.sv",
+      "lines": [
+        25,
+        35
+      ],
+      "language": "verilog",
+      "sha256": "a81301f1fdfe715d1b459a4ff954cc01ee65a30e8a081b84682edd1c09c4c07d"
+    },
+    {
+      "label": "Trace port signals in the core complex port list",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/complex-ports.md",
+      "sha256": "e38ce3eed6f59884968a14776863b18b4a076441c240a61a6c0b68c8a065b4b8",
+      "lines": [
+        821,
+        844
+      ]
+    },
+    {
+      "label": "Trace port footnote in the core complex port list",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/complex-ports.md",
+      "sha256": "e38ce3eed6f59884968a14776863b18b4a076441c240a61a6c0b68c8a065b4b8",
+      "lines": [
+        880,
+        883
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `el2_dec`\n\nImplement the complete `el2_dec` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module el2_dec` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "text": "\n## Parent instantiation\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Dependency declarations",
+      "text": "\n## Dependency declarations\n\n### design/include/el2_def.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_decode_ctl.sv",
+      "text": "```\n\n### design/dec/el2_dec_decode_ctl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_gpr_ctl.sv",
+      "text": "```\n\n### design/dec/el2_dec_gpr_ctl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_ib_ctl.sv",
+      "text": "```\n\n### design/dec/el2_dec_ib_ctl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_tlu_ctl.sv",
+      "text": "```\n\n### design/dec/el2_dec_tlu_ctl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Path heading for design/dec/el2_dec_trigger.sv",
+      "text": "```\n\n### design/dec/el2_dec_trigger.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Dependency declarations",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading for Documentation",
+      "text": "\n## Documentation\n\n### docs/source/complex-ports.md\n\n```markdown\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission between documentation excerpts",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Documentation",
+      "text": "```\n"
+    }
+  ]
+}

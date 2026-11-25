@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "4c93f8e4fc5cf8be54b42cde0e29027cb4d8822a253956f0aa560b4d049d3a12",
+  "prompt_sha256": "cc6fd500a8824fc7f4994fbdd5c4399e09746da90fe856e4656fe4e3fcfa8ba1",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        299
+      ],
+      "sha256": "bc0eed5f2384d21d1d1b9bd95ed6e52b58606e8b862594c392f6f1c6bf2e492f"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        299,
+        649
+      ],
+      "sha256": "b7a49eacef00d2f6940084332456ab8f9a74ed80cc07ead281371cee72eb9e45"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Parent instantiation",
+      "prompt_bytes": [
+        649,
+        725
+      ],
+      "sha256": "ab6fb080360b2c1bb60da38b4bc9c016c4ab47e9d66c990e03e17cf3f5f6444c"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        725,
+        1105
+      ],
+      "sha256": "eb46fd0720ce037f6ec2709ec0bf3a2c6ae00bccd232a187bb1a4f95676a563b"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Next parent excerpt",
+      "prompt_bytes": [
+        1105,
+        1158
+      ],
+      "sha256": "f17e0b92c9a9d7301714d9d14ce4fbda3ce10be22f9f383f3495b92746966b51"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1158,
+        1415
+      ],
+      "sha256": "16e4cbb119eb841fe109c5773fc057eb172d95314212aa82ca9a263a1b2af330"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Documentation",
+      "prompt_bytes": [
+        1415,
+        1481
+      ],
+      "sha256": "5ca54e7851dee1303c7bcd49e8c2ba932de49842ef9cf867d1cae474a6dd666f"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1481,
+        3247
+      ],
+      "sha256": "cb06c79eb5fb1c3e78f435d63ea0db5d94336fdb02fa9ae5f8a2372cbceee8ad"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        3247,
+        3251
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvrangecheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        614,
+        620
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Parent instantiation for rvrangecheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ifc_ctl.sv",
+      "lines": [
+        223,
+        228
+      ],
+      "language": "verilog",
+      "sha256": "f0085e3288f3e4ed54dfaa45c386c16daf6a2298c3ae39721726a168f07576f8"
+    },
+    {
+      "label": "Parent instantiation for rvrangecheck",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_addrcheck.sv",
+      "lines": [
+        80,
+        85
+      ],
+      "language": "verilog",
+      "sha256": "3fe66d70ff9da1de31e7ca98b818c3c3c62516511636da114e2af79351f480f0"
+    },
+    {
+      "label": "Core-memory alignment rules and memory size build arguments",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/build-args.md",
+      "lines": [
+        31,
+        53
+      ],
+      "language": "markdown",
+      "sha256": "db2204b93ef78d2fba2fa39ef3994a91f051c805a800fdcc405afb0bfca8d690"
+    }
+  ]
+}

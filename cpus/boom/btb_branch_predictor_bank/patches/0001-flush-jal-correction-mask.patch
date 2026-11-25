@@ -1,0 +1,12 @@
+diff --git a/src/main/scala/ifu/bpd/btb.scala b/src/main/scala/ifu/bpd/btb.scala
+--- a/src/main/scala/ifu/bpd/btb.scala
++++ b/src/main/scala/ifu/bpd/btb.scala
+@@ -151,7 +151,7 @@
+   val s1_update_wbtb_mask = (UIntToOH(s1_update_cfi_idx) &
+     Fill(bankWidth, s1_update.bits.cfi_idx.valid && s1_update.valid && s1_update.bits.cfi_taken && s1_update.bits.is_commit_update))
+ 
+-  val s1_update_wmeta_mask = ((s1_update_wbtb_mask | s1_update.bits.br_mask) &
++  val s1_update_wmeta_mask = ((s1_update_wbtb_mask | s1_update.bits.br_mask | s1_update.bits.btb_mispredicts) &
+     (Fill(bankWidth, s1_update.valid && s1_update.bits.is_commit_update) |
+      (Fill(bankWidth, s1_update.valid) & s1_update.bits.btb_mispredicts)
+     )

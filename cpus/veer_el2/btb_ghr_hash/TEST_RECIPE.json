@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_btb_ghr_hash",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "kind": "directed_mcycle_probe",
+    "name": "btb_hash_cycle_probe",
+    "path": "harness/btb_hash_cycle_probe.s",
+    "sha256": "da7ae44aa50f372d53697478bef12aab3d1eaf14d6e5ae066eb53dd26bb9b8c3",
+    "build": "cd tools && make TEST=btb_hash_cycle_probe CONF_PARAMS='-set build_axi4' TB_MAX_CYCLES=5000000 verilator",
+    "reference_mcycle_delta": "0004a62c",
+    "warmup_iterations": 200,
+    "measurement_iterations": 4000
+  },
+  "run": "bash ../_shared/evaluate_btb_hash_probe.sh",
+  "comparison": "exact match against the reference mcycle delta (bit-exact deterministic simulation, no tolerance band)"
+}

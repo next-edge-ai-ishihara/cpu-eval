@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "Mul54",
+  "sources": [
+    {
+      "label": "Package and Chisel import",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64.scala",
+      "lines": [
+        38,
+        40
+      ],
+      "sha256": "0f48ff3c0336f173d034ba4328e9b83bd48aa6500769fc6ffb7f7b04a1687910"
+    },
+    {
+      "label": "Target declaration and interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64.scala",
+      "lines": [
+        86,
+        96
+      ],
+      "sha256": "0f48ff3c0336f173d034ba4328e9b83bd48aa6500769fc6ffb7f7b04a1687910"
+    },
+    {
+      "label": "Parent connections",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64.scala",
+      "lines": [
+        75,
+        83
+      ],
+      "sha256": "0f48ff3c0336f173d034ba4328e9b83bd48aa6500769fc6ffb7f7b04a1687910"
+    },
+    {
+      "label": "Three-cycle multiplier-adder contract",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "doc/divSqrtRecodedFloat64_mulAddZ31.txt",
+      "lines": [
+        71,
+        94
+      ],
+      "sha256": "15acee994b04323541bd2ffafcfd1ab75e154c074ea6e72bfc58c22f1cd5e77f"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `Mul54`\n\nImplement the complete `Mul54` module. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class Mul54` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Parent instantiation\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n\n## Documentation\n\n### `doc/divSqrtRecodedFloat64_mulAddZ31.txt`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "text": "```\n"
+    }
+  ]
+}

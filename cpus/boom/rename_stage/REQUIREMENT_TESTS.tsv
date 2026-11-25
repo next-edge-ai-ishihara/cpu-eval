@@ -1,0 +1,5 @@
+requirement	test_program	test_behavior
+Map logical integer and floating-point operands to physical registers	rv64ui-p-add;rv64uf-p-fadd	The fixed upstream integer and floating-point tests exercise both RenameStage instances and verify retired destination values against Spike.
+Bypass same-cycle superscalar mappings and track busy operands	rv64ui-p-add	Dependent integer operations activate physical-register allocation, same-group dependency handling, and wakeup readiness.
+Recover speculative mappings after control-flow redirection	rv64ui-p-beq;rv64ui-p-jalr	The fixed upstream control-flow tests exercise branch snapshots and rename recovery paths.
+Complete the loop and record elapsed cycles	rv64mi-p-loop_branch_cycles	Program completion and an observed x20 are required; x20 is diagnostic and is not compared.

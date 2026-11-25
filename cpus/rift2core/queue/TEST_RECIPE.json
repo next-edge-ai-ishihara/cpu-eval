@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "problem": "Queue",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/chipsalliance/chisel.git",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438",
+    "release": "v5.1.0",
+    "path": "src/main/scala/chisel3/util/Decoupled.scala",
+    "source_unit": "Queue",
+    "mechanism": "library_class_recompile_and_jar_splice",
+    "mechanism_description": "Rift2Core's build.sc resolves Chisel as the pre-compiled Maven artifact org.chipsalliance::chisel:5.1.0, so this source unit has no .scala file inside the CPU checkout that a candidate could overwrite. harness/evaluate.sh substitutes the candidate at the same definition boundary instead. It inserts the candidate class Queue definition into harness/chisel_5.1.0_Decoupled.scala, which is the file at the recorded revision (SHA-256 df28be6ddc2f193f6c02efb21e1bbb484d5d6b07b95bb4a3fcc223110c0d908a) with the class Queue definition at lines 244-326 replaced by one marker line, so inserting the upstream class reproduces that file byte for byte. It then compiles that one file in a throwaway mill module against the released chisel 5.1.0 artifacts under Scala 2.13.10 and the chisel 5.1.0 compiler plugin, patches the resulting chisel3/util/*.class files into a private per-run copy of the chisel jar, and points COURSIER_CACHE at that private cache for Rift2Core's ordinary elaborate-and-simulate flow. Nothing outside class Queue changes, and the shared pristine cache mirror is only read.",
+    "replaceable_region": {
+      "template": "harness/chisel_5.1.0_Decoupled.scala",
+      "template_sha256": "66da7df128db5aed5fb98cf90de7fcc0429524f54156e29cc49f78eb0a5d4541",
+      "upstream_sha256": "df28be6ddc2f193f6c02efb21e1bbb484d5d6b07b95bb4a3fcc223110c0d908a",
+      "lines": [
+        244,
+        326
+      ],
+      "description": "The class Queue[T <: Data](...) extends Module() declaration and body, at these lines of the upstream file, is not in the template; the candidate replaces the template's marker line 244. The QueueIO bundle, the Queue companion object, and every other definition in the file are fixed."
+    }
+  },
+  "cpu": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "instantiation_sites": "The candidate definition replaces every Queue instance in the design.",
+    "reset_convention": "Rift2Core parents discard queued state through the module reset input. The cancellation signal depends on the parent: the shown ALU and Issue connections use io.flush, while CsrScoreBoard uses io.isAbort."
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-*",
+      "rv64um-p-*",
+      "rv64ua-p-*",
+      "rv64uc-p-*",
+      "rv64mi-p-*",
+      "rv64si-p-*"
+    ],
+    "resolved_program_count": 103,
+    "policy": "Before compilation, require all 103 programs selected from ../_shared/required-test-catalog.json by the selection patterns, with both executable and memory initialization files present. A test-name override must retain every required program. Run the resulting complete selected set."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program reaches a terminal state, ends with Rift2Core's own Pass! line, has zero RTL-versus-ISA trace mismatches, and produces no CPU_EVAL_OBSERVATION_MISMATCH marker from the fixed integration probe. The three-entry flow Queue probe must complete with the expected ready/valid, FIFO data, occupancy and reset behavior."
+  },
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_alu_queue.patch",
+      "sha256": "1fac01bf31c48797399a266a366b00a4df0d7ecbc46c26131864862621707552",
+      "purpose": "Check the occupancy and pipe-ready contract of Rift2Core's one-entry ALU write-back Queue from handshake events observed outside the replaceable Queue definition."
+    },
+    {
+      "path": "harness/emit_queue3_probe.patch",
+      "sha256": "7fae5d5e0cbbeaa2eb8999b3918a768851617b528da5ca6e76d79b377d364d2e",
+      "purpose": "Generate a separate instance of the same three-entry flow Queue configuration used by the L2 SourceD readout."
+    }
+  ],
+  "source_language_dependency": {
+    "name": "Chisel",
+    "repository": "https://github.com/chipsalliance/chisel.git",
+    "version": "5.1.0",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch"
+}

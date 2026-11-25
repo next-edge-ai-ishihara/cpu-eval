@@ -1,0 +1,48 @@
+diff --git a/generators/chipyard/src/main/scala/config/BoomConfigs.scala b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+--- a/generators/chipyard/src/main/scala/config/BoomConfigs.scala
++++ b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+@@ -1,6 +1,8 @@
+ package chipyard
+ 
+ import freechips.rocketchip.config.{Config}
++import freechips.rocketchip.subsystem.{InSubsystem, TilesLocated}
++import boom.common.BoomTileAttachParams
+ 
+ // ---------------------
+ // BOOM Configs
+@@ -26,0 +29,35 @@
++class WithNullLocalObservableHistory extends Config((site, here, up) => {
++  case TilesLocated(InSubsystem) => up(TilesLocated(InSubsystem), site) map {
++    case tp: BoomTileAttachParams => tp.copy(tileParams = tp.tileParams.copy(core = tp.tileParams.core.copy(
++      localHistoryLength = 32,
++      localHistoryNSets = 128
++    )))
++    case other => other
++  }
++})
++
++class LargeBoomNullLocalObservableConfig extends Config(
++  new boom.common.WithBoomCommitLogPrintf ++
++  new WithNullLocalObservableHistory ++
++  new Config((site, here, up) => {
++    case TilesLocated(InSubsystem) => up(TilesLocated(InSubsystem), site) map {
++      case tp: BoomTileAttachParams => tp.copy(tileParams = tp.tileParams.copy(core = tp.tileParams.core.copy(
++        bpdMaxMetaLength = 64,
++        globalHistoryLength = 32,
++        branchPredictor = ((resp_in: boom.ifu.BranchPredictionBankResponse, p: freechips.rocketchip.config.Parameters) => {
++          val lbim = chisel3.Module(new boom.ifu.HBIMBranchPredictorBank(
++            boom.ifu.BoomHBIMParams(useLocal=true))(p))
++          val btb = chisel3.Module(new boom.ifu.BTBBranchPredictorBank()(p))
++          val preds = Seq(lbim, btb)
++          preds.map(_.io := chisel3.DontCare)
++          lbim.io.resp_in(0) := resp_in
++          btb.io.resp_in(0) := lbim.io.resp
++          (preds, btb.io.resp)
++        })
++      )))
++      case other => other
++    }
++  }) ++
++  new boom.common.WithNLargeBooms(1) ++
++  new chipyard.config.AbstractConfig)
++

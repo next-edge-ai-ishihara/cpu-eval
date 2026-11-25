@@ -1,0 +1,41 @@
+--- a/src/main/scala/rift2Core/rift2Core.scala
++++ b/src/main/scala/rift2Core/rift2Core.scala
+@@ -338,6 +338,38 @@
+   iwb_stage.io.fpuCsrCommit <> cmm_stage.io.fpuCsrCommit
+   iwb_stage.io.vpuCsrCommit <> cmm_stage.io.vpuCsrCommit
+   rnm_stage.io.isCSRMMUReady := iwb_stage.io.isCSRMMUReady 
++
++  val older = rnm_stage.io.rnReq(0)
++  val younger = rnm_stage.io.rnReq(1)
++  val olderAccessesStatus = older.fire && older.bits.csrIsa.isXCSR && older.bits.param.imm === "h300".U
++  val renameSawPair = RegInit(false.B)
++  val renameSawPending = RegInit(false.B)
++  when (!rnm_stage.reset.asBool) {
++    when (rnm_stage.io.isCSRMMUReady && olderAccessesStatus && younger.valid && younger.bits.lsuIsa.is_lsu) {
++      when (!renameSawPair) {
++        printf("CPU_EVAL_RENAME_SAME_CYCLE_MSTATUS_LSU\n")
++        renameSawPair := true.B
++      }
++      when (younger.fire) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH: Rename accepted a load/store with an older mstatus CSR in the same group\n")
++      }
++    }
++    when (!rnm_stage.io.isCSRMMUReady && older.valid && older.bits.lsuIsa.is_lsu) {
++      when (!renameSawPending) {
++        printf("CPU_EVAL_RENAME_PENDING_MSTATUS_LSU\n")
++        renameSawPending := true.B
++      }
++      when (older.fire) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH: Rename accepted a load/store while mstatus was pending\n")
++      }
++    }
++  }
++
++  val renameOrderObserved = RegInit(false.B)
++  when (renameSawPair && renameSawPending && !renameOrderObserved) {
++    printf("CPU_EVAL_RENAME_MSTATUS_LOAD_ORDER_DONE\n")
++    renameOrderObserved := true.B
++  }
+   
+   cmm_stage.io.rtc_clock := io.rtc_clock
+   if (hasDebugger) {cmm_stage.io.dm <> io.dm.get}

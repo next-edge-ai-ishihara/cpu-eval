@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for rvmaskandmatch",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        585,
+        593
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Parent instantiation for rvmaskandmatch",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/dec/el2_dec_trigger.sv",
+      "lines": [
+        43,
+        43
+      ],
+      "sha256": "a81301f1fdfe715d1b459a4ff954cc01ee65a30e8a081b84682edd1c09c4c07d"
+    },
+    {
+      "label": "Parent instantiation for rvmaskandmatch",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_trigger.sv",
+      "lines": [
+        60,
+        60
+      ],
+      "sha256": "646a7b45823ec42b9efa5e92138374713260f30a46b8b9fadcc535f6bd4aac4e"
+    },
+    {
+      "label": "Match field of the mcontrol trigger register",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/debugging.md",
+      "lines": [
+        1412,
+        1416
+      ],
+      "language": "markdown",
+      "sha256": "e314e83f8ab1955d6e712bd4f8d4fcb5399df90657ea081a740048cf096a7a0c"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `rvmaskandmatch`\n\nImplement the complete `rvmaskandmatch` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module rvmaskandmatch` definition in a single SystemVerilog code block, with no text outside the block.\n\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after Module declaration and heading for Parent instantiation",
+      "text": "\n```\n\n## Parent instantiation\n\n### design/dec/el2_dec_trigger.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Next parent excerpt",
+      "text": "```\n\n### design/lsu/el2_lsu_trigger.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and heading for Documentation",
+      "text": "```\n\n## Documentation\n\n### docs/source/debugging.md\n\n```markdown\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Fence and the full-mask port requirement",
+      "text": "```\n\n## Additional requirement\n\nWhen `masken` is 1 and every bit of `mask` is 1, `match` is 1 only when `data` equals `mask`.\n"
+    }
+  ]
+}

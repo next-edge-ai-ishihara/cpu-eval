@@ -1,0 +1,14 @@
+id: max_period_fibonacci_lfsr
+cpu: rift2core
+target:
+  repository: https://github.com/chipsalliance/chisel.git
+  revision: 066fb4705472e07bde340810ee45eaf8c1ad9438
+  file: src/main/scala/chisel3/util/random/FibonacciLFSR.scala
+  class: MaxPeriodFibonacciLFSR
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: harness/evaluate.sh

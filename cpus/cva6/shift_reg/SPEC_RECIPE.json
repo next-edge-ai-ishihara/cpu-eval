@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Selected shift-register depths",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        127,
+        128
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Module declaration for shift_reg",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/shift_reg.sv",
+      "lines": [
+        16,
+        24
+      ],
+      "sha256": "73fd475108016aa3ff5f940324e6bbf627a13bb8404e285b86876d3e948ff622"
+    },
+    {
+      "label": "Selected parent connection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/load_store_unit.sv",
+      "lines": [
+        627,
+        635
+      ],
+      "sha256": "ce091f34f60e489a79d335548355e7d69e7dcd3982f8ece835ce9df2baf72a78"
+    },
+    {
+      "label": "Common Cells shift_reg behavior",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/README.md",
+      "lines": [
+        70,
+        70
+      ],
+      "sha256": "553a4193973d569b692fde5cac4c83957989dce1764911156a93038a915a0819"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "# Implement `shift_reg`\n\nImplement the complete `shift_reg` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module shift_reg` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Parent instantiation\n\n### core/load_store_unit.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Documentation\n\n### vendor/pulp-platform/common_cells/README.md\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n"
+    }
+  ]
+}

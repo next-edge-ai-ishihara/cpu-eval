@@ -1,0 +1,4 @@
+requirement	test	test_behavior
+Double-precision division and square-root result and exception flags	rv64ud-p-fdiv;DivSqrtMultiplyReservationsTest	Compare the instruction trace with Spike and check several public results directly.
+Announce scheduled uses of the external integer multiplier-adder	DivSqrtMultiplyReservationsTest	With no other operations arriving, compare each advance reservation with subsequent use of bit zero.
+Leave the factor registers unclaimed when the multiplier-adder is available	DivSqrtMultiplyReservationsTest	Both latch outputs must remain clear while bit zero is clear.

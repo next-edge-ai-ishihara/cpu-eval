@@ -1,0 +1,738 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Ibex small configuration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "ibex_configs.yaml",
+      "lines": [
+        19,
+        24
+      ],
+      "sha256": "75b4e848face7fa31e1bc227aaa7a83cb2a8f45aa1fc0bd4fe2e2800f6caac28"
+    },
+    {
+      "label": "Ibex base ISA and compressed-extension configuration types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        36,
+        66
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Ibex compressed-instruction expansion states",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        318,
+        324
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Ibex multi-bit type and values",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        750,
+        760
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Module declaration for ibex_compressed_decoder",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_compressed_decoder.sv",
+      "lines": [
+        17,
+        33
+      ],
+      "sha256": "bea22598e9e5f734ace93826eafd01914d2b63565ee0b7e8c8deff25369fbfbd",
+      "language": "verilog"
+    },
+    {
+      "label": "Parent instantiation for ibex_compressed_decoder",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_if_stage.sv",
+      "lines": [
+        474,
+        501
+      ],
+      "sha256": "8b99f212f06aa942e53e8a768863587ffdc29176f5a486c6e273262311c9f6ae"
+    },
+    {
+      "label": "Official design documentation for ibex_compressed_decoder",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_fetch.rst",
+      "lines": [
+        3,
+        27
+      ],
+      "sha256": "859000b59274378622ed19178e53b117491110915274a95784683c497d209631"
+    },
+    {
+      "label": "RISC-V Zca extension definition",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        93,
+        98
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    },
+    {
+      "label": "RISC-V Zcb extension definition",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        121,
+        130
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    },
+    {
+      "label": "RISC-V Zcmp extension definition",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        211,
+        214
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    },
+    {
+      "label": "RISC-V Zcmp dependency",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zc.adoc",
+      "lines": [
+        219,
+        221
+      ],
+      "sha256": "844d34f48629573e2526636c1349e4d6e30fd0cdf261d8d45f81719d776b4aaf"
+    },
+    {
+      "label": "RISC-V compressed-instruction formats and behavior",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/c-st-ext.adoc",
+      "lines": [
+        169,
+        813
+      ],
+      "sha256": "f06b1bdb53df6cce6aee2014c72eed05b02269c9ee464f67d9141be31e9d1eef"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-andi.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-andi.edn",
+      "lines": [
+        1,
+        13
+      ],
+      "sha256": "38cff394f956c9bb8726e2b09d867be552aa4282aa0aa104f1faa4f229a2bd23"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-breakpoint-instr.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-breakpoint-instr.edn",
+      "lines": [
+        1,
+        11
+      ],
+      "sha256": "497d90955f01545ac47abd4c4ad0921980bf36b266669ba20358219bbc2af2f8"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-cb-format-ls.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-cb-format-ls.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "729db27ef38381a6ba3a61adf06afc2631407f28f7613d2dfd446bafbf334605"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-ci.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-ci.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "af0dd90aec9bb1be0dcce4ac4910f31ddb119c5dc52ba693351505bd007872d5"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-ciw.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-ciw.edn",
+      "lines": [
+        1,
+        11
+      ],
+      "sha256": "b2e977e4c5d135b7cdb14a64e8b1c3ca76621cf0565ebb7e9906294b552fb494"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-cj-format-ls.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-cj-format-ls.edn",
+      "lines": [
+        1,
+        20
+      ],
+      "sha256": "8176c1435ab9263e95410bb676b6f78c4b5922758f420c726b25c40f55eb25e3"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-cr-format-ls.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-cr-format-ls.edn",
+      "lines": [
+        1,
+        11
+      ],
+      "sha256": "45e1b41bcb91528000b2efcc50c092a6392d1e280d4dcdd87ed1776c9c859849"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-cs-format-ls.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-cs-format-ls.edn",
+      "lines": [
+        1,
+        14
+      ],
+      "sha256": "78706b87b10345b04d2e3786d215e03202e9c1a4546cd0c2e8dec275c8a1855b"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-def-illegal-inst.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-def-illegal-inst.edn",
+      "lines": [
+        1,
+        13
+      ],
+      "sha256": "733eb3efc81fbeb66a91da44d93f586a0c381605058ce57a247dcf01d45fe40a"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-int-reg-immed.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-int-reg-immed.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "e97ac51a351f3009fcffb00e06d30016c7a8bb40bed735eb78b989770aed8daa"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-int-reg-to-reg-ca-format.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "fd3f34b7c56e08f83ea842d69bc66c1c054c9c45",
+      "path": "src/images/wavedrom/c-int-reg-to-reg-ca-format.edn",
+      "lines": [
+        1,
+        13
+      ],
+      "sha256": "09ebcc3892e433378157b1ad0bebcaba35985d6b2b815bd6a12c2cea3078af27"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-int-reg-to-reg-cr-format.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "fd3f34b7c56e08f83ea842d69bc66c1c054c9c45",
+      "path": "src/images/wavedrom/c-int-reg-to-reg-cr-format.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "8ed51aee0b9c651a2924d7d8c37a5f850f5343f4163f21c79d56040e648c135a"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-integer-const-gen.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-integer-const-gen.edn",
+      "lines": [
+        1,
+        12
+      ],
+      "sha256": "29cf61e6610a9ec4e476980d6e104260225cc1023d37ac61481769318cb08f88"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-nop-instr.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-nop-instr.edn",
+      "lines": [
+        1,
+        13
+      ],
+      "sha256": "2fb218fa966bff8893f39088ac3532f01d997891095bc7c01b26fd3bd92c4766"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-sp-load-store-css.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-sp-load-store-css.edn",
+      "lines": [
+        1,
+        11
+      ],
+      "sha256": "16a012bd109489df887b72e3d0f09ab60379e08f54a0ac8a03d0963f8e381a66"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-sp-load-store.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-sp-load-store.edn",
+      "lines": [
+        1,
+        13
+      ],
+      "sha256": "e2ea30c9fe74a5d4020c460919e6187a95cd1360358f17e67a7cd0b28cb9a449"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: c-srli-srai.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/c-srli-srai.edn",
+      "lines": [
+        1,
+        13
+      ],
+      "sha256": "f710fdeac3e9fc5f985079d596a270f6f414ffeab9b95d513c269852192b936e"
+    },
+    {
+      "label": "RISC-V compressed encoding diagram: reg-based-ldnstr.edn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/images/wavedrom/reg-based-ldnstr.edn",
+      "lines": [
+        1,
+        14
+      ],
+      "sha256": "39953459b5401a8765eedec95e40b2b6bd697dea9b780b3358de5835ae152f9a"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "# Implement `ibex_compressed_decoder`\n\nImplement the complete `ibex_compressed_decoder` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ibex_compressed_decoder` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## CPU configuration used for evaluation\n\n### ibex_configs.yaml\n\n```yaml\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Package and imports\n\n### rtl/ibex_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Parent instantiation\n\n### rtl/ibex_if_stage.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Documentation\n\n### doc/03_reference/instruction_fetch.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/zc.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/c-st-ext.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-andi.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-breakpoint-instr.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-cb-format-ls.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-ci.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-ciw.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-cj-format-ls.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-cr-format-ls.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-cs-format-ls.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-def-illegal-inst.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-int-reg-immed.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-int-reg-to-reg-ca-format.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-int-reg-to-reg-cr-format.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-integer-const-gen.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-nop-instr.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-sp-load-store-css.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-sp-load-store.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/c-srli-srai.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### src/images/wavedrom/reg-based-ldnstr.edn\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 29
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    }
+  ]
+}

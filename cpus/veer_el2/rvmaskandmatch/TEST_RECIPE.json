@@ -1,0 +1,22 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvmaskandmatch",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "rvmaskandmatch_addr_match",
+    "path": "test/rvmaskandmatch_addr_match.s",
+    "sha256": "44c1b57c8a39485a3949cdb945ba26e4c4740311fab198a73fb317677bbcaea2"
+  },
+  "run": "bash test/evaluate_rvmaskandmatch.sh",
+  "run_sha256": "39b3ea0c2aef4a51512668a3bddfe74cb555ae82656982311dbf39925d23a3c8",
+  "comparison": "self-checking directed program observing mcause/mscause/mepc after a trigger-armed instruction fetch through a mailbox exit code (0xff pass, 0x01 fail), not a retired-instruction trace comparison"
+}

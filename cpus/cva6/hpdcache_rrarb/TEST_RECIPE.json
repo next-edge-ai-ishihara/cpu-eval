@@ -1,0 +1,45 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/rrarb_ports_tb.sv",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_rrarb",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_rrarb.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "2b3c6497fcbb636a8d0ef378609db4924574ce0cd2a3958a2709c1a7aff3cf8d",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "478dfd34db39eaaf796618954550014833bd7417d12d03a9685f2e5e68b86af4",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "application_order": [
+    "checkout the recorded CVA6 revision and initialize the HPDcache submodule at the recorded revision",
+    "run harness/evaluate.sh with the submitted candidate; it checks the ports, then the shared evaluator replaces the module in the fixed CPU and checks architectural traces"
+  ],
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_rrarb.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded architectural-test revision; use the unmodified CVA6 test list."
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "1fceca465e0b8f92ca16d12367e04a1065e975e5f2b4b875537dd6fdbd84a2e4",
+    "test": "harness/rrarb_ports_tb.sv",
+    "test_sha256": "9e537cc501cca4ab2490e0e4550ac76ba59509108df3e9b37d1a608dd6c31c80",
+    "fixed_dependency": "HPDcache f404e7ebbda8baa4af3729535f520a6b12a06d03:rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+    "fixed_dependency_sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55",
+    "scope": "N=4 and N=8, the cv32a60x instances, binary inputs: single and zero requests, grant retention while the selected request remains asserted, two full rotations for every nonempty stable request subset, and one-hot selection and hold under dynamic competition. 2962 observations must complete before CPU evaluation.",
+    "requirements": "SPEC ports and arbitration requirements: exclusive grant, order for fixed request sets, reset, and grant hold.",
+    "failure_classes": "PASS 0: complete zero-error observations. The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2)."
+  }
+}

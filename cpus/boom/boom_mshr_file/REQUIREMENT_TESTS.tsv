@@ -1,0 +1,5 @@
+requirement	test_program	test_behavior
+Allocate and arbitrate outstanding cache misses	rv64ui-p-lw;rv64ui-p-sw	The fixed CPU programs compare retired load destinations and values and store addresses and values against Spike.
+Retain and arbitrate data from concurrent cache-line refills	rv64ui-p-parallel_misses	Eight loads from distinct cache lines expose destination-register values in the retired trace independently of the program pass marker.
+Coordinate atomic memory requests with outstanding misses	rv64ua-p-amoadd_w;rv64ua-p-lrsc	The fixed upstream atomic tests exercise serialized atomic traffic through the miss-status file.
+Return one correctly valued response per accepted load with another set outstanding	BoomMSHRFileSecondaryTest	Accept two distinct-set primary loads and a same-line secondary load. Return the other line first and compare the identities, counts and data of all three responses. Reject responses for any unaccepted load.

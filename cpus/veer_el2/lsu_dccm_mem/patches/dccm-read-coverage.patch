@@ -1,0 +1,38 @@
+--- a/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
++++ b/tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S
+@@ -62,7 +62,14 @@
+                   li x30, 0x80000000
+                   li x31, 0xa
+                   la x27, user_stack_end
+-main:             li         t0, 0x52d893a0 #start riscv_int_numeric_corner_stream_5
++main:             li         t1, 0xf0040000
++                  li         t2, 0x1234abcd
++                  sw         t2, 0(t1)
++                  sw         t2, 12(t1)
++                  sw         t2, 16(t1)
++                  li         t0, 0xa1b2c3d4
++                  sw         t0, 15(t1)
++                  li         t0, 0x52d893a0 #start riscv_int_numeric_corner_stream_5
+                   li         t6, 0x83c22e1
+                   li         s6, 0x1
+                   li         t3, 0x20f26623
+@@ -2037,6 +2044,8 @@
+                   lui         a6, 109648
+                   c.addi      a2, 17
+                   addi        s9, zero, 279
++                  li         t1, 0xf0040000
++                  lw         s2, 0(t1)
+                   slti        s5, s4, 1266
+                   sub         zero, sp, s8
+                   c.addi16sp  sp, -16
+@@ -3242,6 +3251,10 @@
+                   mul         s7, s5, sp
+                   c.sub       a3, a2
+                   c.andi      s1, -1
++                  li         t1, 0xf0040000
++                  lw         a0, 15(t1)
++                  lw         a1, 12(t1)
++                  lw         a2, 16(t1)
+                   la x30, test_done
+                   jalr x0, x30, 0
+ test_done:        

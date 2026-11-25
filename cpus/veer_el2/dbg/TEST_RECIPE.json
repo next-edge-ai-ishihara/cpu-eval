@@ -1,0 +1,49 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2193
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_dbg",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+  },
+  "run": "bash test/evaluate_dbg.sh",
+  "port_probe": {
+    "source": "test/dbg_port_probe.sv",
+    "runner": "test/run_dbg_port_probe.sh",
+    "runner_sha256": "b432f1ac53955ede6836d95c7208d4ac295aa7803813d9347b83c51832b5347d",
+    "cases": "DM reset, halt/resume, four GPR/CSR/local-memory abstract commands, four invalid system bus accesses, word writes with AW first and W first, and word read with address increment",
+    "comparison": "External port values and accepted channel counts; masked write data bits and internal state are not compared",
+    "termination": "The fixed testbench's explicit wait bounds and simulated-time watchdog, build failures, unmarked runtime failures and a missing pass marker produce FAIL. Interrupted execution and the wall-clock limit are INVALID."
+  },
+  "comparison": "Ordered normalized GPR updates extracted from the Spike and RTL instruction traces; the runner requires 2193 matches and completion before the RTL cycle limit."
+}

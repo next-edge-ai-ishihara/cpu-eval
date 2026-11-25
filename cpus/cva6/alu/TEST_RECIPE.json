@@ -1,0 +1,364 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "alu",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/alu.sv",
+  "tests": [
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/add-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "68025ba2b36eac24fcf33a5ba31c7a36a7de9124accb23f264991885fca7849a",
+      "patches": [],
+      "sha256_after_patches": "68025ba2b36eac24fcf33a5ba31c7a36a7de9124accb23f264991885fca7849a"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/sub-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "8f5317f66303759272b07a45d3eb430bbd0e0164b9afcc07169475c19956ae10",
+      "patches": [],
+      "sha256_after_patches": "8f5317f66303759272b07a45d3eb430bbd0e0164b9afcc07169475c19956ae10"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/addi-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "4ac1dcbd5bf0b43e58f3d3693fe70d84b8abf9d8a3117e57c082960ac6f0d0dd",
+      "patches": [],
+      "sha256_after_patches": "4ac1dcbd5bf0b43e58f3d3693fe70d84b8abf9d8a3117e57c082960ac6f0d0dd"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/and-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "3f8e4ba1f7cfaed92dc2f8cf5649e07f8299760df3f6b96903f7b8b969cb7496",
+      "patches": [],
+      "sha256_after_patches": "3f8e4ba1f7cfaed92dc2f8cf5649e07f8299760df3f6b96903f7b8b969cb7496"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/or-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "58f1ce16fddce6bcaf8ec8c7bf4940838851353a52d9b911a61eddca255b78c3",
+      "patches": [],
+      "sha256_after_patches": "58f1ce16fddce6bcaf8ec8c7bf4940838851353a52d9b911a61eddca255b78c3"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/xor-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "8e22cc99190b297d64edd780aed9ca110a53aa2ae57b560b6f3d779d01d0c5e4",
+      "patches": [],
+      "sha256_after_patches": "8e22cc99190b297d64edd780aed9ca110a53aa2ae57b560b6f3d779d01d0c5e4"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/sll-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "f28d8a27ab6ba703d5b1d5b2ec730f3bae22227f1d0e5b06ad1e3b4eae4c1715",
+      "patches": [],
+      "sha256_after_patches": "f28d8a27ab6ba703d5b1d5b2ec730f3bae22227f1d0e5b06ad1e3b4eae4c1715"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/srl-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "70c86fbaa69ca6275a428755dbb7a56cde2936d34c917c05cf25b20b8fb180f4",
+      "patches": [],
+      "sha256_after_patches": "70c86fbaa69ca6275a428755dbb7a56cde2936d34c917c05cf25b20b8fb180f4"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/sra-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "ddb5ace1701f982c5256fcdbb4231a293705e2f481e549c4e102f4ad64e8c43a",
+      "patches": [],
+      "sha256_after_patches": "ddb5ace1701f982c5256fcdbb4231a293705e2f481e549c4e102f4ad64e8c43a"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/slt-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "2316be7c5dfe74d6ba1b36ee6e6dd2fa5956de9b4cc7f8ee7b4041f14b21db1c",
+      "patches": [],
+      "sha256_after_patches": "2316be7c5dfe74d6ba1b36ee6e6dd2fa5956de9b4cc7f8ee7b4041f14b21db1c"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/sltu-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "096498faed9efccc7ab56d466ff89f6e3caf1d27a75cdee7926785148a4b6799",
+      "patches": [],
+      "sha256_after_patches": "096498faed9efccc7ab56d466ff89f6e3caf1d27a75cdee7926785148a4b6799"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/beq-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "6f07d29073a1c213e666624a600c75c484fa455ee77b50431a5f56e14b9e0883",
+      "patches": [],
+      "sha256_after_patches": "6f07d29073a1c213e666624a600c75c484fa455ee77b50431a5f56e14b9e0883"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/bne-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "a94c449f891b3c136b58277a6c6ed61342bdaa248a54aa93b569619e7aa59364",
+      "patches": [],
+      "sha256_after_patches": "a94c449f891b3c136b58277a6c6ed61342bdaa248a54aa93b569619e7aa59364"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/blt-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "29b1e92a3a8316725e520729540654d6d4e6df2056ca48617d9c2be2cac9bebd",
+      "patches": [],
+      "sha256_after_patches": "29b1e92a3a8316725e520729540654d6d4e6df2056ca48617d9c2be2cac9bebd"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/bltu-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "515087d42794b7473f8d4ba00530d2caa2ee381c22cd4c35d5196c3a6eca20bc",
+      "patches": [],
+      "sha256_after_patches": "515087d42794b7473f8d4ba00530d2caa2ee381c22cd4c35d5196c3a6eca20bc"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/bge-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "357b4dfeeceed1db2b8ee924265eba768d0dfcd24df5da68d73455754ef3add0",
+      "patches": [],
+      "sha256_after_patches": "357b4dfeeceed1db2b8ee924265eba768d0dfcd24df5da68d73455754ef3add0"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/I/src/bgeu-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "c5b892d39e749d1bb2a1dbe45371ab2eb8bddd1a2c000f7ea37cdb9f180593ce",
+      "patches": [],
+      "sha256_after_patches": "c5b892d39e749d1bb2a1dbe45371ab2eb8bddd1a2c000f7ea37cdb9f180593ce"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/andn-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "94aeba004da815c65faeee278cb3c8f466cdd85f7f15f2adbaf1b89661f19146",
+      "patches": [],
+      "sha256_after_patches": "94aeba004da815c65faeee278cb3c8f466cdd85f7f15f2adbaf1b89661f19146"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/bclr-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "77fb42ed76c6b7c8dc8731d0a60f86a762b53a0d94301fb26c8ec0245df9a2a1",
+      "patches": [],
+      "sha256_after_patches": "77fb42ed76c6b7c8dc8731d0a60f86a762b53a0d94301fb26c8ec0245df9a2a1"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/bclri-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "66d9dfe46b110921aecbcddfdc19db2a8a4879cb148acdbb4b0460e4ec719ff6",
+      "patches": [],
+      "sha256_after_patches": "66d9dfe46b110921aecbcddfdc19db2a8a4879cb148acdbb4b0460e4ec719ff6"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/bext-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "a331f7c2fbf73d192549e32e448035b1b511795a05f39a5e45e545e1d2c53fcb",
+      "patches": [],
+      "sha256_after_patches": "a331f7c2fbf73d192549e32e448035b1b511795a05f39a5e45e545e1d2c53fcb"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/bexti-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "43955138be61c4bf8b2e5b0d53f241b96682bea3a32dc03b1b4f7bf21a388ddd",
+      "patches": [],
+      "sha256_after_patches": "43955138be61c4bf8b2e5b0d53f241b96682bea3a32dc03b1b4f7bf21a388ddd"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/binv-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "7590e6f5132a7741c9b7ecc908d592f5dded392006fdc6378496fe6f9518b7cc",
+      "patches": [],
+      "sha256_after_patches": "7590e6f5132a7741c9b7ecc908d592f5dded392006fdc6378496fe6f9518b7cc"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/binvi-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "00c6cfffea1fe84c1e549e739c99e6e4e5bee1d5d89673ff42dd22938d13441d",
+      "patches": [],
+      "sha256_after_patches": "00c6cfffea1fe84c1e549e739c99e6e4e5bee1d5d89673ff42dd22938d13441d"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/bset-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "3e7888c71406554d1f229c7013cbee29b8e36175ea858c92c88e3762ab941d59",
+      "patches": [],
+      "sha256_after_patches": "3e7888c71406554d1f229c7013cbee29b8e36175ea858c92c88e3762ab941d59"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/bseti-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "690b82bfa61ce636b81825c4085b213e0e6427fc867c55c0f6bb9c1e55aa5cf0",
+      "patches": [],
+      "sha256_after_patches": "690b82bfa61ce636b81825c4085b213e0e6427fc867c55c0f6bb9c1e55aa5cf0"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/clz-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "4519d30be06a3498872b418568c8115f89d427191906669d964b5df26615ec06",
+      "patches": [],
+      "sha256_after_patches": "4519d30be06a3498872b418568c8115f89d427191906669d964b5df26615ec06"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/cpop-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "3aa4565873f316a6671de76ebd790701f2d644054fd96d3a6bcf4eb4f877f8d0",
+      "patches": [],
+      "sha256_after_patches": "3aa4565873f316a6671de76ebd790701f2d644054fd96d3a6bcf4eb4f877f8d0"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/ctz-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "a43e07ae217bd082ce08ee1a166ae0743ee563de5c321a9b33f4fcb2a684e274",
+      "patches": [],
+      "sha256_after_patches": "a43e07ae217bd082ce08ee1a166ae0743ee563de5c321a9b33f4fcb2a684e274"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/max-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "4c2643c2b0c385260dacb9db8160c6d83f79d0726c397a665a7cb614af93141c",
+      "patches": [],
+      "sha256_after_patches": "4c2643c2b0c385260dacb9db8160c6d83f79d0726c397a665a7cb614af93141c"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/maxu-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "c5ab4e225401e6fe9e324425f2e826f5bec50d41bcc941df89020e57a6275a90",
+      "patches": [],
+      "sha256_after_patches": "c5ab4e225401e6fe9e324425f2e826f5bec50d41bcc941df89020e57a6275a90"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/min-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "35399185cc69e6e7769d44bfb640379386ec72436458cd287a7b06b4631e5ff8",
+      "patches": [],
+      "sha256_after_patches": "35399185cc69e6e7769d44bfb640379386ec72436458cd287a7b06b4631e5ff8"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/minu-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "f6c26fd2567b7b730d89397c6976c99a3d7d67bead3bbfa44faafd48a7fe1e34",
+      "patches": [],
+      "sha256_after_patches": "f6c26fd2567b7b730d89397c6976c99a3d7d67bead3bbfa44faafd48a7fe1e34"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/orcb_32-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "df4db0c3f3070e449dd47db270999a36c925263b97ae85c5fa16daa137c2dff8",
+      "patches": [],
+      "sha256_after_patches": "df4db0c3f3070e449dd47db270999a36c925263b97ae85c5fa16daa137c2dff8"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/orn-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "bf7832c27a477e31f783ced3e3173ba5e148b1c2c4c4cc2e282e471cab25da7a",
+      "patches": [],
+      "sha256_after_patches": "bf7832c27a477e31f783ced3e3173ba5e148b1c2c4c4cc2e282e471cab25da7a"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/rev8_32-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "b6c239b00e56c15e46aef5fc77878ce2efe5fa53fb8b83341f6e5df1605ce408",
+      "patches": [],
+      "sha256_after_patches": "b6c239b00e56c15e46aef5fc77878ce2efe5fa53fb8b83341f6e5df1605ce408"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/rol-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "9b72b7988d211054680a851d740f9d61fe3a2dd62a5dfd45730042cdc502ef16",
+      "patches": [],
+      "sha256_after_patches": "9b72b7988d211054680a851d740f9d61fe3a2dd62a5dfd45730042cdc502ef16"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/ror-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "be260a0472290cd671b6c7240e5b3b70cea8aad148f0d35e9a8036b36a673c45",
+      "patches": [],
+      "sha256_after_patches": "be260a0472290cd671b6c7240e5b3b70cea8aad148f0d35e9a8036b36a673c45"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/rori-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "7a2bc642e804bebfe05fc606260f88f494ec216c82d4f615b3b7b3d05c0fb38c",
+      "patches": [],
+      "sha256_after_patches": "7a2bc642e804bebfe05fc606260f88f494ec216c82d4f615b3b7b3d05c0fb38c"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/sext.b-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "73e103cdd4322ea579f7cfa1cdd56d9d64a6824857e1067c01b82d3b09c01706",
+      "patches": [],
+      "sha256_after_patches": "73e103cdd4322ea579f7cfa1cdd56d9d64a6824857e1067c01b82d3b09c01706"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/sext.h-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "55162518723d9fc16a47e1940d56065ef690e42ebc958d22ff1c219ee08e3b9f",
+      "patches": [],
+      "sha256_after_patches": "55162518723d9fc16a47e1940d56065ef690e42ebc958d22ff1c219ee08e3b9f"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/sh1add-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "c1f42125bc9ad737df682e0470d5fe29764c93b0aad9677087c84b8b7cf2a3d0",
+      "patches": [],
+      "sha256_after_patches": "c1f42125bc9ad737df682e0470d5fe29764c93b0aad9677087c84b8b7cf2a3d0"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/sh2add-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "ce2ecdce0a1ccbda97da00743d95e65e30c72749e009e729380be0c280020c92",
+      "patches": [],
+      "sha256_after_patches": "ce2ecdce0a1ccbda97da00743d95e65e30c72749e009e729380be0c280020c92"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/sh3add-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "1477243188259044156a4233b6839ef46b6f42b34376652734527ea1f92cd449",
+      "patches": [],
+      "sha256_after_patches": "1477243188259044156a4233b6839ef46b6f42b34376652734527ea1f92cd449"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/xnor-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "98455ea32f013b36da1db270d8364cbe6456e767a08d9cde0ed69e7c06862a24",
+      "patches": [],
+      "sha256_after_patches": "98455ea32f013b36da1db270d8364cbe6456e767a08d9cde0ed69e7c06862a24"
+    },
+    {
+      "path": "riscv-test-suite/rv32i_m/B/src/zext.h_32-01.S",
+      "revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+      "sha256": "1da1d790451f3a6a463aefb58c2cd4045c329f90e9e45633d164875a937d4732",
+      "patches": [],
+      "sha256_after_patches": "1da1d790451f3a6a463aefb58c2cd4045c329f90e9e45633d164875a937d4732"
+    }
+  ],
+  "patch_application_order": [],
+  "test_list": {
+    "path": "testlist_alu.yaml",
+    "sha256": "e7a0c0cfcbcdec66d2e4d92883ad5d85c7cef211488c1b94acbde2af09144fc4"
+  },
+  "evaluator": {
+    "path": "harness/evaluate.sh",
+    "sha256": "0a37dc269e980088de5d2a558efb7b9237c7f63a0b0c94e51a2ddc9aca7300b0"
+  },
+  "shared_evaluator": {
+    "path": "../harness/evaluate_parallel.sh",
+    "sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663"
+  },
+  "architectural_trace_comparator": {
+    "path": "../harness/compare_architectural_traces.py",
+    "sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb"
+  },
+  "build_commands": [
+    "make verilate target=cv32a60x defines=",
+    "python3 verif/sim/cva6.py --iss=veri-testharness,spike --target cv32a60x --testlist=<fixed-test-list> --iss_yaml=verif/sim/cva6.yaml --linker=<fixed-riscv-arch-test>/riscv-target/spike/link.ld --gcc_opts=''"
+  ],
+  "comparison": {
+    "values": "Every retired instruction and its general-purpose-register or width-masked memory update emitted by CVA6 and Spike",
+    "pass_condition": "All 46 selected tests complete and every complete architectural trace matches"
+  }
+}

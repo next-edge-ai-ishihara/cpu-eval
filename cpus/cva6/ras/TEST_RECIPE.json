@@ -1,0 +1,42 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/compare_cycle_measurement.py",
+    "../instr_scan/harness/evaluate_ports.py",
+    "harness/ras_ports_tb.sv",
+    "../harness/port_work_directory.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "ras",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/frontend/ras.sv",
+  "source_sha256": "27d447b38c9ac3b8523c15c2e20545f0992b3361633f1897e23acff169bd8cf4",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "530b519d7c0fb5668394e66565b83cdccaa424832e67ff0fe88db18ef36c8ecc",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "test_list": "harness/testlist_ras_cycles.yaml",
+  "test_list_sha256": "89ace5f71ece700ed75fef55187654e30fc7267db3b1cda568a62b3f2dfc108f",
+  "directed_test": "harness/ras_cycles.S",
+  "directed_test_sha256": "525a06c924ce4b7584515496857325abfad9ecaf20c3ebac05928da1c43f1756",
+  "comparison": {
+    "kind": "architectural_trace_with_cycle_measurement",
+    "allowed_differences": "Only the two fixed mcycle reads and their subtraction may differ. Each trace must commit the difference between its two counter values at the subtraction.",
+    "value": "the mcycle delta committed to x20 after a fixed 256-iteration warmup and a fixed 4096-iteration branch, call, and return interval",
+    "ras_ports": "After the CPU trace matches, exercise two calls including a halfword-aligned return address, simultaneous pop and push, one return, one idle cycle and the last return. Verify that two pops drain the two-entry stack after three pushes. Compare addresses only when valid and leave the choice of entries retained on overflow ungraded.",
+    "cycle_observation": "The RTL mcycle delta is recorded. The CPU trace and port comparisons determine functional success."
+  },
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/frontend/ras.sv",
+    "test_sources": "copy the recorded directed test beside the pinned RISC-V Architectural Tests as performed by the evaluator"
+  },
+  "port_evaluator": "../instr_scan/harness/evaluate_ports.py",
+  "port_testbench": "harness/ras_ports_tb.sv",
+  "port_testbench_sha256": "5aa9e30999982099389f0ac4dcf04014afab29bb05ffd419f0a1398ec2630bc9",
+  "port_evaluator_sha256": "4ada650951191124054d4b96d5c3b2003d9944ce15dde544476f07afad117562"
+}

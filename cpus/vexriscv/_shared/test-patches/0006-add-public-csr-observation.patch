@@ -1,0 +1,97 @@
+--- a/src/main/scala/vexriscv/plugin/CsrPlugin.scala
++++ b/src/main/scala/vexriscv/plugin/CsrPlugin.scala
+@@ -442,9 +442,12 @@
+   def askWake() : Unit
+ }
+ 
+-class CsrPlugin(val config: CsrPluginConfig) extends Plugin[VexRiscv] with ExceptionService with PrivilegeService with InterruptionInhibitor with ExceptionInhibitor with IContextSwitching with CsrInterface with IWake with VexRiscvRegressionArg {
++class CsrPlugin(val config: CsrPluginConfig) extends Plugin[VexRiscv] with ExceptionService with PrivilegeService with InterruptionInhibitor with ExceptionInhibitor with IContextSwitching with CsrInterface with IWake with VexRiscvRegressionArg with CsrObservationService {
+   import config._
+   import CsrAccess._
++
++  var observationInterface: CsrObservationSignals = null
++  override def csrObservation = observationInterface
+ 
+   assert(!(wfiGenAsNop && wfiGenAsWait))
+ 
+@@ -560,6 +563,7 @@
+     csrMapping = new CsrMapping()
+ 
+     inWfi = False.addTag(Verilator.public)
++    observationInterface = CsrObservationSignals()
+ 
+     thirdPartyWake = False
+ 
+@@ -1353,6 +1357,10 @@
+ 
+       val hadException = RegNext(exception) init(False) addTag(Verilator.public)
+       pipelineLiberator.done.clearWhen(hadException)
++      observationInterface.waitingForInterrupt := inWfi
++      observationInterface.interruptAccepted := interruptJump
++      observationInterface.interruptCause := interrupt.code.resize(4)
++      observationInterface.exceptionAccepted := hadException
+ 
+       if(withPrivilegedDebug) {
+         debugBus.commit := debugMode && pipeline.stages.last.arbitration.isFiring
+--- a/src/test/cpp/regression/main.cpp
++++ b/src/test/cpp/regression/main.cpp
+@@ -1764,9 +1764,9 @@
+                         riscvRef.ipInput |= top->externalInterruptS << 9;
+     #endif
+ 
+-                        riscvRef.liveness(top->VexRiscv->CsrPlugin_inWfi);
+-                        if(top->VexRiscv->CsrPlugin_interruptJump){
+-                            if(riscvRefEnable) riscvRef.trap(true, top->VexRiscv->CsrPlugin_interrupt_code);
++                        riscvRef.liveness(top->cpuEvalCsrObservation_waitingForInterrupt);
++                        if(top->cpuEvalCsrObservation_interruptAccepted){
++                            if(riscvRefEnable) riscvRef.trap(true, top->cpuEvalCsrObservation_interruptCause);
+                         }
+                     }
+ 				#endif
+@@ -1856,7 +1856,7 @@
+                 }
+ 
+                 #ifdef CSR
+-                    if(top->VexRiscv->CsrPlugin_hadException){
++                    if(top->cpuEvalCsrObservation_exceptionAccepted){
+                         if(riscvRefEnable) {
+                             riscvRef.step();
+                         }
+--- a/src/test/scala/vexriscv/TestIndividualFeatures.scala
++++ b/src/test/scala/vexriscv/TestIndividualFeatures.scala
+@@ -779,6 +779,8 @@
+           )
+         )
+         for (positionToApply <- positionsToApply) positionToApply.applyOn(config)
++        if(config.plugins.exists(_.isInstanceOf[CsrObservationService]))
++          config.plugins += new CsrObservationExportPlugin
+         new VexRiscv(config)
+       }
+ 
+--- /dev/null
++++ b/src/main/scala/vexriscv/plugin/CsrObservation.scala
+@@ -0,0 +1,24 @@
++// SPDX-License-Identifier: Apache-2.0
++package vexriscv.plugin
++
++import spinal.core._
++import vexriscv._
++
++case class CsrObservationSignals() extends Bundle {
++  val waitingForInterrupt = Bool()
++  val interruptAccepted = Bool()
++  val interruptCause = UInt(4 bits)
++  val exceptionAccepted = Bool()
++}
++
++trait CsrObservationService {
++  def csrObservation: CsrObservationSignals
++}
++
++class CsrObservationExportPlugin extends Plugin[VexRiscv] {
++  override def build(pipeline: VexRiscv): Unit = {
++    val observation = pipeline.service(classOf[CsrObservationService]).csrObservation
++    val pins = out(CsrObservationSignals()).setName("cpuEvalCsrObservation")
++    pins := observation
++  }
++}

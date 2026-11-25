@@ -1,0 +1,23 @@
+diff --git a/tools/riscv-dv/testlist.yaml b/tools/riscv-dv/testlist.yaml
+index 766b6c9..570be14 100644
+--- a/tools/riscv-dv/testlist.yaml
++++ b/tools/riscv-dv/testlist.yaml
+@@ -126,6 +126,18 @@
+     +enable_b_extension=1
+     +enable_bitmanip_groups=zbf,zbt
+ 
++- test: riscv_bitmanip_default_test_veer
++  desc: >
++    Random instruction test restricted to the Zba, Zbb, Zbc, and Zbs
++    extensions enabled by the default VeeR EL2 configuration.
++  iterations: 10
++  gen_test: riscv_instr_base_test
++  gen_opts: >
++    +num_of_sub_program=0
++    +enable_b_extension=1
++    +enable_bitmanip_groups ZBA ZBB ZBC ZBS
++  rtl_test: core_base_test
++
+ - test: riscv_user_mode_rand_test
+   desc: >
+     User mode random instruction test

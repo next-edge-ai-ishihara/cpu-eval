@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "RAW-hazard definition",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        133,
+        138
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "Zero-register hazard rule",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_issue_stage.adoc",
+      "lines": [
+        159,
+        159
+      ],
+      "sha256": "f73fa6948fcd4847a9e33522291d31e0b8534e3692ac03ee1b8e8895ceffc5ad"
+    },
+    {
+      "label": "cv32a60x register-file configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        36,
+        40
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "cv32a60x scoreboard size",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        57,
+        57
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Derived scoreboard configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        85,
+        86
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+    },
+    {
+      "label": "Architectural register-address width",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        59,
+        60
+      ],
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Module declaration for raw_checker",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/raw_checker.sv",
+      "lines": [
+        10,
+        36
+      ],
+      "language": "verilog",
+      "sha256": "758273502e408f962340ca7a8ec1c35f1a9285ae88946f38300166b2756fa59c"
+    },
+    {
+      "label": "Operand and destination classification and one checker connection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        467,
+        497
+      ],
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Scoreboard issue-pointer order",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/scoreboard.sv",
+      "lines": [
+        144,
+        147
+      ],
+      "sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022"
+    },
+    {
+      "label": "Scoreboard transaction identifier",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/scoreboard.sv",
+      "lines": [
+        153,
+        155
+      ],
+      "sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022"
+    },
+    {
+      "label": "Scoreboard insertion slot",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/scoreboard.sv",
+      "lines": [
+        169,
+        180
+      ],
+      "sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022"
+    },
+    {
+      "label": "Issue-pointer advance",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/scoreboard.sv",
+      "lines": [
+        277,
+        279
+      ],
+      "sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022"
+    },
+    {
+      "label": "Forwarded scoreboard state and issue pointer",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/scoreboard.sv",
+      "lines": [
+        296,
+        300
+      ],
+      "sha256": "dd816cdefd64817737e11ed79dbf91ce0d9d7361c08806a5f7f4883468791022"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "# Implement `raw_checker`\n\nImplement the complete `raw_checker` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module raw_checker` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n### core/include/build_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Package and imports\n\n### core/include/ariane_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Parent instantiation\n\n### core/issue_read_operands.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Related source code\n\n### core/scoreboard.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n\n## Documentation\n\n### docs/design/design-manual/source/cva6_issue_stage.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "text": "```\n"
+    }
+  ]
+}

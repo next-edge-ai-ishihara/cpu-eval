@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Selected FIFO depths",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        169,
+        170
+      ],
+      "language": "systemverilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Selected FPGA settings",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        24,
+        25
+      ],
+      "language": "systemverilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6_fifo_v3.sv",
+      "lines": [
+        16,
+        40
+      ],
+      "language": "systemverilog",
+      "sha256": "f61e13a52583cc8e1a5a6d46910bed6247cf0dd8b52aa39b4fd683729e3faa68"
+    },
+    {
+      "label": "Instruction FIFO data type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/instr_queue.sv",
+      "lines": [
+        94,
+        102
+      ],
+      "language": "systemverilog",
+      "sha256": "f43b24576db6e6e0da59e31c6dd90e5cf54de12a4bf7a3316b7405618e1b45e5"
+    },
+    {
+      "label": "Instruction-data FIFO instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/instr_queue.sv",
+      "lines": [
+        464,
+        481
+      ],
+      "language": "systemverilog",
+      "sha256": "f43b24576db6e6e0da59e31c6dd90e5cf54de12a4bf7a3316b7405618e1b45e5"
+    },
+    {
+      "label": "Address FIFO instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/frontend/instr_queue.sv",
+      "lines": [
+        493,
+        510
+      ],
+      "language": "systemverilog",
+      "sha256": "f43b24576db6e6e0da59e31c6dd90e5cf54de12a4bf7a3316b7405618e1b45e5"
+    },
+    {
+      "label": "Instruction queue design description",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        253,
+        260
+      ],
+      "language": "asciidoc",
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    },
+    {
+      "label": "Instruction queue flush description",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_frontend.adoc",
+      "lines": [
+        263,
+        263
+      ],
+      "language": "asciidoc",
+      "sha256": "279ef9d16c85008f00d46df2cbf090731bbee925a8dcc4c806c3d92e98dd2269"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `cva6_fifo_v3`\n\nImplement the complete `cva6_fifo_v3` module for the uses shown below. Preserve the module name, parameters, and ports.\n\nReturn only the complete `module cva6_fifo_v3` definition in a single SystemVerilog code\nblock, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Configuration heading",
+      "text": "\n## CPU configuration used for evaluation\n\n### core/include/ariane_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Configuration separator",
+      "text": "```\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Configuration fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Module declaration heading",
+      "text": "\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Module declaration fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Parent instantiation heading",
+      "text": "\n## Parent instantiation\n\n### core/frontend/instr_queue.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "  // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Parent instantiation fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Documentation heading",
+      "text": "\n## Documentation\n\n### docs/design/design-manual/source/cva6_frontend.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Documentation fence",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Port contract not shown by any upstream text",
+      "text": "\n## Additional requirement\n\nWhile `empty_o` is low, `data_o` presents the oldest stored entry, and a rising `clk_i` edge with `flush_i` asserted empties the queue, discarding any push or pop in that cycle.\n"
+    }
+  ]
+}

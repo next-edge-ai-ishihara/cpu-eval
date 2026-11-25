@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "cpu": "Ibex",
+  "cpu_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+  "configuration": "small",
+  "source": {
+    "repository": "https://github.com/lowRISC/ibex.git",
+    "paths": [
+      "examples/sw/simple_system/pmp_smoke_test",
+      "examples/sw/simple_system/dummy_instr_test",
+      "examples/sw/simple_system/dit_test",
+      "examples/sw/simple_system/common"
+    ]
+  },
+  "build": {
+    "command_template": "make -B -C examples/sw/simple_system/<program> ARCH=rv32imc_zicsr CC=riscv64-unknown-elf-gcc OBJCOPY=riscv64-unknown-elf-objcopy <program>.elf",
+    "source_patch": null,
+    "toolchain": {
+      "gcc": "riscv64-unknown-elf-gcc 13.2.0-11ubuntu1+12"
+    },
+    "checker_source": "dv/cosim/spike_cosim.cc",
+    "checker_source_sha256": "700f6044ed0e5d6b25a70f780ad901e1138a690a76313ab65e5c35531b22fcef"
+  },
+  "programs": [
+    {
+      "name": "pmp_smoke_test",
+      "elf_sha256": "13e4a4cf338e6e597b9a84c195cc9a1ab2ace9da2300a63c799326612c6e4618"
+    },
+    {
+      "name": "dummy_instr_test",
+      "elf_sha256": "012a8777f033edf5e093491bd4a5425761e323529d07320a15eb276aeb2f67f9"
+    },
+    {
+      "name": "dit_test",
+      "elf_sha256": "8ca5b6a7aa0fb737ab481d2dea38bf2bd76af61fa444414ed79369d5fe181146"
+    }
+  ],
+  "simulation_limit": {
+    "option": "--term-after-cycles=2000000",
+    "rule": "A candidate receives PASS or functional FAIL only when the RTL and ISA executions contain compared architectural values. A program that does not finish within the 2,000,000-cycle limit is FAIL. A host timeout is also an infrastructure failure."
+  },
+  "directed_test_build": {
+    "command_template": "cpus/ibex/harness/build_directed_test.sh <ibex> <test>.S <test>.elf",
+    "script": "cpus/ibex/harness/build_directed_test.sh",
+    "script_sha256": "0a27098fd181c038cb1428b81ff5f955d3c4bc968062558d541a859d24da32b3",
+    "upstream_revision": "405c6d1d8220a18b2f9196141167a5875422dee4",
+    "upstream_crt0_sha256": "b0117f2e94ab0f65eb54806c67c727cd54142713a15422d5bc81e8431d853b9f",
+    "upstream_linker_script_sha256": "318b9ed40edb2cd0e329e5617f58cacad59d8137f12e550260be29c33f824068"
+  },
+  "problem_specific_additions": [
+    {
+      "module": "ibex_multdiv_fast",
+      "source": "cpus/ibex/multdiv_fast/harness/mulhsu_sign_test.S",
+      "source_sha256": "25ff5874770fa9d027866d495b1cbc319751c6905d56b18e4a6b4780b8a2339c",
+      "elf_sha256": "85e3655b00a8bbc264f6367f33c823099f52ef1b0c40397473e0fab348ecf83e",
+      "reason": "Compare mulhsu, mulh and mulhu upper products whose values depend on which operands signed_mode_i marks as signed. signed_mode_i bit 0 selects op_a_i signedness and bit 1 selects op_b_i signedness."
+    },
+    {
+      "module": "ibex_multdiv_fast",
+      "source": "cpus/ibex/multdiv_fast/harness/division_result_test.S",
+      "source_sha256": "f50d06e614d55211ae03d5a41dee010b61fd700b89e5a450884040db552e5c06",
+      "elf_sha256": "9cbbf367243d97984899aff6af756083a09a291cb9fb72c04b8e5fe375c3456f",
+      "reason": "Compare signed and unsigned quotients and remainders of a negative dividend for nonzero and zero divisors, and the signed overflow of -2^31 divided by -1."
+    }
+  ],
+  "problem": "ibex_multdiv_fast",
+  "assigned_programs": [
+    "pmp_smoke_test",
+    "dummy_instr_test",
+    "dit_test",
+    "mulhsu_sign_test",
+    "division_result_test"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_veer_wrapper",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca"
+  },
+  "comparison": "Ordered Spike and RTL GPR state-change updates; require 2193 matched updates. This comparison does not compare every retired instruction, PC, opcode, or memory update.",
+  "additional_test": {
+    "kind": "directed_openocd_dmi_probe",
+    "name": "veer_wrapper_dmi_probe",
+    "path": "test/evaluate_veer_wrapper_dmi_probe.sh",
+    "config_path": "test/dmi_probe.cfg",
+    "build": "make -f tools/Makefile verilator-build program.hex TEST=infinite_loop CONF_PARAMS='-set build_axi4 -set openocd_test'",
+    "observation": "The DCCM word must round trip through OpenOCD and the wrapper's dmi_active output must be observed at both idle and active levels."
+  },
+  "evaluation_command": "bash evaluate_all.sh",
+  "dependencies": [
+    "../_shared/run_fixed_test.sh",
+    "test/evaluate_veer_wrapper_dmi_probe.sh",
+    "test/observer_verilator.py",
+    "test/with_observer.sh"
+  ],
+  "trace_observer": {
+    "compiler": "Verilator 5.036 XML hierarchy",
+    "scope": "For a unique reused el2_veer CPU, discover its elaborated instance path and the net driving its ic_rd_data port. Keep instruction and architectural register observations unchanged.",
+    "files": [
+      {
+        "path": "test/observer_verilator.py",
+        "sha256": "b587f84c50338d4f5f991317234392ee71cdac952526bcc70f778974a2874462"
+      },
+      {
+        "path": "test/with_observer.sh",
+        "sha256": "635d9bcfa9b1324552e90308bbab8aa5de64689e4378f0ce53bb82aadb1f7262"
+      },
+      {
+        "path": "evaluate_all.sh",
+        "sha256": "c35525b705252017941fec3cccc64e78894c61800baa459790b0447349e1f3af"
+      },
+      {
+        "path": "test/evaluate_veer_wrapper_dmi_probe.sh",
+        "sha256": "23f9282f9e872325e5740e014bfb81622c84064207d2a273378fa632ccfc8b6f"
+      }
+    ]
+  },
+  "exclusive_resources": [
+    "tcp-port-5000"
+  ]
+}

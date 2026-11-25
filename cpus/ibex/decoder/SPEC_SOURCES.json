@@ -1,0 +1,803 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "40b659912e4efacac0b32fe35fa744132211e98404b6c41dd34795a4155ec6b2",
+  "prompt_sha256": "fcf1752223abaf33b22a1dc50b52226324d04528e1c9940fde6897b6e18fb8eb",
+  "repositories": {
+    "https://github.com/lowRISC/ibex.git": {
+      "revision": "405c6d1d8220a18b2f9196141167a5875422dee4"
+    },
+    "https://github.com/riscv/riscv-isa-manual.git": {
+      "revision": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, submission instructions and headings",
+      "prompt_bytes": [
+        0,
+        338
+      ],
+      "sha256": "dbf9c94bdc82d64df877f3ccd1c0a811adfc4c8eaaa29b09a2600f42cf08bbbc"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        338,
+        1036
+      ],
+      "sha256": "29b5facedcb9c0b625651b4bec20437a58e60a59161dd889e88a10e95191bae6"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1036,
+        1103
+      ],
+      "sha256": "4a6681ee9c215531c2df9019b6ac5ac2c5fd06bb5f3e9ad74cd132b990c409d1"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1103,
+        1657
+      ],
+      "sha256": "c166df11bce86e5b0cfa6e2f8277dab5ef4c896d5bbc5d82f0facf163e79ea39"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        1657,
+        1664
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1664,
+        2083
+      ],
+      "sha256": "8de898a31863b5c1f20f44474bc1b80ce904ed05b4bee9f615df2375b2fb92c8"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        2083,
+        2090
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2090,
+        5417
+      ],
+      "sha256": "0c92101f25723a4914604e1470f1e347df33cf2ede7c2b06e1690ed47f65a0a1"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        5417,
+        5424
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        5424,
+        12690
+      ],
+      "sha256": "64e2380c7ecd8ceb73e1f7c8efcc5ec92f1d6b5196982e08d5c9c9d564bdc8ab"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        12690,
+        12697
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        12697,
+        13374
+      ],
+      "sha256": "729b29f4e4bbf9595f21f4a6c3f5245895d19adf0fa19c1ec2d28c2ec0324ca7"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        13374,
+        13425
+      ],
+      "sha256": "e7277e8973a9ceabc3ec9895e992a19128595df5e96d49909dfe6e565bb52f1a"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        13425,
+        16599
+      ],
+      "sha256": "b320f9da50f80b620b64c5f3f274af05b9b8f80c9022577e8d870909402d6d4d"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        16599,
+        16638
+      ],
+      "sha256": "681b3de9d94f75e8a246875318814416e953937531d9fd4256c7a7254f484e02"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        16638,
+        22371
+      ],
+      "sha256": "b4d0796d1452e8d844f428e3f467c93753a702aca6f68393adc76a8c21ea2265"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        22371,
+        22438
+      ],
+      "sha256": "6ceb65a82b92d78d8735c70e6288e5c42f7edf229635a09912f16d0a25f75c0c"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        22438,
+        25553
+      ],
+      "sha256": "178ebafd5c8acba5f7cdf917979fc3dc9eea3563672cf74f17e13afdfd9ecc38"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        25553,
+        25625
+      ],
+      "sha256": "dc769146b4711a96e449285d550b3e416d5477306df2bd8fed9a0419176e33c3"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        25625,
+        26092
+      ],
+      "sha256": "b187f5b1d0bfedd9d40883d145b7680fc0a8e2882dd0b3c90fedca172febdb71"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        26092,
+        26099
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        26099,
+        26153
+      ],
+      "sha256": "7f0124c6ac414d2a3e1285522fe3ffb12c2c6c088eba84b85725a74d5878b49b"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        26153,
+        26160
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        26160,
+        26898
+      ],
+      "sha256": "c11568f9d6b7cd4638c2fe8c38e09c47b139836d52df177ff378a389a22d9dc5"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        26898,
+        26905
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        26905,
+        27529
+      ],
+      "sha256": "1246670d04148b60560dbc81a4e34f8778ec4043b5d4cd484695d2c97b2e568f"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        27529,
+        27536
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        27536,
+        27637
+      ],
+      "sha256": "ab30b83bbda3c71d11977167da725ed7b216ba2f0e219c8171fe4f96ca3e34bd"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        27637,
+        27644
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        27644,
+        28692
+      ],
+      "sha256": "027ace5ca67efa3105bd5299483de408c75940d2922c2ed48f2ee34ea995045e"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        28692,
+        28699
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        28699,
+        28885
+      ],
+      "sha256": "c92699e0ae62a3b13817b98796adb5a1d1b02a926b724d9f58153c1cce39e9ac"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        28885,
+        28929
+      ],
+      "sha256": "7392bff7b4e93bdad428ab9dc2be6ba5f4c9f5ea6b1484badbe1c174ba4e4308"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        28929,
+        28983
+      ],
+      "sha256": "a02413bb61a42de8fe92d3ea466361793e2ad58d52d0bd57ac861f5ba3ba538b"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        28983,
+        28990
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        28990,
+        29030
+      ],
+      "sha256": "201c2d65b25799ba1086fcf860dbc985289153efc2fd3e2ac6924384a9a547d7"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        29030,
+        29082
+      ],
+      "sha256": "dfa5d9cc3125f2529540b8418685a8ffbad40dd21872211991938bbe2be4ee2e"
+    },
+    {
+      "index": 37,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        29082,
+        29194
+      ],
+      "sha256": "5c0e55c0c513c0fea2aafc52928dc7b211f895da5bd6ec81bf6ba7fcd30f5dec"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        29194,
+        29201
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 39,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        29201,
+        29317
+      ],
+      "sha256": "dffcdea54ba92ecd3270d8c7146b11de9426529e6cc4700d6191b1b8ded1331e"
+    },
+    {
+      "index": 40,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        29317,
+        29372
+      ],
+      "sha256": "520bb34d5caeb881213e5685c06b7d866d1e45667ee11bb9aaaad75a18671151"
+    },
+    {
+      "index": 41,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        29372,
+        29450
+      ],
+      "sha256": "3082cdbf30d86301a2a7c291f36264a8b1fbb448b9169a983eda38aa0029725b"
+    },
+    {
+      "index": 42,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        29450,
+        29534
+      ],
+      "sha256": "f98c7c17a09be876066e93f5b16aacdc8b0f85115101115bef14acecf8261766"
+    },
+    {
+      "index": 43,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        29534,
+        29727
+      ],
+      "sha256": "2085c2047db3a78c212f7b15a0b9d7917d88fb577aa1f90f399898c5bb33c2c1"
+    },
+    {
+      "index": 44,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        29727,
+        29759
+      ],
+      "sha256": "92d87202f7706d2c63014fd6a92f58102d98f2ce1edf430190376d895d5ef7b3"
+    },
+    {
+      "index": 45,
+      "kind": "verbatim_source",
+      "source": 22,
+      "prompt_bytes": [
+        29759,
+        53006
+      ],
+      "sha256": "4f05b9488bd7374df871f3567295f4549b0a7fe5e3c3fd7deaf4e082ad84f19e"
+    },
+    {
+      "index": 46,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        53006,
+        53039
+      ],
+      "sha256": "f502ad1fa263176c945e9f1e6f20bdca656f809a8e9ee877bc43ac0f6ec108dd"
+    },
+    {
+      "index": 47,
+      "kind": "verbatim_source",
+      "source": 23,
+      "prompt_bytes": [
+        53039,
+        56062
+      ],
+      "sha256": "82e1fa86aa506182a4f77df4b9f994253f2864147e45fb5bd0d0acaff9d07324"
+    },
+    {
+      "index": 48,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        56062,
+        56098
+      ],
+      "sha256": "7b1bc6a6d4fd05e8f1b158134badb8701fd7c9fbd540ce3b15c1026002d23a21"
+    },
+    {
+      "index": 49,
+      "kind": "verbatim_source",
+      "source": 24,
+      "prompt_bytes": [
+        56098,
+        62911
+      ],
+      "sha256": "3a66cf5b1d15447e6cde867c9e0535df27f6739e395f128d13dbdcc1fe048210"
+    },
+    {
+      "index": 50,
+      "kind": "authored",
+      "description": "Headings and excerpt delimiters",
+      "prompt_bytes": [
+        62911,
+        62915
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Excerpt of ibex_configs.yaml",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "ibex_configs.yaml",
+      "lines": [
+        19,
+        38
+      ],
+      "sha256": "75b4e848face7fa31e1bc227aaa7a83cb2a8f45aa1fc0bd4fe2e2800f6caac28"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_pkg.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        36,
+        59
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_pkg.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        72,
+        86
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_pkg.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        93,
+        288
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_pkg.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        463,
+        694
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_pkg.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        750,
+        760
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_cheriot_pkg.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_cheriot_pkg.sv",
+      "lines": [
+        832,
+        912
+      ],
+      "sha256": "d8b5b51ce99129ebd0c6436689cd85883760ca98f15f45c8a18b977549d007c4"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_decoder.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_decoder.sv",
+      "lines": [
+        17,
+        122
+      ],
+      "sha256": "842b520e4a942b6a27f3c44f7e8784e4a8dd40d7531a0ec3dd338f624be18217"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_id_stage.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        478,
+        574
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_id_stage.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        355,
+        367
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_id_stage.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        752,
+        752
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_id_stage.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        817,
+        839
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_id_stage.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        861,
+        875
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_id_stage.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        877,
+        879
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_id_stage.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        920,
+        942
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_id_stage.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_id_stage.sv",
+      "lines": [
+        993,
+        995
+      ],
+      "sha256": "02b40e46ef92df59a9e1d7b80a8d51a366ece0e8e599ca0744fcdf403ccd3aa8"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_core.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_core.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        1429,
+        1429
+      ],
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_multdiv_fast.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_multdiv_fast.sv",
+      "lines": [
+        27,
+        29
+      ],
+      "sha256": "c86ca819b58b8ce2fc4ff5db887346bcd622b868fb7815fa07dd77119c68c04a"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_multdiv_fast.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_multdiv_fast.sv",
+      "lines": [
+        406,
+        407
+      ],
+      "sha256": "c86ca819b58b8ce2fc4ff5db887346bcd622b868fb7815fa07dd77119c68c04a"
+    },
+    {
+      "label": "Excerpt of rtl/ibex_load_store_unit.sv",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_load_store_unit.sv",
+      "lines": [
+        142,
+        142
+      ],
+      "sha256": "86e156efaf7ac46a351a405d9d2046b7d2e6a60bd206411ef9ae474666338b35"
+    },
+    {
+      "label": "Excerpt of doc/03_reference/instruction_decode_execute.rst",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_decode_execute.rst",
+      "lines": [
+        37,
+        41
+      ],
+      "sha256": "ab60d2567305b1d544cdac813c37a440f89e134bc5d3d8e5551c5a7c69dc3ffb"
+    },
+    {
+      "label": "Excerpt of src/rv32.adoc",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        299,
+        786
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "Excerpt of src/zicsr.adoc",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/zicsr.adoc",
+      "lines": [
+        20,
+        74
+      ],
+      "sha256": "64cf89241db8b9580ce54802febd36b91ddd82d3d84b2049942be740c0b7f1ca"
+    },
+    {
+      "label": "Excerpt of src/m-st-ext.adoc",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/m-st-ext.adoc",
+      "lines": [
+        2,
+        158
+      ],
+      "sha256": "1fd4096a21a14a79fba3fc942fad7180ce6d81b2873a22730ccf77fecf1a5a36"
+    }
+  ]
+}

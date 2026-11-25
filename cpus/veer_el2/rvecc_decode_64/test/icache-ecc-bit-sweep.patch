@@ -1,0 +1,30 @@
+diff --git a/testbench/tb_top.sv b/testbench/tb_top.sv
+--- a/testbench/tb_top.sv
++++ b/testbench/tb_top.sv
+@@ -1071,6 +1071,17 @@
+     // Fail if an injected ICache error is not detected within the window.
+     integer ic_error_window_cycles;
+     localparam integer IC_ERROR_WINDOW_MAX = 200;
++    logic [141:0] ic_error_injected_data;
++    integer ic_error_ecc_bit;
++
++    initial begin
++        ic_error_injected_data = 142'h1;
++        if ($value$plusargs("cpu_eval_ecc_bit=%d", ic_error_ecc_bit)) begin
++            if (ic_error_ecc_bit < 0 || ic_error_ecc_bit > 6)
++                $fatal(1, "cpu_eval_ecc_bit must be in the range 0 through 6");
++            ic_error_injected_data = 142'h1 << (64 + ic_error_ecc_bit);
++        end
++    end
+ 
+ `ifdef RV_LOCKSTEP_ENABLE
+ `define VEER rvtop_wrapper.rvtop.veer
+@@ -1100,7 +1111,7 @@
+                 `endif
+                 next_ic_error <= 1;
+                 ic_error_window_cycles <= 0;
+-                force rvtop_wrapper.rvtop.ic_rd_data = 142'h1;
++                force rvtop_wrapper.rvtop.ic_rd_data = ic_error_injected_data;
+             end else if (next_ic_error && ic_perr_r_d1) begin
+                 next_ic_error <= 0;
+                 release rvtop_wrapper.rvtop.ic_rd_data;

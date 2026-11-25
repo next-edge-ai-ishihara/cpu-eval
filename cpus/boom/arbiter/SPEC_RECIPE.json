@@ -1,0 +1,140 @@
+{
+ "schema_version": 1,
+ "cpu": "BOOM",
+ "configuration": "LargeBoomConfig",
+ "source_unit": "Arbiter",
+ "sources": [
+  {
+   "label": "Package and imports",
+   "repo": "github.com/chipsalliance/chisel3",
+   "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+   "path": "src/main/scala/chisel3/util/Arbiter.scala",
+   "lines": [
+    6,
+    9
+   ],
+   "sha256": "cf669b906ded879470fb9cc25421619f843d5b289396b5ff6f1af9286a0c5633"
+  },
+  {
+   "label": "Class declaration",
+   "repo": "github.com/chipsalliance/chisel3",
+   "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+   "path": "src/main/scala/chisel3/util/Arbiter.scala",
+   "lines": [
+    134,
+    136
+   ],
+   "sha256": "cf669b906ded879470fb9cc25421619f843d5b289396b5ff6f1af9286a0c5633"
+  },
+  {
+   "label": "ArbiterIO and ArbiterCtrl",
+   "repo": "github.com/chipsalliance/chisel3",
+   "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+   "path": "src/main/scala/chisel3/util/Arbiter.scala",
+   "lines": [
+    11,
+    48
+   ],
+   "sha256": "cf669b906ded879470fb9cc25421619f843d5b289396b5ff6f1af9286a0c5633"
+  },
+  {
+   "label": "DecoupledIO",
+   "repo": "github.com/chipsalliance/chisel3",
+   "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+   "path": "src/main/scala/chisel3/util/Decoupled.scala",
+   "lines": [
+    93,
+    100
+   ],
+   "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+  },
+  {
+   "label": "Parent instantiation",
+   "repo": "github.com/riscv-boom/riscv-boom",
+   "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+   "path": "src/main/scala/exu/fp-pipeline.scala",
+   "lines": [
+    170,
+    187
+   ],
+   "sha256": "6bae9f003237d28d8566aef368a000fdda1dd8376040b80811db88f720ffbebe"
+  },
+  {
+   "label": "Chisel version",
+   "repo": "github.com/ucb-bar/chipyard",
+   "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+   "path": "build.sbt",
+   "lines": [
+    63,
+    67
+   ],
+   "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+  }
+ ],
+ "parts": [
+  {
+   "kind": "authored",
+   "description": "Task and submission instructions",
+   "text": "# Implement `Arbiter`\n\nImplement one complete `Arbiter` source-level hardware definition for BOOM. Preserve the definition name, constructor parameters, inheritance, and public interface shown below.\n\nReturn only the complete `class Arbiter` definition in a single Scala code block, with no text outside the block.\n\n"
+  },
+  {
+   "kind": "authored",
+   "description": "Heading",
+   "text": "## Package and imports\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 0
+  },
+  {
+   "kind": "authored",
+   "description": "Heading",
+   "text": "```\n\n## Class declaration\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 1
+  },
+  {
+   "kind": "authored",
+   "description": "Heading",
+   "text": "```\n\n## Parent instantiation\n\n### src/main/scala/exu/fp-pipeline.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 4
+  },
+  {
+   "kind": "authored",
+   "description": "Heading",
+   "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 5
+  },
+  {
+   "kind": "authored",
+   "description": "heading, task text, or excerpt delimiter",
+   "text": "```\n\n### src/main/scala/chisel3/util/Arbiter.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 2
+  },
+  {
+   "kind": "authored",
+   "description": "Heading",
+   "text": "```\n\n### src/main/scala/chisel3/util/Decoupled.scala\n\n```scala\n"
+  },
+  {
+   "kind": "verbatim_source",
+   "source": 3
+  },
+  {
+   "kind": "authored",
+   "description": "Fixed prompt framing",
+   "text": "```\n"
+  }
+ ]
+}

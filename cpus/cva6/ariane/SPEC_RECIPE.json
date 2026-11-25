@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "CV-X-IF settings of the evaluated configuration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        51,
+        52
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Module declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "corev_apu/src/ariane.sv",
+      "lines": [
+        15,
+        69
+      ],
+      "language": "verilog",
+      "sha256": "3eeb35b07985c416de33cc81628bfb64802b673d73d33ad6863776f546c6be10"
+    },
+    {
+      "label": "Parent declarations and instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "corev_apu/tb/ariane_testharness.sv",
+      "lines": [
+        626,
+        658
+      ],
+      "language": "verilog",
+      "sha256": "c671b2f70ea4cd7e27b67f4764e07966abd69e18d168f3de28220b26b8bb8655"
+    },
+    {
+      "label": "CVA6 configuration and RVFI parameters",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        18,
+        32
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "CVA6 AXI and NoC parameters",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        237,
+        301
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "CVA6 CV-X-IF parameters and ports",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        305,
+        348
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Example coprocessor declaration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "lines": [
+        10,
+        35
+      ],
+      "language": "verilog",
+      "sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7"
+    },
+    {
+      "label": "CV-X-IF connection requirement",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/CVX_Interface_Coprocessor.adoc",
+      "lines": [
+        294,
+        296
+      ],
+      "sha256": "ebbcc60522b89669599d922f6c8bca0aa8a73d8a3dc7fd283463eca027b20abf"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `ariane`\n\nImplement the complete `ariane` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ariane` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n\n## Parent instantiation\n\n### corev_apu/tb/ariane_testharness.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n\n## Dependency declarations\n\n### core/cva6.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n    // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n    // ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n\n### core/cvxif_example/cvxif_example_coprocessor.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n\n## Documentation\n\n### docs/design/design-manual/source/CVX_Interface_Coprocessor.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Fence after excerpt",
+      "text": "```\n"
+    }
+  ]
+}

@@ -1,0 +1,1903 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Selected cv32a60x XLEN for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected cv32a60x RVB and ZKN values for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        42,
+        43
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Selected cv32a60x RVZiCond value for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        53,
+        53
+      ],
+      "language": "verilog",
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Module declaration for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu.sv",
+      "lines": [
+        21,
+        40
+      ],
+      "language": "verilog",
+      "sha256": "49ba35e04bf1e8cecf8fdf6378a585bad4c0f914291dc4941e0d58dfda834f6a"
+    },
+    {
+      "label": "Active cv32a60x parent instantiation for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/alu_wrapper.sv",
+      "lines": [
+        29,
+        40
+      ],
+      "language": "verilog",
+      "sha256": "b2de99f62b1d6bda465c4354ba9f88be9c6e0908d524fffb45ab5d8ccdc7a22c"
+    },
+    {
+      "label": "Functional-unit input type for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cva6.sv",
+      "lines": [
+        176,
+        183
+      ],
+      "language": "verilog",
+      "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+    },
+    {
+      "label": "Base arithmetic operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        275,
+        277
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Logical and shift operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        280,
+        287
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Branch comparison and JALR operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        291,
+        299
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Set-less-than operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        301,
+        303
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "OR-combine and byte-reverse operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        437,
+        439
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Rotate-left operation identifier used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        440,
+        441
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Rotate-right operation identifiers used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        443,
+        444
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Sign-extension and zero-extension operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        447,
+        450
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Population-count operation identifier used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        451,
+        452
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Leading-zero operation identifier used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        454,
+        455
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Trailing-zero operation identifier used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        457,
+        457
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Single-bit operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        463,
+        471
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Minimum and maximum operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        472,
+        476
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Shift-and-add operation identifiers used by RV32 for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        483,
+        486
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Negated logical operation identifiers for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        487,
+        490
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "Closing line of the functional-unit operation enumeration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/ariane_pkg.sv",
+      "lines": [
+        541,
+        541
+      ],
+      "language": "verilog",
+      "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+    },
+    {
+      "label": "JALR item of the decoder opcode case",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/decoder.sv",
+      "lines": [
+        1692,
+        1702
+      ],
+      "language": "verilog",
+      "sha256": "fe7c4b1c2cf697c5f476b36cce1a5a14d93bd0662796519569c10a747dd8ab95"
+    },
+    {
+      "label": "Functional-unit case of the issue valid dispatch",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        750,
+        750
+      ],
+      "language": "verilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "CTRL_FLOW item of the issue valid dispatch",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/issue_read_operands.sv",
+      "lines": [
+        758,
+        760
+      ],
+      "language": "verilog",
+      "sha256": "fb4732b4761b73ecdf9aa52c1af6927ac60c9a791d33575a592383c9fe3d1ed8"
+    },
+    {
+      "label": "Execution-stage ALU input selection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        305,
+        310
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Execution-stage one_cycle_data selection for issue port 0",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        313,
+        315
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Execution-stage always_comb end and alu_data[0] assignment",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        326,
+        329
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Execution-stage alu_wrapper_i instantiation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        341,
+        351
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Execution-stage branch_unit_i instantiation up to branch_comp_res_i",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/ex_stage.sv",
+      "lines": [
+        356,
+        372
+      ],
+      "language": "verilog",
+      "sha256": "49f72879415b965687b7201996eba884dc2690e96081a2bdabdcbeaa00a08091"
+    },
+    {
+      "label": "Branch-unit resolution of a valid control-flow instruction",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/branch_unit.sv",
+      "lines": [
+        79,
+        86
+      ],
+      "language": "verilog",
+      "sha256": "39c5c4fad84091c91da5f391e8b6354244823b9ccd4aeec0371415c8d4862bea"
+    },
+    {
+      "label": "CVA6 design documentation for alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "docs/design/design-manual/source/cva6_execute.adoc",
+      "lines": [
+        31,
+        35
+      ],
+      "sha256": "d92282f130119ed75b98f53a6d41124ad0fbaf0ed5e6458492696198ade34217"
+    },
+    {
+      "label": "RV32I immediate arithmetic and logical operations",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        304,
+        320
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RV32I immediate shift operations",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        326,
+        332
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RV32I register-register operations",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        378,
+        389
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RV32I conditional branch comparisons",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/rv32.adoc",
+      "lines": [
+        570,
+        576
+      ],
+      "sha256": "f41c3ce157539e63762af63c5f2c5315a09f16d120144d7a8c2fdafe118abbfd"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for andn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1049,
+        1049
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for andn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1073,
+        1077
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bclr",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1097,
+        1097
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bclr",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1122,
+        1127
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bclri",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1143,
+        1143
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bclri",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1182,
+        1187
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bext",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1203,
+        1203
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bext",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1229,
+        1234
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bexti",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1250,
+        1250
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bexti",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1289,
+        1294
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for binv",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1310,
+        1310
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for binv",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1335,
+        1340
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for binvi",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1356,
+        1356
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for binvi",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1395,
+        1400
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bset",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1416,
+        1416
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bset",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1441,
+        1446
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for bseti",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1462,
+        1462
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for bseti",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1501,
+        1506
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for clz",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1703,
+        1703
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for clz",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1727,
+        1740
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for cpop",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1810,
+        1810
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for cpop",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1833,
+        1843
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for ctz",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1917,
+        1917
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for ctz",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        1942,
+        1955
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for max",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2024,
+        2024
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for max",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2048,
+        2059
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for maxu",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2085,
+        2085
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for maxu",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2109,
+        2120
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for min",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2136,
+        2136
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for min",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2160,
+        2171
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for minu",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2187,
+        2187
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for minu",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2211,
+        2222
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for orc.b",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2238,
+        2238
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for orc.b",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2262,
+        2275
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for orn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2291,
+        2291
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for orn",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2315,
+        2319
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for rev8",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2498,
+        2498
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for rev8",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2533,
+        2546
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for rol",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2628,
+        2628
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for rol",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2652,
+        2661
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for ror",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2733,
+        2733
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for ror",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2757,
+        2766
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for rori",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2786,
+        2786
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for rori",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2824,
+        2833
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sext.b",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2960,
+        2960
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sext.b",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        2984,
+        2988
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sext.h",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3004,
+        3004
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sext.h",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3028,
+        3032
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sh1add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3049,
+        3049
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sh1add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3073,
+        3077
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sh2add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3143,
+        3143
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sh2add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3167,
+        3171
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for sh3add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3236,
+        3236
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for sh3add",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3260,
+        3264
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for xnor",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3437,
+        3437
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for xnor",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3461,
+        3465
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation instruction heading for zext.h",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3607,
+        3607
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    },
+    {
+      "label": "RISC-V bit-manipulation specification for zext.h",
+      "repo": "https://github.com/riscv/riscv-isa-manual.git",
+      "commit": "4f277ff8ea8c0fc9394dfccd1da0ace34b1aef68",
+      "path": "src/b-st-ext.adoc",
+      "lines": [
+        3644,
+        3648
+      ],
+      "sha256": "f6b4f950c3418f826b90a171183147a9571789d6d35a3ee463d1d56ce4fbc83e"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `alu`\n\nImplement the complete `alu` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module alu` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n## Package and imports\n\n### core/include/ariane_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n## Parent instantiation\n\n### core/alu_wrapper.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n## Dependency declarations\n\n### core/cva6.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n## Related source code\n\n### core/decoder.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### core/issue_read_operands.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n```\n\n### core/ex_stage.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 29
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n```\n\n### core/branch_unit.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 30
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n```\n\n## Documentation\n\n### docs/design/design-manual/source/cva6_execute.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 31
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### src/rv32.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 32
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 33
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 34
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 35
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n### src/b-st-ext.adoc\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 36
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 37
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 38
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 39
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 40
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 41
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 42
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 43
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 44
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 45
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 46
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 47
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 48
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 49
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 50
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 51
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 52
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 53
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 54
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 55
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 56
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 57
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 58
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 59
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 60
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 61
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 62
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 63
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 64
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 65
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 66
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 67
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 68
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 69
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 70
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 71
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 72
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 73
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 74
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 75
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 76
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 77
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 78
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 79
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 80
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 81
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 82
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 83
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 84
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 85
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 86
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 87
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 88
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 89
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 90
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 91
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 92
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 93
+    },
+    {
+      "kind": "authored",
+      "description": "Closing fence",
+      "text": "```\n"
+    }
+  ]
+}

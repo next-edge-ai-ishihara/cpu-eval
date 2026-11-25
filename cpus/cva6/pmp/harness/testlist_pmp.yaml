@@ -1,0 +1,9 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  gcc_opts: "-static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles ../tests/custom/common/crt.S -I../tests/custom/env -I../tests/custom/common -lgcc"
+
+testlist:
+  - test: cpu_eval_pmp_load_permissions_test
+    <<: *common_test_config
+    iterations: 1
+    asm_tests: <path_var>/custom/pmp/cpu_eval_pmp_load_permissions_test.S

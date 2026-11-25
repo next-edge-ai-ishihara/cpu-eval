@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "problem": "rec_fn_to_rec_fn",
+  "source_unit": "RecFNToRecFN",
+  "configuration": "LargeBoomConfig",
+  "repositories": [
+    {
+      "url": "https://github.com/ucb-bar/chipyard.git",
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    },
+    {
+      "path": "generators/boom",
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    {
+      "path": "generators/rocket-chip",
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    {
+      "path": "generators/rocket-chip/hardfloat",
+      "revision": "70455e53f233a06cb5a342d125e22b7b1505c271"
+    },
+    {
+      "path": "toolchains/riscv-tools/riscv-tests",
+      "revision": "1ce128fa78c24bb0ed399c647e7139322b5353a7"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/0001-add-large-boom-commit-trace-config.patch",
+      "sha256": "5764e42ba82e678639b09cda4a1ae4232fedcc9bf863ca01503c9f7f901180f1",
+      "directory": ".",
+      "order": 1,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0002-use-published-chipyard-dependencies.patch",
+      "sha256": "fd4b1da1b47c08f649bbaacb21ebc9781c33eba61c94c016e053136e593e4fa1",
+      "directory": ".",
+      "order": 2,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0006-enable-boom-memory-trace.patch",
+      "sha256": "a30863ac106de00048fd5684b11c14db19a437596bceeaedb69cfc2df22e3360",
+      "directory": ".",
+      "order": 3,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0005-add-boom-memory-trace-config.patch",
+      "sha256": "66a83361fd75b78c82f4a8ecbd8cc7eb36b47a16fe0f424f50904161dcc0f1fb",
+      "directory": "generators/boom",
+      "order": 4,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0003-use-published-barstools-dependencies.patch",
+      "sha256": "febdc08263769899fd996309cd166494f43a41e279ae4ad583d9b7688759ea14",
+      "directory": "tools/barstools",
+      "order": 5,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0004-use-published-dsptools-dependencies.patch",
+      "sha256": "4d211926851a9bc2da16379dfb6888ee14b4665b4e32e3d35bc10099e19729f1",
+      "directory": "tools/dsptools",
+      "order": 6,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../nbdtlb/patches/0001-discard-invalidated-refills.patch",
+      "sha256": "92703fccab25b70f29d635bc1c8b301409dc729e955fbef9ba0bbeff81c89640",
+      "directory": "generators/boom",
+      "order": 7,
+      "stage": "image_construction"
+    },
+    {
+      "path": "../_shared/patches/0007-use-local-chisel-snapshot.patch",
+      "sha256": "1b2f28650bb13d3b3a7fc2e09e138e56d115e664cc7384071b86e4ae982ad475",
+      "directory": ".",
+      "order": 1,
+      "stage": "candidate_evaluation"
+    },
+    {
+      "path": "../_shared/patches/0008-use-local-chisel-in-hardfloat.patch",
+      "sha256": "4c08a4520400bf46c068db885d1a35bb749d5ec1ded3cc92407657a4c2603bb0",
+      "directory": "generators/rocket-chip/hardfloat",
+      "order": 2,
+      "stage": "candidate_evaluation"
+    },
+    {
+      "path": "../_shared/patches/0009-use-local-chisel-in-rocket-chip.patch",
+      "sha256": "f187eb6a068cd55e88c00ce0eb0ee3583399a00ff6022f82c36d837d31207271",
+      "directory": "generators/rocket-chip",
+      "order": 3,
+      "stage": "candidate_evaluation"
+    },
+    {
+      "path": "../_shared/patches/0010-use-local-chisel-in-gemmini.patch",
+      "sha256": "108b59f625d0220662852ec37558e4f917e26f02820d68b121ceaf2f9376dadf",
+      "directory": "generators/gemmini",
+      "order": 4,
+      "stage": "candidate_evaluation"
+    }
+  ],
+  "test_source": {
+    "kind": "upstream_and_added_riscv_tests",
+    "list": "TESTS.txt",
+    "requirement_mapping": "REQUIREMENT_TESTS.tsv",
+    "requirement_mapping_sha256": "c586630442958e29662e066ca2ee144f66e4a53a215209799b8617e363f9b87e",
+    "selection": "The RV64D program includes exact -1.5 floating-point precision round trips and a quiet-NaN round trip. The added program directly checks static RUP double-to-single conversion of a positive halfway value and NX.",
+    "added_source": "../round_raw_fn_to_rec_fn/tests/rounding_mode_rup.S",
+    "added_source_sha256": "d5fe41ed1218d4ad070c861c22b1e083caa0dba384d4cab702182be4a61ab60c",
+    "added_build": "tools/environment/build_boom_test_assets.py using the common profile in tools/environment/boom-directed-test-assets.json",
+    "added_stripped_elf_sha256": "b770b9f82221db2a8827494d6dc10dba85ab4ee087282f70f063cb212f915d28",
+    "added_scope": "Static RUP on positive halfway values for FADD.D and FCVT.S.D, with NX checks."
+  },
+  "build": {
+    "command": "make -C sims/verilator -j8 CONFIG=LargeBoomCommitTraceConfig RISCV=<riscv-tools-prefix>"
+  },
+  "comparison": {
+    "rtl_model": "LargeBoomCommitTraceConfig",
+    "isa_model": "Spike",
+    "values": "privilege mode, program counter, instruction encoding, destination register, destination-register value, memory-write address and memory-write value in execution order"
+  },
+  "public_port_test": {
+    "entry": "evaluate_candidate.sh",
+    "source": "tests/RecFNToRecFNNaNTest.scala",
+    "class": "RecFNToRecFNNaNTest",
+    "execution": "Run the port test before the two CPU programs. Pass only when both the port test and all CPU traces match.",
+    "coverage": "For quiet and signaling double-precision NaNs of both signs, decode the single-precision output and compare it with the canonical quiet NaN. Require only NV for signaling inputs and no flags for quiet inputs."
+  },
+  "environment_reconstruction": {
+    "source": "../../../tools/environment/context-sources.json",
+    "key": "boom/boom-chipyard",
+    "test_assets_builder": "../../../tools/environment/build_boom_test_assets.py",
+    "test_assets_manifest": "../../../tools/environment/boom-directed-test-assets.json",
+    "reference_correction": "The NBDTLB invalidated-refill correction is included in the reference CPU for every BOOM problem.",
+    "test_patches": "The fp_to_fp sign-injection patch is applied to riscv-tests before all image test assets are built; programs such as fmin are therefore patched reference programs."
+  },
+  "verdict_rule": "The fixed tree builds and passes with the reference unit, so a failure after only the candidate is integrated is FAIL: a rejected class, compile or elaboration error at any file, simulator failure or missing test output. Only an integrated source that differs from the submission, a failed fixed-input check, a missing tool, resource exhaustion and a wall-clock interruption are INVALID.",
+  "simulation_limit": {
+    "option": "+max-cycles=2500000",
+    "wall_clock_seconds": 3600,
+    "rule": "A program that reaches the cycle limit, ends without its PASSED or FAILED line, or exits the simulator abnormally is FAIL_INCOMPLETE_EXECUTION. The longest program with the reference CPU, rv64mi-p-cache_replacement_cycles, ends after 202,604 cycles. A wall-clock interruption or a resource or tool failure is INVALID unless the trace already differs from Spike."
+  }
+}

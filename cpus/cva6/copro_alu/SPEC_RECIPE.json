@@ -1,0 +1,510 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "CV-X-IF result transaction contract",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        1089,
+        1101
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "CVA6 verification response model: CUS_ADD",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        345,
+        350
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "CVA6 verification response model: CUS_DOUBLE_RS1",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        351,
+        356
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "CVA6 verification response model: CUS_DOUBLE_RS2",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        357,
+        362
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "CVA6 verification response model: CUS_ADD_MULTI",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        363,
+        368
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "CVA6 verification result control",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        319,
+        336
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "Example coprocessor operation enumeration",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        12,
+        26
+      ],
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3",
+      "language": "verilog"
+    },
+    {
+      "label": "Example coprocessor operand-array type",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "lines": [
+        10,
+        30
+      ],
+      "sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7",
+      "language": "verilog"
+    },
+    {
+      "label": "Module declaration for copro_alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/copro_alu.sv",
+      "lines": [
+        10,
+        33
+      ],
+      "sha256": "a6ffa7e2e0778bf1bc1b0609a1880ae9afcf8976d101c03ddb62a97ec00c1768",
+      "language": "verilog"
+    },
+    {
+      "label": "Parent instantiation and result-interface connection for copro_alu",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/cvxif_example_coprocessor.sv",
+      "lines": [
+        117,
+        148
+      ],
+      "sha256": "aa3f44d9e7da0c71ff8b2e940cf7f9b4475d6b2fd49f298cf63c0009af21a9b7",
+      "language": "verilog"
+    },
+    {
+      "label": "Selected XLEN constant",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        12,
+        12
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8",
+      "language": "verilog"
+    },
+    {
+      "label": "Selected XLEN",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        22,
+        22
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8",
+      "language": "verilog"
+    },
+    {
+      "label": "Selected issue width",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        27,
+        27
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8",
+      "language": "verilog"
+    },
+    {
+      "label": "Derived register operand port count",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/build_config_pkg.sv",
+      "lines": [
+        95,
+        97
+      ],
+      "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc",
+      "language": "verilog"
+    },
+    {
+      "label": "Selected coprocessor parameter connection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "corev_apu/src/ariane.sv",
+      "lines": [
+        113,
+        117
+      ],
+      "sha256": "3eeb35b07985c416de33cc81628bfb64802b673d73d33ad6863776f546c6be10",
+      "language": "verilog"
+    },
+    {
+      "label": "Upstream decoder defaults",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/instr_decoder.sv",
+      "lines": [
+        56,
+        59
+      ],
+      "sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca",
+      "language": "verilog"
+    },
+    {
+      "label": "Upstream decoder ALU inputs",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/instr_decoder.sv",
+      "lines": [
+        71,
+        77
+      ],
+      "sha256": "6116f241a09a0494600319f33f41ea61e545c92e4ad729ced4e5c9c39337f3ca",
+      "language": "verilog"
+    },
+    {
+      "label": "Verification response model: MADD",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        369,
+        378
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "Verification response model: MSUB",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        379,
+        388
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "Verification response model: NMADD",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        389,
+        398
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "Verification response model: NMSUB",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        399,
+        408
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "Verification response model: R-type three-source operation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        409,
+        418
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "Verification response model: illegal operation",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv",
+      "lines": [
+        419,
+        422
+      ],
+      "sha256": "5ca360be291afaa24d6e1a472cd4137af325fd78532b6e3f2a1375544669fdda",
+      "language": "verilog"
+    },
+    {
+      "label": "CV-X-IF result pipeline requirement",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        1288,
+        1290
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    },
+    {
+      "label": "NOP issue response",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/cvxif_example/include/cvxif_instr_pkg.sv",
+      "lines": [
+        57,
+        63
+      ],
+      "sha256": "a498af9cdfc4ef0238f2cfbf5d24579ee5e9126443917675f5d5ccb8e022bee3",
+      "language": "verilog"
+    },
+    {
+      "label": "CV-X-IF result pipeline consequence",
+      "repo": "https://github.com/openhwgroup/core-v-xif.git",
+      "commit": "f08d951d52e3705b54767bbf13dbb4748383fe49",
+      "path": "docs/source/x_ext.rst",
+      "lines": [
+        1296,
+        1299
+      ],
+      "sha256": "b686521d16054cc61db877d7cb3a591ed56d15d130f25b4a3ed64ca2038610f0"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `copro_alu`\n\nImplement the complete `copro_alu` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module copro_alu` definition in a single SystemVerilog code block, with no text outside the block.\n\n## CPU configuration used for evaluation\n\n### core/include/cv32a60x_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### core/include/build_config_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n## Package and imports\n\n### core/cvxif_example/include/cvxif_instr_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "      // ...\n```\n\n## Module declaration\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n## Parent instantiation\n\n### corev_apu/src/ariane.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "        // ...\n```\n\n### core/cvxif_example/cvxif_example_coprocessor.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n## Related source code\n\n### core/cvxif_example/instr_decoder.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n### verif/env/uvme/cvxif_vseq/uvme_cvxif_vseq.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n\n## Documentation\n\n### docs/source/x_ext.rst\n\n```rst\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Omission",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Fence",
+      "text": "```\n"
+    }
+  ]
+}

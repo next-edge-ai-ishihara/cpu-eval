@@ -1,0 +1,24 @@
+diff --git a/testbench/tb_top.sv b/testbench/tb_top.sv
+index 629bc32..bac91b0 100644
+--- a/testbench/tb_top.sv
++++ b/testbench/tb_top.sv
+@@ -2779,6 +2779,19 @@ axi_slv #(.TAGW(`RV_IFU_BUS_TAG)) imem(
+ 
+ defparam lmem.TAGW = RV_MUX_BUS_TAG;
+ 
++// Give the instruction port visibility of writes through the data port.
++logic [31:0] ifu_probe_store_address;
++always @(posedge core_clk) begin
++    if (lmem_axi_awvalid)
++        ifu_probe_store_address = {mux_axi_awaddr[31:3], 3'b000};
++    if (lmem_axi_wvalid && lmem_axi_wready) begin
++        for (int lane = 0; lane < 8; lane++) begin
++            if (mux_axi_wstrb[lane])
++                imem.mem[ifu_probe_store_address + lane] = mux_axi_wdata[8*lane +: 8];
++        end
++    end
++end
++
+ //axi_slv #(.TAGW(`RV_LSU_BUS_TAG)) lmem(
+ axi_slv  lmem(
+     .aclk(core_clk),

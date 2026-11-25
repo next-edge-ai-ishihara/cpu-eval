@@ -1,0 +1,53 @@
+// SPDX-License-Identifier: Apache-2.0
+#include "model_test.h"
+#include "arch_test.h"
+RVTEST_ISA("RV32IM")
+
+.section .text.init
+.globl rvtest_entry_point
+rvtest_entry_point:
+RVMODEL_BOOT
+RVTEST_CODE_BEGIN
+
+    RVTEST_SIGBASE(x5, signature_results)
+    li x10, 0x80000000
+    li x11, -1
+    li x12, 0x12345678
+    div x12, x10, x11
+    addi x13, x12, 1
+    RVTEST_SIGUPD(x5, x12, 0)
+    RVTEST_SIGUPD(x5, x13, 4)
+    li x14, 0x12345678
+    rem x14, x10, x11
+    addi x15, x14, 1
+    RVTEST_SIGUPD(x5, x14, 8)
+    RVTEST_SIGUPD(x5, x15, 12)
+
+RVTEST_CODE_END
+RVMODEL_HALT
+
+RVTEST_DATA_BEGIN
+RVTEST_DATA_END
+
+RVMODEL_DATA_BEGIN
+rvtest_sig_begin:
+sig_begin_canary:
+CANARY;
+signature_results:
+    .fill 4, 4, 0xdeadbeef
+#ifdef rvtest_mtrap_routine
+tsig_begin_canary:
+CANARY;
+mtrap_sigptr:
+    .fill 64*(XLEN/32), 4, 0xdeadbeef
+tsig_end_canary:
+CANARY;
+#endif
+#ifdef rvtest_gpr_save
+gpr_save:
+    .fill 32*(XLEN/32), 4, 0xdeadbeef
+#endif
+sig_end_canary:
+CANARY;
+rvtest_sig_end:
+RVMODEL_DATA_END

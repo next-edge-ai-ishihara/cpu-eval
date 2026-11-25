@@ -1,0 +1,39 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "pmp_data_if",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/openhwgroup/cva6.git",
+  "test_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "configuration": "cv64a6_imafdc_sv39",
+  "source_path": "core/pmp/src/pmp_data_if.sv",
+  "source_sha256": "6c61e6022c150d2446d60f0aa8936361f45543b41428ca4c149cae586deee589",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "ac9ae7ec8e7c583376836bb16449fbabb51c6c7ba62d61cbab590ff8becdd175",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../pmp/harness/testlist_pmp.yaml",
+  "test_list_sha256": "e0342c51d39481ca3c60aade490a0b2ef27a32e980462f526f599efe24a6854d",
+  "integration_patch": "../pmp/test-patches/adapt_custom_runtime_to_arch_linker.patch",
+  "integration_patch_sha256": "a63937867b36a01165b641accb1024cf592d3639725e33d372461967a0c7cb98",
+  "directed_test_patch": "../pmp/test-patches/add_pmp_load_permissions_test.patch",
+  "directed_test_patch_sha256": "15f48ed8585dc39daee440ab613b2fada1004841a2392b95bdea32f47062810a",
+  "application_order": [
+    "Start with the recorded revisions unpatched, then invoke harness/evaluate.sh with the candidate.",
+    "The evaluator applies integration_patch at the CVA6 repository root to provide the entry-point and global-pointer symbols required by the architectural-test linker script",
+    "The evaluator applies directed_test_patch at the CVA6 repository root to add the recorded PMP load-permission test",
+    "The evaluator integrates the submitted module and reverses its integration patches on exit. Do not apply these patches before invocation."
+  ],
+  "test_selection": "One fixed complete-CPU directed test configures adjacent TOR regions, enters S-mode, reads a word from the read-only region, and verifies that reading the no-access region raises load access fault mcause 5.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/pmp/src/pmp_data_if.sv",
+    "test_sources": "The ordered patch records describe test provenance. Start with the pinned test sources and leave these patches unapplied before invoking harness/evaluate.sh, which reconstructs the tests.",
+    "evaluation": "Start from an unpatched checkout and invoke harness/evaluate.sh with the candidate; the evaluator applies its own patches and restores its inputs."
+  }
+}

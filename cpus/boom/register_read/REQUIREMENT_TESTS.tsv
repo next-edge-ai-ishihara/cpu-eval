@@ -1,0 +1,11 @@
+requirement	tests	test_behavior
+Read integer operands from statically assigned physical-register-file ports	rv64ui-p-add,rv64ui-p-sub,rv64ui-p-xor	Integer register-read path and arithmetic results
+Read operands for memory operations	rv64ui-p-lw,rv64ui-p-sw,rv64ui-p-ld,rv64ui-p-sd	Integer address and store-data operand paths
+Forward dependent integer results through the bypass network	rv64ui-p-xor,rv64um-p-mul,rv64um-p-div	Back-to-back dependent integer operations in the upstream programs
+Read floating-point operands	rv64uf-p-fadd	Floating-point register-read path
+Read the third floating-point operand without integer bypass	rv64uf-p-fmadd	Three-source fused multiply-add path
+Suppress killed operations and update branch masks	rv64ui-p-beq,rv64ui-p-jalr	Taken and non-sequential control-flow paths
+Cancel an operation in register read during a core flush	test/RegisterReadFlushTest.scala	A pending integer operation is suppressed when kill is asserted without a branch-tag update
+Return zero for physical register zero	rv64ui-p-add,rv64ui-p-sub	Architectural zero-register operands in the upstream programs
+Transfer decoded micro-operations and operands through the register-read pipeline	rv64ui-p-add,rv64ui-p-lw,rv64uf-p-fadd	Integer, memory, and floating-point execution requests
+Predicate read and bypass behavior	not_applicable	The selected LargeBoomConfig leaves enableSFBOpt at its false default

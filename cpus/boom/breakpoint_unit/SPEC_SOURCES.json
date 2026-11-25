@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "2ac030f6eba3977dcfc48f5864871c1ee250dfd154c4a36fd5e4bf94378e8e6f",
+  "prompt_sha256": "b164451d3f3b5663f089a2745d5c7fbff35d9d908c365c34e62810b2f2e36bf5",
+  "repositories": {
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "github.com/riscv-boom/riscv-boom": {
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    "github.com/riscv/riscv-debug-spec": {
+      "revision": "b13891ce9848b4a673e05bcab50359495f830692"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, submission format, package heading",
+      "prompt_bytes": [
+        0,
+        361
+      ],
+      "sha256": "5a87a2e1c82d17d58f47b32b5b63e915b47b462daa42eaf13a4c15df71e6bf5a"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        361,
+        623
+      ],
+      "sha256": "d5218e5edbcb38e7d559d02937d0446f63cf96c934b80df6c043028e53f8d610"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        623,
+        659
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        659,
+        1309
+      ],
+      "sha256": "610b272228e040a9efce64931bf66a2b99696bd95b999702e3417b1eecf64880"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        1309,
+        1387
+      ],
+      "sha256": "21dfcd9914f06f2b7dad7b2af01aec6cf7cfe3f3585eb4cb7a326f9041e7b7fe"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1387,
+        1634
+      ],
+      "sha256": "969b02e9c2ea33a71e6c29789094034115bc7801f67f83a6c95405a67f5878ca"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        1634,
+        1641
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1641,
+        1758
+      ],
+      "sha256": "dc6f95bc864e8c3232cdf706c8e7bed6868dbe63f25c44e028c450cf13ffaf78"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        1758,
+        1834
+      ],
+      "sha256": "368325b8e993d7f5fe363a0e6ddd14cb6151c2b72656ef376fc99ffebde4b640"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1834,
+        2642
+      ],
+      "sha256": "4e3a98c8cadcc631c468a1a56e5d6b486eea6b1e1b57b509876273e910747f3b"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        2642,
+        2699
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        2699,
+        2944
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        2944,
+        3002
+      ],
+      "sha256": "081460674b3bbfb534c29e7faec48e65802d479560037b6bb65304851196d789"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        3002,
+        5233
+      ],
+      "sha256": "01c143484f2ea6a1ee916a74d1bcfc21223951393d1199714edb856ed53189bd"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        5233,
+        5315
+      ],
+      "sha256": "82b9062452b32fafe9ecc8a03f206296ba02e31f6dd3d1733ae07bb498ae82a6"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        5315,
+        5379
+      ],
+      "sha256": "6a1250aa686cbbe4a87c34810612dc656f05d7576ee5619893238afa2c9ae25b"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        5379,
+        5386
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        5386,
+        5520
+      ],
+      "sha256": "a103bd54d0ed4b64472662b6a795dad37a3c1edf36464be0d8cd58572fcfe7c8"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        5520,
+        5527
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        5527,
+        5673
+      ],
+      "sha256": "170a44565f25b2056183676b1bcdfa5ce4571ef43e82564507b3bb8d7be517e4"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        5673,
+        5732
+      ],
+      "sha256": "1794373cffa9ce00b0ea686aca75368b1a596734e34daf9fbf1f42fe412bd428"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        5732,
+        6681
+      ],
+      "sha256": "3baf537f3a76a8816ed19798080d8795a85778fa9a597037790b6b743f3649cd"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        6681,
+        6685
+      ],
+      "sha256": "a00c3b59d5e9e2d8ad78e29258e13b5cf4807919ebb5a523c199e8da1cda91b9"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        6685,
+        7714
+      ],
+      "sha256": "bdecd2485127de34fee86391754fffa439fa5dad0d8560da2bcae1a962b06967"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Heading, fence or omission",
+      "prompt_bytes": [
+        7714,
+        7718
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "src/main/scala/rocket/Breakpoint.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Breakpoint.scala",
+      "lines": [
+        3,
+        10
+      ],
+      "sha256": "648e63baa7afffcdb0546313159fa9f1ed9310cfad79de6ef7c782013f09c932"
+    },
+    {
+      "label": "src/main/scala/rocket/Breakpoint.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Breakpoint.scala",
+      "lines": [
+        80,
+        95
+      ],
+      "sha256": "648e63baa7afffcdb0546313159fa9f1ed9310cfad79de6ef7c782013f09c932"
+    },
+    {
+      "label": "src/main/scala/ifu/frontend.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/frontend.scala",
+      "lines": [
+        608,
+        613
+      ],
+      "sha256": "d2d0a42d6a8bf8c41259646b926dcae610ca1bf58010e3aa930a660951eb2ed0"
+    },
+    {
+      "label": "src/main/scala/ifu/frontend.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/ifu/frontend.scala",
+      "lines": [
+        743,
+        744
+      ],
+      "sha256": "d2d0a42d6a8bf8c41259646b926dcae610ca1bf58010e3aa930a660951eb2ed0"
+    },
+    {
+      "label": "src/main/scala/exu/execution-units/functional-unit.scala excerpt",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        515,
+        528
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "src/main/scala/rocket/Breakpoint.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Breakpoint.scala",
+      "lines": [
+        12,
+        78
+      ],
+      "sha256": "648e63baa7afffcdb0546313159fa9f1ed9310cfad79de6ef7c782013f09c932"
+    },
+    {
+      "label": "src/main/scala/rocket/RocketCore.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/RocketCore.scala",
+      "lines": [
+        504,
+        504
+      ],
+      "sha256": "dfde1833a80c9970d1e4ee57b9769f4bb1ed5ac7a6fd93c34770313dad19e4aa"
+    },
+    {
+      "label": "src/main/scala/rocket/RocketCore.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/RocketCore.scala",
+      "lines": [
+        631,
+        631
+      ],
+      "sha256": "dfde1833a80c9970d1e4ee57b9769f4bb1ed5ac7a6fd93c34770313dad19e4aa"
+    },
+    {
+      "label": "src/main/scala/rocket/RocketCore.scala excerpt",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/RocketCore.scala",
+      "lines": [
+        752,
+        755
+      ],
+      "sha256": "dfde1833a80c9970d1e4ee57b9769f4bb1ed5ac7a6fd93c34770313dad19e4aa"
+    },
+    {
+      "label": "xml/hwbp_registers.xml excerpt",
+      "repo": "github.com/riscv/riscv-debug-spec",
+      "commit": "b13891ce9848b4a673e05bcab50359495f830692",
+      "path": "xml/hwbp_registers.xml",
+      "lines": [
+        143,
+        166
+      ],
+      "sha256": "8a5050681e2dd60a67a5266f84b69066a151db17eb6b62eeead4731b1b04ef05"
+    },
+    {
+      "label": "xml/hwbp_registers.xml excerpt",
+      "repo": "github.com/riscv/riscv-debug-spec",
+      "commit": "b13891ce9848b4a673e05bcab50359495f830692",
+      "path": "xml/hwbp_registers.xml",
+      "lines": [
+        189,
+        210
+      ],
+      "sha256": "8a5050681e2dd60a67a5266f84b69066a151db17eb6b62eeead4731b1b04ef05"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

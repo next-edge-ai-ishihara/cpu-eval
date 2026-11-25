@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "RoundRawFNToRecFN",
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        38,
+        41
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Definition header and interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        292,
+        304
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Raw floating-point input fields",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/common.scala",
+      "lines": [
+        68,
+        77
+      ],
+      "sha256": "f9df388d315451af5aa7421d50dca00d2f5b11808ca90244a9aa5a63ffad4fbf"
+    },
+    {
+      "label": "General rounding dependency interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/RoundAnyRawFNToRecFN.scala",
+      "lines": [
+        46,
+        65
+      ],
+      "sha256": "4ed183fdd3c3034fc54da415a529c632a2046d402305226761e31267b6fc4488"
+    },
+    {
+      "label": "Wrapper relationship",
+      "repo": "http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html",
+      "commit": "20190821012312",
+      "path": "HardFloat-Verilog.html",
+      "lines": [
+        2051,
+        2056
+      ],
+      "sha256": "4914dba25de554405db518b3476e69ee8bd244ea0e680c5c098173e3014dbd4b",
+      "source_type": "archived_webpage",
+      "url": "https://web.archive.org/web/20190821012312id_/http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html"
+    },
+    {
+      "label": "Wrapper parameter assignment",
+      "repo": "http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html",
+      "commit": "20190821012312",
+      "path": "HardFloat-Verilog.html",
+      "lines": [
+        2081,
+        2093
+      ],
+      "sha256": "4914dba25de554405db518b3476e69ee8bd244ea0e680c5c098173e3014dbd4b",
+      "source_type": "archived_webpage",
+      "url": "https://web.archive.org/web/20190821012312id_/http://jhauser.us/arithmetic/HardFloat-1/doc/HardFloat-Verilog.html"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission format",
+      "text": "# Implement `RoundRawFNToRecFN`\n\nImplement the complete `RoundRawFNToRecFN` module. Preserve the definition name, constructor parameters, inheritance, and public interface shown below. Keep the declarations under Dependency declarations in the fixed source and do not resubmit them.\n\nReturn only the complete `class RoundRawFNToRecFN` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### `src/main/scala/common.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n### `src/main/scala/RoundAnyRawFNToRecFN.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n\n## Documentation\n\n### `HardFloat-Verilog.html`\n\n```html\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Section framing",
+      "text": "```\n"
+    }
+  ]
+}

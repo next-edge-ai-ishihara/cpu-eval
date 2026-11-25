@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "b58e4042f49b1147213e2dbf13c39bc55ad65972516c5bfac2f05c4bf0ea2b1a",
+  "prompt_sha256": "84c7e7818f31bc71f01ec4380cc3e2fcf0afcd40af2296ad8f0919c53c6a5ee6",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        344
+      ],
+      "sha256": "122f8689362da3d034576dc9f363601302004b94125d445b40a682e7ca1c3309"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        344,
+        1252
+      ],
+      "sha256": "b06cc913a20001b351b98257a54f9f40dbc3d6d97c331b3399009b2eb07fcf31"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences: Dependency declarations; `rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_1rw.sv`",
+      "prompt_bytes": [
+        1252,
+        1371
+      ],
+      "sha256": "537fd830bf9831ed58df3b9b8979bd2ca1a2556d075cff4ce01b26bde4e8ecf5"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1371,
+        2008
+      ],
+      "sha256": "55dcc392d9695717d5f2ddb6862732fb8bd35fea46bee442a121085748c504cb"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences: `rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_ecc_1rw.sv`",
+      "prompt_bytes": [
+        2008,
+        2103
+      ],
+      "sha256": "af2b0a114356c474646d5eee400d7e0d4c9e0f1cfab7c68770a39ea0c107c48b"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        2103,
+        2977
+      ],
+      "sha256": "7b047cc27181b13755b0ad046ec7b86d8987fce55c84f2db8170c16687e2bff6"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Code fence",
+      "prompt_bytes": [
+        2977,
+        2982
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_sram_wbyteenable",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_sram_wbyteenable.sv",
+      "lines": [
+        13,
+        35
+      ],
+      "language": "systemverilog",
+      "sha256": "f99bafaae1d8bd9410998bb39ee389d33fbdc78fdaa32e1b5ac75e2ba317d9f3"
+    },
+    {
+      "label": "Byte-enabled SRAM dependency declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_1rw.sv",
+      "lines": [
+        13,
+        29
+      ],
+      "language": "systemverilog",
+      "sha256": "1a955e41c2476e1c105b467a96e69ddc378df0b65f432c3c717741a7650bdc01"
+    },
+    {
+      "label": "ECC byte-enabled SRAM dependency declaration",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_ecc_1rw.sv",
+      "lines": [
+        15,
+        36
+      ],
+      "language": "systemverilog",
+      "sha256": "d7e728c8f8345f7546043d1f88bc7a4ce4260390be927c85edecf67e3c3ce186"
+    }
+  ]
+}

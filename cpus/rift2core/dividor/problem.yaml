@@ -1,0 +1,14 @@
+id: dividor
+cpu: rift2core
+target:
+  repository: https://github.com/whutddk/Rift2Core.git
+  revision: 64b660fb70e0cab491049bdeea87c27936dcbf1e
+  file: src/main/scala/rift2Core/backend/Mul.scala
+  class: Dividor
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: ../_shared/evaluate.sh

@@ -1,0 +1,72 @@
+diff --git a/src/test/cpp/regression/main.cpp b/src/test/cpp/regression/main.cpp
+--- a/src/test/cpp/regression/main.cpp
++++ b/src/test/cpp/regression/main.cpp
+@@ -2815,16 +2815,19 @@ public:
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <string.h>
+ #include <arpa/inet.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+ #include <netinet/tcp.h>
+ 
++// CPU-Eval: the debug server binds a free port so concurrent simulations cannot share one.
++static uint16_t debugServerPort = 0;
++
+ /** Returns true on success, or false if there was an error */
+ bool SetSocketBlockingEnabled(int fd, bool blocking)
+ {
+    if (fd < 0) return false;
+ 
+ #ifdef WIN32
+    unsigned long mode = blocking ? 0 : 1;
+    return (ioctlsocket(fd, FIONBIO, &mode) == 0) ? true : false;
+@@ -2880,24 +2883,27 @@ public:
+ 								 (char *) &flag,  /* the cast is historical
+ 														 cruft */
+ 								 sizeof(int));    /* length of option value */
+ 
+ 		//---- Configure settings of the server address struct ----//
+ 		// Address family = Internet //
+ 		serverAddr.sin_family = AF_INET;
+ 		// Set port number, using htons function to use proper byte order //
+-		serverAddr.sin_port = htons(7893);
++		serverAddr.sin_port = htons(0);
+ 		// Set IP address to localhost //
+ 		serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+ 		// Set all bits of the padding field to 0 //
+ 		memset(serverAddr.sin_zero, '\0', sizeof serverAddr.sin_zero);
+ 
+ 		//---- Bind the address struct to the socket ----//
+-		bind(serverSocket, (struct sockaddr *) &serverAddr, sizeof(serverAddr));
++		if(bind(serverSocket, (struct sockaddr *) &serverAddr, sizeof(serverAddr)) != 0) perror("DebugPlugin bind");
++		socklen_t boundSize = sizeof(serverAddr);
++		if(getsockname(serverSocket, (struct sockaddr *) &serverAddr, &boundSize) != 0) perror("DebugPlugin bind");
++		debugServerPort = ntohs(serverAddr.sin_port);
+ 
+ 		//---- Listen on the socket, with 5 max connection requests queued ----//
+ 		listen(serverSocket,1);
+ 
+ 		//---- Accept call creates a new socket for the incoming connection ----//
+ 		addr_size = sizeof serverStorage;
+ 
+ 		clientHandle = -1;
+@@ -3464,17 +3470,17 @@ public:
+ 								 (char *) &flag,  /* the cast is historical
+ 														 cruft */
+ 								 sizeof(int));    /* length of option value */
+ 
+ 		//---- Configure settings of the server address struct ----//
+ 		// Address family = Internet //
+ 		serverAddr.sin_family = AF_INET;
+ 		// Set port number, using htons function to use proper byte order //
+-		serverAddr.sin_port = htons(7893);
++		serverAddr.sin_port = htons(debugServerPort);
+ 		// Set IP address to localhost //
+ 		serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+ 		// Set all bits of the padding field to 0 //
+ 		memset(serverAddr.sin_zero, '\0', sizeof serverAddr.sin_zero);
+ 
+ 		//---- Connect the socket to the server using the address struct ----//
+ 		socklen_t addr_size = sizeof serverAddr;
+ 		int error = connect(clientSocket, (struct sockaddr *) &serverAddr, addr_size);

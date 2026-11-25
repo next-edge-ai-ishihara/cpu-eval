@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "problem": "MissUnit",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/backend/LSU/MissUnit.scala",
+    "source_unit": "MissUnit"
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-lw"
+    ],
+    "policy": "Run the pinned upstream word-load test to exercise a D-cache miss, the refill response, and architectural load writeback."
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "The selected program completes normally with zero RTL-versus-ISA trace mismatches and no fixed observation mismatch. At least one grant beat must be accepted."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "test_reconstruction": {
+    "script": "tools/environment/build_environment_images.py",
+    "program": "rv64ui-p-lw",
+    "elf_sha256": "a8018956c822543d05ab991504cbd5a0a78d7fdb94e89382b084eafdf91677f8",
+    "verilog_image_sha256": "93852291229cbbeee52e46e63cf3f2a3f1cc5342fec36e52894dba75c180ddd8"
+  },
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_miss_channels.patch",
+      "sha256": "ed2274b7d44bd2dc2361c31b91c8b95b95def54796e0c0e70d7b271a87b7bf9b",
+      "applies_to": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "purpose": "Observe the permission of each accepted AcquireBlock and whether release is deferred on accepted grant beats at the fixed cache ports."
+    }
+  ],
+  "required_observation_markers": {
+    "rv64ui-p-lw": "CPU_EVAL_MISS_GRANT_REACHED"
+  }
+}

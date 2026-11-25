@@ -1,0 +1,7 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  iterations: 1
+  gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - {test: cpu-eval-ras-cycles, <<: *common_test_config, asm_tests: <path_var>/cpu-eval-patches/ras_cycles.S}

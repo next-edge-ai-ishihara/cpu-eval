@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/cva6/hpdcache_mux/SPEC_RECIPE.json",
+  "recipe_sha256": "16207ead6d98eab02e437877e21f7be2ef51055067a117b116e6c391706bb8f7",
+  "prompt_sha256": "676a7a59730ab10294902d635b65b074b05eb1fb3402c8304f24d2fa87986ae7",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        305
+      ],
+      "sha256": "6aca42a2e0053ffcaf16f187babd75c7f66b0510210997aeb8889cf82e7f61d8"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        305,
+        1053
+      ],
+      "sha256": "d67dceef267868f93593d702b7385a39af6f68e5312b5c70826dee26c828d78e"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        1053,
+        1141
+      ],
+      "sha256": "db0ac49c72dd244194e8a7e72d87eaf5de59a59ba1d60a042acc131859a068aa"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1141,
+        1437
+      ],
+      "sha256": "ac73fa34ca7c876ce10cb033eea2e41a629b48ae78f0378318467a6d03f17f50"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        1437,
+        1500
+      ],
+      "sha256": "5067996f49be11f4910fec197400171021ff41d70d6285bb0477a3a3cc256601"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1500,
+        1974
+      ],
+      "sha256": "8697fa730831155f5c4872b628ab7cbab6b2153c3465fdcb4394d13b09ce0a56"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        1974,
+        1979
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_mux",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_mux.sv",
+      "lines": [
+        26,
+        54
+      ],
+      "language": "verilog",
+      "sha256": "b32dd4327b73885ea8cd6802e02f5d72f073d83f02eb883bbadb850690ea67a1"
+    },
+    {
+      "label": "One-hot selector use for requester data",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_core_arbiter.sv",
+      "lines": [
+        112,
+        120
+      ],
+      "language": "verilog",
+      "sha256": "5d895629db5a75ae8ce76385641e7ead0053d6ebd031b896e378a945b8cad4ea"
+    },
+    {
+      "label": "Binary selector use for refill response data",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_miss_handler.sv",
+      "lines": [
+        598,
+        608
+      ],
+      "language": "verilog",
+      "sha256": "ac26528a861d1e237a56e9add5bf77c37c84db2f179e78118832926c8d9e54f0"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py",
+    "../instr_scan/harness/evaluate_ports.py",
+    "harness/check_zcb_ports.py",
+    "harness/compressed_zcb_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "compressed_decoder",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/compressed_decoder.sv",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "58047f870a8223aa69baaed5059117ef1dbe5d02425a013739c6d95e37a25792",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "trace_comparator": "../harness/compare_architectural_traces.py",
+  "trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_compressed_decoder.yaml",
+  "test_list_sha256": "6410e79540ef9ef83d9cfd4d721c86849e0907d1b708bfd11c406284b4d221d9",
+  "port_test": {
+    "runner": "harness/check_zcb_ports.py",
+    "runner_sha256": "145af8e68fc2c78d8db77ebc21008f2d5c7dae486701731496a40f3365e35252",
+    "testbench": "harness/compressed_zcb_ports_tb.sv",
+    "testbench_sha256": "5fdecd90219425a4d6ef50ea3d8f9f7066ccb171c44392e757c6b4f90d64c18e",
+    "configuration_packages": [
+      "core/include/config_pkg.sv", "core/include/cv32a60x_config_pkg.sv",
+      "core/include/build_config_pkg.sv", "core/include/riscv_pkg.sv"
+    ],
+    "rule": "After the 27 architectural tests pass, compare the output word and all public flags for 1000 legal Zcb halfwords, 1176 reserved Zcb halfwords, and two uncompressed words."
+  },
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/compressed_decoder.sv",
+    "test_sources": "The evaluator extracts C.EBREAK from the recorded test revision, applies harness/cebreak-normalize-mtvec.patch, verifies the output hash, and removes the generated source after evaluation. The other 26 sources named by the test list are unmodified upstream files.",
+    "patch": {
+      "path": "harness/cebreak-normalize-mtvec.patch",
+      "sha256": "e2d7644bcc2653eae07f70df82b12b0c90571ff51bf450a65f9f36acebe4eedb",
+      "apply": [
+        "git",
+        "apply",
+        "harness/cebreak-normalize-mtvec.patch"
+      ],
+      "output": "riscv-test-suite/rv32i_m/C/src/cebreak-01.S",
+      "output_sha256": "3a9136eeb7894289dc8d2a66f3fd625f5f8dbf41604d477ed6618a9a3ad91df7"
+    }
+  },
+  "mtvec_adaptation": "decoder initializes mtvec to zero before the architectural test. compressed_decoder points mtvec to the local continuation label. The patches describe distinct fixed test configurations."
+}

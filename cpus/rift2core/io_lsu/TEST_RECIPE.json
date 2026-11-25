@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "problem": "IO_Lsu",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "path": "src/main/scala/rift2Core/backend/LSU/IO_Lsu.scala",
+    "source_unit": "IO_Lsu"
+  },
+  "test_programs": {
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "selection": [
+      "tb/sw/clint_Plic"
+    ],
+    "policy": "Apply the fixed patch to the developer-provided clint_Plic program, build it with the recorded command, and run the resulting AClint readback image.",
+    "image_selection": ["io-lsu-aclint-readback"]
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "version": "5.1.0",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438",
+    "basis": "The fixed rift2core-chisel5-compatibility.patch selects org.chipsalliance::chisel:5.1.0."
+  },
+  "fixed_test_patches": [
+    {
+      "path": "harness/io-lsu-aclint-readback.patch",
+      "sha256": "acdd3655d966666dbf7f71a9209a32f30912ca1e72abcb4499476d456441946a",
+      "applies_to": "Rift2Core revision 64b660fb70e0cab491049bdeea87c27936dcbf1e",
+      "purpose": "Adapt the upstream clint_Plic program to write and read back the AClint mtimecmp register using zero, one, and a value with nonzero upper 32 bits. Add the explicit Zicsr assembler extension required by the pinned toolchain."
+    }
+  ],
+  "test_build": {
+    "working_directory": "tb/sw/clint_Plic",
+    "command": "make",
+    "outputs": [
+      "clint_plic.elf",
+      "clint_plic.verilog"
+    ]
+  },
+  "comparison_configuration": {
+    "dromajo_argument": "--clint 0x1c000:0x10000",
+    "reason": "Map Dromajo's standard mtimecmp offset 0x4000 to the Rift2330 AClint mtimecmp address 0x20000 so both models execute the same register semantics."
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch"
+}

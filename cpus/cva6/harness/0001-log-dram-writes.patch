@@ -1,0 +1,16 @@
+diff --git a/corev_apu/tb/ariane_testharness.sv b/corev_apu/tb/ariane_testharness.sv
+--- a/corev_apu/tb/ariane_testharness.sv
++++ b/corev_apu/tb/ariane_testharness.sv
+@@ -474,6 +474,12 @@ module ariane_testharness #(
+     .data_i ( rdata        )
+   );
+ 
++  always_ff @(posedge clk_i) begin
++    if (req && we) begin
++      $display("CVA6_MEM_WRITE %016h %02h %016h", addr, be, wdata);
++    end
++  end
++
+   sram #(
+     .DATA_WIDTH ( AXI_DATA_WIDTH ),
+     .USER_WIDTH ( AXI_USER_WIDTH ),

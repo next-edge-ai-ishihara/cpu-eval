@@ -1,0 +1,7 @@
+diff --git a/riscv-test-suite/rv32i_m/I/src/sw-align-01.S b/riscv-test-suite/rv32i_m/I/src/sw-align-01.S
+index 7474da2..d5a6799 100644
+--- a/riscv-test-suite/rv32i_m/I/src/sw-align-01.S
++++ b/riscv-test-suite/rv32i_m/I/src/sw-align-01.S
+@@ -37 +37,2 @@ inst_0:
+ TEST_STORE(x2,x5,0,x15,x30,-0x80000000,0x80,0,sw,0)
++lw x5, 0(x2)

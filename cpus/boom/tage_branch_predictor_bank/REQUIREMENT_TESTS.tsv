@@ -1,0 +1,4 @@
+requirement	test_program	test_behavior
+Preserve architectural control flow	rv64ui-p-beq;rv64ui-p-bne;rv64ui-p-jal;rv64ui-p-jalr	The fixed upstream programs compare retired execution against Spike with the selected TAGE bank.
+Complete the loop program	rv64mi-p-loop_branch_cycles	Require PASSED completion and record committed x20 as a diagnostic; no exact cycle-count equality is required.
+Preserve incoming direction on a miss and update predictions from commit outcomes	test/TageBankPublicContractTest.scala	Confirm pass-through for both input directions; correct commits on a fresh PC preserve pass-through. Return opaque prediction metadata for training and require each trained direction to override the opposite incoming direction.

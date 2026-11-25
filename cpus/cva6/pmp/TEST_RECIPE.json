@@ -1,0 +1,49 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/check_write_ports.py",
+    "harness/pmp_write_ports_tb.sv",
+    "../instr_scan/harness/evaluate_ports.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "pmp",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/openhwgroup/cva6.git",
+  "test_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "configuration": "cv64a6_imafdc_sv39",
+  "source_path": "core/pmp/src/pmp.sv",
+  "source_sha256": "9c2dce5d4bd2390a617882c282080dbf191c54f016b36b5e719672382c15c7b6",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "32c5b3f7b2eba6cec56faa387de9ae9b628f26f284c58e13ef71dec7870781e0",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_pmp.yaml",
+  "test_list_sha256": "e0342c51d39481ca3c60aade490a0b2ef27a32e980462f526f599efe24a6854d",
+  "integration_patch": "test-patches/adapt_custom_runtime_to_arch_linker.patch",
+  "integration_patch_sha256": "a63937867b36a01165b641accb1024cf592d3639725e33d372461967a0c7cb98",
+  "directed_test_patch": "test-patches/add_pmp_load_permissions_test.patch",
+  "directed_test_patch_sha256": "15f48ed8585dc39daee440ab613b2fada1004841a2392b95bdea32f47062810a",
+  "application_order": [
+    "Start with the recorded revisions unpatched, then invoke harness/evaluate.sh with the candidate.",
+    "The evaluator applies integration_patch at the CVA6 repository root to provide the entry-point and global-pointer symbols required by the architectural-test linker script",
+    "The evaluator applies directed_test_patch at the CVA6 repository root to add the recorded PMP load-permission test",
+    "The evaluator integrates the submitted module and reverses its integration patches on exit. Do not apply these patches before invocation."
+  ],
+  "test_selection": "One fixed complete-CPU directed test configures adjacent TOR regions, enters S-mode, reads a word from the read-only region, and verifies that reading the no-access region raises load access fault mcause 5.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/pmp/src/pmp.sv",
+    "test_sources": "The ordered patch records describe test provenance. Start with the pinned test sources and leave these patches unapplied before invoking harness/evaluate.sh, which reconstructs the tests.",
+    "evaluation": "Start from an unpatched checkout and invoke harness/evaluate.sh with the candidate; the evaluator applies its own patches and restores its inputs."
+  },
+  "port_evaluator": "harness/check_write_ports.py",
+  "port_evaluator_sha256": "b40c37f44e87b473dbaa990c79024cf0de11b0a922aede83c286b66ceda4df90",
+  "port_testbench": "harness/pmp_write_ports_tb.sv",
+  "port_testbench_sha256": "eb81959b104c5260f2480ac72f28abad66cf61cfd38a622806ee2a48708e5176",
+  "port_runtime": "../instr_scan/harness/evaluate_ports.py",
+  "port_runtime_sha256": "4ada650951191124054d4b96d5c3b2003d9944ce15dde544476f07afad117562",
+  "port_test_scope": "Run the port check first using the selected eight-entry PMP and the pinned pmp_entry. An S-mode write is allowed in a locked read/write TOR region and denied in a locked read-only TOR region."
+}

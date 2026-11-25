@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Ibex small configuration",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "ibex_configs.yaml",
+      "lines": [
+        19,
+        26
+      ],
+      "sha256": "75b4e848face7fa31e1bc227aaa7a83cb2a8f45aa1fc0bd4fe2e2800f6caac28"
+    },
+    {
+      "label": "Ibex multiply and bit-manipulation configuration types",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        47,
+        59
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Ibex ALU and multiplier operation identifiers",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_pkg.sv",
+      "lines": [
+        93,
+        208
+      ],
+      "sha256": "d9bfed30b16dd77981f1850a8daf56fec5ce14043789b4a0a4506c833e9a7d5a"
+    },
+    {
+      "label": "Module declaration for ibex_ex_block",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_ex_block.sv",
+      "lines": [
+        11,
+        54
+      ],
+      "sha256": "6451d5cd6af214b5fbb70f7499f898de981188cd7a25bf49247c0819b907c90b",
+      "language": "verilog"
+    },
+    {
+      "label": "Parent instantiation for ibex_ex_block",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_core.sv",
+      "lines": [
+        863,
+        906
+      ],
+      "sha256": "88b8bf3907472f1d413380f62234a7fbf53cb1de392a6660e6ef2d684a2416fd"
+    },
+    {
+      "label": "Dependency module declaration for ibex_ex_block",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_alu.sv",
+      "lines": [
+        9,
+        33
+      ],
+      "sha256": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+    },
+    {
+      "label": "Dependency module declaration for ibex_ex_block",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_multdiv_fast.sv",
+      "lines": [
+        17,
+        46
+      ],
+      "sha256": "c86ca819b58b8ce2fc4ff5db887346bcd622b868fb7815fa07dd77119c68c04a"
+    },
+    {
+      "label": "Official design documentation for ibex_ex_block and the ALU uses",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_decode_execute.rst",
+      "lines": [
+        49,
+        65
+      ],
+      "sha256": "ab60d2567305b1d544cdac813c37a440f89e134bc5d3d8e5551c5a7c69dc3ffb"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "# Implement `ibex_ex_block`\n\nImplement the complete `ibex_ex_block` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ibex_ex_block` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## CPU configuration used for evaluation\n\n### ibex_configs.yaml\n\n```yaml\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Package and imports\n\n### rtl/ibex_pkg.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Parent instantiation\n\n### rtl/ibex_core.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Dependency declarations\n\n### rtl/ibex_alu.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### rtl/ibex_multdiv_fast.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Documentation\n\n### doc/03_reference/instruction_decode_execute.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    }
+  ]
+}

@@ -1,0 +1,1674 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "e140da31242363e5d96b839a09cbee2d9c52729923f65d9f139ce21baf80f926",
+  "prompt_sha256": "c813841110fe6a262e2da3d42972e43a0bad89c04cabcc70c763f614666e1891",
+  "repositories": {
+    "github.com/riscv-boom/riscv-boom": {
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    "github.com/chipsalliance/rocket-chip": {
+      "revision": "114325b27cfe5312c86a8a325b187be9455a62af"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        369
+      ],
+      "sha256": "44f0adb8a27864a793bbecdf332b4f05e1b19af58ffcac5b2cf047a7b43245cb"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        369,
+        404
+      ],
+      "sha256": "5603b8e1726565b75702edb2d30688bc4636511c9092239feb12786b93a09285"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        404,
+        411
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 50,
+      "prompt_bytes": [
+        411,
+        989
+      ],
+      "sha256": "cd97f77f4a5d65185547466575c41d7afc2f69bf78b9fb0ea8d4accf6f41c7d9"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        989,
+        996
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 51,
+      "prompt_bytes": [
+        996,
+        1267
+      ],
+      "sha256": "0e8ed6d12e61e0debc9d95c669ec205db549b273660c02e5de0c43ebc27ca26d"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1267,
+        1327
+      ],
+      "sha256": "2c0d418599730ac43dd5e665ac039a518d21e61c8e86d98d4e016da9e5931499"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        1327,
+        1364
+      ],
+      "sha256": "312eae8185849cb5f8c9b460ae52428cb18f3b26c774c7102397d171dd385ea9"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1364,
+        1402
+      ],
+      "sha256": "9bad5811fbd859eba734eb71a0fff9909f0859e0208105f86fa338aa19a18b3d"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1402,
+        1837
+      ],
+      "sha256": "26818500465f2f30026916e0735c50b4d784a5dfe37563949f4f6860fa998964"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1837,
+        1873
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1873,
+        6886
+      ],
+      "sha256": "a85ee68fa078698914afc6f6644cb860bdd6ff0faad94aee7c12efa35e760528"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        6886,
+        6893
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        6893,
+        7035
+      ],
+      "sha256": "f6d9f2562855f8b56107b6e6d6597c98dc208969608358d7942722c634f7e5a5"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        7035,
+        7074
+      ],
+      "sha256": "ada51fbbc45cb1c158fe0379dd9f01b0f8f50f6be1a92859e857c76fb196a0d2"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        7074,
+        7498
+      ],
+      "sha256": "55cc8137c31a56ca51126b63e56b534f6dc5aee76e41704c88c0adb428ce7abf"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        7498,
+        7505
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        7505,
+        7639
+      ],
+      "sha256": "6404e5132bcf80a604bc213f8c1fb09fdd487e2d73425be40c44e110de884d0d"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        7639,
+        7646
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        7646,
+        8070
+      ],
+      "sha256": "8a94ca2aa8cf4af605567fbba8dec2b6656a789b79ab8994fa723ec98e2f7da2"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        8070,
+        8127
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 52,
+      "prompt_bytes": [
+        8127,
+        8372
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        8372,
+        8451
+      ],
+      "sha256": "b085349b3c1a72b0e088260d89e4b9a42a09fd2587b1e219fbd8e672ab919c72"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        8451,
+        8848
+      ],
+      "sha256": "ee0c48691377e227f55f1c1df6c79734d0cd9d2f3b489fb3fa7d0ad4d23a5529"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        8848,
+        8906
+      ],
+      "sha256": "ad1998b82682eb464b8a2d63e9fb0392172cacfc253ca70078c998ca756e1fba"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        8906,
+        9691
+      ],
+      "sha256": "c05569bb6b13e96823dd1c620cce1cd943a26ed46e166d03ad4fdff8371b8035"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        9691,
+        9698
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        9698,
+        9792
+      ],
+      "sha256": "9e0bf992fec307ec49d8072ae6b35265bd634e4efcd2c7c938f1eacf0720498a"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        9792,
+        9799
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        9799,
+        10028
+      ],
+      "sha256": "e800a3fd35332bcb0a6e0ed4d6218022fd0b06a70f95fa149803522a6d4bbe67"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        10028,
+        10035
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 31,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        10035,
+        10586
+      ],
+      "sha256": "f501a6e52ea47490645e16d1a049cd6489dfa9fda4339467318430f7c00fcfc0"
+    },
+    {
+      "index": 32,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        10586,
+        10593
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 33,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        10593,
+        10968
+      ],
+      "sha256": "906b8ca484d3ce7e80f28e700f90f05b1777a568e9b4a864ca1d0f712bf5e622"
+    },
+    {
+      "index": 34,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        10968,
+        10975
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 35,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        10975,
+        11655
+      ],
+      "sha256": "aac8070773cb827f9dea02ee83d679ff1c977ec17f104e54de3a1cdae8cf7090"
+    },
+    {
+      "index": 36,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        11655,
+        11733
+      ],
+      "sha256": "bb87c6d0ea2a6e5011968b0c97976c214a0196a800aa47e221d191a9bb221a44"
+    },
+    {
+      "index": 37,
+      "kind": "verbatim_source",
+      "source": 15,
+      "prompt_bytes": [
+        11733,
+        13249
+      ],
+      "sha256": "12e2b669c175afb91183ee7e56c0838ec44c9f583289416d7339f03974a10cc1"
+    },
+    {
+      "index": 38,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        13249,
+        13326
+      ],
+      "sha256": "e5d0f81e16ca840a1683391cb7db444513af388cc8fe2c1cf60ec0e61a88bfea"
+    },
+    {
+      "index": 39,
+      "kind": "verbatim_source",
+      "source": 16,
+      "prompt_bytes": [
+        13326,
+        13745
+      ],
+      "sha256": "82251d36e9757946a070246fdc30b8caeaf8845ae3bc7661a8efdaf8087cb39a"
+    },
+    {
+      "index": 40,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        13745,
+        13795
+      ],
+      "sha256": "cbfe765570d527cf3cb824f882ccadf892cb30d4d8353a38454a4130ebd4ea8c"
+    },
+    {
+      "index": 41,
+      "kind": "verbatim_source",
+      "source": 17,
+      "prompt_bytes": [
+        13795,
+        14451
+      ],
+      "sha256": "660876e111f37d2684b80d04ff2a472b28a3b0341b6ab12f232deb68c3b288bd"
+    },
+    {
+      "index": 42,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        14451,
+        14458
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 43,
+      "kind": "verbatim_source",
+      "source": 18,
+      "prompt_bytes": [
+        14458,
+        14732
+      ],
+      "sha256": "bd523744d9c0d827954ed1bfe014ea2bff6c16bef77b4cf8a91f37bdaddca6c1"
+    },
+    {
+      "index": 44,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        14732,
+        14739
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 45,
+      "kind": "verbatim_source",
+      "source": 19,
+      "prompt_bytes": [
+        14739,
+        15411
+      ],
+      "sha256": "db64923926a6e45f80bb3c1dd5fb538d0bc1f4e0e31bdad61ee756b6beada47b"
+    },
+    {
+      "index": 46,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        15411,
+        15418
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 47,
+      "kind": "verbatim_source",
+      "source": 20,
+      "prompt_bytes": [
+        15418,
+        16015
+      ],
+      "sha256": "117185e891ea7a8a9123f69e8cb6ed951bfba773c2ab26b5b99dad8e4af2aa31"
+    },
+    {
+      "index": 48,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        16015,
+        16022
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 49,
+      "kind": "verbatim_source",
+      "source": 21,
+      "prompt_bytes": [
+        16022,
+        16476
+      ],
+      "sha256": "0cf69773dc9e24b672675e0d3c2c1f6c42ab4ff37a1fe3e13a3375cc1d9f0d65"
+    },
+    {
+      "index": 50,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        16476,
+        16526
+      ],
+      "sha256": "aac1da6d42b9e40bde3937e5bc39f1ee21b2f05826213b453dbacb8ff53393a8"
+    },
+    {
+      "index": 51,
+      "kind": "verbatim_source",
+      "source": 22,
+      "prompt_bytes": [
+        16526,
+        16972
+      ],
+      "sha256": "2d669c2ab87bbe81f9a528a241ba3e902a97887e46a4914a869b73fe1c917971"
+    },
+    {
+      "index": 52,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        16972,
+        17025
+      ],
+      "sha256": "4f5cf56914e1aa092932d6adf840d8f8f96cdd21d0b906a6fd4583224f54379d"
+    },
+    {
+      "index": 53,
+      "kind": "verbatim_source",
+      "source": 23,
+      "prompt_bytes": [
+        17025,
+        17061
+      ],
+      "sha256": "fa3736d15c4891bdfc713b3d7e5692087046a01f850cd7952057839f5f1044a9"
+    },
+    {
+      "index": 54,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        17061,
+        17068
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 55,
+      "kind": "verbatim_source",
+      "source": 24,
+      "prompt_bytes": [
+        17068,
+        18264
+      ],
+      "sha256": "60434fc81a6b233467f6dd33b2b644ce485693f4bd3bc0f1380cfa89de42fc65"
+    },
+    {
+      "index": 56,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        18264,
+        18271
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 57,
+      "kind": "verbatim_source",
+      "source": 25,
+      "prompt_bytes": [
+        18271,
+        18380
+      ],
+      "sha256": "ce256573d3fd2aefd5e51e1f0d303c2432b2cf81eadc0d3fee45ed3c59de5e6b"
+    },
+    {
+      "index": 58,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        18380,
+        18440
+      ],
+      "sha256": "bc9068013524562606ab339b70dbb142fbc5be49af2c1be56766d009b66f22ce"
+    },
+    {
+      "index": 59,
+      "kind": "verbatim_source",
+      "source": 26,
+      "prompt_bytes": [
+        18440,
+        18476
+      ],
+      "sha256": "fa3736d15c4891bdfc713b3d7e5692087046a01f850cd7952057839f5f1044a9"
+    },
+    {
+      "index": 60,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        18476,
+        18483
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 61,
+      "kind": "verbatim_source",
+      "source": 27,
+      "prompt_bytes": [
+        18483,
+        21586
+      ],
+      "sha256": "67bd1941d8c301842384b15761977f57eb035c101c87f11cd0bbada74236f15f"
+    },
+    {
+      "index": 62,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        21586,
+        21642
+      ],
+      "sha256": "30568a8ba8f4113cab7e2d2d043adcbb626739bf7612afac06ea4add09654f88"
+    },
+    {
+      "index": 63,
+      "kind": "verbatim_source",
+      "source": 28,
+      "prompt_bytes": [
+        21642,
+        21678
+      ],
+      "sha256": "fa3736d15c4891bdfc713b3d7e5692087046a01f850cd7952057839f5f1044a9"
+    },
+    {
+      "index": 64,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        21678,
+        21685
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 65,
+      "kind": "verbatim_source",
+      "source": 29,
+      "prompt_bytes": [
+        21685,
+        23048
+      ],
+      "sha256": "3933b87b7b6f3b75377632d78ca67886395784c5c5c5e67b4e65aa94e07a1a9f"
+    },
+    {
+      "index": 66,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        23048,
+        23100
+      ],
+      "sha256": "670189426e25042d4603df370bea5e5f58b1a2d19cab4adbc8c93f1ad684f7a8"
+    },
+    {
+      "index": 67,
+      "kind": "verbatim_source",
+      "source": 30,
+      "prompt_bytes": [
+        23100,
+        24822
+      ],
+      "sha256": "1ab2a32356ba25a6d462f6744ca38e37205a29f21ab57d72977d1d1bddfcc336"
+    },
+    {
+      "index": 68,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        24822,
+        24829
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 69,
+      "kind": "verbatim_source",
+      "source": 31,
+      "prompt_bytes": [
+        24829,
+        25176
+      ],
+      "sha256": "204630e3e5cd36ee11bdb5c2d537c3234a058f97569fff65c3079c6f8890b680"
+    },
+    {
+      "index": 70,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        25176,
+        25183
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 71,
+      "kind": "verbatim_source",
+      "source": 32,
+      "prompt_bytes": [
+        25183,
+        25780
+      ],
+      "sha256": "ef5f5104deb48ec962bfc98a59310f398c7255b16b1b9fc8bd529018d9a52d0a"
+    },
+    {
+      "index": 72,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        25780,
+        25830
+      ],
+      "sha256": "46cb8c823151c9149651ab02cb521b4d1798d214f7a249aa0010c0ee4af40fdf"
+    },
+    {
+      "index": 73,
+      "kind": "verbatim_source",
+      "source": 33,
+      "prompt_bytes": [
+        25830,
+        26354
+      ],
+      "sha256": "689b9ba5e0f23b4ba834ef7bdf8afa20418264de8d5a63dad06b778a39566b05"
+    },
+    {
+      "index": 74,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        26354,
+        26361
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 75,
+      "kind": "verbatim_source",
+      "source": 34,
+      "prompt_bytes": [
+        26361,
+        26860
+      ],
+      "sha256": "08e63616b515a12bf95d233d5e0ffdb344d6e85b999d02c0135e03530552556d"
+    },
+    {
+      "index": 76,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        26860,
+        26919
+      ],
+      "sha256": "cfab40a085823027151f01cbbb4fe4c226203dd38a348cdfb0e9629d00152099"
+    },
+    {
+      "index": 77,
+      "kind": "verbatim_source",
+      "source": 35,
+      "prompt_bytes": [
+        26919,
+        27594
+      ],
+      "sha256": "a62255c82bc54af1c646b39a2456363276059b20072b9ccbaae34773cb71ca19"
+    },
+    {
+      "index": 78,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        27594,
+        27650
+      ],
+      "sha256": "9277b84fb74959cfc440392d4b40a724502a04d6d5e8a029b1acbc00ed4458d4"
+    },
+    {
+      "index": 79,
+      "kind": "verbatim_source",
+      "source": 36,
+      "prompt_bytes": [
+        27650,
+        27696
+      ],
+      "sha256": "aad91242e2a19409599b53152ba7565d54e92e0f2c5c170deae86a76f9bc3408"
+    },
+    {
+      "index": 80,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        27696,
+        27703
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 81,
+      "kind": "verbatim_source",
+      "source": 37,
+      "prompt_bytes": [
+        27703,
+        29615
+      ],
+      "sha256": "20f694cae4ad3a7cd6a8cb33a198a4b9abf6b10df9c978b1a32857abf7994dc6"
+    },
+    {
+      "index": 82,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        29615,
+        29671
+      ],
+      "sha256": "75739229b74b112dae66deb38af480e6150731d8655b59cc0a207e0b408a3e27"
+    },
+    {
+      "index": 83,
+      "kind": "verbatim_source",
+      "source": 38,
+      "prompt_bytes": [
+        29671,
+        29951
+      ],
+      "sha256": "978d8f5def6e1da3e0905307cd5297784d1a876a938cbc5ba313b1327f5826bc"
+    },
+    {
+      "index": 84,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        29951,
+        29958
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 85,
+      "kind": "verbatim_source",
+      "source": 39,
+      "prompt_bytes": [
+        29958,
+        30191
+      ],
+      "sha256": "4d9539fd785c28b0c92442a688836747fafee37ed6a959436eceaa274d7c82ae"
+    },
+    {
+      "index": 86,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        30191,
+        30251
+      ],
+      "sha256": "2c0d418599730ac43dd5e665ac039a518d21e61c8e86d98d4e016da9e5931499"
+    },
+    {
+      "index": 87,
+      "kind": "verbatim_source",
+      "source": 40,
+      "prompt_bytes": [
+        30251,
+        31064
+      ],
+      "sha256": "5ce32f5db8512405ea610f5c2208ea3fbb4e5ae2e465c3cb8e9a7ff070913458"
+    },
+    {
+      "index": 88,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        31064,
+        31071
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 89,
+      "kind": "verbatim_source",
+      "source": 41,
+      "prompt_bytes": [
+        31071,
+        32218
+      ],
+      "sha256": "28424c8bb217a0506263c8041e2370aa6eba14b89735ed420daec69991735991"
+    },
+    {
+      "index": 90,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        32218,
+        32269
+      ],
+      "sha256": "054673e7731acac872105b98e44a17f328cbb9c96feb28f179f49b1d7ec832cc"
+    },
+    {
+      "index": 91,
+      "kind": "verbatim_source",
+      "source": 42,
+      "prompt_bytes": [
+        32269,
+        32675
+      ],
+      "sha256": "fa8a44d728eb24fc7575895d6dd3335893812e814933afca5a75562f80481cf9"
+    },
+    {
+      "index": 92,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        32675,
+        32682
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 93,
+      "kind": "verbatim_source",
+      "source": 43,
+      "prompt_bytes": [
+        32682,
+        34010
+      ],
+      "sha256": "0b1f2ca179c1e299680b395250b0bc6b476a61dde64c3ab130d866ae147c9de5"
+    },
+    {
+      "index": 94,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        34010,
+        34017
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 95,
+      "kind": "verbatim_source",
+      "source": 44,
+      "prompt_bytes": [
+        34017,
+        34464
+      ],
+      "sha256": "fe99a29a6489e165ba9adef2f3126026552d4e9d69e793f17af358940b08ba04"
+    },
+    {
+      "index": 96,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        34464,
+        34471
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 97,
+      "kind": "verbatim_source",
+      "source": 45,
+      "prompt_bytes": [
+        34471,
+        34645
+      ],
+      "sha256": "ada7d69155457fa90daa544b1eb2adcf679efd6f379494a35f1f7436082e1180"
+    },
+    {
+      "index": 98,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        34645,
+        34652
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 99,
+      "kind": "verbatim_source",
+      "source": 46,
+      "prompt_bytes": [
+        34652,
+        34773
+      ],
+      "sha256": "8cd22c2cd8d9aa39d7927659a5158331e5aac5ff58e385e9315ec1df83cce8c1"
+    },
+    {
+      "index": 100,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        34773,
+        34780
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 101,
+      "kind": "verbatim_source",
+      "source": 47,
+      "prompt_bytes": [
+        34780,
+        34923
+      ],
+      "sha256": "cc516e1f904c467df6ae8b07c3ed587b80f94b60a2c5132345bfb4be704428fd"
+    },
+    {
+      "index": 102,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        34923,
+        34976
+      ],
+      "sha256": "9e02fbf5e3d2f9cc577ebcb7101022aa0fe24105736bf6ac0267a01d6e622f20"
+    },
+    {
+      "index": 103,
+      "kind": "verbatim_source",
+      "source": 48,
+      "prompt_bytes": [
+        34976,
+        35327
+      ],
+      "sha256": "d6080c527880995d0649153f6406499019789a3f8b64442340e998e1fcc2502b"
+    },
+    {
+      "index": 104,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        35327,
+        35399
+      ],
+      "sha256": "535b1a9fc2fd3bead60ad4131def245ff78a018632beb38811be0d317e5339bc"
+    },
+    {
+      "index": 105,
+      "kind": "verbatim_source",
+      "source": 49,
+      "prompt_bytes": [
+        35399,
+        40635
+      ],
+      "sha256": "8cc32b6f9450ba028db22d6d79a75def7c42a2ce757cd1afcb40bd6ad8f7ce25"
+    },
+    {
+      "index": 106,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        40635,
+        40639
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Selected BOOM core parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        188,
+        188
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Default fast-load-use setting",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        42,
+        42
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Package and imports",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        44,
+        56
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "LSU public interfaces",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        58,
+        201
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "Definition and IO declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        203,
+        206
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "Fixed LSU integration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        150,
+        162
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "Fixed core connection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        176,
+        178
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "Fixed LSU connections",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/tile.scala",
+      "lines": [
+        229,
+        239
+      ],
+      "sha256": "86b024889e870e0f5a90ad81a95fc7930f4ccd3d0017d340c01e805f6e687f3a"
+    },
+    {
+      "label": "BOOM base declarations",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/types.scala",
+      "lines": [
+        12,
+        22
+      ],
+      "sha256": "783d251e6faf58a0bf7f68fb6155b4679b7602ddc028bd12712735c569ff1852"
+    },
+    {
+      "label": "Micro-operation declaration and control payload",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        21,
+        43
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation branch mask",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        59,
+        59
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation queue and destination indices",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        77,
+        81
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation exception and memory controls",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        92,
+        102
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation destination and floating-point controls",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        120,
+        127
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Micro-operation boundary and load-store control declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/micro-op.scala",
+      "lines": [
+        155,
+        174
+      ],
+      "sha256": "721ca4990b7fddc0ca29000fd849e5b0a4089268ef6e66938e127cc16aade801"
+    },
+    {
+      "label": "Memory request and branch-update declarations",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/functional-unit.scala",
+      "lines": [
+        100,
+        146
+      ],
+      "sha256": "d8bd2dcdfbca98bfbe08e08a04ae043b5e0f7509c1818c602e54f079430b7984"
+    },
+    {
+      "label": "Execution response declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/execution-units/execution-unit.scala",
+      "lines": [
+        33,
+        44
+      ],
+      "sha256": "851331e61affdfc8f849bac6b3fd5c673c1f115cbf99d103ea9d6d23d99bd624"
+    },
+    {
+      "label": "Commit declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rob.scala",
+      "lines": [
+        115,
+        133
+      ],
+      "sha256": "c0dc65c09e79f2f90eefc61e72a0b3e43d92cfecd0ecaf049dae77440ec00214"
+    },
+    {
+      "label": "Exception declaration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rob.scala",
+      "lines": [
+        181,
+        189
+      ],
+      "sha256": "c0dc65c09e79f2f90eefc61e72a0b3e43d92cfecd0ecaf049dae77440ec00214"
+    },
+    {
+      "label": "ROB busy and unsafe consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rob.scala",
+      "lines": [
+        359,
+        374
+      ],
+      "sha256": "c0dc65c09e79f2f90eefc61e72a0b3e43d92cfecd0ecaf049dae77440ec00214"
+    },
+    {
+      "label": "ROB LSU-exception consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rob.scala",
+      "lines": [
+        386,
+        396
+      ],
+      "sha256": "c0dc65c09e79f2f90eefc61e72a0b3e43d92cfecd0ecaf049dae77440ec00214"
+    },
+    {
+      "label": "ROB oldest-exception selection",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/rob.scala",
+      "lines": [
+        631,
+        640
+      ],
+      "sha256": "c0dc65c09e79f2f90eefc61e72a0b3e43d92cfecd0ecaf049dae77440ec00214"
+    },
+    {
+      "label": "Nonblocking data TLB interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/tlb.scala",
+      "lines": [
+        17,
+        26
+      ],
+      "sha256": "ca63599e53a2539d769a84249de0ecdd4fd2a877ac7fce83161cab601f539f55"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        4,
+        4
+      ],
+      "label": "Package of src/main/scala/rocket/TLB.scala",
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "TLB request and response declarations",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        24,
+        67
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "label": "TLB configuration constructor",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/TLB.scala",
+      "lines": [
+        171,
+        175
+      ],
+      "sha256": "f9813b7b28f3d13c99ee26a74c31a4d48434514b1a97540e1f1d37436c0dab5d"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        4,
+        4
+      ],
+      "label": "Package of src/main/scala/rocket/HellaCache.scala",
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "label": "HellaCache request and response interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/HellaCache.scala",
+      "lines": [
+        102,
+        187
+      ],
+      "sha256": "c1450d6ebb152eab86bbb1f5e7acaecb941a4f05f4b15b0ad8bd166e654ac49e"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/AMOALU.scala",
+      "lines": [
+        4,
+        4
+      ],
+      "label": "Package of src/main/scala/rocket/AMOALU.scala",
+      "sha256": "f193f45a7faa1d29662782a178fbf130b65cb90c8a01d23dfb891222715c41d5"
+    },
+    {
+      "label": "Store-data and load-data generation contracts",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/AMOALU.scala",
+      "lines": [
+        9,
+        49
+      ],
+      "sha256": "f193f45a7faa1d29662782a178fbf130b65cb90c8a01d23dfb891222715c41d5"
+    },
+    {
+      "label": "Branch recovery contracts",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/util/util.scala",
+      "lines": [
+        50,
+        111
+      ],
+      "sha256": "f701ed3dee77ee4621f9c207d50176469aa3265af1983f3d81897b5585159f18"
+    },
+    {
+      "label": "Circular queue increment contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/util/util.scala",
+      "lines": [
+        194,
+        209
+      ],
+      "sha256": "f701ed3dee77ee4621f9c207d50176469aa3265af1983f3d81897b5585159f18"
+    },
+    {
+      "label": "Age and ordering selection contracts",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/util/util.scala",
+      "lines": [
+        342,
+        364
+      ],
+      "sha256": "f701ed3dee77ee4621f9c207d50176469aa3265af1983f3d81897b5585159f18"
+    },
+    {
+      "label": "Byte-mask contract",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        1655,
+        1671
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "Forwarding selector interface",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/lsu.scala",
+      "lines": [
+        1673,
+        1686
+      ],
+      "sha256": "aa88001de4b2403f7fcc8466bd931466a0a20de075b08f1eee0df72694340e3a"
+    },
+    {
+      "label": "TileLink release payload",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Bundles.scala",
+      "lines": [
+        203,
+        218
+      ],
+      "sha256": "808e3fd3edfdd6cbac097ca8f71c57ffc59114ed10ff6da2d3202426c25292a9"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Consts.scala",
+      "lines": [
+        3,
+        3
+      ],
+      "label": "Package of src/main/scala/rocket/Consts.scala",
+      "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+    },
+    {
+      "label": "Rocket memory-operation constants",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/rocket/Consts.scala",
+      "lines": [
+        50,
+        87
+      ],
+      "sha256": "0b94ea38533c7cdda63cb394a9debe0b4c84e6060f037222c87ab19e4659dfb3"
+    },
+    {
+      "label": "BOOM destination and memory-ordering exception constants",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        118,
+        123
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "BOOM memory-ordering exception cause",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/consts.scala",
+      "lines": [
+        356,
+        365
+      ],
+      "sha256": "9791adbd007b3e3cc7525595c44d863af9305cc171f0975b010c9dc951059d22"
+    },
+    {
+      "label": "Derived BOOM queue parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        155,
+        167
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "Derived memory-pipeline parameters",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/parameters.scala",
+      "lines": [
+        197,
+        223
+      ],
+      "sha256": "5c684a953688c186190edfd2d25fd06615288e33d9e6c4313224a6eb98a93e28"
+    },
+    {
+      "label": "FENCE.I readiness consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        677,
+        680
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Queue-full and allocation-index consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        689,
+        718
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Load-miss fast-wakeup consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        816,
+        823
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Speculative-load-wakeup consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        865,
+        868
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "Load-miss issue consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        942,
+        944
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "ROB connection consumers",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/core.scala",
+      "lines": [
+        1281,
+        1284
+      ],
+      "sha256": "09d97ba84a62482fd2cbf1342cb139956bf9600c1dc1afb7d3e7ab042fb25219"
+    },
+    {
+      "label": "DCache force-order consumer",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/lsu/dcache.scala",
+      "lines": [
+        428,
+        435
+      ],
+      "sha256": "dceed1df786cf05dd7892035988c3f1301ec4a4ba0f33a1fb4d25f9f7e668d6c"
+    },
+    {
+      "label": "Load-store ordering and execution documentation",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "docs/sections/load-store-unit.rst",
+      "lines": [
+        10,
+        119
+      ],
+      "sha256": "026e00e589c03718a1871b2bcd199cec44a85807949030ec0cdc735141dc5272"
+    },
+    {
+      "label": "Decode, issue, register, queue and branch configuration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        190,
+        200
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "FPU and data cache configuration",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/common/config-mixins.scala",
+      "lines": [
+        203,
+        207
+      ],
+      "sha256": "46851ddb35263896248c2441458005e288a7b5fcf04763b0b1aadaa2f9dc1d65"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

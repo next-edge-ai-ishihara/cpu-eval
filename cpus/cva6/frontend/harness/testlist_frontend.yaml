@@ -1,0 +1,13 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - {test: rv32im-sub-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/sub-01.S}
+  - {test: rv32im-xor-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/xor-01.S}
+  - {test: rv32im-beq-01, <<: *common_test_config, iterations: 1, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/beq-01.S}
+  - test: cva6-ecall
+    <<: *common_test_config
+    iterations: 1
+    gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -Drvtest_mtrap_routine=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+    asm_tests: <path_var>/cpu-eval-patches/cva6_ecall.S

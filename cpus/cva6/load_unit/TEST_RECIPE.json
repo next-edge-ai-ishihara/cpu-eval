@@ -1,0 +1,75 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_load_ports.py",
+    "harness/load_ports_tb.sv",
+    "../instr_scan/harness/evaluate_ports.py",
+    "../harness/port_work_directory.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "load_unit",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/load_unit.sv",
+  "source_sha256": "33eac31ac3d488a308b8a688188a559a41f3efe2c5b8b00bed3a72c9d90e82e7",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "cf02aa827cfd61a11b93b5dad4d8fbeb19f8463865ad089246e2868ca3912834",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_load_unit.yaml",
+  "test_list_sha256": "868c5973ec57eac5102c3fe80cbdb05431045c4a2112e6eecb416a6d911a12c6",
+  "test_selection": "Five RISC-V Architectural Tests maintained by the recorded test repository exercise signed and unsigned byte and halfword loads plus word loads at multiple aligned byte offsets through the complete CPU.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/load_unit.sv",
+    "test_sources": "checkout the recorded RISC-V Architectural Tests revision and select the five files named by the recorded test list without modifying them"
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_load_ports.py",
+    "evaluator_sha256": "fc2c3f2739ec61a72858b1f226a41f4f5ca5b96c78ef386ba5a2112d98cc6157",
+    "test": "harness/load_ports_tb.sv",
+    "test_sha256": "e096a82ee9e2bfe5438d3d760b3dd1984c13fa0549f269496bc7efdf0df6e2f2",
+    "dependencies": [
+      {
+        "path": "core/include/config_pkg.sv",
+        "sha256": "f6f193daa7dfe1161689f651d6aa6e2b1fdec6560fc83c1313385e944ce4c97c"
+      },
+      {
+        "path": "core/include/cv32a60x_config_pkg.sv",
+        "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+      },
+      {
+        "path": "core/include/build_config_pkg.sv",
+        "sha256": "15dcfdd9b8e0c14ffb4ebb04aa85f259dac607b5816233dbdf9ff2e1b52cc2bc"
+      },
+      {
+        "path": "core/include/riscv_pkg.sv",
+        "sha256": "225881e0df4c08d0d9768999408c7c93186a59270955a391bccd63f34b95777a"
+      },
+      {
+        "path": "core/include/ariane_pkg.sv",
+        "sha256": "f492b1dda7044c4d202df1a1e4609a53fbecc94ad3f08b5d6d9a150b4569d2d7"
+      },
+      {
+        "path": "vendor/pulp-platform/common_cells/src/cf_math_pkg.sv",
+        "sha256": "afc32fcae21f6cbb834c5ee602a1aaee1b518fc436a86d4fe1b97942473d35c8"
+      },
+      {
+        "path": "vendor/pulp-platform/common_cells/src/lzc.sv",
+        "sha256": "c47046cab67cd9e9ff46f9b2a4c055f301eabd0f135d76d96639eb41c9fa3609"
+      },
+      {
+        "path": "core/cva6.sv",
+        "sha256": "a06f296f9cfd551ec50fbdfbf3c3ddc5d1e14461dd705692bcc5e2c85b147c2c"
+      }
+    ],
+    "scope": "After the five architectural tests pass, check load completion before a flush, suppression of a late response to a discarded load, and correct completion after the flush.",
+    "accepted_observations": "Observe one successful completion, zero completions for the flushed load, and one successful completion for a later load. Each successful completion returns the observed request\u2019s scoreboard transaction ID and 32-bit word.",
+    "bounded_tool_scope": "The fixed bench builds and runs with the reference module, so a build failure, an abnormal end, a missing or incomplete observation record and an explicit mismatch are FAIL (1). Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID (2). The test loads the exact CVA6 package sources and extracts the port record types from the pinned parent."
+  }
+}

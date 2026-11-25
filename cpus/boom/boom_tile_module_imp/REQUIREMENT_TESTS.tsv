@@ -1,0 +1,6 @@
+requirement	test_program	test_behavior
+Connect the core execution path to the tile interfaces	rv64ui-p-add;rv64ui-p-beq	The fixed upstream integer tests retire arithmetic and control-flow instructions through the tile.
+Connect instruction and data memory traffic	rv64ui-p-lw;rv64ui-p-sw	The fixed upstream memory tests exercise tile-level cache and interconnect connections.
+Connect privileged state and interrupt-facing tile state	rv64mi-p-scall	The fixed upstream machine-mode environment-call test exercises trap entry and privileged control state exposed through the tile implementation.
+Connect the external hart identifier to the core CSR state	rv64mi-p-hartid_observe	The added machine-mode program reads mhartid into x20 without using the value for its pass decision, so the trace comparison observes an incorrect tile connection directly.
+Propagate an independently driven nonzero hart identifier	hartid-probe	evaluate_candidate.sh reruns rv64mi-p-hartid_observe with hart ID 1 supplied by the simulator; hartid_check.py checks the boot ROM's first read of mhartid before any hart-dependent branch.

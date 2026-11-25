@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "68051daf0e261c4ecf33c5efda8e7ae6ccf08a337fb9ded25a59ef39433bca3d",
+  "prompt_sha256": "5dd39aced4fc6a0dc6e3647a3ea9efc4e24ee54f5157b5c6ae4c39d5605eb32d",
+  "repositories": {
+    "github.com/chipsalliance/chisel3": {
+      "revision": "4da4f252c3d7c834e13bb8e91a69cfe772996452"
+    },
+    "https://github.com/chipsalliance/rocket-chip-inclusive-cache.git": {
+      "revision": "e3a3000cc1fd4cdf3a4e638e4d081b8aae94ebf0"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        0,
+        271
+      ],
+      "sha256": "fb4fe4615e3b247d61551c47d8db8b7012989f70b4817adb47e69f2c78e2162a"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        271,
+        615
+      ],
+      "sha256": "e1d9235bd5737f461ba6bbc5eda48a6f509915f37c47108d09d61efdbad4e551"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        615,
+        651
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        651,
+        1716
+      ],
+      "sha256": "5f38b1baf51f05b138da121008edcb673f9fb5331f00a29f9017865b55ae9324"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        1716,
+        1773
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 14,
+      "prompt_bytes": [
+        1773,
+        2018
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        2018,
+        2083
+      ],
+      "sha256": "c638d88646c0ecf35f3f43e51b70b0b0ca160ffb1330d1fe96c45ca10bcd2c68"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        2083,
+        2148
+      ],
+      "sha256": "b0b58cab46130f8b6495e81c22e9e9bf73831e420b748392f2114be0e370ccca"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        2148,
+        2155
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2155,
+        2760
+      ],
+      "sha256": "bd5b12a76b5791a987761174fb4f021905aebc8aa4573dd8781f3f6f68caee94"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        2760,
+        2767
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 11,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2767,
+        4193
+      ],
+      "sha256": "624140d3173aa642781c34e709989bbc0aaae6c34697d45e7b260148df821b34"
+    },
+    {
+      "index": 12,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        4193,
+        4263
+      ],
+      "sha256": "e6649e8cbc9a55f4ba63191c3b1b162d56491d49b100b6000280eb3c727b30da"
+    },
+    {
+      "index": 13,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        4263,
+        5290
+      ],
+      "sha256": "d601f50087feaabad81c6c053472a121af0edc6af43c9b98828dd9078b456314"
+    },
+    {
+      "index": 14,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        5290,
+        5297
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 15,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        5297,
+        6083
+      ],
+      "sha256": "ffb1b4872436aeccb6e4fc51025cc72d40c1c0cdd2cb7535854f99d6e08d85d3"
+    },
+    {
+      "index": 16,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        6083,
+        6147
+      ],
+      "sha256": "05cfb4b00a77beabdc5ffb022536e45c09a54f363d7eddb1cfbd90d134c9b04a"
+    },
+    {
+      "index": 17,
+      "kind": "verbatim_source",
+      "source": 7,
+      "prompt_bytes": [
+        6147,
+        6171
+      ],
+      "sha256": "2606bb08d3d8ba63a15b56e3b2e12aa8381c8f195785af5e0d06952aa2b0f9af"
+    },
+    {
+      "index": 18,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        6171,
+        6178
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 19,
+      "kind": "verbatim_source",
+      "source": 8,
+      "prompt_bytes": [
+        6178,
+        6258
+      ],
+      "sha256": "17d4e00bd3ff3c8ccf715d3d5fb604357d6de9fa372953543404c7665a589f6c"
+    },
+    {
+      "index": 20,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        6258,
+        6349
+      ],
+      "sha256": "60d09531aa9d5ba9eb913983ba3424a25f7115bfa1eb389c81ec39df13c9933f"
+    },
+    {
+      "index": 21,
+      "kind": "verbatim_source",
+      "source": 9,
+      "prompt_bytes": [
+        6349,
+        6365
+      ],
+      "sha256": "d21f68bcb98c1993611616bac333e4eb6f6aa533130c725ff975b5f63de8702a"
+    },
+    {
+      "index": 22,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        6365,
+        6372
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 23,
+      "kind": "verbatim_source",
+      "source": 10,
+      "prompt_bytes": [
+        6372,
+        6629
+      ],
+      "sha256": "ae0e00c806d82af805207628a9dc4b4ff357cbf779b50970814afd991d2630da"
+    },
+    {
+      "index": 24,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        6629,
+        6693
+      ],
+      "sha256": "8da638c335e0e1c00a317550ca292f62c55bd759ee6a578cecb6497d4d2dd1fb"
+    },
+    {
+      "index": 25,
+      "kind": "verbatim_source",
+      "source": 11,
+      "prompt_bytes": [
+        6693,
+        11612
+      ],
+      "sha256": "380143783eab2f5d35758f0706ff5d00a8f110cd90fd8721af6f97a9e6d18aca"
+    },
+    {
+      "index": 26,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        11612,
+        11681
+      ],
+      "sha256": "f143db36358d334b57a3451cb88bf10d5f6405ca050423c228e696ac732ffbf0"
+    },
+    {
+      "index": 27,
+      "kind": "verbatim_source",
+      "source": 12,
+      "prompt_bytes": [
+        11681,
+        13171
+      ],
+      "sha256": "e785af52623aeaa688f9947ec2acd4ef1d759695bbb5c887a32b1e751236774c"
+    },
+    {
+      "index": 28,
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "prompt_bytes": [
+        13171,
+        13178
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 29,
+      "kind": "verbatim_source",
+      "source": 13,
+      "prompt_bytes": [
+        13178,
+        14392
+      ],
+      "sha256": "6e521d35d0c67a7d4c1cb042b79f0d59a789f43301739efb512ec79bf87f0748"
+    },
+    {
+      "index": 30,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        14392,
+        14396
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        1,
+        10
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        219,
+        244
+      ],
+      "label": "Queue documentation and declaration",
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        21,
+        21
+      ],
+      "label": "Ready-valid bundle declaration",
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "Ready-valid transfer contract",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        28,
+        50
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        181,
+        217
+      ],
+      "label": "Queue I/O bundle",
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "Compile-option contract",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "core/src/main/scala/chisel3/CompileOptions.scala",
+      "lines": [
+        8,
+        25
+      ],
+      "sha256": "2caa6aca5a137e60add4fcb2975c88b8c8d30f242bd83ace6063aaa4b0aade5a"
+    },
+    {
+      "label": "Strict and compatibility compile options",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "core/src/main/scala/chisel3/CompileOptions.scala",
+      "lines": [
+        58,
+        79
+      ],
+      "sha256": "2caa6aca5a137e60add4fcb2975c88b8c8d30f242bd83ace6063aaa4b0aade5a"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/compatibility.scala",
+      "lines": [
+        11,
+        11
+      ],
+      "label": "Chisel compatibility package object",
+      "sha256": "61e28b03bca497ebe81e4b08beaf7887638a8e0036b976190ed8ec2c3964559e"
+    },
+    {
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/compatibility.scala",
+      "lines": [
+        19,
+        19
+      ],
+      "label": "Compatibility default compile options",
+      "sha256": "61e28b03bca497ebe81e4b08beaf7887638a8e0036b976190ed8ec2c3964559e"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/rocket-chip-inclusive-cache.git",
+      "commit": "e3a3000cc1fd4cdf3a4e638e4d081b8aae94ebf0",
+      "path": "design/craft/inclusivecache/src/SourceD.scala",
+      "lines": [
+        20,
+        20
+      ],
+      "label": "Compatibility import in the level-two cache",
+      "sha256": "bf864157fe3592fd98e2914a445e31d9213370920833f8291137261b86889801"
+    },
+    {
+      "repo": "https://github.com/chipsalliance/rocket-chip-inclusive-cache.git",
+      "commit": "e3a3000cc1fd4cdf3a4e638e4d081b8aae94ebf0",
+      "path": "design/craft/inclusivecache/src/SourceD.scala",
+      "lines": [
+        118,
+        122
+      ],
+      "label": "Queue built from a hardware port in compatibility code",
+      "sha256": "bf864157fe3592fd98e2914a445e31d9213370920833f8291137261b86889801"
+    },
+    {
+      "label": "Queue behavior checks",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/test/scala/chiselTests/QueueSpec.scala",
+      "lines": [
+        12,
+        181
+      ],
+      "sha256": "e04ae187e3de0859f89a7191e0191d07672e4e73cb03efbc23b8984f83e0ec14"
+    },
+    {
+      "label": "Flush state check",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/test/scala/chiselTests/QueueFlushSpec.scala",
+      "lines": [
+        35,
+        74
+      ],
+      "sha256": "9ccf3e9926544d0017dfde47eed8330177ca00db617a1021e763f0df6a74a99a"
+    },
+    {
+      "label": "Concurrent enqueue and flush check",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/test/scala/chiselTests/QueueFlushSpec.scala",
+      "lines": [
+        128,
+        156
+      ],
+      "sha256": "9ccf3e9926544d0017dfde47eed8330177ca00db617a1021e763f0df6a74a99a"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

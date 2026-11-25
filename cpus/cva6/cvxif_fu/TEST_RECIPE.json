@@ -1,0 +1,52 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../../../tools/cva6/replace_module.py",
+    "harness/cvxif_fu_result_ready_test.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "cvxif_fu",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cvxif_fu.sv",
+  "source_sha256": "6bf9957ce56e7ff5f5250258f486989754fe5b1979d49b08260b56c2e099152e",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "bd2be72d736a565297b022468c769630c2b83924e5675177dd45085f61379c72",
+  "reused_test": {
+    "problem": "../copro_alu",
+    "evaluator": "../copro_alu/harness/evaluate.sh",
+    "evaluator_sha256": "e17bd8f8d37ac08ca3c353aa7bbdd94788f7b225d4ac974845bddc2c9473c5b2",
+    "trace_comparator": "../copro_alu/harness/compare_retired_instructions.py",
+    "trace_comparator_sha256": "80126e0c1f27a5f6d513ed45611666e4769133206beb663da93d4b47c0f698f2",
+    "test_source_reconstruction": "Use the pinned CVA6 cvxif_add_nop.S and apply the three ordered patches recorded by ../copro_alu/TEST_RECIPE.json; the final copro_alu_all_ops.S SHA-256 is 8480494585b19d414b50589bd3fbd9f9c5140731e4f0ac53f82b8d1b5b40bd99.",
+    "test_list": "../copro_alu/harness/testlist_copro_alu.yaml",
+    "test_list_sha256": "5202801d822c3b9f2c2e810cfca52e407ec3f3cf0ad367b62e9aea6321bfc912",
+    "reference_model_build_script": "../copro_alu/environment/build_spike.sh",
+    "reference_model_build_script_sha256": "0c58bbeb40d966fea5d06ac1837ed78e313549b65a6f3d3e85737ff790d97a7a"
+  },
+  "directed_rejection_test": {
+    "test_list": "harness/testlist_cvxif_fu.yaml",
+    "test_list_sha256": "cd68fac76bd88af58a840dd23378d949c56e3260a123c55d4fe3aaec978aa5ed",
+    "source": "tests/cvxif_fu_rejection.S",
+    "source_sha256": "e825e7c4639a33834ba809ce0871c061a3e3d8e37c20ceb68d6b7e168b1b0784",
+    "patch": "tests/0001-add-rejected-custom-instruction.patch",
+    "patch_sha256": "d13957f2540a32731f8e0fa08cfc044889ce731117d659e2c4b59ad4a24a6a12",
+    "base_source_sha256": "8480494585b19d414b50589bd3fbd9f9c5140731e4f0ac53f82b8d1b5b40bd99",
+    "observations": "Unsupported custom opcode traps; mcause and mepc are read into integer registers; execution continues after the rejected instruction. Both this test and the ten-operation test are compared to Spike."
+  },
+  "result_ready_observation": {
+    "test": "harness/cvxif_fu_result_ready_test.sv",
+    "test_sha256": "10c7831556d056bda788dfd47281c0096659f4e66cbdc94940f3a3b9862a71cc",
+    "configuration": "Use the cv32a60x configuration and result type from the fixed CVA6 checkout.",
+    "observations": "The functional unit keeps its CV-X-IF result-ready output high when idle, when given valid results with or without a register write, and when a rejected instruction raises the illegal-instruction exception."
+  },
+  "environment_setup": {
+    "path_in_cpu_checkout": "verif/sim/setup-env.sh",
+    "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+    "toolchain": "The saved CVA6 grading image provides Verilator 5.008 and riscv64-unknown-elf tools."
+  }
+}

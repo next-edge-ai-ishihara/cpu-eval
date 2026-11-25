@@ -1,0 +1,8 @@
+diff --git a/generators/chipyard/src/main/scala/config/BoomConfigs.scala b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+index 87bd0a98..b5ea7d2e 100644
+--- a/generators/chipyard/src/main/scala/config/BoomConfigs.scala
++++ b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+@@ -21,2 +21,3 @@ class LargeBoomCommitTraceConfig extends Config(
+ class LargeBoomCommitTraceConfig extends Config(
++  new boom.common.WithBoomMemtracePrintf ++                     // simulation-only memory trace
+   new boom.common.WithBoomCommitLogPrintf ++                     // simulation-only commit trace

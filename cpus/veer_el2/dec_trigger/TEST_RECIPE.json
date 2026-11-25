@@ -1,0 +1,28 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_dec_trigger",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "dec_trigger_addr_match",
+    "path": "test/dec_trigger_addr_match.s",
+    "sha256": "f65a45fc163570e9ed1914dd14873a581228f8f2519a43e11be7a7c27b12c5ae"
+  },
+  "port_test": {
+    "name": "dec_trigger_ports",
+    "path": "test/dec_trigger_ports.sv",
+    "sha256": "c795c3b985fe6bd376dfcbb5785fc2a9a60811c2ba5a42a5055cf95ef11dded2",
+    "purpose": "Compare the four match outputs for exact address, NAPOT range, M-mode enable and execute enable using reachable packets."
+  },
+  "run": "bash test/evaluate_dec_trigger.sh",
+  "run_sha256": "1e930e388cf506c2c21488e76e25ad05c84712e3d6d6aa2048e7a7393c87e84a",
+  "comparison": "Both the directed CPU program's mailbox self-check of mcause, mscause and mepc and the separate comparison of all four decode trigger match outputs must pass."
+}

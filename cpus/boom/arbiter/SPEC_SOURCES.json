@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "00caa901d3cdb444780ae3036b8467329a12d252a5b6b5f21bb3f6e7cc561768",
+  "prompt_sha256": "f70034c898332f2800ff18b87ebe4af3c4e9f0b86f52594a3e4b31688640ba80",
+  "repositories": {
+    "github.com/chipsalliance/chisel3": {
+      "revision": "4da4f252c3d7c834e13bb8e91a69cfe772996452"
+    },
+    "github.com/riscv-boom/riscv-boom": {
+      "revision": "efe2b35cc2224edf3a417381d437cfdcb37e02a8"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        316
+      ],
+      "sha256": "a78c61d68ab85b04ceba0c7ca6f05f7f1f53433de3dbfe4366a4cc23bfa512ed"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading",
+      "prompt_bytes": [
+        316,
+        349
+      ],
+      "sha256": "98134acaad89221c0f1ec03537cb51dea50a990c91530d0bace6a84b1f009867"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        349,
+        485
+      ],
+      "sha256": "879b409204640cdf897d1f14c34e35c4676b3687d906ba351a9acf3749f38c93"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Heading",
+      "prompt_bytes": [
+        485,
+        521
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 4,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        521,
+        636
+      ],
+      "sha256": "f97ffdaef0381bdb46b5fc8a0cd6515c5ffd433cebc9b3332f483af380c94651"
+    },
+    {
+      "index": 5,
+      "kind": "authored",
+      "description": "Heading",
+      "prompt_bytes": [
+        636,
+        717
+      ],
+      "sha256": "e966fd7252417111ce3f76640cc62faffc4445ab9b086d19e8b342714d0f2689"
+    },
+    {
+      "index": 6,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        717,
+        1477
+      ],
+      "sha256": "2a9a97686b92fcded2fea839ce59fbb6cb09bcbca9a8ca230b7c2396ed92803e"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Heading",
+      "prompt_bytes": [
+        1477,
+        1534
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        1534,
+        1779
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "prompt_bytes": [
+        1779,
+        1840
+      ],
+      "sha256": "0ac4561be3f8ac3584815a8bca6324ee68744a3d360c03a36abd4618c1c88a7a"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1840,
+        2935
+      ],
+      "sha256": "c3c78c987c3aae370eaaf0bd0cdbbc74be5381e75609aa5e87f02c935ed4d8a8"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Heading",
+      "prompt_bytes": [
+        2935,
+        2998
+      ],
+      "sha256": "f24d08af2ec9276b6c2803e755bd810ba221484e512e18dd8aeb0db54b142a14"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2998,
+        3453
+      ],
+      "sha256": "38160777be66d553010eaceebca4f46b5bd754ce1a7bbb5464721cf29ba3a123"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "prompt_bytes": [
+        3453,
+        3457
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Arbiter.scala",
+      "lines": [
+        6,
+        9
+      ],
+      "sha256": "cf669b906ded879470fb9cc25421619f843d5b289396b5ff6f1af9286a0c5633"
+    },
+    {
+      "label": "Class declaration",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Arbiter.scala",
+      "lines": [
+        134,
+        136
+      ],
+      "sha256": "cf669b906ded879470fb9cc25421619f843d5b289396b5ff6f1af9286a0c5633"
+    },
+    {
+      "label": "ArbiterIO and ArbiterCtrl",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Arbiter.scala",
+      "lines": [
+        11,
+        48
+      ],
+      "sha256": "cf669b906ded879470fb9cc25421619f843d5b289396b5ff6f1af9286a0c5633"
+    },
+    {
+      "label": "DecoupledIO",
+      "repo": "github.com/chipsalliance/chisel3",
+      "commit": "4da4f252c3d7c834e13bb8e91a69cfe772996452",
+      "path": "src/main/scala/chisel3/util/Decoupled.scala",
+      "lines": [
+        93,
+        100
+      ],
+      "sha256": "4bc7161dee680149835e1159d0335bf51e5f76fc8bbaaca4c9a6a474693938c4"
+    },
+    {
+      "label": "Parent instantiation",
+      "repo": "github.com/riscv-boom/riscv-boom",
+      "commit": "efe2b35cc2224edf3a417381d437cfdcb37e02a8",
+      "path": "src/main/scala/exu/fp-pipeline.scala",
+      "lines": [
+        170,
+        187
+      ],
+      "sha256": "6bae9f003237d28d8566aef368a000fdda1dd8376040b80811db88f720ffbebe"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

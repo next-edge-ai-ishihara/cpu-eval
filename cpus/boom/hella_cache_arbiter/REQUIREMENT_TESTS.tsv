@@ -1,0 +1,7 @@
+requirement	tests	basis
+Forward the selected requestor port to the data-cache port	rv64si-p-dirty	The supervisor dirty-bit test drives page-table-walker requests through the arbiter into the BOOM load-store unit.
+Return cache responses and exceptions to the originating requestor	rv64si-p-dirty	Page-table walks must receive the requested page-table entry before the test can update and verify its dirty bit.
+Preserve request addresses and returned data	rv64si-p-dirty	The test fails through its memory-mapped completion output when either the page-table request address or response data is corrupted.
+Accept no request while stalled and serve both requesters	hella_cache_arbiter_ports	The shared interface first stalls both requesters, then accepts one at a time.
+Route stage-one data and stage-one and stage-two controls	hella_cache_arbiter_ports	Observe each stage after known requests, including a separate negative acknowledgement.
+Deliver responses to their original requesters and restore tags	hella_cache_arbiter_ports	Two equal local tags complete in reverse request order through the tags actually observed at the shared port.

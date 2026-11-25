@@ -1,0 +1,9 @@
+requirement	tests	rationale
+Single-precision minimum, maximum, NaN handling, and signed zero	rv64uf-p-fmin	Upstream operand/result and exception-flag self-checks.
+Single-precision sign injection	rv64uf-p-fmin	patches/0001-exercise-floating-point-sign-injection.patch adds FSGNJ.S, FSGNJN.S, and FSGNJX.S with normal finite operands and zero exception flags.
+Double-precision minimum, maximum, NaN handling, and signed zero	rv64ud-p-fmin	Upstream operand/result and exception-flag self-checks.
+Double-precision sign injection	rv64ud-p-fmin	patches/0001-exercise-floating-point-sign-injection.patch adds FSGNJ.D, FSGNJN.D, and FSGNJX.D with normal finite operands and zero exception flags.
+Double-to-single and single-to-double conversion	rv64ud-p-fcvt	Tests 10 and 11 execute both precision conversions through round trips; test12 checks a NaN round trip.
+Neighbor integer-to-single conversion	rv64uf-p-fcvt	This whole-CPU program exercises IntToFP, not FPToFP precision conversion.
+Sign injection preserves signaling NaN data	rv64ud-p-fp_to_fp_rounding_and_nan	Single-precision sign injection preserves the payload and signaling bit and leaves the exception flags clear.
+Double-to-single rounding and inexact flag	rv64ud-p-fp_to_fp_rounding_and_nan	Converts the same halfway value using static RUP, static RNE, and dynamic RUP, checking the result and the inexact flag after each conversion.

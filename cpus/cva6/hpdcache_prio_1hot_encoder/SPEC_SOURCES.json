@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "d9d55e3af5a4eef7b8b99980a95d1b61f15f7c74763e964faf2b17e0c1163712",
+  "prompt_sha256": "f4259e8208a35c175ef90d3b1e038099e4b0438587cba413f3919be026d8d161",
+  "repositories": {
+    "https://github.com/openhwgroup/cv-hpdcache.git": {
+      "revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        347
+      ],
+      "sha256": "ae03295dc1530894da1dcbecce8cfa86ba8bc02f1720ad197dad1910e9eede45"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        347,
+        520
+      ],
+      "sha256": "1150d3a662ed1314c7a1dfb13f910535177bb64739c2bacc3911aa8602ba6303"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        520,
+        608
+      ],
+      "sha256": "6bdea49d37c35d7d0b5db3100ba25bccd4abe7b4931be2b548fda1c50bf3180d"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        608,
+        1517
+      ],
+      "sha256": "154dfaf1a74b2a61db03dec22bedc33d20a064cab87a0b6d958ee078ff6797b5"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        1517,
+        1604
+      ],
+      "sha256": "756fd8b623c5e6878670c028fdaa8881e122c1a2a3966124ac883476d979592a"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1604,
+        1861
+      ],
+      "sha256": "2cbe69f6d8eba6b0872a4ee7a3fe212d6bbfa91055904d533345ba55e491fe73"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        1861,
+        1925
+      ],
+      "sha256": "a02e583fab8c4ff8c64657e4b8f6773c8ac7acea80efecbfb1a502328df6319c"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1925,
+        2039
+      ],
+      "sha256": "6537d06d492cae11cc52763c24258894b95070812d9bc50e94401ee63b2d7e6b"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Headings and fences",
+      "prompt_bytes": [
+        2039,
+        2044
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for hpdcache_prio_1hot_encoder",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_prio_1hot_encoder.sv",
+      "lines": [
+        26,
+        35
+      ],
+      "language": "verilog",
+      "sha256": "70db16e1076aa0584dcea79e96aac84fbeac73c36a2a907b0309d94959b74f55"
+    },
+    {
+      "label": "Fixed-priority arbiter connection",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/common/hpdcache_fxarb.sv",
+      "lines": [
+        20,
+        59
+      ],
+      "language": "verilog",
+      "sha256": "873d1c3f00b4036c4441ffa3ccd42a7995865f64ca8b0eaa2e22cab45533ac49"
+    },
+    {
+      "label": "Requester arbiter instance",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "rtl/src/hpdcache_core_arbiter.sv",
+      "lines": [
+        101,
+        109
+      ],
+      "language": "verilog",
+      "sha256": "5d895629db5a75ae8ce76385641e7ead0053d6ebd031b896e378a945b8cad4ea"
+    },
+    {
+      "label": "Requester fixed-priority order",
+      "repo": "https://github.com/openhwgroup/cv-hpdcache.git",
+      "commit": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+      "path": "docs/source/overview.rst",
+      "lines": [
+        56,
+        57
+      ],
+      "sha256": "4f9a251c7d61e8576698c7644ad59f8f771e21de4183f06f6e4af223f2ca11ac"
+    }
+  ]
+}

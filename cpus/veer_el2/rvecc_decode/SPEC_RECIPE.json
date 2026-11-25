@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module declaration for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        676,
+        686
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "Parent instantiation for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ic_mem.sv",
+      "lines": [
+        927,
+        935
+      ],
+      "sha256": "d40029dd544aad109a6572ddeb8e7bfd0bb877f94ac94f9292c34275b1b87289"
+    },
+    {
+      "label": "Parent instantiation for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ic_mem.sv",
+      "lines": [
+        1182,
+        1190
+      ],
+      "sha256": "d40029dd544aad109a6572ddeb8e7bfd0bb877f94ac94f9292c34275b1b87289"
+    },
+    {
+      "label": "Parent instantiation for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1439,
+        1447
+      ],
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "Parent instantiation for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_ecc.sv",
+      "lines": [
+        188,
+        215
+      ],
+      "sha256": "02f0a45f4d7c509850a9025fc2aa430cc2f8fcd7be66d467fe59218fefe4ed67"
+    },
+    {
+      "label": "ECC encoding used by the upstream testbench",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "testbench/tb_top.sv",
+      "lines": [
+        3073,
+        3083
+      ],
+      "sha256": "5e6554c8c8941fa519f297f45b63928670d4084e5d0d05ffbeef9e54494678a3",
+      "language": "systemverilog"
+    },
+    {
+      "label": "ECC protection",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/error-protection.md",
+      "lines": [
+        17,
+        28
+      ],
+      "sha256": "79596e06222a906c2d596c03070a11aa582cb14a25f6e0585c042f2dbcaae496",
+      "language": "markdown"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "text": "# Implement `rvecc_decode`\n\nImplement the complete `rvecc_decode` module. Preserve the module name and ports shown below. Return only the complete `module rvecc_decode` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading Module declaration",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Heading ## Parent instantiation with path design/ifu/el2_ifu_ic_mem.sv",
+      "text": "\n```\n\n## Parent instantiation\n\n### design/ifu/el2_ifu_ic_mem.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Omission mark",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Source path design/ifu/el2_ifu_mem_ctl.sv",
+      "text": "\n```\n\n### design/ifu/el2_ifu_mem_ctl.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Source path design/lsu/el2_lsu_ecc.sv",
+      "text": "\n```\n\n### design/lsu/el2_lsu_ecc.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Heading ## Related source code with path testbench/tb_top.sv",
+      "text": "\n```\n\n## Related source code\n\n### testbench/tb_top.sv\n\n```systemverilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Heading Documentation",
+      "text": "\n```\n\n## Documentation\n\n### docs/source/error-protection.md\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Port contract",
+      "text": "\n## Additional requirement\n\nWhen `sed_ded` is high, `dout` equals `din`, `ecc_out` equals `ecc_in`, and `single_ecc_error | double_ecc_error` is high exactly when `en` is high and `ecc_in[5:0]` differs from bits 5 to 0 of `riscv_ecc32(din)`.\n"
+    }
+  ]
+}

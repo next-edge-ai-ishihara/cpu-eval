@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "461e6e28d5ada4b0bd9612674945902633fc795b5ba53b47daeada23ca6ea5c6",
+  "prompt_sha256": "91f59ce6ae790a37c37dcc243998ed6e1e5a121c9574b613310eb11dece792e6",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        250
+      ],
+      "sha256": "de0e892d6e71e2e21223f33beec456fa46451762bb7aa608929c8599dd028dc1"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading Module declaration",
+      "prompt_bytes": [
+        250,
+        285
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        285,
+        757
+      ],
+      "sha256": "fa6c39a21ffb798d08b9c0d1d62ee59f194e7ea86ee179f1ee64765f3a92d095"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Heading ## Parent instantiation with path design/ifu/el2_ifu_ic_mem.sv",
+      "prompt_bytes": [
+        757,
+        833
+      ],
+      "sha256": "ab8392cd908c9a654460208d77e8fb6d0eceac9afc12cfdccb8d76cdeb5eb0f8"
+    },
+    {
+      "index": 4,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        833,
+        1430
+      ],
+      "sha256": "1fc1a4fe9082cd7cd65d1d2eb915bbe144d1a9577789321faff433378ae8333c"
+    },
+    {
+      "index": 5,
+      "kind": "authored",
+      "description": "Omission mark",
+      "prompt_bytes": [
+        1430,
+        1437
+      ],
+      "sha256": "a24091884bc15b53e380fe5b874d1bb52d89269fdf2592808ac70ba189204730"
+    },
+    {
+      "index": 6,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1437,
+        2052
+      ],
+      "sha256": "004bddbb40837cdc0e2a9b7cebd8286a442181ab1303a4f395fdcdc38d4f21ef"
+    },
+    {
+      "index": 7,
+      "kind": "authored",
+      "description": "Source path design/ifu/el2_ifu_mem_ctl.sv",
+      "prompt_bytes": [
+        2052,
+        2104
+      ],
+      "sha256": "56a55b2821f6411399c6ba4f6dd83946b28be747ca987533742608776f1bc66b"
+    },
+    {
+      "index": 8,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        2104,
+        2684
+      ],
+      "sha256": "91d971e743e56264a0cfc83ce66f2f297205d9f55096ebc8c3e574c45394ac7b"
+    },
+    {
+      "index": 9,
+      "kind": "authored",
+      "description": "Source path design/lsu/el2_lsu_ecc.sv",
+      "prompt_bytes": [
+        2684,
+        2732
+      ],
+      "sha256": "6a0b3f3fecc5683e250380f6d04ee3222c80955147f77034dea1f35fc8d7c6af"
+    },
+    {
+      "index": 10,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        2732,
+        3783
+      ],
+      "sha256": "8feb539ea22fe7025ec954f5150fb72e94841a147bc3b2b670c68ce51f97f384"
+    },
+    {
+      "index": 11,
+      "kind": "authored",
+      "description": "Heading ## Related source code with path testbench/tb_top.sv",
+      "prompt_bytes": [
+        3783,
+        3855
+      ],
+      "sha256": "96519baf763ad1c1b2658ff5508f8db854f3106056ed5ae6903ef05e991bb106"
+    },
+    {
+      "index": 12,
+      "kind": "verbatim_source",
+      "source": 5,
+      "prompt_bytes": [
+        3855,
+        4180
+      ],
+      "sha256": "d729df08e27693f69efeae44f7ad9192ff73c529be0bb57877d23f8af7e583ca"
+    },
+    {
+      "index": 13,
+      "kind": "authored",
+      "description": "Heading Documentation",
+      "prompt_bytes": [
+        4180,
+        4241
+      ],
+      "sha256": "b6acc967af63fac55b8c64a6604a65c525ae35e5d7cf5a66321be6fa33738f74"
+    },
+    {
+      "index": 14,
+      "kind": "verbatim_source",
+      "source": 6,
+      "prompt_bytes": [
+        4241,
+        5401
+      ],
+      "sha256": "028306932c950ac0c73bc09e9d4c497370d082c4b92ccfe24f6eaefd0a8518b9"
+    },
+    {
+      "index": 15,
+      "kind": "authored",
+      "description": "Port contract",
+      "prompt_bytes": [
+        5401,
+        5643
+      ],
+      "sha256": "344a0b4553190240fe7231dbafc66ba638e6e3bf8533213b5d469c04d333231c"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        676,
+        686
+      ],
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d",
+      "language": "verilog"
+    },
+    {
+      "label": "Parent instantiation for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ic_mem.sv",
+      "lines": [
+        927,
+        935
+      ],
+      "sha256": "d40029dd544aad109a6572ddeb8e7bfd0bb877f94ac94f9292c34275b1b87289"
+    },
+    {
+      "label": "Parent instantiation for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_ic_mem.sv",
+      "lines": [
+        1182,
+        1190
+      ],
+      "sha256": "d40029dd544aad109a6572ddeb8e7bfd0bb877f94ac94f9292c34275b1b87289"
+    },
+    {
+      "label": "Parent instantiation for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_mem_ctl.sv",
+      "lines": [
+        1439,
+        1447
+      ],
+      "sha256": "d797e774880d3d0a0d0ce454c371085f7f12092522456080d180440884f1f835"
+    },
+    {
+      "label": "Parent instantiation for rvecc_decode",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lsu/el2_lsu_ecc.sv",
+      "lines": [
+        188,
+        215
+      ],
+      "sha256": "02f0a45f4d7c509850a9025fc2aa430cc2f8fcd7be66d467fe59218fefe4ed67"
+    },
+    {
+      "label": "ECC encoding used by the upstream testbench",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "testbench/tb_top.sv",
+      "lines": [
+        3073,
+        3083
+      ],
+      "sha256": "5e6554c8c8941fa519f297f45b63928670d4084e5d0d05ffbeef9e54494678a3",
+      "language": "systemverilog"
+    },
+    {
+      "label": "ECC protection",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "docs/source/error-protection.md",
+      "lines": [
+        17,
+        28
+      ],
+      "sha256": "79596e06222a906c2d596c03070a11aa582cb14a25f6e0585c042f2dbcaae496",
+      "language": "markdown"
+    }
+  ]
+}

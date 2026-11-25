@@ -1,0 +1,108 @@
+--- a/src/main/scala/rift2Core/backend/LSU/Lsu.scala
++++ b/src/main/scala/rift2Core/backend/LSU/Lsu.scala
+@@ -140,6 +140,53 @@
+   /** indicate the mem unit is empty by all seq-element is empty*/
+   val is_empty = Wire(Bool())
+ 
++  def cpuEvalArbiterProbe(
++    name: String,
++    valids: Seq[Bool],
++    readys: Seq[Bool],
++    chosen: UInt,
++    outValid: Bool,
++    outReady: Bool
++  ): Unit = {
++    val n = valids.length
++    val goldenChosen = WireDefault((n - 1).U(chosen.getWidth.W))
++    for (i <- n - 2 to 0 by -1) { when(valids(i)) { goldenChosen := i.U } }
++    val goldenOutValid = valids.reduce(_ || _)
++    val transferWrong = (0 until n).map { i =>
++      (valids(i) && (goldenChosen === i.U) && outReady) =/= (valids(i) && readys(i))
++    }.reduce(_ || _)
++    val wrong =
++      (outValid =/= goldenOutValid) || transferWrong ||
++      (goldenOutValid && (chosen =/= goldenChosen))
++    val mismatchCount = RegInit(0.U(8.W))
++    when(wrong && mismatchCount < 64.U) {
++      mismatchCount := mismatchCount + 1.U
++      printf(
++        s"CPU_EVAL_OBSERVATION_MISMATCH Arbiter $name valids=%d readys=%d chosen=%d goldenChosen=%d outValid=%d goldenOutValid=%d outReady=%d\n",
++        VecInit(valids).asUInt, VecInit(readys).asUInt, chosen, goldenChosen,
++        outValid, goldenOutValid, outReady
++      )
++    }
++    val contention = PopCount(VecInit(valids).asUInt) > 1.U
++    val contentionCount = RegInit(0.U(8.W))
++    when(contention && contentionCount < 8.U) {
++      contentionCount := contentionCount + 1.U
++      printf(
++        s"CPU_EVAL_ARBITER_CONTENTION $name valids=%d outReady=%d\n",
++        VecInit(valids).asUInt, outReady
++      )
++    }
++  }
++
++  cpuEvalArbiterProbe("Lsu.ls_arb", ls_arb.io.in.map(_.valid), ls_arb.io.in.map(_.ready),
++    ls_arb.io.chosen, ls_arb.io.out.valid, ls_arb.io.out.ready)
++  cpuEvalArbiterProbe("Lsu.lu_wb_arb", lu_wb_arb.io.in.map(_.valid), lu_wb_arb.io.in.map(_.ready),
++    lu_wb_arb.io.chosen, lu_wb_arb.io.out.valid, lu_wb_arb.io.out.ready)
++  cpuEvalArbiterProbe("Lsu.irtn_arb", irtn_arb.io.in.map(_.valid), irtn_arb.io.in.map(_.ready),
++    irtn_arb.io.chosen, irtn_arb.io.out.valid, irtn_arb.io.out.ready)
++  cpuEvalArbiterProbe("Lsu.frtn_arb", frtn_arb.io.in.map(_.valid), frtn_arb.io.in.map(_.ready),
++    frtn_arb.io.chosen, frtn_arb.io.out.valid, frtn_arb.io.out.ready)
++
+ 
+ 
+   /** package write and amo operation*/
+--- a/src/main/scala/rift2Core/backend/LSU/Dcache.scala
++++ b/src/main/scala/rift2Core/backend/LSU/Dcache.scala
+@@ -138,6 +138,49 @@
+ 
+   val stage = Module(new DcacheStage(id))
+ 
++  def cpuEvalArbiterProbe(
++    name: String,
++    valids: Seq[Bool],
++    readys: Seq[Bool],
++    chosen: UInt,
++    outValid: Bool,
++    outReady: Bool
++  ): Unit = {
++    val n = valids.length
++    val goldenChosen = WireDefault((n - 1).U(chosen.getWidth.W))
++    for (i <- n - 2 to 0 by -1) { when(valids(i)) { goldenChosen := i.U } }
++    val goldenOutValid = valids.reduce(_ || _)
++    val transferWrong = (0 until n).map { i =>
++      (valids(i) && (goldenChosen === i.U) && outReady) =/= (valids(i) && readys(i))
++    }.reduce(_ || _)
++    val wrong =
++      (outValid =/= goldenOutValid) || transferWrong ||
++      (goldenOutValid && (chosen =/= goldenChosen))
++    val mismatchCount = RegInit(0.U(8.W))
++    when(wrong && mismatchCount < 64.U) {
++      mismatchCount := mismatchCount + 1.U
++      printf(
++        s"CPU_EVAL_OBSERVATION_MISMATCH Arbiter $name valids=%d readys=%d chosen=%d goldenChosen=%d outValid=%d goldenOutValid=%d outReady=%d\n",
++        VecInit(valids).asUInt, VecInit(readys).asUInt, chosen, goldenChosen,
++        outValid, goldenOutValid, outReady
++      )
++    }
++    val contention = PopCount(VecInit(valids).asUInt) > 1.U
++    val contentionCount = RegInit(0.U(8.W))
++    when(contention && contentionCount < 8.U) {
++      contentionCount := contentionCount + 1.U
++      printf(
++        s"CPU_EVAL_ARBITER_CONTENTION $name valids=%d outReady=%d\n",
++        VecInit(valids).asUInt, outReady
++      )
++    }
++  }
++
++  cpuEvalArbiterProbe(s"Dcache$id.op_arb", op_arb.io.in.map(_.valid), op_arb.io.in.map(_.ready),
++    op_arb.io.chosen, op_arb.io.out.valid, op_arb.io.out.ready)
++  cpuEvalArbiterProbe(s"Dcache$id.rd_arb", rd_arb.io.in.map(_.valid), rd_arb.io.in.map(_.ready),
++    rd_arb.io.chosen, rd_arb.io.out.valid, rd_arb.io.out.ready)
++
+ 
+ 
+   def pkg_Dcache_Enq_Bundle( ori: Info_miss_rsp )(implicit p: Parameters): Dcache_Enq_Bundle = {

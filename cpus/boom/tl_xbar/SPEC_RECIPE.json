@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "cpu": "BOOM",
+  "configuration": "LargeBoomConfig",
+  "source_unit": "TLXbar",
+  "sources": [
+    {
+      "label": "Package and imports",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Xbar.scala",
+      "lines": [
+        1,
+        9
+      ],
+      "sha256": "4fe31cb5df41064d917014f4391d993a4428d82ec5e489f9f8af04689c1654d6"
+    },
+    {
+      "label": "Target declaration",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Xbar.scala",
+      "lines": [
+        33,
+        34
+      ],
+      "sha256": "4fe31cb5df41064d917014f4391d993a4428d82ec5e489f9f8af04689c1654d6"
+    },
+    {
+      "label": "TileLink nexus interface",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Nodes.scala",
+      "lines": [
+        100,
+        104
+      ],
+      "sha256": "21966052bd6a5b997d5f21114086ee72f57e35079d50a536aaa5d0896cf4c430"
+    },
+    {
+      "label": "Nexus mapping contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/Nodes.scala",
+      "lines": [
+        1516,
+        1524
+      ],
+      "sha256": "502fcff0044d7a7492513c31fbb9907ab2dd3ec1e0ade3c126c665f44b8b4071"
+    },
+    {
+      "label": "Nexus type contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/Nodes.scala",
+      "lines": [
+        1563,
+        1570
+      ],
+      "sha256": "502fcff0044d7a7492513c31fbb9907ab2dd3ec1e0ade3c126c665f44b8b4071"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        160,
+        167
+      ],
+      "label": "Slave parameters and FIFO domain",
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        263,
+        280
+      ],
+      "label": "Slave parameter copy",
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Slave port fields",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        510,
+        517
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Slave port validity and width",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        531,
+        544
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Slave port copy contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        706,
+        721
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        799,
+        810
+      ],
+      "label": "Master parameters and source range",
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        860,
+        872
+      ],
+      "label": "Master parameter copy",
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Master port fields",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        1049,
+        1056
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Master source range contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        1070,
+        1082
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "label": "Master port copy contract",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Parameters.scala",
+      "lines": [
+        1177,
+        1191
+      ],
+      "sha256": "baca84639e6f61e6a4103d64119f07023ab750b73ddc70d4ccb96ffcfc5a7e43"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/Parameters.scala",
+      "lines": [
+        27,
+        28
+      ],
+      "label": "IdRange declaration",
+      "sha256": "7b47fe2245137024512b6f15e684a0e0cecbeb5af837273fbe4a58eb776eda3f"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/diplomacy/Parameters.scala",
+      "lines": [
+        60,
+        62
+      ],
+      "label": "IdRange shift and size",
+      "sha256": "7b47fe2245137024512b6f15e684a0e0cecbeb5af837273fbe4a58eb776eda3f"
+    },
+    {
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/util/BundleMap.scala",
+      "lines": [
+        54,
+        62
+      ],
+      "label": "Bundle field union",
+      "sha256": "cbbd573a6d780cfca39b5ab33a995534c518ec96824bd79b2d0a839fc6e21bd0"
+    },
+    {
+      "label": "TLXbar companion contracts",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Xbar.scala",
+      "lines": [
+        129,
+        172
+      ],
+      "sha256": "4fe31cb5df41064d917014f4391d993a4428d82ec5e489f9f8af04689c1654d6"
+    },
+    {
+      "label": "Crossbar behavior and policy",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/Widgets.rst",
+      "lines": [
+        307,
+        316
+      ],
+      "sha256": "c28a9d1873106d85df012efc96b493b082fb5620ad7d0d80d993e38eb299a9bb"
+    },
+    {
+      "label": "Client channels and source identifiers",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        6,
+        15
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Source identifier and visibility contracts",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        30,
+        48
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Manager channel contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        64,
+        69
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Manager address routing contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        80,
+        86
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "FIFO-domain contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        125,
+        130
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Nexus parameter transformation contract",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/NodeTypes.rst",
+      "lines": [
+        210,
+        239
+      ],
+      "sha256": "ec411aad3626bb7fe65830a3e2be2e372108c1689239fcb35305d6aae401b729"
+    },
+    {
+      "label": "Crossbar construction and connections",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "docs/TileLink-Diplomacy-Reference/Widgets.rst",
+      "lines": [
+        328,
+        343
+      ],
+      "sha256": "c28a9d1873106d85df012efc96b493b082fb5620ad7d0d80d993e38eb299a9bb"
+    },
+    {
+      "label": "TLXbar companion object end",
+      "repo": "github.com/chipsalliance/rocket-chip",
+      "commit": "114325b27cfe5312c86a8a325b187be9455a62af",
+      "path": "src/main/scala/tilelink/Xbar.scala",
+      "lines": [
+        184,
+        184
+      ],
+      "sha256": "4fe31cb5df41064d917014f4391d993a4428d82ec5e489f9f8af04689c1654d6"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "# Implement `TLXbar`\n\nImplement the complete `TLXbar` module. Preserve its class declaration shown below. Keep its public `node` member as its TileLink nexus node. Return only the complete `class TLXbar` definition in a single Scala code block, with no text outside the block.\n\n## Package and imports\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Class declaration\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Dependency declarations\n\n### build.sbt\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 28
+    },
+    {
+      "kind": "authored",
+      "description": "heading, task text, or excerpt delimiter",
+      "text": "```\n\n### `src/main/scala/tilelink/Nodes.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/diplomacy/Nodes.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/tilelink/Parameters.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 10
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 11
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 12
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 13
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 14
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/diplomacy/Parameters.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 15
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 16
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/util/BundleMap.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 17
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `src/main/scala/tilelink/Xbar.scala`\n\n```scala\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 18
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "// ...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 27
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n## Documentation\n\n### `docs/TileLink-Diplomacy-Reference/Widgets.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 19
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 26
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n\n### `docs/TileLink-Diplomacy-Reference/NodeTypes.rst`\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 20
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 21
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 22
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 23
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 24
+    },
+    {
+      "kind": "authored",
+      "description": "Independent original excerpt boundary",
+      "text": "...\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 25
+    },
+    {
+      "kind": "authored",
+      "description": "Fixed prompt framing",
+      "text": "```\n"
+    }
+  ]
+}

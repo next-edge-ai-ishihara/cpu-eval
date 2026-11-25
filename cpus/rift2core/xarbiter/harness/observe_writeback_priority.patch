@@ -1,0 +1,40 @@
+--- a/src/main/scala/rift2Core/backend/WriteBack.scala
++++ b/src/main/scala/rift2Core/backend/WriteBack.scala
+@@ -207,6 +207,37 @@
+     // mdl.io.enq(5) <> io.fpu_iWriteBack
+     mdl.io.deq <> iReg.io.exe_writeBack
+ 
++    val cpuEvalProbe = Module(new XArbiter(new WriteBack_info(dw=64), in = mdl.io.enq.length, out = wbChn))
++    val cpuEvalFinished = RegInit(false.B)
++    val cpuEvalActive = !reset.asBool && !cpuEvalFinished
++    for (input <- cpuEvalProbe.io.enq.indices) {
++      val enq = cpuEvalProbe.io.enq(input)
++      enq.valid := cpuEvalActive && (input == 0 || input == 2 || input == 4).B
++      enq.bits := 0.U.asTypeOf(enq.bits)
++      enq.bits.rd0 := (input + 1).U
++      enq.bits.res := (256 + input).U
++    }
++    cpuEvalProbe.io.deq.foreach(_.ready := true.B)
++    val cpuEvalWrongInputs = cpuEvalProbe.io.enq.indices.map { input =>
++      cpuEvalProbe.io.enq(input).fire =/= (input == 0 || input == 2).B
++    }.reduce(_ || _)
++    val cpuEvalWrongOutputs = Seq(0, 2).map { input =>
++      val matchingOutputs = cpuEvalProbe.io.deq.indices.map { output =>
++        val deq = cpuEvalProbe.io.deq(output)
++        deq.fire && cpuEvalProbe.io.chosen(output) === input.U &&
++          deq.bits.asUInt === cpuEvalProbe.io.enq(input).bits.asUInt
++      }
++      PopCount(matchingOutputs) =/= 1.U
++    }.reduce(_ || _)
++    when(cpuEvalActive) {
++      cpuEvalFinished := true.B
++      when(cpuEvalWrongInputs || cpuEvalWrongOutputs) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH XArbiter integer writeback transfers\n")
++      }.otherwise {
++        printf("CPU_EVAL_XARBITER_CONTENTION\n")
++      }
++    }
++
+     mdl
+   }
+ 

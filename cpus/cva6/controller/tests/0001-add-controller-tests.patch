@@ -1,0 +1,181 @@
+diff --git a/cpu-eval-patches/controller_csr.S b/cpu-eval-patches/controller_csr.S
+new file mode 100644
+index 00000000..0373c021
+--- /dev/null
++++ b/cpu-eval-patches/controller_csr.S
+@@ -0,0 +1,39 @@
++#include "model_test.h"
++#include "arch_test.h"
++RVTEST_ISA("RV32I_Zicsr")
++
++.section .text.init
++.globl rvtest_entry_point
++rvtest_entry_point:
++RVMODEL_BOOT
++RVTEST_CODE_BEGIN
++    li a0, 0x13579bdf
++    csrw mscratch, a0
++    csrr a1, mscratch
++    addi a2, a1, 1
++RVTEST_CODE_END
++RVMODEL_HALT
++
++RVTEST_DATA_BEGIN
++RVTEST_DATA_END
++
++RVMODEL_DATA_BEGIN
++rvtest_sig_begin:
++sig_begin_canary:
++CANARY;
++#ifdef rvtest_mtrap_routine
++tsig_begin_canary:
++CANARY;
++mtrap_sigptr:
++    .fill 64*(XLEN/32),4,0xdeadbeef
++tsig_end_canary:
++CANARY;
++#endif
++#ifdef rvtest_gpr_save
++gpr_save:
++    .fill 32*(XLEN/32),4,0xdeadbeef
++#endif
++sig_end_canary:
++CANARY;
++rvtest_sig_end:
++RVMODEL_DATA_END
+diff --git a/cpu-eval-patches/controller_ecall.S b/cpu-eval-patches/controller_ecall.S
+new file mode 100644
+index 00000000..6d5e29c3
+--- /dev/null
++++ b/cpu-eval-patches/controller_ecall.S
+@@ -0,0 +1,57 @@
++// Derived from rv32i_m/privilege/src/ecall.S at the recorded test revision.
++#include "model_test.h"
++#include "arch_test.h"
++
++RVTEST_ISA("RV32I_Zicsr")
++
++.section .text.init
++.globl rvtest_entry_point
++rvtest_entry_point:
++    csrw mtvec, zero
++RVMODEL_BOOT
++RVTEST_CODE_BEGIN
++
++#ifdef TEST_CASE_1
++    RVTEST_CASE(1,"//check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True; def TEST_CASE_1=True",ecall)
++
++    LA(     x1,test_A_res)
++
++    LI(     x2,0x11111111)
++    ecall
++    nop
++    nop
++    sw      x0, 0(x1)
++    sw      x2, 4(x1)
++
++    RVMODEL_IO_WRITE_STR(x30, "# Test part A - test ECALL\n");
++    RVMODEL_IO_WRITE_STR(x30, "# Test End\n")
++#endif
++
++RVTEST_CODE_END
++RVMODEL_HALT
++
++RVTEST_DATA_BEGIN
++    .data
++    .align 4
++RVTEST_DATA_END
++
++RVMODEL_DATA_BEGIN
++rvtest_sig_begin:
++sig_begin_canary:
++CANARY;
++
++test_A_res:
++    .fill 2, 4, 0xdeadbeef
++
++mtrap_sigptr:
++    .fill 4, 4, 0xdeadbeef
++
++#ifdef rvtest_gpr_save
++gpr_save:
++    .fill 32*(XLEN/32), 4, 0xdeadbeef
++#endif
++
++sig_end_canary:
++CANARY;
++rvtest_sig_end:
++RVMODEL_DATA_END
+diff --git a/cpu-eval-patches/controller_wfi_resume.S b/cpu-eval-patches/controller_wfi_resume.S
+new file mode 100644
+index 00000000..117e370a
+--- /dev/null
++++ b/cpu-eval-patches/controller_wfi_resume.S
+@@ -0,0 +1,66 @@
++#include "model_test.h"
++#include "arch_test.h"
++RVTEST_ISA("RV32I_Zicsr")
++
++.section .text.init
++.globl rvtest_entry_point
++rvtest_entry_point:
++RVMODEL_BOOT
++RVTEST_CODE_BEGIN
++    la t0, timer_handler
++    csrw mtvec, t0
++    li t0, 0x02004000
++    li t1, -1
++    sw t1, 4(t0)
++    li t2, 0x2000
++    sw t2, 0(t0)
++    sw zero, 4(t0)
++    li t1, 128
++    csrs mie, t1
++    csrsi mstatus, 8
++    wfi
++after_wfi:
++    csrci mstatus, 8
++    csrc mie, t1
++    addi a0, zero, 1
++    j test_done
++
++.align 2
++timer_handler:
++    csrci mstatus, 8
++    csrc mie, t1
++    li t0, 0x02004000
++    li t2, -1
++    sw t2, 0(t0)
++    sw t2, 4(t0)
++    la t0, after_wfi
++    csrw mepc, t0
++    mret
++
++test_done:
++RVTEST_CODE_END
++RVMODEL_HALT
++
++RVTEST_DATA_BEGIN
++RVTEST_DATA_END
++
++RVMODEL_DATA_BEGIN
++rvtest_sig_begin:
++sig_begin_canary:
++CANARY;
++#ifdef rvtest_mtrap_routine
++tsig_begin_canary:
++CANARY;
++mtrap_sigptr:
++    .fill 64*(XLEN/32),4,0xdeadbeef
++tsig_end_canary:
++CANARY;
++#endif
++#ifdef rvtest_gpr_save
++gpr_save:
++    .fill 32*(XLEN/32),4,0xdeadbeef
++#endif
++sig_end_canary:
++CANARY;
++rvtest_sig_end:
++RVMODEL_DATA_END
+

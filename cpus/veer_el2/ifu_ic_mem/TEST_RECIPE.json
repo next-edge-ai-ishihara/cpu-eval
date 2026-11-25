@@ -1,0 +1,27 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_ifu_ic_mem",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "icache_dccm_selfcheck",
+    "path": "harness/icache_dccm_selfcheck.s",
+    "sha256": "b9fd0621c94acdbe3ca7aba525f5774fef655d3cef52e787b539bda95c3738b9"
+  },
+  "bank_observation": {
+    "path": "harness/cache_bank_enable_monitor.sv",
+    "sha256": "9ad0677492e27d504ec7305b4a05c2cbd0d45aa2811b72c2790f557a83441403",
+    "purpose": "During normal instruction-cache hits, check that the lower bank always enables ECC checking and that the workload exercises the upper bank's check enable."
+  },
+  "run": "bash harness/evaluate_icache_dccm_selfcheck.sh",
+  "run_sha256": "f5d4e3116aecb60156369f7082a6dc9116f6aa8c496bb0761b37b0809cb6ab8d",
+  "comparison": "The directed program checks the 64-call total and first/final cycle intervals and reports through the mailbox. A separate observation checks the two ECC bank enables during ordinary instruction-cache hits."
+}

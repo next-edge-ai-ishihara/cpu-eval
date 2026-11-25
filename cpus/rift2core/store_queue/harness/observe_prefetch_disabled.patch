@@ -1,0 +1,18 @@
+--- a/src/main/scala/rift2Core/backend/LSU/Lsu.scala
++++ b/src/main/scala/rift2Core/backend/LSU/Lsu.scala
+@@ -239,4 +239,15 @@
+   stQueue.io.cmm_lsu := io.cmm_lsu
+   io.preFetch := stQueue.io.preFetch
++
++  val cpuEvalStoreSeen = RegInit(false.B)
++  when (!reset.asBool && stQueue.io.enq.fire && !cpuEvalStoreSeen) {
++    printf("CPU_EVAL_STORE_QUEUE_ENQUEUE\n")
++    cpuEvalStoreSeen := true.B
++  }
++  val cpuEvalPrefetchSeen = RegInit(false.B)
++  when (!reset.asBool && stQueue.io.preFetch.valid && !cpuEvalPrefetchSeen) {
++    printf("CPU_EVAL_OBSERVATION_MISMATCH Store_queue issued a prefetch request\n")
++    cpuEvalPrefetchSeen := true.B
++  }
+   stQueue.io.flush := io.flush
+ }

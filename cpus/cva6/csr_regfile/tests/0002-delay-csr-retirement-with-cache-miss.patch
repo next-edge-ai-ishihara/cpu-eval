@@ -1,0 +1,21 @@
+diff --git a/cpu-eval-patches/csr_regfile_sequence.S b/cpu-eval-patches/csr_regfile_sequence.S
+--- a/cpu-eval-patches/csr_regfile_sequence.S
++++ b/cpu-eval-patches/csr_regfile_sequence.S
+@@ -7,6 +7,8 @@ RVTEST_ISA("RV32I_Zicsr")
+ rvtest_entry_point:
+ RVMODEL_BOOT
+ RVTEST_CODE_BEGIN
++    la t0, csr_buffer_delay_data
++    lw t1, 0(t0)
+     li a0, 0x13579bdf
+     li a1, 0x2468ace0
+     csrw mscratch, a0
+@@ -25,6 +27,8 @@ RVTEST_CODE_END
+ RVMODEL_HALT
+ 
+ RVTEST_DATA_BEGIN
++csr_buffer_delay_data:
++    .word 0x5a5aa5a5
+ RVTEST_DATA_END
+ 
+ RVMODEL_DATA_BEGIN

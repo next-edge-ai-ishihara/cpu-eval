@@ -1,0 +1,6 @@
+requirement	test_program	test_behavior
+Correlate a dispatched short-forward branch with its shadow predicate	rv64um-p-sfb_predicate_dependency;PredPublicContractTest	The program checks the architectural result; the finite unit observes corresponding branch and shadow indices without fixing their numerical encoding.
+Preserve latest branch association across accepted groups	PredPublicContractTest	The finite unit accepts groups respecting ren_stalls and dis_fire and checks branch-shadow relationships.
+Preserve the older association during partial dispatch	PredPublicContractTest	Dispatch an older shadow while a younger branch remains buffered, then dispatch the younger branch and its shadow.
+Clear waiting readiness on the matching predicate wakeup	PredPublicContractTest	Matching and unrelated wakeups are compared on public predicate-readiness outputs.
+Complete the loop and record elapsed cycles	rv64mi-p-loop_branch_cycles	Program completion and an observed x20 are required; x20 is diagnostic and is not compared.

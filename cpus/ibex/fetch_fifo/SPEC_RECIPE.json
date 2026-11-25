@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "label": "Module header comment and declaration for ibex_fetch_fifo",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_fetch_fifo.sv",
+      "lines": [
+        6,
+        42
+      ],
+      "sha256": "3e0b48b771055ea50356cdff418decae16e7d9586a7f953e6799112b238bb63c",
+      "language": "verilog"
+    },
+    {
+      "label": "Number of outstanding requests in the prefetch parent",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_prefetch_buffer.sv",
+      "lines": [
+        44,
+        44
+      ],
+      "sha256": "988ca05039f033c0eef9feffba996771c3449f255c64d7d78de04e1984249ccc"
+    },
+    {
+      "label": "Parent clear, request reservation and instantiation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_prefetch_buffer.sv",
+      "lines": [
+        75,
+        112
+      ],
+      "sha256": "988ca05039f033c0eef9feffba996771c3449f255c64d7d78de04e1984249ccc"
+    },
+    {
+      "label": "Address roles in the prefetch parent",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_prefetch_buffer.sv",
+      "lines": [
+        134,
+        142
+      ],
+      "sha256": "988ca05039f033c0eef9feffba996771c3449f255c64d7d78de04e1984249ccc"
+    },
+    {
+      "label": "Outstanding request lifecycle comments",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_prefetch_buffer.sv",
+      "lines": [
+        207,
+        208
+      ],
+      "sha256": "988ca05039f033c0eef9feffba996771c3449f255c64d7d78de04e1984249ccc"
+    },
+    {
+      "label": "Instruction address input in the prefetch parent",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "rtl/ibex_prefetch_buffer.sv",
+      "lines": [
+        240,
+        240
+      ],
+      "sha256": "988ca05039f033c0eef9feffba996771c3449f255c64d7d78de04e1984249ccc"
+    },
+    {
+      "label": "Instruction fetch documentation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_fetch.rst",
+      "lines": [
+        3,
+        27
+      ],
+      "sha256": "859000b59274378622ed19178e53b117491110915274a95784683c497d209631"
+    },
+    {
+      "label": "Misaligned instruction fetch documentation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/instruction_fetch.rst",
+      "lines": [
+        74,
+        80
+      ],
+      "sha256": "859000b59274378622ed19178e53b117491110915274a95784683c497d209631"
+    },
+    {
+      "label": "Fetched instruction interface documentation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/icache.rst",
+      "lines": [
+        243,
+        254
+      ],
+      "sha256": "af5f644717a5126d4dd4407217369d96b9be330670e47f9c8440199cc5e99d43"
+    },
+    {
+      "label": "err_plus2_o interface documentation",
+      "repo": "https://github.com/lowRISC/ibex.git",
+      "commit": "405c6d1d8220a18b2f9196141167a5875422dee4",
+      "path": "doc/03_reference/icache.rst",
+      "lines": [
+        276,
+        278
+      ],
+      "sha256": "af5f644717a5126d4dd4407217369d96b9be330670e47f9c8440199cc5e99d43"
+    }
+  ],
+  "parts": [
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "# Implement `ibex_fetch_fifo`\n\nImplement the complete `ibex_fetch_fifo` module. Preserve the module name, parameters, and ports shown below.\n\nReturn only the complete `module ibex_fetch_fifo` definition in a single SystemVerilog code block, with no text outside the block.\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Module declaration\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 0
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Parent instantiation\n\n### rtl/ibex_prefetch_buffer.sv\n\n```verilog\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 1
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 2
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 3
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 4
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n  // ...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 5
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Documentation\n\n### doc/03_reference/instruction_fetch.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 6
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 7
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n### doc/03_reference/icache.rst\n\n```text\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 8
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n...\n\n"
+    },
+    {
+      "kind": "verbatim_source",
+      "source": 9
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "```\n"
+    },
+    {
+      "kind": "authored",
+      "description": "Heading, fence or task text",
+      "text": "\n## Additional requirement\n\nIn the cycle after `clear_i` is asserted, `out_addr_o` equals the `in_addr_i` value present with `clear_i`, even while `out_valid_o` is low.\n"
+    }
+  ]
+}

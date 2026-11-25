@@ -1,0 +1,67 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "harness/evaluate_ports.py",
+    "harness/stride_ports_tb.sv",
+    "../hwpf_stride_arb/harness/compare_directed_traces.py",
+    "../harness/candidate_error.py",
+    "../harness/port_work_directory.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hwpf_stride",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hwpf_stride/hwpf_stride.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "ccd89b1bf08c77726d984d513f3d41a6798ffacf98e374545fb01b7995e7d787",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "eb813850f9b6ea396847bef9441bfd4695614b644436697ab3590dd458eedde4",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "directed_test_source": "harness/hwpf_stride_store_effect.S",
+  "directed_test_source_sha256": "c24c831f2c1a92efd9a40565904bb650b177dca2a50fdbf0965ba27e9c13df1b",
+  "integration_patch": "test-patches/enable_hwpf_stride.patch",
+  "integration_patch_sha256": "fdf7b42156099a242ee8f757498867170d2208939aa63290952c550cf061eb21",
+  "submodule_integration_patch": "test-patches/fix_stride_snoop_line.patch",
+  "submodule_integration_patch_sha256": "46eafab2ab003c0136b249a338c67f5644ed8359986177af7ad8b4d716a00300",
+  "request_tag_patch": "test-patches/forward_stride_request_tag.patch",
+  "request_tag_patch_sha256": "d5a0f0f1494b5536ce6568e763841bac55a38183db5a8bfa181cce04c850e04b",
+  "application_order": [
+    "For source reconstruction only, apply directed_test_patch to a scratch CVA6 tree and verify that the generated program matches the distributed harness/hwpf_stride_store_effect.S. The runtime evaluator does not apply this test-source patch.",
+    "Start the runtime evaluation from the recorded unpatched revisions and invoke harness/evaluate.sh with the candidate.",
+    "The evaluator first checks the external prefetch request sequence and pending-transfer stability at the public ports.",
+    "The evaluator applies integration_patch at the CVA6 repository root to pulse configuration for prefetcher zero at 0x80010000 and mark the monitored load snoop as physical.",
+    "The evaluator applies submodule_integration_patch inside the pinned HPDcache submodule to compare tag and set-index cache-line numbers.",
+    "The evaluator applies request_tag_patch inside the pinned HPDcache submodule to preserve the engine physical tag when the wrapper constructs its cache request.",
+    "The shared evaluator integrates the submitted module, then copies the distributed harness/*.S files next to the selected test list into TESTS_PATH/cpu-eval-patches.",
+    "The evaluator reverses its three surrounding-CPU integration patches on exit. Do not apply those patches before invocation."
+  ],
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hwpf_stride/hwpf_stride.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Reconstruct the 52-line distributed program from directed_test_patch for provenance. During evaluation the shared evaluator copies the distributed assembly into TESTS_PATH/cpu-eval-patches; the test-source patch is not applied at runtime.",
+    "evaluation": "Start from an unpatched checkout and invoke harness/evaluate.sh with the candidate; the evaluator applies its own patches and restores its inputs."
+  },
+  "evaluation_scope": {
+    "port_scope": "Verify the five-address stream and pending request stability at zero throttle. With ready high and Nwait=2, accepted requests are three or four cycles apart (the documented Nwait+1 or the pinned engine's Nwait+2). With delayed acknowledgements and Ninflight=1, at most two accepted requests remain unacknowledged (the pinned engine issues one more before it stalls). A candidate that does not complete each sequence within the cycle bound fails; internal identifiers are ungraded.",
+    "directed_scope": "Complete raw retirement comparison through the stride-arbiter comparator. The three cycle values are diagnostic observations and are not compared with fixed reference cycle counts."
+  },
+  "test_lists": [
+    {
+      "path": "harness/testlist_hwpf_stride.yaml",
+      "sha256": "2581bee92b5910d037f90c0360e88111c02ae3253a7a9d1243f5a47d2e743242"
+    },
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049"
+    }
+  ],
+  "port_evaluator": "harness/evaluate_ports.py",
+  "port_evaluator_sha256": "4d123e52862d3633f323f41c06ff77507c7bd1ee26124bd26c5ee70dc13533f1",
+  "port_testbench": "harness/stride_ports_tb.sv",
+  "port_testbench_sha256": "72172ba567debf4c50ea3bd79963d265a1fccabb257271c908af7f176511e4a6"
+}

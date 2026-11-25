@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "495ef7aa7ebdd2680b0ec104fd9341ef7e6e876589ba84d0d67d0b347ace91c5",
+  "prompt_sha256": "8bb9db42bd756c0c99a140591964bc2b858e145c657da0782e688593ad3a1449",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        279
+      ],
+      "sha256": "d782a05db1cb47ad9c945c66d676c754b8dabeabff26f6aec3b3cc8dc6457122"
+    },
+    {
+      "index": 1,
+      "kind": "authored",
+      "description": "Heading for Module declaration",
+      "prompt_bytes": [
+        279,
+        314
+      ],
+      "sha256": "d6ed12316b5cad98f97ada09378cf46a15b1ef2569b92ae4c91cb6789e015888"
+    },
+    {
+      "index": 2,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        314,
+        567
+      ],
+      "sha256": "438ff95f1478f07c0767fa9d26ac732a943cd5cf2dd597f17b4ac830d4191c86"
+    },
+    {
+      "index": 3,
+      "kind": "authored",
+      "description": "Fence after Module declaration",
+      "prompt_bytes": [
+        567,
+        572
+      ],
+      "sha256": "8a1e845405a6ac0993774e56b5e3d233ebf146a18bb8d93238bb835176efe41a"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Heading for Parent instantiation",
+      "prompt_bytes": [
+        572,
+        646
+      ],
+      "sha256": "688a6431c637cf162ce2176f3b6a5ab7477e63557f54601c6405dc152cd56506"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        646,
+        1028
+      ],
+      "sha256": "d56ae1af5fe94218a84f96b88701c505e213cc6d236f032cf09d4cbd54b3bd31"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Fence and path heading within Parent instantiation",
+      "prompt_bytes": [
+        1028,
+        1080
+      ],
+      "sha256": "6308e3cd1cb8028545d0d248fa9b1d17dcd2ac20c8bddc22d23cdc9b8ae1cfbb"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        1080,
+        1231
+      ],
+      "sha256": "eb7d18be385b322c588db80989ff2b87f603e933b088687815dd632012abdca3"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Omission within Parent instantiation",
+      "prompt_bytes": [
+        1231,
+        1241
+      ],
+      "sha256": "772d0cc78cfdb4b7c89cc5da09546235d4abaf4a635a844c4d8cb993ed441f21"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1241,
+        1397
+      ],
+      "sha256": "3b8934c6c649587706dd186054c7810bd781f7d93eb6ffeef316a80c63b013f4"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Fence after Parent instantiation",
+      "prompt_bytes": [
+        1397,
+        1401
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for el2_btb_addr_hash",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/el2_lib.sv",
+      "lines": [
+        29,
+        37
+      ],
+      "language": "verilog",
+      "sha256": "54f7fa4953f2e3350d91fe986d2a50ea9d934953695f4a72e4e171dc37741ca7"
+    },
+    {
+      "label": "Parent instantiation for el2_btb_addr_hash",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_aln_ctl.sv",
+      "lines": [
+        581,
+        584
+      ],
+      "sha256": "7930b686dcd61a3076e22e03dfa96173ab642d3e0ec08daa0db2384996326218"
+    },
+    {
+      "label": "Parent instantiation for el2_btb_addr_hash",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_bp_ctl.sv",
+      "lines": [
+        228,
+        228
+      ],
+      "sha256": "9b7065201916511b3e1fb6d0b8415ce74b4caf3afbd913b39d005c4db0bdf611"
+    },
+    {
+      "label": "Parent instantiation for el2_btb_addr_hash",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/ifu/el2_ifu_bp_ctl.sv",
+      "lines": [
+        232,
+        232
+      ],
+      "sha256": "9b7065201916511b3e1fb6d0b8415ce74b4caf3afbd913b39d005c4db0bdf611"
+    }
+  ]
+}

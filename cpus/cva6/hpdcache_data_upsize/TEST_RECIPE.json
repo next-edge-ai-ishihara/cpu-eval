@@ -1,0 +1,48 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "../instr_scan/harness/evaluate_ports.py",
+    "../harness/port_work_directory.py",
+    "harness/evaluate_ports.py",
+    "harness/upsize_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_data_upsize",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_data_upsize.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "3945c19d53c4209df848f6185be651d46e0ebaf4f8b6e70a39c2fe43f2f10452",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "a7284e2d29dc10f0dcd7c48d2c71cabf6733a0baa3152c3006e48dbcdfdecbb2",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "81def620c72ff9549597db83acfc4503bc6aff74712109ee58185e9414f016db",
+    "test": "harness/upsize_ports_tb.sv",
+    "test_sha256": "36fc247a99d2b6cf24d2cf69ea155b46c320c57d9995d52f83e6676389aaf685",
+    "package_path": "rtl/src/hpdcache_pkg.sv",
+    "package_sha256": "14761c94905390d548215dc19aed3f80332dbaa7e617fef4c700f47a3dd8bdbf",
+    "shared_runner_sha256": "d831d592779b75c5e83597255a87718d6d8691bddc9a32e5f6bac5749e8baf26",
+    "work_directory_helper_sha256": "e93f719e8e1a33fe160c75c4285594284db60dc8b04daa45262fee8d2ff36da1",
+    "configuration": {
+      "WR_WIDTH": 64,
+      "RD_WIDTH": 128,
+      "DEPTH": 1
+    },
+    "observations": "Two accepted beats are readable in low-to-high order. A single accepted beat marked last makes its low slice readable."
+  },
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_data_upsize.sv from hpdcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Use the recorded architectural tests in the unmodified CPU. There, the instruction-cache refill path upsizes 64-bit AXI data to 128-bit lines with DEPTH=1. Run the separate public-port test after the 38 CPU comparisons match."
+  }
+}

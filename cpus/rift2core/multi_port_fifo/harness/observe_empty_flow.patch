@@ -1,0 +1,26 @@
+--- a/src/main/scala/rift2Core/frontend/IF3.scala
++++ b/src/main/scala/rift2Core/frontend/IF3.scala
+@@ -415,5 +415,23 @@
+ 
+   btbFifo.io.flush  := io.flush | io.if4Redirect.fire
+   bimFifo.io.flush  := io.flush | io.if4Redirect.fire
++
++  val bimFifoPending = RegInit(0.U(2.W))
++  val bimFifoTransfers = PopCount(bimFifo.io.deq.map(_.fire))
++  val bimFifoForwardObserved = RegInit(false.B)
++  when (bimFifo.io.flush) {
++    bimFifoPending := 0.U
++  }.otherwise {
++    bimFifoPending := bimFifoPending + bimFifo.io.enq(0).fire.asUInt - bimFifoTransfers
++    when (bimFifoPending === 0.U && bimFifo.io.enq(0).valid) {
++      when (!bimFifo.io.deq(0).valid ||
++          bimFifo.io.deq(0).bits.asUInt =/= bimFifo.io.enq(0).bits.asUInt) {
++        printf("CPU_EVAL_OBSERVATION_MISMATCH: empty flow FIFO did not forward the prediction\n")
++      }.elsewhen (!bimFifoForwardObserved) {
++        printf("CPU_EVAL_MULTI_PORT_FIFO_EMPTY_FLOW\n")
++        bimFifoForwardObserved := true.B
++      }
++    }
++  }
+   tageFifo.io.flush := io.flush | io.if4Redirect.fire
+ }

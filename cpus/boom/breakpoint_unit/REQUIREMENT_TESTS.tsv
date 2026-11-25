@@ -1,0 +1,8 @@
+requirement	tests	rationale
+Match instruction addresses against enabled execute triggers	BreakpointUnitTest	The directed test checks a matching and nonmatching instruction address through the public instruction-exception output.
+Match effective addresses against enabled load and store triggers	BreakpointUnitTest	The directed test independently enables a load and a store trigger and checks the corresponding public exception outputs.
+Apply privilege and debug-mode enables	BreakpointUnitTest	The directed test fixes machine privilege outside debug mode and separately checks exception and debug actions.
+Distinguish breakpoint exceptions from debug-trigger actions	BreakpointUnitTest	Execute, load, and store matches distinguish action-zero exceptions from action-one debug outputs. Nonmatching load and store addresses suppress their debug outputs.
+Honor chained triggers independently for instruction, load, and store accesses	BreakpointUnitTest	For each access direction, a chain reports a terminal match only when both entries match that direction.
+Report per-entry watch matches and valid-time action	BreakpointUnitTest	Instruction, load, and store cases check watch direction and valid, valid-time action, nonmatches, chain intermediate suppression, and chain terminal matches. Inactive action is not compared.
+Notify only matching directions and actions during independent simultaneous matches	BreakpointUnitTest	For each access direction, action-zero and action-one entries match independently. At least one corresponding scalar output is required, other directions remain false, and both per-entry watches remain valid. The single-action cases check opposite-action suppression.

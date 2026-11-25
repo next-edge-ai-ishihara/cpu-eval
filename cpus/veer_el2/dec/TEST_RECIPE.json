@@ -1,0 +1,52 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_dec",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/remove-replaceable-module-hierarchy.patch",
+      "sha256": "2829f79aa23749b576b33c2e1b9856d4d52727263cba02bda228e77b8e5a5a5e",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 3
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "kind": "directed_port_probe",
+    "runner": "test/run_dec_port_probe.py",
+    "source": "test/dec_port_probe.sv",
+    "instruction_count": 109,
+    "operand_checks": 323,
+    "debug_gpr_reads": 32,
+    "debug_csr_commands": 7,
+    "instruction_trace_checks": 440,
+    "nmi_events": 1,
+    "nmi_trace_checks": 4
+  },
+  "run": "bash evaluate_ports.sh",
+  "comparison": "Compare public operands, instruction trace fields including ECALL and an illegal instruction, one NMI trace event, debug GPR readback and mscratch readback with the supplied instruction and completion inputs. For the illegal instruction, the trace must report cause 2 and the instruction bits as the trap value."
+}

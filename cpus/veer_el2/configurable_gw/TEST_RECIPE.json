@@ -1,0 +1,26 @@
+{
+  "comparison_expectation": {
+    "kind": "self_check"
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_configurable_gw",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  ],
+  "test": {
+    "name": "pic_configurable_gw",
+    "path": "test/pic_configurable_gw.s",
+    "sha256": "6ed23f76b691e27f691404a16856a30d80b87d4f2dd7690a9ff088d4270daa28"
+  },
+  "run": "bash test/evaluate_pic_configurable_gw.sh",
+  "run_sha256": "4c6fdd21482ad78311dd948a4d567baa6d698918fccb00c0f17ac44ba33141b2",
+  "port_test": {
+    "path": "test/gateway_edges.sv",
+    "sha256": "9c8371cf4623723a2f562727a8f8f7e638bd1045cc337e4a2809e3dffd3be8f5"
+  },
+  "comparison": "The software observes the fast-interrupt-redirect claim id and its bounded absence through the mailbox. For both polarities, the port test observes an active edge-mode request during a clear strobe, retention after the input becomes inactive, and clearance with the input inactive."
+}

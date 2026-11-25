@@ -1,0 +1,16 @@
+diff --git a/generators/chipyard/src/main/scala/config/BoomConfigs.scala b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+index 9e1f558a..87bd0a98 100644
+--- a/generators/chipyard/src/main/scala/config/BoomConfigs.scala
++++ b/generators/chipyard/src/main/scala/config/BoomConfigs.scala
+@@ -18,6 +18,11 @@ class LargeBoomConfig extends Config(
+   new boom.common.WithNLargeBooms(1) ++                          // large boom config
+   new chipyard.config.AbstractConfig)
+ 
++class LargeBoomCommitTraceConfig extends Config(
++  new boom.common.WithBoomCommitLogPrintf ++                     // simulation-only commit trace
++  new boom.common.WithNLargeBooms(1) ++                          // unchanged large boom hardware
++  new chipyard.config.AbstractConfig)
++
+ class MegaBoomConfig extends Config(
+   new boom.common.WithNMegaBooms(1) ++                           // mega boom config
+   new chipyard.config.AbstractConfig)

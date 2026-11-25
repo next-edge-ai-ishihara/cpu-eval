@@ -1,0 +1,32 @@
+{
+  "program": "CPU-Eval-authored architectural load through an Sv39 2 MiB leaf.",
+  "macro_revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+  "environment_revision": "6de71edb142be36319e380ce782c3d1830c65d68",
+  "rift_revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+  "gcc_version": "riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0",
+  "objcopy_version": "GNU objcopy (2.42-1ubuntu1+6) 2.42",
+  "header_sha256": {
+    "env/encoding.h": "8a8480aaf6cce6df02b483e0cbdf8e375866c5ed86986075e9111fe9149a38c2",
+    "env/p/riscv_test.h": "50300743b9b4c5540838b287b1b5655f67474a2ff98b0eb194f7466cc59489be",
+    "env/p/link.ld": "2bd8d690e54985856599af6e3355ed2969dee43ca8c38bff6a481270c047d606",
+    "isa/macros/scalar/test_macros.h": "b09abb7eec47539dde829096ca973a33b2d293d38f0902133ad2aaa6fab892dc"
+  },
+  "build_script": {
+    "path": "build.sh",
+    "sha256": "f0d6c70594d09e51ab976511f0dbe5eb01bfb3a3133f4dbbf410819c48e1d9a7"
+  },
+  "files": [
+    {
+      "path": "source/sv39_megapage_offset.S",
+      "sha256": "5d58902b364d01e1dd255b3bb729cea6a11e09155b4b4c39242d5913b8a855c2"
+    },
+    {
+      "path": "images/sv39_megapage_offset",
+      "sha256": "f37e68f51f8fbe42b24e9052b8d64bab0b1d0b79ea13db67a783cc79c0fab2de"
+    },
+    {
+      "path": "images/sv39_megapage_offset.verilog",
+      "sha256": "ffc7b9dbd6672ffde4debd76e87b28d2dfe64971a7350db82130ce2a0f2d45ca"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+id: rob
+cpu: boom
+target:
+  repository: https://github.com/riscv-boom/riscv-boom.git
+  revision: efe2b35cc2224edf3a417381d437cfdcb37e02a8
+  file: src/main/scala/exu/rob.scala
+  class: Rob
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: evaluate_candidate.sh

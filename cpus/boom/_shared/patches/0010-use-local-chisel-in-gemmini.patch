@@ -1,0 +1,12 @@
+diff --git a/build.sbt b/build.sbt
+index ffe802d..1a4e17a 100644
+--- a/build.sbt
++++ b/build.sbt
+@@ -7,6 +7,6 @@ scalaVersion := "2.12.10"
+ 
+ libraryDependencies ++= Seq(
+-  "edu.berkeley.cs" %% "chisel3" % "3.4.+",
++  "edu.berkeley.cs" %% "chisel3" % "3.5-SNAPSHOT",
+   "edu.berkeley.cs" %% "rocketchip" % "1.2.+",
+   "edu.berkeley.cs" %% "chisel-iotesters" % "1.5.+",
+   "org.scalanlp" %% "breeze" % "1.1")

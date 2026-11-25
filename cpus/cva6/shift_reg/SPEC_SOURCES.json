@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "6315c0c1f54b85608e7bc7f2dca8c56ae56d1101298ca46816c2fdc8035b4845",
+  "prompt_sha256": "2f118500ea355fdc73518579ee8cdb52bf4c8f2889453cc1ff5e7b2cdd3a4a1c",
+  "repositories": {
+    "https://github.com/openhwgroup/cva6.git": {
+      "revision": "6348e9e684678f83b40d0520028513d06b36e7b2"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        0,
+        356
+      ],
+      "sha256": "2fc01f41a69d59f110dceedd5572328277fd949c87df8e0b0e1a8b2bc61c2fb7"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        356,
+        419
+      ],
+      "sha256": "f52805607afe0071872eeeaf839dfcadb0a3cbebc8a584eb053f1eb7e2bd0812"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        419,
+        464
+      ],
+      "sha256": "16ab8841be19b6437f519e370a014818c34cc127977ddf6ac45cfb13290c150f"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        464,
+        708
+      ],
+      "sha256": "e8df60c1f069a7a2e840f3745ef6d986135b8d659c18c9ac2933669afbcc3447"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        708,
+        784
+      ],
+      "sha256": "36753318bd3db25abf7db1e27b5669a3ac1bfc4324035f8a4888e279f3382fc2"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        784,
+        1124
+      ],
+      "sha256": "6fd79fa3048f24a56bcafdd0fc8efab7043a360f952199742af34ebf1d737896"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        1124,
+        1204
+      ],
+      "sha256": "3d524b0a40fd932639c932af78c591447ba3572f8c584712311261ee435a34d3"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1204,
+        1374
+      ],
+      "sha256": "4dcfcd5900e13041c7f04df1933306ddd752b430abf6b20b991ac59e0a2c84e1"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Task, headings and fences",
+      "prompt_bytes": [
+        1374,
+        1378
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Selected shift-register depths",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/include/cv32a60x_config_pkg.sv",
+      "lines": [
+        127,
+        128
+      ],
+      "sha256": "db3cb21159b631c628ba36fbbf6cda72afbc9d4f366b846cfb1cc2e3e29202d8"
+    },
+    {
+      "label": "Module declaration for shift_reg",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/src/shift_reg.sv",
+      "lines": [
+        16,
+        24
+      ],
+      "sha256": "73fd475108016aa3ff5f940324e6bbf627a13bb8404e285b86876d3e948ff622"
+    },
+    {
+      "label": "Selected parent connection",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "core/load_store_unit.sv",
+      "lines": [
+        627,
+        635
+      ],
+      "sha256": "ce091f34f60e489a79d335548355e7d69e7dcd3982f8ece835ce9df2baf72a78"
+    },
+    {
+      "label": "Common Cells shift_reg behavior",
+      "repo": "https://github.com/openhwgroup/cva6.git",
+      "commit": "6348e9e684678f83b40d0520028513d06b36e7b2",
+      "path": "vendor/pulp-platform/common_cells/README.md",
+      "lines": [
+        70,
+        70
+      ],
+      "sha256": "553a4193973d569b692fde5cac4c83957989dce1764911156a93038a915a0819"
+    }
+  ]
+}

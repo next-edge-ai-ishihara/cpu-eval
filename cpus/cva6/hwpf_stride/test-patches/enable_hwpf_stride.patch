@@ -1,0 +1,52 @@
+diff --git a/core/cva6.sv b/core/cva6.sv
+index 67534292..00000000 100644
+--- a/core/cva6.sv
++++ b/core/cva6.sv
+@@ -1520,5 +1520,15 @@ module cva6 #(
+   )
+   begin : gen_cache_hpd
++    logic hwpf_test_cfg_set;
++
++    always_ff @(posedge clk_i or negedge rst_ni) begin
++      if (!rst_ni) begin
++        hwpf_test_cfg_set <= 1'b1;
++      end else begin
++        hwpf_test_cfg_set <= 1'b0;
++      end
++    end
++
+     cva6_hpdcache_subsystem #(
+         .CVA6Cfg   (CVA6Cfg),
+         .icache_areq_t(icache_areq_t),
+@@ -1577,13 +1586,13 @@ module cva6 #(
+         .wbuffer_empty_o (dcache_commit_wbuffer_empty),
+         .wbuffer_not_ni_o(dcache_commit_wbuffer_not_ni),
+ 
+-        .hwpf_base_set_i    ('0  /*FIXME*/),
+-        .hwpf_base_i        ('0  /*FIXME*/),
++        .hwpf_base_set_i    ({3'b000, hwpf_test_cfg_set}),
++        .hwpf_base_i        (256'h0000000000000000000000000000000000000000000000000000000200040001),
+         .hwpf_base_o        (  /*FIXME*/),
+-        .hwpf_param_set_i   ('0  /*FIXME*/),
+-        .hwpf_param_i       ('0  /*FIXME*/),
++        .hwpf_param_set_i   ({3'b000, hwpf_test_cfg_set}),
++        .hwpf_param_i       (256'h0000000000000000000000000000000000000000000000000000000300000000),
+         .hwpf_param_o       (  /*FIXME*/),
+-        .hwpf_throttle_set_i('0  /*FIXME*/),
++        .hwpf_throttle_set_i({3'b000, hwpf_test_cfg_set}),
+         .hwpf_throttle_i    ('0  /*FIXME*/),
+         .hwpf_throttle_o    (  /*FIXME*/),
+         .hwpf_status_o      (  /*FIXME*/),
+diff --git a/core/cache_subsystem/cva6_hpdcache_wrapper.sv b/core/cache_subsystem/cva6_hpdcache_wrapper.sv
+index 081f177c4..00000000 100644
+--- a/core/cache_subsystem/cva6_hpdcache_wrapper.sv
++++ b/core/cache_subsystem/cva6_hpdcache_wrapper.sv
+@@ -239,7 +239,7 @@ module cva6_hpdcache_wrapper
+       snoop_abort[0] = dcache_req_abort[1],
+       snoop_addr_offset[0] = dcache_req[1].addr_offset,
+       snoop_addr_tag[0] = dcache_req_tag[1],
+-      snoop_phys_indexed[0] = dcache_req[1].phys_indexed;
++      snoop_phys_indexed[0] = 1'b1;
+ 
+   //  Snoop Store/AMO port
+   assign snoop_valid[1] = dcache_req_valid[NumPorts-1] & dcache_req_ready[NumPorts-1],

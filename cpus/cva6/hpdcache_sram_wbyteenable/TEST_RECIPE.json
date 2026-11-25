@@ -1,0 +1,65 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_ports.py",
+    "harness/sram_ports_tb.sv"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_sram_wbyteenable",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/common/hpdcache_sram_wbyteenable.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "f99bafaae1d8bd9410998bb39ee389d33fbdc78fdaa32e1b5ac75e2ba317d9f3",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "97b97c65bfda21d7c606a11e70613ce4518b6c0ffe7a1915beec4414abec72c0",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "../harness/testlist_cv32a60x.yaml",
+  "test_list_sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/common/hpdcache_sram_wbyteenable.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "git checkout the recorded test revision; no generated test source is stored",
+    "port_test_dependencies": "Read the recorded fixed behavioral SRAM macros and SECDED sources from the existing HPDcache submodule. No copies of those files are distributed."
+  },
+  "port_test": {
+    "evaluator": "harness/evaluate_ports.py",
+    "evaluator_sha256": "f80f41cbcaf21da36fefd917d078be51156092eceb9ae059acecedc3e5951f6b",
+    "test": "harness/sram_ports_tb.sv",
+    "test_sha256": "1ab3a71c2f634d4b815870e51974a0abb12deab8b1a64f7ab2da885df0c05e52",
+    "observations": 3,
+    "test_condition": "The cv32a60x data RAM geometry: 32-bit data, two words per address, 7-bit address, depth 128, ECC disabled. Write full and byte-masked words at addresses 0, 64 and 127, then compare read data and the absence of errors.",
+    "dependencies": [
+      {
+        "path": "rtl/src/utils/ecc/prim_secded_pkg.sv",
+        "sha256": "5ec03842914cd31acbfbfa1526dbc1b64f4296521ab04308553d6f6350ec8e0c"
+      },
+      {
+        "path": "rtl/src/utils/ecc/prim_secded_inc.svh",
+        "sha256": "ec253c14180e29c35d43cac4d13b30682683ee38f09d0e415d6ea10eabbf1d53"
+      },
+      {
+        "path": "rtl/src/utils/ecc/prim_secded_39_32_enc.sv",
+        "sha256": "31b80e9aefe5cc6df99fe7134a39c417809536b29de6892e6382a9ec3374b4c7"
+      },
+      {
+        "path": "rtl/src/utils/ecc/prim_secded_39_32_dec.sv",
+        "sha256": "13cbe5fdac6efeba3e92cbddc5c77efa68477996c616984d87f7abe438c2c61e"
+      },
+      {
+        "path": "rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_1rw.sv",
+        "sha256": "1a955e41c2476e1c105b467a96e69ddc378df0b65f432c3c717741a7650bdc01"
+      },
+      {
+        "path": "rtl/src/common/macros/behav/hpdcache_sram_wbyteenable_ecc_1rw.sv",
+        "sha256": "d7e728c8f8345f7546043d1f88bc7a4ce4260390be927c85edecf67e3c3ce186"
+      }
+    ]
+  }
+}

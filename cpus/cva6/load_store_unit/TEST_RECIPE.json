@@ -1,0 +1,38 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "load_store_unit",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/load_store_unit.sv",
+  "source_sha256": "ce091f34f60e489a79d335548355e7d69e7dcd3982f8ece835ce9df2baf72a78",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "7baaee5c7c35196979526186e1567dcba5789c411954a944b9fb20f4ee3ef5dd",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "test_list": "harness/testlist_load_store_unit.yaml",
+  "test_list_sha256": "313f8fa732faf75d3b0352d71d0bbeaf053cf4879a83a476a9f0fdd078d91d7b",
+  "test_list_sources": [
+    {
+      "path": "../store_unit/harness/testlist_store_unit.yaml",
+      "sha256": "26c138d221eedd44d04734f1ceee8be075784f6df9c6d1a9a63976012624ec1b"
+    },
+    {
+      "path": "../load_unit/harness/testlist_load_unit.yaml",
+      "sha256": "868c5973ec57eac5102c3fe80cbdb05431045c4a2112e6eecb416a6d911a12c6"
+    }
+  ],
+  "test_selection": "Five store tests exercise compressed word and uncompressed byte, halfword and word stores. Five load tests exercise signed and unsigned byte and halfword loads and word loads. The shared architectural trace comparison checks load destination register values and store addresses and width-masked values.",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/load_store_unit.sv",
+    "test_sources": "Checkout the recorded RISC-V Architectural Tests revision and select the ten files named by the recorded test list without modifying them. The combined list retains the common header and all store rows, then appends all load rows."
+  }
+}

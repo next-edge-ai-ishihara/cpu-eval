@@ -1,0 +1,54 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../hpdcache_victim_random/harness/evaluate_ports.py",
+    "../hpdcache_victim_random/harness/victim_ports_tb.sv",
+    "../harness/candidate_error.py",
+    "../harness/compare_cycle_measurement.py",
+    "../harness/port_work_directory.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "hpdcache_victim_sel",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "source_path": "core/cache_subsystem/hpdcache/rtl/src/hpdcache_victim_sel.sv",
+  "source_submodule_revision": "f404e7ebbda8baa4af3729535f520a6b12a06d03",
+  "source_sha256": "d5d326dcecd67259c848d8c7d39fa29f249bcd2ba9ec3700906a06b8eef8d3f8",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "c6c0285edb90b4cc17e13b0a59c089787186f9d9088e4a62378d34a57fcc8295",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "directed_test_source": "harness/hpdcache_victim_sel_concurrent_misses.S",
+  "directed_test_source_sha256": "ac51f2b2d6e4b813bab3d423ed2ebbaa2b89c595f74e72b184e5b025b33030a3",
+  "application_order": [
+    "checkout CVA6 at cpu_revision and initialize its HPDcache submodule at source_submodule_revision",
+    "run harness/evaluate.sh with the complete submitted hpdcache_victim_sel module"
+  ],
+  "reconstruction": {
+    "reference_hdl": "read rtl/src/hpdcache_victim_sel.sv from HPDcache submodule f404e7ebbda8baa4af3729535f520a6b12a06d03, which CVA6 revision 6348e9e684678f83b40d0520028513d06b36e7b2 records",
+    "test_sources": "Use the pinned architectural tests. For a directed test, the evaluator copies the distributed harness/*.S source to <CVA6>/verif/tests/cpu-eval-patches. To reconstruct that source independently, apply its new-file provenance patch in an empty scratch directory and compare the recorded SHA-256; do not apply the provenance patch to either upstream checkout."
+  },
+  "grading_note": "No exact elapsed-cycle value is required. The directed program must complete with differences confined to timing-register values. A bounded port check enforces victim eligibility in the selected two-way RANDOM write-through configuration, then the standard 38-program architectural suite must pass.",
+  "test_materialization": "harness/evaluate_parallel.sh copies the assembly files beside the selected test list into <CVA6>/verif/tests/cpu-eval-patches. The directed test patch is a provenance reconstruction record and is not applied before evaluation.",
+  "test_lists": [
+    {
+      "path": "harness/testlist_victim_sel.yaml",
+      "sha256": "b6f2ffe90f8a87a0144c662193ae6b6b5921fc576b85bf24e3819c5125637760"
+    },
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049"
+    }
+  ],
+  "port_test": {
+    "evaluator": "../hpdcache_victim_random/harness/evaluate_ports.py",
+    "evaluator_sha256": "c7c8234020ed4c705ed4f3d9527bdfd0f6ffcd4d85c6e59f8bc9d31826b4e5a0",
+    "test": "../hpdcache_victim_random/harness/victim_ports_tb.sv",
+    "test_sha256": "18d2f7e79b061405e7e0e02d8376d3ae903a616c41a46061a96f0c4316ba8c54"
+  }
+}

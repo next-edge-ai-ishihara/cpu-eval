@@ -1,0 +1,69 @@
+--- a/src/main/scala/rift2Core/frontend/IF4.scala
++++ b/src/main/scala/rift2Core/frontend/IF4.scala
+@@ -228,4 +228,66 @@
+   //ras flush immediately when pipeline flush
+   ras.io.flush := io.flush
++
++  val observeStack = Reg(Vec(ras_dp, UInt(vlen.W)))
++  val observeCount = RegInit(0.U(log2Ceil(ras_dp + 1).W))
++  val observeNonempty = observeCount =/= 0.U
++  val observePush = ras.io.enq.valid
++  val observePop = ras.io.deq.ready && observeNonempty
++  val observeFull = observeCount === ras_dp.U
++  val observeFlushed = RegInit(false.B)
++  val observeContinuation = RegInit(false.B)
++  val observeCoroutine = RegInit(false.B)
++  val observeDrain = RegInit(false.B)
++
++  when(ras.io.flush) {
++    observeCount := 0.U
++    observeContinuation := false.B
++    when(observeNonempty) {
++      observeFlushed := true.B
++      printf("CPU_EVAL_RAS_FLUSH_REACHED\n")
++    }
++  }.elsewhen(observePush && observePop) {
++    observeStack(0) := ras.io.enq.bits.target
++    observeContinuation := true.B
++    printf("CPU_EVAL_RAS_POP_THEN_PUSH_REACHED\n")
++  }.elsewhen(observePush) {
++    observeStack(0) := ras.io.enq.bits.target
++    for (slot <- 1 until ras_dp) {
++      observeStack(slot) := observeStack(slot - 1)
++    }
++    when(observeFull) {
++      printf("CPU_EVAL_RAS_DEPTH_REACHED\n")
++    }.otherwise {
++      observeCount := observeCount + 1.U
++    }
++  }.elsewhen(observePop) {
++    when(observeContinuation) {
++      observeCoroutine := true.B
++      observeContinuation := false.B
++      printf("CPU_EVAL_RAS_COROUTINE_RETURN_REACHED\n")
++    }
++    for (slot <- 0 until ras_dp - 1) {
++      observeStack(slot) := observeStack(slot + 1)
++    }
++    observeCount := observeCount - 1.U
++  }
++  when(observeFlushed && observeDrain && !RegNext(observeFlushed && observeDrain, false.B)) {
++    printf("CPU_EVAL_RAS_FLUSH_AND_COROUTINE_REACHED\n")
++  }
++  when(ras.io.deq.ready && !ras.io.flush) {
++    when(observeCoroutine && !observeNonempty && !observeDrain) {
++      observeDrain := true.B
++      printf("CPU_EVAL_RAS_COROUTINE_DRAIN_REACHED\n")
++    }
++    when(ras.io.deq.valid =/= observeNonempty) {
++      printf(p"CPU_EVAL_OBSERVATION_MISMATCH RAS return availability expected=${observeNonempty} actual=${ras.io.deq.valid}\n")
++    }
++    when(observeNonempty && ras.io.deq.valid) {
++      printf("CPU_EVAL_RAS_RETURN_REACHED\n")
++      when(ras.io.deq.bits.target =/= observeStack(0)) {
++        printf(p"CPU_EVAL_OBSERVATION_MISMATCH RAS return address expected=0x${Hexadecimal(observeStack(0))} actual=0x${Hexadecimal(ras.io.deq.bits.target)}\n")
++      }
++    }
++  }
+ }
+ 

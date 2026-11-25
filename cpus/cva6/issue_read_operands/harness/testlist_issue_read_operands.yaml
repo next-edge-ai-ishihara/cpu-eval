@@ -1,0 +1,9 @@
+common_test_config: &common_test_config
+  path_var: TESTS_PATH
+  iterations: 1
+  gcc_opts: "-DXLEN=32 -DTEST_CASE_1=True -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I<path_var>/riscv-arch-test/riscv-test-suite/env/ -I<path_var>/riscv-arch-test/riscv-target/spike/"
+
+testlist:
+  - {test: rv32i-and-01, <<: *common_test_config, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/and-01.S}
+  - {test: rv32i-or-01, <<: *common_test_config, asm_tests: <path_var>/riscv-arch-test/riscv-test-suite/rv32i_m/I/src/or-01.S}
+  - {test: rv32i-branch-operands, <<: *common_test_config, asm_tests: <path_var>/cpu-eval-patches/branch_operands.S}

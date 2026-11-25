@@ -1,0 +1,63 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2194
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "el2_lsu_bus_buffer",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    },
+    {
+      "path": "test/read-data-coverage.patch",
+      "sha256": "de10a7cd9191683f717d9ca36992d9109d0d81f1c220854025233053a523299a",
+      "apply_in": "VeeR EL2 repository root after generating the fixed test",
+      "order": 3
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_before_patch_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca",
+    "generated_source_after_patch_sha256": "5912f5b1d879d174606bf45b69b9e7b6a20dea7cbb6660ab003bd4659f8cd3d0"
+  },
+  "run": "bash evaluate_fixed_then_order.sh",
+  "comparison": "Ordered Spike and RTL GPR state-change updates; the comparator skips updates that do not change its tracked register state and does not compare every retired instruction, PC, opcode, or memory update.",
+  "additional_checks": [
+    {
+      "kind": "external_axi_issue_progress",
+      "evaluator": {
+        "path": "test/run_order_probe.py",
+        "sha256": "9f1a8d8991c1fbc95ebd30f4e1efd71cf83c61a879b47328cc7bf060aec5617e"
+      },
+      "testbench": {
+        "path": "test/order_probe.sv",
+        "sha256": "febd12038a3d489cd527acce0e19da0a4a8b9eed7f61772ec956f1c83856f2bc"
+      },
+      "incomplete_result": "FAIL_INCOMPLETE_EXECUTION",
+      "scope": "Request an unmatched normal load after AXI has accepted the older store address and data. Observe the load address handshake while the store response is withheld. A handshake missing after the fixed cycles, a build failure and a missing summary line are FAIL; a wall-clock timeout is INVALID_EVALUATION."
+    }
+  ]
+}

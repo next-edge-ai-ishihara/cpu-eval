@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "recipe": "SPEC_RECIPE.json",
+  "recipe_sha256": "054f9a631e8fc7c4bb62d9a07b9b71da367ca42354cd535a21aafb85acaddd84",
+  "prompt_sha256": "6fd1a67153dd22bfd778bafb5f858a145ec649557930997971bd9042a4abb502",
+  "repositories": {
+    "https://github.com/chipsalliance/cores-veer-el2.git": {
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        293
+      ],
+      "sha256": "4691c7e61d315ba4731fe7074e57c2d775f3a63b441447e8c373ce5eea93bdf7"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        293,
+        443
+      ],
+      "sha256": "75add5fd4e34c28ffcd0ef4b5f04adac95a0f3544c8c1b138be77f8f37817496"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Parent instantiation",
+      "prompt_bytes": [
+        443,
+        484
+      ],
+      "sha256": "2634324360114f430bc87e7e1610214b93f9ad44b83b2c265a7e6918d5653b80"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        484,
+        573
+      ],
+      "sha256": "fd1d68424cfb1cbc506373183e87a02081c99bdf7c0ae8c22f65ac6c54351825"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Closing fence",
+      "prompt_bytes": [
+        573,
+        577
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Module declaration for rvtwoscomp",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/lib/beh_lib.sv",
+      "lines": [
+        527,
+        533
+      ],
+      "language": "verilog",
+      "sha256": "e8ee31b4883c3e3d5f9bac003183e74344af604eed918be3f0c73b223ffcc41d"
+    },
+    {
+      "label": "Parent instantiation for rvtwoscomp",
+      "repo": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "commit": "aefefae20b77fa61ba306bff36a72f42ae4cc028",
+      "path": "design/exu/el2_exu_div_ctl.sv",
+      "lines": [
+        1590,
+        1590
+      ],
+      "language": "verilog",
+      "sha256": "80bf0b3cb3b2585341fc98194dea410550fb604ad66ac2047afb086f835343b4"
+    }
+  ]
+}

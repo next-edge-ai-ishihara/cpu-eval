@@ -1,0 +1,81 @@
+{
+  "comparison_expectation": {
+    "kind": "matched",
+    "expected": 2197
+  },
+  "schema_version": 1,
+  "cpu": "VeeR EL2",
+  "module": "rvecc_decode",
+  "repositories": [
+    {
+      "url": "https://github.com/chipsalliance/cores-veer-el2.git",
+      "revision": "aefefae20b77fa61ba306bff36a72f42ae4cc028"
+    },
+    {
+      "path": "third_party/riscv-dv",
+      "revision": "da33551ab102c7530d7dadb803abf4c245ba08e0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "../_shared/patches/veer-el2-riscv-dv-verilator.patch",
+      "sha256": "c1b3219f6c66ff4b4787092b8d4d8ba6a34a2a63d045560a64c6a431f91aa5a6",
+      "apply_in": "VeeR EL2 repository root",
+      "order": 1
+    },
+    {
+      "path": "../_shared/patches/riscv-dv-python-3.12.patch",
+      "sha256": "146379b7125ff218f20935cfa2a7d857c116d4a4ca618e23abd8732ccb0633c6",
+      "apply_in": "third_party/riscv-dv",
+      "order": 2
+    }
+  ],
+  "test": {
+    "name": "riscv_arithmetic_basic_test",
+    "iterations": 1,
+    "seed": 999,
+    "generated_source_sha256": "cd2056212ebc72c29568c38598cbf85a57173076fdf747a63c591288ae7b56ca",
+    "post_generation_patches": [
+      {
+        "path": "../rvecc_encode/test/dccm-ecc-coverage.patch",
+        "sha256": "217b917dacabf74fed28afd52e83f06ae3ff44e0acb02bcaec769d6bb8dd1518",
+        "apply_in": "VeeR EL2 repository root",
+        "order": 1
+      },
+      {
+        "path": "test/dccm-single-bit-injection.patch",
+        "sha256": "d7be112e822104fad9ce4bd8f6e7bdae514d1e21e9a149d1aef808cd9b189889",
+        "apply_in": "VeeR EL2 repository root",
+        "order": 2
+      }
+    ],
+    "post_generation_artifacts": [
+      {
+        "path": "tools/riscv-dv/work/test_riscv_arithmetic_basic_test/asm_test/riscv_arithmetic_basic_test_0.S",
+        "sha256": "be723a2c47d6fa010b3fd38659b8aa828c36104f9cf6bc13902960d6dedadc31"
+      },
+      {
+        "path": "third_party/riscv-dv/yaml/iss.yaml",
+        "sha256": "02bb1d6cd0f55e425a657f51cf6ab97cecc9de3d46fceae8c19dd4e816cd22d5"
+      },
+      {
+        "path": "testbench/tb_top.sv",
+        "sha256": "0eb1ec8052b3af75475df2498a6a9e494a2961cdf7b19a059a06d863ac6a6247"
+      }
+    ],
+    "patched_source_sha256": "be723a2c47d6fa010b3fd38659b8aa828c36104f9cf6bc13902960d6dedadc31"
+  },
+  "run": "bash evaluate_all.sh",
+  "comparison": "Ordered Spike and RTL GPR state updates (exactly 2197 matches) followed by the cache tag port probe.",
+  "run_sha256": "3d1d233adda88e91d751272fb6fea6cae195bd4b83d8b6fc25fc49bd4c19819e",
+  "grading_dependencies": [
+    "evaluate_all.sh",
+    "test/cache_tag_probe.sv"
+  ],
+  "port_probe": {
+    "source": "test/cache_tag_probe.sv",
+    "sha256": "4283ce30eb7b204e6f29ba20cb2d1616e3da65b6b65c8b57d45de3ca408e4dcb",
+    "comparison": "Five specified cache tag inputs check unchanged data and ECC and the OR of the two error outputs. A single clean tag is applied with both overall parity values, followed by a data error, a check-bit error, and a disabled input.",
+    "result": "A completed probe with a port mismatch exits 1. Build failures, abnormal termination, or missing observations exit 2."
+  }
+}

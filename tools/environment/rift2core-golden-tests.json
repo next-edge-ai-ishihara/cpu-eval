@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "riscv_tests": {
+    "url": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0"
+  },
+  "riscv_test_env": {
+    "url": "https://github.com/riscv/riscv-test-env.git",
+    "revision": "6de71edb142be36319e380ce782c3d1830c65d68"
+  },
+  "rift2core": {
+    "url": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e"
+  },
+  "gcc_version": "13.2.0",
+  "binutils_version": "2.42",
+  "tests": [
+    {
+      "name": "rv64mi-p-ld-misaligned",
+      "elf_sha256": "d485707409b5e725fbd0db16baa6225abe376267cc0321de0493a67a35573314",
+      "verilog_sha256": "bf0164b795f27d592729e8d34dcae66069309cce34140e0dd108f042137ada7f"
+    },
+    {
+      "name": "rv64mi-p-lh-misaligned",
+      "elf_sha256": "f316863d6fac0c285706df29ab979d77aaf68bcf676929eed133ede29cc39f95",
+      "verilog_sha256": "378b93954ea0874fb842680ffc145bb1cf1ef369e93ab3b5bee56b8132f6e40e"
+    },
+    {
+      "name": "rv64mi-p-lw-misaligned",
+      "elf_sha256": "e99356f833a5b8191f6387d62039b1402b0e9b173f318616413a1344790b4bf2",
+      "verilog_sha256": "686b3b343bcf974c7dc957356a33d240fe9337d4eea6d17293151a119aed64d4"
+    },
+    {
+      "name": "rv64mi-p-ma_addr",
+      "elf_sha256": "78085b51dab1f4fefa95c64699ee40ca50d4de57948805f4c371b27d651916a4",
+      "verilog_sha256": "3b1ebbd230eb10829c8bb38d19c975ca2695b7e4aa8d3033b98d568c57c06a95"
+    },
+    {
+      "name": "rv64mi-p-sbreak",
+      "elf_sha256": "97f8c2e73699dedccfe7a89e5750ba1bca53ce18f77b5a5bf02fe24cb1fe0c71",
+      "verilog_sha256": "ecff363261c407b9c9432afd3561dafb133973b0646eae418578a5e4922657dc"
+    },
+    {
+      "name": "rv64mi-p-scall",
+      "elf_sha256": "52973998ee0ad14484be0207f49a21f654b953f98c5f022755e8bd22b22ac2f4",
+      "verilog_sha256": "af2c8e9d82ebb47773aa9b72f164cb06f9d5dded021a5fcfa3a7e88e972a48ac"
+    },
+    {
+      "name": "rv64mi-p-sd-misaligned",
+      "elf_sha256": "2ddaa79e11d4cded8a21d6296c650b748d269519f225299b9b04ec4259ebf671",
+      "verilog_sha256": "5a69d6583499555e1418d6dc39870bbeef729bba5620920278345dd1e2ab395b"
+    },
+    {
+      "name": "rv64mi-p-sh-misaligned",
+      "elf_sha256": "5791565de9a932edd4ec1c99fb807fd32150355bcde207f3918346ab1c6d1acd",
+      "verilog_sha256": "12b2bfc285dedad05f9fbfc40bd5c3d7f60799f33f1b2c5ec4da9a3839cdd84c"
+    },
+    {
+      "name": "rv64mi-p-sw-misaligned",
+      "elf_sha256": "1b494e14c8c934df3548fbab4bf0010b335daadebf07a39b2a3e9eed37f73512",
+      "verilog_sha256": "bd1da6478df8533519b2c2578db864cf43c5d7b75657f894191b04629492b40a"
+    },
+    {
+      "name": "rv64mi-p-zicntr",
+      "elf_sha256": "1b37c38e923da846120472f323cffda71324231e533833e1af2e162184e5ef53",
+      "verilog_sha256": "72c1b888b83a7fb4ee911a458849b77f1765adf87e3d508a83e9615fa494c4fa"
+    },
+    {
+      "name": "rv64si-p-csr",
+      "elf_sha256": "bc74bd45e708dd245c760b5a0ac10bc9c7b9a71f3c100ba232476efc34f21ec6",
+      "verilog_sha256": "a7c20f9403226abe98551305b3d2a40d99cbe9d04a5b1573d2dd3ca6655658a4"
+    },
+    {
+      "name": "rv64si-p-dirty",
+      "elf_sha256": "d9f8452141fba6987698bbce656156ca34fa60132818ae4db94ded73a1f321db",
+      "verilog_sha256": "fbb4c545c70ded37918e1cb7e868114a8c6deaf16a6670b5cce813a0480a9d18"
+    },
+    {
+      "name": "rv64si-p-icache-alias",
+      "elf_sha256": "5106973d7f1733070373bf46bc138abea7ae169736ca5d40858e2af21749c731",
+      "verilog_sha256": "6e5f327ff957ad597e0c71a3f1bf68a4b5cda9ded4e8b28f3a506c08de8dca86"
+    },
+    {
+      "name": "rv64si-p-ma_fetch",
+      "elf_sha256": "0da63c3265765c5da7d2716a709bd47f03dac81336ef2db3bbe48b9abc5b7964",
+      "verilog_sha256": "0b10ba484845e87a97b2e740a03dc81dd21bacacfdd22aba853a2b18e858d971"
+    },
+    {
+      "name": "rv64si-p-sbreak",
+      "elf_sha256": "38b5017b8f754f358bcc8cddd927c9a48af51e0fb5524936ec6b55b730be6d4b",
+      "verilog_sha256": "2042b7c07064cc859cc82127fe95e3bc7a544fcdf301758f5dee4c7326ef8d95"
+    },
+    {
+      "name": "rv64si-p-scall",
+      "elf_sha256": "e81d6cc6312fe433557db22b68a3aacc4d1362aa23a27af307ec916b7942458e",
+      "verilog_sha256": "513a503285407cc6d9b497509b07b77c7d990493d7e6544275c858891a7bc024"
+    },
+    {
+      "name": "rv64si-p-wfi",
+      "elf_sha256": "547adef10c8ef5d9c75c1ec2eca3ac50c55d56b630465d64e1a3d6910a92a895",
+      "verilog_sha256": "daeb981c5befa927e8e6d03adb3d62dbb68e0ef0239adae8b190690e2b8486e7"
+    },
+    {
+      "name": "rv64ua-p-amoadd_d",
+      "elf_sha256": "1c7b4b3397e8f1a347e8e2916ce53657cff54e5aa472d76605879123cda6b5bc",
+      "verilog_sha256": "44367a5150cafaf9270d1f5379177c5c0acb63ab92a7119309813429e9b5c0ca"
+    },
+    {
+      "name": "rv64ua-p-amoadd_w",
+      "elf_sha256": "25ef22dec07d34e4823463229ea885fbf751f4db4ba0ed0b68df0a2577e7c41a",
+      "verilog_sha256": "1d57be50fcc5f653ab91553c6ace6562bf6a6f1feee4248bab102b35df02ade0"
+    },
+    {
+      "name": "rv64ua-p-amoand_d",
+      "elf_sha256": "01d3dd388f67c1fa72ed39778d96e983a212274b3881c1b3c53ca34b203d28b9",
+      "verilog_sha256": "f3bd7cc52153157b21d83476e8be13eded3fe54ad39e648410a77e3a1af0b059"
+    },
+    {
+      "name": "rv64ua-p-amoand_w",
+      "elf_sha256": "b27911f990f0e7b9267d8229dd5d70538026dd7d15e4e22305f271dab4c64917",
+      "verilog_sha256": "f178a26f1dde8ccaf62b27df3ad4d9edafab6bdb4cf1bca2e3ea496cc6a5b554"
+    },
+    {
+      "name": "rv64ua-p-amomax_d",
+      "elf_sha256": "dbe635c1d5f850d69f469a81c8977511d9f8a81a7a3d335c3f198ff39e9a4f90",
+      "verilog_sha256": "9b5fc6e2cfce59b742f33b9daeabe3fcc6a96b9e52a59179cb28b4ba8efeb111"
+    },
+    {
+      "name": "rv64ua-p-amomax_w",
+      "elf_sha256": "418ed8e989baf57eaeef1780f1954d71da29126be2c77f04bd3959db027f4638",
+      "verilog_sha256": "c8149eb91bb83b405e380b5a8ed419191e486fd0d9edcd3bc5494eb13312c3b0"
+    },
+    {
+      "name": "rv64ua-p-amomaxu_d",
+      "elf_sha256": "17cffc9bb0400b951a780c6648ad58454529a35e60bb63d43da328ffaede53bf",
+      "verilog_sha256": "82fe8c7e05f4c6f1a06b674cc95ed50bccd4809149dff83c68c41c690ca9fccf"
+    },
+    {
+      "name": "rv64ua-p-amomaxu_w",
+      "elf_sha256": "46457291eb661f67bd62a16eb1e7ca73a68ebc77c134de2feac29aedd0912307",
+      "verilog_sha256": "82d96aa17f3b17d23e9c64c8cb437f93a605ee7a7089edd033ee1b15ff445c7b"
+    },
+    {
+      "name": "rv64ua-p-amomin_d",
+      "elf_sha256": "6441a4081542e22dd29da3877891d2b92f85dffb9d836c0fd68d87dcd76a0c21",
+      "verilog_sha256": "02968bea13284527b3bcc080b787c9843eedf07b560e50af494db8ac4f1df10b"
+    },
+    {
+      "name": "rv64ua-p-amomin_w",
+      "elf_sha256": "976492eaf91add8c6b73f15c674f29911028818c24d48a3847b96e75fc08f511",
+      "verilog_sha256": "f7018fe2cfdbfbe10960b71da7df0435c5664e8bd4fa5554f7dd531519696541"
+    },
+    {
+      "name": "rv64ua-p-amominu_d",
+      "elf_sha256": "eeb91ee14c3711693c6631b02e1a57641ab40af61c6d77b17d5dedaee85e81ff",
+      "verilog_sha256": "b7b5b27a283f1d84f5475c65fc8239a6a9b69b59770f0ad806a06fa014eb2c81"
+    },
+    {
+      "name": "rv64ua-p-amominu_w",
+      "elf_sha256": "e75fae8d476fc31c44c05cbde0012340262b135f77591faaf29a333a84447163",
+      "verilog_sha256": "549827615b3613d99c4d84032923cc085dcc42238c22677cc84a18d213a2499d"
+    },
+    {
+      "name": "rv64ua-p-amoor_d",
+      "elf_sha256": "01edacba9e9bb994dad9ccae23b33ff3ea9458801aff4ccee4a039ed3ee5adb5",
+      "verilog_sha256": "0bd8c7006acb92b89b609408ec0251fed24651dcba7c59f16d3c6a3eab2f8f32"
+    },
+    {
+      "name": "rv64ua-p-amoor_w",
+      "elf_sha256": "5e92749ab3b7e9b4098b107640e7bc73dd9203bc92299a438ed445fffb200c91",
+      "verilog_sha256": "0ffe6cb29ab1fb530bc1efae38a5d73d4b30571307c5262be8b47b8a84917290"
+    },
+    {
+      "name": "rv64ua-p-amoswap_d",
+      "elf_sha256": "345da67e01d54bec72e10c44b51d9c246a6819b8bbe02129bbd721b82149ff67",
+      "verilog_sha256": "cf244d659dd3c2811862e3ffca55f1c2f4a7d2d380ab7793c4a9ccaf3fcbf2fd"
+    },
+    {
+      "name": "rv64ua-p-amoswap_w",
+      "elf_sha256": "cb80f0725cbc54143d69cf7eb1d02f01ecc06e54944883ea6435b3887eb2d5aa",
+      "verilog_sha256": "9ed6ff11abe32c7fc817a4ae6ced3558b137f91341a26b13ef3ed0702cef8db7"
+    },
+    {
+      "name": "rv64ua-p-amoxor_d",
+      "elf_sha256": "89f6566cd43e11f210f8970c4ea4c146007a95df533b31662bb0648fcef726fd",
+      "verilog_sha256": "a27db5f6c0b8c8c29d2893e047e4b4748bff35c75a778d024579659194dfa9a4"
+    },
+    {
+      "name": "rv64ua-p-amoxor_w",
+      "elf_sha256": "2d54cb3db69bacbc1cd8a8d277d8da6b094241a524fbc0732791d2f803c92ebf",
+      "verilog_sha256": "ff80a5c3423ebe05c2633e3a579d905f1dd9befac613ed3b4ed4cd2d4bcd4b0b"
+    },
+    {
+      "name": "rv64ua-p-lrsc",
+      "elf_sha256": "f325bc9abe87c136f0e11e76f86402fd7de6ddeac74e7406c1a7fb67736af2ed",
+      "verilog_sha256": "15e84bd2dcf8e84bb8d95907b65d959c7419ff465462baafcfdea632c2a75e66"
+    },
+    {
+      "name": "rv64uc-p-rvc",
+      "elf_sha256": "c570add92cd3235638106d3d9033f3c1febcd3c7488290ca5d1ae86bc9bcf280",
+      "verilog_sha256": "ccbda887a518fbec4f183ddf986c7f8c807c6defc004b99d70fc63e8255fb443"
+    },
+    {
+      "name": "rv64ui-p-add",
+      "elf_sha256": "e7066348f6f4842bb8f686e86954a85fa2f9f4f596043f4d6608fa7f99c8fb42",
+      "verilog_sha256": "64d9d1594da9f0c0dec4affce472c28dd1c04211cc3120a1ed202efb7cbe7b92"
+    },
+    {
+      "name": "rv64ui-p-addi",
+      "elf_sha256": "e5a28a3b3ed54c18cc10751195f9f202bbb8a932aa3d5745206e9131b3f9947a",
+      "verilog_sha256": "6914946c79b1df25cf455c1326f50037eaf425d8ccb2d248736b3a95371d8216"
+    },
+    {
+      "name": "rv64ui-p-addiw",
+      "elf_sha256": "b42d4ab5dc734aded9c6cda3721dc62ebf8d5ce9126bbfab52557519a60c4aef",
+      "verilog_sha256": "a8ae1d68a4c6960c961191d0e1ae665bbad3efc4cd26be4c34722dfe2431d40e"
+    },
+    {
+      "name": "rv64ui-p-addw",
+      "elf_sha256": "6a8fc8886d3ab03c8a3aa6a40a3d1775156da35516f39f67feee3733d2df10b6",
+      "verilog_sha256": "74f2cd5b9b1aaca5213b9cf3c731d370bc98b33eafe2e1d378828cb1bddc9345"
+    },
+    {
+      "name": "rv64ui-p-and",
+      "elf_sha256": "1fd9df270999aceba02c2ca23917edcdba9958b5441469ad922d38babc78a7a5",
+      "verilog_sha256": "2964a3a0c6d375f699466f2bd80620619f4894ae1a431f1b8984edb18a679997"
+    },
+    {
+      "name": "rv64ui-p-andi",
+      "elf_sha256": "87096219d9a43e0f51888ded5d827753d7f09312d9956b0c9f46af3388d737fe",
+      "verilog_sha256": "7c39c3ad24baae8134c532986fd1fc683d2b9915679851314f461a3a9db7d3d3"
+    },
+    {
+      "name": "rv64ui-p-auipc",
+      "elf_sha256": "39714c2b7033000877b04c5f98dfd846b04edf1b647337cf82e40d54170ce253",
+      "verilog_sha256": "47b6400205cb3c326356346c3e9c25152eb52bfc8334e890e1ba096e48598cb1"
+    },
+    {
+      "name": "rv64ui-p-beq",
+      "elf_sha256": "54f1d663ac135d445518d04365ebe248dab9f43bcce1e3d1e53d547b93d27356",
+      "verilog_sha256": "61d469b08730ccf0764c0014b7ff5132086ae0b6bfb7218c0643a0d628dec410"
+    },
+    {
+      "name": "rv64ui-p-bge",
+      "elf_sha256": "1c390f67423fa6de33ed4a4dee8438ec23116f69296c6799a0d6941239a203d9",
+      "verilog_sha256": "125c7ec0fd711e3e624cf0461922fea0105605fc4733ae83d8e362c7eb58fd7e"
+    },
+    {
+      "name": "rv64ui-p-bgeu",
+      "elf_sha256": "3085cf7656aacba07cf31cccf6e3f4bbe57b2497cba3d9ee14cf3b3a9189c8d4",
+      "verilog_sha256": "51e97cfe0ea08d04d6f99b2153594bf2660c3389c036d7a5a63e74a38111534f"
+    },
+    {
+      "name": "rv64ui-p-blt",
+      "elf_sha256": "b8d7e5f64f370ec0c1200ed89063af7905d3a1694fe39ae85c8be38e3c64b770",
+      "verilog_sha256": "adf471f3098ed7f2407a2a6a9bb97a515f62f29f763a32d27946065f2d27e1a5"
+    },
+    {
+      "name": "rv64ui-p-bltu",
+      "elf_sha256": "de045e561972dd3e95748e3ae84bff171d5e9620eb8734d746b5b24c2625dcae",
+      "verilog_sha256": "d95815587f8e72a8216f17c700647b4fb81a0e89eb86282a48fa5141f82ef604"
+    },
+    {
+      "name": "rv64ui-p-bne",
+      "elf_sha256": "7f0704d0add050ef0c1c01c5e3b74a63241c8186005fd946d699a521630ad777",
+      "verilog_sha256": "bc533df6357ac238278d31f0188895c0cab8e615eb921262e7cc775794d924d6"
+    },
+    {
+      "name": "rv64ui-p-fence_i",
+      "elf_sha256": "b70e7b83e2dc95303b15288cb4217158e277d723857736a9fd514d5e6657b2c6",
+      "verilog_sha256": "6380f9b85bb28d9dd0a989c0912c57bba55b90e4c814a1c5a8749d291ef7cfed"
+    },
+    {
+      "name": "rv64ui-p-jal",
+      "elf_sha256": "b4eaf2e69d7e84a71347164c311563ced42df6424a3d03792d15837eda086cd9",
+      "verilog_sha256": "f2cf84ae394103c025cfee7def9c6c06f5bd6c855dec3dd574022861621fd2b9"
+    },
+    {
+      "name": "rv64ui-p-jalr",
+      "elf_sha256": "814509a4bb49b7b5e3dd98bdfe881f743bb9d9a9c821a5750c2c061050181803",
+      "verilog_sha256": "c8d098858710a5ba7329183cc93968877e5306c087150b81fd1e9b375326d355"
+    },
+    {
+      "name": "rv64ui-p-lb",
+      "elf_sha256": "81de735b16675746aefa5eb6071634675e92b185d8088dffcc278aa27b1323d9",
+      "verilog_sha256": "0d72b2ac7bde2cd40fddefe04c7cddaf4cc7d4a67fc65adf1f32df78635fe77f"
+    },
+    {
+      "name": "rv64ui-p-lbu",
+      "elf_sha256": "88f888c2e3ad9a42c77566a318c46351a82bf0ff7a9683d6138985d13cb4b777",
+      "verilog_sha256": "155ba54554387cf5197dc839163f2357b8d196c8f2c7f9aa83a969191354d40f"
+    },
+    {
+      "name": "rv64ui-p-ld",
+      "elf_sha256": "a8693d9fc69fa8a86a21d7be92c80cbd4a03e32943a3d0542d3efd6c2e061ff1",
+      "verilog_sha256": "299b49bd46955927bd366babd1e5c6a9b2094ae36f667502816ac508fb8397b3"
+    },
+    {
+      "name": "rv64ui-p-ld_st",
+      "elf_sha256": "99940110089737068a137826151974a3507bf164a3435cc646dc912b10536d43",
+      "verilog_sha256": "e47fecfc1c95b917eb8c50f7662d5813d0702a9fb7952b6f87d40b4dd44478f4"
+    },
+    {
+      "name": "rv64ui-p-lh",
+      "elf_sha256": "0fc5e565c15c8139b26b1fd896a82fd99fcfc2f62b6fe7651dde111c5bd9591b",
+      "verilog_sha256": "d8730ba206aa4974d83a0a431b7f6ba2a04b805b9cb8357c2fbcff8cd19117ea"
+    },
+    {
+      "name": "rv64ui-p-lhu",
+      "elf_sha256": "683bc106a691a1101d8dc024d5738783e433c58d40cbc492f6755ecc6cfa100b",
+      "verilog_sha256": "503815eda92bdf34fe0bf85a94caa6a25d24167c72b86069271f76f856679ff2"
+    },
+    {
+      "name": "rv64ui-p-lui",
+      "elf_sha256": "4f9ec410a51b2799f1757e51819283a946a58edcb8f84380070a54049ca7e1c6",
+      "verilog_sha256": "af3b31d8856c0d91caed7b320400b300aa1f14c0797894aed928576f73c78b2f"
+    },
+    {
+      "name": "rv64ui-p-lw",
+      "elf_sha256": "a8018956c822543d05ab991504cbd5a0a78d7fdb94e89382b084eafdf91677f8",
+      "verilog_sha256": "93852291229cbbeee52e46e63cf3f2a3f1cc5342fec36e52894dba75c180ddd8"
+    },
+    {
+      "name": "rv64ui-p-lwu",
+      "elf_sha256": "2200437092faf2671f8a6311346b1b0fd9b16a4faa5c8d845c248d33b198d98b",
+      "verilog_sha256": "71062a5593d5fdafcbeb2a7f27da4892a08a2e2144f0561dcc613671471689be"
+    },
+    {
+      "name": "rv64ui-p-or",
+      "elf_sha256": "0bd007a4b63471057af1d95a48b26b6fe0d84d619ac203f1c43c4b2b2b7174be",
+      "verilog_sha256": "5da628cc4288d307d20dd0dd96725b9b3ce8543698ed4f1a6f35fba7b9a4df20"
+    },
+    {
+      "name": "rv64ui-p-ori",
+      "elf_sha256": "c5fb71bd0aa63914b82e695f6eb3c9533ee86e01238cac8d050b85b09d9066b9",
+      "verilog_sha256": "fd557a59471c5acd68a4e6431ca66d200f96c577f112cd177cfe1ea63c84c6cc"
+    },
+    {
+      "name": "rv64ui-p-sb",
+      "elf_sha256": "a9ed0dd1c76ea060ec8963a69007596aa4483813b16c14c32c063d46f3e73329",
+      "verilog_sha256": "f6ca99dee532ac3b2fe0eb3b16f02170d79f3caa177ed32e93db7a9b9e2501b0"
+    },
+    {
+      "name": "rv64ui-p-sd",
+      "elf_sha256": "7b1dca0c68d4d6d620b3c0e975d7c68e77d245f6eb046d1d09abb0a588ef9c80",
+      "verilog_sha256": "f1a526bdc53dae6912cc822181085bb748cd95f0b0cab85afdc254b0b665e908"
+    },
+    {
+      "name": "rv64ui-p-sh",
+      "elf_sha256": "2d4e880d919410b2ddc671b44116196a3d79f51edf9bdc4b490d5b1acad60864",
+      "verilog_sha256": "f70e765fa55b67919bc0a2560952943ef545e13de723c29e03af53ec45d1dd60"
+    },
+    {
+      "name": "rv64ui-p-simple",
+      "elf_sha256": "2c5a53819ff33a6ecf74131370175327a0161826ee3e5bf5ca3f05a6c378fc6a",
+      "verilog_sha256": "47ffdc139ae998ebb348fb4521c68839b34b62d88d18e87fb67b4a712bffebb5"
+    },
+    {
+      "name": "rv64ui-p-sll",
+      "elf_sha256": "4ae2c58a6359ffa922f8a83ea1280ab664d6632b61a27d1019e625ba1da84dc3",
+      "verilog_sha256": "fcf3b0c0ef06835a6cc45c74b298f74cd27434b84324e523f59a92157e90d551"
+    },
+    {
+      "name": "rv64ui-p-slli",
+      "elf_sha256": "9f91b50a5a9caa80ea52389f418d7cba8f71a23942adf8b41def8063558d920b",
+      "verilog_sha256": "1ef35426834a98d4c30220bedddb91a522084dc506937944fc09ccb02fdd260d"
+    },
+    {
+      "name": "rv64ui-p-slliw",
+      "elf_sha256": "174a9b51cdcfca7e697eca71da47113be886bb843e5dcf149f1151302b78c1b4",
+      "verilog_sha256": "6afef69681bf9cea2ecdbb0b9e3d70022d8b1cacacebd511c988e82c2437d769"
+    },
+    {
+      "name": "rv64ui-p-sllw",
+      "elf_sha256": "51807d85169bc62c90cfd35625fc2562fdafc15aa6b9dcd4f07e9fbae8386ef7",
+      "verilog_sha256": "ec386310478234cc4a208ce2fd14825ec6af79579a72bff1bae64855aafb9a35"
+    },
+    {
+      "name": "rv64ui-p-slt",
+      "elf_sha256": "076084663141e593646d0a44a529ac20005eddb03f0c31ef2eccb319d151169f",
+      "verilog_sha256": "f720946f8303a3c9ce9ab01ad88914fa1373dd3a942236fd66c0b2b773291449"
+    },
+    {
+      "name": "rv64ui-p-slti",
+      "elf_sha256": "bbc1063220b339f85c58bc32eeeea72b799804f7fb5a7f06e90997265abda5cd",
+      "verilog_sha256": "a2e1fd845831a8c86d0e6c3a1e0a3cb02585924930c7c210b4bd53818a074710"
+    },
+    {
+      "name": "rv64ui-p-sltiu",
+      "elf_sha256": "18e5dfca420b26f24924cebc590dbce314ee54343fab71659df40cdf199f4159",
+      "verilog_sha256": "0a82b7ba1931183d90c6ee6c1ad6d679f0bf2ac67466abc3fca92087e625e04e"
+    },
+    {
+      "name": "rv64ui-p-sltu",
+      "elf_sha256": "5d621ad28b72cce698020f2d988b4c7adb28b7ad2751475d3139705bbfc0c852",
+      "verilog_sha256": "b4ce04a4d34460cf1b020d57881574751e95c7d8a80c3325e315593757d0d706"
+    },
+    {
+      "name": "rv64ui-p-sra",
+      "elf_sha256": "b06cb0fa7533373c886f35d5f278224e4bccc9a5cb25debbab7bdffd85ba5001",
+      "verilog_sha256": "00e81efe397856e21bd89b8de01d79067a17526787146b8b889d76e5daaa181a"
+    },
+    {
+      "name": "rv64ui-p-srai",
+      "elf_sha256": "6047434f8c460fa39a74eaaf974860de4e9cc39a6cf41db264b692e89cbbd765",
+      "verilog_sha256": "cbf073fd229548990e3772d3f263344dffe45cfbc29f29008467f2d2452fb36d"
+    },
+    {
+      "name": "rv64ui-p-sraiw",
+      "elf_sha256": "f1c79fd9fe12126d4ea72f1788796349c6cce386bcaa1326557308f140779a5d",
+      "verilog_sha256": "56996650e9e17f5e57e0d291d88a246c513f33851f2b26248ed9519ce324bc9e"
+    },
+    {
+      "name": "rv64ui-p-sraw",
+      "elf_sha256": "e579a332f50c68444a50133b730919f3c1512c5d4d316c2a92c64bb9a7ea8415",
+      "verilog_sha256": "848892cb78a6781f25ce872947b776e193d8f3a6d0e4e45717e7bc454487bee8"
+    },
+    {
+      "name": "rv64ui-p-srl",
+      "elf_sha256": "de3562556b7ea07f0d5a3f555614c26838a8e1971f9fd62dcf2f1c8f2e23bb3b",
+      "verilog_sha256": "2c9facba280b5f95347c1f8f586184aec21d185de3d4d8846359fc5d49d455c1"
+    },
+    {
+      "name": "rv64ui-p-srli",
+      "elf_sha256": "a533c48b200350e05c16ad573d8eb9827d63f147dadad96826d0b6713961e078",
+      "verilog_sha256": "693218dff5dc2cd2c5e7221b6059ef0e14830e51efd3c51e311e4b34d63cebdf"
+    },
+    {
+      "name": "rv64ui-p-srliw",
+      "elf_sha256": "855b8f67d9be70d5343e8295b7e7e82ed8868499625a154eefa44ce40c80066f",
+      "verilog_sha256": "c6d56df83526557cb6235b344c050c37308d91d8784fb8a1276364bf6f53ed28"
+    },
+    {
+      "name": "rv64ui-p-srlw",
+      "elf_sha256": "813e6495b821522a64e8cac63275ecb3263b5df57a41e9e61e5c8d559a45c300",
+      "verilog_sha256": "fa688346722cb51a7bded4ea4d739e71e32d3f3c9ad2e3c031a029c997c1856b"
+    },
+    {
+      "name": "rv64ui-p-st_ld",
+      "elf_sha256": "caf75f3ca0f4e3f458475c49173a6839ebfdfca82d18eb49a5dd1351ae8a605a",
+      "verilog_sha256": "e264448a0cd691dd7f7ff251c1318d797e3cbdbf68fab4338c2dfc05923ba52f"
+    },
+    {
+      "name": "rv64ui-p-sub",
+      "elf_sha256": "2ac2c1589db80d77fc60ef50fbac23a2c2ee3ef025193bf7dbeb023b68406a1a",
+      "verilog_sha256": "3400c9e254c4295cc69e21a91f3ebf6b294a42739286d82eaef5f82c5ad5e74d"
+    },
+    {
+      "name": "rv64ui-p-subw",
+      "elf_sha256": "c962ca37ef0cb91f1793ff5817cbbc7307e6de31f200cb82bcd8af9ca9ea3279",
+      "verilog_sha256": "94a51a16bca2080c684ad016291f4de25e144e474018042fc5af54f3ab6878cd"
+    },
+    {
+      "name": "rv64ui-p-sw",
+      "elf_sha256": "4072d8586466507dcd421bf3486cf234206853102a460986a3563d2eb6d13b49",
+      "verilog_sha256": "0701cd5f6ab9637b3cc09bbc0c344dee082e2b0602584ae32ef8ad6d8e7263d5"
+    },
+    {
+      "name": "rv64ui-p-xor",
+      "elf_sha256": "e72aff529190723ee7e63805842de006a1c85f990abc801c8ac36ae7b6975d1d",
+      "verilog_sha256": "1645e3e5d3c7926b33745001174748544508cfc57ccfb1c4cb7b25045c2f1607"
+    },
+    {
+      "name": "rv64ui-p-xori",
+      "elf_sha256": "a5f42ef73b7f30395c378180051e1bda5687209d90751ad61e1d45968657b1ae",
+      "verilog_sha256": "0dccf563d1fa9e09d241715f3a46589c64b6fe7daaea78fc8fd6daf7497116a5"
+    },
+    {
+      "name": "rv64um-p-div",
+      "elf_sha256": "fb3f51c8d5f104507cc856bf1f833d4b5cdaa78293420a8ec5e45b0166e4fbe2",
+      "verilog_sha256": "7423c8e6c627d6cd2489a8181b5a4aa98c4fb544b6e11105ebd1c36c2304c7b5"
+    },
+    {
+      "name": "rv64um-p-divu",
+      "elf_sha256": "1c67d8abf5680048fc1286a20966ea976d1e0080b934edcc20b456cf03827460",
+      "verilog_sha256": "92b52ece852a5e4c5af00c510c0aa670b32187e2b7fcfc43a40e9b163bd18e7e"
+    },
+    {
+      "name": "rv64um-p-divuw",
+      "elf_sha256": "6623cc95c65c464e16c6e97bc78915e71b62db92094b37c1a12bea5c27ef3164",
+      "verilog_sha256": "5a40ef69366141d89fd30515ae68ec9f65e33e76c167ae191cdd32a1926d10e5"
+    },
+    {
+      "name": "rv64um-p-divw",
+      "elf_sha256": "5daa5444918a14768bf4615e08570fd03c0ebddadf5ee0da6e53015182610fbb",
+      "verilog_sha256": "14b1ec3c5f7c531400a388ec6fbbdf38dfdfb60f74bd7719248e06575423e321"
+    },
+    {
+      "name": "rv64um-p-mul",
+      "elf_sha256": "d176f2cc61ac1f90b4efeda3cfd9b6084e39d80039adea6db15e1d0e14891087",
+      "verilog_sha256": "ac93b87e3feaadcf2e1feb9a56cef067b4835c76f9e3148cf7733957b3b6ed65"
+    },
+    {
+      "name": "rv64um-p-mulh",
+      "elf_sha256": "b7be8f5ffbbcc77fcf1b9ecd1c058dd369c4c76dbff1578344d9d94884fc641d",
+      "verilog_sha256": "c3a09f3f799fdbed020f913ccf90fb77b90c966af11e4c92b7147868807d3d72"
+    },
+    {
+      "name": "rv64um-p-mulhsu",
+      "elf_sha256": "c47e5d953f166634b102b0f57b6e448832f2444a09380ec6cd6605e2153a1b75",
+      "verilog_sha256": "8c2968bfd112034c334cc4143e9e0ee8babfe8f4110f1fea2417e9ca8964d821"
+    },
+    {
+      "name": "rv64um-p-mulhu",
+      "elf_sha256": "bb646d80d373cbf7d8df482297e38e90ab3df20e3b160e46aac933f6578afac2",
+      "verilog_sha256": "0baa2d0c160ed23afd5cf014e6ba212c3300b7f7d428d9d61fc760dac7e936e6"
+    },
+    {
+      "name": "rv64um-p-mulw",
+      "elf_sha256": "8b69514f2327092b2059e697d89fcdc3d3639bba14b0578b793dfc74c6c8d7c8",
+      "verilog_sha256": "dd0da66dd887aa8e8d3f8b1d0a1f3bfb0438297c3bceb2b3a81b1eef32228d81"
+    },
+    {
+      "name": "rv64um-p-rem",
+      "elf_sha256": "1d4c6b58b00c8ac8f6b23bbc5767f6160e8b21f1132aeadd95530b6ceb7bda07",
+      "verilog_sha256": "1f3d85e21826a1c0110d95cf77af575354783d74a1685b00346ac8286b608cfb"
+    },
+    {
+      "name": "rv64um-p-remu",
+      "elf_sha256": "4990436cd5f9aa04dd937fa844c716f7e5c930571e6a008d4c52df21b9b5f7c6",
+      "verilog_sha256": "11466c7a6432f33b58ac732adef1149a8dfdaf3abc589aea73305a84d03c14d5"
+    },
+    {
+      "name": "rv64um-p-remuw",
+      "elf_sha256": "cc40696c4beb0e4bf2bd7f3f9409660626ce107bfdda41bd1276e827ad02581a",
+      "verilog_sha256": "677e2f81586cb0d2b3ab1b2001e52bf5a61c16cb6cb109e0c1491f9f2828a890"
+    },
+    {
+      "name": "rv64um-p-remw",
+      "elf_sha256": "56d98789c21720a774cc6d75c529f21a7e20c3ae0f0fc1b9a00005eb8df7fa7d",
+      "verilog_sha256": "57a61bd1a3067b486248fb22c47049980afb0e1b93f8f44f1ed62810c43f6108"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "recipe": "cpus/boom/mul54/SPEC_RECIPE.json",
+  "recipe_sha256": "bf7adb2fd5a215e687c4d299a3c02707a6f8c015c062e9c1206cf5a71005cca1",
+  "prompt_sha256": "4bf16bd473aa61ebf87d85212684cd19b253775e92a2428c510e36219faae488",
+  "repositories": {
+    "github.com/ucb-bar/berkeley-hardfloat": {
+      "revision": "70455e53f233a06cb5a342d125e22b7b1505c271"
+    },
+    "github.com/ucb-bar/chipyard": {
+      "revision": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80"
+    }
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "authored",
+      "description": "Task and submission instructions",
+      "prompt_bytes": [
+        0,
+        308
+      ],
+      "sha256": "43cff552b952e054f92eec166136b04b0e85415b2896b64c15555af5966c883a"
+    },
+    {
+      "index": 1,
+      "kind": "verbatim_source",
+      "source": 0,
+      "prompt_bytes": [
+        308,
+        343
+      ],
+      "sha256": "1c8de97f43682005aecd538934bb978e07e67e428eea2ee699b7c1b0b732b936"
+    },
+    {
+      "index": 2,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        343,
+        379
+      ],
+      "sha256": "a36a9d3134e4e8ae6a0468906cc495ccb181848b5c4b79887f19aa168dd2ba34"
+    },
+    {
+      "index": 3,
+      "kind": "verbatim_source",
+      "source": 1,
+      "prompt_bytes": [
+        379,
+        699
+      ],
+      "sha256": "c2f99499860c4c471513198ac6f8b40838cb40f118888d8ff5f9d96f9544fabe"
+    },
+    {
+      "index": 4,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        699,
+        738
+      ],
+      "sha256": "ada51fbbc45cb1c158fe0379dd9f01b0f8f50f6be1a92859e857c76fb196a0d2"
+    },
+    {
+      "index": 5,
+      "kind": "verbatim_source",
+      "source": 2,
+      "prompt_bytes": [
+        738,
+        1077
+      ],
+      "sha256": "700be5f6cfefce15afeb97a55dc29a80eea8bcab06956ee6a8ae3f061d364994"
+    },
+    {
+      "index": 6,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1077,
+        1134
+      ],
+      "sha256": "3013a1721e3155bb79707d36610cb7280e982ded03f6cc9b6640784791364d18"
+    },
+    {
+      "index": 7,
+      "kind": "verbatim_source",
+      "source": 4,
+      "prompt_bytes": [
+        1134,
+        1379
+      ],
+      "sha256": "14f0706b0c856f4149525fe6faf19228ae723e8587bb9549ee5a2e1831a96b76"
+    },
+    {
+      "index": 8,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        1379,
+        1457
+      ],
+      "sha256": "aefe7caaa75b4666a047682aa73db572d2f1ea60315ce7852a11d623e4cdf61d"
+    },
+    {
+      "index": 9,
+      "kind": "verbatim_source",
+      "source": 3,
+      "prompt_bytes": [
+        1457,
+        2831
+      ],
+      "sha256": "baab11613ef1164033ff82c85942d08bbfca902497036dd3dbea852003045402"
+    },
+    {
+      "index": 10,
+      "kind": "authored",
+      "description": "Excerpt boundary and source location",
+      "prompt_bytes": [
+        2831,
+        2835
+      ],
+      "sha256": "47c06c561d5c327343685268a46b3391f3998eee890d2be51f0d21cc4a53ae6d"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Package and Chisel import",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64.scala",
+      "lines": [
+        38,
+        40
+      ],
+      "sha256": "0f48ff3c0336f173d034ba4328e9b83bd48aa6500769fc6ffb7f7b04a1687910"
+    },
+    {
+      "label": "Target declaration and interface",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64.scala",
+      "lines": [
+        86,
+        96
+      ],
+      "sha256": "0f48ff3c0336f173d034ba4328e9b83bd48aa6500769fc6ffb7f7b04a1687910"
+    },
+    {
+      "label": "Parent connections",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "src/main/scala/DivSqrtRecF64.scala",
+      "lines": [
+        75,
+        83
+      ],
+      "sha256": "0f48ff3c0336f173d034ba4328e9b83bd48aa6500769fc6ffb7f7b04a1687910"
+    },
+    {
+      "label": "Three-cycle multiplier-adder contract",
+      "repo": "github.com/ucb-bar/berkeley-hardfloat",
+      "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+      "path": "doc/divSqrtRecodedFloat64_mulAddZ31.txt",
+      "lines": [
+        71,
+        94
+      ],
+      "sha256": "15acee994b04323541bd2ffafcfd1ab75e154c074ea6e72bfc58c22f1cd5e77f"
+    },
+    {
+      "label": "Chisel version",
+      "repo": "github.com/ucb-bar/chipyard",
+      "commit": "0e6080682b3dd0ce11cdfed1292ec20e70d75f80",
+      "path": "build.sbt",
+      "lines": [
+        63,
+        67
+      ],
+      "sha256": "f19fe2cc4f126a219ef402aba7ed11759746bdd34c481720fb7f87524995ceed"
+    }
+  ]
+}

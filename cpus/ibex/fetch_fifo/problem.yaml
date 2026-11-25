@@ -1,0 +1,14 @@
+id: ibex_fetch_fifo
+cpu: ibex
+target:
+  repository: https://github.com/lowRISC/ibex.git
+  revision: 405c6d1d8220a18b2f9196141167a5875422dee4
+  file: rtl/ibex_fetch_fifo.sv
+  module: ibex_fetch_fifo
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: ../_shared/evaluate_suite.sh

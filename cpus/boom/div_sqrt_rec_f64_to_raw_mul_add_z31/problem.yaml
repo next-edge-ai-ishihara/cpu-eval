@@ -1,0 +1,14 @@
+id: div_sqrt_rec_f64_to_raw_mul_add_z31
+cpu: boom
+target:
+  repository: https://github.com/ucb-bar/berkeley-hardfloat.git
+  revision: 70455e53f233a06cb5a342d125e22b7b1505c271
+  file: src/main/scala/DivSqrtRecF64_mulAddZ31.scala
+  class: DivSqrtRecF64ToRaw_mulAddZ31
+prompt:
+  specification: SPEC.md
+  recipe: SPEC_RECIPE.json
+  sources: SPEC_SOURCES.json
+evaluation:
+  recipe: TEST_RECIPE.json
+  evaluator: evaluate_candidate.sh

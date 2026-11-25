@@ -1,0 +1,9 @@
+requirement	tests
+Single-precision addition and subtraction	rv64uf-p-fadd
+Single-precision fused multiply-add variants	rv64uf-p-fmadd
+Double-precision addition and subtraction	rv64ud-p-fadd
+Double-precision fused multiply-add variants	rv64ud-p-fmadd
+Single- and double-precision multiplication preserves negative zero	rv64ud-p-fmul_negative_zero
+Double-precision addition respects rounding toward positive infinity and reports inexact	rv64ud-p-rounding_mode_rup
+Single- and double-precision fused multiply-add keeps the exact residual through cancellation	rv64ud-p-fmadd_single_rounding
+Consecutive independent requests keep their corresponding results and exception flags	rv64ud-p-fmadd_single_rounding

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "problem": "MaxPeriodFibonacciLFSR",
+  "configuration": "Rift2330",
+  "candidate_replacement": {
+    "source_unit": "MaxPeriodFibonacciLFSR",
+    "repository": "https://github.com/whutddk/Rift2Core.git",
+    "revision": "64b660fb70e0cab491049bdeea87c27936dcbf1e",
+    "scope": "repository and revision name the CPU the candidate is substituted into. The replaceable definition itself lives in the pinned Chisel library recorded under library below, not in the CPU checkout.",
+    "library": {
+      "repository": "https://github.com/chipsalliance/chisel.git",
+      "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438",
+      "path": "src/main/scala/chisel3/util/random/FibonacciLFSR.scala",
+      "tag": "v5.1.0",
+      "artifact": "org.chipsalliance::chisel:5.1.0",
+      "artifact_version": "5.1.0",
+      "jar_sha256": "b83c466d73cf38ec85f7bc2358ccf2fc4f3aac27e78ec4fbd848b7827a59dd57",
+      "license": "Apache-2.0",
+      "substitution": "Rift2Core resolves Chisel as a compiled Maven artifact, so the candidate class is compiled on its own against the same pinned release and written over the matching entries of a private copy of chisel_2.13-5.1.0.jar. The CPU build reads that copy through an isolated COURSIER_CACHE."
+    },
+    "integration": [
+      "src/main/scala/rift2Core/privilege/TLB.scala:89",
+      "dependencies/inclusivecache/design/craft/inclusivecache/src/Directory.scala:115"
+    ]
+  },
+  "test_programs": {
+    "repository": "https://github.com/riscv-software-src/riscv-tests.git",
+    "revision": "2ebecad997fa58cd9e5724340ba75aa4b59bd1d0",
+    "selection": [
+      "rv64ui-p-*",
+      "rv64um-p-*",
+      "rv64ua-p-*",
+      "rv64uc-p-*",
+      "rv64mi-p-*",
+      "rv64si-p-*"
+    ],
+    "policy": "Run every program in the fixed required-test catalog that matches the selection patterns."
+  },
+  "test_catalog_construction": {
+    "script": "tools/environment/build_environment_images.py",
+    "record": "cpus/rift2core/_shared/REFERENCE_TEST_CATALOG.json"
+  },
+  "comparison": {
+    "implementation": "Dromajo instruction-by-instruction cosimulation",
+    "repository": "https://github.com/chipsalliance/dromajo.git",
+    "revision": "7062d33ad00ebc1a1f71fe8b13f1f5a53c99a12f",
+    "pass_condition": "Every selected program completes with zero RTL-versus-ISA trace mismatches and zero observation mismatches. The separate width-16 probe must hold while disabled, reset to seed one, and visit all 65,535 nonzero states before returning to the seed. Its enabled transitions must have Fibonacci shift direction and a fixed linear XOR feedback function."
+  },
+  "source_language_dependency": {
+    "name": "Chisel",
+    "revision": "066fb4705472e07bde340810ee45eaf8c1ad9438"
+  },
+  "environment_patch": "cpus/rift2core/environment/rift2core-chisel5-compatibility.patch",
+  "fixed_test_patches": [
+    {
+      "path": "harness/observe_max_period_sequence.patch",
+      "sha256": "2f5f22c3bf85709abb188a3ceaa6bf3a085a242023173984706a5cce8a71b262",
+      "purpose": "Compare the address-translation replacement selector's generated sequence with an independently derived maximal-period reference sequence."
+    },
+    {
+      "path": "harness/emit_lfsr16_probe.patch",
+      "sha256": "8b4b12ae6854f3616ca07ad677715d31199e9905d832a51feea179028be6f471",
+      "purpose": "Emit a separate 16-bit instance of the same substituted class used by the cache directory."
+    }
+  ]
+}

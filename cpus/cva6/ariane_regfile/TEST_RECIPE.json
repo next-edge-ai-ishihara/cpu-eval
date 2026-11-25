@@ -1,0 +1,38 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py"
+  ],
+  "schema_version": 2,
+  "cpu": "cva6",
+  "module": "ariane_regfile",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "source_path": "core/ariane_regfile_ff.sv",
+  "reference_hdl_sha256": "e8b86693adf85bcdbfb40b650698fc38f675d840213be55eff1468bff273e95f",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "e27592c13a63daeb8393afb321cd7b4d18b6a0175d968ba958f69d33fffa5ab0",
+  "shared_evaluator": "../harness/evaluate_parallel.sh",
+  "shared_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "trace_comparator": "../harness/compare_architectural_traces.py",
+  "trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "testlist": "harness/testlist_ariane_regfile.yaml",
+  "testlist_sha256": "671419e002f3a1864b739e1b3d3b89a9b0863580a3ccd22dd9adddc090151b32",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/ariane_regfile_ff.sv",
+    "upstream_test": "riscv-test-suite/rv32i_m/I/src/add-01.S",
+    "upstream_test_sha256": "68025ba2b36eac24fcf33a5ba31c7a36a7de9124accb23f264991885fca7849a",
+    "patch": "harness/0001-observe-delayed-register-read.patch",
+    "patch_sha256": "42bcb3d8b82535b113b1e16dbf74d343a445ebb8dc8303a3b0291566b3393310",
+    "patched_test_sha256": "3bebcf35d726e721011bcf98781e16f635b8cb7acd95a399e61985f34b5f1ce8",
+    "commands": [
+      "git -C <riscv-arch-test> show a5a49fc9f244192649e57fe61b4513d9bc39b1e3:riscv-test-suite/rv32i_m/I/src/add-01.S > <temporary-source>",
+      "patch --quiet <temporary-source> harness/0001-observe-delayed-register-read.patch -o <temporary-test-directory>/ariane-regfile-01.S",
+      "sha256sum <temporary-test-directory>/ariane-regfile-01.S",
+      "replace <path_var>/cpu-eval-patches/ariane-regfile-01.S in the temporary test list with the absolute path to <temporary-test-directory>/ariane-regfile-01.S"
+    ]
+  }
+}

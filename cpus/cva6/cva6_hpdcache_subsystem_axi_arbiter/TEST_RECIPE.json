@@ -1,0 +1,72 @@
+{
+  "grading_dependencies": [
+    "../MODULES.json",
+    "../harness/candidate_error.py",
+    "harness/evaluate_store_updates.sh"
+  ],
+  "schema_version": 3,
+  "cpu": "cva6",
+  "module": "cva6_hpdcache_subsystem_axi_arbiter",
+  "cpu_repository": "https://github.com/openhwgroup/cva6.git",
+  "cpu_revision": "6348e9e684678f83b40d0520028513d06b36e7b2",
+  "source_path": "core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv",
+  "reference_source_sha256": "1b6b1b7ebd594cd5e5d49405adb490f5e22178231c421f918661a980cf790b9b",
+  "test_repository": "https://github.com/riscv-non-isa/riscv-arch-test.git",
+  "test_revision": "a5a49fc9f244192649e57fe61b4513d9bc39b1e3",
+  "configuration": "cv32a60x",
+  "evaluator": "harness/evaluate.sh",
+  "evaluator_sha256": "e793f8f5db7e0d27c1de7b6e9989eaab8e9a52142ec5d03d16cc121c87316af3",
+  "instruction_trace_evaluator": "../harness/evaluate_parallel.sh",
+  "instruction_trace_evaluator_sha256": "2f28688e354f5680b90125ff30eb9f1356e1cda3790b133e2ffe7e197d59c663",
+  "architectural_trace_comparator": "../harness/compare_architectural_traces.py",
+  "architectural_trace_comparator_sha256": "8cb3a1eb63510227f514c79b6a1b38b0e4677284e0a3a915cec983dc6badcdcb",
+  "store_update_evaluator": "harness/evaluate_store_updates.sh",
+  "store_update_evaluator_sha256": "f2c6f2ca3ce3c10e5ed1b596621e5dc82dc58829aed8952084a93405cb1ccaa6",
+  "testlists": [
+    {
+      "path": "../harness/testlist_cv32a60x.yaml",
+      "sha256": "77d92ff65f4ba38f7519aabe01c40c3819f5799f3ba3b894cc55059bec6c9049",
+      "tests": 38
+    },
+    {
+      "path": "harness/uncached_read_id.yaml",
+      "sha256": "e65763eda58e15389bfe10e4cd4677abb9359305176fd9a4fe1475f91f5365ae",
+      "tests": 1
+    },
+    {
+      "path": "../harness/testlist_store_updates.yaml",
+      "sha256": "26c138d221eedd44d04734f1ceee8be075784f6df9c6d1a9a63976012624ec1b",
+      "tests": 5
+    }
+  ],
+  "local_test_sources": [
+    {
+      "path": "harness/uncached_read_id.S",
+      "sha256": "174c070c8485ad5cd6c9fbea7b32b4589f87aeda19147c684355f5824507c955"
+    }
+  ],
+  "fixed_patches_in_application_order": [
+    {
+      "order": 1,
+      "purpose": "Record writes accepted by the test-harness DRAM interface for architectural memory-update comparison.",
+      "target": "corev_apu/tb/ariane_testharness.sv",
+      "target_sha256_before": "c671b2f70ea4cd7e27b67f4764e07966abd69e18d168f3de28220b26b8bb8655",
+      "patch": "../harness/0001-log-dram-writes.patch",
+      "patch_sha256": "b79e083a7b0c93b244df434125cdfc1cefd54acc147b4e97e785f8c129aee7cb",
+      "target_sha256_after": "978648dfc2b9016a989a594b38d1136ee6335dac0e7b685a737a086a63b4a7a2"
+    }
+  ],
+  "store_update_comparator": "../harness/compare_store_updates.py",
+  "store_update_comparator_sha256": "95c09b5518e952731898dbacdfbd7ba815fccdf045fd08bec2ef36675612cf3e",
+  "reconstruction": {
+    "reference_hdl": "git show 6348e9e684678f83b40d0520028513d06b36e7b2:core/cache_subsystem/cva6_hpdcache_subsystem_axi_arbiter.sv",
+    "test_programs": "Use the 43 upstream test-list entries byte for byte at test_revision. Append harness/uncached_read_id.yaml to the instruction-trace test list and stage harness/uncached_read_id.S in the regression test directory under cpu-eval-patches. The local program loads the reset value from the CLINT software-interrupt register at 0x02000000 and writes the loaded value to its signature.",
+    "instrumentation": "Restore the recorded test-harness target, verify target_sha256_before, apply the fixed patch from the CVA6 repository root with git apply, and verify target_sha256_after."
+  },
+  "comparison": {
+    "loads": "Compare corresponding retired instructions, integer-register updates, and width-masked memory updates using the architectural trace comparator.",
+    "stores": "Pair retired Spike stores and accepted test-harness DRAM writes in execution order; compare address, byte enable, and the write value masked to the store width.",
+    "excluded_termination_address": "0x80001000",
+    "completion_requirement": "Both CPU regressions must complete and match. The fixed tree builds and runs every program with the reference module, so after only the target is replaced a build failure, a missing target module, an RTL simulation that does not complete (including the fixed RVFI cycle limit and assertions) and a comparison mismatch are FAIL. Missing fixed tools or inputs, resource exhaustion and wall-clock timeouts are INVALID."
+  }
+}

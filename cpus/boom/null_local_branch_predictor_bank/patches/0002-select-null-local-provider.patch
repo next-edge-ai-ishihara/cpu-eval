@@ -1,0 +1,13 @@
+diff --git a/src/main/scala/ifu/bpd/predictor.scala b/src/main/scala/ifu/bpd/predictor.scala
+index bcf85df2..cce17dab 100644
+--- a/src/main/scala/ifu/bpd/predictor.scala
++++ b/src/main/scala/ifu/bpd/predictor.scala
+@@ -225,7 +225,7 @@ class BranchPredictor(implicit p: Parameters) extends BoomModule()(p)
+   bpdStr.append(BoomCoreStringPrefix(f"Total bpd size: ${total_memsize / 1024} KB\n"))
+   override def toString: String = bpdStr.toString
+ 
+-  val banked_lhist_providers = Seq.fill(nBanks) { Module(if (localHistoryNSets > 0) new LocalBranchPredictorBank else new NullLocalBranchPredictorBank) }
++  val banked_lhist_providers = Seq.fill(nBanks) { Module(new NullLocalBranchPredictorBank) }
+ 
+ 
+   if (nBanks == 1) {
