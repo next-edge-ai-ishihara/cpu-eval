@@ -75,7 +75,7 @@ def main():
     source_paths = {"hpdcache_pkg.sv": "rtl/src/hpdcache_pkg.sv",
                     "hpdcache_typedef.svh": "rtl/include/hpdcache_typedef.svh",
                     **{"hpdcache_" + name + ".sv": "rtl/src/common/hpdcache_" + name + ".sv"
-                       for name in ("prio_1hot_encoder", "rrarb", "fxarb", "mux")}}
+                       for name in ("prio_1hot_encoder", "rrarb", "fxarb", "mux", "1hot_to_binary")}}
     files = {name: subprocess.check_output(["git", "-C", str(source_repo), "show", revision + ":" + path])
              for name, path in source_paths.items()}
     submission = args.candidate.read_text()

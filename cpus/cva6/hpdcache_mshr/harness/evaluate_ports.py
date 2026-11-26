@@ -67,8 +67,8 @@ def main():
     if subprocess.check_output(["git", "-C", str(source_repo), "rev-parse", "HEAD"]).decode().strip() != revision:
         raise ValueError("HPDcache checkout is not at the selected revision")
     source_paths = {"hpdcache_pkg.sv": "rtl/src/hpdcache_pkg.sv",
-                    "hpdcache_regbank_wbyteenable_1rw.sv":
-                        "rtl/src/common/hpdcache_regbank_wbyteenable_1rw.sv"}
+                    **{"hpdcache_" + name + ".sv": "rtl/src/common/hpdcache_" + name + ".sv"
+                       for name in ("regbank_wbyteenable_1rw", "1hot_to_binary", "decoder")}}
     files = {name: subprocess.check_output(["git", "-C", str(source_repo), "show", revision + ":" + path])
              for name, path in source_paths.items()}
     log_root = Path(os.environ["CPU_EVAL_LOG_ROOT"]) / "hpdcache_mshr"

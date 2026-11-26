@@ -31,7 +31,7 @@
   },
   "port_test": {
     "evaluator": "harness/evaluate_ports.py",
-    "evaluator_sha256": "8bada442dcbd7386b8793ee6d7734a7ef47ab0a8a96d01e2ee1d350fd5e7c4b6",
+    "evaluator_sha256": "e1d97587a3957786c0efc7bbfd534594e68606220d6d48aae6f587b3750b652a",
     "test": "harness/mshr_ports_tb.sv",
     "test_sha256": "d9a1c82f8881d31be9ab8f253a74ea509cc7e9ceb48b6f5be5b37c01d80bdac1",
     "scope": "The cv32a60x HPDcache configuration and MSHR types: 34-bit physical address, one MSHR set and two ways. The first mode checks the previous set and current tag. The second mode checks grant-cycle cache set and later acknowledgement payload, preserving source IDs 1 and 2 and word indices 1 and 2. The two accepted allocations may use either order of free ways."

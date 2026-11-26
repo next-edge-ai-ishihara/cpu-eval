@@ -29,7 +29,14 @@ def candidate_error(log: str, region: dict, candidate: str, class_name: str) -> 
     source = Path(str(region['source'])).read_bytes()
     if hashlib.sha256(source).hexdigest() != region['source_sha256']:
         return False
-    start, end = definition_span(candidate, class_name, allow_braceless=True)
+    try:
+        start, end = definition_span(candidate, class_name, allow_braceless=True)
+    except ValueError:
+        # An unbalanced class has no span; replace_class.py inserts it up to the end of the answer.
+        header = re.search(r'\bclass\s+' + re.escape(class_name) + r'\b', candidate)
+        if header is None:
+            return False
+        start, end = header.start(), len(candidate)
     return candidate[start:end].strip() in source.decode('utf-8') and not ENVIRONMENT_ERROR.search(log)
 
 
